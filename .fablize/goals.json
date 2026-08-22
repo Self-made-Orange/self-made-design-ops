@@ -1,0 +1,27 @@
+{
+ "brief": "Tier B 컴포넌트 심화 5종: Astro·Kaizen·NYSDS·KRDS·Audi",
+ "created": "2026-08-18T04:32:19.985737+00:00",
+ "goals": [
+  {
+   "id": "G001",
+   "title": "harvest",
+   "objective": "5개 패키지 npm pack + 버튼·입력·모달 실측",
+   "status": "complete",
+   "evidence": "5 tgz 추출·실측 완료: astro-web-components@8.0.0(rux-button 파생 28/36/44·dialog 448px), kaizen components@3.3.12(button 32/40/48·input 48·modal 201ms 버그회피), nysds components@1.20.0(button 40/48/56·modal 439px), krds-uiux@1.1.0(button 32~64 5단·modal 400/560/760), audi-ui@1.0.0-alpha.2(dist CSS로 버튼 51px 검증)"
+  },
+  {
+   "id": "G002",
+   "title": "write",
+   "objective": "5개 md에 심화 절 추가",
+   "status": "complete",
+   "evidence": "5개 md에 심화 절 추가: grep -c '## 컴포넌트 심화 — (2026-08-18)' → 5파일 전부 1"
+  },
+  {
+   "id": "G003",
+   "title": "verify",
+   "objective": "버전 명기·취소선·frontmatter 불변 검증",
+   "status": "complete",
+   "evidence": "검증 grep 전항 통과"
+  }
+ ]
+}

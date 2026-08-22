@@ -1,0 +1,14 @@
+{"ts": "2026-08-18T03:08:23.962694+00:00", "event": "plan_created", "brief": "코퍼스 신선도 드리프트 처리: smarthr-ui 99.2.0→99.3.0, vuetify 4.1.9→4.1.10 diff 후 md 갱신, check-sources 낡음 0", "count": 3}
+{"ts": "2026-08-18T03:10:13.246882+00:00", "event": "story_started", "id": "G001", "title": "diff"}
+{"ts": "2026-08-18T03:10:13.285349+00:00", "event": "checkpoint", "id": "G001", "status": "complete", "evidence": "smarthr lib/themes 및 vuetify lib/styles/settings 모두 diff -rq/cmp 결과 동일 — 토큰 값 무변경, 변경은 컴포넌트 코드뿐", "verify_cmd": "", "verify_evidence": ""}
+{"ts": "2026-08-18T03:10:13.322270+00:00", "event": "story_started", "id": "G002", "title": "update-md"}
+{"ts": "2026-08-18T03:10:13.358636+00:00", "event": "checkpoint", "id": "G002", "status": "complete", "evidence": "smarthr.md·vuetify.md frontmatter source 버전 99.3.0/4.1.10로 갱신 + 재검증 한 줄 추가", "verify_cmd": "", "verify_evidence": ""}
+{"ts": "2026-08-18T03:10:13.395104+00:00", "event": "story_started", "id": "G003", "title": "verify"}
+{"ts": "2026-08-18T03:10:13.430680+00:00", "event": "checkpoint", "id": "G003", "status": "complete", "evidence": "check-sources.mjs --write-report: 총 125건 · 낡음 0", "verify_cmd": "cd design-systems && node check-sources.mjs --write-report", "verify_evidence": "총 125건 · 최신 109 · 낡음 0 (major 0 / minor 0 / patch 0) · 수동 16 · 실패 0"}
+{"ts": "2026-08-18T04:32:19.986143+00:00", "event": "plan_created", "brief": "Tier B 컴포넌트 심화 5종: Astro·Kaizen·NYSDS·KRDS·Audi", "count": 3}
+{"ts": "2026-08-18T04:32:20.024757+00:00", "event": "story_started", "id": "G001", "title": "harvest"}
+{"ts": "2026-08-18T04:41:29.053505+00:00", "event": "checkpoint", "id": "G001", "status": "complete", "evidence": "5 tgz 추출·실측 완료: astro-web-components@8.0.0(rux-button 파생 28/36/44·dialog 448px), kaizen components@3.3.12(button 32/40/48·input 48·modal 201ms 버그회피), nysds components@1.20.0(button 40/48/56·modal 439px), krds-uiux@1.1.0(button 32~64 5단·modal 400/560/760), audi-ui@1.0.0-alpha.2(dist CSS로 버튼 51px 검증)", "verify_cmd": "", "verify_evidence": ""}
+{"ts": "2026-08-18T04:46:16.776322+00:00", "event": "story_started", "id": "G002", "title": "write"}
+{"ts": "2026-08-18T04:46:16.815339+00:00", "event": "checkpoint", "id": "G002", "status": "complete", "evidence": "5개 md에 심화 절 추가: grep -c '## 컴포넌트 심화 — (2026-08-18)' → 5파일 전부 1", "verify_cmd": "", "verify_evidence": ""}
+{"ts": "2026-08-18T04:46:16.851324+00:00", "event": "story_started", "id": "G003", "title": "verify"}
+{"ts": "2026-08-18T04:46:16.888853+00:00", "event": "checkpoint", "id": "G003", "status": "complete", "evidence": "검증 grep 전항 통과", "verify_cmd": "grep -c '## 컴포넌트 심화 — (2026-08-18)' design-systems/systems/{astro-uxds,kaizen,nysds,krds,audi-ui}.md", "verify_evidence": "5파일 모두 심화 절 1개, verified frontmatter 5파일 불변(2026-08-17), 패키지@버전 5건 명기, 백로그 취소선 처리"}

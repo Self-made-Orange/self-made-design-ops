@@ -1,0 +1,2654 @@
+{
+  "$schema": "see ./systems.schema.md",
+  "generated_from": "systems/*.md frontmatter",
+  "count": 116,
+  "by_platform_primary": {
+    "automotive": 2,
+    "tv": 2,
+    "web": 106,
+    "mobile": 2,
+    "desktop": 1,
+    "wearable": 2,
+    "spatial": 1
+  },
+  "systems": [
+    {
+      "name": "Android for Cars / Automotive OS",
+      "org": "Google",
+      "coverage": "full",
+      "url": "https://developer.android.com/docs/quality-guidelines/car-app-quality",
+      "repo": null,
+      "license": "docs CC BY 2.5 · code samples Apache 2.0 (developer.android.com/license, confirmed 2026-08-18)",
+      "tech": [
+        "Car App Library",
+        "Android"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [],
+      "a11y_target": "unverified",
+      "platform": "automotive",
+      "domain": "os",
+      "verified": "2026-08-17",
+      "source": "developer.android.com → docs/quality-guidelines/car-app-quality (including the requirement IDs)",
+      "_file": "android-automotive.md"
+    },
+    {
+      "name": "Android TV Design",
+      "org": "Google",
+      "coverage": "partial",
+      "url": "https://developer.android.com/design/ui/tv",
+      "repo": null,
+      "license": "docs CC BY 2.5 · code samples Apache 2.0 (developer.android.com/license, confirmed 2026-08-18)",
+      "tech": [
+        "Compose for TV"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "docs"
+      ],
+      "a11y_target": "unverified",
+      "platform": "tv",
+      "domain": "os",
+      "verified": "2026-08-17",
+      "source": "developer.android.com/design/ui/tv/guides — {design-for-tv, buttons, cards, navigation-drawer} (measured from the HTML)",
+      "_file": "android-tv.md"
+    },
+    {
+      "name": "Ant Design",
+      "org": "Ant Group",
+      "coverage": "full",
+      "url": "https://ant.design",
+      "repo": "https://github.com/ant-design/ant-design",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm antd@6.6.1 → lib/theme/themes/seed.js (re-verified against 6.6.0 — seed identical), lib/theme/themes/shared/genSizeMapToken.js · es/{table,menu,tabs,breadcrumb,layout,message,notification,alert,badge}/style/index.js (tables, navigation and feedback measured, 2026-08-18)",
+      "_file": "ant-design.md"
+    },
+    {
+      "name": "Human Interface Guidelines (iOS 26 / iPadOS 26)",
+      "org": "Apple",
+      "coverage": "full",
+      "url": "https://developer.apple.com/design/human-interface-guidelines",
+      "repo": null,
+      "license": "unverified — Apple Design Resources (attempted 2026-08-18: developer.apple.com/design/resources renders in JS, so the terms text could not be extracted; checking the Figma community file's description is left to a local session)",
+      "tech": [
+        "SwiftUI",
+        "UIKit"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "Figma Variables (DTCG export)"
+      ],
+      "a11y_target": "unverified",
+      "platform": "mobile",
+      "domain": "os",
+      "verified": "2026-08-16",
+      "source": "A full variable export of the iOS/iPadOS 26 Figma kit (DTCG JSON) plus measurements from the Toolbars page",
+      "_file": "apple-hig.md"
+    },
+    {
+      "name": "Ark UI",
+      "org": "The Chakra team (Segun Adebayo and others)",
+      "coverage": "partial",
+      "url": "https://ark-ui.com",
+      "repo": "https://github.com/chakra-ui/ark",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Vue",
+        "Solid",
+        "Svelte"
+      ],
+      "figma_kit": false,
+      "tokens_format": [],
+      "a11y_target": "WCAG (no version or level stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @ark-ui/react@5.38.2 → package/dist/components (73), package.json dependencies",
+      "_file": "ark-ui.md"
+    },
+    {
+      "name": "Palette",
+      "org": "Artsy",
+      "coverage": "partial",
+      "url": "https://palette.artsy.net",
+      "repo": "https://github.com/artsy/palette",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "styled-system"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "false (no conformance level declared — \"best-practices in mind, may still have some issues\", confirmed by render 2026-08-18)",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm @artsy/palette-tokens@7.3.0 → dist/themes/v3.js, dist/typography/v3.js",
+      "_file": "artsy-palette.md"
+    },
+    {
+      "name": "Asphalt",
+      "org": "Gojek (GoTo)",
+      "coverage": "partial",
+      "url": "https://asphalt.gojek.com",
+      "repo": null,
+      "license": "UNLICENSED (stated on npm)",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @gojek/asphalt-web-tokens@1.14.0 → dist/index.js (DTCG format) · npm button@2.16.0 · textfield@2.17.0 (components, 2026-08-18)",
+      "_file": "asphalt.md"
+    },
+    {
+      "name": "Astro UXDS",
+      "org": "Rocket Communications",
+      "coverage": "partial",
+      "url": "https://astrouxds.com",
+      "repo": "https://github.com/RocketCommunicationsInc/astro",
+      "license": "public domain (commissioned by the US government) + an unlimited royalty-free licence",
+      "tech": [
+        "Web Components",
+        "React",
+        "Angular",
+        "Vue"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "SCSS",
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "aerospace",
+      "verified": "2026-08-18",
+      "source": "npm @astrouxds/tokens@1.14.0 → dist/json/{base.reference,base.system,base.component,theme.light}.json · npm @astrouxds/astro-web-components@8.0.0 (components, 2026-08-18)",
+      "_file": "astro-uxds.md"
+    },
+    {
+      "name": "Atlassian Design System",
+      "org": "Atlassian",
+      "coverage": "full",
+      "url": "https://atlassian.design",
+      "repo": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+      "license": "Apache-2.0",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "CSS",
+        "JS"
+      ],
+      "a11y_target": "confirmed to be unstated in the design-system documentation (the company-wide standard is WCAG 2.1 AA — atlassian.com/trust, 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-17",
+      "source": "npm @atlaskit/tokens@16.7.0 → figma/*.json (15 files), dist/cjs/artifacts/tokens-raw/*.js (14 themes)",
+      "_file": "atlassian.md"
+    },
+    {
+      "name": "Audi UI",
+      "org": "Audi",
+      "coverage": "partial",
+      "url": "https://styleguide.audi.com/hub/271",
+      "repo": null,
+      "license": "Apache-2.0",
+      "tech": [
+        "SCSS",
+        "JS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS variables"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "automotive-brand",
+      "verified": "2026-08-18",
+      "source": "npm pack @audi/audi-ui@1.0.0-alpha.2 → src/_variables.scss plus the component SCSS",
+      "_file": "audi-ui.md"
+    },
+    {
+      "name": "Auro",
+      "org": "Alaska Airlines (Alaska Air Group)",
+      "coverage": "partial",
+      "url": "https://auro.alaskaair.com",
+      "repo": "https://github.com/AlaskaAirlines/AuroDesignTokens",
+      "license": "Apache-2.0",
+      "tech": [
+        "Web Components",
+        "CSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS",
+        "SCSS",
+        "JSON",
+        "JS"
+      ],
+      "a11y_target": "WCAG 2.0 AA — self-declared partially conformant (confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @aurodesignsystem/design-tokens@9.3.3 → dist/web/{alaska,hawaiian,atmos}.min.css, JSONVariablesNested--atmos.json · npm @aurodesignsystem/auro-button@12.3.2 · @aurodesignsystem/auro-input@4.3.4 (components, 2026-08-18)",
+      "_file": "auro.md"
+    },
+    {
+      "name": "Aurora Design System (GCTools)",
+      "org": "Government of Canada (GCTools / Digital Collaboration Division)",
+      "coverage": "partial",
+      "url": "https://design.gccollab.ca",
+      "repo": "https://github.com/gctools-outilsgc/aurora-design-system (MIT)",
+      "license": "MIT (the repository) — the documentation site's content licence is not separately stated",
+      "tech": [
+        "A Bootstrap 4.1.3 skin",
+        "a Gatsby v1 documentation site"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "A documentation-layer sample — measured from server-rendered HTML; no token distribution"
+      ],
+      "a11y_target": "WCAG 2.1 (version stated — colour contrast requires AA and recommends AAA, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "government",
+      "verified": "2026-08-18",
+      "source": "design.gccollab.ca /component/{colour,typography,buttons,grids-and-spacing}/ measured from server-rendered HTML — the second documentation-layer sample",
+      "_file": "aurora-gc.md"
+    },
+    {
+      "name": "Backpack",
+      "org": "Skyscanner",
+      "coverage": "partial",
+      "url": "https://backpack.github.io",
+      "repo": "https://github.com/Skyscanner/backpack",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "React Native"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "SCSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — confirmed by headless render 2026-08-18)",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @skyscanner/bpk-foundations-web@24.7.0 → tokens/base.raw.json · npm @skyscanner/backpack-web@43.19.0 (components, 2026-08-18)",
+      "_file": "backpack.md"
+    },
+    {
+      "name": "Base Web",
+      "org": "Uber",
+      "coverage": "partial",
+      "url": "https://baseweb.design",
+      "repo": "https://github.com/uber/baseweb",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — only a runtime axe-core validator is provided, with no WCAG version or level target)",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm baseui@18.2.0 → themes/shared/sizing.js (re-verified against 16.1.1 — no change to the sizing tokens)",
+      "_file": "base-web.md"
+    },
+    {
+      "name": "Solid",
+      "org": "BuzzFeed",
+      "coverage": "partial",
+      "url": "https://www.buzzfeed.com/static-assets/solid-docs/index.html",
+      "repo": "https://github.com/buzzfeed/solid",
+      "license": "ISC",
+      "tech": [
+        "SCSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm bf-solid@2.11.2 → _lib/solid-helpers/_variables.scss",
+      "_file": "bf-solid.md"
+    },
+    {
+      "name": "Blueprint",
+      "org": "Palantir",
+      "coverage": "partial",
+      "url": "https://blueprintjs.com",
+      "repo": "https://github.com/palantir/blueprint",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "Sass"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "Sass"
+      ],
+      "a11y_target": "WCAG 2.0 (colour contrast) + WCAG 2.2 focus appearance (focus indication, a 3:1 minimum) — confirmed 2026-08-18",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @blueprintjs/core@6.18.0 → lib/scss/variables.scss · lib/css/blueprint.css · npm @blueprintjs/table@6.2.4 → lib/css/table.css + lib/esm (table, navigation and feedback measurements, 2026-08-18)",
+      "_file": "blueprint.md"
+    },
+    {
+      "name": "Bolt Design System",
+      "org": "Pega (Bolt DS)",
+      "coverage": "partial",
+      "url": "https://boltdesignsystem.com",
+      "repo": "https://github.com/bolt-design-system/bolt",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "Twig",
+        "SCSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS",
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @bolt/core-v3.x@5.8.0 → styles/01-settings/settings-spacing/_settings-spacing.scss · npm components-button@5.8.0 · components-form@5.8.0 (components, 2026-08-18)",
+      "_file": "bolt.md"
+    },
+    {
+      "name": "Bootstrap",
+      "org": "Bootstrap (open source)",
+      "coverage": "partial",
+      "url": "https://getbootstrap.com",
+      "repo": "https://github.com/twbs/bootstrap",
+      "license": "MIT",
+      "tech": [
+        "CSS",
+        "Sass"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "Sass",
+        "CSS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm bootstrap@5.3.8 → scss/_variables.scss, _variables-dark.scss, mixins/_transition.scss",
+      "_file": "bootstrap.md"
+    },
+    {
+      "name": "Braid",
+      "org": "SEEK",
+      "coverage": "partial",
+      "url": "https://seek-oss.github.io/braid-design-system",
+      "repo": "https://github.com/seek-oss/braid-design-system",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "vanilla-extract"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "TS/JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm braid-design-system@34.6.2 → dist/lib/themes/baseTokens/nvl.mjs",
+      "_file": "braid.md"
+    },
+    {
+      "name": "Canvas",
+      "org": "Workday",
+      "coverage": "partial",
+      "url": "https://canvas.workday.com",
+      "repo": "https://github.com/Workday/canvas-tokens",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "CSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.1 A/AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @workday/canvas-tokens-web@4.4.0 → css/base/_variables.css · npm @workday/canvas-kit-react@16.0.6 (components, 2026-08-18)",
+      "_file": "canvas.md"
+    },
+    {
+      "name": "Carbon Design System",
+      "org": "IBM",
+      "coverage": "full",
+      "url": "https://carbondesignsystem.com",
+      "repo": "https://github.com/carbon-design-system/carbon",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "Web Components"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "SCSS",
+        "CSS",
+        "JS"
+      ],
+      "a11y_target": "WCAG AA (by way of the IBM Accessibility Checklist — contrast stated as 2.1 AA, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @carbon/layout@11.57.0, @carbon/type@11.65.0, @carbon/colors@11.56.0, @carbon/themes@11.79.0 · npm @carbon/styles@1.113.0 → scss/components/ (table, navigation and feedback measurements, 2026-08-18)",
+      "_file": "carbon.md"
+    },
+    {
+      "name": "CarPlay (Human Interface Guidelines)",
+      "org": "Apple",
+      "coverage": "partial",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/carplay",
+      "repo": null,
+      "license": "unverified (attempted 2026-08-18: developer.apple.com/design/resources renders via JS, so the terms text could not be extracted — checking the Figma community file description is left to a local session)",
+      "tech": [
+        "CarPlay framework",
+        "SwiftUI"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [],
+      "a11y_target": "unverified",
+      "platform": "automotive",
+      "domain": "os",
+      "verified": "2026-08-17",
+      "source": "developer.apple.com HIG (via search results — the page itself renders with JS and cannot be parsed directly)",
+      "_file": "carplay.md"
+    },
+    {
+      "name": "Cedar",
+      "org": "REI",
+      "coverage": "partial",
+      "url": "https://cedar.rei.com",
+      "repo": "https://github.com/rei/rei-cedar",
+      "license": "code: MIT, tokens: ISC",
+      "tech": [
+        "Vue"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "SCSS",
+        "CSS",
+        "JS",
+        "JSON",
+        "iOS",
+        "Android",
+        "Figma"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm @rei/cdr-tokens@14.0.2 → dist/{rei-dot-com,docsite}/scss/foundations/*.scss · npm @rei/cedar@17.1.0 (components, 2026-08-18)",
+      "_file": "cedar.md"
+    },
+    {
+      "name": "Chakra UI",
+      "org": "Chakra UI (open source)",
+      "coverage": "partial",
+      "url": "https://chakra-ui.com",
+      "repo": "https://github.com/chakra-ui/chakra-ui",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @chakra-ui/react@3.36.1 → dist/esm/theme/tokens/*.js (18 files) · dist/esm/theme/recipes/{table,tabs,alert,toast,badge}.js + layer-styles.js (tables, navigation and feedback measured, 2026-08-18)",
+      "_file": "chakra-ui.md"
+    },
+    {
+      "name": "Charcoal",
+      "org": "pixiv",
+      "coverage": "partial",
+      "url": "https://charcoal-web.pixiv.design",
+      "repo": "https://github.com/pixiv/charcoal",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "CSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JSON",
+        "CSS",
+        "TS"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — no accessibility document among the Storybook's 70 entries, and zero mentions of WCAG on the rendered pages)",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @charcoal-ui/theme@6.0.1 → src/json/{base,pixiv-light,pixiv-dark}.json · npm @charcoal-ui/react@6.0.1 (components, 2026-08-18)",
+      "_file": "charcoal.md"
+    },
+    {
+      "name": "Clarity Design System",
+      "org": "VMware",
+      "coverage": "partial",
+      "url": "https://clarity.design",
+      "repo": "https://github.com/vmware-clarity/core",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "Angular",
+        "React"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — the documentation says only 'WCAG-informed', with no version or level target)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @cds/core@6.17.0 → global.css, styles/theme.{dark,high-contrast,low-motion}.css",
+      "_file": "clarity.md"
+    },
+    {
+      "name": "Cloudscape Design System",
+      "org": "AWS",
+      "coverage": "full",
+      "url": "https://cloudscape.design",
+      "repo": "https://github.com/cloudscape-design/components",
+      "license": "Apache-2.0",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "SCSS",
+        "CSS",
+        "JSON"
+      ],
+      "a11y_target": "confirmed unstated (re-checked with a headless render 2026-08-18 — the accessibility documentation never mentions WCAG at all, only ARIA and semantic-markup guidance)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @cloudscape-design/design-tokens@3.0.107 → index.scss · index-visual-refresh.json · npm @cloudscape-design/components@3.0.1348 → table/·side-navigation/ styles.scoped.css + app-layout (table and navigation measurements, 2026-08-18)",
+      "_file": "cloudscape.md"
+    },
+    {
+      "name": "Codex",
+      "org": "Wikimedia",
+      "coverage": "partial",
+      "url": "https://doc.wikimedia.org/codex",
+      "repo": "https://github.com/wikimedia/design-codex",
+      "license": "GPL-2.0-or-later",
+      "tech": [
+        "Vue",
+        "CSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JSON",
+        "CSS",
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm @wikimedia/codex-design-tokens@2.6.x → theme-wikimedia-ui-mode-dark.json",
+      "_file": "codex.md"
+    },
+    {
+      "name": "Digital Agency Design System (デジタル庁)",
+      "org": "Government of Japan (Digital Agency)",
+      "coverage": "partial",
+      "url": "https://design.digital.go.jp",
+      "repo": "https://github.com/digital-go-jp/design-tokens",
+      "license": "MIT",
+      "tech": [
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm @digital-go-jp/design-tokens@2.0.1 → dist/tokens.css · npm @digital-go-jp/tailwind-theme-plugin@1.0.1 (components, 2026-08-18)",
+      "_file": "digital-go-jp.md"
+    },
+    {
+      "name": "DSFR (Système de Design de l'État)",
+      "org": "French Government",
+      "coverage": "partial",
+      "url": "https://www.systeme-de-design.gouv.fr",
+      "repo": "https://github.com/GouvernementFR/dsfr",
+      "license": "Etalab-2.0 (Licence Ouverte 2.0) plus usage-restricting CGU",
+      "tech": [
+        "CSS",
+        "JS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm @gouvfr/dsfr@1.15.2 → dist/dsfr.css (1,086 variables)",
+      "_file": "dsfr.md"
+    },
+    {
+      "name": "Skin (eBay Evo)",
+      "org": "eBay",
+      "coverage": "partial",
+      "url": "https://ebay.github.io/skin",
+      "repo": "https://github.com/eBay/skin",
+      "license": "MIT",
+      "tech": [
+        "CSS",
+        "Marko",
+        "Web Components"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm @ebay/skin@19.32.0 → dist/tokens/evo-{core,light,dark,live-light,live-dark}.css",
+      "_file": "ebay-skin.md"
+    },
+    {
+      "name": "EUI (Elastic UI)",
+      "org": "Elastic",
+      "coverage": "partial",
+      "url": "https://eui.elastic.co",
+      "repo": "https://github.com/elastic/eui",
+      "license": "Dual SSPL-1.0 / Elastic-2.0 (some files are Apache-2.0 compatible)",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS/TS"
+      ],
+      "a11y_target": "WCAG 2.1 (no level stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @elastic/eui-theme-common@10.0.0 → lib/esm/global_styling/variables/size.d.ts · npm @elastic/eui-theme-borealis@8.0.0 (components and levels, 2026-08-18) · npm @elastic/eui@119.0.0 → es/components/{table,datagrid,tabs,breadcrumbs,toast,call_out,badge} (tables, navigation and feedback measured, 2026-08-18)",
+      "_file": "eui.md"
+    },
+    {
+      "name": "Evergreen",
+      "org": "Segment",
+      "coverage": "partial",
+      "url": "https://evergreen.segment.com",
+      "repo": "https://github.com/segmentio/evergreen",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "github segmentio/evergreen@master → src/themes/default/tokens/",
+      "_file": "evergreen.md"
+    },
+    {
+      "name": "Fleet (Boston Patterns)",
+      "org": "City of Boston (Digital Team)",
+      "coverage": "partial",
+      "url": "https://patterns.boston.gov",
+      "repo": "https://github.com/CityOfBoston/patterns",
+      "license": "a dual structure — code CC0-1.0 (stated in package.json) / reuse of the city's marks and trade dress forbidden (stated in the README)",
+      "tech": [
+        "Stylus",
+        "PostCSS",
+        "Fractal",
+        "Stencil web components"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "Stylus variables",
+        "measured from the public CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "government(municipal)",
+      "verified": "2026-08-18",
+      "source": "patterns.boston.gov/css/public.css (184,235B — confirmed byte-identical to the repo's develop branch) + CityOfBoston/patterns stylesheets/variables/*.styl",
+      "_file": "fleet-boston.md"
+    },
+    {
+      "name": "Fluent 2",
+      "org": "Microsoft",
+      "coverage": "full",
+      "url": "https://fluent2.microsoft.design",
+      "repo": "https://github.com/microsoft/fluentui",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Web Components",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS",
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
+      "platform": [
+        "web",
+        "desktop",
+        "mobile"
+      ],
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @fluentui/tokens@1.0.0-alpha.24 → lib/global",
+      "_file": "fluent-2.md"
+    },
+    {
+      "name": "Forma 36",
+      "org": "Contentful",
+      "coverage": "partial",
+      "url": "https://f36.contentful.com",
+      "repo": "https://github.com/contentful/forma-36",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "CSS",
+        "SCSS",
+        "JS"
+      ],
+      "a11y_target": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @contentful/f36-tokens@6.2.1 → dist/json/*.json · npm @contentful/f36-button@6.19.0 (components, 2026-08-18)",
+      "_file": "forma-36.md"
+    },
+    {
+      "name": "Garden",
+      "org": "Zendesk",
+      "coverage": "full",
+      "url": "https://garden.zendesk.com",
+      "repo": "https://github.com/zendeskgarden/react-components",
+      "license": "Apache-2.0",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS",
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-17",
+      "source": "npm @zendeskgarden/react-theming@9.15.7 → dist/index.cjs.js (DEFAULT_THEME). Secondary: @zendeskgarden/css-variables@7.0.0",
+      "_file": "garden.md"
+    },
+    {
+      "name": "Gestalt",
+      "org": "Pinterest",
+      "coverage": "partial",
+      "url": "https://gestalt.pinterest.systems",
+      "repo": "https://github.com/pinterest/gestalt",
+      "license": "Apache-2.0",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm gestalt@177.0.12 → dist/gestalt.css · npm gestalt-design-tokens@177.0.12 (components, 2026-08-18)",
+      "_file": "gestalt.md"
+    },
+    {
+      "name": "GOV.UK Design System",
+      "org": "UK Government (GDS)",
+      "coverage": "full",
+      "url": "https://design-system.service.gov.uk",
+      "repo": "https://github.com/alphagov/govuk-frontend",
+      "license": "MIT",
+      "tech": [
+        "Nunjucks",
+        "HTML/CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (accessibility statement declares fully compliant, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-16",
+      "source": "npm govuk-frontend@6.4.0 → dist/govuk/settings/_spacing.scss",
+      "_file": "govuk.md"
+    },
+    {
+      "name": "Grommet",
+      "org": "HPE (Hewlett Packard Enterprise)",
+      "coverage": "partial",
+      "url": "https://v2.grommet.io",
+      "repo": "https://github.com/grommet/grommet",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "styled-components"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "WCAG 2.1 (no level stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm grommet@2.56.1 → es6/themes/base.js (the generate function) · the dataTable, sidebar, tab, menu and notification tokens in themes/base.js (tables, navigation and feedback measured, 2026-08-18)",
+      "_file": "grommet.md"
+    },
+    {
+      "name": "Headless UI",
+      "org": "Tailwind Labs",
+      "coverage": "minimal",
+      "url": "https://headlessui.com",
+      "repo": "https://github.com/tailwindlabs/headlessui",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Vue"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "none — 0 CSS"
+      ],
+      "a11y_target": "unverified (accessibility is the product itself — no stated target found)",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-17",
+      "source": "npm pack @headlessui/react@2.2.10 → dist/ (confirmed 0 CSS files)",
+      "_file": "headless-ui.md"
+    },
+    {
+      "name": "Helios",
+      "org": "HashiCorp",
+      "coverage": "partial",
+      "url": "https://helios.hashicorp.design",
+      "repo": "https://github.com/hashicorp/design-system",
+      "license": "MPL-2.0",
+      "tech": [
+        "Ember",
+        "CSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS",
+        "SCSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @hashicorp/design-system-tokens@5.1.0 → dist/products/css/tokens.css · npm @hashicorp/design-system-components@6.5.0 (components, 2026-08-18)",
+      "_file": "helios.md"
+    },
+    {
+      "name": "HeroUI (formerly NextUI)",
+      "org": "HeroUI",
+      "coverage": "partial",
+      "url": "https://www.heroui.com",
+      "repo": "https://github.com/heroui-inc/heroui",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Tailwind"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @heroui/theme@2.4.26 → dist/default-layout.js",
+      "_file": "heroui.md"
+    },
+    {
+      "name": "HSDS (Help Scout Design System)",
+      "org": "Help Scout",
+      "coverage": "partial",
+      "url": "https://hsds.helpscout.design",
+      "repo": "https://github.com/helpscout/hsds-react",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JSON"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @hsds/tokens@2.8.0 → src/json/{default,newBrand}/*.json (52 files per component × 2 themes)",
+      "_file": "hsds.md"
+    },
+    {
+      "name": "Intergalactic (Semcore)",
+      "org": "Semrush",
+      "coverage": "partial",
+      "url": "https://developer.semrush.com/intergalactic",
+      "repo": "https://github.com/semrush/intergalactic",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS",
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @semcore/core@17.3.0 → lib/theme/themes/{light,dark,auto,highlights-light,highlights-dark}.css · npm @semcore/button@17.2.1 · input@17.2.2 (components, 2026-08-18)",
+      "_file": "intergalactic.md"
+    },
+    {
+      "name": "Design System Italia (design-tokens-italia)",
+      "org": "Italian Government (Dipartimento per la trasformazione digitale)",
+      "coverage": "partial",
+      "url": "https://designers.italia.it",
+      "repo": "https://github.com/italia/design-tokens-italia",
+      "license": "BSD-3-Clause",
+      "tech": [
+        "DTCG JSON",
+        "CSS",
+        "SCSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "DTCG JSON ($value/$type/$description)",
+        "CSS",
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "government",
+      "verified": "2026-08-18",
+      "source": "npm pack design-tokens-italia@1.3.3 → tokens/{global,semantic,specific}.json · npm bootstrap-italia@2.18.3 · design-react-kit@5.10.0 (components, 2026-08-18)",
+      "_file": "italia.md"
+    },
+    {
+      "name": "Kaizen",
+      "org": "Culture Amp",
+      "coverage": "partial",
+      "url": "https://cultureamp.design",
+      "repo": "https://github.com/cultureamp/kaizen-design-system",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "SCSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS",
+        "CSS"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — no accessibility document among the Storybook's 197 documentation entries, and zero mentions of WCAG)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @kaizen/design-tokens@11.0.17 → sass/{spacing,typography}.scss · npm @kaizen/components@3.3.12 (components, 2026-08-18)",
+      "_file": "kaizen.md"
+    },
+    {
+      "name": "Kontur UI (react-ui)",
+      "org": "SKB Kontur",
+      "coverage": "partial",
+      "url": "https://ui.kontur.ru",
+      "repo": "https://github.com/skbkontur/retail-ui",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @skbkontur/react-ui@6.3.0 → lib/theming/, internal/themes/",
+      "_file": "kontur.md"
+    },
+    {
+      "name": "KRDS (Korea Responsive Design System)",
+      "org": "Government of the Republic of Korea (NIA, the National Information Society Agency)",
+      "coverage": "partial",
+      "url": "https://www.krds.go.kr",
+      "repo": "https://github.com/KRDS-uiux/krds-uiux",
+      "license": "ISC (declared in the package.json of npm krds-uiux, 2026-08-18 — the licence of the design assets and documentation is separately unverified)",
+      "tech": [
+        "HTML",
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "CSS"
+      ],
+      "a11y_target": "Unverified (a high-contrast mode is provided — see below)",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm krds-uiux@1.1.0 → tokens/transformed_tokens.json (768 tokens), figma_token.json. Maintainer uiux@nia.or.kr",
+      "_file": "krds.md"
+    },
+    {
+      "name": "LeafyGreen",
+      "org": "MongoDB",
+      "coverage": "partial",
+      "url": "https://www.mongodb.design",
+      "repo": "https://github.com/mongodb/design",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "Emotion"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "WCAG 2.1 + Section 508 (no level stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @leafygreen-ui/tokens@4.2.2 → dist/esm/index.js · npm @leafygreen-ui/button@25.2.1 · @leafygreen-ui/modal@22.0.1 (components, 2026-08-18)",
+      "_file": "leafygreen.md"
+    },
+    {
+      "name": "Lightning Design System",
+      "org": "Salesforce",
+      "coverage": "full",
+      "url": "https://www.lightningdesignsystem.com",
+      "repo": "https://github.com/salesforce-ux/design-system",
+      "license": "BSD-3-Clause",
+      "tech": [
+        "Aura",
+        "LWC",
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "SCSS",
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.1 AA (the baseline across Salesforce products — confirmed 2026-08-18)",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @salesforce-ux/design-system@2.264.0 → design-tokens/dist/primitive.raw.json",
+      "_file": "lightning.md"
+    },
+    {
+      "name": "LINE Design System (LDSG · LDSM)",
+      "org": "LY Corporation (Japan)",
+      "coverage": "partial",
+      "url": "https://designsystem.line.me",
+      "repo": "null (private — npm carries only the line-seed-* typefaces)",
+      "license": "viewing only (about/terms-en — no copying, modification or redistribution. This entry records only the facts of the values, plus sources)",
+      "tech": [
+        "iOS",
+        "Android",
+        "Web — no code or token distribution"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "documentation-layer sample — Gatsby page-data JSON + spec images"
+      ],
+      "a11y_target": "unverified",
+      "platform": [
+        "mobile",
+        "web"
+      ],
+      "domain": "messaging",
+      "verified": "2026-08-18",
+      "source": "designsystem.line.me /page-data/**/page-data.json (Gatsby) + reading the spec images — a documentation-layer sample",
+      "_file": "line.md"
+    },
+    {
+      "name": "macOS 26 (Apple Design Resources)",
+      "org": "Apple",
+      "coverage": "partial",
+      "url": "https://www.figma.com/community (the official macOS 26 kit)",
+      "repo": null,
+      "license": "unverified (attempted 2026-08-18: developer.apple.com/design/resources renders via JS, so the terms text could not be extracted — checking the Figma community file description is left to a local session)",
+      "tech": [
+        "Figma Kit"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "Figma Variables"
+      ],
+      "a11y_target": "unverified",
+      "platform": "desktop",
+      "verified": "2026-08-17",
+      "source": "Figma community file 'macOS 26' (Apple Design Resources), read from a local duplicate — the duplicate's fileKey is deliberately not recorded, see HARVESTING.md → 12 pages measured (207:14473–14503 — 3 URLs from the user plus 7 found by ID probing) + developer.apple.com HIG DocC JSON",
+      "domain": "os",
+      "_file": "macos.md"
+    },
+    {
+      "name": "Mantine",
+      "org": "Mantine (open source)",
+      "coverage": "partial",
+      "url": "https://mantine.dev",
+      "repo": "https://github.com/mantinedev/mantine",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @mantine/core@9.5.1 → styles.css, styles/*.css (101 component style files)",
+      "_file": "mantine.md"
+    },
+    {
+      "name": "Material Design 3",
+      "org": "Google",
+      "coverage": "full",
+      "url": "https://m3.material.io",
+      "repo": "https://github.com/material-components/material-web",
+      "license": "Apache-2.0",
+      "tech": [
+        "Web Components",
+        "Android",
+        "Flutter"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS",
+        "Figma Variables (DTCG export)"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — the accessibility documents mention WCAG only in general terms, with no version or level target)",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "os",
+      "verified": "2026-08-16",
+      "source": "A full variable export of the Material 3 Design Kit (DTCG JSON) plus npm @material/web@2.5.0",
+      "_file": "material-3.md"
+    },
+    {
+      "name": "Mística",
+      "org": "Telefónica",
+      "coverage": "partial",
+      "url": "https://mistica-web.vercel.app",
+      "repo": "https://github.com/Telefonica/mistica",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "confirmed absent (2026-08-18 — the 135 Storybook entries hold accessibility utilities only, with no WCAG target documented)",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @telefonica/mistica@17.1.0 → dist-es/skins/*.js (re-verified against 16.44.1 — see the correction below)",
+      "_file": "mistica.md"
+    },
+    {
+      "name": "MUI (Material UI)",
+      "org": "MUI",
+      "coverage": "partial",
+      "url": "https://mui.com",
+      "repo": "https://github.com/mui/material-ui",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Emotion"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @mui/material@9.3.1 → styles/{createTypography,createThemeNoVars}.js",
+      "_file": "mui.md"
+    },
+    {
+      "name": "Naive UI",
+      "org": "Open source (out of TuSimple)",
+      "coverage": "partial",
+      "url": "https://www.naiveui.com",
+      "repo": "https://github.com/tusen-ai/naive-ui",
+      "license": "MIT",
+      "tech": [
+        "Vue",
+        "TS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "confirmed absent (2026-08-18 — no WCAG or accessibility target mentioned on any documentation page)",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm naive-ui@2.45.0 → es/_styles/common/{_common,light,dark}.mjs · es/{data-table,menu,tabs,breadcrumb,message,notification,alert,badge}/styles/ + es/layout/src/LayoutSider.mjs (tables, navigation and feedback measured, 2026-08-18)",
+      "_file": "naive-ui.md"
+    },
+    {
+      "name": "NASA Web Design System",
+      "org": "NASA",
+      "coverage": "partial",
+      "url": "https://nasa.github.io/nasawds-site",
+      "repo": "https://github.com/nasa/nasawds",
+      "license": "CC0-1.0",
+      "tech": [
+        "SCSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "unverified (do not presume it inherits USWDS's — left unverified)",
+      "platform": "web",
+      "domain": "aerospace",
+      "verified": "2026-08-18",
+      "source": "npm nasawds@4.0.70 → src/theme/_uswds-theme.scss (depends on @uswds/uswds ^3.1.0)",
+      "_file": "nasa-wds.md"
+    },
+    {
+      "name": "NHS design system (nhsuk-frontend)",
+      "org": "NHS (UK National Health Service)",
+      "coverage": "partial",
+      "url": "https://service-manual.nhs.uk/design-system",
+      "repo": "https://github.com/nhsuk/nhsuk-frontend",
+      "license": "MIT",
+      "tech": [
+        "SCSS",
+        "Nunjucks"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm nhsuk-frontend@10.6.0 → src/nhsuk/core/settings/_{spacing,typography,globals}.scss · npm govuk-frontend@6.4.0 (components, 2026-08-18)",
+      "_file": "nhs.md"
+    },
+    {
+      "name": "Nord",
+      "org": "Nordhealth",
+      "coverage": "partial",
+      "url": "https://nordhealth.design",
+      "repo": "github.com/nordhealth/design-system — declared in the package.json of @nordhealth/css and icons, but access prompts for authentication (private or deleted), confirmed 2026-08-18",
+      "license": "Proprietary (Nordhealth internal use only — redistribution prohibited)",
+      "tech": [
+        "Web Components",
+        "Vue",
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JSON",
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.1 AA (stated — accessibility statement, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "health",
+      "verified": "2026-08-18",
+      "source": "npm @nordhealth/tokens@9.0.4 → lib/tokens.json · npm @nordhealth/components@5.3.0 (components, 2026-08-18)",
+      "_file": "nord.md"
+    },
+    {
+      "name": "New York State Design System (NYSDS)",
+      "org": "New York State Government (ITS-HCD)",
+      "coverage": "partial",
+      "url": "https://designsystem.ny.gov",
+      "repo": "https://github.com/ITS-HCD/nysds",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "DTCG JSON"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "DTCG JSON",
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "government",
+      "verified": "2026-08-18",
+      "source": "npm pack @nysds/tokens@1.20.0 → src/tokens.json · npm @nysds/components@1.20.0 (components, 2026-08-18)",
+      "_file": "nysds.md"
+    },
+    {
+      "name": "Odyssey",
+      "org": "Okta",
+      "coverage": "partial",
+      "url": "https://odyssey.okta.com",
+      "repo": "https://github.com/okta/odyssey",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "MUI"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @okta/odyssey-design-tokens@1.66.1 → dist/index.scss (225 $ variables) · npm @okta/odyssey-react-mui@1.66.1 (components, 2026-08-18)",
+      "_file": "odyssey.md"
+    },
+    {
+      "name": "Open Props",
+      "org": "Adam Argyle (open source)",
+      "coverage": "partial",
+      "url": "https://open-props.style",
+      "repo": "https://github.com/argyleink/open-props",
+      "license": "MIT",
+      "tech": [
+        "CSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm open-props@1.7.23 → open-props.min.css (603 CSS custom properties)",
+      "_file": "open-props.md"
+    },
+    {
+      "name": "Orbit",
+      "org": "Kiwi.com",
+      "coverage": "full",
+      "url": "https://orbit.kiwi",
+      "repo": "https://github.com/kiwicom/orbit",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @kiwicom/orbit-design-tokens@11.0.0 → dist/index.js · npm @kiwicom/orbit-components@27.7.0 (components, 2026-08-18 — pinned to the stable release, as the newer 27.7.1-alpha.0 is a pre-release)",
+      "_file": "orbit.md"
+    },
+    {
+      "name": "Origami",
+      "org": "Financial Times",
+      "coverage": "partial",
+      "url": "https://origami.ft.com",
+      "repo": "https://github.com/Financial-Times/origami",
+      "license": "MIT",
+      "tech": [
+        "SCSS",
+        "Web Components"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @financial-times/o-typography@7.7.2 → src/scss/_brand.scss · npm @financial-times/o-buttons@7.11.1 · o-forms@10.0.4 (components, 2026-08-18)",
+      "_file": "origami.md"
+    },
+    {
+      "name": "Pajamas",
+      "org": "GitLab",
+      "coverage": "partial",
+      "url": "https://design.gitlab.com",
+      "repo": "https://gitlab.com/gitlab-org/gitlab-ui",
+      "license": "MIT",
+      "tech": [
+        "Vue",
+        "SCSS",
+        "Tailwind"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "CSS",
+        "SCSS",
+        "Tailwind"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @gitlab/ui@136.2.0 → src/tokens/build/json/tokens.json (re-verified and updated from 136.1.0)",
+      "_file": "pajamas.md"
+    },
+    {
+      "name": "Panda CSS",
+      "org": "Chakra team (Segun Adebayo and others)",
+      "coverage": "minimal",
+      "url": "https://panda-css.com",
+      "repo": "https://github.com/chakra-ui/panda",
+      "license": "MIT",
+      "tech": [
+        "build-time CSS-in-JS",
+        "TypeScript"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS preset"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-17",
+      "source": "npm pack @pandacss/preset-base@1.12.0 + @pandacss/preset-panda@1.12.0 → dist/index.mjs",
+      "_file": "panda-css.md"
+    },
+    {
+      "name": "Park UI",
+      "org": "Open source (Christian Schröter)",
+      "coverage": "partial",
+      "url": "https://park-ui.com",
+      "repo": "https://github.com/cschroeter/park-ui",
+      "license": "MIT",
+      "tech": [
+        "Panda CSS",
+        "Ark UI",
+        "React/Vue/Solid"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @park-ui/panda-preset@0.43.1 → dist/{index.js,options-*.d.ts}",
+      "_file": "park-ui.md"
+    },
+    {
+      "name": "Paste",
+      "org": "Twilio",
+      "coverage": "partial",
+      "url": "https://github.com/twilio-labs/paste",
+      "repo": "https://github.com/twilio-labs/paste",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS",
+        "JSON",
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @twilio-paste/design-tokens@10.15.0 → dist/tokens.custom-properties.css · npm @twilio-paste/button@15.0.2 · @twilio-paste/modal@17.0.1 (components, 2026-08-18)",
+      "_file": "paste.md"
+    },
+    {
+      "name": "Persona",
+      "org": "Privy (Indonesia)",
+      "coverage": "partial",
+      "url": "https://privy-open-source.github.io/design-system/",
+      "repo": "https://github.com/privy-open-source/design-system",
+      "license": "MIT",
+      "tech": [
+        "Vue 3",
+        "Nuxt",
+        "Tailwind preset"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "Tailwind preset JS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "digital-identity",
+      "verified": "2026-08-18",
+      "source": "npm @privyid/tailwind-preset@1.2.0 · @privyid/persona@1.2.2-rc.9 → basic.js + src/components",
+      "_file": "persona.md"
+    },
+    {
+      "name": "Pharos",
+      "org": "ITHAKA (JSTOR)",
+      "coverage": "partial",
+      "url": "https://pharos.jstor.org",
+      "repo": "https://github.com/ithaka/pharos",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "Lit"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "Confirmed to state no organisation-wide target (2026-08-18 — there are per-component Accessibility sections but no WCAG version or level goal)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @ithaka/pharos@14.25.0 → lib/styles/variables.css",
+      "_file": "pharos.md"
+    },
+    {
+      "name": "PIE",
+      "org": "Just Eat Takeaway",
+      "coverage": "partial",
+      "url": "https://pie.design",
+      "repo": "https://github.com/justeattakeaway/pie",
+      "license": "Apache-2.0",
+      "tech": [
+        "Web Components",
+        "Lit"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JSON",
+        "CSS",
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @justeat/pie-design-tokens@7.14.3 → dist/tokens.json (1,251 leaves) · npm @justeattakeaway/pie-button@1.14.12 · @justeattakeaway/pie-css@1.5.0 (components, 2026-08-18)",
+      "_file": "pie.md"
+    },
+    {
+      "name": "Pluralsight Design System",
+      "org": "Pluralsight",
+      "coverage": "partial",
+      "url": "https://design-system.pluralsight.com",
+      "repo": "https://github.com/pluralsight/design-system",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS",
+        "TS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @pluralsight/ps-design-system-core@10.0.4 → src/css/{layers,layout,type}.css · npm button@24.1.2 · textinput@12.1.2 (components, 2026-08-18)",
+      "_file": "pluralsight.md"
+    },
+    {
+      "name": "Polaris",
+      "org": "Shopify",
+      "coverage": "full",
+      "url": "https://shopify.dev/docs/api/app-home/polaris-web-components",
+      "repo": "https://github.com/Shopify/polaris-react-archive",
+      "license": "custom (the MIT text plus a condition limiting it to Shopify-integrating apps)",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS",
+        "JS"
+      ],
+      "a11y_target": "WCAG 2.1 A+AA (stated in the old documentation — lost from the current shopify.dev docs, confirmed in the Wayback 2025-01 snapshot)",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "github Shopify/polaris-react-archive@main → polaris-tokens/src (archived — frozen 2026-08-05) · npm @shopify/polaris-tokens@9.4.2 (the frozen release) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**",
+      "_file": "polaris.md"
+    },
+    {
+      "name": "Porsche Design System",
+      "org": "Porsche",
+      "coverage": "partial",
+      "url": "https://designsystem.porsche.com",
+      "repo": "https://github.com/porsche-design-system/porsche-design-system",
+      "license": "code: Apache-2.0, assets: Porsche Design System Assets License Agreement",
+      "tech": [
+        "Web Components",
+        "React",
+        "Angular",
+        "Vue"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @porsche-design-system/components-js@4.5.0 → stylesheets/variables.css",
+      "_file": "porsche.md"
+    },
+    {
+      "name": "Priceline Design System",
+      "org": "Priceline",
+      "coverage": "partial",
+      "url": "https://priceline.github.io/design-system",
+      "repo": "https://github.com/priceline/design-system",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "styled-system"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm pcln-design-system@6.29.0 → dist/esm/theme/theme.js",
+      "_file": "priceline.md"
+    },
+    {
+      "name": "Primer",
+      "org": "GitHub",
+      "coverage": "full",
+      "url": "https://primer.style",
+      "repo": "https://github.com/primer/primitives",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Rails/ViewComponent",
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JSON",
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — primer.style/guides/accessibility, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "github primer/primitives@main → src/tokens/base · npm @primer/primitives@11.10.0 → src/tokens/base/{color,typography} · src/tokens/functional/{color,typography} · dist/css/functional/themes/*.css · dist/internalCss/*.css",
+      "_file": "primer.md"
+    },
+    {
+      "name": "PrimeVue",
+      "org": "PrimeTek",
+      "coverage": "partial",
+      "url": "https://primevue.dev",
+      "repo": "https://github.com/primefaces/primevue",
+      "license": "MIT",
+      "tech": [
+        "Vue",
+        "JS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "WCAG (no version or level stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm primevue@5.0.1 + @primeuix/themes@3.0.0 → dist/aura/{base,datatable,tabs,breadcrumb,panelmenu,menu,toast,message,badge} · npm @primeuix/styles@3.0.0 (components, 2026-08-18)",
+      "_file": "primevue.md"
+    },
+    {
+      "name": "Protocol",
+      "org": "Mozilla",
+      "coverage": "partial",
+      "url": "https://protocol.mozilla.org",
+      "repo": "https://github.com/mozilla/protocol",
+      "license": "MPL-2.0",
+      "tech": [
+        "CSS/SCSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @mozilla-protocol/core@22.0.0 → protocol/css/includes/",
+      "_file": "protocol.md"
+    },
+    {
+      "name": "Radix Themes",
+      "org": "WorkOS",
+      "coverage": "full",
+      "url": "https://radix-ui.com/themes",
+      "repo": "https://github.com/radix-ui/themes",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @radix-ui/themes@3.3.0 → styles.css, src/components/*.css (50 components)",
+      "_file": "radix-themes.md"
+    },
+    {
+      "name": "Rakuten ReX",
+      "org": "Rakuten (Japan)",
+      "coverage": "partial",
+      "url": "https://rex.rakuten.design (403 — taken internal)",
+      "repo": "null (the github.com/rakuten-rex org still exists but has 0 public repos — see \"Source status\" below)",
+      "license": "MIT (per the LICENSE in the npm packages)",
+      "tech": [
+        "React",
+        "Sass",
+        "built CSS output"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "no token package — measured from each component's *.static.css"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm @rakuten-rex/typography@1.0.5 · @rakuten-rex/button@1.5.1 · @rakuten-rex/grid@1.6.0 · @rakuten-rex/core@3.0.1 → package/*/​*.static.css",
+      "_file": "rakuten-rex.md"
+    },
+    {
+      "name": "Ring UI",
+      "org": "JetBrains",
+      "coverage": "partial",
+      "url": "https://jetbrains.github.io/ring-ui",
+      "repo": "https://github.com/JetBrains/ring-ui",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "No WCAG level declared — its own minimum text contrast of 4.0:1 (below AA's 4.5:1), confirmed 2026-08-18",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @jetbrains/ring-ui-built@7.0.123 → components/style.css",
+      "_file": "ring-ui.md"
+    },
+    {
+      "name": "Seed Design",
+      "org": "Danggeun (Karrot)",
+      "coverage": "partial",
+      "url": "https://seed-design.io",
+      "repo": "https://github.com/daangn/seed-design",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "CSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS",
+        "JS"
+      ],
+      "a11y_target": "WCAG not adopted — it adopts APCA (Lc) instead: body Lc 75+, other text Lc 60+, placeholder and disabled Lc 30+ (confirmed 2026-08-18)",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm @seed-design/stylesheet@1.1.2 (global.css) · @seed-design/design-token@1.0.5 · npm @seed-design/css@2.5.0 (components, 2026-08-18)",
+      "_file": "seed-design.md"
+    },
+    {
+      "name": "Semi Design",
+      "org": "ByteDance (Douyin FE)",
+      "coverage": "partial",
+      "url": "https://semi.design",
+      "repo": "https://github.com/DouyinFE/semi-design",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS",
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @semi-bot/semi-theme-default@1.0.0 → semi.css (1,887 --semi-* tokens; tables, navigation and feedback measured 2026-08-18) · npm @douyinfe/semi-ui@2.102.0 (components, 2026-08-18)",
+      "_file": "semi.md"
+    },
+    {
+      "name": "Serendie Design System",
+      "org": "Mitsubishi Electric (+ Takram)",
+      "coverage": "partial",
+      "url": "https://serendie.design",
+      "repo": "https://github.com/serendie/serendie",
+      "license": "MIT",
+      "tech": [
+        "CSS",
+        "React",
+        "Panda CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS",
+        "JS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @serendie/design-token@1.4.6 → dist/tokens.css (802 --sd-* tokens) · npm @serendie/ui@3.7.0 (components, 2026-08-18)",
+      "_file": "serendie.md"
+    },
+    {
+      "name": "SGDS (Singapore Government Design System)",
+      "org": "Singapore Government (GovTech)",
+      "coverage": "partial",
+      "url": "https://www.designsystem.tech.gov.sg",
+      "repo": "https://github.com/govtechsg/sgds",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "Sass"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "Sass",
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm @govtechsg/sgds@2.3.6 → sass/_variables.scss",
+      "_file": "sgds.md"
+    },
+    {
+      "name": "shadcn/ui",
+      "org": "shadcn (an individual)",
+      "coverage": "full",
+      "url": "https://ui.shadcn.com",
+      "repo": "https://github.com/shadcn-ui/ui",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "GitHub raw — apps/v4/app/globals.css, apps/v4/registry/new-york-v4/ui/*.tsx, apps/v4/registry/__index__.tsx · npm sonner@2.0.8 → dist/index.mjs·styles.css (toast measurements, 2026-08-18)",
+      "_file": "shadcn-ui.md"
+    },
+    {
+      "name": "Shoelace (→ Web Awesome)",
+      "org": "Font Awesome (Cory LaViska)",
+      "coverage": "partial",
+      "url": "https://shoelace.style",
+      "repo": "https://github.com/shoelace-style/shoelace",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "Lit"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @shoelace-style/shoelace@2.20.1 → dist/themes/light.css",
+      "_file": "shoelace.md"
+    },
+    {
+      "name": "Siemens Industrial Experience (iX)",
+      "org": "Siemens",
+      "coverage": "partial",
+      "url": "https://ix.siemens.io",
+      "repo": "https://github.com/siemens/ix",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "React",
+        "Angular",
+        "Vue"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "WCAG AA (no version stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @siemens/ix@5.2.0 → dist/siemens-ix/{siemens-ix-standalone,theme/classic-*}.css",
+      "_file": "siemens-ix.md"
+    },
+    {
+      "name": "Skeleton",
+      "org": "Skeleton Labs",
+      "coverage": "partial",
+      "url": "https://www.skeleton.dev",
+      "repo": "https://github.com/skeletonlabs/skeleton",
+      "license": "MIT",
+      "tech": [
+        "Svelte",
+        "Tailwind"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm @skeletonlabs/skeleton@5.0.0 → src/themes/*.css (24 of them)",
+      "_file": "skeleton.md"
+    },
+    {
+      "name": "SmartHR UI",
+      "org": "SmartHR",
+      "coverage": "partial",
+      "url": "https://smarthr.design",
+      "repo": "https://github.com/kufu/smarthr-ui",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "styled-components",
+        "Tailwind"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": "References WCAG 2.2 (under its own accessibility policy — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm smarthr-ui@99.3.1 → lib/themes/create*.js (re-verified and updated from 99.2.0)",
+      "_file": "smarthr.md"
+    },
+    {
+      "name": "Spectrum",
+      "org": "Adobe",
+      "coverage": "full",
+      "url": "https://spectrum.adobe.com",
+      "repo": "https://github.com/adobe/spectrum-tokens",
+      "license": "Apache-2.0",
+      "tech": [
+        "Web Components",
+        "React",
+        "CSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JSON"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — the accessibility documentation mentions WCAG only in general terms, with no version or level target)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @adobe/spectrum-tokens@15.0.0 → src/layout.json · src/typography.json · src/color-palette.json · src/semantic-color-palette.json · src/color-aliases.json",
+      "_file": "spectrum.md"
+    },
+    {
+      "name": "Spindle",
+      "org": "CyberAgent (Ameba)",
+      "coverage": "partial",
+      "url": "https://spindle.ameba.design",
+      "repo": "https://github.com/openameba/spindle",
+      "license": "MIT",
+      "tech": [
+        "CSS",
+        "React"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "Its own guidelines, based on WCAG 2.1 (Ameba Accessibility Guidelines — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @openameba/spindle-tokens@1.10.0 → dist/css/*.css · npm @openameba/spindle-ui@3.3.0 (components, 2026-08-18)",
+      "_file": "spindle.md"
+    },
+    {
+      "name": "Stacks",
+      "org": "Stack Overflow",
+      "coverage": "partial",
+      "url": "https://stackoverflow.design",
+      "repo": "https://github.com/StackExchange/Stacks",
+      "license": "MIT",
+      "tech": [
+        "CSS",
+        "LESS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @stackoverflow/stacks@2.9.0 → dist/css/stacks.css",
+      "_file": "stacks.md"
+    },
+    {
+      "name": "Strapi Design System",
+      "org": "Strapi",
+      "coverage": "partial",
+      "url": "https://design-system.strapi.io",
+      "repo": "https://github.com/strapi/design-system",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "styled-components"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @strapi/design-system@2.2.4 → dist (spaces · fontSizes · themes)",
+      "_file": "strapi.md"
+    },
+    {
+      "name": "Tailwind CSS",
+      "org": "Tailwind Labs",
+      "coverage": "full",
+      "url": "https://tailwindcss.com",
+      "repo": "https://github.com/tailwindlabs/tailwindcss",
+      "license": "MIT",
+      "tech": [
+        "CSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": null,
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm tailwindcss@4.3.3 → theme.css (459 lines, the complete set of CSS variables)",
+      "_file": "tailwind.md"
+    },
+    {
+      "name": "Tegel",
+      "org": "Scania",
+      "coverage": "partial",
+      "url": "https://tegel.scania.com",
+      "repo": "https://github.com/scania-digital-design-system/tegel",
+      "license": "MIT",
+      "tech": [
+        "Web Components",
+        "Stencil",
+        "React",
+        "Angular"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @scania/tegel@1.61.0 → dist/collection/**/*.css",
+      "_file": "tegel.md"
+    },
+    {
+      "name": "Thumbprint",
+      "org": "Thumbtack",
+      "coverage": "partial",
+      "url": "https://thumbprint.design",
+      "repo": "https://github.com/thumbtack/thumbprint",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "Sass"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "SCSS",
+        "JS",
+        "Android"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @thumbtack/thumbprint-tokens@13.0.1 → dist/scss/_index.scss · npm @thumbtack/thumbprint-scss@4.0.3 · @thumbtack/thumbprint-react@14.18.2 (components, 2026-08-18)",
+      "_file": "thumbprint.md"
+    },
+    {
+      "name": "Tizen Wearable CircularUI",
+      "org": "Samsung",
+      "coverage": "partial",
+      "url": "https://samsung.github.io/Tizen.CircularUI",
+      "repo": "https://github.com/Samsung/Tizen.CircularUI",
+      "license": "Apache-2.0",
+      "tech": [
+        "Xamarin.Forms",
+        "C#"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "docs",
+        "API defaults"
+      ],
+      "a11y_target": "unverified",
+      "platform": "wearable",
+      "domain": "os",
+      "verified": "2026-08-17",
+      "source": "github Samsung/Tizen.CircularUI@master → README.md + doc/design/part01~16 (archived — frozen 2023-04, documentation is in Korean)",
+      "_file": "tizen-circularui.md"
+    },
+    {
+      "name": "TDS (Toss Design System)",
+      "org": "Toss (Viva Republica)",
+      "coverage": "full",
+      "url": "https://tossmini-docs.toss.im",
+      "repo": null,
+      "license": "Not stated (no license field or LICENSE file in the main packages — only tds-react-native is Apache-2.0, confirmed 2026-08-18)",
+      "tech": [
+        "React",
+        "React Native"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS",
+        "CSS"
+      ],
+      "a11y_target": "Unverified (iOS Dynamic Type support is built in — see below)",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "consumer",
+      "verified": "2026-08-17",
+      "source": "npm @toss/tds-colors@0.1.0 + @toss/tds-typography@0.0.3 + @toss/tds-easings@0.0.1 + @toss/tds-mobile@2.5.1. @toss/tds-mobile-ait for mini apps is separate",
+      "_file": "toss-tds.md"
+    },
+    {
+      "name": "tvOS Design (HIG)",
+      "org": "Apple",
+      "coverage": "partial",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos",
+      "repo": null,
+      "license": "unverified (attempted 2026-08-18: developer.apple.com/design/resources renders via JS, so the terms text could not be extracted — checking the Figma community file description is left to a local session)",
+      "tech": [
+        "docs"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "docs"
+      ],
+      "a11y_target": "unverified",
+      "platform": "tv",
+      "domain": "os",
+      "verified": "2026-08-17",
+      "source": "developer.apple.com HIG DocC JSON — the tvOS section of layout.json (grid and inset figures)",
+      "_file": "tvos.md"
+    },
+    {
+      "name": "Unify",
+      "org": "Tokopedia (GoTo)",
+      "coverage": "partial",
+      "url": "https://unify.tokopedia.com",
+      "repo": null,
+      "license": "MIT",
+      "tech": [
+        "React",
+        "Android"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "JS",
+        "XML"
+      ],
+      "a11y_target": "unverified",
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm unify-tokens@0.0.4 → build/{spacing,typography,color,grid}.{js,xml} · npm unify-react-desktop@0.24.2 · unify-react-mobile@3.40.13 (components, 2026-08-18)",
+      "_file": "unify.md"
+    },
+    {
+      "name": "USWDS (U.S. Web Design System)",
+      "org": "U.S. federal government (GSA)",
+      "coverage": "full",
+      "url": "https://designsystem.digital.gov",
+      "repo": "https://github.com/uswds/uswds",
+      "license": "Public domain (CC0-1.0, a U.S. government work) + fonts SIL OFL-1.1 / icons Apache-2.0",
+      "tech": [
+        "Sass",
+        "CSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "Sass"
+      ],
+      "a11y_target": "Targets WCAG 2.1 AA (exceeding the legal baseline of 2.0 AA — moving gradually toward 2.2 and AAA, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "public",
+      "verified": "2026-08-18",
+      "source": "npm @uswds/uswds@3.14.0 → packages/uswds-core/src/styles/tokens/{units,font}/*.scss",
+      "_file": "uswds.md"
+    },
+    {
+      "name": "vanilla-extract",
+      "org": "Open source (out of SEEK — same roots as Braid)",
+      "coverage": "minimal",
+      "url": "https://vanilla-extract.style",
+      "repo": "https://github.com/vanilla-extract-css/vanilla-extract",
+      "license": "MIT",
+      "tech": [
+        "build-time CSS-in-TS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "none — ships no values"
+      ],
+      "a11y_target": "not applicable",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-17",
+      "source": "npm pack @vanilla-extract/css@1.21.2 → dist/ (confirmed 0 default tokens)",
+      "_file": "vanilla-extract.md"
+    },
+    {
+      "name": "Vanilla Framework",
+      "org": "Canonical (Ubuntu)",
+      "coverage": "partial",
+      "url": "https://vanillaframework.io",
+      "repo": "https://github.com/canonical/vanilla-framework",
+      "license": "LGPL-3.0",
+      "tech": [
+        "SCSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm vanilla-framework@4.57.0 → scss/_settings_{spacing,font}.scss",
+      "_file": "vanilla.md"
+    },
+    {
+      "name": "Vapor UI",
+      "org": "goorm",
+      "coverage": "partial",
+      "url": "https://vapor-ui.goorm.io",
+      "repo": "https://github.com/goorm-dev/vapor-ui",
+      "license": "MIT",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "WCAG 2.2 AA (stated — built on Base UI, confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @vapor-ui/core@1.5.0 → dist/components/*.vanilla.css",
+      "_file": "vapor.md"
+    },
+    {
+      "name": "Vibe",
+      "org": "monday.com",
+      "coverage": "partial",
+      "url": "https://vibe.monday.com",
+      "repo": "https://github.com/mondaycom/vibe",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "SCSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — only a general reference to WCAG, with no version or level target. The contrast requirements are 4.5:1 for text and 3:1 for non-text)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm monday-ui-style@0.26.2 → dist/index.css (919 variables) + @vibe/core@4.5.9",
+      "_file": "vibe.md"
+    },
+    {
+      "name": "Vibes",
+      "org": "freee",
+      "coverage": "partial",
+      "url": "https://vibes.freee.co.jp",
+      "repo": "https://github.com/freee/vibes",
+      "license": "Apache-2.0",
+      "tech": [
+        "React",
+        "SCSS"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS",
+        "SCSS"
+      ],
+      "a11y_target": "Governed by freee's accessibility guidelines — based on WCAG 2.1, with no level target stated (confirmed 2026-08-18)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-08-18",
+      "source": "npm @freee_jp/vibes@100.1.0 → dist/constants/{Color,Size,Font,ZIndex}.js + vibes_2021.css",
+      "_file": "vibes.md"
+    },
+    {
+      "name": "visionOS Design Resources",
+      "org": "Apple",
+      "coverage": "partial",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos",
+      "repo": null,
+      "license": "\"unverified (attempted 2026-08-18: developer.apple.com/design/resources renders via JS, so the terms text could not be extracted — checking the Figma community file description is left to a local session)\" (Apple Design Resources)",
+      "tech": [
+        "SwiftUI",
+        "RealityKit"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "Figma Variables"
+      ],
+      "a11y_target": "unverified",
+      "platform": "spatial",
+      "domain": "os",
+      "verified": "2026-08-16",
+      "source": "Figma 'Apple Design Resources - visionOS (Community)' → the Drop Downs page",
+      "_file": "visionos.md"
+    },
+    {
+      "name": "Vitamin",
+      "org": "Decathlon",
+      "coverage": "partial",
+      "url": "https://www.decathlon.design",
+      "repo": "https://github.com/Decathlon/vitamin-web",
+      "license": "Apache-2.0",
+      "tech": [
+        "CSS",
+        "Web Components",
+        "React",
+        "Vue"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "commerce",
+      "verified": "2026-08-18",
+      "source": "npm @vtmn/css@3.0.2 → dist/index.css + dist/index-base10.css",
+      "_file": "vitamin.md"
+    },
+    {
+      "name": "Vuetify",
+      "org": "Open source (Vuetify)",
+      "coverage": "partial",
+      "url": "https://vuetifyjs.com",
+      "repo": "https://github.com/vuetifyjs/vuetify",
+      "license": "MIT",
+      "tech": [
+        "Vue",
+        "SCSS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "SCSS"
+      ],
+      "a11y_target": "Confirmed to state none (2026-08-18 — the accessibility documentation covers only WAI-ARIA implementation, with no WCAG version or level target)",
+      "platform": "web",
+      "domain": "framework",
+      "verified": "2026-08-18",
+      "source": "npm vuetify@4.1.10 → lib/styles/settings/_variables.scss · lib/components/*/_variables.scss · dist/vuetify.min.css (tables, navigation and feedback measured, 2026-08-18)",
+      "_file": "vuetify.md"
+    },
+    {
+      "name": "Wear OS Design (M3 Expressive)",
+      "org": "Google",
+      "coverage": "partial",
+      "url": "https://developer.android.com/design/ui/wear",
+      "repo": null,
+      "license": "docs CC BY 2.5 · code samples Apache 2.0 (developer.android.com/license, confirmed 2026-08-18)",
+      "tech": [
+        "Compose for Wear OS"
+      ],
+      "figma_kit": true,
+      "tokens_format": [
+        "docs"
+      ],
+      "a11y_target": "unverified",
+      "platform": "wearable",
+      "domain": "os",
+      "verified": "2026-08-17",
+      "source": "developer.android.com/design/ui/wear/guides — {adaptive-design, type-scale-tokens, screen-sizes, apps/layouts} (measured from the HTML)",
+      "_file": "wear-os.md"
+    },
+    {
+      "name": "Welcome UI",
+      "org": "Welcome to the Jungle (WTTJ)",
+      "coverage": "partial",
+      "url": "https://welcome-ui.com",
+      "repo": "https://github.com/WTTJ/welcome-ui",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "CSS"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS",
+        "SCSS"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm welcome-ui@10.6.3 → dist/theme.css (1,804 variables), dist/scss/breakpoints.scss",
+      "_file": "welcome-ui.md"
+    },
+    {
+      "name": "WMN Design System",
+      "org": "West Midlands Network (UK transport authority)",
+      "coverage": "partial",
+      "url": "https://designsystem.tfwm.org.uk",
+      "repo": "https://github.com/wmcadigital/wmn-design-system",
+      "license": "unspecified — effectively all rights reserved (no LICENSE file, no package.json license field, no mention in the README, GitHub API license null — confirmed 2026-08-18)",
+      "tech": [
+        "SCSS",
+        "Nunjucks patterns"
+      ],
+      "figma_kit": "unverified",
+      "tokens_format": [
+        "CSS",
+        "JSON (pattern data)"
+      ],
+      "a11y_target": "unverified",
+      "platform": "web",
+      "domain": "transit",
+      "verified": "2026-08-18",
+      "source": "npm pack wmn-design-system@2.4.0 → build/json/merged.njk.json + build/css/wmnds.min.css",
+      "_file": "wmn.md"
+    },
+    {
+      "name": "Yoga",
+      "org": "Wellhub (formerly Gympass)",
+      "coverage": "partial",
+      "url": "https://gympass.github.io/yoga",
+      "repo": "https://github.com/gympass/yoga",
+      "license": "MIT",
+      "tech": [
+        "React",
+        "React Native",
+        "styled-components"
+      ],
+      "figma_kit": false,
+      "tokens_format": [
+        "JS"
+      ],
+      "a11y_target": null,
+      "platform": [
+        "web",
+        "mobile"
+      ],
+      "domain": "consumer",
+      "verified": "2026-08-18",
+      "source": "npm @gympass/yoga-tokens@3.9.0 → esm/global/*.js",
+      "_file": "yoga.md"
+    }
+  ]
+}

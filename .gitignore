@@ -1,0 +1,21 @@
+# 의존성
+node_modules/
+
+# 환경 변수 — FIGMA_OAUTH_TOKEN 등이 여기 들어갑니다. 절대 커밋하지 마세요.
+.env
+.env.*
+!.env.example
+
+# Claude 로컬 설정 (MCP 서버 설정에 토큰이 포함될 수 있음)
+.claude/settings.local.json
+
+# 수집 작업 중 생기는 임시 파일
+*.tgz
+/tmp/
+scratch/
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

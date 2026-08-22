@@ -1,0 +1,50 @@
+name: check site data
+
+# docs/ 는 GitHub Pages 로 그대로 서빙되고, 목록·표본 수는 코퍼스에서 생성됩니다.
+# 생성물을 커밋해 두는 구조라 원본만 고치고 재생성을 잊으면 사이트가 조용히 낡습니다.
+# 그 경우를 PR 에서 실패시킵니다.
+
+on:
+  pull_request:
+    paths:
+      - 'design-systems/systems/**'
+      - 'design-systems/patterns/**'
+      - 'design-systems/data/**'
+      - 'site/**'
+      - 'docs/**'
+      - 'profiles/interpreted/**'
+      - '.github/workflows/site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # systems.json 자체가 systems/*.md frontmatter 생성물이므로 함께 확인합니다.
+      - name: 데이터 재생성
+        run: |
+          node design-systems/i18n.mjs --check
+          node design-systems/build-data.mjs
+          node site/build.mjs
+          node site/design-spec.mjs
+          node site/design-spec.mjs --lang=ko
+
+      - name: 생성물이 커밋본과 같은지 확인
+        run: |
+          if ! git diff --quiet -- design-systems/data docs/data profiles/interpreted; then
+            echo '::error::생성물이 원본과 어긋납니다. 아래를 실행하고 결과를 커밋하세요.'
+            echo '  node design-systems/build-data.mjs && node site/build.mjs'
+            echo '  node site/design-spec.mjs && node site/design-spec.mjs --lang=ko'
+            git --no-pager diff --stat -- design-systems/data docs/data profiles/interpreted
+            exit 1
+          fi
+          echo '생성물 최신 — design-systems/data · docs/data · profiles/interpreted'

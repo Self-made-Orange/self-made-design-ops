@@ -1,0 +1,9 @@
+{
+  "home.cta.primary": "Get started",
+  "home.item_count": "{count, plural, one {# item} other {# items}}",
+  "home.greeting": "Hello, {userName}",
+  "common.action.close": "Close",
+  "common.state.closed": "Close",
+  "checkout.error.card_declined": "Your card was declined.",
+  "checkout.total": "Total {price, number, ::currency/USD}"
+}

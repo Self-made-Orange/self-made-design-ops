@@ -1,0 +1,357 @@
+/* ── Self-Made DesignOps — shared chrome
+ *
+ * Two pages sit on one shell: index.html (the kit) and catalog.html (the evidence).
+ * Everything either of them shares lives here, so the header, rail, theme and row
+ * rhythm cannot drift apart the way two hand-written pages would.
+ *
+ * LIGHT is the base; DARK is opt-in and stored by the header toggle. Both palettes
+ * are authored (grade A) — the corpus records no palette. Contrast figures beside a
+ * token are WCAG-computed against that theme's canvas.
+ */
+:root{
+  color-scheme:light;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:48px;--sp-8:72px;
+  --r-control:0px;            /* buttons and inputs are square — tokens/scales.md radius-0 camp */
+  --head-h:58px;--rail-w:248px;
+
+  /* canvas #faf9f7 — text 16.8:1 · mut 6.8:1 · dim 4.9:1 · link 4.9:1 (WCAG-computed) */
+  --bg:#faf9f7;--bg-sunken:#f2f1ed;--surface:#fff;
+  --border:#e6e4de;--border-strong:#d6d3ca;
+  --text:#1a1815;--text-mut:#5c574f;--text-dim:#726c62;
+  --accent:#f97316;                   /* fills and dots only — 2.7:1, never text */
+  --accent-text:#c2410c;--link:#c2410c;      /* the deep cut, for text — 4.9:1 */
+  /* The CTA, chosen by the owner: #ff5926, H14 S100 L57, white label.
+     Recorded plainly: white on it is 3.13:1, which is under the 4.5:1 AA floor for
+     body-size text. The label is 15px/600, so it does not qualify as large text
+     either. This is a deliberate brand call, not an oversight, and it is the one
+     value on the page that trades measured contrast for the look — every other
+     figure in this file clears AA. --btn-line carries the boundary against the
+     light canvas (3.9:1), since the fill alone is 2.97:1, a hair under 1.4.11. */
+  --btn:#ff5926;--btn-hover:#f04a15;--btn-text:#ffffff;--btn-line:#e8481a;
+  --cov-full:#c2410c;--cov-partial:#2563eb;--cov-minimal:#6b7280;
+  --warn:#9a6700;
+  --chip-bg:rgba(20,18,15,.045);--chip-border:rgba(20,18,15,.12);
+  --hover:rgba(20,18,15,.045);
+  --dot:rgba(20,18,15,.09);           /* hero grid — 1px dots, 24px apart */
+  --panel:#141414;--panel-line:#2a2a2a;      /* code is dark in both themes */
+  --ease:cubic-bezier(.2,.6,.2,1);
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",
+         "Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+}
+[data-theme="dark"]{
+  color-scheme:dark;
+  /* Canvas #0c0c0c — a NEUTRAL black. The ramp used to be Primer's (#0d1117), which is
+     blue-tinted by design; beside the warm light canvas it read as a different product
+     rather than the same one at night. Every neutral here has R=G=B, so nothing but the
+     orange and the coverage dots carries hue.
+     Contrast on #0c0c0c, WCAG-computed: text 16.7:1 · mut 7.6:1 · dim 5.7:1 ·
+     link 7.0:1 · warn 10.1:1 · the CTA label on --btn 3.1:1 (see the note above) */
+  --bg:#0c0c0c;--bg-sunken:#070707;--surface:#161616;
+  --border:#2a2a2a;--border-strong:#3d3d3d;
+  --text:#ededed;--text-mut:#a1a1a1;--text-dim:#8a8a8a;
+  --accent-text:#f97316;--link:#f97316;      /* the bright cut reads as text here */
+  /* the coverage dots stay hued — they carry meaning, not chrome (7.7:1 / 7.0:1) */
+  --cov-partial:#58a6ff;--cov-minimal:#9a9a9a;
+  --warn:#e3b341;
+  --chip-bg:rgba(255,255,255,.045);--chip-border:rgba(255,255,255,.11);
+  --hover:rgba(255,255,255,.035);
+  --dot:rgba(255,255,255,.10);
+  --panel:#161616;--panel-line:#2a2a2a;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);
+  letter-spacing:-.005em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--link);text-underline-offset:3px}
+h1,h2,h3{letter-spacing:-.028em}
+:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:var(--sp-4);top:var(--sp-2);z-index:60;background:var(--surface);
+  padding:var(--sp-2) var(--sp-3);border:1px solid var(--border-strong)}
+
+/* ── Header */
+.top{position:sticky;top:0;z-index:40;height:var(--head-h);background:var(--surface);
+  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-4);
+  padding:0 var(--sp-5)}
+.brand{font-weight:660;font-size:15px;color:var(--text);text-decoration:none;white-space:nowrap;
+  min-width:0;overflow:hidden;text-overflow:ellipsis}
+.brand .dot{color:var(--accent)}
+.top .spacer{flex:1}
+.ctrl{display:inline-flex;align-items:center;justify-content:center;height:32px;
+  border:1px solid var(--border-strong);background:transparent;color:var(--text);
+  border-radius:var(--r-control);font:inherit;font-size:13px;text-decoration:none;cursor:pointer;
+  transition:background-color .14s var(--ease),border-color .14s var(--ease)}
+.ctrl:hover{background:var(--bg-sunken);border-color:var(--accent)}
+.ctrl.pad{padding:0 var(--sp-3);gap:6px}
+.ctrl .n{font-family:var(--mono);font-size:10.5px;color:var(--text-dim)}
+.ctrl.icon{width:32px}
+.i-sun{display:none}
+[data-theme="dark"] .i-sun{display:block}
+[data-theme="dark"] .i-moon{display:none}
+
+/* ── Shell: rail left, page right. Constant across both pages. */
+.shell{display:grid;grid-template-columns:var(--rail-w) minmax(0,1fr);align-items:start}
+.rail{position:sticky;top:var(--head-h);height:calc(100vh - var(--head-h));overflow-y:auto;
+  border-right:1px solid var(--border);padding:var(--sp-5) var(--sp-4);
+  display:flex;flex-direction:column;gap:var(--sp-5)}
+.rail h2{margin:0 0 var(--sp-2);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--text-dim);font-weight:600}
+.rail ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.rail li a{display:flex;align-items:center;gap:var(--sp-2);padding:7px var(--sp-3);font-size:13.5px;
+  color:var(--text-mut);text-decoration:none;line-height:1.3;
+  transition:background-color .12s var(--ease),color .12s var(--ease)}
+.rail li a:hover{background:var(--bg-sunken);color:var(--text)}
+.rail li a[aria-current]{background:var(--bg-sunken);color:var(--text);font-weight:600;
+  box-shadow:inset 2px 0 0 var(--accent)}
+.rail .n{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--text-dim)}
+.rail .sub a{padding-left:var(--sp-5);font-size:13px}
+.railfoot{margin-top:auto;padding-top:var(--sp-3);border-top:1px solid var(--border);
+  font-size:12px;color:var(--text-dim);line-height:1.5}
+.page{min-width:0}
+.page .wrap{max-width:960px;padding:0 var(--sp-6)}
+
+/* ── Rail as filter panel (catalog) */
+#q{width:100%;height:34px;padding:0 var(--sp-3);background:var(--surface);color:var(--text);
+  border:1px solid var(--border-strong);border-radius:var(--r-control);font:inherit;font-size:14px}
+#q::placeholder{color:var(--text-dim)}
+.grp{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;font:inherit;
+  font-size:12.5px;background:var(--chip-bg);color:var(--text);border:1px solid var(--chip-border);
+  border-radius:999px;cursor:pointer;transition:border-color .12s var(--ease),background-color .12s var(--ease)}
+.chip:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--chip-border))}
+.chip[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 14%,transparent);
+  border-color:color-mix(in srgb,var(--accent) 55%,transparent);font-weight:550}
+.chip .c{font-family:var(--mono);font-size:10.5px;color:var(--text-dim)}
+
+/* ── Sections */
+section{padding:var(--sp-7) 0;border-bottom:1px solid var(--border)}
+.sec-head{margin-bottom:var(--sp-6);max-width:68ch}
+.sec-head h2{margin:0;font-size:clamp(24px,3.2vw,34px);font-weight:720}
+.sec-head p{margin:var(--sp-3) 0 0;color:var(--text-mut)}
+.kicker{display:inline-flex;align-items:center;gap:var(--sp-2);font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);margin-bottom:var(--sp-4)}
+.kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* ── Hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;
+  padding:var(--sp-7) 0 var(--sp-6);border-bottom:1px solid var(--border)}
+/* ── Hero motion — a 24px dot field, drifting one cell per cycle.
+ *
+ * The grid step is not invented: 24px is a spacing step in 27 of 29 systems
+ * (tokens/scales.md), so the background is built out of a value the corpus
+ * already carries. What IS authored (A) is the drift itself — 24s linear, and
+ * the corpus records no ambient-loop duration to appeal to; the longest thing
+ * in patterns/motion.md is Codex's 2000ms, which is a different kind of animal.
+ *
+ * It translates exactly one cell (24px, 24px) and the pattern repeats every
+ * 24px, so the loop is seamless with no fade or reset. The layer is inset by
+ * -48px so the moving edge never enters the box.
+ *
+ * The mask keeps it out of the reading column: it is strongest at the right
+ * edge — the half of the hero that is empty at desktop widths — and gone by the
+ * time it reaches the headline. */
+.hero::before{
+  content:'';position:absolute;inset:-48px;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px,var(--dot) 1px,transparent 0);
+  background-size:24px 24px;
+  -webkit-mask-image:radial-gradient(115% 130% at 100% 38%,#000 0%,#000 30%,transparent 68%);
+          mask-image:radial-gradient(115% 130% at 100% 38%,#000 0%,#000 30%,transparent 68%);
+  animation:drift 24s linear infinite;
+  will-change:transform}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(24px,24px,0)}}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{margin:0;font-size:clamp(32px,5vw,54px);font-weight:730;line-height:1.05}
+/* The headline sets its own break with a <br>, so it needs no max-width — a ch cap
+   would re-wrap the second line and turn two deliberate lines into three. */
+.hero .lede{margin:var(--sp-4) 0 0;max-width:64ch;font-size:clamp(16px,1.9vw,18.5px);color:var(--text-mut)}
+.hero .lede strong{color:var(--accent-text);font-weight:650}
+.cta{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-6)}
+.btn{display:inline-flex;align-items:center;gap:var(--sp-2);height:46px;padding:0 var(--sp-6);
+  border-radius:var(--r-control);font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;
+  border:1px solid transparent;transition:background-color .14s var(--ease),border-color .14s var(--ease)}
+.btn-p{background:var(--btn);color:var(--btn-text);border-color:var(--btn-line)}
+.btn-p:hover{background:var(--btn-hover);border-color:var(--btn-hover)}
+.btn-g{border-color:var(--border-strong);color:var(--text)}
+.btn-g:hover{border-color:var(--accent)}
+/* Outline in the primary — the third hero action.
+ * The fill's own #ff5926 is 2.97:1 against the light canvas, under the 3:1 WCAG 1.4.11
+ * asks of a component boundary — and on an outline button the boundary IS the component,
+ * so it cannot be waved through the way a filled button's edge could be. The stroke takes
+ * --btn-line, the same orange two steps down that already draws the filled button's edge,
+ * at 3.71:1. The label takes --accent-text for the same reason: #ff5926 as type is 2.97:1. */
+.btn-o{border-color:var(--btn-line);color:var(--accent-text);background:transparent}
+.btn-o:hover{border-color:var(--btn);background:color-mix(in srgb,var(--btn) 10%,transparent)}
+
+/* ── Code, dark in both themes so the border must be explicit */
+.code{background:var(--panel);border:1px solid var(--panel-line);color:#f5f5f5;
+  font-family:var(--mono);font-size:13px;line-height:1.75;padding:var(--sp-4) var(--sp-5);
+  overflow-x:auto;margin:0}
+.code .cm{color:#949494}       /* 6.1:1 on the panel */
+.code .k{color:#ffa257}        /* 9.3:1 */
+.codehead{display:flex;align-items:center;gap:var(--sp-3);margin:var(--sp-5) 0 var(--sp-2)}
+.codehead h3{margin:0;font-size:14px;font-weight:620}
+.copy{margin-left:auto;height:30px;padding:0 var(--sp-4);background:var(--btn);color:var(--btn-text);
+  border:1px solid var(--btn-line);border-radius:var(--r-control);font:inherit;font-size:12px;
+  font-weight:600;cursor:pointer}
+.copy:hover{background:var(--btn-hover)}
+
+/* ── Steps */
+.steps{display:grid;gap:var(--sp-5);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.step{border-top:2px solid var(--text);padding-top:var(--sp-3)}
+.step b{display:block;font-family:var(--mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px}
+.step h3{margin:0 0 var(--sp-2);font-size:16px;font-weight:640}
+.step p{margin:0;font-size:14px;color:var(--text-mut)}
+
+/* ── Row lists. One rhythm for the kit inventory and the catalog alike. */
+.rowgrp h3{margin:0 0 var(--sp-2);font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--text-dim);font-weight:600;
+  padding-bottom:var(--sp-2);border-bottom:1px solid var(--border-strong)}
+.rowgrp + .rowgrp{margin-top:var(--sp-6)}
+.ruler,.row,.kititem{display:grid;grid-template-columns:minmax(0,1fr)}
+.row,.kititem{position:relative;padding:9px var(--sp-2);border-bottom:1px solid var(--border);
+  text-decoration:none;color:inherit;transition:background-color .1s var(--ease)}
+.row:hover,.kititem:hover{background:var(--hover)}
+@media(min-width:760px){
+  .kititem{grid-template-columns:20rem minmax(0,1fr) 4.5rem;align-items:center;gap:var(--sp-4)}
+}
+.kititem code{font-family:var(--mono);font-size:12.5px;color:var(--text);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kititem span{font-size:14px;color:var(--text-mut)}
+.kititem em{font-family:var(--mono);font-size:11px;color:var(--text-dim);font-style:normal;text-align:right}
+
+/* catalog rows */
+@media(min-width:820px){
+  .ruler,.row{grid-template-columns:28px minmax(0,1.35fr) minmax(0,1.2fr) 4.75rem 5.5rem 4rem;
+    align-items:center;gap:var(--sp-3)}
+}
+.ruler{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--text-dim);padding:var(--sp-5) var(--sp-2) var(--sp-2);
+  border-bottom:1px solid var(--border-strong);position:sticky;top:var(--head-h);background:var(--bg);z-index:5}
+.ruler span:nth-child(n+4){text-align:right}
+@media(max-width:819px){.ruler{display:none}}
+.nm{font-size:14px;font-weight:620;color:var(--text);text-decoration:none;
+  flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nm::after{content:'';position:absolute;inset:0}     /* the row is the link */
+.cell-nm{display:flex;align-items:baseline;gap:var(--sp-2);min-width:0}
+.ds{font-size:13px;color:var(--text-mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rt{font-family:var(--mono);font-size:11px;color:var(--text-dim);text-align:right;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.out{position:relative;z-index:1;display:inline-flex;gap:var(--sp-2);font-size:11px}
+.mk{flex:none;font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--text-dim)}
+.mk.warn{color:var(--warn)}
+.cov{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;
+  font-weight:600;letter-spacing:.04em;color:var(--text);background:var(--chip-bg);
+  border:1px solid var(--chip-border);border-radius:999px;padding:2px 7px}
+.cov::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--c)}
+.cov[data-c="full"]{--c:var(--cov-full)}.cov[data-c="partial"]{--c:var(--cov-partial)}
+.cov[data-c="minimal"]{--c:var(--cov-minimal)}
+.cell-cov{text-align:right}
+@media(max-width:819px){.row{gap:3px;padding:var(--sp-3) var(--sp-2)}.rt,.cell-cov{text-align:left}}
+
+/* logo slot — a GitHub org avatar where the corpus records one, else a monogram */
+.mark{position:relative;width:28px;height:28px;flex:none;display:inline-flex;align-items:center;
+  justify-content:center;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:-.02em;
+  color:hsl(var(--h) 55% 30%);background:hsl(var(--h) 46% 92%);
+  border:1px solid hsl(var(--h) 40% 84%);text-transform:uppercase;overflow:hidden}
+[data-theme="dark"] .mark{color:hsl(var(--h) 60% 78%);background:hsl(var(--h) 30% 18%);
+  border-color:hsl(var(--h) 25% 28%)}
+.mark img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.mark.has-img img{opacity:1}
+.mark.has-img{background:var(--surface);border-color:var(--border)}
+.mark.has-img .ini{visibility:hidden}
+
+/* ── Axis cards + principles */
+.grid{display:grid;gap:var(--sp-5);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{display:flex;flex-direction:column;gap:var(--sp-2);padding:var(--sp-5) var(--sp-4);
+  border-inline:1px solid var(--border);margin-left:-1px;text-decoration:none;color:inherit;
+  position:relative;transition:background-color .18s var(--ease),border-color .18s var(--ease)}
+.card:hover{background:var(--hover);border-inline-color:color-mix(in srgb,var(--accent) 45%,var(--border))}
+.card::after{content:'↗';position:absolute;top:var(--sp-3);right:var(--sp-4);font-size:14px;
+  color:var(--accent-text);opacity:0;transform:translate(-3px,3px);pointer-events:none;
+  transition:opacity .16s var(--ease),transform .16s var(--ease)}
+.card:hover::after{opacity:1;transform:translate(0,0)}
+.card h3{margin:0;font-size:15px;font-weight:620}
+.card p{margin:0;font-size:13.5px;color:var(--text-mut);line-height:1.55}
+.card .path{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);word-break:break-all}
+.axis-num{font-size:44px;font-weight:720;letter-spacing:-.035em;line-height:1;color:var(--accent-text);
+  font-variant-numeric:tabular-nums}
+.axis-unit{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim)}
+
+/* ── Evidence figures */
+.ev{display:grid;gap:var(--sp-5);grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.evcard{border-left:2px solid var(--accent);padding-left:var(--sp-4)}
+.evcard b{display:block;font-size:30px;font-weight:690;letter-spacing:-.03em;color:var(--accent-text);
+  font-variant-numeric:tabular-nums;line-height:1.1}
+.evcard span{font-size:14px;color:var(--text-mut)}
+.claim{margin-top:var(--sp-6);padding:var(--sp-5);background:var(--surface);border:1px solid var(--border)}
+.claim p{margin:0;font-size:17px}
+.claim p + p{margin-top:var(--sp-3);font-size:14.5px;color:var(--text-mut)}
+.empty{padding:var(--sp-7) 0;text-align:center;color:var(--text-mut)}
+.noscript{border:1px solid var(--warn);color:var(--warn);padding:var(--sp-3) var(--sp-4);font-size:14px}
+
+/* ── Footer — a dark slab in both themes; it redefines the palette in its own scope
+   so links and headings inherit a correct dark set. Contrast on #0c0c0c: body 7.6:1 ·
+   headings 16.7:1 · links 9.8:1 · dim 5.7:1. */
+footer.site{--bg:#0c0c0c;--border:#2a2a2a;--text:#ededed;--text-mut:#a1a1a1;--text-dim:#8a8a8a;
+  --link:#ffa257;--accent-text:#ffa257;
+  background:var(--bg);border-top:1px solid var(--border);padding:var(--sp-8) 0 var(--sp-6);
+  font-size:13px;color:var(--text-mut)}
+footer.site .wrap{max-width:1080px;margin:0 auto;padding:0 var(--sp-5)}
+.foot-cols{display:grid;gap:var(--sp-7) var(--sp-6);grid-template-columns:1.7fr 1fr 1.4fr 1fr}
+.foot-brand .brand{font-size:15px;color:var(--text)}
+.foot-brand p{margin:var(--sp-3) 0 0;max-width:34ch;line-height:1.6}
+.foot-col h2{margin:0 0 var(--sp-3);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--text-dim);font-weight:600}
+.foot-col a{display:block;padding:3px 0;color:var(--text-mut);text-decoration:none}
+.foot-col a:hover{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.foot-bar{margin-top:var(--sp-7);padding-top:var(--sp-4);border-top:1px solid var(--border);
+  display:flex;flex-wrap:wrap;gap:var(--sp-3) var(--sp-5);justify-content:space-between}
+.foot-bar p{margin:0}
+.foot-bar .rights strong{color:var(--text)}
+.foot-bar .sep{padding:0 var(--sp-2)}
+.foot-bar .note{color:var(--text-dim);max-width:62ch}
+
+/* Below ~620px the header row no longer fits brand + two pills + the toggle, and a
+   flex row that does not fit widens the document. The GitHub link is the one that
+   goes: the rail and the footer both carry it, the theme toggle is carried nowhere
+   else. */
+@media(max-width:620px){
+  .top{gap:var(--sp-3);padding:0 var(--sp-4)}
+  .top .gh{display:none}
+}
+
+@media(max-width:940px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .rail{position:static;height:auto;border-right:0;border-bottom:1px solid var(--border)}
+  .rail ul{flex-direction:row;flex-wrap:wrap}
+  .rail .sub{display:none}
+  .page .wrap{padding:0 var(--sp-4)}
+  .foot-cols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.foot-cols{grid-template-columns:1fr}}
+/* An infinite animation at .01ms is not stopped, it is a spin — the iteration
+   count has to be pinned as well, and the hero field is held still outright. */
+@media(prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important;
+    animation-iteration-count:1!important}
+  .hero::before{animation:none!important;will-change:auto}
+}
+
+/* ── Principles — carried over from the previous single page */
+.rules{display:grid;gap:var(--sp-5) var(--sp-6);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.rule{border-top:1px solid var(--border-strong);padding-top:var(--sp-3)}
+.rule h3{margin:0 0 var(--sp-2);font-size:15px;font-weight:640}
+.rule p{margin:0;font-size:14px;color:var(--text-mut);line-height:1.6}
+.rule code{font-family:var(--mono);font-size:12.5px;color:var(--accent-text)}
+
+/* the axis card's sample figure */
+.axis-figure{display:flex;align-items:baseline;gap:var(--sp-2);margin-bottom:var(--sp-1)}
+section:last-of-type{border-bottom:0}
+
+/* rail footer controls (catalog) */
+.railfoot.bar{display:flex;align-items:center;gap:var(--sp-3);justify-content:space-between}
+.reset{height:28px;padding:0 var(--sp-3);background:transparent;color:var(--text-mut);
+  border:1px solid var(--border-strong);border-radius:var(--r-control);font:inherit;font-size:12px;cursor:pointer}
+.reset:hover{border-color:var(--accent);color:var(--text)}

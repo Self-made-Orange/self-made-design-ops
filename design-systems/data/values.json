@@ -1,0 +1,495 @@
+{
+  "$comment": "코퍼스 교차 비교의 기계가독 추출본. 각 항목의 근거는 source 필드의 문서에 있습니다. 이 파일은 수기 큐레이션이며, systems.json은 build-data.mjs가 생성합니다.",
+  "updated": "2026-08-19",
+  "sample_size": 100,
+  "$sample_size_note": "이 파일이 수기 큐레이션된 시점의 코퍼스 규모입니다. 현재 규모는 systems.json(count), 축별 표본 수는 각 patterns/*.md의 \"N표본 재종합\" 절이 기준입니다 — 이 숫자를 축의 표본 수로 쓰지 마세요.",
+  "spacing": {
+    "source": "tokens/scales.md",
+    "core_adoption": {
+      "$comment": "열거형 스케일 61표본 기준(2026-08-17). 최강값은 8·16 — '보편 값'은 존재하지 않음",
+      "sample": 61,
+      "values": {
+        "4": {
+          "adopted": 56,
+          "missing": [
+            "Mantine",
+            "Grommet",
+            "Kaizen",
+            "Braid",
+            "Artsy"
+          ]
+        },
+        "8": {
+          "adopted": 57,
+          "missing": [
+            "Mantine",
+            "Grommet",
+            "Kaizen",
+            "Artsy"
+          ]
+        },
+        "16": {
+          "adopted": 57,
+          "missing": [
+            "Garden",
+            "Grommet",
+            "Kaizen",
+            "Artsy"
+          ]
+        },
+        "24": {
+          "adopted": 56,
+          "missing": [
+            "Mantine",
+            "Garden",
+            "Porsche",
+            "Shoelace",
+            "Priceline"
+          ]
+        },
+        "32": {
+          "adopted": 52,
+          "missing": [
+            "Nord",
+            "Bootstrap",
+            "Spindle",
+            "Grommet",
+            "Vanilla",
+            "Shoelace",
+            "Kaizen",
+            "LeafyGreen",
+            "Artsy"
+          ]
+        }
+      }
+    },
+    "recommended_start": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64
+    ],
+    "no_spacing_tokens": {
+      "not_defined": [
+        "Apple HIG",
+        "Material 3",
+        "Seed Design",
+        "Evergreen"
+      ],
+      "inherited": [
+        "shadcn/ui",
+        "Skeleton",
+        "NASA WDS"
+      ],
+      "not_enumerated": [
+        "Tailwind",
+        "Ring UI"
+      ]
+    },
+    "government_bases": {
+      "$comment": "정부·공공 8곳이 8가지 답. NHS는 GDS 코드를 포크하면서 5px→4px로 교체 — 5px 단독 확정의 직접 증거. 공통 관행은 접근성 구조뿐",
+      "GOV.UK": "5px",
+      "Codex": "4x",
+      "USWDS": "8px",
+      "KRDS": "4-family",
+      "SGDS": "16px $spacer",
+      "디지털청": "none",
+      "DSFR(프랑스)": "CSS 변수에 없음",
+      "NHS(영국 보건)": "4px (GDS 포크, 값만 교체)"
+    },
+    "non_4px_grids": {
+      "$comment": "4px 격자는 관행이지 규범이 아님. 표에 8표본이 있고, 그중 Braid(4px 배수를 무단위 표기)·KRDS(루트 10px이나 px 환산 시 4계열 준수)는 표기만 다른 유형 — 실제 격자 이탈은 6표본 (2026-08-19 재집계)",
+      "GOV.UK": "5px",
+      "Blueprint": "10px",
+      "Kaizen": "6px",
+      "Grommet": "24의 약수 (3·6·12)",
+      "Braid": "4px 배수를 무단위 값으로 (최소 8px)",
+      "KRDS": "루트 10px + 4계열",
+      "Palette (Artsy)": "10px (+ half 5px)",
+      "Bolt": "격자 없음 — 축별 비정수 베이스 x 1.55 / y 1.35"
+    },
+    "$comment_grid": "tokens/scales.md 기준: 표 8행 중 실제 4px 이탈 6표본, 그중 4곳(Kaizen 6px·Artsy 10px·Grommet 24약수·Bolt 격자 없음)이 4·8·16을 동시에 이탈 (2026-08-19 재집계 — 이전 판은 7/3)"
+  },
+  "typography": {
+    "source": "patterns/typography.md",
+    "body_size_camps_px": {
+      "13": [
+        "Stacks",
+        "Polaris (text-body-md)"
+      ],
+      "14": [
+        "Ant Design",
+        "Material 3 (Body Medium)",
+        "Helios",
+        "Evergreen",
+        "Seed",
+        "Atlassian",
+        "shadcn/ui",
+        "Ring UI",
+        "Siemens iX",
+        "Serendie (compact)",
+        "Vibes",
+        "Naive UI",
+        "PrimeVue",
+        "Primer (base.text.size.sm)",
+        "Cloudscape (body-m)",
+        "Carbon (body-short-01)",
+        "Spectrum (font-size-100 — 데스크톱 한정, 모바일은 17px)"
+      ],
+      "16": [
+        "Canvas",
+        "Paste",
+        "Material 3 (Body Large)",
+        "Codex",
+        "Tailwind",
+        "Radix Themes",
+        "Mantine",
+        "Charcoal",
+        "Serendie (expanded)",
+        "SmartHR"
+      ],
+      "17": [
+        "Apple iOS",
+        "KRDS",
+        "디지털청(스케일 보유)"
+      ],
+      "18": [
+        "Grommet"
+      ],
+      "24sp_min": [
+        "Android Automotive"
+      ]
+    },
+    "cjk_two_weights_400_700": {
+      "$comment": "CJK 4표본 전부 굵기 2단계 — 정부+민간",
+      "systems": [
+        "KRDS",
+        "디지털청",
+        "Charcoal",
+        "Serendie"
+      ]
+    },
+    "seventeen_px_all_cjk_context": [
+      "Apple iOS",
+      "KRDS",
+      "디지털청"
+    ],
+    "chinese_sphere_14px": [
+      "Ant Design",
+      "Semi",
+      "Naive UI"
+    ]
+  },
+  "radius": {
+    "source": "GLOSSARY.md, systems/*",
+    "pill_vs_circle": {
+      "$comment": "full이 시스템마다 9999px 또는 50% — 이름만 보고 옮기면 틀림",
+      "pill_9999px": {
+        "Semi": "full",
+        "디지털청": "full",
+        "Thumbprint": "sides",
+        "Paste": "pill",
+        "Shoelace": "pill"
+      },
+      "circle_50pct": {
+        "Semi": "circle",
+        "Paste": "circle",
+        "Thumbprint": "full",
+        "Mística": "avatar",
+        "Shoelace": "circle"
+      },
+      "fixed_large": {
+        "Lightning": "PILL=240px"
+      }
+    }
+  },
+  "z_index": {
+    "source": "patterns/navigation.md, systems/{chakra-ui,bootstrap,open-props,forma-36,vibes}.md",
+    "$comment": "토큰화 7개 시스템이 7가지 산법. 건너뛰기 링크 전용 층위 1600은 Chakra·Pluralsight 2건이 같은 값. 층위 순서는 시스템 간 모순 — 교차 권고값 없음",
+    "schemes": {
+      "Chakra": {
+        "method": "용도명 + 100 등차",
+        "range": "hide:-1 ~ tooltip:1800 + max:int32"
+      },
+      "Bootstrap": {
+        "method": "1000대 + 배경/본체 +5",
+        "range": "dropdown:1000 ~ tooltip:1080"
+      },
+      "Open Props": {
+        "method": "서수",
+        "range": "layer-1~5 + important:int32"
+      },
+      "Forma 36": {
+        "method": "10의 거듭제곱",
+        "range": "-1,1,10,100,1000,10000"
+      },
+      "Vibes": {
+        "method": "불규칙 점프",
+        "range": "100,200,500,1000,1500,2000,3000,4000 + max:int32"
+      },
+      "Solid (BuzzFeed)": {
+        "method": "100 등차 서수",
+        "range": "z1:100 ~ z4:400"
+      },
+      "Pluralsight": {
+        "method": "영역 이름 + 10 단위 미세 배치 (`layers`)",
+        "range": "main:0 · sidenav:930 · topnav:950 · dropdown:1000 · skip-to-content:1600"
+      }
+    }
+  },
+  "touch_targets": {
+    "source": "platforms.md",
+    "px_or_pt": {
+      "Material 3 (mobile)": 48,
+      "Apple iOS 상단 툴바": 44,
+      "Apple iOS 하단 툴바": 48,
+      "visionOS 드롭다운": 44,
+      "Android Automotive": 64,
+      "CarPlay": 44,
+      "macOS Medium 컨트롤": 24,
+      "macOS XL 컨트롤": 36
+    },
+    "$comment": "desktop(마우스)은 모바일(터치)의 45~55%. tv는 터치 타겟 대신 Focused 1.1배 확대 규격"
+  },
+  "motion": {
+    "source": "patterns/motion.md",
+    "spring_representations": {
+      "Atlassian": "linear() 65 정지점 ×1",
+      "Open Props": "linear() ×5단계",
+      "TDS": "물리 파라미터 8프리셋 (stiffness 70~1000, damping 15~55, mass 1)"
+    },
+    "tds_spring_presets": {
+      "basic": {
+        "stiffness": 200,
+        "damping": 30
+      },
+      "small": {
+        "stiffness": 480,
+        "damping": 50
+      },
+      "quick": {
+        "stiffness": 800,
+        "damping": 55
+      },
+      "medium": {
+        "stiffness": 270,
+        "damping": 25
+      },
+      "large": {
+        "stiffness": 100,
+        "damping": 15
+      },
+      "slow": {
+        "stiffness": 70,
+        "damping": 20
+      },
+      "rapid": {
+        "stiffness": 1000,
+        "damping": 55
+      },
+      "bounce": {
+        "stiffness": 300,
+        "damping": 15
+      }
+    },
+    "bezier_overshoot_max": {
+      "system": "Spindle",
+      "curve": [
+        0.55,
+        2.05,
+        0.65,
+        0.75
+      ],
+      "y2": 2.05
+    }
+  },
+  "dark_mode_mechanisms": {
+    "source": "patterns/color.md",
+    "theme_files": [
+      "Apple",
+      "Material 3",
+      "Pajamas",
+      "Codex",
+      "Atlassian",
+      "Siemens iX",
+      "Strapi",
+      "Shoelace"
+    ],
+    "css_class_override": [
+      "shadcn/ui",
+      "Radix Themes",
+      "Ring UI",
+      "Vibe"
+    ],
+    "one_token_two_values": [
+      "visionOS"
+    ],
+    "light_dark_function": [
+      "Porsche"
+    ],
+    "class_plus_media_query": [
+      "Stacks"
+    ],
+    "name_encoded_mode_pair": [
+      "DSFR"
+    ],
+    "alpha_table_recomposition": [
+      "Naive UI"
+    ],
+    "$comment": "여섯 가지 방식. DSFR는 이름에 모드 쌍을 인코딩하고, Naive UI는 팔레트를 저장하지 않고 알파 표로 재합성"
+  },
+  "liquid_glass": {
+    "source": "systems/apple-hig.md, systems/macos.md",
+    "$comment": "iOS 26 == macOS 26 (재질은 플랫폼 불변)",
+    "params": {
+      "lightAngle": -45,
+      "opacity": 60,
+      "refraction": 100,
+      "dispersion": 0,
+      "frostRegular": 7,
+      "depthRegular": 16,
+      "splayRegular": 6
+    }
+  },
+  "rem_root_assumptions": {
+    "$comment": "rem 토큰 이식 위험. 값만 복사하면 전제 차이만큼 어긋남",
+    "source": "GLOSSARY.md",
+    "Strapi": "10px (62.5%)",
+    "Stacks": "13px",
+    "Odyssey": "14px",
+    "Vitamin": "양쪽 빌드 2벌 배포 (16px / 10px) — 표본 유일 해법"
+  },
+  "naming_schemes": {
+    "$comment": "스케일 명명 5유형",
+    "tshirt": "다수",
+    "numeric": "기준 6가지로 갈림 (px/10단위/rem×100 등)",
+    "alphabet": "PIE (a~j, a-small 삽입 예외)",
+    "prose_multiple": "Cedar (one-and-a-half-x) · Pharos (기준 x=1rem 확정) — 2표본",
+    "grid_multiple": "Braid (값 = 격자 단위 수)"
+  },
+  "accessibility_mechanisms": {
+    "$comment": "접근성 대응이 토큰/테마 층에 나타난 방식",
+    "source": "systems/{clarity,atlassian,krds,cloudscape,toss-tds,spindle}.md",
+    "high_contrast_theme": [
+      "Atlassian",
+      "KRDS",
+      "Clarity",
+      "Mística(16.44.1에서 원시 램프에 HC — 17.1.0에서 제거)"
+    ],
+    "forced_colors_system_colors": [
+      "Clarity (Canvas/CanvasText)"
+    ],
+    "reduced_motion": [
+      "Cloudscape (duration 0)",
+      "Spindle (View Transition 해제)",
+      "Clarity (theme.low-motion.css 파일)"
+    ],
+    "font_scale_remap": [
+      "TDS (iOS Dynamic Type 9단계 × 20역할, 최대 310%)",
+      "Wear OS (역방향: 20sp 이상 배율 금지 — 상한 극단)"
+    ],
+    "touch_target_token": [
+      "Braid (touchableSize 48px)"
+    ]
+  },
+  "culture_coverage": {
+    "$comment": "문화권 우선순위(영미권→한국→동남아→일본) 기준 수집 현황",
+    "korea": [
+      "Vapor UI",
+      "Seed Design(당근)",
+      "KRDS(정부)",
+      "TDS(Toss)"
+    ],
+    "southeast_asia": [
+      "SGDS(싱가포르 정부)",
+      "Asphalt(Gojek)",
+      "Unify(Tokopedia)"
+    ],
+    "china_sphere": [
+      "Ant Design",
+      "Semi(ByteDance)",
+      "Naive UI"
+    ],
+    "japan": [
+      "디지털청(정부)",
+      "SmartHR",
+      "Charcoal(pixiv)",
+      "Spindle(Ameba)",
+      "Serendie(미쓰비시전기)",
+      "Vibes(freee)"
+    ],
+    "not_found_on_npm": [
+      "Kakao",
+      "Naver",
+      "LINE(서체만)",
+      "Grab",
+      "Rakuten ReX(아이콘만)"
+    ]
+  },
+  "feature_specific_color_families": {
+    "$comment": "제품의 특정 기능군이 전용 색 계열을 갖는 패턴 — 2표본",
+    "source": "systems/{ebay-skin,intergalactic}.md",
+    "eBay Skin": "--color-ai-* 42개 (AI 기능, solid/gradient/full-spectrum)",
+    "Intergalactic": "highlights-{light,dark}.css 17개 전부 그라디언트 (신기능·유료 강조)"
+  },
+  "no_token_layer": {
+    "$comment": "토큰이 없는 4번째 유형 — 스타일 층 자체가 없음",
+    "Ark UI": "토큰 0 · CSS 0, anatomy(파트 이름)만 배포. Park UI·Chakra v3가 위에 얹힘"
+  },
+  "dependency_graph": {
+    "$comment": "동작 층과 스타일 층이 분리된 두 계보",
+    "Ark UI (Zag.js)": [
+      "Park UI (+ Panda CSS + Radix Colors)",
+      "Chakra UI v3"
+    ],
+    "Radix Primitives": [
+      "shadcn/ui (+ Tailwind)",
+      "Radix Themes (자체 스타일)"
+    ],
+    "Tailwind": [
+      "shadcn/ui",
+      "Skeleton",
+      "HeroUI(플러그인)"
+    ],
+    "Bootstrap": [
+      "SGDS(포크)"
+    ],
+    "USWDS": [
+      "NASA WDS(설정 오버레이)"
+    ],
+    "GDS(GOV.UK)": [
+      "NHS(코드 포크, 스페이싱 값은 교체)"
+    ]
+  },
+  "migration_coexistence": {
+    "$comment": "신구 병존이 패키지·파일 구조에 노출된 사례",
+    "Spindle": "서체 스택 version-1/2",
+    "Mística": "-new 스킨 쌍",
+    "Vibes": "구세대+2021 팔레트 동시",
+    "HSDS": "default/newBrand 52파일 2벌",
+    "Kontur": "테마 시맨틱 버전 6_0~6_3 동시 배포(유일하게 버전 명시)",
+    "Bolt": "v2가 v3에 위임 + deprecation warn",
+    "TDS": "@toss-design-system/* → @toss/tds-*"
+  },
+  "version_drift_findings": {
+    "$comment": "check-sources.mjs가 잡은 드리프트를 재수집해 확인한 실제 변화",
+    "Base Web": "16.1.1 → 18.2.0 (major 2) — 사이징 토큰 변화 없음",
+    "Ant Design": "6.6.0 → 6.6.1 — seed.js 바이트 동일",
+    "Mística": "16.44.1 → 17.1.0 — HC 원시 토큰 제거, -new 스킨 정리, tag 라운드 24→0"
+  },
+  "platform_distance_axis_cm": {
+    "$comment": "시야 거리 축 — 플랫폼 7축 전부 표본 확보 (2026-08-17)",
+    "wearable": "20-30",
+    "mobile": "25-40",
+    "web": "40-70",
+    "desktop": "50-70",
+    "automotive": "60-90",
+    "tv": "300",
+    "spatial": "가변"
+  }
+}

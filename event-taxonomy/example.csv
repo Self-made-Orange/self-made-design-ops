@@ -1,0 +1,14 @@
+카테고리,이벤트명,화면 위치,트리거,프로퍼티 키,프로퍼티 값 / 타입,조건 / 비고
+온보딩,onboarding_view,온보딩 > [screen_name],온보딩 플로우 화면 진입,screen_name,"welcome | permission | profile | complete",필수
+온보딩,onboarding_view,,,step_index,number,필수
+온보딩,onboarding_view,,,is_returning,boolean,welcome 화면에서만
+온보딩,onboarding_click,온보딩 > [screen_name],온보딩 버튼 탭,screen_name,"welcome | permission | profile | complete",필수
+온보딩,onboarding_click,,,button_name,"next | skip | back | allow | deny",필수
+온보딩,onboarding_click,,,permission_type,"push | location | camera",permission 화면에서만
+검색,search_view,검색,검색 화면 진입,entry_point,"tab | deeplink | banner",필수
+검색,search_submit,검색,검색어 제출,query_length,number,필수
+검색,search_submit,,,result_count,number,필수
+검색,search_submit,,,has_filter,boolean,필수
+결제,checkout_view,장바구니 > 결제,결제 화면 진입,cart_size,number,필수
+결제,checkout_click,장바구니 > 결제,결제 화면 버튼 탭,button_name,"pay | change_method | apply_coupon",필수
+결제,checkout_click,,,payment_method,"card | transfer | point | …",pay 탭 시에만

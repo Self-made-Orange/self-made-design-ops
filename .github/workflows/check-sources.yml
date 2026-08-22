@@ -1,0 +1,124 @@
+name: check design system sources
+
+# 이 코퍼스는 토큰 실값을 기록합니다. 값은 링크와 달리 스스로 갱신되지 않으므로
+# 업스트림이 올라가면 기록이 조용히 낡습니다. 매달 대조하고 낡은 것이 있으면
+# 이슈로 남깁니다.
+
+on:
+  schedule:
+    # 매월 1일 09:00 KST (00:00 UTC)
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+  pull_request:
+    # 항목이나 스크립트가 바뀐 PR에서만 돌립니다
+    paths:
+      - 'design-systems/systems/**'
+      - 'design-systems/check-sources.mjs'
+      - '.github/workflows/check-sources.yml'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 소스 신선도 대조
+        id: check
+        working-directory: design-systems
+        run: |
+          node check-sources.mjs --write-report | tee /tmp/report.txt
+          node check-sources.mjs --json > /tmp/report.json
+          {
+            echo 'summary<<EOF'
+            node -e "
+              const r = require('/tmp/report.json');
+              const s = r.summary;
+              console.log(\`총 \${s.checked}건 · 최신 \${s.current} · 낡음 \${s.outdated} (major \${s.major} / minor \${s.minor} / patch \${s.patch}) · 수동 \${s.manual} · 실패 \${s.error}\`);
+            "
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+          echo "outdated=$(node -e "console.log(require('/tmp/report.json').summary.outdated)")" >> "$GITHUB_OUTPUT"
+          echo "major=$(node -e "console.log(require('/tmp/report.json').summary.major)")" >> "$GITHUB_OUTPUT"
+
+      - name: 보고서 업로드
+        uses: actions/upload-artifact@v4
+        with:
+          name: freshness-report
+          path: |
+            design-systems/freshness.md
+            /tmp/report.json
+
+      # PR 에서는 낡음이 있어도 실패시키지 않습니다 — 업스트림 릴리스는
+      # 이 PR 의 잘못이 아니고, 막으면 무관한 작업이 멈춥니다.
+      - name: PR 요약에 기록
+        if: github.event_name == 'pull_request'
+        run: |
+          {
+            echo '### 소스 신선도'
+            echo ''
+            echo '```'
+            cat /tmp/report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # 정기 실행에서 낡은 것이 있으면 이슈를 올립니다.
+      # 같은 제목의 열린 이슈가 있으면 코멘트만 붙입니다.
+      - name: 낡은 소스 이슈 등록
+        if: github.event_name != 'pull_request' && steps.check.outputs.outdated != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('design-systems/freshness.md', 'utf8');
+            const summary = `${{ steps.check.outputs.summary }}`;
+            const major = Number(`${{ steps.check.outputs.major }}`);
+            const TITLE = '디자인시스템 소스가 낡았습니다';
+
+            const body = [
+              summary,
+              '',
+              major > 0
+                ? `**major 차이가 ${major}건입니다.** 토큰 구조가 바뀌었을 수 있으니 값만 갱신하지 말고 \`특징적 결정\` 절도 다시 읽으세요 — 교차 비교(\`patterns/\`, \`tokens/scales.md\`)가 그 값에 기대고 있습니다.`
+                : '전부 minor/patch 차이입니다.',
+              '',
+              '<details><summary>freshness.md</summary>',
+              '',
+              report,
+              '',
+              '</details>',
+              '',
+              '_`.github/workflows/check-sources.yml` 이 자동 등록했습니다._',
+            ].join('\n');
+
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'freshness',
+            });
+            const existing = open.find((i) => i.title === TITLE);
+
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: TITLE,
+                labels: ['freshness'],
+                body,
+              });
+            }

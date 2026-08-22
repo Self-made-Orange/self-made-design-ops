@@ -1,0 +1,9 @@
+{
+  "home.cta.primary": "시작하기",
+  "home.item_count": "{count, plural, other {#개 항목}}",
+  "home.greeting": "{userName}님 안녕하세요",
+  "common.action.close": "닫기",
+  "common.state.closed": "마감됨",
+  "checkout.error.card_declined": "카드가 거절되었습니다.",
+  "checkout.total": "총 {price, number, ::currency/KRW}"
+}

@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# post-checkout — 새 브랜치를 만들 때 소스 신선도를 대조합니다.
+#
+# git 에는 post-branch-create 훅이 없습니다. post-checkout 이 대신 쓰이며
+# 인자로 브랜치 전환인지 파일 체크아웃인지 구분할 수 있습니다.
+#
+#   $1  이전 HEAD
+#   $2  새 HEAD
+#   $3  1 = 브랜치 체크아웃, 0 = 파일 체크아웃
+#
+# `git checkout -b` 는 이전 HEAD 와 새 HEAD 가 같습니다 — 그걸로 신규 브랜치를 판별합니다.
+#
+# 설치: hooks/install.sh
+set -uo pipefail
+
+PREV_HEAD="${1:-}"
+NEW_HEAD="${2:-}"
+IS_BRANCH="${3:-0}"
+
+# 파일 체크아웃이면 아무것도 하지 않습니다
+[ "$IS_BRANCH" = "1" ] || exit 0
+
+# 브랜치 전환(이동)이 아니라 신규 생성만 대상으로 합니다
+[ "$PREV_HEAD" = "$NEW_HEAD" ] || exit 0
+
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+SCRIPT="$REPO_ROOT/design-systems/check-sources.mjs"
+[ -f "$SCRIPT" ] || exit 0
+command -v node >/dev/null 2>&1 || exit 0
+
+# 네트워크를 매 브랜치마다 두드리지 않도록 7일 스로틀을 둡니다.
+# .git/ 안에 두어 커밋되지 않게 합니다.
+STAMP="$REPO_ROOT/.git/.check-sources-last"
+NOW=$(date +%s)
+if [ -f "$STAMP" ]; then
+  LAST=$(cat "$STAMP" 2>/dev/null || echo 0)
+  AGE=$(( NOW - LAST ))
+  if [ "$AGE" -lt 604800 ]; then
+    exit 0   # 7일 안에 이미 확인했습니다
+  fi
+fi
+echo "$NOW" > "$STAMP"
+
+BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+echo ""
+echo "  [self-made-design-ops] 새 브랜치 '$BRANCH' — 디자인시스템 소스 신선도를 확인합니다."
+echo "  (7일에 한 번만 돕니다. 건너뛰려면 Ctrl-C — 체크아웃은 이미 끝났습니다.)"
+
+# 체크아웃을 막지 않도록 짧은 타임아웃을 걸고, 실패해도 0으로 끝냅니다.
+if command -v timeout >/dev/null 2>&1; then
+  timeout 60 node "$SCRIPT" --only=npm 2>/dev/null || true
+else
+  node "$SCRIPT" --only=npm 2>/dev/null || true
+fi
+
+echo "  전체 보고서: cd design-systems && node check-sources.mjs --write-report"
+echo ""
+exit 0

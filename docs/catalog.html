@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catalog — Self-Made DesignOps</title>
+<meta name="description" content="Every design system in the corpus, with its coverage depth, platforms, token format and the document that carries its evidence.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://keepyaoung.github.io/self-made-design-ops/catalog.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="./assets/site.css">
+<script>
+/* Same pre-paint theme read as the index — see the comment there. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  document.documentElement.dataset.theme =
+    t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+} catch (e) { /* storage blocked — the light default in the attribute stands */ }
+</script>
+
+<a class="skip" href="#main">Skip to the list</a>
+
+<header class="top">
+  <a class="brand" href="./">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="./#kit">The kit</a>
+  <a class="ctrl pad gh" href="https://github.com/keepYaoung/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>Search</h2>
+    <input id="q" type="search" aria-label="Search systems" placeholder="Name, org or tech">
+  </div>
+  <div><h2>Platform</h2><div class="grp" id="f-platform"></div></div>
+  <div><h2>Coverage</h2><div class="grp" id="f-coverage"></div></div>
+  <div><h2>Domain</h2><div class="grp" id="f-domain"></div></div>
+  <div class="railfoot bar">
+    <span id="count">—</span>
+    <button class="reset" id="reset" type="button">Reset</button>
+  </div>
+</aside>
+
+<main class="page" id="main">
+  <div class="hero"><div class="wrap">
+    <span class="kicker">The evidence</span>
+    <h1>There is no standard button height.</h1>
+    <p class="lede">
+      40px is the most common — and across <strong id="btn-n">77</strong> systems it still turns up
+      in barely a quarter of them. Spacing is no kinder: not one value survives all of them, 16px
+      included. <strong>So this is the counting.</strong>
+    </p>
+    <div class="ev" style="margin-top:var(--sp-6)">
+      <div class="evcard"><b id="s-systems">—</b><span>design systems</span></div>
+      <div class="evcard"><b id="s-axes">—</b><span>pattern axes</span></div>
+      <div class="evcard"><b id="s-guides">—</b><span>agent guides</span></div>
+      <div class="evcard"><b id="s-profiles">—</b><span>build-spec profiles</span></div>
+    </div>
+  </div></div>
+
+  <div class="wrap">
+    <noscript><p class="noscript" style="margin-top:var(--sp-5)">This list is rendered with JavaScript. Without it, read <code>design-systems/index.md</code> in the repository instead.</p></noscript>
+    <div class="ruler" aria-hidden="true">
+      <span></span><span>System</span><span>Organisation · domain</span><span>Coverage</span><span>Platform</span><span>Links</span>
+    </div>
+    <div id="list"></div>
+    <p class="empty" id="empty" hidden>No system matches those filters.</p>
+  </div>
+</main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div class="foot-brand">
+        <a class="brand" href="#top" id="to-top">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+        <p>
+          Design systems, measured and made ready to build with. Every row links back to the
+          document that carries its evidence, sources and versions pinned.
+        </p>
+      </div>
+
+      <nav class="foot-col" aria-labelledby="fc-explore">
+        <h2 id="fc-explore">Explore</h2>
+        <a href="./#start">Start here</a>
+        <a href="./#kit">What's inside</a>
+        <a href="./#patterns">Pattern axes</a>
+        <a href="./#principles">Principles</a>
+        <a href="./catalog.html">Catalog</a>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="fc-corpus">
+        <h2 id="fc-corpus">Corpus</h2>
+        <a href="https://github.com/keepYaoung/self-made-design-ops">Repository</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/design-systems/index.md">System index</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/design-systems/patterns/implementation-defaults.md">Implementation defaults</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/agents/README.md">Agent procedures</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/profiles/README.md">DESIGN.md profiles</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/site/README.md">How this page is built</a>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="fc-lang">
+        <h2 id="fc-lang">Languages</h2>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.md">English</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.ko.md">한국어</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.ja.md">日本語</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.zh-Hans.md">简体中文</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.id.md">Bahasa Indonesia</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.es.md">Español</a>
+      </nav>
+    </div>
+
+    <div class="foot-bar">
+      <p class="rights">© <span data-year>2026</span> <strong>StudioSMO</strong><span class="sep">·</span><a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/LICENSE">Code MIT · corpus CC BY 4.0</a></p>
+      <p class="note">
+        Coverage describes how deep this corpus got into a system — never the quality of the
+        system itself. Organisation logos are the org's own GitHub avatar, requested at view
+        time; nothing third-party is stored in this repository.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/site.js"></script>
+<script>
+(() => {
+  'use strict';
+  const { $, el, BLOB, corpus } = window.SMO;
+
+  // Deterministic hue per entry, so a system keeps its colour between visits.
+  const hue = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+  // Initials: first letters of the first two real words, parentheticals dropped.
+  const initials = (name) => name.replace(/\(.*?\)/g, ' ').split(/[\s/·-]+/).filter(Boolean)
+    .slice(0, 2).map((w) => w[0]).join('').slice(0, 2);
+
+  // GitHub serves an org's avatar at github.com/<org>.png, so the logo layer needs
+  // no asset collection and nothing third-party is stored here — only the handle,
+  // which the corpus already carries in `repo`. Some repo fields are prose rather
+  // than a bare URL ("github.com/nordhealth/design-system — declared in the …"),
+  // so the handle is matched anywhere in the string rather than anchored.
+  const GH_ORG = /github\.com\/([A-Za-z0-9](?:[A-Za-z0-9-]{0,38})?)(?=[/\s)]|$)/;
+  const orgOf = (s) => (s.repo && String(s.repo).match(GH_ORG) || [])[1] || null;
+
+  function mark(s) {
+    const slug = s.file.replace(/\.md$/, '');
+    const box = el('span', { className: 'mark' }, [el('span', { className: 'ini', textContent: initials(s.name) })]);
+    box.style.setProperty('--h', hue(slug));
+
+    const org = orgOf(s);
+    if (!org) return box;   // no public repo — the monogram stands, which is itself true
+
+    // The <img> goes into the DOM straight away, stacked over the monogram and
+    // transparent until it loads. A detached Image() with loading="lazy" never
+    // fires at all — the browser has no viewport to defer against — so the probe
+    // has to live in the document for lazy loading to mean anything.
+    const img = el('img', { alt: '', loading: 'lazy', width: 28, height: 28, referrerPolicy: 'no-referrer' });
+    img.addEventListener('load', () => box.classList.add('has-img'));
+    img.addEventListener('error', () => img.remove());
+    img.src = `https://github.com/${org}.png?size=56`;
+    box.append(img);
+    return box;
+  }
+
+  let data = null;
+  const state = { q: '', platform: new Set(), coverage: new Set(), domain: new Set() };
+
+  corpus.then((d) => {
+    data = d;
+    // Deepest coverage first, then by name within a level. Explicit order —
+    // alphabetical would put 'full' after 'partial'.
+    const order = { full: 0, partial: 1, minimal: 2 };
+    d.systems.sort((a, b) =>
+      (order[a.coverage] ?? 9) - (order[b.coverage] ?? 9) || a.name.localeCompare(b.name, 'en'));
+    $('#s-systems').textContent = d.count;
+    $('#s-axes').textContent = d.axes.length;
+    $('#s-guides').textContent = d.guides.length;
+    $('#s-profiles').textContent = d.profiles.length;
+    const btn = d.axes.find((a) => a.file === 'button.md');
+    if (btn) $('#btn-n').textContent = btn.samples;
+    facets('#f-platform', 'platform', d.by_platform);
+    facets('#f-coverage', 'coverage', d.by_coverage);
+    facets('#f-domain', 'domain', d.by_domain, 3);   // domains under 3 are folded away
+    render();
+  }).catch(() => {
+    $('#count').textContent = 'Data unavailable';
+    $('#list').append(el('p', { className: 'noscript',
+      textContent: 'Could not load the data. Read design-systems/index.md in the repository instead.' }));
+  });
+
+  function facets(sel, key, counts, min = 0) {
+    const box = $(sel);
+    for (const [value, n] of Object.entries(counts).sort((a, b) => b[1] - a[1])) {
+      if (n < min) continue;
+      const chip = el('button', { className: 'chip', type: 'button' },
+        [value, el('span', { className: 'c', textContent: n })]);
+      chip.setAttribute('aria-pressed', 'false');
+      chip.addEventListener('click', () => {
+        const on = chip.getAttribute('aria-pressed') === 'true';
+        chip.setAttribute('aria-pressed', String(!on));
+        if (on) state[key].delete(value); else state[key].add(value);
+        render();
+      });
+      box.append(chip);
+    }
+  }
+
+  $('#q').addEventListener('input', (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
+  $('#reset').addEventListener('click', () => {
+    state.q = ''; $('#q').value = '';
+    for (const k of ['platform', 'coverage', 'domain']) state[k].clear();
+    for (const c of document.querySelectorAll('.chip')) c.setAttribute('aria-pressed', 'false');
+    render();
+  });
+
+  const matches = (s) =>
+    (!state.coverage.size || state.coverage.has(s.coverage)) &&
+    (!state.domain.size || state.domain.has(s.domain)) &&
+    (!state.platform.size || s.platform.some((p) => state.platform.has(p))) &&
+    (!state.q || [s.name, s.org, s.domain, s.file, ...s.platform, ...s.tech,
+                  ...s.tokens.map((t) => t.en)].join(' ').toLowerCase().includes(state.q));
+
+  function render() {
+    const hits = data.systems.filter(matches);
+    $('#count').textContent = `${hits.length} of ${data.count}`;
+    $('#empty').hidden = hits.length > 0;
+    $('#list').replaceChildren(...hits.map(row));
+  }
+
+  const isUnverified = (v) => typeof v === 'string' &&
+    (v.startsWith('미확인') || v.toLowerCase().startsWith('unverified'));
+
+  function row(s) {
+    const open = [s.figma, s.a11y].filter(isUnverified).length;
+    const name = el('a', { className: 'nm', href: BLOB + 'design-systems/systems/' + s.file, textContent: s.name });
+    const tokens = s.tokens.map((t) => t.en).filter(Boolean).join(' · ');
+    name.title = [`verified ${s.verified}`, tokens && `tokens: ${tokens}`].filter(Boolean).join(' — ');
+
+    const first = el('span', { className: 'cell-nm' }, [name]);
+    if (s.figma === true) first.append(el('span', { className: 'mk', textContent: 'Figma' }));
+    if (open) first.append(el('span', { className: 'mk warn', textContent: `${open} open` }));
+
+    const cov = el('span', { className: 'cov', textContent: s.coverage });
+    cov.dataset.c = s.coverage;
+
+    const out = [];
+    if (s.url) out.push(el('a', { href: s.url, rel: 'noopener', textContent: 'site' }));
+    if (s.repo) out.push(el('a', { href: s.repo, rel: 'noopener', textContent: 'src' }));
+
+    return el('div', { className: 'row' }, [
+      mark(s), first,
+      el('span', { className: 'ds', textContent: `${s.org} · ${s.domain}` }),
+      el('span', { className: 'cell-cov' }, [cov]),
+      el('span', { className: 'rt', textContent: s.platform.length > 1
+        ? `${s.platform[0]} +${s.platform.length - 1}` : s.platform[0], title: s.platform.join(' · ') }),
+      el('span', { className: 'rt' }, out.length ? [el('span', { className: 'out' }, out)] : []),
+    ]);
+  }
+})();
+</script>

@@ -1,0 +1,48 @@
+name: fetch hero image
+
+# 이 컨테이너 세션은 이그레스 프록시가 images.unsplash.com 을 403 으로 막습니다.
+# 하지만 Actions 러너는 인터넷이 열려 있으므로, 러너가 이미지를 받아 저장소에
+# 커밋합니다(자기 호스팅). 그 뒤 pages.yml 이 재배포합니다.
+# workflow_dispatch 로만 돕니다 — url 을 바꿔 원하는 사진으로 교체할 수 있습니다.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Image URL to download into docs/assets/hero-bg.jpg'
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-hero
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download image
+        env:
+          IMG_URL: ${{ inputs.url }}   # env, not inline — avoids shell injection
+        run: |
+          mkdir -p docs/assets
+          curl -fSL --retry 3 -A 'Mozilla/5.0' "$IMG_URL" -o docs/assets/hero-bg.jpg
+          file docs/assets/hero-bg.jpg
+          ls -l docs/assets/hero-bg.jpg
+          # sanity: must be an image, not an HTML error page
+          case "$(file -b --mime-type docs/assets/hero-bg.jpg)" in
+            image/*) echo "ok, is an image" ;;
+            *) echo "::error::downloaded file is not an image"; exit 1 ;;
+          esac
+
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/assets/hero-bg.jpg
+          git commit -m 'chore(site): fetch hero background image' || { echo 'no change'; exit 0; }
+          git push

@@ -1,0 +1,56 @@
+name: check avatars
+
+# 카탈로그의 로고 열은 github.com/<org>.png 를 핫링크합니다 — 저장하는 자산이
+# 없는 대신, **org 핸들이 살아 있는지**가 코퍼스의 다른 소스처럼 낡을 수 있습니다.
+# (org 이름 변경·삭제 → 아바타 404 → 모노그램으로 조용히 되돌아감)
+# 이 워크플로가 corpus.json 에서 핸들을 뽑아 전수 확인하고 실패만 보고합니다.
+# 저장소에 아무것도 커밋하지 않습니다 (읽기 전용).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 1 * *'   # 월 1회, freshness 검사와 같은 주기
+
+permissions:
+  contents: read
+
+jobs:
+  avatars:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve every org avatar
+        run: |
+          node -e '
+            const fs = require("fs");
+            const d = JSON.parse(fs.readFileSync("docs/data/corpus.json", "utf8"));
+            // 관대한 매칭 — repo 필드에 산문이 섞인 항목이 있습니다.
+            const RE = /github\.com\/([A-Za-z0-9](?:[A-Za-z0-9-]{0,38})?)(?=[\/\s)]|$)/;
+            const rows = [];
+            for (const s of d.systems) {
+              const m = String(s.repo ?? "").match(RE);
+              if (m) rows.push([s.name, m[1]]);
+            }
+            const seen = new Map();
+            for (const [name, org] of rows) if (!seen.has(org)) seen.set(org, name);
+            console.log(`${rows.length} of ${d.count} entries carry a GitHub org · ${seen.size} distinct handles`);
+            (async () => {
+              const bad = [];
+              for (const [org, name] of seen) {
+                const url = `https://github.com/${org}.png?size=56`;
+                let status = 0;
+                try {
+                  const r = await fetch(url, { redirect: "follow" });
+                  status = r.status;
+                } catch (e) { status = -1; }
+                if (status !== 200) bad.push([org, name, status]);
+              }
+              if (bad.length) {
+                console.log(`\n${bad.length} handle(s) did NOT resolve — those rows fall back to a monogram:`);
+                for (const [org, name, st] of bad) console.log(`  ${String(st).padStart(4)}  ${org.padEnd(28)} (${name})`);
+                process.exitCode = 1;
+              } else {
+                console.log("\nevery handle resolves.");
+              }
+            })();
+          '

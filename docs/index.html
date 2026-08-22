@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Self-Made DesignOps — a DesignOps starter kit, measured</title>
+<meta name="description" content="Conventions, linters and agent procedures for the work that repeats between design and development. Every default is measured across 116 design systems, not remembered.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://keepyaoung.github.io/self-made-design-ops/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="./assets/site.css">
+<script>
+/* Applied before the first paint, so arriving on the dark theme never flashes the
+   light one. No stored choice means follow the OS; assets/site.js takes it from here. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  document.documentElement.dataset.theme =
+    t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+} catch (e) { /* storage blocked — the light default in the attribute stands */ }
+</script>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="./">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="./catalog.html">Catalog <span class="n" id="h-count">—</span></a>
+  <a class="ctrl pad gh" href="https://github.com/keepYaoung/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>The kit</h2>
+    <ul>
+      <li><a href="#start" data-spy="start">Start here</a></li>
+      <li><a href="#kit" data-spy="kit">What's inside <span class="n" id="r-kit">—</span></a></li>
+    </ul>
+    <ul class="sub" id="r-groups"></ul>
+  </div>
+  <div>
+    <h2>The evidence</h2>
+    <ul>
+      <li><a href="#patterns" data-spy="patterns">Pattern axes <span class="n" id="r-axes">—</span></a></li>
+      <li><a href="#evidence" data-spy="evidence">Why trust the defaults</a></li>
+      <li><a href="#principles" data-spy="principles">Principles</a></li>
+      <li><a href="./catalog.html">Catalog <span class="n" id="r-count">—</span></a></li>
+    </ul>
+  </div>
+  <div class="railfoot">
+    No dependencies. Node only.<br>Clone it, or read it in the repository.
+  </div>
+</aside>
+
+<main class="page" id="main">
+
+<div class="hero"><div class="wrap">
+  <span class="kicker">DesignOps starter kit</span>
+  <h1>Clone it once.<br>Make your DesignOps.</h1>
+  <p class="lede">
+    Conventions, linters and agent procedures for the work that repeats between design and
+    development — <strong id="k-lines">4,635</strong> lines of it, no dependencies, nothing to
+    install. Every default in it is <strong>measured across <span id="k-count">116</span> design
+    systems</strong>, not remembered.
+  </p>
+  <div class="cta">
+    <a class="btn btn-p" href="#start">Start in three commands</a>
+    <a class="btn btn-g" href="#kit">See what's inside</a>
+    <a class="btn btn-o" href="https://github.com/keepYaoung/self-made-design-ops/blob/main/profiles/interpreted/self-made-designops-site.DESIGN.md">Get DESIGN.md</a>
+  </div>
+</div></div>
+
+<section id="start"><div class="wrap">
+  <div class="sec-head">
+    <h2>Three commands</h2>
+    <p>No package, no build step, no runtime. It is a directory you clone next to your project
+       and point your agent at.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step"><b>01</b><h3>Clone it beside your project</h3>
+      <p>Anywhere your agent can read. <code>.design-ops/</code> keeps it out of the way.</p></div>
+    <div class="step"><b>02</b><h3>Point the rules file at it</h3>
+      <p>CLAUDE.md, AGENTS.md, .cursorrules, copilot-instructions.md — the wording is tool-neutral.</p></div>
+    <div class="step"><b>03</b><h3>Generate the build spec</h3>
+      <p>A DESIGN.md your agent builds from, with an evidence grade on every value.</p></div>
+  </div>
+
+  <div class="codehead"><h3>Copy this</h3><button class="copy" type="button" data-target="snip">Copy</button></div>
+  <pre class="code" id="snip"><span class="cm"># 01 — clone</span>
+<span class="k">git clone</span> --depth 1 https://github.com/keepYaoung/self-made-design-ops .design-ops
+
+<span class="cm"># 02 — add to your agent's rules file</span>
+<span class="cm">#   · picking a reference system → .design-ops/agents/system-selection.md</span>
+<span class="cm">#   · reviewing a design or build → .design-ops/agents/design-review.md</span>
+<span class="cm">#   · evidence for any single value → .design-ops/design-systems/patterns/*.md</span>
+<span class="cm"># Never call a number an industry standard unless the corpus carries it.</span>
+
+<span class="cm"># 03 — generate a build spec (colours stay empty; they are a brand decision)</span>
+<span class="k">node</span> .design-ops/design-systems/to-design-md.mjs --profile web --name "Product" -o DESIGN.md</pre>
+</div></section>
+
+<section id="kit"><div class="wrap">
+  <div class="sec-head">
+    <h2>What's inside</h2>
+    <p>Counted from the repository at build time, so this list cannot drift from what is
+       actually there. Every tool runs on Node with <strong>zero dependencies</strong>.</p>
+  </div>
+  <noscript><p class="noscript">This list is rendered with JavaScript. Without it, read <code>README.md</code> in the repository instead.</p></noscript>
+  <div id="kit"></div>
+</div></section>
+
+<section id="patterns"><div class="wrap">
+  <div class="sec-head">
+    <h2>Nine pattern axes</h2>
+    <p>
+      Cut <strong>by component rather than by system</strong> — this is the side you actually open
+      while building UI. The last section of each document, <strong>Implementation defaults</strong>,
+      is the destination, and
+      <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/design-systems/patterns/implementation-defaults.md">a single page collecting that section from all nine axes</a>
+      exists. The figure is that axis's <strong>own sample size</strong>, and it differs per axis —
+      the corpus total is never used as an axis's sample size.
+    </p>
+  </div>
+  <div class="grid" id="axes"></div>
+</div></section>
+
+<section id="evidence"><div class="wrap">
+  <div class="sec-head">
+    <h2>Why you can trust the defaults</h2>
+    <p>The kit's numbers are not taste. Each one comes from a corpus of design systems opened
+       token by token, and every value carries its distribution and sample size.</p>
+  </div>
+  <div class="ev">
+    <div class="evcard"><b id="e-systems">—</b><span>design systems measured</span></div>
+    <div class="evcard"><b id="e-axes">—</b><span>pattern axes cross-cut</span></div>
+    <div class="evcard"><b id="e-guides">—</b><span>agent procedures</span></div>
+    <div class="evcard"><b id="e-profiles">—</b><span>ready build specs</span></div>
+  </div>
+
+  <div class="claim">
+    <p><strong>There is no standard button height.</strong> 40px is the most common — and
+       across <strong id="e-btn">77</strong> systems it still turns up in barely a quarter of
+       them. Spacing is no kinder: not one value survives all of them, 16px included.</p>
+    <p>That is why the kit ships distributions rather than rules, leaves anything unconfirmed
+       standing as <code>unverified</code>, and has thrown out 24 of its own conclusions as the
+       sample grew. <a href="./catalog.html">Browse the evidence →</a></p>
+  </div>
+</div></section>
+
+<section id="principles"><div class="wrap">
+  <div class="sec-head"><h2>What this corpus holds itself to</h2></div>
+  <div class="rules">
+    <div class="rule">
+      <h3>Sources and versions are pinned</h3>
+      <p>Every claim records which repository and which version or commit it was read from. When upstream moves, the drift gets caught instead of quietly absorbed.</p>
+    </div>
+    <div class="rule">
+      <h3>Unknowns stay unknown</h3>
+      <p>Phrases like "generally" and "most systems" are banned outright. Anything unconfirmed is marked <code>unverified</code> so the next person can pick it up.</p>
+    </div>
+    <div class="rule">
+      <h3>Sample size travels with the claim</h3>
+      <p>Not "16px is standard" but "10 of 68". Axes have different sample sizes, so quoting a conclusion means quoting that axis's count with it.</p>
+    </div>
+    <div class="rule">
+      <h3>It overturns its own conclusions</h3>
+      <p>24 of this corpus's own conclusions were discarded as the sample grew — and what was wrong, and why, stays on the record.</p>
+    </div>
+    <div class="rule">
+      <h3>It will not pick your colors</h3>
+      <p>Sizing, spacing and motion can be argued from distributions. A palette is a brand decision, so there is no recommended palette here.</p>
+    </div>
+    <div class="rule">
+      <h3>No product data comes in</h3>
+      <p>A specific product's tokens, event definitions and translated strings belong in that product's repository. Only shared assets live here.</p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div class="foot-brand">
+        <a class="brand" href="#top" id="to-top">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+        <p>
+          Design systems, measured and made ready to build with. This page is an
+          index — every value links back to the document that carries its evidence.
+        </p>
+      </div>
+
+      <nav class="foot-col" aria-labelledby="fc-explore">
+        <h2 id="fc-explore">Explore</h2>
+        <a href="#start">Start here</a>
+        <a href="#kit">What's inside</a>
+        <a href="#patterns">Pattern axes</a>
+        <a href="#principles">Principles</a>
+        <a href="./catalog.html">Catalog</a>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="fc-corpus">
+        <h2 id="fc-corpus">Corpus</h2>
+        <a href="https://github.com/keepYaoung/self-made-design-ops">Repository</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/design-systems/index.md">System index</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/design-systems/patterns/implementation-defaults.md">Implementation defaults</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/agents/README.md">Agent procedures</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/profiles/README.md">DESIGN.md profiles</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/site/README.md">How this page is built</a>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="fc-lang">
+        <h2 id="fc-lang">Languages</h2>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.md">English</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.ko.md">한국어</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.ja.md">日本語</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.zh-Hans.md">简体中文</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.id.md">Bahasa Indonesia</a>
+        <a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/README.es.md">Español</a>
+      </nav>
+    </div>
+
+    <div class="foot-bar">
+      <p class="rights">© <span data-year>2026</span> <strong>StudioSMO</strong><span class="sep">·</span><a href="https://github.com/keepYaoung/self-made-design-ops/blob/main/LICENSE">Code MIT · corpus CC BY 4.0</a></p>
+      <p class="note">
+        The corpus documents are in English, with the Korean original kept beside each one.
+        The list and its sample sizes are generated from the repository, never hand-edited.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/site.js"></script>
+<script>
+(() => {
+  'use strict';
+  const { $, el, BLOB, corpus } = window.SMO;
+  const slug = (s) => s.toLowerCase().replace(/\s+/g, '-');
+  const set = (sel, v) => { const n = $(sel); if (n) n.textContent = v; };
+
+  corpus.then((d) => {
+    const kitCount = d.kit.reduce((n, g) => n + g.items.length, 0);
+
+    set('#k-count', d.count);
+    set('#k-lines', d.kit_lines.toLocaleString('en'));
+    set('#h-count', d.count);
+    set('#r-count', d.count);
+    set('#r-kit', kitCount);
+    set('#r-axes', d.axes.length);
+    set('#e-systems', d.count);
+    set('#e-axes', d.axes.length);
+    set('#e-guides', d.guides.length);
+    set('#e-profiles', d.profiles.length);
+    // The claim's opening sentence is the Buttons axis, so its sample size comes
+    // from the axis data rather than being typed into the copy.
+    const btn = d.axes.find((a) => a.file === 'button.md');
+    if (btn) set('#e-btn', btn.samples);
+
+    // The rail's sub-items are the kit's own groups, so the nav cannot drift
+    // from the inventory either.
+    $('#r-groups').replaceChildren(...d.kit.map((g) =>
+      el('li', {}, [el('a', { href: '#kit-' + slug(g.group) }, [
+        g.group, el('span', { className: 'n', textContent: g.items.length }),
+      ])])));
+
+    $('#kit').replaceChildren(...d.kit.map((g) =>
+      el('div', { className: 'rowgrp', id: 'kit-' + slug(g.group) }, [
+        el('h3', { textContent: `${g.group} · ${g.items.length}` }),
+        ...g.items.map((i) => el('a', { className: 'kititem', href: BLOB + i.path }, [
+          el('code', { textContent: i.path }),
+          el('span', { textContent: i.what }),
+          el('em', { textContent: `${i.lines} ln` }),
+        ])),
+      ])));
+
+    $('#axes').replaceChildren(...d.axes.map((a) =>
+      el('a', { className: 'card', href: BLOB + a.path }, [
+        el('div', { className: 'axis-figure' }, [
+          el('span', { className: 'axis-num', textContent: a.samples }),
+          el('span', { className: 'axis-unit', textContent: 'samples' }),
+        ]),
+        el('h3', { textContent: a.title }),
+        el('p', { textContent: a.headline }),
+        el('span', { className: 'path', textContent: a.path }),
+      ])));
+
+    // The sections just grew; re-run the scrollspy against the real offsets.
+    dispatchEvent(new Event('resize'));
+  }).catch(() => {
+    $('#kit').append(el('p', { className: 'noscript',
+      textContent: 'Could not load the data. Read README.md in the repository instead.' }));
+  });
+})();
+</script>
