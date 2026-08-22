@@ -73,9 +73,16 @@ held it. Both statements were true and neither was a redaction:
 **And rewriting history does not evict it from a hosting provider.** After
 `git filter-repo` and a force push, a fresh clone was clean — but GitHub still
 served the removed blob by its SHA, unauthenticated, through the REST API. Orphaned
-objects survive until the provider garbage-collects, and GitHub's documented remedy
-is to **contact Support and ask for the unreachable objects to be purged**; forks
-keep their own copies regardless.
+objects survive until the provider garbage-collects; forks keep their own copies
+regardless.
+
+**What actually resolved it: the repository was replaced.** The corpus was pushed to
+a new repository seeded from a single clean commit, verified object by object — 372
+blobs, 25 trees, 1 commit, and every blob path matching the tracked file list exactly
+— and the old repository was **deleted**. Deleting the repository is what removes the
+object store that held the unreachable blobs; no amount of rewriting inside it would
+have. The cost was the commit history and the deploy record, which is a cheap price
+and the reason a decision like this gets easier the sooner it is made.
 
 So the only reliable rule is the boring one:
 

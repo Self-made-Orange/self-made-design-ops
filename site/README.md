@@ -41,9 +41,13 @@ paths are pushed to `main`, it regenerates the data and uploads `docs/` as-is.
 > `copilot-instructions.md`.
 
 **The site is live at <https://keepyaoung.github.io/self-made-design-ops/>**, with the catalog
-at `/catalog.html`. Confirmed 2026-08-22: `deploy pages` run 107 succeeded on `a4ff091`, and
-the deployed HTML was read back off an Actions runner (`peek-url`, run 8) — it carries the new
-`<title>`, `assets/site.css` and the `./catalog.html` header link.
+at `/catalog.html`.
+
+> **The repository was replaced on 2026-08-22.** After the disclosure audit (`SECURITY.md`)
+> the corpus moved to a **new repository seeded from a single clean commit**, and the old one
+> was deleted — deletion being the only step that actually removes unreachable objects from
+> the host. The address and the Pages URL are unchanged, but the deploy history restarts at
+> run 1; the ~107 runs before it belonged to the deleted repository.
 
 > **It had to be switched on by hand once** — Settings → Pages → Build and deployment →
 > Source: **GitHub Actions**. That was done; the note is kept because the automated attempt is

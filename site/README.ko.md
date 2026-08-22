@@ -40,9 +40,12 @@
 > 문안을 일반화했습니다.
 
 **사이트는 <https://keepyaoung.github.io/self-made-design-ops/> 에 떠 있습니다.** 카탈로그는
-`/catalog.html`. 2026-08-22 확인 — `deploy pages` 107번째 실행이 `a4ff091`에서 성공했고,
-배포된 HTML을 Actions 러너로 되읽어(`peek-url` 8번째 실행) 새 `<title>`·`assets/site.css`·
-헤더의 `./catalog.html` 링크를 확인했습니다.
+`/catalog.html`.
+
+> **2026-08-22에 저장소를 교체했습니다.** 공개 감사(`SECURITY.md`) 이후 코퍼스를 **깨끗한
+> 단일 커밋으로 시드한 새 저장소**로 옮기고 옛 저장소는 삭제했습니다 — 호스트에서 도달 불가
+> 객체를 실제로 없애는 단계는 삭제뿐이기 때문입니다. 주소와 Pages URL은 그대로지만 배포
+> 이력은 1번부터 다시 시작합니다. 그 앞의 107회는 삭제된 저장소의 것입니다.
 
 > **한 번은 손으로 켜야 했습니다** — Settings → Pages → Build and deployment →
 > Source: **GitHub Actions**. 이미 켜져 있습니다. 자동화 시도를 기록으로 남겨 둡니다 —
