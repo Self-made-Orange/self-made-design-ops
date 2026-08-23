@@ -77,7 +77,7 @@ Use the awesome list to discover systems; use this corpus to decide your button 
 | [`profiles/`](profiles/) | **Production instructions** — ready-to-use `DESIGN.md` profiles derived from the corpus, with an evidence grade on every value | 4 measured + interpreted layer |
 | [`event-taxonomy/`](event-taxonomy/) | Conventions for analytics event sheets + converter/linter | conventions · converter |
 | [`i18n/`](i18n/) | Localization conventions + linter | conventions · linter |
-| [`mockups/`](mockups/) | Device mockup asset inventory | Apple, 1 entry |
+| [`mockups/`](mockups/) | Device mockup asset inventory | Apple · Google · Samsung · Meta · Microsoft · Figma official — **6 entries** |
 
 > **Note:** the corpus documents are in English, with the Korean original kept beside each one at `<slug>.ko.md`. The token values, tables, and JSON extracts (`design-systems/data/`) are language-neutral.
 

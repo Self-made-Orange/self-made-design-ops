@@ -13,7 +13,7 @@ B 대표 6건·C 네트워크 확인 12건·D npm 재확인이 처리됐습니�
 | 코퍼스 | **116개** (113 공개 + 문서층 2 + 코드층 신규 — 구성: `design-systems/index.md` 상단) + 내부 표본 1 |
 | `full` 수집 심화 | 20/20 · **`partial` 수집 심화 79건(대상 전량)** 완료 |
 | patterns 백로그 | 판단 지침 9축 + 소스 파기류 전부 해소 · **재종합 9/9축 완료** (표본 16~83) — 약한 3축(table 16 · navigation 16 · feedback 18) 보강 완료 (2026-08-18) |
-| 미확인 | **428 → 308** (2회 처리 — 소스 재탐색 66필드 · B-1 렌더 64건). 분류·잔여는 `design-systems/UNVERIFIED.md` |
+| 미확인 | 열린 표기 **428 → 212** · frontmatter 필드 **109**(a11y_target 57 · figma_kit 48 · license 4 · repo 0). **2026-08-23 재집계** — 이전의 308은 `.ko.md` 쌍을 이중 계상하고 대문자 `Unverified`를 놓치던 재집계 명령의 산물이었고, 둘 다 `design-systems/UNVERIFIED.md`에서 고쳤습니다 |
 | 신선도 | 총 **185건** · **낡음 19, 전부 patch**(major 0 / minor 0) · 실패 0 · 수동 21 — **minor 전량 재수확 완료(2026-08-23)**, 실드리프트 1건(Ark UI). patch는 의도적으로 쫓지 않습니다 — C절 참조 |
 | a11y_target | `full` 수집 10개 시스템 문서 층 확인 완료 (명시 6 · 부재 확인 4) |
 | README | 6개 언어판 — **Self-Made DesignOps로 개명 반영** |

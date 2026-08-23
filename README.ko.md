@@ -75,7 +75,7 @@
 | [`profiles/`](profiles/) | **제작 지시서** — 코퍼스에서 파생한 `DESIGN.md` 프로필, 모든 값에 근거 등급 표기 | measured 4종 + interpreted 계층 |
 | [`event-taxonomy/`](event-taxonomy/) | 분석 이벤트 시트 작성 규약 + 변환기/린터 | 규약 · 변환기 |
 | [`i18n/`](i18n/) | 로컬라이제이션 규약 + 린터 | 규약 · 린터 |
-| [`mockups/`](mockups/) | 디바이스 목업 자산 인벤토리 | Apple 1건 |
+| [`mockups/`](mockups/) | 디바이스 목업 자산 인벤토리 | Apple · Google · Samsung · Meta · Microsoft · Figma 공식 — **6종** |
 
 > **참고:** 코퍼스 문서의 주 노출본은 영어이고, 한국어 원문이 `<slug>.ko.md`로 나란히 보존돼 있습니다. 토큰 값·표·JSON 추출본(`design-systems/data/`)은 언어 중립입니다.
 

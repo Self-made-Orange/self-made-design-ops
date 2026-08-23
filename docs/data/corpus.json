@@ -179,12 +179,17 @@
     {
      "path": "site/build.mjs",
      "what": "The corpus into the data this page reads",
-     "lines": 240
+     "lines": 241
     },
     {
      "path": "site/design-spec.mjs",
      "what": "This site's own stylesheet into a graded DESIGN.md",
      "lines": 554
+    },
+    {
+     "path": "site/check-headlines.mjs",
+     "what": "The axis conclusions on this page against the documents they summarise",
+     "lines": 254
     }
    ]
   },
@@ -269,7 +274,7 @@
    ]
   }
  ],
- "kit_lines": 4638,
+ "kit_lines": 4893,
  "systems": [
   {
    "name": "Android for Cars / Automotive OS",

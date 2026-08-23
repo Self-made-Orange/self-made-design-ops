@@ -74,7 +74,7 @@
 | [`profiles/`](profiles/) | **制作指示書** — コーパスから導出した `DESIGN.md` プロファイル。全ての値に根拠グレードを付与 | measured 4種 + interpreted 層 |
 | [`event-taxonomy/`](event-taxonomy/) | 分析イベントシート作成規約 + 変換・リントスクリプト | 規約 · 変換器 |
 | [`i18n/`](i18n/) | ローカライゼーション規約 + リンター | 規約 · リンター |
-| [`mockups/`](mockups/) | デバイスモックアップ資産の目録 | Apple 1件 |
+| [`mockups/`](mockups/) | デバイスモックアップ資産の目録 | Apple · Google · Samsung · Meta · Microsoft · Figma 公式 — **6件** |
 
 > **注:** コーパス本文は英語が主版で、韓国語の原文が `<slug>.ko.md` として併存しています。トークン値・表・JSON抽出（`design-systems/data/`）は言語中立です。
 

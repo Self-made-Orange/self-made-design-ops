@@ -74,7 +74,7 @@ Usa la lista awesome para descubrir sistemas; usa este corpus para decidir la al
 | [`profiles/`](profiles/) | **Instrucciones de producción** — perfiles `DESIGN.md` derivados del corpus, con grado de evidencia en cada valor | 4 measured + capa interpreted |
 | [`event-taxonomy/`](event-taxonomy/) | Convenciones para hojas de eventos de analítica + conversor/linter | convenciones · conversor |
 | [`i18n/`](i18n/) | Convenciones de localización + linter | convenciones · linter |
-| [`mockups/`](mockups/) | Inventario de mockups de dispositivos | Apple, 1 entrada |
+| [`mockups/`](mockups/) | Inventario de mockups de dispositivos | Apple · Google · Samsung · Meta · Microsoft · Figma oficial — **6 entradas** |
 
 > **Nota:** los documentos del corpus son la versión principal en inglés, con el original en coreano conservado junto a cada uno como `<slug>.ko.md`. Los valores de tokens, tablas y extractos JSON (`design-systems/data/`) son neutrales al idioma.
 

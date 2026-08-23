@@ -21,12 +21,23 @@ procedure" at the end.
 
 ## Totals
 
-| | before 8/18 | after the first pass | **after the B-1 render (current)** |
-|---|:---:|:---:|:---:|
-| occurrences of the `unverified` mark | 428 | 359 | **308** |
-| unverified frontmatter fields | — | — | **117** (a11y_target 58 · figma_kit 49 · license 9 · repo 1) |
+| | before 8/18 | after the first pass | after the B-1 render | **recounted 2026-08-23** |
+|---|:---:|:---:|:---:|:---:|
+| open `unverified` marks | 428 | 359 | 308 | **212** |
+| unverified frontmatter fields | — | — | 118 | **109** |
+| — `a11y_target` | — | — | 59 | **57** |
+| — `figma_kit` | — | — | 49 | **48** |
+| — `license` | — | — | 9 | **4** |
+| — `repo` | — | — | 1 | **0** |
 
-*(a11y_target 59 → 58 on 2026-08-21 and → 57 on 2026-08-23; see the repository sweep below.)*
+> **The 308 was never reproducible, and the recount procedure is why.** The command this
+> document gave had two defects, both now fixed in "Recheck procedure" below: it globbed
+> `systems/*.md`, which sweeps the `.ko.md` twins in as well and counts every entry twice —
+> **the same bug found in `check-sources.mjs` on 2026-08-21**, which had turned 185 sources
+> into 370 — and it matched `unverified` case-sensitively, missing every sentence-initial
+> **`Unverified`** in the English primaries. The stated command still returns 367 today; the
+> corrected one returns **212**. The `license` and `repo` figures had simply not been
+> recounted since those items were resolved.
 
 **120 marks disappeared across two passes** — 66 fields in the first (re-searching sources)
 and 64 items in the second (**the B-1 headless render**, 37 systems across four parallel
@@ -354,12 +365,22 @@ The order for whoever picks this up next.
 
 1. **Recount the current state**
    ```bash
-   cd design-systems
-   grep -oE "unverified|미확인" systems/*.md | wc -l          # total occurrences
-   grep -oE "~~[^~]*(unverified|미확인)[^~]*~~" systems/*.md | wc -l   # struck through (already resolved)
+   cd design-systems/systems
+   # English primaries only — the .ko.md twins would double every count — and
+   # case-insensitive, or sentence-initial "Unverified" is missed.
+   FILES=$(ls *.md | grep -v '\.ko\.md')
+   echo "$FILES" | tr '\n' '\0' | xargs -0 grep -ohiE "unverified|미확인" | wc -l          # total
+   echo "$FILES" | tr '\n' '\0' | xargs -0 grep -ohiE "~~[^~]*(unverified|미확인)[^~]*~~" | wc -l   # struck
    ```
    The difference is the count of **open unverified items**. Update the "Totals" table in
-   this document.
+   this document. The frontmatter figures come from the generated data instead, which cannot
+   drift:
+   ```bash
+   node -e 'const d=require("./design-systems/data/systems.json");
+     const U=v=>typeof v==="string"&&/^(unverified|미확인)/i.test(v);
+     for (const k of ["a11y_target","figma_kit","license","repo"])
+       console.log(k, d.systems.filter(s=>U(s[k])).length)'
+   ```
 
 2. **Update the classification by measurement** — open the documentation sites, remeasure
    the HTTP code, redirects and body length, and re-split A/B/C. **Under 900 characters of

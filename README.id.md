@@ -74,7 +74,7 @@ Pakai daftar awesome untuk menemukan sistem; pakai korpus ini untuk menentukan t
 | [`profiles/`](profiles/) | **Instruksi produksi** — profil `DESIGN.md` turunan korpus, setiap nilai diberi tingkat bukti | 4 measured + lapisan interpreted |
 | [`event-taxonomy/`](event-taxonomy/) | Konvensi lembar event analitik + konverter/linter | konvensi · konverter |
 | [`i18n/`](i18n/) | Konvensi lokalisasi + linter | konvensi · linter |
-| [`mockups/`](mockups/) | Inventaris aset mockup perangkat | Apple, 1 entri |
+| [`mockups/`](mockups/) | Inventaris aset mockup perangkat | Apple · Google · Samsung · Meta · Microsoft · Figma resmi — **6 entri** |
 
 > **Catatan:** dokumen korpus berbahasa Inggris sebagai versi utama, dengan naskah asli bahasa Korea tersimpan di sebelahnya sebagai `<slug>.ko.md`. Nilai token, tabel, dan ekstrak JSON (`design-systems/data/`) netral bahasa.
 

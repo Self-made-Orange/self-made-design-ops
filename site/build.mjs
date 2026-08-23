@@ -165,6 +165,7 @@ const KIT = [
     { path: 'event-taxonomy/convert.mjs', what: 'An event sheet into json · md · html · tsv · Notion' },
     { path: 'site/build.mjs', what: 'The corpus into the data this page reads' },
     { path: 'site/design-spec.mjs', what: 'This site\'s own stylesheet into a graded DESIGN.md' },
+    { path: 'site/check-headlines.mjs', what: 'The axis conclusions on this page against the documents they summarise' },
   ] },
   { group: 'Procedures', items: [
     { path: 'agents/system-selection.md', what: 'Pick a reference system on evidence, not on taste' },

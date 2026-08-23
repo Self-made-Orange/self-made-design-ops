@@ -34,8 +34,8 @@
    "id": "G005",
    "title": "verify",
    "objective": "전체 검사 통과 + 커밋",
-   "status": "pending",
-   "evidence": null
+   "status": "complete",
+   "evidence": "5개 스토리 완료, 커밋 b064d0b"
   }
  ]
 }

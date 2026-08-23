@@ -194,6 +194,45 @@ for (const [file, claims] of Object.entries(CLAIMS)) {
   if (!any) results.push({ file, claim: '—', status: 'unchecked', detail: 'no verifiable claim' });
 }
 
+/**
+ * The hero's two numbers are written into `docs/index.html` as pre-JS fallbacks and then
+ * overwritten at runtime from corpus.json. A stale fallback is a wrong number on screen until
+ * the script runs, and nothing was checking it — `k-lines` had drifted to 4,635 against a
+ * generated 4,854. Same class of defect as a stale headline, so it is checked here.
+ */
+{
+  const html = readFileSync(join(ROOT, 'docs', 'index.html'), 'utf8');
+  const corpus = JSON.parse(readFileSync(join(ROOT, 'docs', 'data', 'corpus.json'), 'utf8'));
+  const want = { 'k-count': corpus.count, 'k-lines': corpus.kit_lines };
+  for (const [id, n] of Object.entries(want)) {
+    const m = html.match(new RegExp(`id="${id}"[^>]*>([^<]*)<`));
+    const shown = m ? m[1].trim() : null;
+    const ok = shown !== null && shown.replace(/,/g, '') === String(n);
+    results.push({
+      file: 'docs/index.html', claim: `#${id} fallback`, status: ok ? 'ok' : 'fail',
+      detail: ok ? shown : `${M.expected} ${shown ?? '—'}, ${M.actual} ${n.toLocaleString('en')}`,
+    });
+  }
+}
+
+/**
+ * `site/README.md` states the kit inventory's size in prose, in both languages. Same drift,
+ * same check. Note that this script is itself a kit item, so editing it moves `kit_lines` —
+ * which is how this check first fired.
+ */
+for (const readme of ['site/README.md', 'site/README.ko.md']) {
+  const txt = readFileSync(join(ROOT, readme), 'utf8');
+  const corpus = JSON.parse(readFileSync(join(ROOT, 'docs', 'data', 'corpus.json'), 'utf8'));
+  const items = corpus.kit.reduce((n, g) => n + g.items.length, 0);
+  const lines = corpus.kit_lines.toLocaleString('en');
+  const ok = txt.includes(String(items)) && txt.includes(lines);
+  results.push({
+    file: readme, claim: 'kit inventory size', status: ok ? 'ok' : 'fail',
+    detail: ok ? `${items} items · ${lines} lines`
+                : `${M.expected} — , ${M.actual} ${items} items / ${lines} lines`,
+  });
+}
+
 const failed = results.filter((r) => r.status === 'fail');
 const unchecked = results.filter((r) => r.status === 'unchecked');
 

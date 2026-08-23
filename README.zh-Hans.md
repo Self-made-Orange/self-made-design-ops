@@ -73,7 +73,7 @@
 | [`profiles/`](profiles/) | **制作指令书** — 从语料库派生的 `DESIGN.md` 配置，每个值都标注依据等级 | measured 4 种 + interpreted 层 |
 | [`event-taxonomy/`](event-taxonomy/) | 分析事件表编写规范 + 转换/检查脚本 | 规范 · 转换器 |
 | [`i18n/`](i18n/) | 本地化规范 + 检查器 | 规范 · 检查器 |
-| [`mockups/`](mockups/) | 设备样机素材清单 | Apple 1 项 |
+| [`mockups/`](mockups/) | 设备样机素材清单 | Apple · Google · Samsung · Meta · Microsoft · Figma 官方 — **6 项** |
 
 > **注：** 语料库正文以英语为主版，韩语原文以 `<slug>.ko.md` 并存。token 值、表格与 JSON 提取（`design-systems/data/`）与语言无关。
 
