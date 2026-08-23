@@ -12,7 +12,7 @@ a11y_target: null
 platform: web
 domain: framework
 verified: 2026-08-18
-source: "GitHub raw — apps/v4/app/globals.css, apps/v4/registry/new-york-v4/ui/*.tsx, apps/v4/registry/__index__.tsx · npm sonner@2.0.8 → dist/index.mjs·styles.css (토스트 실측, 2026-08-18)"
+source: "github shadcn-ui/ui@2b89d67e19 — apps/v4/app/globals.css, apps/v4/registry/new-york-v4/ui/*.tsx, apps/v4/registry/__index__.tsx · npm sonner@2.0.8 → dist/index.mjs·styles.css (토스트 실측, 2026-08-18)"
 ---
 <!-- lang-links -->
 > [English](shadcn-ui.md) · **한국어**

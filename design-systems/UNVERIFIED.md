@@ -320,6 +320,34 @@ documentation site and not in its README is the ordinary case, not evidence of a
 this section reports a channel result rather than a verdict. The remaining route is the
 documentation-site channel (B-1), system by system.
 
+## The repository channel for `figma_kit`, swept the same way (2026-08-23)
+
+The same sweep was run for `figma_kit: unverified`, over the **41** entries that carry a
+github repo, reading `README.md`, `docs/README.md`, `CONTRIBUTING.md`, `docs/index.md` and
+`.github/README.md`. The match was deliberately narrow: **a `figma.com/file`,
+`figma.com/design` or `figma.com/community/file` URL**, never a bare mention of the word
+Figma — "we design in Figma" is not a kit.
+
+| Result | Count |
+|--------|:---:|
+| **links a Figma file** | **1** |
+| no such link in the repository | 35 |
+| no readable README at the paths tried | 4 (Bolt · Nord · Odyssey · Origami) |
+| 8 of the 49 carry no github repo at all | — |
+
+**Kaizen, and it is the interesting one.** The 2026-08-18 documentation-site render had
+concluded that a kit was *implied but not published*, and left the field unverified on that
+basis. `CONTRIBUTING.md` line 165 links it outright — `figma.com/file/eZKEE5kXbEMY3lx84oz8iN`,
+the file named "💜 UI Kit: Heart" — in a file a documentation-site render never reaches.
+Resolved to `true` on the Backpack reading: the address answers 302, so what is confirmed is
+**that the kit exists**, not that anyone can open it. The file key is recorded in the entry,
+because a kit that cannot be re-identified cannot be rechecked.
+
+**The lesson is about channels, not about Kaizen.** A render of the documentation site and a
+read of the repository are different channels, and this corpus had been treating the first as
+though it covered the second. Where a value is still unverified after a site render, the
+repository is worth one pass before the item is called blocked.
+
 ## Recheck procedure
 
 The order for whoever picks this up next.

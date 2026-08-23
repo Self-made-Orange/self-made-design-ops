@@ -221,9 +221,22 @@ Odyssey는 **SPA가 아니라 Okta SSO 뒤**였습니다. 상세·렌더 실무 
     문서 사내화, npm 36패키지 MIT 생존) · Aurora(문서층 2호, 2019 동결 명기) ·
     Fleet(공개 CSS 실측, 코드 CC0) 편입 → **코퍼스 116**. Grab은 불가 —
     design.grab.com이 "Coming Soon"(실체는 사내 Duxton). **모니터링 대상**:
-    design.grab.com 오픈 시 재평가
-- [ ] **watchOS·tvOS Figma 킷** — 공개 링크 없음 확인(사용자 확인 완료).
-  공식 킷이 공개되면 인접 ID 프로브로 수집
+    design.grab.com 오픈 시 재평가. **2026-08-23 재확인** — 200을 반환하지만 페이지는
+    여전히 4,552바이트짜리 `<title>Grab Design - Coming Soon</title>` 플레이스홀더입니다.
+    조건 미충족이므로 목록에 남깁니다
+- [ ] **watchOS·tvOS Figma 킷** — **2026-08-23 재확인, 둘의 상태가 갈렸습니다.**
+  이 세션에서 `developer.apple.com/design/resources/`가 200을 반환합니다.
+  - **watchOS: 이 항목이 설정한 조건이 충족됐습니다.** 공식 킷이 공개돼 있습니다 —
+    `figma.com/community/file/1540060090060216489/watchos-26`, 그 페이지에서 링크됩니다.
+    이 URL은 비인증 상태에서 403을 반환하는데, 이는 Figma 커뮤니티의 통상 응답이지
+    반증이 아닙니다. 증거는 Apple 자신의 페이지에 걸린 링크입니다. **코퍼스에 watchOS 항목
+    자체가 없습니다**(웨어러블 축에는 Wear OS와 Tizen Wearable뿐). 따라서 필드를 채우는
+    일이 아니라 신규 항목 수집이고, 재확인보다 큰 작업이라 여기서는 열어 둡니다.
+  - ✅ **tvOS: 여전히 없고, 이제 날짜가 붙은 근거가 있습니다.** 그 페이지의 tvOS 다운로드는
+    `tvOS-18-Design-Templates-Sketch.dmg`와 Production 템플릿 `.dmg` 2종 — Sketch·Photoshop
+    뿐입니다. 같은 페이지가 visionOS · watchOS 26 · 기능 킷 10종의 Figma 커뮤니티 파일은
+    링크하므로 부재는 tvOS에 한정됩니다. `systems/tvos.md`에 기록했고 `figma_kit: false`
+    유지
 - [x] ~~코퍼스 본문 다국어화 1단계~~ — **완료 (2026-08-18)**:
   `patterns/implementation-defaults.md` (9절 통합 번역 977줄).
   다음 단계는 수요 생기면 systems/ 항목 또는 patterns 전문 번역
@@ -365,8 +378,14 @@ github MCP 스코프 밖 — 3경로 모두 확인). 제품 데이터 반입 금
 > 영문판 `TODO.md`의 H절이 한국어판에 없었습니다. 열려 있는 항목만 2026-08-23에 옮깁니다 —
 > 이미 해소된 H절 항목들(도구 다국어화, `frr-dashboard` 번역)은 영문판의 기록을 정본으로 둡니다.
 
-- [ ] **Satoshi를 실제 서체로 렌더 검증하지 못했습니다** — 여전히 열려 있지만
-  **더는 소유자 전용이 아닙니다 (2026-08-23)**: 이번 세션에서 `www.fontshare.com`이 **200**을
-  반환했으므로, 프록시 차단은 2026-08-20 세션의 성질이지 항구적인 것이 아니었습니다.
-  Satoshi가 npm에 없다는 사실은 그대로입니다. 남은 것은 실제 서체를 물린 렌더 확인입니다 —
-  `site/README.md`의 주석 참조.
+- [x] ~~**Satoshi를 실제 서체로 렌더 검증하지 못했습니다**~~ — **무효한 항목이었습니다
+  (2026-08-23 종결).** 사이트는 Satoshi를 쓰지 않습니다. 2026-08-21 반나절 적용됐다가 같은 날
+  소유자 요청으로 되돌려졌고 `site/README.md`가 이미 기록하고 있습니다. `docs/assets/site.css`의
+  `--sans`는 **Pretendard Variable**이고 `docs/` 전체에 "satoshi"는 0건입니다. 검증할 렌더가
+  애초에 없었습니다.
+  **정말로 미검증이던 것은 Pretendard였고, 이번에 검증했습니다.** 같은 주석이 jsDelivr가
+  프록시에 막혀 로컬 사본으로 검증했다고 적고 있었습니다. 이 세션에서 jsDelivr가 응답하고
+  (스타일시트 55,760 B · `@font-face` 92 · 서브셋 woff2 34,568 B), 배포된 페이지에서
+  `document.fonts.status`가 `loaded`,
+  `document.fonts.check('16px "Pretendard Variable"')`가 **true**, 로드된 face가 가변 범위
+  **45 920**을 보고합니다. `site/README.md`에 기록했습니다.

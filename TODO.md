@@ -252,9 +252,23 @@ Two incidental corrections:
     second documentation-layer sample, with the 2019 freeze stated) · Fleet (measured from
     public CSS, code CC0) admitted → **corpus 116**. Grab is not possible —
     design.grab.com says "Coming Soon" (the real thing is the internal Duxton). **On the
-    watch list**: re-evaluate if design.grab.com opens
-- [ ] **The watchOS and tvOS Figma kits** — confirmed to have no public link (the user
-  confirmed). If official kits are published, harvest them with the adjacent-ID probe
+    watch list**: re-evaluate if design.grab.com opens. **Rechecked 2026-08-23** — it answers
+    200, but the page is still the 4,552-byte `<title>Grab Design - Coming Soon</title>`
+    placeholder. The condition is not met; it stays on the list
+- [ ] **The watchOS and tvOS Figma kits** — **rechecked 2026-08-23, and they have parted
+  ways.** `developer.apple.com/design/resources/` answers 200 from this session.
+  - **watchOS: the condition this item set has been met.** An official kit is published —
+    `figma.com/community/file/1540060090060216489/watchos-26`, linked from that page. The URL
+    answers 403 unauthenticated, which is Figma's normal community response and not evidence
+    against it; the link on Apple's own page is the evidence. **The corpus has no watchOS
+    entry at all** (only Wear OS and Tizen Wearable on the wearable axis), so this is a new
+    entry to harvest rather than a field to fill — bigger than a recheck, and the reason it is
+    left open here.
+  - ✅ **tvOS: still none, and now with dated evidence.** The tvOS downloads on that page are
+    `tvOS-18-Design-Templates-Sketch.dmg` and the two Production template `.dmg`s — Sketch and
+    Photoshop only. The same page links Figma community files for visionOS, watchOS 26 and ten
+    feature kits, so the absence is specific to tvOS. Recorded in `systems/tvos.md`;
+    `figma_kit: false` stands
 - [x] ~~Translating the corpus body~~ — **complete (2026-08-21).** Stage 1 was
   `patterns/implementation-defaults.md` (977 lines consolidating all nine sections) on
   2026-08-18; the rest followed — all 116 `systems/` entries, the nine pattern axes,
@@ -445,8 +459,14 @@ Two bugs the CLI-localisation pass surfaced, both now fixed:
   now English with `frr-dashboard.ko.md` beside it. Commit hashes were kept — they let the
   owner re-verify and identify nothing on their own. It stays `coverage: internal`, so it is
   still filtered out of the public data.
-- [ ] **Satoshi has not been render-verified with the real typeface** — still open, but **no
-  longer owner-only (2026-08-23)**: `www.fontshare.com` answered **200** from this session, so
-  the proxy claim was a property of the 2026-08-20 session, not a standing one. Satoshi is
-  still absent from npm. What remains is the actual render check against the real face; see the
-  note in `site/README.md`.
+- [x] ~~**Satoshi has not been render-verified with the real typeface**~~ — **the item was
+  moot (closed 2026-08-23).** The site does not use Satoshi. It ran on it for part of
+  2026-08-21 and was reverted the same day at the owner's request, which `site/README.md`
+  already records; `docs/assets/site.css` sets `--sans` to **Pretendard Variable** and the word
+  Satoshi appears nowhere in `docs/`. There was no render left to verify.
+  **What was genuinely unverified was Pretendard, and it now is.** The same note claimed
+  jsDelivr was proxy-blocked and that verification had been done on a local copy. jsDelivr
+  answers from this session (stylesheet 55,760 B / 92 `@font-face`; a subset woff2 at
+  34,568 B), and on the deployed page `document.fonts.status` is `loaded`,
+  `document.fonts.check('16px "Pretendard Variable"')` is **true**, and the loaded face
+  reports the variable range **45 920**. Recorded in `site/README.md`.

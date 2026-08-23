@@ -12,7 +12,7 @@ a11y_target: "WCAG 2.1 A+AA (구 문서 명시 — 현행 shopify.dev 문서에�
 platform: web
 domain: commerce
 verified: 2026-08-18
-source: "github Shopify/polaris-react-archive@main → polaris-tokens/src (아카이브 — 2026-08-05 동결) · npm @shopify/polaris-tokens@9.4.2 (동결판) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**"
+source: "github Shopify/polaris-react-archive@a651dac89f → polaris-tokens/src (아카이브 — 2026-08-05 동결) · npm @shopify/polaris-tokens@9.4.2 (동결판) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**"
 ---
 <!-- lang-links -->
 > [English](polaris.md) · **한국어**

@@ -79,7 +79,14 @@ Android TV 문서에서 미확보였던 **오버스캔 수치가 Apple 쪽에서
 
 ## 참고
 
-- **Figma 킷 (false) 근거:** 커뮤니티에 공식 킷 없음 — 기존 확인
+- **Figma 킷 (false) 근거:** 커뮤니티에 공식 킷 없음 — **2026-08-23 재확인**.
+  200을 반환하는 `developer.apple.com/design/resources/` 기준으로, 그 페이지의 tvOS
+  다운로드는 **`tvOS-18-Design-Templates-Sketch.dmg` ·
+  `tvOS-18-Production-Templates-Sketch.dmg` ·
+  `tvOS-18-Production-Templates-Photoshop.dmg` 뿐**입니다 — Sketch·Photoshop만 있고 Figma는
+  없습니다. 같은 페이지가 visionOS · watchOS 26 · 기능 킷 10종의 Figma 커뮤니티 파일은
+  링크하므로, 부재는 Apple이 Figma를 안 쓴다는 뜻이 아니라 tvOS에 한정된 사실입니다.
+  `figma_kit: false` 유지
 
 - 소스: HIG DocC JSON 채널 (`HARVESTING.md`) — layout.json의 tvOS 절
 - **남은 확인 사항:** 타이포 스케일(tvOS 전용 크기), 포커스 확대 배율,

@@ -12,7 +12,7 @@ a11y_target: unverified
 platform: tv
 domain: os
 verified: 2026-08-17
-source: "developer.android.com/design/ui/tv/guides — {design-for-tv, buttons, cards, navigation-drawer} (measured from the HTML)"
+source: "developer.android.com/design/ui/tv/guides/foundations/design-for-tv · guides/components/{buttons, cards, navigation-drawer} (measured from the HTML; paths re-pointed 2026-08-23 — the old flat `guides/{…}` addresses now 404)"
 ---
 <!-- lang-links -->
 > **English** · [한국어](android-tv.ko.md)
@@ -94,3 +94,19 @@ Unverified (the D-pad premise is itself a focus-navigation specification).
   measured from the HTML)
 - **Still to confirm:** type scale figures, overscan safe-area values, colour tokens,
   code-level values in Compose for TV, and cross-comparison with tvOS (Apple)
+
+## Source check — the documentation moved (2026-08-23)
+
+The flat `developer.android.com/design/ui/tv/guides/{design-for-tv, buttons, cards,
+navigation-drawer}` addresses this entry recorded now return **404**. The pages exist, split
+into two tiers:
+
+| page | now at |
+|------|--------|
+| design-for-tv | `guides/foundations/design-for-tv` |
+| buttons · cards · navigation-drawer | `guides/components/{…}` |
+
+`guides` itself 404s; `design/ui/tv` answers 200. The `source:` field is re-pointed. **No
+value was re-measured** — this is an address correction, so `verified:` stays 2026-08-17 and
+the recorded measurements are still the 2026-08-17 ones. A re-measure against the moved pages
+is a separate job.

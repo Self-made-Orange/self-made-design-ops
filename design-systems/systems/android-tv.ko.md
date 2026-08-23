@@ -12,7 +12,7 @@ a11y_target: 미확인
 platform: tv
 domain: os
 verified: 2026-08-17
-source: "developer.android.com/design/ui/tv/guides — {design-for-tv, buttons, cards, navigation-drawer} (HTML 실측)"
+source: "developer.android.com/design/ui/tv/guides/foundations/design-for-tv · guides/components/{buttons, cards, navigation-drawer} (HTML 실측. 2026-08-23 경로 재지정 — 이전의 평면 `guides/{…}` 주소는 이제 404)"
 ---
 <!-- lang-links -->
 > [English](android-tv.md) · **한국어**
@@ -86,3 +86,18 @@ TV판이며, 콘텐츠 **비율을 용도별로 지정**하는 것은 미디어 
 - 문서: developer.android.com/design/ui/tv (프록시 통과 확인 — HTML 실측)
 - **남은 확인 사항:** 타이포 스케일 수치, 오버스캔 안전 영역 값,
   색 토큰, Compose for TV 코드 레벨 값, tvOS(Apple)와의 교차 비교
+
+## 소스 점검 — 문서가 이동했습니다 (2026-08-23)
+
+이 항목이 기록한 평면 주소
+`developer.android.com/design/ui/tv/guides/{design-for-tv, buttons, cards, navigation-drawer}`는
+이제 **404**입니다. 페이지 자체는 있고 두 계층으로 나뉘었습니다:
+
+| 페이지 | 현재 위치 |
+|--------|-----------|
+| design-for-tv | `guides/foundations/design-for-tv` |
+| buttons · cards · navigation-drawer | `guides/components/{…}` |
+
+`guides` 자체는 404이고 `design/ui/tv`는 200입니다. `source:`를 재지정했습니다.
+**재측정한 값은 없습니다** — 주소 정정이므로 `verified:`는 2026-08-17로 두고, 기록된 실측은
+여전히 2026-08-17 시점의 것입니다. 이동한 페이지 기준 재측정은 별도 작업입니다.

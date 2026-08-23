@@ -12,7 +12,7 @@ a11y_target: "WCAG 2.2 AA (stated — primer.style/guides/accessibility, confirm
 platform: web
 domain: enterprise
 verified: 2026-08-18
-source: "github primer/primitives@main → src/tokens/base · npm @primer/primitives@11.10.0 → src/tokens/base/{color,typography} · src/tokens/functional/{color,typography} · dist/css/functional/themes/*.css · dist/internalCss/*.css"
+source: "github primer/primitives@dccf2af9db → src/tokens/base · npm @primer/primitives@11.10.0 → src/tokens/base/{color,typography} · src/tokens/functional/{color,typography} · dist/css/functional/themes/*.css · dist/internalCss/*.css"
 ---
 <!-- lang-links -->
 > **English** · [한국어](primer.ko.md)

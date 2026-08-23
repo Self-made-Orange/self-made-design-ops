@@ -12,7 +12,7 @@ a11y_target: "WCAG 2.1 A+AA (stated in the old documentation — lost from the c
 platform: web
 domain: commerce
 verified: 2026-08-18
-source: "github Shopify/polaris-react-archive@main → polaris-tokens/src (archived — frozen 2026-08-05) · npm @shopify/polaris-tokens@9.4.2 (the frozen release) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**"
+source: "github Shopify/polaris-react-archive@a651dac89f → polaris-tokens/src (archived — frozen 2026-08-05) · npm @shopify/polaris-tokens@9.4.2 (the frozen release) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**"
 ---
 <!-- lang-links -->
 > **English** · [한국어](polaris.ko.md)

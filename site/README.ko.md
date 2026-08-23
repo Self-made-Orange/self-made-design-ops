@@ -716,7 +716,15 @@ span이 자기 간격을 안 갖고 있었습니다.
 그려집니다. 로드에 실패해도 폴백 스택(`-apple-system` → `Apple SD Gothic Neo` /
 `Noto Sans KR`)으로 구조 변화 없이 렌더됩니다.
 
-> 이 컨테이너 세션에서는 jsDelivr가 이그레스 프록시에 막혀 있어, 렌더 검증은
+> **배포된 페이지에서 검증했습니다 (2026-08-23).** 이 세션에서 jsDelivr가 응답합니다 —
+> 스타일시트 55,760바이트에 `@font-face` 92개, 서브셋 woff2는 34,568바이트로 받아집니다.
+> `keepyaoung.github.io/self-made-design-ops/` 자체에서 `document.fonts.status`가 `loaded`,
+> `document.fonts.check('16px "Pretendard Variable"')`가 **true**, 로드된 face가 가변 범위
+> **45 920**을 보고합니다. 아래의 이전 기록은 jsDelivr가 프록시에 막혀 로컬 사본으로
+> 검증했다고 적었는데, 2026-08-21 세션의 사실이지 항구적 성질이 아닙니다 — 물려받지 말고
+> 다시 확인할 것.
+>
+> (이전 기록) 이 컨테이너 세션에서는 jsDelivr가 이그레스 프록시에 막혀 있어, 렌더 검증은
 > npm 배포본을 로컬에 풀어 같은 CSS를 가리키게 한 사본으로 했습니다.
 
 **Satoshi를 잠깐 거쳤습니다** (2026-08-21). 반나절 정도 Satoshi(Indian Type Foundry,

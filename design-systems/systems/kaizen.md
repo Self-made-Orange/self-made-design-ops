@@ -6,7 +6,7 @@ url: https://cultureamp.design
 repo: https://github.com/cultureamp/kaizen-design-system
 license: MIT
 tech: [React, SCSS]
-figma_kit: unverified
+figma_kit: true
 tokens_format: [SCSS, CSS]
 a11y_target: "Confirmed to state none (2026-08-18 — no accessibility document among the Storybook's 197 documentation entries, and zero mentions of WCAG)"
 platform: web
@@ -201,9 +201,17 @@ target level.**
   internal Figma library exists**, but nowhere in the 197 Storybook entries is there a kit
   page, a download or a community link (that one sentence is the only mention of "Figma" in
   the whole rendered site).
-  → `figma_kit` is correctly **left as `unverified`**: not "there is none" but
-  "it is not published".
+  → at the time this read `figma_kit: unverified`: not "there is none" but "it is not
+  published".
   Source: https://cultureamp.design/?path=/docs/introduction-welcome--docs
+- **Figma — resolved to `true` (2026-08-23).** The kit the sentence above only implied is
+  linked directly from the **repository**, which the documentation-site render never covered:
+  `CONTRIBUTING.md` line 165 sends icon contributors to "our figma file",
+  `figma.com/file/eZKEE5kXbEMY3lx84oz8iN` — the file is named **💜 UI Kit: Heart**.
+  The address answers **302** (it redirects rather than serving the file), so this confirms
+  **the kit exists**, not that it can be opened publicly — the same reading the corpus applies
+  to Backpack. File key recorded here on purpose: without it the kit cannot be rechecked.
+  Source: github `cultureamp/kaizen-design-system`, `CONTRIBUTING.md`, `main@5b691f46c5`
 - **Open questions:** ~~the colour, shadow and layout tokens~~ ~~the component list~~
   (resolved 2026-08-18 — all in styles.css, with around 60 component directories),
   ~~the accessibility target~~ (confirmed absent 2026-08-18), the rationale for the 6px grid

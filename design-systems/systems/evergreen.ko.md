@@ -12,7 +12,7 @@ a11y_target: 미확인
 platform: web
 domain: enterprise
 verified: 2026-08-18
-source: "github segmentio/evergreen@master → src/themes/default/tokens/"
+source: "github segmentio/evergreen@98e49a4100 → src/themes/default/tokens/"
 ---
 <!-- lang-links -->
 > [English](evergreen.md) · **한국어**

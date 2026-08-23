@@ -154,7 +154,7 @@
     {
      "path": "design-systems/check-sources.mjs",
      "what": "Compare every pinned source version against the registry",
-     "lines": 338
+     "lines": 341
     },
     {
      "path": "design-systems/i18n.mjs",
@@ -269,7 +269,7 @@
    ]
   }
  ],
- "kit_lines": 4635,
+ "kit_lines": 4638,
  "systems": [
   {
    "name": "Android for Cars / Automotive OS",
@@ -1565,7 +1565,7 @@
     "React",
     "SCSS"
    ],
-   "figma": "unverified",
+   "figma": true,
    "a11y": "Confirmed to state none (2026-08-18 — no accessibility document among the Storybook's 197 documentation entries, and zero mentions of WCAG)",
    "verified": "2026-08-18",
    "file": "kaizen.md"

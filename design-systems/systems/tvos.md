@@ -84,8 +84,13 @@ Unverified.
 
 ## Notes
 
-- **Basis for figma_kit (false):** no official kit in the community — previously
-  confirmed
+- **Basis for figma_kit (false):** no official kit in the community — **re-confirmed
+  2026-08-23** against `developer.apple.com/design/resources/`, which answers 200. The tvOS
+  downloads on that page are **`tvOS-18-Design-Templates-Sketch.dmg`,
+  `tvOS-18-Production-Templates-Sketch.dmg` and `tvOS-18-Production-Templates-Photoshop.dmg`
+  only** — Sketch and Photoshop, no Figma. The same page does link Figma community files for
+  visionOS, watchOS 26 and ten feature kits, so the absence is specific to tvOS rather than
+  Apple not using Figma. `figma_kit: false` stands
 
 - Source: the HIG DocC JSON channel (`HARVESTING.md`) — the tvOS section of layout.json
 - **Still to confirm:** the type scale (tvOS-specific sizes), the focus scale factor,

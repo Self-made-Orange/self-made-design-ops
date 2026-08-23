@@ -120,7 +120,10 @@ function parseSource(src) {
     }
   }
 
-  if (!found.length && /^github\b/i.test(src)) {
+  // `github owner/repo@ref` 는 문자열 맨 앞이 아니어도 잡습니다 — 1차 출처가 라이브 CSS이고
+  // 저장소가 대조용으로 뒤에 붙는 항목이 있습니다 (fleet-boston). 형태를 요구하므로
+  // 본문에서 github 를 단어로만 언급하는 경우는 걸리지 않습니다.
+  if (!found.length && /\bgithub\s+[\w.-]+\/[\w.-]+@/i.test(src)) {
     for (const m of src.matchAll(GH_RE)) {
       found.push({ kind: 'github', ref: m[1], pinned: m[2] });
     }

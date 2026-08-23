@@ -12,7 +12,7 @@ a11y_target: 미확인
 platform: wearable
 domain: os
 verified: 2026-08-17
-source: "github Samsung/Tizen.CircularUI@master → README.md + doc/design/part01~16 (아카이브 — 2023-04 동결, 문서가 한국어)"
+source: "github Samsung/Tizen.CircularUI@bd20530f2f → README.md + doc/design/part01~16 (아카이브 — 2023-04 동결, 문서가 한국어)"
 ---
 <!-- lang-links -->
 > [English](tizen-circularui.md) · **한국어**

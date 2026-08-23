@@ -50,7 +50,7 @@
       "platform": "tv",
       "domain": "os",
       "verified": "2026-08-17",
-      "source": "developer.android.com/design/ui/tv/guides — {design-for-tv, buttons, cards, navigation-drawer} (measured from the HTML)",
+      "source": "developer.android.com/design/ui/tv/guides/foundations/design-for-tv · guides/components/{buttons, cards, navigation-drawer} (measured from the HTML; paths re-pointed 2026-08-23 — the old flat `guides/{…}` addresses now 404)",
       "_file": "android-tv.md"
     },
     {
@@ -751,7 +751,7 @@
       "platform": "web",
       "domain": "enterprise",
       "verified": "2026-08-18",
-      "source": "github segmentio/evergreen@master → src/themes/default/tokens/",
+      "source": "github segmentio/evergreen@98e49a4100 → src/themes/default/tokens/",
       "_file": "evergreen.md"
     },
     {
@@ -776,7 +776,7 @@
       "platform": "web",
       "domain": "government(municipal)",
       "verified": "2026-08-18",
-      "source": "patterns.boston.gov/css/public.css (184,235B — confirmed byte-identical to the repo's develop branch) + CityOfBoston/patterns stylesheets/variables/*.styl",
+      "source": "patterns.boston.gov/css/public.css (184,235B — confirmed byte-identical to the repo's develop branch) + github CityOfBoston/patterns@55b4676056 → stylesheets/variables/*.styl",
       "_file": "fleet-boston.md"
     },
     {
@@ -1066,7 +1066,7 @@
         "React",
         "SCSS"
       ],
-      "figma_kit": "unverified",
+      "figma_kit": true,
       "tokens_format": [
         "SCSS",
         "CSS"
@@ -1716,7 +1716,7 @@
       "platform": "web",
       "domain": "commerce",
       "verified": "2026-08-18",
-      "source": "github Shopify/polaris-react-archive@main → polaris-tokens/src (archived — frozen 2026-08-05) · npm @shopify/polaris-tokens@9.4.2 (the frozen release) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**",
+      "source": "github Shopify/polaris-react-archive@a651dac89f → polaris-tokens/src (archived — frozen 2026-08-05) · npm @shopify/polaris-tokens@9.4.2 (the frozen release) → dist/cjs/src/{colors,size}.js · dist/cjs/src/themes/**",
       "_file": "polaris.md"
     },
     {
@@ -1786,7 +1786,7 @@
       "platform": "web",
       "domain": "enterprise",
       "verified": "2026-08-18",
-      "source": "github primer/primitives@main → src/tokens/base · npm @primer/primitives@11.10.0 → src/tokens/base/{color,typography} · src/tokens/functional/{color,typography} · dist/css/functional/themes/*.css · dist/internalCss/*.css",
+      "source": "github primer/primitives@dccf2af9db → src/tokens/base · npm @primer/primitives@11.10.0 → src/tokens/base/{color,typography} · src/tokens/functional/{color,typography} · dist/css/functional/themes/*.css · dist/internalCss/*.css",
       "_file": "primer.md"
     },
     {
@@ -2011,7 +2011,7 @@
       "platform": "web",
       "domain": "framework",
       "verified": "2026-08-18",
-      "source": "GitHub raw — apps/v4/app/globals.css, apps/v4/registry/new-york-v4/ui/*.tsx, apps/v4/registry/__index__.tsx · npm sonner@2.0.8 → dist/index.mjs·styles.css (toast measurements, 2026-08-18)",
+      "source": "github shadcn-ui/ui@2b89d67e19 — apps/v4/app/globals.css, apps/v4/registry/new-york-v4/ui/*.tsx, apps/v4/registry/__index__.tsx · npm sonner@2.0.8 → dist/index.mjs·styles.css (toast measurements, 2026-08-18)",
       "_file": "shadcn-ui.md"
     },
     {
@@ -2283,7 +2283,7 @@
       "platform": "wearable",
       "domain": "os",
       "verified": "2026-08-17",
-      "source": "github Samsung/Tizen.CircularUI@master → README.md + doc/design/part01~16 (archived — frozen 2023-04, documentation is in Korean)",
+      "source": "github Samsung/Tizen.CircularUI@bd20530f2f → README.md + doc/design/part01~16 (archived — frozen 2023-04, documentation is in Korean)",
       "_file": "tizen-circularui.md"
     },
     {

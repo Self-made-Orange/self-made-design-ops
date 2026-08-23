@@ -12,7 +12,7 @@ a11y_target: unverified
 platform: web
 domain: government(municipal)
 verified: 2026-08-18
-source: "patterns.boston.gov/css/public.css (184,235B — confirmed byte-identical to the repo's develop branch) + CityOfBoston/patterns stylesheets/variables/*.styl"
+source: "patterns.boston.gov/css/public.css (184,235B — confirmed byte-identical to the repo's develop branch) + github CityOfBoston/patterns@55b4676056 → stylesheets/variables/*.styl"
 ---
 <!-- lang-links -->
 > **English** · [한국어](fleet-boston.ko.md)

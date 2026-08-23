@@ -6,7 +6,7 @@ url: https://cultureamp.design
 repo: https://github.com/cultureamp/kaizen-design-system
 license: MIT
 tech: [React, SCSS]
-figma_kit: 미확인
+figma_kit: true
 tokens_format: [SCSS, CSS]
 a11y_target: "명시 없음 확인 (2026-08-18 — 스토리북 문서 197개 엔트리에 접근성 문서 없음, WCAG 언급 0회)"
 platform: web
@@ -188,8 +188,16 @@ platform"을 지향한다는 문장인데, **준수 기준도 검증 방법도 �
   language"라고 써서 **사내 Figma 라이브러리의 존재는 시사**하지만, 스토리북
   197개 엔트리 어디에도 킷 페이지·다운로드·커뮤니티 링크가 없습니다
   (사이트 전체 렌더에서 "Figma" 언급은 이 한 문장뿐).
-  → `figma_kit`은 **`미확인` 유지**가 맞습니다: "없다"가 아니라 "공개돼 있지 않다"입니다.
+  → 당시 `figma_kit: 미확인`이었던 근거입니다: "없다"가 아니라 "공개돼 있지 않다".
   출처: https://cultureamp.design/?path=/docs/introduction-welcome--docs
+- **Figma — `true`로 해소 (2026-08-23).** 위 문장이 시사만 하던 그 킷이 **저장소**에서
+  직접 링크됩니다. 문서 사이트 렌더가 닿지 않던 자리입니다 — `CONTRIBUTING.md` 165행이
+  아이콘 기여자를 "our figma file"로 보내며, 주소는
+  `figma.com/file/eZKEE5kXbEMY3lx84oz8iN`, 파일 이름은 **💜 UI Kit: Heart**입니다.
+  이 주소는 **302**를 반환합니다(파일을 주지 않고 리다이렉트). 따라서 확인되는 것은
+  **킷의 존재**이지 공개 열람 가능 여부가 아닙니다 — 코퍼스가 Backpack에 적용한 것과 같은
+  판독입니다. 파일 키를 여기 기록해 둡니다. 없으면 재확인이 불가능합니다.
+  출처: github `cultureamp/kaizen-design-system`, `CONTRIBUTING.md`, `main@5b691f46c5`
 - **남은 확인 사항:** ~~컬러·그림자·레이아웃 토큰~~ ~~컴포넌트 목록~~ (2026-08-18
   해소 — styles.css에 전량, 컴포넌트 60여 디렉터리), ~~접근성 목표~~ (2026-08-18
   부재 확정), 6px 격자의 근거 — **2026-08-18 헤드리스 렌더로 문서 사이트를 열람

@@ -12,7 +12,7 @@ a11y_target: 미확인
 platform: web
 domain: government(municipal)
 verified: 2026-08-18
-source: "patterns.boston.gov/css/public.css (184,235B — 리포 develop과 라이브 동일 크기 확인) + CityOfBoston/patterns stylesheets/variables/*.styl"
+source: "patterns.boston.gov/css/public.css (184,235B — 리포 develop과 라이브 동일 크기 확인) + github CityOfBoston/patterns@55b4676056 → stylesheets/variables/*.styl"
 ---
 <!-- lang-links -->
 > [English](fleet-boston.md) · **한국어**

@@ -42,7 +42,7 @@ cross-comparisons rest on it.
 | Aurora Design System (GCTools) | `unknown` | 2026-08-18 | tidy up the `source:` field first |
 | CarPlay (Human Interface Guidelines) | `web` | 2026-08-17 | the documentation site (blocked by the proxy) |
 | Evergreen | `github` | 2026-08-18 | repository commits (compare with `gh api` — blocked by the proxy in container sessions) |
-| Fleet (Boston Patterns) | `unknown` | 2026-08-18 | tidy up the `source:` field first |
+| Fleet (Boston Patterns) | `github` | 2026-08-18 | repository commits (compare with `gh api` — blocked by the proxy in container sessions) |
 | Human Interface Guidelines (iOS 26 / iPadOS 26) | `figma` | 2026-08-16 | the Change Log page of the community file |
 | KRDS (Korea Responsive Design System) | `figma` | 2026-08-18 | the Change Log page of the community file |
 | LINE Design System (LDSG · LDSM) | `unknown` | 2026-08-18 | tidy up the `source:` field first |

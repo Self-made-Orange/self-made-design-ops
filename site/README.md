@@ -759,8 +759,14 @@ with `npm pack pretendard@1.3.9`. It is a variable face, which the page's interm
 falling through. If it fails to load, the fallback stack (`-apple-system` →
 `Apple SD Gothic Neo` / `Noto Sans KR`) renders with no structural change.
 
-> jsDelivr is blocked by the egress proxy in this container session, so render verification was
-> done on a copy pointed at the same CSS unpacked locally from the npm build.
+> **Verified against the deployed page (2026-08-23).** jsDelivr answers from this session —
+> the stylesheet is 55,760 bytes with 92 `@font-face` rules, and a subset woff2 fetches at
+> 34,568 bytes. On `keepyaoung.github.io/self-made-design-ops/` itself,
+> `document.fonts.status` is `loaded`, `document.fonts.check('16px "Pretendard Variable"')`
+> is **true**, and the loaded face reports the variable range **45 920**. The earlier note
+> here said jsDelivr was proxy-blocked and that verification had been done on a local copy;
+> that was true of the 2026-08-21 session and is not a standing property — recheck rather
+> than inherit it.
 
 **A short detour through Satoshi** (2026-08-21). The page ran on Satoshi (Indian Type Foundry,
 via Fontshare) for part of a day and was reverted the same day at the owner's request. Two
