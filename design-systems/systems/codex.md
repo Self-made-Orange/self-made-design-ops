@@ -8,7 +8,7 @@ license: GPL-2.0-or-later
 tech: [Vue, CSS]
 figma_kit: unverified
 tokens_format: [JSON, CSS, SCSS]
-a11y_target: unverified
+a11y_target: "WCAG 2.1 AA (stated — github wikimedia/design-codex README.md, main@5a4ff8980f, confirmed 2026-08-23)"
 platform: web
 domain: public
 verified: 2026-08-18
@@ -183,7 +183,12 @@ circle 50%.
 
 ## Accessibility
 
-The scale is rem-based and a 44px step exists. No explicit compliance target confirmed.
+The scale is rem-based and a 44px step exists.
+
+**A compliance target is stated (resolved 2026-08-23).** The repository README lists, among
+what Codex's components are for: *"Web accessibility compliant (Web Content Accessibility
+Guidelines 2.1 level AA)"* — github `wikimedia/design-codex`, `README.md`, `main@5a4ff8980f`.
+It is a statement of intent in the README, not a per-component conformance record.
 
 ## Notes
 

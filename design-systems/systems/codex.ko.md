@@ -8,7 +8,7 @@ license: GPL-2.0-or-later
 tech: [Vue, CSS]
 figma_kit: 미확인
 tokens_format: [JSON, CSS, SCSS]
-a11y_target: 미확인
+a11y_target: "WCAG 2.1 AA (명시 — github wikimedia/design-codex README.md, main@5a4ff8980f, 2026-08-23 확인)"
 platform: web
 domain: public
 verified: 2026-08-18
@@ -170,7 +170,12 @@ Wikipedia를 비롯한 Wikimedia 프로젝트를 위한 디자인시스템.
 
 ## 접근성
 
-rem 기반 스케일이며 44px 단계가 존재합니다. 명시적 준수 목표는 미확인.
+rem 기반 스케일이며 44px 단계가 존재합니다.
+
+**준수 목표가 명시돼 있습니다 (2026-08-23 해소).** 저장소 README가 Codex 컴포넌트의 목적을
+열거하면서 *"Web accessibility compliant (Web Content Accessibility Guidelines 2.1 level AA)"*
+라고 적습니다 — github `wikimedia/design-codex`, `README.md`, `main@5a4ff8980f`.
+README에 적힌 지향이며, 컴포넌트별 준수 기록은 아닙니다.
 
 ## 참고
 

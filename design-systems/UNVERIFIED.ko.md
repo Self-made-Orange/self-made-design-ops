@@ -18,7 +18,9 @@
 | | 8/18 이전 | 1차 분류 후 | **B-1 렌더 후 (현재)** |
 |---|:---:|:---:|:---:|
 | `미확인` 문자열 등장 | 428 | 359 | **308** |
-| frontmatter 미확인 필드 | — | — | **118** (a11y_target 59 · figma_kit 49 · license 9 · repo 1) |
+| frontmatter 미확인 필드 | — | — | **117** (a11y_target 58 · figma_kit 49 · license 9 · repo 1) |
+
+*(a11y_target은 2026-08-21에 59 → 58, 2026-08-23에 → 57. 아래 저장소 전수 조사 참조.)*
 
 **2회에 걸쳐 총 120개 표기가 사라졌습니다** — 1차(소스 재탐색) 66개 필드,
 2차(**B-1 헤드리스 렌더**, 37개 시스템 4팀 병렬) 64건 처리(해소 27 · 부재 확정 37).
@@ -260,6 +262,31 @@ pajamas · park-ui · pluralsight · ring-ui · serendie · smarthr · vanilla
 프로필의 존재가 공식 라이브러리 배포를 뜻하지는 않기 때문입니다.
 `forma-36`·`intergalactic`·`evergreen`은 프로필 외에 **본문에 라이브러리 안내 문구**가
 따로 있어서 해소했습니다.
+
+## `a11y_target`의 저장소 채널은 소진했습니다 (2026-08-23)
+
+`a11y_target: 미확인`이면서 github `repo`를 가진 항목을 한 번에 전수 조사했습니다 —
+**저장소 44개**, `main` 다음 `master`에서 `README.md` · `docs/README.md` ·
+`ACCESSIBILITY.md` · `docs/accessibility.md`를 받아 WCAG 레벨 표기 · Section 508 ·
+EN 301 549 · "level AA"를 매칭했습니다.
+
+| 결과 | 건수 |
+|------|:---:|
+| **저장소에 레벨이 명시됨** | **1** |
+| 저장소가 아무 말도 하지 않음 | 39 |
+| 시도한 경로에 읽을 수 있는 README 없음 | 3 (Bolt · Odyssey · Origami) |
+| 58건 중 github `repo` 자체가 없음 | 14 |
+
+유일한 적중은 **Codex**이고 해소했습니다. README가 컴포넌트의 목적을 열거하며
+*"Web accessibility compliant (Web Content Accessibility Guidelines 2.1 level AA)"*
+라고 적습니다 (`wikimedia/design-codex`, `main@5a4ff8980f`).
+
+**이게 닫는 것과 닫지 못하는 것.** 값싼 채널을 닫습니다 — 이 44개에 대해서는 답이 저장소에
+없으므로 아무도 다시 볼 필요가 없습니다. 그러나 나머지 43건을 C로 재분류할 근거는
+**되지 않습니다.** 디자인 시스템이 준수 목표를 문서 사이트에 적고 README에는 안 적는 것은
+평범한 경우이지 부재의 증거가 아닙니다 — 위에 기록된 `figma_kit` 과대 계상이 방향만 반대인
+같은 실수이고, 그래서 이 절은 판정이 아니라 채널 결과를 보고합니다. 남은 경로는
+문서 사이트 채널(B-1)이며 시스템별로 가야 합니다.
 
 ## 재점검 절차
 

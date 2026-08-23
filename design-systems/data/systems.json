@@ -639,7 +639,7 @@
         "CSS",
         "SCSS"
       ],
-      "a11y_target": "unverified",
+      "a11y_target": "WCAG 2.1 AA (stated — github wikimedia/design-codex README.md, main@5a4ff8980f, confirmed 2026-08-23)",
       "platform": "web",
       "domain": "public",
       "verified": "2026-08-18",

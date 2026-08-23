@@ -137,8 +137,17 @@ Two incidental corrections:
   (the body) were separated.
 
 **What remains (where the next person picks up):**
-- [ ] `a11y_target` unverified, **59 items** · `figma_kit`, **49** — the largest block left.
+- [ ] `a11y_target` unverified, **57 items** · `figma_kit`, **49** — the largest block left.
   Many are likely already C (no declaration), but **until checked they are unverified**
+  - ✅ **The repository channel is exhausted (2026-08-23)** — all 44 entries that carry a
+    github `repo` were swept for a stated WCAG level (README, docs/README, ACCESSIBILITY.md,
+    on `main` then `master`). **One hit**: Codex, now resolved to WCAG 2.1 AA from its README
+    at `main@5a4ff8980f`. 39 repositories say nothing, 3 had no readable README, and 14 of the
+    57 have no github repo at all. Recorded in `UNVERIFIED.md`.
+    **This does not make the other 43 into C** — stating the target on the documentation site
+    and not in the README is the ordinary case, and the `figma_kit` overcount was this same
+    mistake in the other direction. **The remaining route is the documentation-site channel
+    (B-1), system by system** — that is what the next pass costs
 - [x] ~~Odyssey~~ — **resolved via npm (2026-08-18)**: 206 tokens in total
   (13 type steps · one global transition pair at 100ms linear · a non-integer 1.5px border ·
   Depth and Shadow coexisting), roughly 95 components measured. Only the documentation layer

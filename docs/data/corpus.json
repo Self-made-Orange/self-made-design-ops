@@ -1046,7 +1046,7 @@
     "CSS"
    ],
    "figma": "unverified",
-   "a11y": "unverified",
+   "a11y": "WCAG 2.1 AA (stated — github wikimedia/design-codex README.md, main@5a4ff8980f, confirmed 2026-08-23)",
    "verified": "2026-08-18",
    "file": "codex.md"
   },

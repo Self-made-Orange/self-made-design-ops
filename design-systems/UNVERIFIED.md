@@ -24,7 +24,9 @@ procedure" at the end.
 | | before 8/18 | after the first pass | **after the B-1 render (current)** |
 |---|:---:|:---:|:---:|
 | occurrences of the `unverified` mark | 428 | 359 | **308** |
-| unverified frontmatter fields | — | — | **118** (a11y_target 59 · figma_kit 49 · license 9 · repo 1) |
+| unverified frontmatter fields | — | — | **117** (a11y_target 58 · figma_kit 49 · license 9 · repo 1) |
+
+*(a11y_target 59 → 58 on 2026-08-21 and → 57 on 2026-08-23; see the repository sweep below.)*
 
 **120 marks disappeared across two passes** — 66 fields in the first (re-searching sources)
 and 64 items in the second (**the B-1 headless render**, 37 systems across four parallel
@@ -291,6 +293,32 @@ README. The link URL is recorded in each file's `## References`)
 profile does not mean an official library is published. `forma-36`, `intergalactic` and
 `evergreen` were resolved because, beyond the profile, **the body text separately announces
 the library**.
+
+## The repository channel for `a11y_target` is exhausted (2026-08-23)
+
+Every `a11y_target: unverified` entry that carries a github `repo` was swept in one pass —
+**44 repositories**, fetching `README.md`, `docs/README.md`, `ACCESSIBILITY.md` and
+`docs/accessibility.md` from `main` and then `master`, and matching for WCAG level statements,
+Section 508, EN 301 549 and "level AA".
+
+| Result | Count |
+|--------|:---:|
+| **states a level in the repository** | **1** |
+| the repository is silent on it | 39 |
+| no readable README at the paths tried | 3 (Bolt · Odyssey · Origami) |
+| 14 of the 58 carry no github `repo` at all | — |
+
+The single hit is **Codex**, now resolved: the README lists *"Web accessibility compliant
+(Web Content Accessibility Guidelines 2.1 level AA)"* among what its components are for
+(`wikimedia/design-codex`, `main@5a4ff8980f`).
+
+**What this closes, and what it does not.** It closes the cheap channel: for these 44 systems
+the answer is not in the repository, so nobody needs to look there again. It does **not**
+license reclassifying the other 43 as C. A design system stating its conformance target on its
+documentation site and not in its README is the ordinary case, not evidence of absence — the
+`figma_kit` overcount recorded above is the same mistake in the other direction, and it is why
+this section reports a channel result rather than a verdict. The remaining route is the
+documentation-site channel (B-1), system by system.
 
 ## Recheck procedure
 
