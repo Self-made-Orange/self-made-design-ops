@@ -14,7 +14,7 @@ B 대표 6건·C 네트워크 확인 12건·D npm 재확인이 처리됐습니�
 | `full` 수집 심화 | 20/20 · **`partial` 수집 심화 79건(대상 전량)** 완료 |
 | patterns 백로그 | 판단 지침 9축 + 소스 파기류 전부 해소 · **재종합 9/9축 완료** (표본 16~83) — 약한 3축(table 16 · navigation 16 · feedback 18) 보강 완료 (2026-08-18) |
 | 미확인 | **428 → 308** (2회 처리 — 소스 재탐색 66필드 · B-1 렌더 64건). 분류·잔여는 `design-systems/UNVERIFIED.md` |
-| 신선도 | 총 **185건** · **낡음 24**(major 0 / minor 10 / patch 14) · 실패 0 · 수동 21. 낡음 1건이라는 수치는 이중 카운트 버그의 산물이었습니다; 선별 후(2026-08-23) **실작업은 minor 10건뿐** — C절 참조 |
+| 신선도 | 총 **185건** · **낡음 19, 전부 patch**(major 0 / minor 0) · 실패 0 · 수동 21 — **minor 전량 재수확 완료(2026-08-23)**, 실드리프트 1건(Ark UI). patch는 의도적으로 쫓지 않습니다 — C절 참조 |
 | a11y_target | `full` 수집 10개 시스템 문서 층 확인 완료 (명시 6 · 부재 확인 4) |
 | README | 6개 언어판 — **Self-Made DesignOps로 개명 반영** |
 
@@ -146,6 +146,19 @@ Odyssey는 **SPA가 아니라 Okta SSO 뒤**였습니다. 상세·렌더 실무 
 
 - [ ] **월간 freshness CI** 결과 처리 (절차: `freshness.md` — 실례 4건:
   Base Web·Mística·Pajamas + **Polaris 저장소 아카이브**(2026-08-18, 값 아닌 지위 드리프트))
+  - ✅ **minor 10건 재수확 완료 (2026-08-23) — 처음으로 `minor 0`.** 각각 `source:`가
+    지목한 파일만 대조했습니다. **9건은 기록 값 무변경**: atlaskit-tokens · braid ·
+    ebay/skin · porsche는 바이트 동일, odyssey는 토큰 파일이 생성 타임스탬프만 다르고
+    기록한 테마 오버라이드는 전부 동일, f36-button은 `package.json`만 다름, forma-36과
+    @gitlab/ui는 순수 추가(신규 `colors-input.json` · 신규
+    `application-chrome.background.color`), tegel은 변경 6파일이 전부 tabs로 항목이
+    기록하지 않는 층. **실제 드리프트는 Ark UI 하나** — 컴포넌트 73 → 74(`toc`),
+    의존성 67 → 69로 둘 다 항목이 명시한 숫자입니다. forma-36 · pajamas · odyssey ·
+    tegel · ark-ui · vanilla에 드리프트 기록을 넣고 10건 전부 `source:`·`verified:`를
+    올렸습니다.
+    **보고서를 재생성하니 커밋돼 있던 `freshness.md` 자체가 며칠 낡아 있었습니다** —
+    스냅샷에 없던 minor 2건(Ark UI · Vanilla)이 그 사이 도착해 있었고 위에 포함했습니다.
+    잔여: **patch 19 · minor 0 · major 0**
   - 🔻 **낡음 24건 선별 (2026-08-23) — 실작업은 10건.** 구성은
     **major 0 / minor 10 / patch 14**이고, **patch 14건은 재수확하지 않습니다.**
     근거는 바로 이 목록에 있습니다 — 2026-08-18에 처리한 드리프트 3건(minor 1·patch 2)이

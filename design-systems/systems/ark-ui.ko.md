@@ -11,8 +11,8 @@ tokens_format: []
 a11y_target: "WCAG (버전·레벨 미명시 — 2026-08-18 확인)"
 platform: web
 domain: framework
-verified: 2026-08-18
-source: "npm @ark-ui/react@5.38.2 → package/dist/components (73개), package.json 의존성"
+verified: 2026-08-23
+source: "npm @ark-ui/react@5.39.0 → package/dist/components (74개), package.json 의존성"
 ---
 <!-- lang-links -->
 > [English](ark-ui.md) · **한국어**
@@ -21,7 +21,7 @@ source: "npm @ark-ui/react@5.38.2 → package/dist/components (73개), package.j
 ## 한 줄 요약
 
 **토큰이 하나도 없는 시스템**입니다 — 스타일 없는 헤드리스 프리미티브
-66개(`@zag-js/*` 상태 머신)를 컴포넌트 73개로 감싸 배포합니다.
+68개(`@zag-js/*` 상태 머신)를 컴포넌트 74개로 감싸 배포합니다.
 `anatomy`(파트 이름 정의)가 사실상 유일한 공개 계약입니다.
 
 ## 왜 코퍼스에 넣는가
@@ -35,7 +35,7 @@ source: "npm @ark-ui/react@5.38.2 → package/dist/components (73개), package.j
   (`root`/`trigger`/`content` 등)의 정의이며, 스타일 라이브러리가
   이 이름에 값을 붙입니다. **Park UI(Panda 프리셋) · Chakra v3가
   이 위에 얹힙니다**
-- 상태 머신이 `@zag-js/*` **66개 패키지로 분리**돼 있습니다 —
+- 상태 머신이 `@zag-js/*` **68개 패키지로 분리**돼 있습니다 —
   컴포넌트 동작(포커스 트랩·키보드 내비·ARIA)을 프레임워크와 무관하게 구현
 - **React·Vue·Solid·Svelte 4프레임워크 지원** — Siemens iX(Web Components +
   3래퍼)와 함께 배포 폭 최대이며, 이쪽은 상태 머신 공유 방식입니다
@@ -57,9 +57,9 @@ Radix Primitives (동작)
 
 ## 컴포넌트
 
-**73개** (accordion · angle-slider · carousel · clipboard · collapsible ·
+**74개** (accordion · angle-slider · carousel · clipboard · collapsible ·
 color-picker · combobox · date-picker · file-upload · pin-input ·
-qr-code · signature-pad · toast · tour · tree-view 등).
+qr-code · signature-pad · toast · toc · tour · tree-view 등).
 `angle-slider`·`signature-pad`·`tour` 같은 특수 컴포넌트가 있습니다.
 
 ## 컴포넌트 심화 — (2026-08-18)
@@ -131,7 +131,7 @@ qr-code · signature-pad · toast · tour · tree-view 등).
 
 - **토큰 0 · CSS 0** — 스타일 층 자체가 없는 유일 표본
 - `anatomy`(파트 이름)가 스타일 라이브러리와의 계약
-- 상태 머신 66개 패키지 분리(`@zag-js/*`)
+- 상태 머신 68개 패키지 분리(`@zag-js/*`)
 - 4프레임워크 지원 — 배포 폭 최대 계열
 - Park UI·Chakra v3의 공통 기반
 
@@ -152,3 +152,30 @@ real assistive technologies out of the box". 검증은 실제 보조기술 테�
   49종의 파트 열거는 미실시), 접근성 검증 방식, Chakra v3와의 코드 공유 범위
 
 > 재검증 (2026-08-17): 5.38.1 → 5.38.2 patch — 이 항목은 토큰·CSS가 없는 anatomy 배포라 값 영향 없음. 핀만 갱신.
+
+## 드리프트 기록 — 5.38.2 → 5.39.0 (2026-08-23)
+
+**이번 신선도 패스에서 기록 숫자가 실제로 움직인 첫 minor입니다.** 재실측:
+
+| | 5.38.2 | 5.39.0 |
+|---|:---:|:---:|
+| `dist/components` 항목 | 73 | **74** |
+| — 컴포넌트 디렉터리 | 61 | **62** |
+| — 배럴 파일 | 12 | 12 |
+| 의존성 | 67 | **69** |
+| — `@zag-js/*` | 66 | **68** |
+| — 그 외 | `@internationalized/date` | ← |
+| 핀 고정된 `@zag-js/*` | 1.43.1 | **1.43.3** |
+
+컴포넌트 하나가 늘었습니다 — **`toc`**. anatomy를 `@zag-js/toc`에서 재수출하는
+디렉터리이고(`toc.anatomy.js`는 두 줄), 파트는 nav · list · item · link · content ·
+indicator · title · root입니다. 이걸 세면 anatomy를 노출하는 디렉터리는 51 → 52가 되고,
+`dist/components` 아래 나머지는 변동 없습니다.
+
+**`@zag-js/*` 패키지는 2개 늘었는데 컴포넌트는 1개뿐입니다** — `@zag-js/hotkeys`에는
+**대응하는 컴포넌트 디렉터리가 없습니다.** 위 심화 절의 "범용 유틸 0" 관찰은 5.38.2에서
+측정한 것이고 이 항목은 그것을 5.39.0으로 연장하지 않습니다. 여기서 측정한 것은
+그 의존성이 존재하고 그에 대한 래퍼가 배포되지 않는다는 사실뿐입니다.
+
+위의 심화 절은 파트 구조를 측정한 버전인 `@ark-ui/react@5.38.2` + `@zag-js/*@1.43.1`에
+그대로 핀 고정해 둡니다.

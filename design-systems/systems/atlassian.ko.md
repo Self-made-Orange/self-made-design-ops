@@ -11,8 +11,8 @@ tokens_format: [JSON, CSS, JS]
 a11y_target: "디자인시스템 문서엔 명시 없음 확인 (회사 차원 표준은 WCAG 2.1 AA — atlassian.com/trust, 2026-08-18)"
 platform: web
 domain: enterprise
-verified: 2026-08-17
-source: "npm @atlaskit/tokens@16.7.0 → figma/*.json (15개), dist/cjs/artifacts/tokens-raw/*.js (14개 테마)"
+verified: 2026-08-23
+source: "npm @atlaskit/tokens@16.8.0 → figma/*.json (15개), dist/cjs/artifacts/tokens-raw/*.js (14개 테마)"
 ---
 <!-- lang-links -->
 > [English](atlassian.md) · **한국어**

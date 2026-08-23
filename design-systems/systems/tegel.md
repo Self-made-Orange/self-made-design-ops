@@ -11,8 +11,8 @@ tokens_format: [CSS]
 a11y_target: "WCAG 2.1 AA (stated — confirmed 2026-08-18)"
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @scania/tegel@1.61.0 → dist/collection/**/*.css"
+verified: 2026-08-23
+source: "npm @scania/tegel@1.62.0 → dist/collection/**/*.css"
 ---
 <!-- lang-links -->
 > **English** · [한국어](tegel.ko.md)
@@ -206,3 +206,18 @@ applies.
   CloudFront, which **blocks headless Chrome's default UA with a 403** (`Request blocked`).
   Attach an ordinary browser UA and the Next.js SSR HTML comes through, so the body can be
   read without rendering
+
+## Drift record — 1.61.0 → 1.62.0 (2026-08-23)
+
+Six files differ under `dist/collection/`, **all of them tabs** — a component layer this entry
+does not record, so **no recorded value changed**. Noted as a reference point for whenever tabs
+are harvested:
+
+- **`navigation-tabs` gap 16px → 24px** — the one real value move
+- `inline-tabs` drops its `gap: 16px` and gains
+  `border-bottom: 1px solid var(--tds-inline-tabs-horizontal-divider-background)`
+- **Cross-component token leakage fixed** — `inline-tabs` and `navigation-tabs` were reading
+  `--tds-folder-tabs-scroll-btn-*`; each now reads its own prefix. This is the same
+  `tds-` prefix hazard the "A prefix collision to watch" section above describes, showing up
+  inside the package itself
+- `top/bottom/left/right: 3px` → `inset: 3px` — shorthand, same value

@@ -11,8 +11,8 @@ tokens_format: [JSON, CSS, SCSS, JS]
 a11y_target: "WCAG 2.1 AA (명시 — 2026-08-18 확인)"
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @contentful/f36-tokens@6.2.1 → dist/json/*.json · npm @contentful/f36-button@6.19.0 (컴포넌트, 2026-08-18)"
+verified: 2026-08-23
+source: "npm @contentful/f36-tokens@6.3.0 → dist/json/*.json · npm @contentful/f36-button@6.20.0 (컴포넌트, 2026-08-18)"
 ---
 <!-- lang-links -->
 > [English](forma-36.md) · **한국어**
@@ -201,3 +201,11 @@ WCAG 2.1 Level AA standards". 자동 테스트 병행을 함께 명시합니다.
 - **라이선스 해소 (2026-08-18):** `MIT` — 출처: github contentful/forma-36 → `LICENSE.md` (npm `@contentful/f36-tokens@6.2.1` 메타와 일치)
 - **Figma 킷 확인 (2026-08-18):** `figma_kit: true` — `f36.contentful.com` — Figma Community 페이지에서 Components · Tokens · Assets
   **라이브러리 3벌**을 복사해 팀 라이브러리로 등록하는 방식
+
+## 드리프트 기록 — 6.2.1 → 6.3.0 (2026-08-23)
+
+`dist/json/` 아래 기록한 JSON 파일은 **바이트 단위로 전부 동일**합니다. 파일 하나가
+늘었습니다 — `colors/colors-input.json`, 토큰 2개:
+`color-text-input-value: #111B2B` · `color-text-input-placeholder: #67728A`.
+입력 텍스트 색이 별도 파일로 분리된 것입니다. **기록 값 변경 없음.**
+`@contentful/f36-button`은 6.19.0 → 6.20.0에서 `package.json`만 다릅니다.

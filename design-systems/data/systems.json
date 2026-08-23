@@ -114,8 +114,8 @@
       "a11y_target": "WCAG (no version or level stated — confirmed 2026-08-18)",
       "platform": "web",
       "domain": "framework",
-      "verified": "2026-08-18",
-      "source": "npm @ark-ui/react@5.38.2 → package/dist/components (73), package.json dependencies",
+      "verified": "2026-08-23",
+      "source": "npm @ark-ui/react@5.39.0 → package/dist/components (74), package.json dependencies",
       "_file": "ark-ui.md"
     },
     {
@@ -206,8 +206,8 @@
       "a11y_target": "confirmed to be unstated in the design-system documentation (the company-wide standard is WCAG 2.1 AA — atlassian.com/trust, 2026-08-18)",
       "platform": "web",
       "domain": "enterprise",
-      "verified": "2026-08-17",
-      "source": "npm @atlaskit/tokens@16.7.0 → figma/*.json (15 files), dist/cjs/artifacts/tokens-raw/*.js (14 themes)",
+      "verified": "2026-08-23",
+      "source": "npm @atlaskit/tokens@16.8.0 → figma/*.json (15 files), dist/cjs/artifacts/tokens-raw/*.js (14 themes)",
       "_file": "atlassian.md"
     },
     {
@@ -434,8 +434,8 @@
       "a11y_target": "unverified",
       "platform": "web",
       "domain": "consumer",
-      "verified": "2026-08-18",
-      "source": "npm braid-design-system@34.6.2 → dist/lib/themes/baseTokens/nvl.mjs",
+      "verified": "2026-08-23",
+      "source": "npm braid-design-system@34.7.0 → dist/lib/themes/baseTokens/nvl.mjs",
       "_file": "braid.md"
     },
     {
@@ -708,8 +708,8 @@
       "a11y_target": "WCAG 2.2 AA",
       "platform": "web",
       "domain": "commerce",
-      "verified": "2026-08-18",
-      "source": "npm @ebay/skin@19.32.0 → dist/tokens/evo-{core,light,dark,live-light,live-dark}.css",
+      "verified": "2026-08-23",
+      "source": "npm @ebay/skin@19.33.0 → dist/tokens/evo-{core,light,dark,live-light,live-dark}.css",
       "_file": "ebay-skin.md"
     },
     {
@@ -829,8 +829,8 @@
       "a11y_target": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
       "platform": "web",
       "domain": "enterprise",
-      "verified": "2026-08-18",
-      "source": "npm @contentful/f36-tokens@6.2.1 → dist/json/*.json · npm @contentful/f36-button@6.19.0 (components, 2026-08-18)",
+      "verified": "2026-08-23",
+      "source": "npm @contentful/f36-tokens@6.3.0 → dist/json/*.json · npm @contentful/f36-button@6.20.0 (components, 2026-08-18)",
       "_file": "forma-36.md"
     },
     {
@@ -1440,8 +1440,8 @@
       "a11y_target": "unverified",
       "platform": "web",
       "domain": "enterprise",
-      "verified": "2026-08-18",
-      "source": "npm @okta/odyssey-design-tokens@1.66.1 → dist/index.scss (225 $ variables) · npm @okta/odyssey-react-mui@1.66.1 (components, 2026-08-18)",
+      "verified": "2026-08-23",
+      "source": "npm @okta/odyssey-design-tokens@1.67.0 → dist/index.scss (225 $ variables) · npm @okta/odyssey-react-mui@1.67.0 (components, 2026-08-18)",
       "_file": "odyssey.md"
     },
     {
@@ -1530,8 +1530,8 @@
       "a11y_target": "unverified",
       "platform": "web",
       "domain": "enterprise",
-      "verified": "2026-08-18",
-      "source": "npm @gitlab/ui@136.2.0 → src/tokens/build/json/tokens.json (re-verified and updated from 136.1.0)",
+      "verified": "2026-08-23",
+      "source": "npm @gitlab/ui@136.3.0 → src/tokens/build/json/tokens.json (re-verified and updated from 136.1.0)",
       "_file": "pajamas.md"
     },
     {
@@ -1739,8 +1739,8 @@
       "a11y_target": "WCAG 2.2 AA",
       "platform": "web",
       "domain": "consumer",
-      "verified": "2026-08-18",
-      "source": "npm @porsche-design-system/components-js@4.5.0 → stylesheets/variables.css",
+      "verified": "2026-08-23",
+      "source": "npm @porsche-design-system/components-js@4.6.0 → stylesheets/variables.css",
       "_file": "porsche.md"
     },
     {
@@ -2235,8 +2235,8 @@
       "a11y_target": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
       "platform": "web",
       "domain": "enterprise",
-      "verified": "2026-08-18",
-      "source": "npm @scania/tegel@1.61.0 → dist/collection/**/*.css",
+      "verified": "2026-08-23",
+      "source": "npm @scania/tegel@1.62.0 → dist/collection/**/*.css",
       "_file": "tegel.md"
     },
     {
@@ -2419,8 +2419,8 @@
       "a11y_target": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
       "platform": "web",
       "domain": "enterprise",
-      "verified": "2026-08-18",
-      "source": "npm vanilla-framework@4.57.0 → scss/_settings_{spacing,font}.scss",
+      "verified": "2026-08-23",
+      "source": "npm vanilla-framework@4.58.0 → scss/_settings_{spacing,font}.scss",
       "_file": "vanilla.md"
     },
     {

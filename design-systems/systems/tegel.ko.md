@@ -11,8 +11,8 @@ tokens_format: [CSS]
 a11y_target: "WCAG 2.1 AA (명시 — 2026-08-18 확인)"
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @scania/tegel@1.61.0 → dist/collection/**/*.css"
+verified: 2026-08-23
+source: "npm @scania/tegel@1.62.0 → dist/collection/**/*.css"
 ---
 <!-- lang-links -->
 > [English](tegel.md) · **한국어**
@@ -196,3 +196,16 @@ easing:   scania (0.4,0,0,1) · enter (0.1,0.9,0.2,1) · exit (0.7,0,1,0.5)
   앞단이 **헤드리스 Chrome 기본 UA를 403으로 차단**합니다(`Request
   blocked`). 일반 브라우저 UA를 붙이면 Next.js SSR HTML이 그대로 나와
   렌더링 없이 본문을 읽을 수 있습니다
+
+## 드리프트 기록 — 1.61.0 → 1.62.0 (2026-08-23)
+
+`dist/collection/` 아래 6개 파일이 다르고 **전부 tabs**입니다. 이 항목이 기록하지 않는
+컴포넌트 층이라 **기록 값 변경 없음**. tabs를 수확할 때의 기준점으로 남깁니다:
+
+- **`navigation-tabs` gap 16px → 24px** — 유일한 실제 값 이동
+- `inline-tabs`는 `gap: 16px`을 빼고
+  `border-bottom: 1px solid var(--tds-inline-tabs-horizontal-divider-background)`를 얻었습니다
+- **컴포넌트 간 토큰 누수 수정** — `inline-tabs`·`navigation-tabs`가
+  `--tds-folder-tabs-scroll-btn-*`를 읽고 있었고, 이제 각자 자기 접두사를 읽습니다.
+  위의 "주의할 접두사 충돌" 절이 말하는 `tds-` 접두사 위험이 패키지 내부에서 실제로 드러난 사례입니다
+- `top/bottom/left/right: 3px` → `inset: 3px` — 축약형, 값은 동일

@@ -11,8 +11,8 @@ tokens_format: [TS/JS]
 a11y_target: 미확인
 platform: web
 domain: consumer
-verified: 2026-08-18
-source: "npm braid-design-system@34.6.2 → dist/lib/themes/baseTokens/nvl.mjs"
+verified: 2026-08-23
+source: "npm braid-design-system@34.7.0 → dist/lib/themes/baseTokens/nvl.mjs"
 ---
 <!-- lang-links -->
 > [English](braid.md) · **한국어**

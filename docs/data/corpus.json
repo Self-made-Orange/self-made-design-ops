@@ -383,7 +383,7 @@
    ],
    "figma": false,
    "a11y": "WCAG (no version or level stated — confirmed 2026-08-18)",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "ark-ui.md"
   },
   {
@@ -499,7 +499,7 @@
    ],
    "figma": true,
    "a11y": "confirmed to be unstated in the design-system documentation (the company-wide standard is WCAG 2.1 AA — atlassian.com/trust, 2026-08-18)",
-   "verified": "2026-08-17",
+   "verified": "2026-08-23",
    "file": "atlassian.md"
   },
   {
@@ -773,7 +773,7 @@
    ],
    "figma": "unverified",
    "a11y": "unverified",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "braid.md"
   },
   {
@@ -1122,7 +1122,7 @@
    ],
    "figma": false,
    "a11y": "WCAG 2.2 AA",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "ebay-skin.md"
   },
   {
@@ -1271,7 +1271,7 @@
    ],
    "figma": true,
    "a11y": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "forma-36.md"
   },
   {
@@ -1993,7 +1993,7 @@
    ],
    "figma": "unverified",
    "a11y": "unverified",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "odyssey.md"
   },
   {
@@ -2104,7 +2104,7 @@
    ],
    "figma": true,
    "a11y": "unverified",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "pajamas.md"
   },
   {
@@ -2356,7 +2356,7 @@
    ],
    "figma": true,
    "a11y": "WCAG 2.2 AA",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "porsche.md"
   },
   {
@@ -2931,7 +2931,7 @@
    ],
    "figma": true,
    "a11y": "WCAG 2.1 AA (stated — confirmed 2026-08-18)",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "tegel.md"
   },
   {
@@ -3150,7 +3150,7 @@
    ],
    "figma": true,
    "a11y": "WCAG 2.2 AA (stated — confirmed 2026-08-18)",
-   "verified": "2026-08-18",
+   "verified": "2026-08-23",
    "file": "vanilla.md"
   },
   {

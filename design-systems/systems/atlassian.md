@@ -11,8 +11,8 @@ tokens_format: [JSON, CSS, JS]
 a11y_target: "confirmed to be unstated in the design-system documentation (the company-wide standard is WCAG 2.1 AA — atlassian.com/trust, 2026-08-18)"
 platform: web
 domain: enterprise
-verified: 2026-08-17
-source: "npm @atlaskit/tokens@16.7.0 → figma/*.json (15 files), dist/cjs/artifacts/tokens-raw/*.js (14 themes)"
+verified: 2026-08-23
+source: "npm @atlaskit/tokens@16.8.0 → figma/*.json (15 files), dist/cjs/artifacts/tokens-raw/*.js (14 themes)"
 ---
 <!-- lang-links -->
 > **English** · [한국어](atlassian.ko.md)

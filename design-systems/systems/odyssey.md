@@ -11,8 +11,8 @@ tokens_format: [SCSS]
 a11y_target: unverified
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @okta/odyssey-design-tokens@1.66.1 → dist/index.scss (225 $ variables) · npm @okta/odyssey-react-mui@1.66.1 (components, 2026-08-18)"
+verified: 2026-08-23
+source: "npm @okta/odyssey-design-tokens@1.67.0 → dist/index.scss (225 $ variables) · npm @okta/odyssey-react-mui@1.67.0 (components, 2026-08-18)"
 ---
 <!-- lang-links -->
 > **English** · [한국어](odyssey.ko.md)
@@ -174,3 +174,15 @@ https://okta.github.io/odyssey/ (headless render, 2026-08-18)
   confirmed unresolvable through the npm route),
   ~~whether the 14px root is stated~~ (resolved 2026-08-18 — stated in code as
   CssBaseline `font-size: 87.5%` plus `pxToRem = px/14`; see the deep pass)
+
+## Drift record — 1.66.1 → 1.67.0 (2026-08-23)
+
+`@okta/odyssey-design-tokens`: `dist/index.scss` differs by **one line, the generation
+timestamp**. Every one of the 225 `$` variables is unchanged.
+`@okta/odyssey-react-mui`: `theme/components.js` (which carries the MuiButton, MuiInputBase
+and MuiDialog overrides recorded above), `theme/spacing.js`, `theme/typography.js`,
+`theme/shape.js`, `theme/theme.js` and `theme/pxToRem.js` are all **identical**.
+The only real change is outside what this entry records: `CircularProgress.thickness`
+**10 → `44/12` (≈3.667)**, named upstream `STROKE_WIDTH_FOR_ONE_TO_TWELVE_RATIO`.
+A reference point for whenever the progress components are harvested.
+**No recorded value changed.**

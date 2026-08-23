@@ -11,8 +11,8 @@ tokens_format: [SCSS]
 a11y_target: "WCAG 2.2 AA (명시 — 2026-08-18 확인)"
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm vanilla-framework@4.57.0 → scss/_settings_{spacing,font}.scss"
+verified: 2026-08-23
+source: "npm vanilla-framework@4.58.0 → scss/_settings_{spacing,font}.scss"
 ---
 <!-- lang-links -->
 > [English](vanilla.md) · **한국어**
@@ -154,3 +154,8 @@ Accessibility Guidelines (WCAG) 2.2, level AA".
 - **남은 확인 사항:** 컬러·테마 구조(`_settings_themes.scss` 미조사),
   ~~컴포넌트 목록~~ (2026-08-18 해소 — 패턴 66개), 다크 모드, 접근성 목표
 - **Figma 킷 확인 (2026-08-18):** `figma_kit: true` — `vanillaframework.io` → `figma.com/community/file/1435297834108003391/vanilla-core-component-library`
+
+## 드리프트 기록 — 4.57.0 → 4.58.0 (2026-08-23)
+
+기록한 두 파일 `scss/_settings_spacing.scss` · `scss/_settings_font.scss`가
+**바이트 단위로 동일**합니다. 기록 값 변경 없음.

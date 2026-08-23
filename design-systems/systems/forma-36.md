@@ -11,8 +11,8 @@ tokens_format: [JSON, CSS, SCSS, JS]
 a11y_target: "WCAG 2.1 AA (stated — confirmed 2026-08-18)"
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @contentful/f36-tokens@6.2.1 → dist/json/*.json · npm @contentful/f36-button@6.19.0 (components, 2026-08-18)"
+verified: 2026-08-23
+source: "npm @contentful/f36-tokens@6.3.0 → dist/json/*.json · npm @contentful/f36-button@6.20.0 (components, 2026-08-18)"
 ---
 <!-- lang-links -->
 > **English** · [한국어](forma-36.ko.md)
@@ -214,3 +214,11 @@ Level AA standards". It states that automated testing runs alongside.
 - **Figma kit confirmed (2026-08-18):** `figma_kit: true` — `f36.contentful.com` — from the
   Figma Community page you copy **three libraries** (Components · Tokens · Assets) and
   register them as team libraries
+
+## Drift record — 6.2.1 → 6.3.0 (2026-08-23)
+
+Every JSON file recorded under `dist/json/` is **byte-identical**. One file was added:
+`colors/colors-input.json`, holding two tokens —
+`color-text-input-value: #111B2B` and `color-text-input-placeholder: #67728A`.
+The input text colours thus move into their own file. **No recorded value changed.**
+`@contentful/f36-button` 6.19.0 → 6.20.0 differs only in `package.json`.

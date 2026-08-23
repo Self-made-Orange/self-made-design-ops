@@ -11,8 +11,8 @@ tokens_format: [CSS]
 a11y_target: "WCAG 2.2 AA"
 platform: web
 domain: consumer
-verified: 2026-08-18
-source: "npm @porsche-design-system/components-js@4.5.0 → stylesheets/variables.css"
+verified: 2026-08-23
+source: "npm @porsche-design-system/components-js@4.6.0 → stylesheets/variables.css"
 ---
 <!-- lang-links -->
 > [English](porsche.md) · **한국어**

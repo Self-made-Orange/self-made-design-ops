@@ -15,7 +15,7 @@ D npm recheck have been handled.
 | `full` harvest depth | 20/20 · **79 `partial` deepenings (the entire target set)** complete |
 | patterns backlog | judgement guidance on all 9 axes + every source dig resolved · **re-synthesis complete on 9/9 axes** (16–83 samples) — the three weak axes (table 16 · navigation 16 · feedback 18) reinforced (2026-08-18) |
 | unverified | **428 → 308** (two passes — 66 fields by re-searching sources · 64 items by the B-1 render). Classification and what remains are in `design-systems/UNVERIFIED.md` |
-| freshness | **185** checked · **24 outdated** (major 0 / minor 10 / patch 14) · 0 failed · 21 manual. The 1-outdated figure was an artefact of the double-counting bug (section H); after triage (2026-08-23) **only the 10 minor ones are work** — see section C |
+| freshness | **185** checked · **19 outdated, all patch** (major 0 / minor 0) · 0 failed · 21 manual — **every minor re-harvested 2026-08-23**, 1 real drift (Ark UI). Patch is deliberately not chased; see section C |
 | a11y_target | documentation layer checked for the 10 `full`-harvest systems (6 stated · 4 confirmed absent) |
 | README | six language versions — **renamed to Self-Made DesignOps throughout** |
 | language | **English-primary, migration complete (2026-08-21)** — 162 documents paired as `<slug>.md` + `<slug>.ko.md`, verified by `i18n.mjs --check` |
@@ -164,6 +164,19 @@ Two incidental corrections:
 - [ ] **Handling the monthly freshness CI** results (the procedure is in `freshness.md` —
   four real cases: Base Web · Mística · Pajamas + **the Polaris repository being archived**
   (2026-08-18, a drift in status rather than in values))
+  - ✅ **The 10 minor re-harvested (2026-08-23) — `minor 0` for the first time.** Each was
+    diffed against the exact files its `source:` names. **Nine changed no recorded value**:
+    atlaskit-tokens, braid, ebay/skin and porsche were byte-identical; odyssey's token file
+    differed only in its generation timestamp and every theme override it records was
+    identical; f36-button differed only in `package.json`; forma-36 and @gitlab/ui were purely
+    additive (a new `colors-input.json`; a new `application-chrome.background.color`); tegel's
+    six changed files were all tabs, a layer the entry does not record. **Ark UI is the one
+    real drift** — components 73 → 74 (`toc`) and dependencies 67 → 69, both numbers the entry
+    states. Drift records were written into forma-36, pajamas, odyssey, tegel, ark-ui and
+    vanilla; `source:` and `verified:` bumped on all ten.
+    **Regenerating the report also showed the committed `freshness.md` was itself days stale**
+    — two further minors (Ark UI, Vanilla) had arrived that the snapshot did not list. Both are
+    included above. Remaining: **19 patch, 0 minor, 0 major**
   - 🔻 **The 24 triaged (2026-08-23) — only 10 are work.** The breakdown is
     **major 0 / minor 10 / patch 14**, and the patch 14 are **not to be re-harvested**.
     The reason is on this very list: the three drifts handled on 2026-08-18 (one minor, two

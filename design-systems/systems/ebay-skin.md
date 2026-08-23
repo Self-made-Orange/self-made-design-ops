@@ -11,8 +11,8 @@ tokens_format: [CSS]
 a11y_target: "WCAG 2.2 AA"
 platform: web
 domain: commerce
-verified: 2026-08-18
-source: "npm @ebay/skin@19.32.0 → dist/tokens/evo-{core,light,dark,live-light,live-dark}.css"
+verified: 2026-08-23
+source: "npm @ebay/skin@19.33.0 → dist/tokens/evo-{core,light,dark,live-light,live-dark}.css"
 ---
 <!-- lang-links -->
 > **English** · [한국어](ebay-skin.ko.md)

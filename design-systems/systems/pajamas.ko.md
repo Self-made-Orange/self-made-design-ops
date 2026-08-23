@@ -11,8 +11,8 @@ tokens_format: [JSON, CSS, SCSS, Tailwind]
 a11y_target: 미확인
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @gitlab/ui@136.2.0 → src/tokens/build/json/tokens.json (136.1.0에서 재검증 갱신)"
+verified: 2026-08-23
+source: "npm @gitlab/ui@136.3.0 → src/tokens/build/json/tokens.json (136.1.0에서 재검증 갱신)"
 ---
 <!-- lang-links -->
 > [English](pajamas.md) · **한국어**
@@ -269,3 +269,11 @@ hover/active 배경이 알파(`rgba(5,5,6,.06/.16)`)에서 **불투명 회색**�
 내비게이션 선택 표현의 방향 전환이며, 참조 구조도 `action.neutral.*` →
 `color.neutral.600` 참조로 바뀌었습니다. 신선도 루프가 잡은 **세 번째 실변경**
 (Base Web 낡음 · Mística HC 제거에 이어)입니다.
+
+## 드리프트 기록 — 136.2.0 → 136.3.0 (2026-08-23)
+
+**순수 추가입니다 — 37줄 추가, 삭제 0.** 신규 컨텍스트 그룹
+`application-chrome.background.color` = `#ececef` 하나가 늘었고 `{color.neutral.50}`을
+참조합니다. 업스트림 설명은 패널 아래에 깔리는 인터페이스 최하층으로, 전역 내비게이션 ·
+사용자 액션 · 애플리케이션 내비게이션 · AI 내비게이션을 담는 면입니다.
+**기록 값 변경 없음.** 위의 136.1.0 → 136.2.0 드리프트와 달리 방향 전환이 아니라 추가입니다.

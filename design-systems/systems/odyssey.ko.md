@@ -11,8 +11,8 @@ tokens_format: [SCSS]
 a11y_target: 미확인
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @okta/odyssey-design-tokens@1.66.1 → dist/index.scss ($ 변수 225개) · npm @okta/odyssey-react-mui@1.66.1 (컴포넌트, 2026-08-18)"
+verified: 2026-08-23
+source: "npm @okta/odyssey-design-tokens@1.67.0 → dist/index.scss ($ 변수 225개) · npm @okta/odyssey-react-mui@1.67.0 (컴포넌트, 2026-08-18)"
 ---
 <!-- lang-links -->
 > [English](odyssey.md) · **한국어**
@@ -158,3 +158,14 @@ https://okta.github.io/odyssey/ (2026-08-18 헤드리스 렌더)
   접근성 목표·Figma 킷(문서 사이트 SSO 비공개 — npm 경로로는 확인 불가 확정),
   ~~루트 14px 전제의 명시 여부~~ (2026-08-18 해소 — CssBaseline `font-size: 87.5%` +
   `pxToRem = px/14` 코드 명시. 심화 절 참조)
+
+## 드리프트 기록 — 1.66.1 → 1.67.0 (2026-08-23)
+
+`@okta/odyssey-design-tokens`: `dist/index.scss`의 차이는 **생성 타임스탬프 한 줄**뿐입니다.
+`$` 변수 225개 전부 무변경.
+`@okta/odyssey-react-mui`: 위에 기록한 MuiButton · MuiInputBase · MuiDialog 오버라이드가 든
+`theme/components.js`를 비롯해 `theme/spacing.js` · `theme/typography.js` · `theme/shape.js` ·
+`theme/theme.js` · `theme/pxToRem.js`가 **전부 동일**합니다.
+유일한 실변경은 이 항목이 기록하지 않는 영역입니다 — `CircularProgress.thickness`가
+**10 → `44/12`(≈3.667)**, 업스트림 이름은 `STROKE_WIDTH_FOR_ONE_TO_TWELVE_RATIO`.
+진행 표시 컴포넌트를 수확할 때의 기준점입니다. **기록 값 변경 없음.**

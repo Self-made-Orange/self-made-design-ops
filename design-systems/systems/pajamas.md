@@ -11,8 +11,8 @@ tokens_format: [JSON, CSS, SCSS, Tailwind]
 a11y_target: unverified
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm @gitlab/ui@136.2.0 → src/tokens/build/json/tokens.json (re-verified and updated from 136.1.0)"
+verified: 2026-08-23
+source: "npm @gitlab/ui@136.3.0 → src/tokens/build/json/tokens.json (re-verified and updated from 136.1.0)"
 ---
 <!-- lang-links -->
 > **English** · [한국어](pajamas.ko.md)
@@ -290,3 +290,11 @@ dark text)**, and the hover/active backgrounds moved from alpha
 is expressed, and the reference structure changed too, from `action.neutral.*` to
 `color.neutral.600`. The **third real change** caught by the freshness loop (after Base Web's
 staleness and Mística's HC removal).
+
+## Drift record — 136.2.0 → 136.3.0 (2026-08-23)
+
+**Purely additive: 37 lines added, none removed.** One new contextual group,
+`application-chrome.background.color` = `#ececef`, referencing `{color.neutral.50}`, described
+upstream as the lowest interface layer beneath panels, carrying global navigation, user
+actions, application navigation and AI navigation. **No recorded value changed.** Unlike the
+136.1.0 → 136.2.0 drift above, this one is an addition rather than a redirection.

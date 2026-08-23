@@ -11,8 +11,8 @@ tokens_format: [SCSS]
 a11y_target: "WCAG 2.2 AA (stated — confirmed 2026-08-18)"
 platform: web
 domain: enterprise
-verified: 2026-08-18
-source: "npm vanilla-framework@4.57.0 → scss/_settings_{spacing,font}.scss"
+verified: 2026-08-23
+source: "npm vanilla-framework@4.58.0 → scss/_settings_{spacing,font}.scss"
 ---
 <!-- lang-links -->
 > **English** · [한국어](vanilla.ko.md)
@@ -170,3 +170,8 @@ Accessibility Guidelines (WCAG) 2.2, level AA".
   surveyed), ~~the component list~~ (resolved 2026-08-18 — 66 patterns), dark mode,
   the accessibility target
 - **Figma kit confirmed (2026-08-18):** `figma_kit: true` — `vanillaframework.io` → `figma.com/community/file/1435297834108003391/vanilla-core-component-library`
+
+## Drift record — 4.57.0 → 4.58.0 (2026-08-23)
+
+Both recorded files, `scss/_settings_spacing.scss` and `scss/_settings_font.scss`, are
+**byte-identical**. No recorded value changed.

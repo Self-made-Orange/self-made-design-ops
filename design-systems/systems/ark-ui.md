@@ -11,8 +11,8 @@ tokens_format: []
 a11y_target: "WCAG (no version or level stated — confirmed 2026-08-18)"
 platform: web
 domain: framework
-verified: 2026-08-18
-source: "npm @ark-ui/react@5.38.2 → package/dist/components (73), package.json dependencies"
+verified: 2026-08-23
+source: "npm @ark-ui/react@5.39.0 → package/dist/components (74), package.json dependencies"
 ---
 <!-- lang-links -->
 > **English** · [한국어](ark-ui.ko.md)
@@ -20,8 +20,8 @@ source: "npm @ark-ui/react@5.38.2 → package/dist/components (73), package.json
 
 ## In one line
 
-**A system with no tokens at all** — 66 unstyled headless primitives (`@zag-js/*` state
-machines) wrapped and shipped as 73 components. `anatomy` (the definition of part names) is
+**A system with no tokens at all** — 68 unstyled headless primitives (`@zag-js/*` state
+machines) wrapped and shipped as 74 components. `anatomy` (the definition of part names) is
 effectively the only public contract.
 
 ## Why it is in the corpus
@@ -34,7 +34,7 @@ spacing in `platforms.md` (doesn't define it / inherits it / doesn't enumerate i
 - It exposes **`anatomy`** — the definition of the part names a component is made of
   (`root`/`trigger`/`content` …), onto which a styling library attaches values.
   **Park UI (a Panda preset) and Chakra v3 sit on top of it**
-- The state machines are **split across 66 `@zag-js/*` packages** — component behaviour
+- The state machines are **split across 68 `@zag-js/*` packages** — component behaviour
   (focus trapping, keyboard navigation, ARIA) implemented independently of any framework
 - **Four frameworks supported — React, Vue, Solid, Svelte** — the widest distribution in the
   sample alongside Siemens iX (Web Components + 3 wrappers), reached here by sharing state
@@ -57,9 +57,9 @@ two styling systems on top — a structure confirmed within the corpus.
 
 ## Components
 
-**73** (accordion · angle-slider · carousel · clipboard · collapsible · color-picker ·
-combobox · date-picker · file-upload · pin-input · qr-code · signature-pad · toast · tour ·
-tree-view and more). It includes specialised components like `angle-slider`,
+**74** (accordion · angle-slider · carousel · clipboard · collapsible · color-picker ·
+combobox · date-picker · file-upload · pin-input · qr-code · signature-pad · toast · toc ·
+tour · tree-view and more). It includes specialised components like `angle-slider`,
 `signature-pad` and `tour`.
 
 ## Components in depth — (2026-08-18)
@@ -135,7 +135,7 @@ Because it is headless, the subject of the deep pass is not visual values but th
 
 - **0 tokens · 0 CSS** — the only sample with no style layer at all
 - `anatomy` (part names) as the contract with a styling library
-- State machines split across 66 packages (`@zag-js/*`)
+- State machines split across 68 packages (`@zag-js/*`)
 - Four frameworks supported — in the widest-distribution group
 - The shared foundation under Park UI and Chakra v3
 
@@ -158,3 +158,30 @@ assistive technology; the tools and reports are not published.
   method, how much code is shared with Chakra v3
 
 > Re-verified (2026-08-17): 5.38.1 → 5.38.2 patch — this entry ships anatomy without tokens or CSS, so no values are affected. Pin updated only.
+
+## Drift record — 5.38.2 → 5.39.0 (2026-08-23)
+
+**The first minor in this freshness pass that moved a recorded number.** Re-measured:
+
+| | 5.38.2 | 5.39.0 |
+|---|:---:|:---:|
+| `dist/components` entries | 73 | **74** |
+| — component directories | 61 | **62** |
+| — barrel files | 12 | 12 |
+| dependencies | 67 | **69** |
+| — `@zag-js/*` | 66 | **68** |
+| — other | `@internationalized/date` | ← |
+| pinned `@zag-js/*` | 1.43.1 | **1.43.3** |
+
+One component was added: **`toc`**, a directory that re-exports its anatomy from
+`@zag-js/toc` (`toc.anatomy.js` is two lines), with the parts nav · list · item · link ·
+content · indicator · title · root. Counting it, the anatomy-exposing directories go 51 → 52;
+nothing else under `dist/components` changed.
+
+**Two `@zag-js/*` packages were added but only one component** — `@zag-js/hotkeys` has **no
+component directory**. The "zero general-purpose utilities" observation in the deep pass above
+was measured at 5.38.2 and this entry does not extend it to 5.39.0; what is measured here is
+that the dependency exists and no wrapper for it ships.
+
+The deep-pass section above stays pinned to `@ark-ui/react@5.38.2` + `@zag-js/*@1.43.1`, the
+versions its part-structure measurements were taken from.
