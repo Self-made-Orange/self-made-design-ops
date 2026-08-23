@@ -112,7 +112,7 @@ try {
        actually there. Every tool runs on Node with <strong>zero dependencies</strong>.</p>
   </div>
   <noscript><p class="noscript">This list is rendered with JavaScript. Without it, read <code>README.md</code> in the repository instead.</p></noscript>
-  <div id="kit"></div>
+  <div id="kit-list"></div>
 </div></section>
 
 <section id="patterns"><div class="wrap">
@@ -270,7 +270,7 @@ try {
         g.group, el('span', { className: 'n', textContent: g.items.length }),
       ])])));
 
-    $('#kit').replaceChildren(...d.kit.map((g) =>
+    $('#kit-list').replaceChildren(...d.kit.map((g) =>
       el('div', { className: 'rowgrp', id: 'kit-' + slug(g.group) }, [
         el('h3', { textContent: `${g.group} · ${g.items.length}` }),
         ...g.items.map((i) => el('a', { className: 'kititem', href: BLOB + i.path }, [
@@ -294,7 +294,7 @@ try {
     // The sections just grew; re-run the scrollspy against the real offsets.
     dispatchEvent(new Event('resize'));
   }).catch(() => {
-    $('#kit').append(el('p', { className: 'noscript',
+    $('#kit-list').append(el('p', { className: 'noscript',
       textContent: 'Could not load the data. Read README.md in the repository instead.' }));
   });
 })();
