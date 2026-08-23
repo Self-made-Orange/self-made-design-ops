@@ -39,7 +39,7 @@ try {
     <h2>The kit</h2>
     <ul>
       <li><a href="#start" data-spy="start">Start here</a></li>
-      <li><a href="./catalog.html">Catalog <span class="n" id="r-count">—</span></a></li>
+      <li><a href="#catalog" data-spy="catalog">Catalog <span class="n" id="r-count">—</span></a></li>
       <li><a href="#kit" data-spy="kit">What's inside <span class="n" id="r-kit">—</span></a></li>
     </ul>
     <ul class="sub" id="r-groups"></ul>
@@ -103,6 +103,27 @@ try {
 
 <span class="cm"># 03 — generate a build spec (colours stay empty; they are a brand decision)</span>
 <span class="k">node</span> .design-ops/design-systems/to-design-md.mjs --profile web --name "Product" -o DESIGN.md</pre>
+</div></section>
+
+<section id="catalog"><div class="wrap">
+  <div class="sec-head">
+    <h2>The catalog</h2>
+    <p>Every system the corpus opened, in one filterable index — by platform, by how deep the
+       harvest went, by domain. Each entry carries the source and the version its values were
+       read at.</p>
+  </div>
+  <div class="ev">
+    <div class="evcard"><b id="c-systems">—</b><span>systems, each with its own entry</span></div>
+    <div class="evcard"><b id="c-platforms">—</b><span>platform axes, all sampled</span></div>
+    <div class="evcard"><b id="c-full">—</b><span>opened to <code>full</code> depth</span></div>
+    <div class="evcard"><b id="c-domains">—</b><span>domains represented</span></div>
+  </div>
+
+  <div class="claim">
+    <p><strong>The split is lopsided, on purpose.</strong> <span id="c-split">—</span></p>
+    <p>Web is where design systems publish tokens; the thin axes are thin because the samples
+       genuinely are. <a href="./catalog.html">Open the catalog →</a></p>
+  </div>
 </div></section>
 
 <section id="kit"><div class="wrap">
@@ -252,6 +273,14 @@ try {
     set('#k-lines', d.kit_lines.toLocaleString('en'));
     set('#h-count', d.count);
     set('#r-count', d.count);
+    set('#c-systems', d.count);
+    set('#c-platforms', Object.keys(d.by_platform).length);
+    set('#c-full', d.by_coverage.full);
+    set('#c-domains', Object.keys(d.by_domain).length);
+    // Written from the data, so the sentence cannot drift from the split it describes.
+    $('#c-split').textContent = Object.entries(d.by_platform)
+      .sort((a, b) => b[1] - a[1])
+      .map(([k, n]) => `${k} ${n}`).join(' · ') + '.';
     set('#r-kit', kitCount);
     set('#r-axes', d.axes.length);
     set('#e-systems', d.count);
