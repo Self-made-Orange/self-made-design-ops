@@ -2,7 +2,7 @@
 name: Backpack
 org: Skyscanner
 coverage: partial
-url: https://backpack.github.io
+url: https://www.skyscanner.design/latest
 repo: https://github.com/Skyscanner/backpack
 license: Apache-2.0
 tech: [React, React Native]
@@ -222,9 +222,13 @@ Product Owners)로 나뉘어 있는 것도 특징입니다.
   페이지에서 `figma.com/file/yN0hFyZlKL0Jwbpi0rEKYT/Backpack-Beta` 파일을 링크합니다
   (사내 접근 권한 필요 — 킷의 존재는 확인, 공개 열람 여부는 별개).
   출처: https://www.skyscanner.design/latest/getting-started/backpack-in-figma/foundations-components-and-patterns-4b5yBAjl
-- **문서 사이트 실제 호스트 (2026-08-18)**: frontmatter의 `https://backpack.github.io`는
-  루트만 응답하고 하위 경로는 전부 404입니다. 실제 문서는
-  **https://www.skyscanner.design/latest** (Supernova 호스팅)에서 서비스되며,
-  `backpack.github.io/`가 이 사이트와 동일한 셸을 반환합니다(DOM 64,804B 동일).
-  이 문서의 2026-08-18 렌더 출처는 모두 `www.skyscanner.design` 기준입니다.
+- **문서 사이트 실제 호스트 — `url` 교체 (2026-08-23)**: frontmatter는 원래
+  `https://backpack.github.io`였고, 이 주소는 루트만 응답하며 하위 경로는 전부 404입니다.
+  실제 문서는 **https://www.skyscanner.design/latest** (Supernova 호스팅)에서 서비스되며,
+  `backpack.github.io/`가 이 사이트와 동일한 셸을 반환합니다(DOM 64,804B 동일, 2026-08-18 측정).
+  2026-08-23 재확인 — 루트 **200**, `/components/` **404**,
+  `www.skyscanner.design/latest` **200** — 이에 따라 `url:`을 Supernova 주소로 바꿨습니다.
+  이 문서의 2026-08-18 렌더 출처는 이미 모두 `www.skyscanner.design` 기준이었고,
+  frontmatter만 뒤에 남아 있었습니다.
+  **`verified:`는 그대로 둡니다** — 토큰 수확 시점을 가리키는 필드이고, 재측정한 토큰이 없습니다.
 - **라이선스 해소 (2026-08-18):** `Apache-2.0` — 출처: github Skyscanner/backpack → `LICENSE` (npm `@skyscanner/bpk-foundations-web@24.7.0` 메타와 일치)

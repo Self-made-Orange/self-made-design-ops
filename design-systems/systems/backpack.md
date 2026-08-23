@@ -2,7 +2,7 @@
 name: Backpack
 org: Skyscanner
 coverage: partial
-url: https://backpack.github.io
+url: https://www.skyscanner.design/latest
 repo: https://github.com/Skyscanner/backpack
 license: Apache-2.0
 tech: [React, React Native]
@@ -241,11 +241,14 @@ https://www.skyscanner.design/latest/accessibility/overview-8grGx1o6)
   (internal access required — the kit's existence is confirmed; whether it can be viewed
   publicly is a separate matter).
   Source: https://www.skyscanner.design/latest/getting-started/backpack-in-figma/foundations-components-and-patterns-4b5yBAjl
-- **The documentation site's real host (2026-08-18)**: the frontmatter's
-  `https://backpack.github.io` responds only at the root and returns 404 for every sub-path.
-  The actual documentation is served from **https://www.skyscanner.design/latest**
+- **The documentation site's real host — `url` replaced (2026-08-23)**: the frontmatter used
+  to read `https://backpack.github.io`, which responds only at the root and returns 404 for
+  every sub-path. The documentation is served from **https://www.skyscanner.design/latest**
   (hosted on Supernova), and `backpack.github.io/` returns the same shell as that site
-  (an identical 64,804B DOM). Every 2026-08-18 render cited here is from
-  `www.skyscanner.design`.
+  (an identical 64,804B DOM, measured 2026-08-18). Rechecked 2026-08-23 — root **200**,
+  `/components/` **404**, `www.skyscanner.design/latest` **200** — so `url:` now carries the
+  Supernova address. Every 2026-08-18 render cited here was already taken from
+  `www.skyscanner.design`; only the frontmatter had been left behind.
+  **`verified:` is unchanged** — it pins the token harvest, and no token was re-measured.
 - **Licence resolved (2026-08-18):** `Apache-2.0` — source: github Skyscanner/backpack →
   `LICENSE` (matching the npm metadata for `@skyscanner/bpk-foundations-web@24.7.0`)

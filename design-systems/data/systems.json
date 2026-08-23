@@ -283,7 +283,7 @@
       "name": "Backpack",
       "org": "Skyscanner",
       "coverage": "partial",
-      "url": "https://backpack.github.io",
+      "url": "https://www.skyscanner.design/latest",
       "repo": "https://github.com/Skyscanner/backpack",
       "license": "Apache-2.0",
       "tech": [
