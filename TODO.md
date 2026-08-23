@@ -377,10 +377,13 @@ and evidence grades are in `site/README.md`). What remains:
 
 ## G. Tidying the site visually (2026-08-20)
 
-- [x] **Switched to dark-only** — the light theme, the toggle and the FOUC script were
-  removed. A single `:root` carries the dark values with `color-scheme: dark`. The palette
-  takes **GitHub Primer's dark mode** as its reference system (only the accent `#1f6feb` is a
-  corpus measurement; the neutrals are A)
+- [x] ~~**Switched to dark-only**~~ — **this entry no longer describes the site
+  (corrected 2026-08-23).** All three things it says were removed are present in
+  `docs/assets/site.css` and `docs/index.html`: a light `:root` with `color-scheme: light`,
+  a `[data-theme="dark"]` block, the toggle button and the pre-paint FOUC script. The accent
+  is not `#1f6feb` either — it is orange (`--accent:#f97316` for fills, `--btn:#ff5926`).
+  Both themes were rendered and checked on 2026-08-23. Whatever reverted the dark-only pass
+  was not recorded here; **the stylesheet is the authority, not this line**
 - [x] **Fixed the bug where the background dots were invisible** — `body::before` with
   `z-index:-1` was pushed behind the opaque `html` background and disappeared on the real
   page. Fixed by painting them directly with `body`'s `background-image`

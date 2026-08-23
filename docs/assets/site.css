@@ -173,7 +173,7 @@ section{padding:var(--sp-7) 0;border-bottom:1px solid var(--border)}
 .btn-p:hover{background:var(--btn-hover);border-color:var(--btn-hover)}
 .btn-g{border-color:var(--border-strong);color:var(--text)}
 .btn-g:hover{border-color:var(--accent)}
-/* Outline in the primary — the third hero action.
+/* Outline in the primary — the second hero action.
  * The fill's own #ff5926 is 2.97:1 against the light canvas, under the 3:1 WCAG 1.4.11
  * asks of a component boundary — and on an outline button the boundary IS the component,
  * so it cannot be waved through the way a filled button's edge could be. The stroke takes
