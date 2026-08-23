@@ -117,7 +117,7 @@ npx @google/design.md lint DESIGN.md    # JSON 출력, 오류 시 exit 1
 | 상태 집합 | `patterns/` 각 문서 | hover/focus-visible/active/disabled 채웠는가. 터치 전용이면 hover 대신 active(`@media (hover:none)` 분기 표본: Mantine·shadcn) |
 | 색·대비 | `patterns/color.md` (79표본 재종합) | 텍스트 4.5:1(AA) · 비텍스트/차트 3:1. **계산해서 판정합니다 — 아래 1-a절.** 차트색은 Cloudscape처럼 대비 등급별 팔레트 존재 |
 | 다크 모드 | `patterns/color.md` | 구현 방식 6갈래 — 방식 자체는 허용 분기. **한 화면에서 방식이 섞이면 내부 비일관** |
-| 모션 | `patterns/motion.md` (83표본 재종합) | 지속시간 스케일 존재 여부, `prefers-reduced-motion` 대응(6개 층 — 기본값을 무모션으로 두는 옵트인 반전까지). **`scroll-behavior: smooth`·`scrollIntoView`도 모션입니다** — 전환이 적은 제품에서 놓치기 쉬운 자리 |
+| 모션 | `patterns/motion.md` (83표본 재종합) | 지속시간 스케일 존재 여부, `prefers-reduced-motion` 대응(17개 시스템 · 9개 층 — 기본값을 무모션으로 두는 옵트인 반전까지). **`scroll-behavior: smooth`·`scrollIntoView`도 모션입니다** — 전환이 적은 제품에서 놓치기 쉬운 자리 |
 | 라운드 | `tokens/scales.md`·`patterns/modal.md`·`GLOSSARY.md` | 기준값 배율 체계인가, 크기별 상한(`min()` 클램프 — shadcn) 필요한가. **리터럴 최빈값이 토큰 밖에 있으면 토큰-리터럴 드리프트**로 지적 |
 | z-index | `systems/chakra-ui.md` | 산법 7가지 존재 — 어느 산법이든 좋으나 **산법 없이 임의 숫자면 지적**. **단 교차 비교 문서가 없는 축이라 표본 수를 댈 수 없습니다** (2026-08-18 실전 검증 반영) — 판정 대신 "판정하지 않은 것"에 적고 질문으로 넘기는 편이 정확합니다 |
 

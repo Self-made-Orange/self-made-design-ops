@@ -809,7 +809,7 @@ it out by default and add it only when there is a reason."**
   Details in the deep-pass section of `systems/orbit.md`
 - ~~Cloudscape is the only one to put the accessibility response at the token level~~ →
   **corrected (2026-08-18)** —
-  at least 13 systems handle it, at six different layers.
+  at least 17 systems handle it, at nine different layers.
   See the "reduced-motion" item of the re-synthesis section below
 
 ## Re-synthesis across 83 samples — component measurements (2026-08-18)
@@ -1000,7 +1000,7 @@ The opposite pole is **Pajamas**: it has zero tokens, and yet one curve
 **Having no tokens is not itself drift** — just as Backpack (three scattered curves) and
 Orbit (a single convergence, `ease-in-out` 52 times) are two endings from the same absence.
 
-### reduced-motion — not Cloudscape alone but six layers
+### reduced-motion — not Cloudscape alone but nine layers
 
 | layer | systems |
 |----|--------|
@@ -1017,7 +1017,8 @@ Orbit (a single convergence, `ease-in-out` 52 times) are two endings from the sa
 > **Correction.** "Cloudscape is the only system in the sample to put its accessibility
 > response at the token level; elsewhere the implementation has to handle it with a media
 > query" is wrong.
-> **At least 13 systems handle it, at six different layers.**
+> **17 systems handle it, at nine different layers.** (Counted from the table above on
+> 2026-08-23; it had said "at least 13 … six layers" since before the rows were added.)
 > Among them **Clarity's two-track handling** (transitions to 0, loops stretched to 2s) and
 > **Strapi's inverted opt-in** (no motion by default) go a step beyond Cloudscape's "only
 > the duration to 0" — **because a looping animation cannot be made 0ms.**

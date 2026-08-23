@@ -370,10 +370,17 @@ and evidence grades are in `site/README.md`). What remains:
   currently exercises. Writing a checker for a condition that does not occur is work against a
   hypothetical. Reopen it the day a sample is genuinely harvested in Korean — that is when the
   label and the check are both cheap and grounded
-- [ ] The nine one-line axis conclusions in `docs/index.html` are **summaries written by a
-  person**. When a `patterns/*.md` conclusion changes they have to be changed with it, and
-  there is no automatic check (only the sample counts are read from the documents by the
-  generator)
+- [x] ~~The nine one-line axis conclusions in `docs/index.html` have no automatic check~~ —
+  **`site/check-headlines.mjs` written and wired into CI (2026-08-23).** It recomputes the
+  numbers a headline states from the document's own table and confirms the values it quotes
+  are still in the text; `--strict` fails the PR. It does not judge prose — a claim with
+  nothing mechanisable is reported **unchecked** rather than passed, which currently applies
+  to `table.md` and `navigation.md`, whose conclusions only describe what the axis covers.
+  **Writing it found the drift it was meant to catch**: `motion.md`'s reduced-motion table had
+  grown to **nine layers across 17 systems** while three sentences in the same document still
+  said "six layers … at least 13 systems", and the site headline, `agents/design-review.md`
+  and the FRR case study all quoted the stale figure. All corrected. **That is the third
+  instance of this exact failure**, after typography 13 → 17 and `scales.md` 6 → 8
 
 ## G. Tidying the site visually (2026-08-20)
 

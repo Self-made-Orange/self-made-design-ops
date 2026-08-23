@@ -38,6 +38,12 @@ jobs:
           node site/design-spec.mjs
           node site/design-spec.mjs --lang=ko
 
+      # 표본 수는 build.mjs 가 문서에서 읽어오므로 낡을 수 없지만, 축의 한 줄 결론은
+      # 사람이 씁니다. 표가 보강되고 200줄 아래 요약문이 그대로 남는 경로가 세 번
+      # 반복됐습니다 (typography 13→17 · scales 6→8 · motion 6→9개 층). 그 경로를 막습니다.
+      - name: 축 결론이 원본 문서와 맞는지 확인
+        run: node site/check-headlines.mjs --strict
+
       - name: 생성물이 커밋본과 같은지 확인
         run: |
           if ! git diff --quiet -- design-systems/data docs/data profiles/interpreted; then

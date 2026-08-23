@@ -21,6 +21,7 @@
 | 경로 | 성격 |
 |------|------|
 | `site/build.mjs` | 생성기. 의존성 없음 |
+| `site/check-headlines.mjs` | 축의 한 줄 결론이 원본 문서와 맞는지 검사 |
 | `docs/index.html` | `/` — 킷: 가져가는 법·안에 든 것·기본값을 믿어도 되는 이유 |
 | `docs/catalog.html` | `/catalog.html` — 근거: 116개 시스템 전부, 필터 가능 |
 | `docs/assets/site.css` | 공유 크롬 — 토큰·양쪽 테마·헤더·레일·행 리듬 |
@@ -65,6 +66,7 @@
 ```bash
 node design-systems/build-data.mjs   # systems/*.md frontmatter → data/systems.json
 node site/build.mjs                  # → docs/data/corpus.json
+node site/check-headlines.mjs        # 축 결론이 아직 유효한가?
 ```
 
 잊어버린 경우 `.github/workflows/site.yml`이 PR에서 실패시킵니다.
@@ -79,6 +81,15 @@ node site/build.mjs                  # → docs/data/corpus.json
   추정하지 않고 **빌드를 실패시킵니다.**
 - **한 줄 결론**(`AXES[].headline`)만 사람이 씁니다. `agents/design-review.md`의
   "핵심 기준" 표에서 옮긴 요약이며, 판정 기준은 원문입니다.
+- **그 결론은 믿는 게 아니라 검사합니다** — `site/check-headlines.mjs`가 헤드라인이
+  말하는 숫자를 원본 문서의 표에서 다시 세고, 인용한 값이 아직 본문에 있는지 확인합니다.
+  CI에서 `--strict`로 돕니다. 산문을 읽고 판정하지는 **않습니다**. 기계로 확인할 것이
+  없는 주장은 조용히 통과시키지 않고 **미검사**로 보고하므로, 검증 불가능한 결론을 가진
+  축이 계속 눈에 남습니다. 이게 필요한 이유는 같은 실패가 이미 세 번 났기 때문입니다 —
+  표가 보강되고 한참 아래 요약문이 그대로 남는 경로 (typography 13 → 17,
+  `scales.md` 6 → 8, 둘 다 2026-08-19에 수작업으로 발견 · `motion.md`의 reduced-motion 표가
+  9개 층 17개 시스템이 됐는데 세 문장이 여전히 6개 층 13개 시스템이라고 말한 건
+  2026-08-23에 발견).
 
 ## 페이지 자신의 근거 등급
 

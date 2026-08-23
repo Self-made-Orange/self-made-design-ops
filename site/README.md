@@ -21,6 +21,7 @@ Values not in that table pass through verbatim rather than being translated on a
 | Path | Character |
 |------|-----------|
 | `site/build.mjs` | the generator. No dependencies |
+| `site/check-headlines.mjs` | checks the axis conclusions against the documents they summarise |
 | `docs/index.html` | `/` — the kit: take it, what's inside, why the defaults hold |
 | `docs/catalog.html` | `/catalog.html` — the evidence: all 116 systems, filterable |
 | `docs/assets/site.css` | the shared chrome — tokens, both themes, header, rail, row rhythm |
@@ -68,6 +69,7 @@ After editing the corpus, regenerate and commit together:
 ```bash
 node design-systems/build-data.mjs   # systems/*.md frontmatter → data/systems.json
 node site/build.mjs                  # → docs/data/corpus.json
+node site/check-headlines.mjs        # do the axis conclusions still hold?
 ```
 
 If you forget, `.github/workflows/site.yml` fails the PR.
@@ -83,6 +85,15 @@ If you forget, `.github/workflows/site.yml` fails the PR.
 - **Only the one-line conclusions** (`AXES[].headline`) are written by a person. They are
   summaries lifted from the "key criteria" table in `agents/design-review.md`, and the
   document is what decides.
+- **Those conclusions are checked, not trusted** — `site/check-headlines.mjs` recomputes the
+  numbers a headline states from the document's own table, and confirms the values it quotes
+  are still in the text. It runs in CI with `--strict`. It does **not** read the prose and
+  judge it; a claim with nothing mechanisable in it is reported as **unchecked** rather than
+  passed silently, so an axis whose conclusion cannot be verified stays visible. This exists
+  because the same failure has now happened three times: a table is reinforced and a summary
+  sentence far below it is left behind (typography 13 → 17 and `scales.md` 6 → 8, both caught
+  by hand on 2026-08-19; `motion.md`'s reduced-motion table reaching nine layers and 17
+  systems while three sentences still said six and 13, caught 2026-08-23).
 
 ## This page's own evidence grades
 

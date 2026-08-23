@@ -85,7 +85,7 @@ const AXES = [
   },
   {
     file: 'motion.md', title: 'Motion',
-    headline: 'prefers-reduced-motion handling splits into six layers. scroll-behavior counts as motion too.',
+    headline: 'prefers-reduced-motion handling splits into nine layers across 17 systems. scroll-behavior counts as motion too.',
   },
   {
     file: 'table.md', title: 'Tables',
