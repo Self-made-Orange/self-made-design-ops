@@ -706,6 +706,36 @@ span이 자기 간격을 안 갖고 있었습니다.
 2컬럼, 560px에서 1컬럼으로 접히고 **가로 스크롤 없음**, 푸터 링크 18개 전부 실재
 경로(커밋 전 파일 존재 확인), 콘솔 에러 없음.
 
+## 공유 카드 — 실제 hero를 캡처한 것
+
+`docs/assets/og-home.png`·`og-catalog.png`이 Slack·X·LinkedIn에 링크를 붙일 때 보이는
+이미지입니다. 그림을 그린 게 아니라 **각 페이지 자신의 hero를 헤드리스 Chrome으로 캡처한
+것**입니다. 페이지를 보여주는 카드는 페이지가 하지 않는 약속을 할 수 없고, 다시 그리는 게
+아니라 다시 찍는 것으로 최신을 유지합니다.
+
+둘 다 2400×1260 — 카드 비율 1.91:1의 2배(레티나)입니다. hero는 실측 높이로 캡처하고
+(홈 1200×475, 카탈로그 1200×431 — 헤더 포함, 섹션 경계에서 정확히 끝남) `--bg`(`#FAF9F7`)로
+비율까지 패딩합니다. 늘리거나 잘라내지 않고 hero가 여백 안에 가운데 놓입니다.
+
+**다시 찍는 방법** — 높이는 페이지에서 나오므로, hero가 바뀌었다면 재실측 후 캡처하세요:
+
+```bash
+cd docs && python3 -m http.server 8797 &
+CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+"$CHROME" --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 \
+  --window-size=1200,475 --virtual-time-budget=5000 \
+  --screenshot=assets/og-home.png http://127.0.0.1:8797/
+sips --padToHeightWidth 1260 2400 --padColor FAF9F7 assets/og-home.png --out assets/og-home.png
+```
+
+hero 높이는 1200px 뷰포트에서
+`document.querySelector('section#start').getBoundingClientRect().top`입니다
+(카탈로그는 `.hero` 요소 자신의 `bottom`).
+
+`docs/assets/hero-bg.jpg` — `fetch-hero.yml`이 받아온 Unsplash 사진 — 은 이제 어디서도
+참조되지 않습니다. 2026-08-24까지 공유 이미지였고, 워크플로가 아직 이 파일을 가리키므로
+지우지 않고 남겨 둡니다.
+
 ## 외부 의존
 
 **Pretendard Variable 1.3.9** (SIL OFL-1.1) 하나뿐입니다. jsDelivr의

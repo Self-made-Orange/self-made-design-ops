@@ -34,8 +34,8 @@
    "id": "G005",
    "title": "verify",
    "objective": "전체 검사 + 배포 + 라이브 확인",
-   "status": "pending",
-   "evidence": null
+   "status": "complete",
+   "evidence": "배포 성공 5862d589, 라이브 4종 전부 확인"
   }
  ]
 }

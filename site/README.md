@@ -749,6 +749,37 @@ Checked on desktop and mobile (390px), in both light and dark — the four colum
 900px and one at 560px with **no horizontal scrolling**, all 18 footer links resolve to real
 paths (file existence checked before committing), and there are no console errors.
 
+## Share cards — captures of the real hero
+
+`docs/assets/og-home.png` and `og-catalog.png` are what Slack, X and LinkedIn show when the
+pages are pasted. They are **headless-Chrome captures of each page's own hero**, not artwork:
+a card that shows the page cannot promise something the page does not say, and it stays right
+by being retaken rather than redrawn.
+
+Both are 2400×1260 — the 1.91:1 card ratio, at 2× for retina. The hero is captured at its
+measured height (home 1200×475, catalogue 1200×431 — header included, ending exactly at the
+section border) and then padded to the ratio in `--bg` (`#FAF9F7`), so the hero sits centred
+with margin rather than being stretched or cropped.
+
+**To retake them** — the heights come from the page, so measure before capturing if the hero
+changed:
+
+```bash
+cd docs && python3 -m http.server 8797 &
+CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+"$CHROME" --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 \
+  --window-size=1200,475 --virtual-time-budget=5000 \
+  --screenshot=assets/og-home.png http://127.0.0.1:8797/
+sips --padToHeightWidth 1260 2400 --padColor FAF9F7 assets/og-home.png --out assets/og-home.png
+```
+
+The hero height is `document.querySelector('section#start').getBoundingClientRect().top`
+at a 1200px viewport (for the catalogue, the `.hero` element's own `bottom`).
+
+`docs/assets/hero-bg.jpg` — the Unsplash photo fetched by `fetch-hero.yml` — is no longer
+referenced by anything. It was the share image until 2026-08-24 and is left in place because
+the workflow still points at it.
+
 ## External dependencies
 
 Just one: **Pretendard Variable 1.3.9** (SIL OFL-1.1). It uses jsDelivr's
