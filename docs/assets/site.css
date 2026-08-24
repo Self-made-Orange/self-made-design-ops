@@ -234,6 +234,19 @@ section{padding:var(--sp-7) 0;border-bottom:1px solid var(--border)}
 .nm::after{content:'';position:absolute;inset:0}     /* the row is the link */
 .cell-nm{display:flex;align-items:baseline;gap:var(--sp-2);min-width:0}
 .ds{font-size:13px;color:var(--text-mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* The catalogue preview on the landing page. The catalogue's own .row has six columns and
+ * abbreviates the platform list ("web +2") to fit 5.5rem; here there are four columns and the
+ * list is given max-content, because showing it whole is the point of the preview. */
+.dsrow{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--sp-2);
+  padding:9px var(--sp-2);border-bottom:1px solid var(--border);
+  text-decoration:none;color:inherit;transition:background-color .1s var(--ease)}
+.dsrow:hover{background:var(--hover)}
+@media(min-width:760px){
+  .dsrow{grid-template-columns:28px minmax(0,1.15fr) minmax(0,1fr) max-content;
+    align-items:center;gap:var(--sp-3)}
+}
+.dsrow .pl{font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap}
+
 .rt{font-family:var(--mono);font-size:11px;color:var(--text-dim);text-align:right;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .out{position:relative;z-index:1;display:inline-flex;gap:var(--sp-2);font-size:11px}

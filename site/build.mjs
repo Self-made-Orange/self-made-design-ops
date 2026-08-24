@@ -379,4 +379,97 @@ const rows = systems.map((s) => {
 });
 
 fillRegion('catalog.html', 'prerender', '\n' + rows.join('\n') + '\n    ');
+
+/* The catalogue's own structured data. Deliberately not a 116-entry ItemList: the page is a
+ * view onto the dataset the landing page already declares, and restating every row as
+ * schema.org markup would add 30KB to say nothing new. */
+fillRegion('catalog.html', 'jsonld', `\n<script type="application/ld+json">\n${
+  JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Catalog — Self-Made DesignOps',
+    description: 'Every design system in the corpus, filterable by platform, harvest depth and domain.',
+    url: `${BASE}catalog.html`,
+    isPartOf: { '@type': 'WebSite', name: 'Self-Made DesignOps', url: BASE },
+    about: { '@type': 'Dataset', name: jsonld.name, url: BASE },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: systems.length,
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    },
+    dateModified: lastmod,
+  }, null, 1)}\n</script>\n`);
+
+/* ── The landing page's lists, prerendered the same way ───────────────────
+ *
+ * The kit inventory, the nine axis cards and the catalogue preview were all built from
+ * corpus.json at runtime, which left the landing page with 5,186 characters of static text
+ * against a page that reads far longer. The script still replaces all of it on load — with
+ * the org avatars on the preview marks, which are a runtime probe.
+ */
+const slug = (t) => t.toLowerCase().replace(/\s+/g, '-');
+
+fillRegion('index.html', 'pr-kit', '\n' + KIT.map((g) =>
+  `<div class="rowgrp" id="kit-${slug(g.group)}">` +
+    `<h3>${esc(g.group)} · ${g.items.length}</h3>` +
+    g.items.map((i) =>
+      `<a class="kititem" href="${out.repo}/blob/main/${i.path}">` +
+        `<code>${esc(i.path)}</code><span>${esc(i.what)}</span><em>${i.lines} ln</em>` +
+      `</a>`).join('') +
+  `</div>`).join('\n') + '\n  ');
+
+fillRegion('index.html', 'pr-axes', '\n' + out.axes.map((a) =>
+  `<a class="card" href="${out.repo}/blob/main/${a.path}">` +
+    `<div class="axis-figure"><span class="axis-num">${a.samples}</span>` +
+      `<span class="axis-unit">samples</span></div>` +
+    `<h3>${esc(a.title)}</h3><p>${esc(a.headline)}</p>` +
+    `<span class="path">${esc(a.path)}</span>` +
+  `</a>`).join('\n') + '\n  ');
+
+fillRegion('index.html', 'pr-rail', '\n' + KIT.map((g) =>
+  `<li><a href="#kit-${slug(g.group)}">${esc(g.group)}` +
+    `<span class="n">${g.items.length}</span></a></li>`).join('\n') + '\n    ');
+
+// The preview rows carry the monogram; the avatar over it is added at runtime.
+const PREVIEW = 10;
+fillRegion('index.html', 'pr-preview', '\n' + systems.filter((s) => s.coverage === 'full')
+  .slice(0, PREVIEW).map((s) => {
+    const sl = s.file.replace(/\.md$/, '');
+    return `<a class="dsrow" href="${out.repo}/blob/main/design-systems/systems/${s.file}">` +
+      `<span class="mark" style="--h:${hue(sl)}"><span class="ini">${esc(initials(s.name))}</span></span>` +
+      `<span class="nm">${esc(s.name)}</span>` +
+      `<span class="ds">${esc(s.org)} · ${esc(s.domain)}</span>` +
+      `<span class="pl">${esc(s.platform.join(' · '))}</span>` +
+    `</a>`;
+  }).join('\n') + '\n    ');
+
+/* ── 404 ─────────────────────────────────────────────────────────────────
+ * GitHub Pages serves docs/404.html for any unknown path under the site. noindex, because a
+ * 404 that gets indexed is worse than no 404 page at all. */
+writeFileSync(join(DOCS, '404.html'), `<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not found — Self-Made DesignOps</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+<main class="page"><div class="hero"><div class="wrap">
+  <span class="kicker">404</span>
+  <h1>That page is not here.</h1>
+  <p class="lede">The corpus has ${systems.length} entries and two pages. Whatever you were
+     after is on one of them.</p>
+  <div class="cta">
+    <a class="btn btn-p" href="./">The kit</a>
+    <a class="btn btn-g" href="./catalog.html">The catalog</a>
+    <a class="btn btn-o" href="${out.repo}">The repository</a>
+  </div>
+</div></div></main>
+</body>
+</html>
+`);
+
 console.log(M.crawlable(systems.length, lastmod));

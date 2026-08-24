@@ -28,6 +28,33 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="stylesheet" href="./assets/site.css">
+<!--jsonld:start-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Catalog — Self-Made DesignOps",
+ "description": "Every design system in the corpus, filterable by platform, harvest depth and domain.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/catalog.html",
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "Self-Made DesignOps",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ },
+ "about": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ },
+ "mainEntity": {
+  "@type": "ItemList",
+  "numberOfItems": 116,
+  "itemListOrder": "https://schema.org/ItemListOrderAscending"
+ },
+ "dateModified": "2026-08-23"
+}
+</script>
+<!--jsonld:end-->
 <script>
 /* Same pre-paint theme read as the index — see the comment there. */
 try {
@@ -269,41 +296,10 @@ try {
 <script>
 (() => {
   'use strict';
-  const { $, el, BLOB, corpus } = window.SMO;
+  const { $, el, BLOB, corpus, mark } = window.SMO;
 
-  // Deterministic hue per entry, so a system keeps its colour between visits.
-  const hue = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
-  // Initials: first letters of the first two real words, parentheticals dropped.
-  const initials = (name) => name.replace(/\(.*?\)/g, ' ').split(/[\s/·-]+/).filter(Boolean)
-    .slice(0, 2).map((w) => w[0]).join('').slice(0, 2);
 
-  // GitHub serves an org's avatar at github.com/<org>.png, so the logo layer needs
-  // no asset collection and nothing third-party is stored here — only the handle,
-  // which the corpus already carries in `repo`. Some repo fields are prose rather
-  // than a bare URL ("github.com/nordhealth/design-system — declared in the …"),
-  // so the handle is matched anywhere in the string rather than anchored.
-  const GH_ORG = /github\.com\/([A-Za-z0-9](?:[A-Za-z0-9-]{0,38})?)(?=[/\s)]|$)/;
-  const orgOf = (s) => (s.repo && String(s.repo).match(GH_ORG) || [])[1] || null;
 
-  function mark(s) {
-    const slug = s.file.replace(/\.md$/, '');
-    const box = el('span', { className: 'mark' }, [el('span', { className: 'ini', textContent: initials(s.name) })]);
-    box.style.setProperty('--h', hue(slug));
-
-    const org = orgOf(s);
-    if (!org) return box;   // no public repo — the monogram stands, which is itself true
-
-    // The <img> goes into the DOM straight away, stacked over the monogram and
-    // transparent until it loads. A detached Image() with loading="lazy" never
-    // fires at all — the browser has no viewport to defer against — so the probe
-    // has to live in the document for lazy loading to mean anything.
-    const img = el('img', { alt: '', loading: 'lazy', width: 28, height: 28, referrerPolicy: 'no-referrer' });
-    img.addEventListener('load', () => box.classList.add('has-img'));
-    img.addEventListener('error', () => img.remove());
-    img.src = `https://github.com/${org}.png?size=56`;
-    box.append(img);
-    return box;
-  }
 
   let data = null;
   const state = { q: '', platform: new Set(), coverage: new Set(), domain: new Set() };

@@ -17,8 +17,42 @@
     return n;
   };
 
-  const REPO = 'https://github.com/keepYaoung/self-made-design-ops';
+  const REPO = 'https://github.com/Self-made-Orange/self-made-design-ops';
   const BLOB = REPO + '/blob/main/';
+
+  /* ── Entry marks: a deterministic monogram, with the org's GitHub avatar over it
+   *    when there is a public repo to take one from. Shared, because the catalogue
+   *    and the landing page's catalogue preview must produce the same mark for the
+   *    same system — a system keeps its colour between pages and between visits. */
+  const hue = (t) => { let h = 0; for (const c of t) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+  const initials = (name) => name.replace(/\(.*?\)/g, ' ').split(/[\s/·-]+/).filter(Boolean)
+    .slice(0, 2).map((w) => w[0]).join('').slice(0, 2);
+  /* GitHub serves an org's avatar at github.com/<org>.png, so nothing third-party is
+   * stored here — only the handle, which the corpus already carries in `repo`. Some
+   * repo fields are prose rather than a bare URL, so the handle is matched anywhere. */
+  const GH_ORG = /github\.com\/([A-Za-z0-9](?:[A-Za-z0-9-]{0,38})?)(?=[/\s)]|$)/;
+  const orgOf = (s) => (s.repo && String(s.repo).match(GH_ORG) || [])[1] || null;
+
+  function mark(s) {
+    const slug = s.file.replace(/\.md$/, '');
+    const box = el('span', { className: 'mark' }, [el('span', { className: 'ini', textContent: initials(s.name) })]);
+    box.style.setProperty('--h', hue(slug));
+
+    const org = orgOf(s);
+    if (!org) return box;   // no public repo — the monogram stands, which is itself true
+
+    // The <img> goes into the DOM straight away, stacked over the monogram and
+    // transparent until it loads. A detached Image() with loading="lazy" never
+    // fires at all — the browser has no viewport to defer against — so the probe
+    // has to live in the document for lazy loading to mean anything.
+    const img = el('img', { alt: '', loading: 'lazy', width: 28, height: 28, referrerPolicy: 'no-referrer' });
+    img.addEventListener('load', () => box.classList.add('has-img'));
+    img.addEventListener('error', () => img.remove());
+    img.src = `https://github.com/${org}.png?size=56`;
+    box.append(img);
+    return box;
+  }
+
 
   /* ── Theme toggle.
    * Three states are possible in storage: 'light', 'dark', or nothing at all.
@@ -106,5 +140,6 @@
     return r.json();
   });
 
-  window.SMO = { $, el, REPO, BLOB, corpus, spy: () => dispatchEvent(new Event('resize')) };
+  window.SMO = { $, el, REPO, BLOB, corpus, mark, hue, initials, orgOf,
+    spy: () => dispatchEvent(new Event('resize')) };
 })();
