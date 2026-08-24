@@ -143,8 +143,8 @@
          * being painted — a background tab, an occluded window — and the snippet would freeze
          * half-typed and stay that way. Timers are throttled there instead of stopped, so it
          * finishes either way. */
-        const PER_CHAR = 9;      // ms
-        const PER_BREAK = 90;    // extra ms after a character that ended a line
+        const PER_CHAR = 15;     // ms
+        const PER_BREAK = 150;   // extra ms after a character that ended a line
         const TICK = 16;         // ms between repaints, about a frame
         const full = snip.dataset.full;
         let shown = 0;
