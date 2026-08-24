@@ -9,7 +9,7 @@
 
 **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[Browse the corpus on the web](https://keepyaoung.github.io/self-made-design-ops/)** — searchable index of all 116 systems, filterable by platform / tier / domain.
+📖 **[Browse the corpus on the web](https://self-made-orange.github.io/self-made-design-ops/)** — searchable index of all 116 systems, filterable by platform / tier / domain.
 
 A repository that turns the work repeated between design and development into **shared assets**: conventions, references, and tools reused across products. **No product-specific data lives here** — that belongs in each product's own repository.
 

@@ -9,7 +9,7 @@
 
 [English](README.md) · **한국어** · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[웹에서 코퍼스 둘러보기](https://keepyaoung.github.io/self-made-design-ops/)** — 116개 시스템 전부를 플랫폼·수집 깊이·도메인으로 걸러 찾아볼 수 있습니다.
+📖 **[웹에서 코퍼스 둘러보기](https://self-made-orange.github.io/self-made-design-ops/)** — 116개 시스템 전부를 플랫폼·수집 깊이·도메인으로 걸러 찾아볼 수 있습니다.
 
 디자인과 개발 사이에서 반복되는 작업을 **공용 자산으로 만들어 두는 저장소**입니다 — 여러 제품에 재사용되는 규약·레퍼런스·도구를 담습니다. **특정 제품의 실 데이터는 두지 않습니다** — 그건 해당 제품 저장소에 속합니다.
 

@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · **Bahasa Indonesia** · [Español](README.es.md)
 
-📖 **[Jelajahi korpus di web](https://keepyaoung.github.io/self-made-design-ops/)** — indeks 116 sistem yang bisa dicari dan disaring per platform / tier / domain.
+📖 **[Jelajahi korpus di web](https://self-made-orange.github.io/self-made-design-ops/)** — indeks 116 sistem yang bisa dicari dan disaring per platform / tier / domain.
 
 Repositori yang mengubah pekerjaan berulang antara desain dan pengembangan menjadi **aset bersama**: konvensi, referensi, dan alat yang dipakai ulang lintas produk. **Data spesifik produk tidak disimpan di sini** — itu milik repositori produk masing-masing.
 

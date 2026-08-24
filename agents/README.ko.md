@@ -44,11 +44,11 @@
 ```bash
 # 방법 A — sibling clone (단순, 항상 최신)
 cd <제품-프로젝트의-부모-디렉터리>
-git clone https://github.com/keepYaoung/self-made-design-ops.git
+git clone https://github.com/Self-made-Orange/self-made-design-ops.git
 
 # 방법 B — submodule (재현성, 커밋 고정)
 cd <제품-프로젝트>
-git submodule add https://github.com/keepYaoung/self-made-design-ops.git self-made-design-ops
+git submodule add https://github.com/Self-made-Orange/self-made-design-ops.git self-made-design-ops
 ```
 
 - 값의 최신성이 중요하면 **A + 주기적 `git pull`** (freshness CI가 월간으로

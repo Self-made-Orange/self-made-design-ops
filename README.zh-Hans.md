@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · **简体中文** · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[在网页上浏览语料库](https://keepyaoung.github.io/self-made-design-ops/)** — 可按平台 / 层级 / 领域筛选全部 116 个系统。
+📖 **[在网页上浏览语料库](https://self-made-orange.github.io/self-made-design-ops/)** — 可按平台 / 层级 / 领域筛选全部 116 个系统。
 
 一个把设计与开发之间反复出现的工作沉淀为**共享资产**的仓库：跨产品复用的规范、参考资料与工具。**不存放任何特定产品的实际数据** — 那些属于各产品自己的仓库。
 

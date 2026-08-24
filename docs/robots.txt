@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://keepyaoung.github.io/self-made-design-ops/sitemap.xml
+Sitemap: https://self-made-orange.github.io/self-made-design-ops/sitemap.xml

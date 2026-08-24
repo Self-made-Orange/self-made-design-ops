@@ -46,11 +46,11 @@ and have that project's agent consult it**. To connect them:
 ```bash
 # Option A — sibling clone (simple, always current)
 cd <parent-directory-of-the-product-project>
-git clone https://github.com/keepYaoung/self-made-design-ops.git
+git clone https://github.com/Self-made-Orange/self-made-design-ops.git
 
 # Option B — submodule (reproducible, pinned to a commit)
 cd <product-project>
-git submodule add https://github.com/keepYaoung/self-made-design-ops.git self-made-design-ops
+git submodule add https://github.com/Self-made-Orange/self-made-design-ops.git self-made-design-ops
 ```
 
 - If currency of the values matters most, use **A plus a periodic `git pull`** (a

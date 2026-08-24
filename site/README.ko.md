@@ -4,7 +4,18 @@
 
 # site/ — GitHub Pages 사이트
 
-공개 주소: **https://keepyaoung.github.io/self-made-design-ops/**
+공개 주소: **https://self-made-orange.github.io/self-made-design-ops/**
+
+> **2026-08-24에 주소가 바뀌었습니다.** 저장소가 `keepYaoung` 계정에서
+> **`Self-made-Orange`** 조직으로 이전했습니다. GitHub은 이전 후 저장소 자체 URL은
+> 리다이렉트하지만 **Pages 주소는 리다이렉트하지 않습니다.** 따라서 이전 사이트 주소
+> `keepyaoung.github.io/self-made-design-ops/`는 이제 **404**이고, 그 주소로 색인돼 있던
+> 것은 사라졌습니다. 나중에 발견한 문제가 아니라 소유자가 알고 내린 결정입니다.
+> 이 문서와 `TODO.md`의 날짜 붙은 관찰들은 여전히 옛 주소를 적고 있는데, 그 관찰이
+> 이뤄진 곳이기 때문입니다 — 링크가 아니라 기록입니다.
+>
+> 주소는 이제 **정의가 한 곳**입니다 — `site/build.mjs` 상단의 `OWNER`/`REPO`/`BASE`이고,
+> 생성되는 모든 것이 거기서 읽습니다. 이전 전에는 40여 곳에 손으로 적혀 있었습니다.
 
 코퍼스를 **찾아볼 수 있게** 만든 한 장짜리 정적 페이지입니다. 새 사실을 담지
 않습니다 — 전부 저장소 문서로 이어지는 색인이고, 값의 근거는 링크된 문서에
@@ -40,7 +51,7 @@
 > `.cursorrules`·`copilot-instructions.md` 어느 규칙 파일에나 붙일 수 있게
 > 문안을 일반화했습니다.
 
-**사이트는 <https://keepyaoung.github.io/self-made-design-ops/> 에 떠 있습니다.** 카탈로그는
+**사이트는 <https://self-made-orange.github.io/self-made-design-ops/> 에 떠 있습니다.** 카탈로그는
 `/catalog.html`.
 
 > **2026-08-22에 저장소를 교체했습니다.** 공개 감사(`SECURITY.md`) 이후 코퍼스를 **깨끗한
@@ -430,7 +441,7 @@ CTA입니다. 의도된 예외 하나이고, 스펙에 이미 A 행으로 대가
 추가했습니다.
 
 썩지 않게 묶어 뒀습니다 — `site/design-spec.mjs`가 킷 인벤토리에 들어가고(**22항목,
-5,022줄**, 둘 다 디스크에서 셈), `.github/workflows/site.yml`이 `site/`·`docs/`·
+5,035줄**, 둘 다 디스크에서 셈), `.github/workflows/site.yml`이 `site/`·`docs/`·
 `profiles/interpreted/`를 건드리는 모든 PR에서 양쪽 언어판을 재생성해 커밋본과 다르면
 실패시킵니다.
 

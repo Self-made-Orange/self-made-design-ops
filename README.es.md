@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · **Español**
 
-📖 **[Explora el corpus en la web](https://keepyaoung.github.io/self-made-design-ops/)** — índice buscable de los 116 sistemas, filtrable por plataforma / nivel / dominio.
+📖 **[Explora el corpus en la web](https://self-made-orange.github.io/self-made-design-ops/)** — índice buscable de los 116 sistemas, filtrable por plataforma / nivel / dominio.
 
 Un repositorio que convierte el trabajo repetido entre diseño y desarrollo en **activos compartidos**: convenciones, referencias y herramientas reutilizadas entre productos. **Aquí no vive ningún dato específico de producto** — eso pertenece al repositorio de cada producto.
 

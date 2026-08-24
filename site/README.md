@@ -4,7 +4,19 @@
 
 # site/ — the GitHub Pages site
 
-Public address: **https://keepyaoung.github.io/self-made-design-ops/**
+Public address: **https://self-made-orange.github.io/self-made-design-ops/**
+
+> **The address changed on 2026-08-24.** The repository moved from the `keepYaoung` account to
+> the **`Self-made-Orange`** organisation. GitHub redirects a repository's own URL after a
+> transfer but **does not redirect Pages addresses**, so the previous site address —
+> `keepyaoung.github.io/self-made-design-ops/` — now returns **404** and whatever had been
+> indexed under it is gone. That was the owner's call, taken knowingly rather than discovered
+> afterwards. Dated observations elsewhere in this file and in `TODO.md` still name the old
+> address because that is where they were made; they are records, not links.
+>
+> The address now has **one definition**, `OWNER`/`REPO`/`BASE` at the top of
+> `site/build.mjs`, and everything generated reads it from there. Before the move it was
+> written out by hand in roughly forty places.
 
 A single-page static site that makes the corpus **browsable**. It carries no new facts —
 it is entirely an index into the repository's documents, and the evidence for any value is
@@ -41,7 +53,7 @@ paths are pushed to `main`, it regenerates the data and uploads `docs/` as-is.
 > pasted into any rules file: `CLAUDE.md` · `AGENTS.md` · `.cursorrules` ·
 > `copilot-instructions.md`.
 
-**The site is live at <https://keepyaoung.github.io/self-made-design-ops/>**, with the catalog
+**The site is live at <https://self-made-orange.github.io/self-made-design-ops/>**, with the catalog
 at `/catalog.html`.
 
 > **The repository was replaced on 2026-08-22.** After the disclosure audit (`SECURITY.md`)
@@ -455,7 +467,7 @@ referenced) were real and are fixed: the palette is now wired to components thro
 `backgroundColor` / `textColor`, and `link` and `notice` were added as components, since the
 page genuinely has both.
 
-Wired so it cannot rot: `site/design-spec.mjs` joins the kit inventory (**22 items, 5,022
+Wired so it cannot rot: `site/design-spec.mjs` joins the kit inventory (**22 items, 5,035
 lines**, both counted from disk), and `.github/workflows/site.yml` regenerates both language
 versions on every PR touching `site/`, `docs/` or `profiles/interpreted/` and fails if the
 committed files differ.

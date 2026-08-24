@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · **日本語** · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[Web でコーパスを見る](https://keepyaoung.github.io/self-made-design-ops/)** — 116 システムをプラットフォーム・ティア・ドメインで絞り込めます。
+📖 **[Web でコーパスを見る](https://self-made-orange.github.io/self-made-design-ops/)** — 116 システムをプラットフォーム・ティア・ドメインで絞り込めます。
 
 デザインと開発の間で繰り返される作業を**共有資産にしておくリポジトリ**です。複数のプロダクトで再利用される規約・リファレンス・ツールを収めます。**特定プロダクトの実データは置きません** — それは各プロダクトのリポジトリに属します。
 
