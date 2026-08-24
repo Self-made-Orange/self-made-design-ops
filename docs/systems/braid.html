@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Braid — Self-Made DesignOps</title>
+<meta name="description" content="SEEK's system (a jobs platform) — token values are grid multiples rather than px (grid: 4, space.medium: 6 → 24px), and line spacing is defined not as a…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/braid.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Braid — Self-Made DesignOps">
+<meta property="og:description" content="SEEK's system (a jobs platform) — token values are grid multiples rather than px (grid: 4, space.medium: 6 → 24px), and line spacing is defined not as a…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/braid.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Braid — Self-Made DesignOps">
+<meta name="twitter:description" content="SEEK's system (a jobs platform) — token values are grid multiples rather than px (grid: 4, space.medium: 6 → 24px), and line spacing is defined not as a…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Braid",
+ "description": "SEEK's system (a jobs platform) — token values are grid multiples rather than px (grid: 4, space.medium: 6 → 24px), and line spacing is defined not as a…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/braid.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Braid",
+  "applicationCategory": "DesignApplication",
+  "url": "https://seek-oss.github.io/braid-design-system"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-values-are-grid-units">Tokens — the values are grid units</a></li><li class="lvl3"><a href="#linegap-leading-defined-as-a-gap">lineGap — leading defined as a gap</a></li><li class="lvl3"><a href="#themes-only-brand-colours-are-injected">Themes — only brand colours are injected</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#additional-base-values-nvl">Additional base values (nvl)</a></li><li class="lvl3"><a href="#buttons-buttoncssmjs-buttonmjs">Buttons (Button.css.mjs + Button.mjs)</a></li><li class="lvl3"><a href="#inputs-privatefield">Inputs (private/Field)</a></li><li class="lvl3"><a href="#modals-and-dialogs-privatemodal-dialog">Modals and dialogs (private/Modal + Dialog)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>SEEK</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://seek-oss.github.io/braid-design-system" rel="noopener">Official site</a><br><a href="https://github.com/seek-oss/braid-design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/braid.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Braid</span></nav>
+    <h1>Braid</h1>
+    <p class="doc-lede">SEEK · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>SEEK's system (a jobs platform) — <strong>token values are grid multiples rather than px</strong> (<code>grid: 4</code>, <code>space.medium: 6</code> → 24px), and line spacing is defined not as a height but as <strong><code>lineGap</code>, the gap between lines</strong>. Both are unique in the sample.</p>
+<h2 id="tokens-the-values-are-grid-units">Tokens — the values are grid units</h2>
+<pre class="md-code"><code class="language-js">grid: 4                                   // 1 unit = 4px
+space: { gutter: 6, xxsmall: 2, xsmall: 3, small: 4, medium: 6,
+         large: 8, xlarge: 12, xxlarge: 16, xxxlarge: 24 }
+touchableSize: 12                         // = 48px
+text.standard: { mobile: { fontSize: 16, lineGap: 12 } }</code></pre>
+<ul class="md-list"><li><strong>Spacing values are unitless grid multiples</strong> — <code>medium: 6</code> is not 6px but six units = <strong>24px</strong>. Converted to px the scale is <code>8 · 12 · 16 · 24 · 32 · 48 · 64 · 96</code>, and <strong>the core value 4 is absent</strong> (the smallest is two units = 8px)</li><li>Changing the <code>grid</code> rescales the whole system — the same effect as the runtime-multiplier camp, obtained here through <strong>a build-time unit definition</strong></li><li><strong><code>touchableSize: 12</code> (48px)</strong> — the touch target is a token. The same value as Material 3's 48dp; making the touch target a first-class token puts Braid in the same family as Orbit (control size) within the sample</li></ul>
+<h3 id="linegap-leading-defined-as-a-gap"><code>lineGap</code> — leading defined as a gap</h3>
+<pre class="md-code"><code class="language-js">{ fontSize: 16, lineGap: 12 }   // the empty space between lines, not the total height</code></pre>
+<p><strong>Where the entire sample uses <code>lineHeight</code> (a total height or a ratio), Braid alone uses <code>lineGap</code> (the gap).</strong> The total height is computed from the font metrics plus the gap, so <strong>the visual spacing holds even when the typeface changes.</strong> The same concern as Vanilla's (Canonical's) <code>nudge</code> baseline correction, with a different solution — Vanilla adds a correction to sit on the grid, while Braid fixes the gap instead of the grid.</p>
+<h3 id="themes-only-brand-colours-are-injected">Themes — only brand colours are injected</h3>
+<pre class="md-code"><code class="language-js">makeTokens({ name: 'seekJobs', brandAccent: palette.seekPink['500'], … })</code></pre>
+<p>A theme is generated from <code>baseTokens</code> (the structure) plus three brand colours (<code>brandAccent</code> / <code>Light</code> / <code>Soft</code>) — a far thinner multi-brand structure than Mística's (which ships a whole skin).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Parsed from the <strong>vanilla-extract build output</strong> of the same <code>braid-design-system@34.6.2</code> (<code>dist/lib/components/**/*.css.mjs</code> — the <code>.css.ts</code> files ship as ESM with their values intact) and from the component <code>.mjs</code> files. Value references were resolved against <code>dist/lib/themes/baseTokens/nvl.mjs</code> (the only current baseTokens — both the seekJobs and seekBusiness themes derive from nvl). <strong>71</strong> public component directories.</p>
+<h3 id="additional-base-values-nvl">Additional base values (nvl)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>radius</td><td>small <strong>4</strong> / standard <strong>8</strong> / large 16 / xlarge 24px</td></tr><tr><td>border width</td><td><strong>standard 2px</strong> / large 4px</td></tr><tr><td><code>contentWidth</code></td><td>xsmall 400 / small 660 / medium 940 / large 1280px</td></tr><tr><td>type</td><td>SeekSans · weight 400 / <strong>medium 600</strong> / strong 700</td></tr><tr><td>body</td><td><code>standard</code> 16px (lineGap 12) · <code>small</code> 14px (lineGap 10)</td></tr><tr><td>transition tokens</td><td><code>fast</code> 125ms ease · <code>touchable</code> 200ms <code>cubic-bezier(0.02,1.505,0.745,1.235)</code></td></tr><tr><td>press transform</td><td><code>transform.touchable: scale(0.95)</code></td></tr></tbody></table></div>
+<p><strong>The default border is 2px</strong> — a value that parts from the 1px majority, and it carries straight into the input border (below).</p>
+<h3 id="buttons-buttoncssmjs-buttonmjs">Buttons (<code>Button.css.mjs</code> + <code>Button.mjs</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">standard</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>38.4px</strong> (<code>touchableSize × 0.8</code>)</td><td style="text-align:center"><strong>48px</strong> (<code>touchableSize</code>)</td></tr><tr><td>inline padding</td><td style="text-align:center">16px (<code>space.small</code>)</td><td style="text-align:center">24px (<code>space.gutter</code>)</td></tr><tr><td>radius</td><td style="text-align:center">8px (standard)</td><td style="text-align:center">8px</td></tr><tr><td>type</td><td style="text-align:center">14px / 600</td><td style="text-align:center">16px / 600</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>No height is declared; min-height is the touch-target token.</strong> The single source of control dimensions is <code>touchableSize</code> (48px), and small is 0.8 of it — <strong>the resulting 38.4px fraction is simply allowed</strong> (the same camp as MUI's 36.5px).</li><li><strong>Block padding is the formula <code>(min-height − cap height)/2</code></strong> — vertical centring is computed against <strong>cap height</strong>, not line height. The component-layer counterpart of the <code>lineGap</code> leading model (above), and deriving control padding from cap height is seen for the first time in this corpus.</li><li><strong>The press is <code>scale(0.95)</code> over 200ms on an overshooting curve</strong> (y1 = 1.505) — the elastic camp alongside the bezier-overshoot ranking in <code>patterns/motion.md</code> (Spindle 2.05, TDS 1.56), except its place is <strong>a button press</strong> rather than a modal entrance.</li><li>Hover and active swap opacity on an <strong>overlay layer</strong> rather than replacing the background.</li><li>The <code>transparent</code> variant and small drop the padding a step (24→16px).</li></ul>
+<h3 id="inputs-privatefield">Inputs (<code>private/Field</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>height</strong></td><td><strong>exactly 48px</strong> (<code>touchableSize</code> — block padding by the <code>(48 − line height)/2</code> formula)</td></tr><tr><td>inline padding</td><td>16px (<code>space.small</code>)</td></tr><tr><td>radius</td><td>8px (standard)</td></tr><tr><td>border</td><td><strong>a 2px inset box-shadow</strong> in <code>grey400</code> (<code>borderWidth.standard</code>)</td></tr><tr><td>type</td><td>16px (<code>text.standard</code>)</td></tr></tbody></table></div>
+<ul class="md-list"><li>The same 48px and the same formula as the standard button — the origin of button/input height alignment is not a height token but the touch-target token.</li><li><strong>The border is an inset box-shadow rather than the border property.</strong> On focus and hover a 2px <code>formAccent</code> overlay fades in by opacity — the state transition is a layer fade, not a border-colour swap.</li><li>The icon slot is also a <code>touchableSize</code> square (48px).</li><li>Labels: a separate block — <code>Text</code> (16px) plus <code>Strong</code> (700), 16px (<code>space.small</code>) between label and field, 12px (<code>xsmall</code>) between field and message. Not floating.</li></ul>
+<h3 id="modals-and-dialogs-privatemodal-dialog">Modals and dialogs (<code>private/Modal</code> + <code>Dialog</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width steps</td><td><strong>four, reusing <code>contentWidth</code></strong>: 400 / <strong>660 (default)</strong> / 940 / 1280px, plus <code>content</code> (fit)</td></tr><tr><td>radius</td><td><strong>24px (<code>xlarge</code>)</strong></td></tr><tr><td>content padding</td><td>24px on mobile (<code>gutter</code>) / 32px on tablet (<code>large</code>)</td></tr><tr><td>outer gutter</td><td>12 mobile / 24 tablet / 48px desktop</td></tr><tr><td>scrim</td><td><strong>light rgba(0,0,0,.4) / dark rgba(0,0,0,.6)</strong></td></tr><tr><td>enter (center)</td><td>scale(0.8)→1 plus fade, on the <strong><code>fast</code> token = 125ms ease</strong></td></tr><tr><td>enter (drawer)</td><td>translateX, 300ms mobile / 175ms tablet <code>cubic-bezier(0.4,0,0,1)</code></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The dialog widths reuse the content-width tokens</strong> — the same &quot;one value, two roles&quot; camp as MUI (reusing breakpoints) and Backpack (modal width = breakpoint), with the difference that what Braid reuses is the body content width.</li><li><strong>A 24px radius</strong> — twice the web sample's cluster (8–12px, <code>patterns/modal.md</code>), the largest web value in the sample, sitting between Apple's sheets (34/58px) and the web cluster.</li><li><strong>A 125ms entrance</strong> — the shortest modal entrance in the sample (Radix and shadcn 200ms, Atlassian 250ms). There is no modal-specific motion; the general-purpose <code>fast</code> transition token is used as-is.</li><li>Scrim density <strong>splits by colour mode</strong> (.4/.6) — darker in dark mode.</li><li>The JS cleanup timer is 300ms (<code>ANIMATION_DURATION</code>) — a constant that coexists out of step with the CSS's 125ms.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong><code>touchableSize</code> as the single source of control dimensions</strong> — buttons, inputs and icon slots all derive from 48px, with small at ×0.8 (the 38.4px fraction simply allowed)</li><li><strong>Block padding computed against cap height</strong> — the component-layer form of the lineGap model</li><li><strong>A 2px default border, with input borders as inset box-shadows and states as overlay fades</strong></li><li><strong>Dialog widths = reused contentWidth</strong>, a 24px radius (the largest web value in the sample), and a 125ms entrance (the shortest)</li><li>Button press <code>scale(0.95)</code> on an overshooting curve — elasticity assigned to the press rather than the entrance</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Token values as grid multiples</strong> (unitless) — unique in the sample</li><li><strong>The <code>lineGap</code> leading model</strong> — unique in the sample; visual spacing independent of the typeface</li><li>The <code>touchableSize</code> touch-target token (48px)</li><li>A minimal theme contract injecting only three brand colours</li><li>Built on vanilla-extract (zero-runtime CSS-in-TS)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified (a touch-target token exists).</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack braid-design-system@34.6.2</code> → <code>dist/lib/themes/baseTokens/</code></li><li>Components in depth: <code>dist/lib/components/**/*.css.mjs</code> (the vanilla-extract build output) from the same package plus <code>dist/lib/components/{Button/Button,private/Field/Field,private/Modal/*,Dialog/Dialog}.mjs</code> (2026-08-18)</li><li><strong>Open questions:</strong> the full colour palette, <del>radius</del> · <del>the component list</del> (resolved 2026-08-18 — the deep pass: four radius steps, 71 public components), a full survey of the responsive (mobile/tablet) pairs</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

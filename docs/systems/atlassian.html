@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlassian Design System — Self-Made DesignOps</title>
+<meta name="description" content="The design system behind Jira, Confluence and the rest of the Atlassian suite. It tokenises motion per component and ships 466 tokens per theme, in 14…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/atlassian.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Atlassian Design System — Self-Made DesignOps">
+<meta property="og:description" content="The design system behind Jira, Confluence and the rest of the Atlassian suite. It tokenises motion per component and ships 466 tokens per theme, in 14…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/atlassian.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atlassian Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="The design system behind Jira, Confluence and the rest of the Atlassian suite. It tokenises motion per component and ships 466 tokens per theme, in 14…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Atlassian Design System",
+ "description": "The design system behind Jira, Confluence and the rest of the Atlassian suite. It tokenises motion per component and ships 466 tokens per theme, in 14…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/atlassian.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Atlassian Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://atlassian.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing">Spacing</a></li><li class="lvl3"><a href="#negative-spacing">Negative spacing</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li class="lvl3"><a href="#border-width-semantic-by-state">Border width — semantic by state</a></li><li class="lvl3"><a href="#typography-a-one-line-css-font-shorthand">Typography — a one-line CSS font shorthand</a></li><li class="lvl3"><a href="#typefaces-the-brand-family-is-kept-separate">Typefaces — the brand family is kept separate</a></li><li class="lvl3"><a href="#colour-466-per-theme">Colour — 466 per theme</a></li><li><a href="#motion-68-per-component-tokens">Motion — 68 per-component tokens</a></li><li class="lvl3"><a href="#eight-duration-steps">Eight duration steps</a></li><li class="lvl3"><a href="#five-easings">Five easings</a></li><li class="lvl3"><a href="#18-keyframes-named-animations">18 keyframes — named animations</a></li><li class="lvl3"><a href="#per-component-motion-unique-in-the-sample">Per-component motion — unique in the sample</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#buttons-in-depth-2026-08-17-the-atlaskitbutton2510-build-output">Buttons in depth (2026-08-17, the @atlaskit/button@25.1.0 build output)</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Atlassian</b><br>full harvest · web<br>verified 2026-08-23<br><a href="https://atlassian.design" rel="noopener">Official site</a><br><a href="https://bitbucket.org/atlassian/atlassian-frontend-mirror" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/atlassian.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Atlassian Design System</span></nav>
+    <h1>Atlassian Design System</h1>
+    <p class="doc-lede">Atlassian · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The design system behind Jira, Confluence and the rest of the Atlassian suite. It <strong>tokenises motion per component</strong> and ships <strong>466 tokens per theme, in 14 sets</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<p>The distribution splits into one file per axis.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>file</th><th style="text-align:center">tokens</th><th>contents</th></tr></thead><tbody><tr><td><code>atlassian-light.js</code> and the rest of the <strong>10 colour themes</strong></td><td style="text-align:center">466 each</td><td>colour · elevation · opacity</td></tr><tr><td><code>atlassian-typography.js</code></td><td style="text-align:center">23</td><td>family · size · weight</td></tr><tr><td><code>atlassian-spacing.js</code></td><td style="text-align:center">23</td><td>spacing (negatives included)</td></tr><tr><td><code>atlassian-shape.js</code></td><td style="text-align:center">11</td><td>radius · border width</td></tr><tr><td><code>atlassian-motion.js</code></td><td style="text-align:center"><strong>68</strong></td><td>duration · easing · keyframes · <strong>per-component motion</strong></td></tr></tbody></table></div>
+<p>The 10 colour themes: <code>light</code> · <code>dark</code> · <code>light-future</code> · <code>dark-future</code> · <code>light-increased-contrast</code> · <code>dark-increased-contrast</code> · <code>light-new-input-border</code> · <code>dark-new-input-border</code> · <code>legacy-light</code> · <code>legacy-dark</code>. (<code>light-brand-refresh</code> and <code>dark-brand-refresh</code> exist on top of those, for 12 in all.)</p>
+<h3 id="spacing">Spacing</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>space.0</code></td><td>0</td></tr><tr><td><code>space.025</code></td><td>2px</td></tr><tr><td><code>space.050</code></td><td>4px</td></tr><tr><td><code>space.075</code></td><td>6px</td></tr><tr><td><code>space.100</code></td><td>8px</td></tr><tr><td><code>space.150</code></td><td>12px</td></tr><tr><td><code>space.200</code></td><td>16px</td></tr><tr><td><code>space.250</code></td><td>20px</td></tr><tr><td><code>space.300</code></td><td>24px</td></tr><tr><td><code>space.400</code></td><td>32px</td></tr><tr><td><code>space.500</code></td><td>40px</td></tr><tr><td><code>space.600</code></td><td>48px</td></tr><tr><td><code>space.800</code></td><td>64px</td></tr><tr><td><code>space.1000</code></td><td>80px</td></tr></tbody></table></div>
+<p>The numbers in the names are <strong>multiples of an 8px base</strong> (<code>space.100</code> = 8px). The same scheme as Polaris (on a 4px base), with a different base value.</p>
+<h3 id="negative-spacing">Negative spacing</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>space.negative.025</code></td><td>-2px</td></tr><tr><td><code>space.negative.050</code></td><td>-4px</td></tr><tr><td><code>space.negative.075</code></td><td>-6px</td></tr><tr><td><code>space.negative.100</code></td><td>-8px</td></tr><tr><td><code>space.negative.150</code></td><td>-12px</td></tr><tr><td><code>space.negative.200</code></td><td>-16px</td></tr><tr><td><code>space.negative.250</code></td><td>-20px</td></tr><tr><td><code>space.negative.300</code></td><td>-24px</td></tr><tr><td><code>space.negative.400</code></td><td>-32px</td></tr></tbody></table></div>
+<p>Exactly symmetric with the positive scale up to 32px. There are no negatives at 40px and above.</p>
+<h3 id="radius">Radius</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>radius.xsmall</code></td><td>2px</td></tr><tr><td><code>radius.small</code></td><td>4px</td></tr><tr><td><code>radius.medium</code></td><td>6px</td></tr><tr><td><code>radius.large</code></td><td>8px</td></tr><tr><td><code>radius.xlarge</code></td><td>12px</td></tr><tr><td><code>radius.xxlarge</code></td><td>16px</td></tr><tr><td><code>radius.full</code></td><td>9999px</td></tr><tr><td><code>radius.tile</code></td><td><strong>25%</strong></td></tr></tbody></table></div>
+<h3 id="border-width-semantic-by-state">Border width — semantic by state</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>border.width</code></td><td>1px</td></tr><tr><td><code>border.width.selected</code></td><td>2px</td></tr><tr><td><code>border.width.focused</code></td><td>2px</td></tr></tbody></table></div>
+<h3 id="typography-a-one-line-css-font-shorthand">Typography — a one-line CSS <code>font</code> shorthand</h3>
+<p>The values are not individual properties but <strong>CSS <code>font</code> shorthand strings</strong>.</p>
+<pre class="md-code"><code>font.heading.large = &quot;normal 653 24px/28px \&quot;Atlassian Sans\&quot;, ui-sans-serif, …&quot;
+                      │      │   │    │
+                      style  weight size line-height</code></pre>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">weight</th><th style="text-align:center">size</th><th style="text-align:center">line height</th><th style="text-align:center">ratio</th></tr></thead><tbody><tr><td><code>font.heading.xxlarge</code></td><td style="text-align:center">653</td><td style="text-align:center">32px</td><td style="text-align:center">36px</td><td style="text-align:center">1.125</td></tr><tr><td><code>font.heading.xlarge</code></td><td style="text-align:center">653</td><td style="text-align:center">28px</td><td style="text-align:center">32px</td><td style="text-align:center">1.143</td></tr><tr><td><code>font.heading.large</code></td><td style="text-align:center">653</td><td style="text-align:center">24px</td><td style="text-align:center">28px</td><td style="text-align:center">1.167</td></tr><tr><td><code>font.heading.medium</code></td><td style="text-align:center">653</td><td style="text-align:center">20px</td><td style="text-align:center">24px</td><td style="text-align:center">1.2</td></tr><tr><td><code>font.heading.small</code></td><td style="text-align:center">653</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td><td style="text-align:center">1.25</td></tr><tr><td><code>font.heading.xsmall</code></td><td style="text-align:center">653</td><td style="text-align:center">14px</td><td style="text-align:center">20px</td><td style="text-align:center">1.429</td></tr><tr><td><code>font.heading.xxsmall</code></td><td style="text-align:center">653</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">1.333</td></tr><tr><td><code>font.body.large</code></td><td style="text-align:center">400</td><td style="text-align:center">16px</td><td style="text-align:center">24px</td><td style="text-align:center">1.5</td></tr><tr><td><strong><code>font.body.[default]</code></strong></td><td style="text-align:center">400</td><td style="text-align:center"><strong>14px</strong></td><td style="text-align:center">20px</td><td style="text-align:center">1.429</td></tr><tr><td><code>font.body.small</code></td><td style="text-align:center">400</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">1.333</td></tr><tr><td><code>font.metric.large</code></td><td style="text-align:center">653</td><td style="text-align:center">28px</td><td style="text-align:center">32px</td><td style="text-align:center">1.143</td></tr><tr><td><code>font.metric.medium</code></td><td style="text-align:center">653</td><td style="text-align:center">24px</td><td style="text-align:center">28px</td><td style="text-align:center">1.167</td></tr><tr><td><code>font.metric.small</code></td><td style="text-align:center">653</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td><td style="text-align:center">1.25</td></tr><tr><td><code>font.code.[default]</code></td><td style="text-align:center">400</td><td style="text-align:center"><strong>0.875em</strong></td><td style="text-align:center"><strong>1</strong></td><td style="text-align:center">—</td></tr></tbody></table></div>
+<p><strong>The body default is 14px.</strong> The same camp as Ant Design · Material 3 (Body Medium) · Helios · Evergreen · Seed (100) (<code>patterns/typography.md</code>).</p>
+<p><strong>The line heights sit on a 4px grid</strong> — 16 · 20 · 24 · 28 · 32 · 36, without exception. The ratios wander between 1.125 and 1.5, but the absolute values are always multiples of 4.</p>
+<p><strong>Every heading weight is 653.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>font.weight.regular</code></td><td style="text-align:center">400</td></tr><tr><td><code>font.weight.medium</code></td><td style="text-align:center">500</td></tr><tr><td><code>font.weight.semibold</code></td><td style="text-align:center">600</td></tr><tr><td><strong><code>font.weight.bold</code></strong></td><td style="text-align:center"><strong>653</strong></td></tr></tbody></table></div>
+<p><strong>The two weights in the sample that are not multiples of 100 are Atlassian's (653) and Apple's (590).</strong> Each is the real weight of a variable typeface (Atlassian Sans / SF Pro) used as-is, and neither source records why that value was chosen.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>system</th><th>typeface</th><th style="text-align:center">value</th><th>style</th></tr></thead><tbody><tr><td>Atlassian</td><td>Atlassian Sans</td><td style="text-align:center"><strong>653</strong></td><td><code>bold</code></td></tr><tr><td>Apple</td><td>SF Pro</td><td style="text-align:center"><strong>590</strong></td><td>Semibold</td></tr></tbody></table></div>
+<p>Apple's Bold is the standard 700 and only Semibold deviates. Atlassian's <code>bold</code> alone is 653 while <code>semibold</code> is 600 — <strong>each has exactly one step off standard.</strong></p>
+<p>There is a separate <code>font.metric.*</code> family — the sizes and weights overlap <code>heading</code> (28/32 · 24/28 · 16/20) but the names are kept apart.</p>
+<p>Only <code>font.code.[default]</code> is in <strong>relative units</strong> — <code>0.875em/1</code>. It scales with the surrounding text and has a line height of 1.</p>
+<h3 id="typefaces-the-brand-family-is-kept-separate">Typefaces — the brand family is kept separate</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>typeface</th></tr></thead><tbody><tr><td><code>font.family.heading</code></td><td>Atlassian Sans</td></tr><tr><td><code>font.family.body</code></td><td>Atlassian Sans</td></tr><tr><td><code>font.family.code</code></td><td>Atlassian Mono</td></tr><tr><td><strong><code>font.family.brand.heading</code></strong></td><td><strong>Charlie Display</strong></td></tr><tr><td><strong><code>font.family.brand.body</code></strong></td><td><strong>Charlie Text</strong></td></tr></tbody></table></div>
+<p><strong>The product UI typeface (Atlassian Sans) and the brand typeface (Charlie) are separate.</strong> Charlie splits into Display and Text — the same structure as Evergreen's SF UI Display / SF UI Text split (<code>patterns/typography.md</code>).</p>
+<h3 id="colour-466-per-theme">Colour — 466 per theme</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>group</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td><code>color.background</code></td><td style="text-align:center"><strong>208</strong></td></tr><tr><td><code>color.chart</code></td><td style="text-align:center"><strong>100</strong></td></tr><tr><td><code>color.text</code></td><td style="text-align:center">49</td></tr><tr><td><code>color.border</code></td><td style="text-align:center">39</td></tr><tr><td><code>color.icon</code></td><td style="text-align:center">23</td></tr><tr><td><code>elevation.surface</code></td><td style="text-align:center">13</td></tr><tr><td><code>color.rovo</code></td><td style="text-align:center">11</td></tr><tr><td><code>elevation.shadow</code></td><td style="text-align:center">5</td></tr><tr><td><code>color.link</code></td><td style="text-align:center">4</td></tr><tr><td><code>color.blanket</code></td><td style="text-align:center">3</td></tr><tr><td><code>elevation.rovo</code></td><td style="text-align:center">3</td></tr><tr><td><code>color.interaction</code></td><td style="text-align:center">2</td></tr><tr><td><code>color.skeleton</code></td><td style="text-align:center">2</td></tr><tr><td><code>opacity</code></td><td style="text-align:center">2</td></tr><tr><td><code>utility</code></td><td style="text-align:center">2</td></tr></tbody></table></div>
+<h4 id="backgrounds-four-levels-three-states">Backgrounds — four levels × three states</h4>
+<pre class="md-code"><code>color.background.accent.blue.subtlest.[default]
+color.background.accent.blue.subtlest.hovered
+color.background.accent.blue.subtlest.pressed
+                            └─ subtler · subtle · bolder</code></pre>
+<p><strong>Four strength steps</strong> (<code>subtlest</code> · <code>subtler</code> · <code>subtle</code> · <code>bolder</code>) <strong>× three states</strong> (<code>[default]</code> · <code>hovered</code> · <code>pressed</code>) = 12 per colour. With 10 colours under <code>accent</code>, that is <strong>120</strong>.</p>
+<p><strong>The same structure as Orbit's three lightness steps × three states + darker = 10</strong> (<code>patterns/color.md</code>), with Atlassian carrying four strength steps.</p>
+<p><strong>The strength names are comparatives</strong> — weaker than <code>subtle</code> is <code>subtler</code>, and weaker still is <code>subtlest</code>. The <code>bold</code> side has only <code>bolder</code>, so the scale is <strong>asymmetric</strong>.</p>
+<h4 id="state-colours-there-is-a-discovery">State colours — there is a <code>discovery</code></h4>
+<p>Counting backgrounds, 10 each:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>group</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td><code>danger</code></td><td style="text-align:center">10</td></tr><tr><td><code>warning</code></td><td style="text-align:center">10</td></tr><tr><td><code>success</code></td><td style="text-align:center">10</td></tr><tr><td><strong><code>discovery</code></strong></td><td style="text-align:center"><strong>10</strong></td></tr><tr><td><code>information</code></td><td style="text-align:center">10</td></tr><tr><td><code>brand</code></td><td style="text-align:center">9</td></tr><tr><td><code>neutral</code></td><td style="text-align:center">9</td></tr><tr><td><code>code</code></td><td style="text-align:center">7</td></tr><tr><td><code>selected</code></td><td style="text-align:center">6</td></tr><tr><td><code>input</code></td><td style="text-align:center">3</td></tr><tr><td><code>inverse</code></td><td style="text-align:center">3</td></tr><tr><td><code>disabled</code></td><td style="text-align:center">1</td></tr></tbody></table></div>
+<p><strong><code>discovery</code> is a first-class state colour.</strong> The widest set in the sample, against Evergreen's four (<code>success</code> · <code>warning</code> · <code>danger</code> · <code>none</code>) and shadcn/ui's single <code>destructive</code>.</p>
+<h4 id="charts-100-tokens">Charts — 100 tokens</h4>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td><code>categorical</code></td><td style="text-align:center"><strong>16</strong></td></tr><tr><td>per colour (<code>lime</code> · <code>red</code> · <code>orange</code> · <code>yellow</code> · <code>green</code> · <code>teal</code> · <code>blue</code> · <code>purple</code> · <code>magenta</code> · <code>gray</code>)</td><td style="text-align:center">6 each</td></tr><tr><td>per state (<code>danger</code> · <code>warning</code> · <code>success</code> · <code>discovery</code> · <code>information</code>)</td><td style="text-align:center">4 each</td></tr><tr><td><code>neutral</code> · <code>brand</code></td><td style="text-align:center">2 each</td></tr></tbody></table></div>
+<p><strong>There are 16 <code>categorical</code> tokens</strong> — a colour order for categorical data. Where shadcn/ui's five chart colours are a single-hue lightness ramp, Atlassian uses <strong>hue separation</strong>.</p>
+<p>Atlassian is the only system in the sample with 100 chart-specific tokens.</p>
+<h4 id="rovo-a-per-product-colour-family"><code>rovo</code> — a per-product colour family</h4>
+<p>11 <code>color.rovo.*</code> plus 3 <code>elevation.rovo.*</code>. <code>border</code> and <code>icon</code> carry four colours: <code>lime</code> · <code>saffron</code> · <code>blue</code> · <code>purple</code>.</p>
+<p><strong>The same structure as Helios keeping per-product brand colours for Terraform, Vault and Consul</strong> (<code>patterns/color.md</code>).</p>
+<h4 id="elevation-surface-and-shadow-are-separate-families">Elevation — surface and shadow are separate families</h4>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>tokens</th></tr></thead><tbody><tr><td><code>elevation.surface.*</code></td><td><code>[default]</code> · <code>container</code> · <code>raised</code> · <code>overlay</code> (three states each) + <code>sunken</code></td></tr><tr><td><code>elevation.shadow.*</code></td><td><code>overflow.[default]</code> · <code>overflow.perimeter</code> · <code>overflow.spread</code> · <code>overlay</code> · <code>raised</code></td></tr></tbody></table></div>
+<p><strong>Surface colour and shadow are split.</strong> <code>raised</code> appears on both sides, so &quot;the raised surface colour&quot; and &quot;the raised shadow&quot; are used separately.</p>
+<p>There are three <code>elevation.shadow.overflow.*</code> — the shadow marking scroll overflow is divided into <code>perimeter</code> and <code>spread</code>.</p>
+<h4 id="opacity-utility">Opacity · utility</h4>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>opacity.disabled</code></td><td style="text-align:center"><strong>0.4</strong></td></tr><tr><td><code>opacity.loading</code></td><td style="text-align:center">0.2</td></tr><tr><td><code>utility.UNSAFE.transparent</code></td><td style="text-align:center"><code>transparent</code></td></tr><tr><td><code>utility.elevation.surface.current</code></td><td style="text-align:center"><code>#FFFFFF</code> (light)</td></tr></tbody></table></div>
+<p><strong>The disabled opacity is 0.4.</strong> shadcn/ui uses 0.5 (<code>opacity-50</code>).</p>
+<p><strong><code>utility.UNSAFE.transparent</code></strong> — the token name itself contains <code>UNSAFE</code>. Atlassian is the only system in the sample that marks usage risk in a token name.</p>
+<h2 id="motion-68-per-component-tokens">Motion — 68 per-component tokens</h2>
+<p><strong>The most deeply tokenised motion system in the sample.</strong></p>
+<h3 id="eight-duration-steps">Eight duration steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>motion.duration.instant</code></td><td style="text-align:center">0ms</td></tr><tr><td><code>motion.duration.xxshort</code></td><td style="text-align:center">50ms</td></tr><tr><td><code>motion.duration.xshort</code></td><td style="text-align:center">100ms</td></tr><tr><td><code>motion.duration.short</code></td><td style="text-align:center">150ms</td></tr><tr><td><code>motion.duration.medium</code></td><td style="text-align:center">200ms</td></tr><tr><td><code>motion.duration.long</code></td><td style="text-align:center">250ms</td></tr><tr><td><code>motion.duration.xlong</code></td><td style="text-align:center">400ms</td></tr><tr><td><code>motion.duration.xxlong</code></td><td style="text-align:center">600ms</td></tr></tbody></table></div>
+<p>Increments of <strong>50 / 50 / 50 / 50 / 50 / 150 / 200</strong> — an arithmetic 50ms series up to 250ms.</p>
+<h3 id="five-easings">Five easings</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>motion.easing.in.practical</code></td><td><code>cubic-bezier(0.6, 0, 0.8, 0.6)</code></td></tr><tr><td><code>motion.easing.out.practical</code></td><td><code>cubic-bezier(0.4, 1, 0.6, 1)</code></td></tr><tr><td><code>motion.easing.inout.bold</code></td><td><code>cubic-bezier(0.4, 0, 0, 1)</code></td></tr><tr><td><code>motion.easing.out.bold</code></td><td><code>cubic-bezier(0, 0.4, 0, 1)</code></td></tr><tr><td><strong><code>motion.easing.spring</code></strong></td><td><strong>a <code>linear()</code> with 65 stops</strong></td></tr></tbody></table></div>
+<p><strong>They divide into two families, <code>practical</code> and <code>bold</code>.</strong></p>
+<p><strong><code>spring</code> is defined with the CSS <code>linear()</code> function</strong> — 65 enumerated stops approximating a spring curve. It overshoots to a maximum of 1.024 and undershoots slightly to 0.999 at the end.</p>
+<pre class="md-code"><code>linear(0, 0.021, 0.058, …, 1.024, 1.024, …, 0.999, 1)</code></pre>
+<p>Atlassian is the only case in the sample of expressing a spring as a multi-stop <code>linear()</code>.</p>
+<h3 id="18-keyframes-named-animations">18 keyframes — named animations</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>tokens</th></tr></thead><tbody><tr><td>fade</td><td><code>FadeIn0to100</code> · <code>FadeOut100to0</code></td></tr><tr><td>scale</td><td><code>ScaleIn80to100</code> · <code>ScaleIn95to100</code> · <code>ScaleOut100to80</code> · <code>ScaleOut100to95</code></td></tr><tr><td>slide (8px)</td><td><code>SlideInTop8px</code> · <code>SlideInBottom8px</code> · <code>SlideInLeft8px</code> · <code>SlideInRight8px</code> (+ 4 Out)</td></tr><tr><td>slide (percentage)</td><td><code>SlideIn50PercentLeft</code> · <code>SlideOut15PercentLeft</code> · <code>SlideIn100PercentLeft/Right</code> (+ Out)</td></tr></tbody></table></div>
+<p><strong>The values are in the names</strong> — <code>ScaleIn80to100</code> runs 80% → 100%.</p>
+<p><strong>Entry and exit travel different distances</strong> — <code>SlideIn50PercentLeft</code> (50%) against <code>SlideOut15PercentLeft</code> (15%). Things come in from further away than they leave.</p>
+<h3 id="per-component-motion-unique-in-the-sample">Per-component motion — unique in the sample</h3>
+<p>Each component's entry, exit and state motion is defined as a <strong>composite token</strong>.</p>
+<pre class="md-code"><code class="language-js">motion.modal.enter = {
+  duration: 250,
+  curve: 'cubic-bezier(0.4, 0, 0, 1)',   // inout.bold
+  keyframes: ['ScaleIn95to100'],
+  fill: 'backwards',
+}
+motion.panel.content.enter = {
+  duration: 150, curve: '…out.practical',
+  keyframes: ['FadeIn0to100'], delay: 100, fill: 'backwards',
+}</code></pre>
+<p>The components covered: <code>avatar</code> · <code>blanket</code> · <code>button</code> · <code>flag</code> · <code>label</code> · <code>listitem</code> · <code>modal</code> · <code>panel</code> · <code>popup</code> · <code>sidenav</code> · <code>spotlight</code>.</p>
+<p>Split by direction: <code>popup.enter.{top,bottom,left,right}</code> · <code>panel.enter.{left,right,[default]}</code> · <code>sidenav.enter.{left,right}</code>.</p>
+<h4 id="entry-against-exit-exits-are-faster">Entry against exit — exits are faster</h4>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>component</th><th style="text-align:center">entry</th><th style="text-align:center">exit</th><th style="text-align:center">difference</th></tr></thead><tbody><tr><td><code>avatar</code></td><td style="text-align:center">150ms</td><td style="text-align:center">100ms</td><td style="text-align:center">-50</td></tr><tr><td><code>blanket</code></td><td style="text-align:center">250ms</td><td style="text-align:center">200ms</td><td style="text-align:center">-50</td></tr><tr><td><code>flag</code></td><td style="text-align:center">250ms</td><td style="text-align:center">200ms</td><td style="text-align:center">-50</td></tr><tr><td><code>label</code></td><td style="text-align:center">150ms</td><td style="text-align:center">100ms</td><td style="text-align:center">-50</td></tr><tr><td><code>modal</code></td><td style="text-align:center">250ms</td><td style="text-align:center">200ms</td><td style="text-align:center">-50</td></tr><tr><td><code>panel</code></td><td style="text-align:center">250ms</td><td style="text-align:center">200ms</td><td style="text-align:center">-50</td></tr><tr><td><code>popup</code></td><td style="text-align:center">150ms</td><td style="text-align:center">100ms</td><td style="text-align:center">-50</td></tr><tr><td><code>sidenav</code></td><td style="text-align:center">250ms</td><td style="text-align:center">200ms</td><td style="text-align:center">-50</td></tr><tr><td><code>spotlight</code></td><td style="text-align:center">250ms</td><td style="text-align:center">200ms</td><td style="text-align:center">-50</td></tr><tr><td><strong><code>panel.content</code></strong></td><td style="text-align:center"><strong>150ms</strong> (+ <code>delay: 100</code>)</td><td style="text-align:center"><strong>50ms</strong></td><td style="text-align:center"><strong>-100</strong></td></tr></tbody></table></div>
+<p><strong>Nine of the ten pairs differ by exactly 50ms.</strong> Only <code>panel.content</code> differs by 100ms, and its entry carries a 100ms delay — the content fades in while the panel is still sliding so that both finish together, and on exit the content goes first (50ms) before the panel leaves (200ms).</p>
+<p><strong>Every entry duration is either 150 or 250ms.</strong> Small, incidental elements (<code>avatar</code> · <code>label</code> · <code>popup</code>) take 150ms; things that cover the screen or occupy a large area (<code>blanket</code> · <code>modal</code> · <code>panel</code> · <code>sidenav</code> · <code>spotlight</code> · <code>flag</code>) take 250ms.</p>
+<p>The cross-system comparison is in <code>patterns/motion.md</code>.</p>
+<h4 id="state-transitions-the-properties-are-named-too">State transitions — the properties are named too</h4>
+<pre class="md-code"><code class="language-js">motion.listitem.hovered = {
+  duration: 50, curve: '…out.practical',
+  properties: ['background-color', 'border-color', 'color', 'text-decoration-color'],
+}
+motion.button.hovered = {
+  duration: 150, curve: '…out.practical',
+  properties: ['background-color', 'border-color'],
+}</code></pre>
+<p><strong><code>listitem</code> hover is 50ms and <code>button</code> hover 150ms</strong> — a threefold difference. <code>listitem</code> transitions four properties (text colour and underline colour included); <code>button</code> transitions two.</p>
+<p>Only <code>panel.content.enter</code> carries a <code>delay: 100</code> — the content appears after the panel has opened.</p>
+<p><strong>The <code>fill</code> value is <code>backwards</code> on entry and <code>forwards</code> on exit, without exception.</strong></p>
+<p><strong>The easing assignment follows a rule too</strong> — entries take the <code>out</code> family and exits the <code>in</code> family. The only exceptions are <code>panel.exit.*</code> (<code>out.bold</code>) and <code>panel.content.exit</code> (<code>out.practical</code>). The <code>bold</code> family is used only on large areas (blanket · modal · spotlight · panel · sidenav · flag).</p>
+<h2 id="components">Components</h2>
+<p>Unverified — the documentation site is blocked by the proxy. The 11 components covered by the motion tokens are listed above.</p>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Motion is tokenised per component.</strong> 68 tokens hold duration, easing, keyframes, transition properties, delay and <code>fill</code> as composite objects. Nothing else in the sample goes to this depth.</li><li><strong>Exits are shorter than entries.</strong> Nine of the ten pairs differ by exactly 50ms; only <code>panel.content</code> differs by 100ms (content disappears before its container).</li><li><strong>The <code>spring</code> easing is defined as a 65-stop CSS <code>linear()</code>.</strong></li><li><strong>The type tokens are CSS <code>font</code> shorthand strings.</strong> There are no individual property tokens, so the size cannot be used on its own.</li><li><strong>The <code>bold</code> weight is 653.</strong> The only non-multiple-of-100 cases in the sample are this and Apple's Semibold (590).</li><li><strong>Line heights are always multiples of 4</strong> (16–36), while the ratios wander between 1.125 and 1.5.</li><li><strong>The brand typeface (Charlie) is separate from the product typeface (Atlassian Sans).</strong></li><li><strong>Background colours are four strength steps × three states.</strong> The names are comparatives (<code>subtle</code> → <code>subtler</code> → <code>subtlest</code>) and the structure is asymmetric, with only <code>bolder</code> on the bold side.</li><li><strong><code>discovery</code> is a first-class state colour.</strong> It stands alongside danger, warning, success and information with 10 tokens each.</li><li><strong>100 chart-specific tokens,</strong> including a 16-colour <code>categorical</code> order.</li><li><strong>Negative spacing is provided.</strong> The second confirmed case after Primer, and in both the negatives mirror the lower part of the positive scale (Atlassian to -32px, Primer to -48px).</li><li><strong><code>radius.tile</code> is 25%.</strong> A ratio-based radius that is not 50% (a circle) but 25%. <strong>It is the only 25% radius among the systems collected.</strong></li><li><strong>Border widths are semantic by state.</strong> <code>border.width.selected</code> and <code>border.width.focused</code> hold the same value (2px) but are separate tokens — in contrast to Primer naming its by size (<code>thin</code>/<code>thick</code>).</li><li><strong>Surface colour and shadow are separate families</strong> (<code>elevation.surface</code> 13 · <code>elevation.shadow</code> 5).</li><li><strong><code>UNSAFE</code> appears in a token name</strong> (<code>utility.UNSAFE.transparent</code>).</li><li><strong>The Figma token files ship on npm.</strong> The package's <code>figma/</code> directory holds 15 JSON files for the design tool.</li><li><strong>Legacy and experimental themes ship alongside.</strong> <code>legacy-light</code> · <code>adg3</code> (older), <code>future</code> · <code>new-input-border</code> · <code>brand-refresh</code> (upcoming). Twelve sets in all.</li><li><strong>There is an <code>increased-contrast</code> theme in both light and dark.</strong> Material 3 is alone in offering a medium contrast (<code>patterns/color.md</code>); Atlassian offers one high-contrast step.</li></ul>
+<h2 id="buttons-in-depth-2026-08-17-the-atlaskitbutton2510-build-output">Buttons in depth (2026-08-17, the <code>@atlaskit/button@25.1.0</code> build output)</h2>
+<p><strong>The old and new buttons coexist in one package</strong>, expressing their dimensions differently:</p>
+<ul class="md-list"><li><strong>old-button</strong>: height <code>32/14em</code> (≈2.28571em) · compact <code>24/14em</code> — <strong>a repeating em decimal</strong> back-computed from an intended 32/24px (the same phenomenon as Garden and Stacks). Padding is the formula <code>gridSize(8) + gridSize/4</code> = 10px.</li><li><strong>new-button</strong>: statically compiled with Compiled (atomic CSS-in-JS) — heights as <strong>direct 32/24px values</strong>, inline padding 12/6px, radius <code>--ds-radius-medium</code> (6px). <strong>A generational handover inside a single package</strong> — the same values moved from an em formula to a token reference.</li><li>The compiled CSS carries <strong>two coexisting <code>--ds-radius-small</code> fallbacks, 3px and 4px</strong> — the intermediate state of the radius-token migration visible in the artefact itself.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li><strong>Two high-contrast themes,</strong> <code>light-increased-contrast</code> and <code>dark-increased-contrast</code>. They hold the same token count as the ordinary themes (466) — an identical structure with different values</li><li><code>border.width.focused</code> is managed as a separate token (2px)</li><li><code>opacity.disabled</code> = 0.4</li><li>No explicit WCAG conformance target was confirmed from the package. There are no contrast-ratio figures in the tokens either</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Documentation: https://atlassian.design</li><li>Package: <code>@atlaskit/tokens@16.7.0</code></li><li>Figma tokens: <code>figma/*.json</code> inside the package (15 files)</li><li>Raw tokens (with values): <code>dist/cjs/artifacts/tokens-raw/*.js</code> (14 files)</li><li><strong>Harvesting note:</strong> <code>figma/atlassian-typography.json</code> holds only families and weights; <strong>the sizes and line heights are in <code>dist/cjs/artifacts/tokens-raw/atlassian-typography.js</code> alone</strong>. Looking only at the Figma JSON makes it appear there is no type scale — an instance of <code>HARVESTING.md</code> lesson 6 (list the files before giving up on a path as not found).</li><li><strong>Open questions:</strong> the component list and dimensions, the licence, and how the <code>light-future</code> / <code>brand-refresh</code> themes differ in value from the current ones</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: npm <code>@atlaskit/tokens@16.7.0</code> → <code>package.json</code> (<code>license</code>). The repository is a Bitbucket mirror, so the LICENSE file could not be read directly</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

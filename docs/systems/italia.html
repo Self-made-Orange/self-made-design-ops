@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design System Italia (design-tokens-italia) — Self-Made DesignOps</title>
+<meta name="description" content="The Italian government — the ninth government sample. The corpus's first government case of tokens distributed in the W3C DTCG draft format ($value /…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/italia.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Design System Italia (design-tokens-italia) — Self-Made DesignOps">
+<meta property="og:description" content="The Italian government — the ninth government sample. The corpus's first government case of tokens distributed in the W3C DTCG draft format ($value /…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/italia.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design System Italia (design-tokens-italia) — Self-Made DesignOps">
+<meta name="twitter:description" content="The Italian government — the ninth government sample. The corpus's first government case of tokens distributed in the W3C DTCG draft format ($value /…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Design System Italia (design-tokens-italia)",
+ "description": "The Italian government — the ninth government sample. The corpus's first government case of tokens distributed in the W3C DTCG draft format ($value /…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/italia.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Design System Italia (design-tokens-italia)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://designers.italia.it"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#colour-the-step-number-is-the-lightness">Colour — the step number is the lightness</a></li><li><a href="#layers-three-dtcg-tiers">Layers — three DTCG tiers</a></li><li><a href="#figures">Figures</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#what-the-three-tiers-actually-hold-semantic-and-specific-2026-08-18">What the three tiers actually hold — semantic and specific (2026-08-18)</a></li><li class="lvl3"><a href="#agreement-with-bootstrap-italia-colours-match-spacing-does-not-compared-against-v2183">Agreement with bootstrap-italia — colours match, spacing does not (compared against v2.18.3)</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-only-the-shape-is-italianised">Buttons — only the shape is Italianised</a></li><li class="lvl3"><a href="#inputs-an-underline-style">Inputs — an underline style</a></li><li class="lvl3"><a href="#modals-bootstrap-widths-different-density-and-scrim">Modals — Bootstrap widths, different density and scrim</a></li><li class="lvl3"><a href="#keyboard-focus-an-achromatic-double-ring-plus-js-input-method-detection">Keyboard focus — an achromatic double ring plus JS input-method detection</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Italian Government (Dipartimento per la trasformazione digitale)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://designers.italia.it" rel="noopener">Official site</a><br><a href="https://github.com/italia/design-tokens-italia" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/italia.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Design System Italia (design-tokens-italia)</span></nav>
+    <h1>Design System Italia (design-tokens-italia)</h1>
+    <p class="doc-lede">Italian Government (Dipartimento per la trasformazione digitale) · government · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The Italian government — the <strong>ninth government sample</strong>. The corpus's first government case of tokens distributed in the <strong>W3C DTCG draft format</strong> (<code>$value</code> / <code>$type</code> / <code>$description</code>), and its colour ramps have <strong>different step numbers per hue</strong> — the numbers are not grades but <strong>measured lightness</strong>, so every ramp is graduated differently.</p>
+<h2 id="colour-the-step-number-is-the-lightness">Colour — the step number is the lightness</h2>
+<pre class="md-code"><code>blue:     20 · 25 · 30 · 40 · 48 · 57 · 67 · 77 · 87 · 97
+seagreen: 10 · 14 · 19 · 24 · 39 · 54 · 69 · 76 · 84 · 92
+gray:     10 · 15 · 25 · 32 · 45 · 64 · 83 · 90 · 96 · 98</code></pre>
+<p><strong>The step numbers differ per ramp.</strong> Rather than a uniform graduation like 100/200/300 (most of the sample), <strong>each colour's lightness value is the step name itself</strong> — <code>blue.40</code> does not mean &quot;roughly the fourth&quot; but a lightness around 40%. You can read the lightness from the number alone, at the cost of losing any &quot;same step&quot; mapping between hues. On GLOSSARY's name-to-value axis, this is a new type: <strong>&quot;the name is the measurement&quot;</strong>. The base blue is <code>blue.40 = #0066cc</code>.</p>
+<h2 id="layers-three-dtcg-tiers">Layers — three DTCG tiers</h2>
+<pre class="md-code"><code>global.json → semantic.json (color · theme · spacing · elevation) → specific.json (per component)</code></pre>
+<p><strong>Using the W3C Design Tokens Community Group draft syntax as-is</strong> is rare in the corpus (<code>$value</code> / <code>$type</code> / <code>$description</code> — every token carries a description field). Among government systems it is the only one.</p>
+<h2 id="figures">Figures</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Axis</th><th>Value</th></tr></thead><tbody><tr><td>Spacing</td><td><strong>twelve steps of 4px multiples</strong>, named by the multiplier (<code>1x</code>–<code>24x</code>) — the government edition of Braid-style grid-multiple naming</td></tr><tr><td>Font size</td><td>eleven steps, 12–56px (12·14·16·18·20·24·28·32·40·48·56)</td></tr><tr><td>Line height</td><td><strong>five steps, 110–150%, written as percentages</strong></td></tr><tr><td>Tracking</td><td><code>-1px · -1.3px · -2px</code> — <strong>negative px tracking</strong> (tightening for headings)</td></tr><tr><td>Radii</td><td>smooth 4 / rounded 40 / circle 80 — a three-step jump</td></tr><tr><td>Border</td><td>1 · 2 · 4 · 8px</td></tr><tr><td>Typefaces</td><td><strong>Titillium Web</strong> (sans) · Lora (serif) · Roboto Mono</td></tr></tbody></table></div>
+<ul class="md-list"><li>The spacing reinforces the <strong>government 4px camp</strong> (NHS, USWDS, KRDS, SGDS…), with only GOV.UK's 5px standing apart — eight of the nine government samples are in the 4px family.</li><li>Titillium Web is the Italian government's brand typeface — the same axis as other government-specific typeface programmes (France's Marianne, the Netherlands' and others).</li><li>The tracking is fixed negative px — the second px-tracking sample alongside Persona (±0.2–0.8px), except that this one only tightens.</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The ninth government sample</strong> — the only government adoption of the DTCG format</li><li>Colour step numbers as measured lightness (each ramp graduated differently)</li><li>A <code>$description</code> on every token — descriptions required by the distribution's schema</li><li>4px multiples with multiplier naming for spacing</li><li>Three steps of negative px tracking</li></ul>
+<h2 id="what-the-three-tiers-actually-hold-semantic-and-specific-2026-08-18">What the three tiers actually hold — semantic and specific (2026-08-18)</h2>
+<ul class="md-list"><li><strong>global</strong> — the structural foundation: border · color · font(-size/-leading/-tracking/-weight) · radius · spacing · sizing · shadow. Colours are numeric steps of <code>blue (20–97)</code>, seagreen, slate, gray, red, emerald, orange and teal.</li><li><strong>semantic</strong> — reusable design decisions: <code>color</code> (background/text/border — state pairs moving one notch along the ramp, as in <code>background.primary = {color.blue.40}</code> and <code>-hover = {color.blue.30}</code>), <code>theme</code>, <code>spacing</code> (<strong>t-shirt aliases <code>3xs</code>–<code>3xl</code> all referencing the global multipliers</strong> — 3xs = {1x}, s = {4x}, m = {6x}, l = {8x}, 3xl = {24x}), <code>elevation</code>.</li><li><strong>specific</strong> — exhaustive per-element expressions: <code>heading-1-font-size(-l)</code> · <code>code-font</code> · <code>icon</code> and so on. Responsiveness is folded into the layer as a token suffix (<code>-l</code>).</li><li>The pipeline: Figma (Tokens Studio) → DTCG JSON → Style Dictionary → <code>dist/css/variables.css</code> and <code>dist/scss/_variables.scss</code> (prefixed <code>$it-</code>).</li></ul>
+<h3 id="agreement-with-bootstrap-italia-colours-match-spacing-does-not-compared-against-v2183">Agreement with bootstrap-italia — colours match, spacing does not (compared against v2.18.3)</h3>
+<ul class="md-list"><li>The dependencies include <code>design-tokens-italia ^1.3.3</code>, but <strong>the token import is commented out</strong> — the real values are hard-coded HSL/HSB with the token names alongside in comments (85 places).</li><li>Colour comparison: <code>$primary</code> #0066cc = blue.40 · <code>$red</code> #cc334d = red.50 · <code>$orange</code> #995c00 = orange.30 · <code>$green</code> #008055 = emerald.25 · <code>$gray-100</code>–<code>900</code> = gray.96–10, <strong>all matching</strong>. Four cases in the slate family and others differ by ±1–2 RGB from rounding (conversion error from integer HSL notation) and are <strong>deliberately the same value</strong>.</li><li>The spacing <strong>does not reflect the token scheme</strong> — it is Bootstrap's default map as-is ($spacer 1rem, 0/4/8/16/24/48px). That fits a 4px grid, but the 12/20/32/40/56/64/96px utilities of the 1x–24x steps are missing.</li><li>In summary: <strong>colours are value-synchronised with the tokens (manually), spacing is not, and direct consumption is disabled.</strong></li></ul>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>The token distribution has no components, but <strong>bootstrap-italia@2.18.3 is the component layer</strong>, and <code>design-react-kit@5.10.0</code> (49 React components, peer <code>bootstrap-italia ^2.18.0</code>) consumes the same CSS. Below is measured from <code>dist/css/bootstrap-italia.min.css</code> plus <code>src/scss</code> — since it is a BS5 theme, <strong>only what changed from the Bootstrap defaults</strong> is recorded.</p>
+<h3 id="buttons-only-the-shape-is-italianised">Buttons — only the shape is Italianised</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">bootstrap-italia</th><th style="text-align:center">BS5 default</th></tr></thead><tbody><tr><td>font-weight</td><td style="text-align:center"><strong>600</strong></td><td style="text-align:center">400</td></tr><tr><td>border</td><td style="text-align:center"><strong>0</strong></td><td style="text-align:center">1px</td></tr><tr><td>Radius</td><td style="text-align:center"><strong>4px</strong> (by setting $border-radius itself to 4px)</td><td style="text-align:center">6px</td></tr><tr><td>Padding</td><td style="text-align:center">.375/.75rem</td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li>A <code>$btn-text-transform: uppercase</code> variable exists but <strong>is not applied to the compiled <code>.btn</code></strong> — the 29 uppercase instances are all in localised components such as the cookie bar.</li></ul>
+<h3 id="inputs-an-underline-style">Inputs — an underline style</h3>
+<ul class="md-list"><li><code>border: 0</code> · <code>border-radius: 0 !important</code> · min-height <strong>2.5rem (40px)</strong>.</li><li>The actual border is <strong>only on the bottom, 1px</strong> — an exhaustive <code>input[type=…]</code> selector applies <code>border-bottom: 1px solid hsl(210,17%,44%)</code>. <code>.input-group-text</code> and appended <code>.btn</code> take the same underline, so <strong>the whole group runs as one continuous line</strong>. The furthest departure from the Bootstrap default (a border on four sides plus a radius).</li><li>The focus ring: <code>0 0 0 .25rem rgba(0,102,204,.25)</code> — <strong>the base blue blue.40 (#0066cc) at 25% alpha</strong>. The token base colour reappears in focus.</li></ul>
+<h3 id="modals-bootstrap-widths-different-density-and-scrim">Modals — Bootstrap widths, different density and scrim</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">bootstrap-italia</th><th style="text-align:center">BS5 default</th></tr></thead><tbody><tr><td>Width</td><td style="text-align:center">500px (sm 300 / lg 800 / xl 1140)</td><td style="text-align:center">same</td></tr><tr><td>Radius</td><td style="text-align:center">8px</td><td style="text-align:center">same</td></tr><tr><td>Inner padding</td><td style="text-align:center"><strong>1.5rem</strong></td><td style="text-align:center">1rem</td></tr><tr><td>Header border</td><td style="text-align:center"><strong>0</strong></td><td style="text-align:center">1px</td></tr><tr><td>Backdrop</td><td style="text-align:center">opacity <strong>0.8</strong></td><td style="text-align:center">0.5</td></tr></tbody></table></div>
+<h3 id="keyboard-focus-an-achromatic-double-ring-plus-js-input-method-detection">Keyboard focus — an achromatic double ring plus JS input-method detection</h3>
+<ul class="md-list"><li><code>:focus:not([data-focus-mouse=true])</code> → <code>box-shadow: 0 0 0 2px #fff, 0 0 0 5px #000</code> — <strong>a 2px white gap plus 3px black</strong>. The achromatic edition of the same double-ring structure as GOV.UK (yellow) and WMN (purple) (<code>$focus-outline-color-in: $white / -out: $black</code>).</li><li><strong>It does not draw a ring for mouse-click focus</strong> — <code>track-focus.js</code> marks the input method as <code>data-focus-mouse</code> (a <code>track-focus</code> bundle ships with design-react-kit too).</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified (a theme axis exists in the semantic layer — details unexamined). The keyboard/mouse focus separation and the achromatic double ring are covered in the component deep-dive above.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Related distributions: <code>bootstrap-italia</code> (a BS5 theme) · <code>design-react-kit</code> · <code>design-angular-kit</code> — a structure where three framework packages share these tokens. Button, input and modal measurements are in the &quot;Component deep-dive&quot; section above (2026-08-18)</li><li><del>Detail on the semantic/specific tiers and agreement with bootstrap-italia values</del> → <strong>resolved (2026-08-18)</strong> — see &quot;What the three tiers actually hold&quot; above</li><li><strong>Still to confirm:</strong> dark and high-contrast themes, and the accessibility target (do not presume EU EN 301 549 — unverified)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

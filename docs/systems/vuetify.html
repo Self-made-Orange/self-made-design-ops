@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vuetify — Self-Made DesignOps</title>
+<meta name="description" content="The corpus's first Vue sample — the recorded bias of &amp;quot;zero systems in the Vue and Svelte families&amp;quot; is broken here. A framework of the Material…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/vuetify.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Vuetify — Self-Made DesignOps">
+<meta property="og:description" content="The corpus's first Vue sample — the recorded bias of &amp;quot;zero systems in the Vue and Svelte families&amp;quot; is broken here. A framework of the Material…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/vuetify.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vuetify — Self-Made DesignOps">
+<meta name="twitter:description" content="The corpus's first Vue sample — the recorded bias of &amp;quot;zero systems in the Vue and Svelte families&amp;quot; is broken here. A framework of the Material…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Vuetify",
+ "description": "The corpus's first Vue sample — the recorded bias of &quot;zero systems in the Vue and Svelte families&quot; is broken here. A framework of the Material…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/vuetify.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Vuetify",
+  "applicationCategory": "DesignApplication",
+  "url": "https://vuetifyjs.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-scss-variables">Tokens — SCSS variables</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-vbtn-the-geometry-is-a-ratio-formula">Buttons (VBtn) — the geometry is a ratio formula</a></li><li class="lvl3"><a href="#inputs-vfield-no-size-axis-only-density">Inputs (VField) — no size axis, only density</a></li><li class="lvl3"><a href="#dialogs-vdialog-no-width-scale">Dialogs (VDialog) — no width scale</a></li><li class="lvl3"><a href="#tables-vtable-vdatatable-density-compressed-into-two-css-variables">Tables (VTable · VDataTable) — density compressed into two CSS variables</a></li><li class="lvl3"><a href="#navigation-vnavigationdrawer-vtabs-vlist-vbreadcrumbs">Navigation (VNavigationDrawer · VTabs · VList · VBreadcrumbs)</a></li><li class="lvl3"><a href="#feedback-valert-vsnackbar-vbadge">Feedback (VAlert · VSnackbar · VBadge)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Open source (Vuetify)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://vuetifyjs.com" rel="noopener">Official site</a><br><a href="https://github.com/vuetifyjs/vuetify" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/vuetify.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Vuetify</span></nav>
+    <h1>Vuetify</h1>
+    <p class="doc-lede">Open source (Vuetify) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p><strong>The corpus's first Vue sample</strong> — the recorded bias of &quot;zero systems in the Vue and Svelte families&quot; is broken here. A framework of the Material lineage that builds its spacing from a <code>$spacer: 4px</code> seed multiplied 0 through 16.</p>
+<h2 id="tokens-scss-variables">Tokens — SCSS variables</h2>
+<pre class="md-code"><code class="language-scss">$spacer: 4px !default;           // the same name as Bootstrap's ($spacer: 1rem), a different value
+$font-size-root: 1rem !default;  // 16px
+$border-radius-root: 4px !default;
+$body-font-family: var(--v-font-body, 'Roboto', sans-serif) !default;
+$grid-columns: 12 !default;</code></pre>
+<ul class="md-list"><li><strong><code>$spacer</code> has the same name as Bootstrap's but a value of 4px rather than 16px</strong> — the same idiom, a different seed. The utilities are enumerated <code>ma-0</code> through <code>ma-16</code> (×4px), generating every core value (4/8/16/24/32)</li><li>A 16px body (root) and Roboto — the Material lineage carried straight into the typeface and radius</li><li><code>!default</code> throughout — the same &quot;everything is overridable&quot; contract as Bootstrap</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><code>lib/components/</code> of <code>vuetify@4.1.10</code> — 102 components, each shipping a <code>_variables.scss</code> (the formulas) paired with built CSS (the real values). Measured from VBtn, VField/VInput, VDialog and <code>transitions/dialog-transition.js</code>.</p>
+<h3 id="buttons-vbtn-the-geometry-is-a-ratio-formula">Buttons (VBtn) — the geometry is a ratio formula</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">x-small</th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th><th style="text-align:center">x-large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">20px</td><td style="text-align:center">28px</td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center">44px</td><td style="text-align:center">52px</td></tr><tr><td>min-width</td><td style="text-align:center">36px</td><td style="text-align:center">50px</td><td style="text-align:center">64px</td><td style="text-align:center">78px</td><td style="text-align:center">92px</td></tr><tr><td>inline padding</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td><td style="text-align:center">24px</td></tr><tr><td>type</td><td style="text-align:center">10px</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td><td style="text-align:center">18px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>min-width = height × 16⁄9, padding = height ÷ 2.25</strong> — with <code>$button-width-ratio: math.div(16, 9)</code> and <code>$button-padding-ratio: 2.25</code>, all five sizes derive from formulas (64 = 36×16/9). A <strong>ratio-derived</strong> approach, different from MUI's (line-height-derived heights).</li><li><strong>Five sizes orthogonal to three densities</strong> — density adds 0/−8/−12px to the height (and +12/0/−8 on icon buttons). A measured sample of the Material density system, keeping size and density as independent axes.</li><li>The default variant is <strong>elevated</strong> (with a shadow), radius 4px, weight 500, tracking 0.0071em (= 0.1px/14px) — <strong>exactly M3's label-large specification</strong>, except that <code>$button-text-transform: none</code> <strong>abandons the uppercase tradition.</strong></li><li>State comes from a <code>.v-btn__overlay</code> element plus <code>calc(var(--v-hover-opacity) × var(--v-theme-overlay-multiplier))</code> — <strong>the state layer's opacity is multiplied by a theme factor</strong> (so a dark theme adjusts state intensity through one multiplier). The element-based implementation of the same pattern as eBay's (<code>:after</code> state layer).</li><li>Transition <code>0.28s cubic-bezier(0.4, 0, 0.2, 1)</code>, disabled opacity 0.26.</li></ul>
+<h3 id="inputs-vfield-no-size-axis-only-density">Inputs (VField) — no size axis, only density</h3>
+<ul class="md-list"><li>Heights 56/48/40px (default/comfortable/compact) — <strong>the button has five sizes × three densities while the input has only the three densities.</strong> Two components in the same system with different variant axes.</li><li>outlined border 1px → 2px on focus, type 16px, radius 4px, filled overlay 4%.</li><li>The label shrinks by scale 0.75 (floating, as in MUI) — except <strong>the notch is assembled not from a fieldset but from the borders of three divs</strong>, <code>__outline__start</code> (12px) / <code>__notch</code> / <code>__end</code>. The second implementation of the same Material notch.</li></ul>
+<h3 id="dialogs-vdialog-no-width-scale">Dialogs (VDialog) — no width scale</h3>
+<ul class="md-list"><li><strong>There are no fixed width steps at all</strong> — just <code>width: calc(100% − 48px)</code> with a 24px margin; max-width is the consumer's to specify. A third attitude, after MUI (reused breakpoints) and Cloudscape (five dedicated steps): <strong>having no width scale.</strong></li><li>Scrim <code>#000</code> at 0.32. Content radius 4px, and the shadow is <strong>two composed layers</strong>, key plus ambient (<code>--v-shadow-key-opacity</code> 0.3 / <code>-ambient-</code> 0.15) — M3's elevation grammar.</li><li><strong>The entrance animation is WAAPI (JS), not CSS</strong> — the framework provides a <strong>container-transform (hero) transition</strong> by default, flying from the trigger element's (<code>target</code>) box to the dialog's final position by translate and scale. A 225ms decelerating enter and a 125ms accelerating exit, asymmetric, and <strong>the duration stretches by 1 to 1.5× with the distance travelled</strong> (<code>speed = min(1.5, (distance ratio − 0.12) × 10 + 1)</code>) — the only sample where duration is a function of distance. Under reduced-motion it falls back to a 125/85ms fade.</li></ul>
+<h3 id="tables-vtable-vdatatable-density-compressed-into-two-css-variables">Tables (VTable · VDataTable) — density compressed into two CSS variables</h3>
+<p>Measured from <code>lib/components/VTable/_variables.scss</code> and <code>dist/vuetify.min.css</code> of <code>vuetify@4.1.10</code>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>density</th><th style="text-align:center">header height</th><th style="text-align:center">row height</th></tr></thead><tbody><tr><td>default</td><td style="text-align:center"><strong>56px</strong></td><td style="text-align:center"><strong>52px</strong></td></tr><tr><td>comfortable</td><td style="text-align:center">48px</td><td style="text-align:center">44px</td></tr><tr><td>compact</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center"><strong>36px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Density is just two variables, <code>--v-table-header-height</code> and <code>--v-table-row-height</code>.</strong> The cell padding (<code>0 16px</code>) and type are fixed regardless of density — the minimal implementation, the exact opposite of Cloudscape putting a density axis on 43 tokens.</li><li>The density coefficients are <code>('default': 0, 'comfortable': -2, 'compact': -4)</code>, producing 56→48→40 and 52→44→36 — <strong>an even −8px per step.</strong></li><li><strong>The cell padding is 0 vertical / 16px horizontal</strong> — since the height is set directly with <code>height</code>, no vertical padding is needed. The only case in the collected sample with zero vertical padding.</li><li><strong>The fixed header is <code>box-shadow: inset 0 -1px</code> with <code>z-index: 1</code></strong> (the same solution as Radix Themes and Mantine for avoiding <code>border-collapse</code>, at the lowest z of them all). Fixed columns take <code>z-index: 1</code>, and only the cell where a fixed column meets the fixed header rises to <strong>2</strong>.</li><li><strong>The stripe is not a background colour but a <code>background-image: linear-gradient()</code></strong> (two variants, <code>striped-even</code> / <code>striped-odd</code>). Leaving the background colour empty lets it layer with the selection and hover backgrounds.</li><li><strong>Hover is likewise not a background colour but a <code>td::after</code> overlay</strong> — the same state-layer approach as the button's <code>.v-btn__overlay</code>, applied to the table.</li><li><strong>The sort icon is <code>opacity: 0</code> when unsorted and <code>0.5</code> on hover or focus</strong> (<code>$data-table-header-sort-icon-default-opacity</code> / <code>-hover-opacity</code>). It agrees at the code layer with Carbon's rule that the unsorted arrow appears only on hover. The sort-order badge is 20px (<code>$data-table-header-sort-badge-size</code>).</li><li>The rules are alpha compositions of <code>--v-border-color</code> × <code>--v-border-opacity</code>, in three variants: <code>gridlines-vertical</code> / <code>-horizontal</code> / <code>-all</code>.</li></ul>
+<h3 id="navigation-vnavigationdrawer-vtabs-vlist-vbreadcrumbs">Navigation (VNavigationDrawer · VTabs · VList · VBreadcrumbs)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>drawer width</td><td><strong>256px</strong> (the <code>width</code> prop's default)</td></tr><tr><td>rail (collapsed) width</td><td><strong>56px</strong> (the <code>railWidth</code> default)</td></tr><tr><td>drawer transition</td><td>0.2s, scrim opacity 0.2</td></tr><tr><td>tab list height</td><td><strong>48 / 44 / 36px</strong> (default/comfortable/compact)</td></tr><tr><td>tab min and max width</td><td>90px / 360px</td></tr><tr><td>tab indicator</td><td><strong>2px</strong> (<code>$tab-slider-size</code>), at the bottom when horizontal / the right when vertical</td></tr><tr><td>list item min-height</td><td><strong>40 / 36 / 32px</strong> (three densities) · the one-line variant 48 / 44 / 40</td></tr><tr><td>list item padding</td><td>4px / 16px</td></tr><tr><td>hierarchy indent</td><td><strong>16px</strong> (<code>$list-indent-size</code>, cumulative per level)</td></tr><tr><td>breadcrumb separator padding</td><td>0 8px · item padding 0 4px · container 16/12px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The 56px rail is the widest in the collected sample</strong> (shadcn/ui and Carbon 48 · Cloudscape 52–54 · Semi 60 · Ant 80), presupposing a 24px icon plus 16px on each side.</li><li><strong>The tab indicator swaps its height and width when vertical</strong> — horizontal tabs get <code>height: 2px; bottom: 0</code>, vertical ones <code>width: 2px; top: 0</code>. The same structure as shadcn/ui's horizontal-2px / vertical-2px branch.</li><li><strong>In the <code>inset</code> variant the indicator becomes a background pill rather than a line</strong> (<code>inset: 0; z-index: -1; border-radius: $tab-inset-radius</code>) — underline and pill handled by the same element.</li><li>The breadcrumb has three densities too (<code>0/-1/-2</code>) — the only case in the sample of putting a density axis on a breadcrumb.</li></ul>
+<h3 id="feedback-valert-vsnackbar-vbadge">Feedback (VAlert · VSnackbar · VBadge)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>component</th><th>value</th></tr></thead><tbody><tr><td><strong>Alert</strong> padding</td><td><strong>16px all round</strong> · three densities (<code>0/-1/-2</code>)</td></tr><tr><td>Alert border</td><td>0 by default; <strong>8px</strong> when the <code>border</code> prop is set (<code>$alert-border-thin-width</code>)</td></tr><tr><td>Alert icon</td><td><strong>1.75rem (28px)</strong>, 16px to its right</td></tr><tr><td>Alert title</td><td>the <code>headline-small</code> specification, line height 1.75rem</td></tr><tr><td><strong>Snackbar</strong> width</td><td><strong>min 344px / max 672px</strong>, min-height 48px</td></tr><tr><td>Snackbar padding</td><td><strong>14px 16px</strong> · 8px wrapper margin</td></tr><tr><td>Snackbar enter</td><td>scale <strong>0.8</strong> → 1, elevation 2, z-index <strong>10000</strong></td></tr><tr><td><strong>Badge</strong> height</td><td><strong>1.25rem (20px)</strong>, min-width 20px, radius 10px</td></tr><tr><td>Badge padding / type</td><td>4px 6px · 12px / weight 500</td></tr><tr><td>Badge dot</td><td>9×9px, 1.5px border</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The alert's emphasis border is 8px</strong> — the thickest in the collected sample (Carbon 6px · EUI 3px · Cloudscape 2px · Mantine 1px). The colour is <code>currentColor</code> at opacity 0.38.</li><li><strong>The badge's border is 2px plus <code>scale(1.05)</code></strong> — the border is scaled up so the badge separates from an avatar or icon when laid over one. The only case in the collected sample with a scale correction on a badge.</li><li>The snackbar has <strong>both a minimum (344px) and a maximum width (672px).</strong> Most other samples have a single fixed width (Sonner 356 · PrimeVue 352 · Ant 384).</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Button min-width 16:9 and padding ÷2.25</strong> — ratio formulas rather than a list of dimensions</li><li><strong>Size orthogonal to density</strong> (15 button combinations) while the input has density only — an axis asymmetry</li><li><strong>A hero dialog transition with a distance-dependent duration</strong> — implemented in WAAPI</li><li>The state layer's opacity = the token multiplied by a theme factor</li><li>Following M3's label-large figures while abandoning uppercase — a selective departure from the Material lineage</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The first Vue framework sample</strong> — the first break in the React skew (7 of 7 frameworks)</li><li>Reusing the <code>$spacer</code> name with a changed value — the name/value trap family in <code>GLOSSARY.md</code></li><li>Material-lineage defaults (Roboto, radius 4)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>Confirmed absent (2026-08-18, headless render).</strong></p>
+<p>There is a dedicated accessibility document (<code>/en/features/accessibility/</code>), and yet <strong>it declares no WCAG version or level target.</strong> The documentation is entirely about &quot;what has been implemented&quot;:</p>
+<ul class="md-list"><li><strong>The activator slot passes a11y attributes down.</strong> Pass <code>props</code> through the <code>activator</code> slot scope of <code>v-menu</code>, <code>v-dialog</code> and the rest, and the rendered <code>v-btn</code> automatically receives <code>aria-expanded</code>, <code>aria-haspopup</code> and <code>role=&amp;quot;button&amp;quot;</code>.</li><li><strong><code>v-list-item</code> switches automatically to <code>role=&amp;quot;menuitem&amp;quot;</code> inside a <code>v-menu</code>.</strong></li><li>Keyboard interaction covers every mouse action, and <code>v-menu</code> supports ↑/↓ movement.</li></ul>
+<p>In place of a conformance criterion it links out under &quot;Additional Resources&quot; (W3C WAI · WAI-ARIA Authoring Practices · The A11Y Project).</p>
+<p>The type that <strong>documents techniques (implementation) without a target (declaration)</strong> — the same family as Base Web, except that Base Web provides an axe-core runtime validator while Vuetify handles it through <strong>automatic ARIA injection at the component API level</strong> (classified C — conformance target not published).</p>
+<p>Source: https://vuetifyjs.com/en/features/accessibility/ (render confirmed, 2026-08-18)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack vuetify@4.1.9</code> → <code>lib/styles/settings/</code></li><li>Components in depth: <code>vuetify@4.1.10</code> → <code>lib/components/{VBtn,VField,VInput,VDialog, VOverlay}/</code> plus <code>lib/components/transitions/dialog-transition.js</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>the component list</del> (102), <del>the theme structure</del> (<code>--v-theme-*</code> rgb triplets plus state opacities such as <code>--v-hover-opacity</code> and the <code>--v-theme-overlay-multiplier</code> factor — the deep pass), whether it targets Material 3 (M3 grammar is confirmed — typographic role names like <code>label-large</code>, two-layer shadows — but no official M3 conformance declaration was found), <del>figma_kit and a11y_target</del> (resolved / confirmed absent 2026-08-18)</li><li><strong>Figma kit (resolved 2026-08-18 — <code>figma_kit: true</code>)</strong>: <strong>it is free.</strong> There is a dedicated documentation page, <code>/en/resources/ui-kits/</code>, with three distribution routes — ① <strong>a Figma plugin</strong> (recommended), ② <strong>a Figma Community file</strong> (https://www.figma.com/community/file/1266515419060480209), and ③ <strong>a direct download from the Vuetify Store</strong> (https://store.vuetifyjs.com/products/vuetify-ui-kit-figma → importing <code>vuetify3-ui-light-kit.fig</code> from inside <code>vuetify-figma-ui-kit.zip</code>). As the <code>-light-</code> in the filename suggests, <strong>only a light theme ships.</strong> Source: https://vuetifyjs.com/en/resources/ui-kits/ (render confirmed, 2026-08-18)</li></ul>
+<p>4.1.10 re-verified — no token values changed (2026-08-18)</p>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

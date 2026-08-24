@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shoelace (→ Web Awesome) — Self-Made DesignOps</title>
+<meta name="description" content="A Web Components framework — its spacing has neither 24 nor 32 (jumping 20 → 28 → 36), its radii start at 3px with circle and pill split apart, and its…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/shoelace.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Shoelace (→ Web Awesome) — Self-Made DesignOps">
+<meta property="og:description" content="A Web Components framework — its spacing has neither 24 nor 32 (jumping 20 → 28 → 36), its radii start at 3px with circle and pill split apart, and its…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/shoelace.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shoelace (→ Web Awesome) — Self-Made DesignOps">
+<meta name="twitter:description" content="A Web Components framework — its spacing has neither 24 nor 32 (jumping 20 → 28 → 36), its radii start at 3px with circle and pill split apart, and its…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Shoelace (→ Web Awesome)",
+ "description": "A Web Components framework — its spacing has neither 24 nor 32 (jumping 20 → 28 → 36), its radii start at 3px with circle and pill split apart, and its…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/shoelace.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Shoelace (→ Web Awesome)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://shoelace.style"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-sl-button-they-use-the-input-height-tokens-directly">Buttons (&lt;sl-button&gt;) — they use the input height tokens directly</a></li><li class="lvl3"><a href="#inputs-sl-input">Inputs (&lt;sl-input&gt;)</a></li><li class="lvl3"><a href="#dialogs-and-drawers-animation-lives-in-a-js-registry-not-css">Dialogs and drawers — animation lives in a JS registry, not CSS</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Font Awesome (Cory LaViska)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://shoelace.style" rel="noopener">Official site</a><br><a href="https://github.com/shoelace-style/shoelace" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/shoelace.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Shoelace (→ Web Awesome)</span></nav>
+    <h1>Shoelace (→ Web Awesome)</h1>
+    <p class="doc-lede">Font Awesome (Cory LaViska) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>A Web Components framework — its spacing has <strong>neither 24 nor 32</strong> (jumping 20 → 28 → 36), its radii start at 3px with <code>circle</code> and <code>pill</code> split apart, and its input heights are <strong>30/40/50px</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<pre class="md-code"><code>spacing:   2 · 4 · 8 · 12 · 16 · 20 · 28 · 36 · 48 · 72   (no 24, 32 or 64)
+font-size: 10 · 12 · 14 · 16 · 20 · 24 · 36 · 48 · 72
+radius:    small 3px · medium 4 · large 8 · x-large 16 + circle 50% · pill 9999px
+input-height: small 30 · medium 40 · large 50px</code></pre>
+<ul class="md-list"><li><strong>It removed 24 and 32 from the core at the same time</strong> — ten t-shirt-named steps, with 28 following 20. It joins the core-departure list (Garden, Grommet, Mantine…) and is likewise a <strong>name-based scale</strong> (re-confirming the tendency noted in <code>tokens/scales.md</code>)</li><li>The smallest radius is <strong>3px</strong> — the odd-number radius camp (Helios, Semi, Naive)</li><li><code>circle</code> and <code>pill</code> coexist — the pill/perfect-circle split (<code>GLOSSARY.md</code>)</li><li>The 30px small input height matches Blueprint's default control</li><li>Dark is a separate file, <code>dist/themes/dark.css</code></li></ul>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Parsed from <code>dist/chunks/*.js</code> in the same <code>@shoelace-style/shoelace@2.20.1</code> (Lit <code>css</code> tagged templates — styles serialised into the JS chunks), with variables resolved all the way through <code>dist/themes/light.css</code>. 58 component directories confirmed.</p>
+<h3 id="buttons-sl-button-they-use-the-input-height-tokens-directly">Buttons (<code>&amp;lt;sl-button&amp;gt;</code>) — they use the input height tokens directly</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>30px</strong> (<code>--sl-input-height-small</code>)</td><td style="text-align:center">40px</td><td style="text-align:center">50px</td></tr><tr><td>Type</td><td style="text-align:center"><strong>12px</strong></td><td style="text-align:center">14px</td><td style="text-align:center">16px</td></tr><tr><td>Line height</td><td style="text-align:center"><code>calc(height − 2px border)</code> = 28px</td><td style="text-align:center">38px</td><td style="text-align:center">48px</td></tr><tr><td>Label horizontal padding</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td>Radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are no button height tokens</strong> — it uses <code>--sl-input-height-*</code> directly. The 30/40/50px alignment between buttons and inputs is enforced by a single token (whereas Backpack writes the same values out in two places).</li><li><strong>The line height is back-computed as height − 2px border</strong> — the same technique as Garden. A single line of text is centred vertically by line height, so there is no vertical padding.</li><li><strong>The button type (12/14/16) is one step smaller than the input type (14/16/20)</strong> — <code>--sl-button-font-size-*</code> references <code>--sl-font-size-*</code> one notch down.</li><li><strong>The weight token is named <code>semibold</code> but its value is 500</strong> — in most systems 500 is medium and semibold is 600. A name-value mismatch sample.</li><li>The radius is <strong>4px at every size</strong> — all three of <code>--sl-input-border-radius-small/medium/large</code> point at <code>--sl-border-radius-medium</code> (4px), a triple alias over one value. The token layer's 3/4/8/16px scale goes unused on controls.</li><li>The <code>pill</code> variant puts <strong>the height token straight into the radius</strong> (30/40/50px), and <code>circle</code> uses 50% with width = height. Transitions are <strong>50ms</strong> (<code>--sl-transition-x-fast</code>) — among the shortest in the sample.</li><li>Variants: default · primary · success · neutral · warning · danger × standard/outline, plus text. Hover shifts the step 600 → 500 and active returns to<ol class="md-list"><li>Disabled is opacity 0.5.</li></ol></li></ul>
+<h3 id="inputs-sl-input">Inputs (<code>&amp;lt;sl-input&amp;gt;</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height (fixed)</strong></td><td style="text-align:center">30px</td><td style="text-align:center">40px</td><td style="text-align:center">50px</td></tr><tr><td>Type</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td>Radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr></tbody></table></div>
+<ul class="md-list"><li>Buttons use min-height while inputs use a fixed height — the same asymmetry as Backpack.</li><li>The inner <code>input</code> element's height is separately set to <code>calc(height − 2px border)</code>.</li></ul>
+<h3 id="dialogs-and-drawers-animation-lives-in-a-js-registry-not-css">Dialogs and drawers — animation lives in a JS registry, not CSS</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th><code>&amp;lt;sl-dialog&amp;gt;</code></th><th><code>&amp;lt;sl-drawer&amp;gt;</code></th></tr></thead><tbody><tr><td>Width</td><td><code>--width: 31rem</code> (496px)</td><td><code>--size: 25rem</code> (400px)</td></tr><tr><td>Ceiling</td><td><code>calc(100% − 36px)</code></td><td>max 100%</td></tr><tr><td>Radius</td><td>4px</td><td>—</td></tr><tr><td>Header/body/footer padding</td><td>20px each (<code>--sl-spacing-large</code>)</td><td>same</td></tr><tr><td>Entry</td><td>scale 0.8→1 plus fade, <strong>250ms ease</strong></td><td>a 100% translate slide from its edge, 250ms ease</td></tr><tr><td>z-index</td><td>800</td><td>700</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Every entry and exit is registered as keyframes in a <code>setDefaultAnimation()</code> JS registry</strong> (the Web Animations API), and consumers can swap them per component and per direction with <code>setAnimation()</code>. A structure unique in the sample, diverging from the CSS-keyframes camp (Backpack, Radix). Even RTL-specific keyframes (<code>rtlKeyframes</code>) are in the registry.</li><li><strong>Refuse-to-close feedback is built in</strong> — <code>denyClose</code>: a scale 1→1.02→1 pulse over 250ms. (The shake shown when an overlay click cannot close it is part of the default animation set.)</li><li>Width and padding are exposed as <strong>host custom properties</strong> — <code>--width</code>, <code>--size</code>, <code>--header-spacing</code> and so on. An unprefixed consumer-override contract, the exact opposite signal from Backpack's <code>--bpk-private-*</code>.</li><li>The scrim is <strong>grey rather than black</strong>: <code>hsl(240 3.8% 46.1% / 33%)</code>.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Buttons borrow the input height tokens</strong> — a single source for control heights (30/40/50px)</li><li><strong>Vertical centring by back-computed line height</strong> (height − 2px) — the Garden camp</li><li><strong>A radius scale exists but every control is 4px</strong> — three aliases converging on one value</li><li><strong>A JS animation registry</strong> plus a built-in denyClose pulse — unique in the sample</li><li><strong><code>semibold</code> = 500</strong> — a name-value mismatch</li><li>50ms transitions — among the shortest control state transitions in the sample</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>24 and 32 absent together</strong> — a core-departure combination unique in the sample</li><li>Distributed as Web Components (Lit) — the same camp as Siemens iX, with no wrappers</li><li>The tops of the font and spacing scales converge on the same values (36/48/72)</li><li>Being reworked into Web Awesome following the Font Awesome acquisition (per the npm description)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @shoelace-style/shoelace@2.20.1</code> → <code>dist/themes/light.css</code></li><li>Component deep-dive: the button, input, dialog and drawer style chunks in the same package's <code>dist/chunks/</code>, plus the <code>setDefaultAnimation</code> registrations (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>the component list</del> (resolved 2026-08-18 — 58 directories), how the tokens change after Web Awesome, and the accessibility target</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

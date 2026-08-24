@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forma 36 — Self-Made DesignOps</title>
+<meta name="description" content="Contentful's (a headless CMS) system. Font sizes have a density variant (-high), the z-index is a power of ten, and notification sits above tooltip.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/forma-36.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Forma 36 — Self-Made DesignOps">
+<meta property="og:description" content="Contentful's (a headless CMS) system. Font sizes have a density variant (-high), the z-index is a power of ten, and notification sits above tooltip.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/forma-36.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forma 36 — Self-Made DesignOps">
+<meta name="twitter:description" content="Contentful's (a headless CMS) system. Font sizes have a density variant (-high), the z-index is a power of ten, and notification sits above tooltip.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Forma 36",
+ "description": "Contentful's (a headless CMS) system. Font sizes have a density variant (-high), the z-index is a power of ten, and notification sits above tooltip.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/forma-36.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Forma 36",
+  "applicationCategory": "DesignApplication",
+  "url": "https://f36.contentful.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#typography-a--high-twin-for-every-size">Typography — a -high twin for every size</a></li><li class="lvl3"><a href="#z-index-powers-of-ten">z-index — powers of ten</a></li><li class="lvl3"><a href="#spacing-nine-steps">Spacing — nine steps</a></li><li class="lvl3"><a href="#content-widths">Content widths</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-density-reaches-down-into-the-dimensions">Buttons — density reaches down into the dimensions</a></li><li class="lvl3"><a href="#inputs-textinput-a-fixed-height-written-as-a-minmax-pair">Inputs (TextInput) — a fixed height written as a min=max pair</a></li><li class="lvl3"><a href="#modals-three-steps-plus-arbitrary-widths-allowed">Modals — three steps plus arbitrary widths allowed</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li><li><a href="#drift-record-621-630-2026-08-23">Drift record — 6.2.1 → 6.3.0 (2026-08-23)</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Contentful</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://f36.contentful.com" rel="noopener">Official site</a><br><a href="https://github.com/contentful/forma-36" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/forma-36.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Forma 36</span></nav>
+    <h1>Forma 36</h1>
+    <p class="doc-lede">Contentful · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Contentful's (a headless CMS) system. <strong>Font sizes have a density variant (<code>-high</code>)</strong>, the z-index is <strong>a power of ten</strong>, and <code>notification</code> sits above <code>tooltip</code>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="typography-a--high-twin-for-every-size">Typography — a <code>-high</code> twin for every size</h3>
+<pre class="md-code"><code class="language-json">&quot;font-size-l&quot;:       &quot;1rem&quot;,       // 16px
+&quot;font-size-l-high&quot;:  &quot;0.875rem&quot;,   // 14px
+&quot;font-size-m&quot;:       &quot;0.875rem&quot;,   // 14px
+&quot;font-size-m-high&quot;:  &quot;0.75rem&quot;,    // 12px
+&quot;font-size-xl&quot;:      &quot;1.25rem&quot;,    // 20px
+&quot;font-size-xl-high&quot;: &quot;1.125rem&quot;    // 18px</code></pre>
+<p><strong>Every step name carries a <code>-high</code> variant one size smaller</strong> (the line heights follow the same structure). Where Cloudscape puts density on the axis of <strong>spacing</strong> values, F36 puts it on <strong>font size</strong> — F36 is the only typographic density variant in the sample.</p>
+<p>Sizes: 12 · 14 · 16 · 20 · 24 · 36 · 48 (plus the <code>-high</code> twins). There are two line-height ratio tokens, <code>default</code> 1.5 and <code>condensed</code> 1.25.</p>
+<p>Three weights — 400 / 500 / <strong>600 (<code>demi-bold</code>)</strong>. There is no 700 (bold) — a gap running the opposite way from Radix Themes (which has no 600).</p>
+<p>The font stack is <strong>Geist Sans / Geist Mono</strong> — a non-Vercel system using Vercel's typeface.</p>
+<h3 id="z-index-powers-of-ten">z-index — powers of ten</h3>
+<pre class="md-code"><code class="language-json">&quot;z-index-negative&quot;: -1,   &quot;z-index-default&quot;: 1,
+&quot;z-index-workbench-header&quot;: 10,  &quot;z-index-modal&quot;: 100,
+&quot;z-index-dropdown&quot;: 1000, &quot;z-index-tooltip&quot;: 10000,
+&quot;z-index-notification&quot;: 100000</code></pre>
+<p><strong>−1 · 0 · 1 · 10 · 100 · 1000 · 10⁴ · 10⁵ — a logarithmic scale.</strong> The fourth z-index scheme in the sample:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Approach</th><th>System</th></tr></thead><tbody><tr><td>Purpose names, steps of 100 (13 steps)</td><td>Chakra UI</td></tr><tr><td>The 1000s, with background/content adjacency (+5)</td><td>Bootstrap</td></tr><tr><td>Ordinals 1–5</td><td>Open Props</td></tr><tr><td><strong>10ⁿ logarithmic</strong></td><td><strong>F36</strong></td></tr></tbody></table></div>
+<p><strong><code>modal</code> (100) sits below <code>dropdown</code> (1000)</strong> — the reverse of Chakra (dropdown 1000 &lt; modal 1400). <strong><code>notification</code> (10⁵) above <code>tooltip</code> (10⁴)</strong> likewise reverses Chakra (toast 1700 &lt; tooltip 1800). <strong>Demonstrating that the layering order itself differs per system.</strong></p>
+<p>There are +1 adjacency pairs too, like <code>modal-content: 101</code> (the same idea as Bootstrap's +5).</p>
+<h3 id="spacing-nine-steps">Spacing — nine steps</h3>
+<pre class="md-code"><code>4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80</code></pre>
+<p>It holds the entire core <code>4/8/16/24/32</code>. There is no 20, and the top runs 48/64/80. A conventional composition.</p>
+<h3 id="content-widths">Content widths</h3>
+<pre class="md-code"><code class="language-json">&quot;content-width-default&quot;: &quot;1280px&quot;,  &quot;content-width-text&quot;: &quot;768px&quot;</code></pre>
+<p><strong>It tokenises the reading width (768px) in px</strong> — unlike Open Props (<code>45ch</code>) and USWDS (<code>64ex</code>), which use character-relative units, this is <strong>an absolute value</strong>. The third line-width sample, and the third unit.</p>
+<h2 id="components">Components</h2>
+<p><code>@contentful/f36-components</code> (a meta package) re-exports <del>an unverified list</del> → <strong>40 <code>@contentful/f36-*</code> subpackages</strong> (accordion · autocomplete · button · card · datepicker · forms · menu · modal · notification · pill · progress-stepper · table · tooltip and others, as of 6.19.0). → buttons, inputs and modals are in the deep-dive below.</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>The dist JS (emotion object styles) of <code>@contentful/f36-button@6.19.0</code> · <code>f36-forms@6.19.0</code> · <code>f36-modal@6.19.0</code> was parsed, with token references resolved through <code>@contentful/f36-tokens@6.2.1</code>. That also settled two radii (<code>small</code> 4px · <code>medium</code> 6px), three durations (0.1/0.2/0.3s) and two easings (<code>ease-in-out</code> · <code>cubic-bezier(0.13, 0.62, 0.11, 0.99)</code>).</p>
+<h3 id="buttons-density-reaches-down-into-the-dimensions">Buttons — density reaches down into the dimensions</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">tiny</th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center">24px</td><td style="text-align:center">32px</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>At high density</td><td style="text-align:center">24px</td><td style="text-align:center"><strong>24px</strong></td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center">—</td></tr><tr><td>Padding</td><td style="text-align:center">4×12</td><td style="text-align:center">4×12 (high 4×8)</td><td style="text-align:center">8×16 (high 8×12)</td><td style="text-align:center">8×16</td></tr><tr><td>Type</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center"><strong>20px / 32px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Four heights, 24/32/40/48 — stepping by 8px.</strong> tiny and small <strong>reuse spacing tokens as heights</strong> (<code>spacingL</code> = 24 · <code>spacingXl</code> = 32), while 40 and 48 are absent from the spacing scale and pinned as <strong>literal <code>&amp;quot;40px&amp;quot;</code> and <code>&amp;quot;48px&amp;quot;</code></strong>.</li><li><strong><code>density=&amp;quot;high&amp;quot;</code> folds each size down a step</strong> — small → 24, medium → 32. The padding, the type (through the <code>-high</code> twins) and the radius (6 → 4px) shrink with it. The token layer's typographic density variant (<code>-high</code>) <strong>realised as component dimensions</strong>, with density arriving not through a prop but through a <strong><code>useDensity()</code> React context</strong> (the same tree-wide switch as Ring UI's <code>ControlsHeightContext</code>).</li><li><strong>It imposes a maximum width instead of a minimum</strong> — <strong>max-width 240px</strong> (except full-width).</li><li>Radius 6px (<code>borderRadiusMedium</code>), weight 500, a 1px border plus a <code>0 1px 0 rgba(25,37,50,.08)</code> shadow.</li><li>Only large jumps to 20px/32px type — the other three steps sit at 12–14px with a 1.25 line-height ratio.</li><li>Transition: background over <strong>0.1s ease-in-out</strong> (<code>transitionDurationShort</code>).</li></ul>
+<h3 id="inputs-textinput-a-fixed-height-written-as-a-minmax-pair">Inputs (TextInput) — a fixed height written as a min=max pair</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th></tr></thead><tbody><tr><td><strong>min-height = max-height</strong></td><td style="text-align:center">32px (high 24)</td><td style="text-align:center"><strong>40px</strong> (high 32)</td></tr><tr><td>Padding</td><td style="text-align:center">8px</td><td style="text-align:center"><strong>10px</strong> × 12px (high 8px)</td></tr><tr><td>Type</td><td style="text-align:center">14px / 20px (high 12/16)</td><td style="text-align:center">same</td></tr><tr><td>Radius</td><td style="text-align:center">6px (high 4px)</td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>It declares the same value for min-height and max-height</strong> — a fixed height expressed as a min/max pair.</li><li><strong>The vertical padding is a literal 10px</strong> — a hand value outside the 4px grid (the spacing tokens).</li><li>The label is a separate block (FormLabel) — 14px, <strong>500</strong>, 8px below. The required marker follows as a 400-weight grey &quot;(required)&quot;. At high density the label shrinks to 12px too.</li><li>Border 1px <code>gray300</code>; focus is a <code>blue600</code> border plus the <code>glowPrimary</code> shadow token.</li></ul>
+<h3 id="modals-three-steps-plus-arbitrary-widths-allowed">Modals — three steps plus arbitrary widths allowed</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th>Width</th></tr></thead><tbody><tr><td>small</td><td>400px</td></tr><tr><td>medium (default)</td><td><strong>520px</strong></td></tr><tr><td>large</td><td>700px</td></tr><tr><td>fullWidth / zen / fullscreen</td><td>100vw</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The width prop accepts an arbitrary value directly</strong> (<code>width: map[size] || size</code>) — the steps are defaults offered rather than enforced.</li><li>Entry: <strong>scale(0.85)→1 plus an overlay fade over 0.2s ease-in-out</strong> (<code>transitionDurationDefault</code> · <code>transitionEasingDefault</code>) — through react-modal's afterOpen/beforeClose class transitions.</li><li>Radius 6px, overlay <code>rgba(12,20,28,0.75)</code> plus a 48px viewport margin (<code>spacing2Xl</code>).</li><li>Padding: header <code>16 16 16 24</code> plus a 1px bottom border · body 16×24 · footer 12×16.</li><li>The maximum dimension is <code>calc(100vw − 1rem×(100/16))</code> — <strong>a rem conversion correction</strong> dividing by <code>fontBaseDefault</code> (16), written into the code.</li><li>z-index 100 (modal) and 101 (modal-content) — the token layer's logarithmic scale as-is.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>The density axis running through every layer</strong> — tokens (the <code>-high</code> twins) → type → padding → min-height → radius, delivered by React context (<code>useDensity</code>)</li><li><strong>A 240px max-width on buttons</strong> — a constraint running the opposite way from the min-width camp (MUI's 64px and others)</li><li><strong>Spacing tokens reused as heights</strong>, with the off-scale values (40/48) as literals</li><li><strong>Arbitrary modal widths allowed</strong> — the three steps are only defaults</li><li>An input's fixed height written as a min=max pair</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>A typographic density variant</strong> (the <code>-high</code> twins) — unique in the sample. The third place the density axis is applied (Cloudscape's spacing · Radix's global <code>--scaling</code> · <strong>F36's font size</strong>)</li><li><strong>A logarithmic z-index scale</strong>, with the layering order reversed against Chakra in several places</li><li><strong>There is no 700 among the weights</strong> (400/500/600)</li><li><strong>The reading-width token is in px</strong> (768px) — a third unit, distinct from <code>ch</code> and <code>ex</code></li><li>The Geist font stack — adopting another company's (Vercel's) typeface</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.1 Level AA (resolved 2026-08-18).</strong> Source: <code>f36.contentful.com/guidelines/accessibility</code> — &quot;Contentful aims to meet WCAG 2.1 Level AA standards&quot;. It states that automated testing runs alongside.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @contentful/f36-tokens@6.2.1</code> → <code>dist/json/</code> (border-radius · box-shadows · colors · spacing · transitions · typography · z-index)</li><li>Component deep-dive: <code>@contentful/f36-{button,forms,modal}@6.19.0</code> → <code>dist/index.js</code> (emotion object styles), resolved against f36-tokens (2026-08-18)</li><li>Licence: both the package's <code>license</code> field and LICENSE.md say <strong>MIT</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> the colour structure, <del>radii, transition values and the component list</del> (resolved 2026-08-18 — see the deep-dive and components sections)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: github contentful/forma-36 → <code>LICENSE.md</code> (matching the npm <code>@contentful/f36-tokens@6.2.1</code> metadata)</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>f36.contentful.com</code> — from the Figma Community page you copy <strong>three libraries</strong> (Components · Tokens · Assets) and register them as team libraries</li></ul>
+<h2 id="drift-record-621-630-2026-08-23">Drift record — 6.2.1 → 6.3.0 (2026-08-23)</h2>
+<p>Every JSON file recorded under <code>dist/json/</code> is <strong>byte-identical</strong>. One file was added: <code>colors/colors-input.json</code>, holding two tokens — <code>color-text-input-value: #111B2B</code> and <code>color-text-input-placeholder: #67728A</code>. The input text colours thus move into their own file. <strong>No recorded value changed.</strong> <code>@contentful/f36-button</code> 6.19.0 → 6.20.0 differs only in <code>package.json</code>.</p>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

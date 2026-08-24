@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Garden — Self-Made DesignOps</title>
+<meta name="description" content="Zendesk's design system. Its spacing has neither 16px nor 24px — the multipliers run 1·2·3·5·8·10·12, making it the system that broke the corpus's last…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/garden.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Garden — Self-Made DesignOps">
+<meta property="og:description" content="Zendesk's design system. Its spacing has neither 16px nor 24px — the multipliers run 1·2·3·5·8·10·12, making it the system that broke the corpus's last…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/garden.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Garden — Self-Made DesignOps">
+<meta name="twitter:description" content="Zendesk's design system. Its spacing has neither 16px nor 24px — the multipliers run 1·2·3·5·8·10·12, making it the system that broke the corpus's last…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Garden",
+ "description": "Zendesk's design system. Its spacing has neither 16px nor 24px — the multipliers run 1·2·3·5·8·10·12, making it the system that broke the corpus's last…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/garden.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Garden",
+  "applicationCategory": "DesignApplication",
+  "url": "https://garden.zendesk.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-17",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-seven-multipliers-on-a-base-of-4-with-no-4-or-6">Spacing — seven multipliers on a base of 4, with no ×4 or ×6</a></li><li class="lvl3"><a href="#derived-scales-all-multiples-of-base">Derived scales — all multiples of BASE</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#opacity-twelve-even-steps">Opacity — twelve even steps</a></li><li class="lvl3"><a href="#borders-shadows">Borders · shadows</a></li><li><a href="#components">Components</a></li><li class="lvl3"><a href="#button-deep-dive-2026-08-17-zendeskgardencss-buttons901-the-classic-css-line">Button deep-dive (2026-08-17, @zendeskgarden/css-buttons@9.0.1 — the classic CSS line)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Zendesk</b><br>full harvest · web<br>verified 2026-08-17<br><a href="https://garden.zendesk.com" rel="noopener">Official site</a><br><a href="https://github.com/zendeskgarden/react-components" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/garden.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Garden</span></nav>
+    <h1>Garden</h1>
+    <p class="doc-lede">Zendesk · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Zendesk's design system. <strong>Its spacing has neither 16px nor 24px</strong> — the multipliers run <code>1·2·3·5·8·10·12</code>, making it <strong>the system that broke the corpus's last unbroken value (16px)</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-seven-multipliers-on-a-base-of-4-with-no-4-or-6">Spacing — seven multipliers on a base of 4, with no ×4 or ×6</h3>
+<pre class="md-code"><code class="language-js">const BASE = 4;
+space = {
+  xxs: 4,    // ×1
+  xs:  8,    // ×2
+  sm:  12,   // ×3
+  md:  20,   // ×5  ← skips ×4 (16)
+  lg:  32,   // ×8  ← skips ×6 (24)
+  xl:  40,   // ×10
+  xxl: 48,   // ×12
+}</code></pre>
+<p><strong>The multipliers list as <code>1 · 2 · 3 · 5 · 8 · 10 · 12</code>.</strong> The first five (1, 2, 3, 5, 8) match the Fibonacci sequence — whether that is deliberate is not stated in the source.</p>
+<p><strong><code>md</code> (the middle value) is 20 rather than 16.</strong> It is <strong>the first system among 30 spacing samples with no 16px</strong>, and it lacks 24px as well (the second to omit 24, after Mantine).</p>
+<p>The <strong>same values</strong> were confirmed in the legacy <code>@zendeskgarden/css-variables@7.0.0</code> (dormant since 2024) and the current <code>react-theming@9.15.7</code> (updated 2026-07) — this is not a relic of an old package.</p>
+<h3 id="derived-scales-all-multiples-of-base">Derived scales — all multiples of <code>BASE</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Family</th><th>Definition</th><th>Values</th></tr></thead><tbody><tr><td>Line height</td><td><code>BASE × 4–8, 11</code></td><td>16 · 20 · 24 · 28 · 32 · 44</td></tr><tr><td>Radii</td><td><code>BASE/2 · BASE · BASE×2</code></td><td><strong>2 · 4 · 8</strong></td></tr><tr><td><strong>Breakpoints</strong></td><td><code>BASE × 144/192/248/300</code></td><td>576 · 768 · <strong>992</strong> · 1200</td></tr></tbody></table></div>
+<p><strong>Even the breakpoints are multiples of the 4px base.</strong> The same family as USWDS deriving breakpoints from its spacing map, except that Garden makes them <strong>from a single multiplier</strong>. With multipliers that large — <code>992 = 4×248</code> — the values are effectively arbitrary, but the notation is multiplication.</p>
+<p>576/768/992/1200 are <strong>exactly Bootstrap's breakpoints</strong> (<code>systems/bootstrap.md</code> — sm through xl).</p>
+<h3 id="typography">Typography</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th style="text-align:center">Value</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">10px</td></tr><tr><td><code>sm</code></td><td style="text-align:center">12px</td></tr><tr><td><strong><code>md</code></strong></td><td style="text-align:center"><strong>14px</strong></td></tr><tr><td><code>lg</code></td><td style="text-align:center">18px</td></tr><tr><td><code>xl</code></td><td style="text-align:center">22px</td></tr><tr><td><code>xxl</code></td><td style="text-align:center">26px</td></tr><tr><td><code>xxxl</code></td><td style="text-align:center">36px</td></tr></tbody></table></div>
+<p><strong>The 14px body camp</strong> (<code>patterns/typography.md</code> — the eighth). <strong>16px is missing from the font scale too</strong> — 14 is followed by 18.</p>
+<p><strong>The legacy css-variables has monospace-specific sizes</strong> — <code>11 / 13 / 17px</code>, <strong>each 1px smaller than the proportional sizes (12/14/18).</strong> The only sample to keep a separate size scale for monospace (Helios shares the sizes and changes only the typeface). No size separation is confirmed in the current theming package, so it may be legacy-only.</p>
+<p>Weights cover all nine steps from 100 to 900; icon sizes come in three (12/16/26).</p>
+<h3 id="opacity-twelve-even-steps">Opacity — twelve even steps</h3>
+<pre class="md-code"><code>100: 0.08 → 1200: 0.96  (steps of 0.08)</code></pre>
+<p><strong>The finest opacity scale in the sample</strong> (denser than Gestalt's <code>--opacity-0~500</code>). Being 0.08 × n, the names (<code>100</code>–<code>1200</code>) are proportional to the values.</p>
+<h3 id="borders-shadows">Borders · shadows</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Family</th><th>Values</th></tr></thead><tbody><tr><td>Border width</td><td>1 · <strong>3px</strong></td></tr><tr><td>Shadow width</td><td>1 · 2 · 3px</td></tr><tr><td>Shadow</td><td><strong>a function</strong> — <code>xs: color =&amp;gt; \</code>0 0 0 1px ${color}\``</td></tr></tbody></table></div>
+<p><strong>The border widths are 1 and 3</strong> — there is no 2px. The only composition of its kind in the sample.</p>
+<p><strong>The shadow tokens are functions rather than values.</strong> They take a colour as an argument and assemble the result — the same purpose as Open Props recomposing through <code>--shadow-color</code> / <code>--shadow-strength</code> CSS variables, achieved by Garden through a <strong>JS function call</strong>.</p>
+<h2 id="components">Components</h2>
+<p>Distributed split across the <code>@zendeskgarden/react-*</code> packages.</p>
+<h3 id="button-deep-dive-2026-08-17-zendeskgardencss-buttons901-the-classic-css-line">Button deep-dive (2026-08-17, <code>@zendeskgarden/css-buttons@9.0.1</code> — the classic CSS line)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">default</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td>Height</td><td style="text-align:center">32</td><td style="text-align:center"><strong>40</strong></td><td style="text-align:center">48px</td></tr><tr><td>Type</td><td style="text-align:center">12</td><td style="text-align:center">14</td><td style="text-align:center">14px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center"><code>.91667em</code></td><td style="text-align:center"><code>1.07143em</code></td><td style="text-align:center"><code>1.35714em</code></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The horizontal padding is a repeating decimal in em</strong> — <code>1.07143em</code> = 15px ÷ 14px. Traces of back-computing an intended px value into em (the same phenomenon as Stacks's repeating rem decimals and Atlassian's <code>32/14em</code>, the third sample). It carries the side effect that changing the type size grows the padding with it.</li><li><code>line-height = height − 2px</code> — back-computing the border's share (identical to Mantine's line-height back-computation).</li><li>Radius 4px, a <code>--pill</code> variant at 9999px, icon-only at a 40px square.</li><li>This package is the classic CSS line while the current one is styled-components (react-*) — used here to trace the values' lineage.</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>There is no 16px in the spacing.</strong> The first among 30 samples, which brought <strong>the count of spacing values with no exception to zero</strong> (<code>tokens/scales.md</code>)</li><li><strong>The multipliers are 1·2·3·5·8·10·12</strong> — a curated list omitting ×4, ×6, ×7, ×9 and ×11</li><li><strong>The middle value <code>md</code> is 20px</strong> — the slot most systems give to 16px</li><li><strong>Even the breakpoints are notated as BASE multiplications</strong> — the values match Bootstrap</li><li><strong>The font scale has no 16 either</strong> (14 → 18)</li><li><strong>Monospace sizes are 1px smaller than the proportional ones</strong> (confirmed in the legacy package)</li><li><strong>Borders are 1 and 3px</strong> — the only composition without 2px</li><li><strong>Shadows are functions taking a colour</strong></li><li><strong>Twelve opacity steps of 0.08</strong> — the most in the sample</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>No stated target confirmed. The opacity and shadow structure (the <code>0 0 0 Npx</code> used for focus rings) reads as being used for focus expression, but no specification figures are in the source.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Documentation: https://garden.zendesk.com (blocked by the proxy)</li><li>Tokens: <code>npm pack @zendeskgarden/react-theming@9.15.7</code> → <code>dist/index.cjs.js</code></li><li>Legacy CSS variables: <code>@zendeskgarden/css-variables@7.0.0</code> (dormant since 2024)</li><li><strong>Still to confirm:</strong> the colour palette (the <code>palette</code> / <code>colors</code> structure), the component list, the licence, and whether the current package has monospace sizes</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github zendeskgarden/react-components → <code>LICENSE.md</code> (matching the npm <code>@zendeskgarden/react-theming@9.15.7</code> metadata)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

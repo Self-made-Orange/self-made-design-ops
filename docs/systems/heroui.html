@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HeroUI (formerly NextUI) — Self-Made DesignOps</title>
+<meta name="description" content="A Tailwind plugin-style framework — it adds an inset white edge to shadows in dark mode, and sets hover opacity differently per mode, .8 in light and .9…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/heroui.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="HeroUI (formerly NextUI) — Self-Made DesignOps">
+<meta property="og:description" content="A Tailwind plugin-style framework — it adds an inset white edge to shadows in dark mode, and sets hover opacity differently per mode, .8 in light and .9…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/heroui.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HeroUI (formerly NextUI) — Self-Made DesignOps">
+<meta name="twitter:description" content="A Tailwind plugin-style framework — it adds an inset white edge to shadows in dark mode, and sets hover opacity differently per mode, .8 in light and .9…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "HeroUI (formerly NextUI)",
+ "description": "A Tailwind plugin-style framework — it adds an inset white edge to shadows in dark mode, and sets hover opacity differently per mode, .8 in light and .9…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/heroui.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "HeroUI (formerly NextUI)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.heroui.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-three-layouts-defaultlightdark">Tokens — three layouts (default/light/dark)</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons">Buttons</a></li><li class="lvl3"><a href="#inputs">Inputs</a></li><li class="lvl3"><a href="#modals">Modals</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>HeroUI</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.heroui.com" rel="noopener">Official site</a><br><a href="https://github.com/heroui-inc/heroui" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/heroui.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>HeroUI (formerly NextUI)</span></nav>
+    <h1>HeroUI (formerly NextUI)</h1>
+    <p class="doc-lede">HeroUI · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>A Tailwind plugin-style framework — it <strong>adds an <code>inset</code> white edge to shadows in dark mode</strong>, and sets <strong>hover opacity differently per mode, .8 in light and .9 in dark</strong>. Its radii are <strong>8, 12 and 14px</strong>, an odd-numbered top that does not sit on a 4px grid.</p>
+<h2 id="tokens-three-layouts-defaultlightdark">Tokens — three layouts (default/light/dark)</h2>
+<pre class="md-code"><code class="language-js">defaultLayout = {
+  dividerWeight: '1px', disabledOpacity: '.5',
+  fontSize:   { tiny .75rem · small .875 · medium 1 · large 1.125 },
+  lineHeight: { tiny 1rem · small 1.25 · medium 1.5 · large 1.75 },
+  radius:     { small 8px · medium 12px · large 14px },
+  borderWidth:{ small 1 · medium 2 · large 3 },
+  boxShadow:  { small · medium · large — three-layer combinations }
+}
+lightLayout = { hoverOpacity: '.8' }
+darkLayout  = { hoverOpacity: '.9', boxShadow: { … with an inset white edge added } }</code></pre>
+<ul class="md-list"><li><strong>Dark shadows gain an <code>inset 0 0 1px rgb(255 255 255 / 0.15)</code></strong> — on a dark background a shadow alone does not reveal a surface's edge, so <strong>an inner white hairline</strong> is added. A different solution to the same problem as shadcn/ui (which switches borders to alpha in dark), and <strong>putting a highlight inside the shadow is unique in the sample</strong></li><li><strong>Hover opacity differs per mode</strong> (light .8 / dark .9) — compensating for the same transparency reading stronger on a dark background. The only sample to tune the intensity of a state expression per mode</li><li><strong>Radii 8/12/14px</strong> — a top (14) off the 4px grid, with <code>small</code> already at 8px. Among the roundest of the recent frameworks' large-radius tendency (compared with Mantine and shadcn)</li><li>Shadows are <strong>three-layer combinations</strong> (spread + shadow + a 1px outline) — one layer more than the Digital Agency's two</li><li>Only four size names, <code>tiny</code> through <code>large</code> — the smallest family among the frameworks</li></ul>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured from the tailwind-variants (tv) definitions in the 46 files of <code>@heroui/theme@2.4.26</code>'s <code>dist/components/*.js</code> — styles are distributed as <strong>arrays of Tailwind class strings</strong> rather than CSS, and the values resolve through the layout tokens (text-small = 14px, rounded-medium = 12px and so on).</p>
+<h3 id="buttons">Buttons</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">md</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">32px</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">24px</td></tr><tr><td>min-width</td><td style="text-align:center"><strong>64px</strong></td><td style="text-align:center">80px</td><td style="text-align:center">96px</td></tr><tr><td>Type</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td></tr><tr><td>Radius</td><td style="text-align:center">8px</td><td style="text-align:center"><strong>12px</strong></td><td style="text-align:center">14px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The radius grows with size, 8 → 12 → 14px</strong> — the full generalisation of what Backpack does with inputs (8 → 12), where a size variant changes the radius too. With md already at 12px, its default button is among the roundest in the sample.</li><li><strong><code>scale(0.97)</code> on press</strong> — <code>data-[pressed=true]:scale-[0.97]</code>, compressing the button by 3% through a GPU transform. A rare sample expressing press <strong>geometrically</strong> rather than by colour. Transitions are a uniform <strong>250ms ease</strong> with a <code>motion-reduce</code> exception.</li><li>Seven variants (solid · bordered · light · flat · faded · shadow · ghost) crossed with six colours — tv compoundVariants expand this into a <strong>42-cell matrix</strong>.</li><li>The 64px min-width matches MUI.</li><li>Focus: on <code>data-focus-visible</code>, a 2px outline with a 2px offset, coloured by the <code>focus</code> token (blue-500) — React Aria's data-attribute state vocabulary used directly as selectors.</li></ul>
+<h3 id="inputs">Inputs</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">md</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">32px</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>Radius</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The height and radius progressions match the button's</strong> (32/40/48 plus 8/12/14).</li><li>The default variant is <strong>flat</strong> — filled with <code>bg-default-100</code>, <strong>no border</strong>. Hover goes to 200 and focus back to 100 — a minimalism where focus is signalled only by a background differential.</li><li>The bordered variant's focus border is <strong>default-foreground (an achromatic foreground)</strong> rather than primary. A departure from the focus-equals-brand-colour convention (Naive, Prime and others).</li><li>The underlined variant is a Material underline animation, with an <code>after</code> pseudo-element growing from <strong>width 0 to 100%</strong> from the centre.</li><li>It has <strong>ten slots</strong> (base · label · mainWrapper · inputWrapper · innerWrapper · input · clearButton · helperWrapper · description · errorMessage) — tv's slot system distributing classes across one component's entire DOM.</li></ul>
+<h3 id="modals">Modals</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>Value</th></tr></thead><tbody><tr><td>Width</td><td>xs 320 to 5xl 1024 plus full — <strong>ten steps</strong> (default md <strong>448px</strong>)</td></tr><tr><td>Radius</td><td>default lg = <strong>14px</strong></td></tr><tr><td>Padding</td><td>header/footer 24/16px · body 24/8px</td></tr><tr><td>Scrim</td><td>default <code>bg-overlay/50</code> (black 50%) · a <strong>blur variant</strong> = backdrop-blur plus /30</td></tr><tr><td>Motion variables</td><td>mobile slide-exit <strong>80px</strong> / desktop <strong>scale-exit 103%</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The widths are Tailwind's <code>max-w-*</code> scale as-is, in ten steps</strong> — it inherits the utility scale rather than having a dedicated width scale (the Tailwind edition of MUI's &quot;reuse the breakpoints&quot;, in contrast with Cloudscape's five steps and Semi's three). The default 448px sits in the same 440s convergence band as Semi's 448 and MUI's 444.</li><li><strong>The default placement, auto, means bottom-aligned on mobile</strong> (items-end) and centred from sm — the same component transforms between <strong>a bottom sheet and a centre modal</strong> depending on viewport. On exit, mobile slides 80px down while desktop <strong>grows to 103%</strong> as it disappears — the opposite direction from the shrinking exits of most samples (Semi 0.7, Naive 0.9, Prime 0.93).</li><li>Three backdrops, transparent / opaque / <strong>blur</strong> — a rare sample where a blurred scrim is a first-class variant.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Heights 32/40/48 plus radii 8/12/14, with buttons and inputs progressing identically</strong> — the radius is size-dependent</li><li><strong><code>scale(0.97)</code> on press</strong> — geometric press feedback</li><li>Input focus as an achromatic border (bordered) or a background differential (flat) — a departure from brand-colour focus</li><li>Ten Tailwind-inherited modal widths plus <strong>automatic mobile bottom-sheet conversion</strong></li><li><strong>An exit that grows (103%)</strong> — the reverse of most samples' shrinking exits</li><li>A blur backdrop as a first-class variant</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>An inset white highlight in dark shadows</strong> — unique in the sample</li><li><strong>Hover opacity separated per mode</strong> (.8/.9) — unique in the sample</li><li>Radii 8/12/14 — off-grid, large</li><li>Three-layer shadow combinations</li><li>Distributed as a Tailwind plugin (<code>plugin.js</code>) — the same inheritance camp as shadcn and Skeleton</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @heroui/theme@2.4.26</code> → <code>dist/default-layout.js</code></li><li>Component deep-dive: the same package's <code>dist/components/{button,input,modal}.js</code> plus <code>dist/plugin.js</code> (focus and overlay colours) (2026-08-18)</li><li><strong>Still to confirm:</strong> the colour palette (partly confirmed — focus = blue-500, overlay = #000; the full ramps are unexamined), spacing (presumed inherited from Tailwind — unverified), <del>the component list</del> (resolved 2026-08-18 — <strong>46</strong> tv modules measured in <code>dist/components</code>), and when the rename from NextUI happened</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>heroui.com</code> → <code>figma.com/community/file/1546526812159103429</code></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

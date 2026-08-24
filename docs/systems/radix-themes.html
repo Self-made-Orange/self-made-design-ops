@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radix Themes — Self-Made DesignOps</title>
+<meta name="description" content="A style layer laid over Radix Primitives. A theme is defined as a combination of five axes (accent colour · gray · density · radius · panel background)…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/radix-themes.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Radix Themes — Self-Made DesignOps">
+<meta property="og:description" content="A style layer laid over Radix Primitives. A theme is defined as a combination of five axes (accent colour · gray · density · radius · panel background)…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/radix-themes.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Radix Themes — Self-Made DesignOps">
+<meta name="twitter:description" content="A style layer laid over Radix Primitives. A theme is defined as a combination of five axes (accent colour · gray · density · radius · panel background)…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Radix Themes",
+ "description": "A style layer laid over Radix Primitives. A theme is defined as a combination of five axes (accent colour · gray · density · radius · panel background)…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/radix-themes.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Radix Themes",
+  "applicationCategory": "DesignApplication",
+  "url": "https://radix-ui.com/themes"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#the-theme-axes-five-data--attributes">The theme axes — five data-* attributes</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#two-multipliers---scaling-and---radius-factor">Two multipliers — --scaling and --radius-factor</a></li><li class="lvl3"><a href="#spacing-nine-steps">Spacing — nine steps</a></li><li class="lvl3"><a href="#typography-nine-steps-with-step-8-at-35px">Typography — nine steps, with step 8 at 35px</a></li><li class="lvl3"><a href="#colour-24-steps-per-hue">Colour — 24 steps per hue</a></li><li class="lvl3"><a href="#shadow-computed-with-color-mix">Shadow — computed with color-mix()</a></li><li class="lvl3"><a href="#cursors-the-only-tokenised-ones-in-the-sample">Cursors — the only tokenised ones in the sample</a></li><li class="lvl3"><a href="#containers-four-steps">Containers — four steps</a></li><li><a href="#component-heights-reusing-the-spacing-tokens">Component heights — reusing the spacing tokens</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>WorkOS</b><br>full harvest · web<br>verified 2026-08-18<br><a href="https://radix-ui.com/themes" rel="noopener">Official site</a><br><a href="https://github.com/radix-ui/themes" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/radix-themes.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Radix Themes</span></nav>
+    <h1>Radix Themes</h1>
+    <p class="doc-lede">WorkOS · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>A style layer laid over Radix Primitives. <strong>A theme is defined as a combination of five axes</strong> (accent colour · gray · density · radius · panel background), and <strong>even cursors and component heights are tokenised.</strong></p>
+<h2 id="the-theme-axes-five-data--attributes">The theme axes — five <code>data-*</code> attributes</h2>
+<pre class="md-code"><code class="language-html">&lt;Theme accentColor=&quot;blue&quot; grayColor=&quot;slate&quot; scaling=&quot;100%&quot; radius=&quot;medium&quot; panelBackground=&quot;translucent&quot;&gt;</code></pre>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>attribute</th><th>values</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td><code>data-accent-color</code></td><td>amber · blue · bronze · brown · crimson · cyan · gold · grass · gray · green · indigo · iris · jade · lime · mint · orange · pink · plum · purple · red · ruby · sky · teal · tomato · violet · yellow</td><td style="text-align:center"><strong>26</strong></td></tr><tr><td><code>data-gray-color</code></td><td>mauve · olive · sage · sand · slate (plus automatic matching)</td><td style="text-align:center"><strong>5</strong></td></tr><tr><td><code>data-scaling</code></td><td>90% · 95% · 100% · 105% · 110%</td><td style="text-align:center"><strong>5</strong></td></tr><tr><td><code>data-radius</code></td><td>none · small · medium · large · full</td><td style="text-align:center"><strong>5</strong></td></tr><tr><td><code>data-panel-background</code></td><td>solid · translucent</td><td style="text-align:center"><strong>2</strong></td></tr></tbody></table></div>
+<p><strong>That is 26 × 5 × 5 × 5 × 2 = 6,500 combinations.</strong> The opposite direction from Material 3 shipping 32 finished themes — Radix Themes <strong>ships the axes and combines them at runtime.</strong></p>
+<p><strong>The grey family is chosen independently of the accent.</strong> Radix Themes is the only system in the sample that exposes the achromatic family as a user-selectable axis.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="two-multipliers---scaling-and---radius-factor">Two multipliers — <code>--scaling</code> and <code>--radius-factor</code></h3>
+<pre class="md-code"><code class="language-css">--space-4:  calc(16px * var(--scaling));
+--font-size-3: calc(16px * var(--scaling));
+--radius-3: calc(6px * var(--scaling) * var(--radius-factor));</code></pre>
+<p><strong>Only radius is multiplied twice.</strong> Spacing and type size take <code>--scaling</code> alone.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th><code>data-radius</code></th><th style="text-align:center"><code>--radius-factor</code></th><th style="text-align:center"><code>--radius-full</code></th><th style="text-align:center"><code>--radius-thumb</code></th></tr></thead><tbody><tr><td><code>none</code></td><td style="text-align:center">0</td><td style="text-align:center">0px</td><td style="text-align:center">0.5px</td></tr><tr><td><code>small</code></td><td style="text-align:center">0.75</td><td style="text-align:center">0px</td><td style="text-align:center">0.5px</td></tr><tr><td><code>medium</code></td><td style="text-align:center">1</td><td style="text-align:center">0px</td><td style="text-align:center">9999px</td></tr><tr><td><code>large</code></td><td style="text-align:center">1.5</td><td style="text-align:center">0px</td><td style="text-align:center">9999px</td></tr><tr><td><code>full</code></td><td style="text-align:center">1.5</td><td style="text-align:center"><strong>9999px</strong></td><td style="text-align:center">9999px</td></tr></tbody></table></div>
+<p><strong><code>large</code> and <code>full</code> share a multiplier</strong> (1.5). The only difference is <code>--radius-full</code> — fully circular elements (pill buttons, avatars) activate only at <code>full</code>.</p>
+<p><strong><code>none</code> sets the multiplier to 0, taking every radius to 0.</strong> It neutralises the tokens by multiplication rather than deleting them.</p>
+<p><code>--radius-thumb</code> swings between 0.5px and 9999px — it is reserved for slider and progress thumbs.</p>
+<h3 id="spacing-nine-steps">Spacing — nine steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value (at 100%)</th></tr></thead><tbody><tr><td><code>--space-1</code></td><td style="text-align:center">4px</td></tr><tr><td><code>--space-2</code></td><td style="text-align:center">8px</td></tr><tr><td><code>--space-3</code></td><td style="text-align:center">12px</td></tr><tr><td><code>--space-4</code></td><td style="text-align:center">16px</td></tr><tr><td><code>--space-5</code></td><td style="text-align:center">24px</td></tr><tr><td><code>--space-6</code></td><td style="text-align:center">32px</td></tr><tr><td><code>--space-7</code></td><td style="text-align:center">40px</td></tr><tr><td><code>--space-8</code></td><td style="text-align:center">48px</td></tr><tr><td><code>--space-9</code></td><td style="text-align:center">64px</td></tr></tbody></table></div>
+<p>Increments: <strong>+4 / +4 / +4 / +8 / +8 / +8 / +8 / +16.</strong> It includes all of <code>4/8/16/24/32</code> and has no 20px.</p>
+<h3 id="typography-nine-steps-with-step-8-at-35px">Typography — nine steps, with step 8 at 35px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">size</th><th style="text-align:center">body line height</th><th style="text-align:center">heading line height</th><th style="text-align:center">tracking</th></tr></thead><tbody><tr><td><code>1</code></td><td style="text-align:center">12</td><td style="text-align:center">16</td><td style="text-align:center">16</td><td style="text-align:center">+0.0025em</td></tr><tr><td><code>2</code></td><td style="text-align:center">14</td><td style="text-align:center">20</td><td style="text-align:center">18</td><td style="text-align:center">0em</td></tr><tr><td><code>3</code></td><td style="text-align:center">16</td><td style="text-align:center">24</td><td style="text-align:center">22</td><td style="text-align:center">0em</td></tr><tr><td><code>4</code></td><td style="text-align:center">18</td><td style="text-align:center">26</td><td style="text-align:center">24</td><td style="text-align:center">-0.0025em</td></tr><tr><td><code>5</code></td><td style="text-align:center">20</td><td style="text-align:center">28</td><td style="text-align:center">26</td><td style="text-align:center">-0.005em</td></tr><tr><td><code>6</code></td><td style="text-align:center">24</td><td style="text-align:center">30</td><td style="text-align:center">30</td><td style="text-align:center">-0.00625em</td></tr><tr><td><code>7</code></td><td style="text-align:center">28</td><td style="text-align:center">36</td><td style="text-align:center">36</td><td style="text-align:center">-0.0075em</td></tr><tr><td><code>8</code></td><td style="text-align:center"><strong>35</strong></td><td style="text-align:center">40</td><td style="text-align:center">40</td><td style="text-align:center">-0.01em</td></tr><tr><td><code>9</code></td><td style="text-align:center">60</td><td style="text-align:center">60</td><td style="text-align:center">60</td><td style="text-align:center">-0.025em</td></tr></tbody></table></div>
+<p><strong>Step 8 is 35px.</strong> After 12 · 14 · 16 · 18 · 20 · 24 · 28 comes neither 32 nor 36 but <strong>35</strong>. Odd body sizes appear elsewhere in the sample — Apple iOS (17pt), Helios (13px), Seed Design (11/13/15px) — but <strong>an odd number as large as 35 belongs to Radix Themes alone.</strong></p>
+<p><strong>Body and heading line heights are separate.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th style="text-align:center">step</th><th style="text-align:center">body</th><th style="text-align:center">heading</th><th style="text-align:center">difference</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">16</td><td style="text-align:center">16</td><td style="text-align:center">0</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">20</td><td style="text-align:center">18</td><td style="text-align:center"><strong>-2</strong></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">24</td><td style="text-align:center">22</td><td style="text-align:center"><strong>-2</strong></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">26</td><td style="text-align:center">24</td><td style="text-align:center"><strong>-2</strong></td></tr><tr><td style="text-align:center">5</td><td style="text-align:center">28</td><td style="text-align:center">26</td><td style="text-align:center"><strong>-2</strong></td></tr><tr><td style="text-align:center">6–9</td><td style="text-align:center">30 · 36 · 40 · 60</td><td style="text-align:center">30 · 36 · 40 · 60</td><td style="text-align:center">0</td></tr></tbody></table></div>
+<p><strong>Only at the small steps (2–5) is the heading line height 2px tighter.</strong> From step 6 up they are identical.</p>
+<p>Tracking is <strong>positive only at step 1</strong> (+0.0025em), 0 at 2 and 3, and increasingly negative from step 4. A third curve again, different from Material 3 (growing more positive as the type gets smaller) and Apple (a U shape) (<code>patterns/typography.md</code>).</p>
+<p>Four weights: <code>light</code> 300 · <code>regular</code> 400 · <code>medium</code> 500 · <code>bold</code> 700. <strong>There is no 600 (semibold).</strong></p>
+<p><code>--heading-font-size-adjust: 1</code> — a multiplier that corrects the size when a separate heading typeface is specified.</p>
+<h3 id="colour-24-steps-per-hue">Colour — 24 steps per hue</h3>
+<p>One hue is <strong>12 opaque steps, <code>1</code>–<code>12</code>, plus 12 alpha steps, <code>a1</code>–<code>a12</code> = 24.</strong></p>
+<pre class="md-code"><code>--blue-1 … --blue-12       opaque
+--blue-a1 … --blue-a12     alpha</code></pre>
+<p><strong>The same approach as Seed Design precomputing an <code>-alpha-</code> family</strong> (<code>patterns/color.md</code>). Radix Themes applies it <strong>to every hue without exception.</strong></p>
+<p><code>--accent-*</code> is an alias pointing at the chosen accent — <code>--accent-9: var(--blue-9)</code>, with <code>--accent-a9</code> mapped the same way.</p>
+<p><strong>There is P3 gamut support.</strong> <code>styles.css</code> references <code>display-p3</code> <strong>1,579 times</strong>, redefining the colours inside <code>@supports (color: color(display-p3 …))</code>. Radix Themes is the only system in the sample to keep a P3 alternative palette at the token level.</p>
+<p>There are <strong>2,973</strong> colour literal declarations in total (light/dark × opaque/alpha × sRGB/P3).</p>
+<h3 id="shadow-computed-with-color-mix">Shadow — computed with <code>color-mix()</code></h3>
+<pre class="md-code"><code class="language-css">--shadow-2: 0 0 0 1px color-mix(in oklab, var(--gray-a3), var(--gray-3) 25%),
+            0 0 0 0.5px var(--black-a1), 0 1px 1px 0 var(--gray-a2),
+            0 2px 1px -1px var(--black-a1), 0 1px 3px 0 var(--black-a1);</code></pre>
+<p>Six steps (<code>--shadow-1</code> to <code>--shadow-6</code>), which <strong>use the mixed value only in browsers that support <code>color-mix(in oklab, …)</code></strong> and otherwise fall back to <code>--gray-a3</code> (an <code>@supports</code> branch).</p>
+<p><code>--shadow-1</code> consists only of <code>inset</code> — it is for a pressed surface.</p>
+<p><strong>The shadows reference the grey family tokens.</strong> Change <code>data-gray-color</code> and the shadow's tint follows.</p>
+<h3 id="cursors-the-only-tokenised-ones-in-the-sample">Cursors — the only tokenised ones in the sample</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>default</th></tr></thead><tbody><tr><td><code>--cursor-button</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-link</code></td><td><code>pointer</code></td></tr><tr><td><code>--cursor-checkbox</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-radio</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-switch</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-menu-item</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-slider-thumb</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-slider-thumb-active</code></td><td><code>default</code></td></tr><tr><td><code>--cursor-disabled</code></td><td><code>not-allowed</code></td></tr></tbody></table></div>
+<p><strong>Buttons are <code>default</code>; only links are <code>pointer</code>.</strong> No other system in the sample was found to expose cursors as tokens.</p>
+<h3 id="containers-four-steps">Containers — four steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>--container-1</code></td><td style="text-align:center">448px</td></tr><tr><td><code>--container-2</code></td><td style="text-align:center">688px</td></tr><tr><td><code>--container-3</code></td><td style="text-align:center">880px</td></tr><tr><td><code>--container-4</code></td><td style="text-align:center">1136px</td></tr></tbody></table></div>
+<p>The increments are irregular, <strong>+240 / +192 / +256</strong>, and they do not take <code>--scaling</code>.</p>
+<h2 id="component-heights-reusing-the-spacing-tokens">Component heights — reusing the spacing tokens</h2>
+<pre class="md-code"><code class="language-css">--base-button-height: var(--space-5);  /* size 1 → 24px */
+--base-button-height: var(--space-6);  /* size 2 → 32px */
+--base-button-height: var(--space-7);  /* size 3 → 40px */
+--base-button-height: var(--space-8);  /* size 4 → 48px */</code></pre>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th style="text-align:center"><code>size</code></th><th style="text-align:center">height</th><th>token referenced</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center">24px</td><td><code>--space-5</code></td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">32px</td><td><code>--space-6</code></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">40px</td><td><code>--space-7</code></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">48px</td><td><code>--space-8</code></td></tr></tbody></table></div>
+<p><strong>There is no separate height scale.</strong> The spacing tokens become the heights directly.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>system</th><th>component heights</th></tr></thead><tbody><tr><td>Mantine</td><td>a dedicated scale (30/36/42/50/60)</td></tr><tr><td>shadcn/ui</td><td>Tailwind classes (24/32/36/40)</td></tr><tr><td><strong>Radix Themes</strong></td><td><strong>reused spacing tokens</strong> (24/32/40/48)</td></tr></tbody></table></div>
+<p>Only Radix Themes is <strong>an even 8px progression.</strong></p>
+<p>Some components compute their radius in <code>em</code>:</p>
+<pre class="md-code"><code class="language-css">border-radius: calc((0.5px + 0.2em) * var(--radius-factor));   /* line 8273 */
+border-radius: calc(var(--radius-factor) * 0.35em);            /* line 10756 */</code></pre>
+<p><strong>A radius proportional to the type size</strong>, in cases that do not use the <code>--radius-N</code> steps.</p>
+<p>Progress and Slider pick the larger of the two approaches with <code>max()</code>:</p>
+<pre class="md-code"><code class="language-css">border-radius: max(calc(var(--radius-factor) * var(--progress-height) / 3),
+                   calc(var(--radius-factor) * var(--radius-thumb)));</code></pre>
+<h2 id="components">Components</h2>
+<p><strong>Fifty</strong> (by <code>*.props.tsx</code>):</p>
+<p>alert-dialog · aspect-ratio · avatar · badge · blockquote · box · button · callout · card · checkbox · checkbox-cards · checkbox-group · code · container · context-menu · data-list · dialog · dropdown-menu · em · flex · grid · heading · hover-card · icon-button · inset · kbd · link · popover · progress · quote · radio · radio-cards · radio-group · scroll-area · section · segmented-control · select · separator · skeleton · slider · spinner · strong · switch · tab-nav · table · tabs · text · text-area · text-field · tooltip</p>
+<p><code>em</code> · <code>strong</code> · <code>quote</code> · <code>blockquote</code> · <code>code</code> · <code>kbd</code> are components — <strong>inline text elements provided as components.</strong></p>
+<p><code>checkbox-cards</code> and <code>radio-cards</code> exist separately from <code>checkbox</code> and <code>radio</code>.</p>
+<p><code>theme-panel</code> is included in the source — a development panel for adjusting the five theme axes in the browser.</p>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A theme is defined as a combination of five axes</strong> (26 × 5 × 5 × 5 × 2 = 6,500). The opposite approach from Material 3's &quot;ship 32 finished themes&quot;.</li><li><strong>The grey family is a user-selectable axis</strong> (mauve · olive · sage · sand · slate).</li><li><strong>Cursors are tokenised</strong> — nine of them. Buttons are <code>default</code>; only links are <code>pointer</code>.</li><li><strong>Component heights are spacing tokens</strong> — there is no dedicated height scale.</li><li><strong>Twelve alpha steps are precomputed for every hue</strong> (24 per hue).</li><li><strong>A P3 alternative palette lives at the token level</strong> (<code>display-p3</code> 1,579 times).</li><li><strong>Shadows are computed with <code>color-mix(in oklab, …)</code> and fall back through <code>@supports</code>.</strong></li><li><strong>Body and heading line heights are separated, but differ by 2px only at the small steps (2–5).</strong></li><li><strong>Type step 8 is 35px.</strong></li><li><strong>There is no 600 among the weights</strong> (300/400/500/700).</li><li><strong>Radius <code>none</code> is handled as a multiplier of 0</strong> — the tokens are not deleted.</li><li><strong>Some components use <code>em</code>-based radii</strong> — proportional to the type size.</li><li><strong>Inline text elements are components</strong> (<code>em</code> · <code>strong</code> · <code>code</code> · <code>kbd</code> · <code>quote</code>).</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>No stated WCAG target was found in the CSS or the tokens.</p>
+<p>Keyboard, focus and ARIA behaviour is handled by <strong>Radix Primitives</strong> — Radix Themes is the style layer above it.</p>
+<p>What can be confirmed at the token level:</p>
+<ul class="md-list"><li>Twelve alpha steps on every hue mean <strong>translucent state colours work regardless of the background</strong></li><li><code>--cursor-disabled: not-allowed</code> — the disabled state is expressed through the cursor too</li><li>A separate <code>--focus-*</code> colour family exists (independent of the accent)</li><li>The P3 alternative palette handles colour rendition on wide-gamut displays</li></ul>
+<p><strong>There is no contrast-ratio specification in the source.</strong></p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>Basis for the Figma kit (false):</strong> no official kit — the documentation introduces only one community-made &quot;Unofficial&quot; library, confirmed 2026-08-18</li><li>Documentation: https://radix-ui.com/themes</li><li>Repository: https://github.com/radix-ui/themes</li><li>Tokens: <code>npm pack @radix-ui/themes@3.3.0</code> → <code>package/styles.css</code></li><li>Components: <code>package/src/components/*.css</code> · <code>*.props.tsx</code></li><li>The primitives (a separate package): https://radix-ui.com/primitives</li><li><strong>Open questions:</strong> the contrast ratios of the 26 accents' actual hex values, the rule determining the <code>--focus-*</code> family's colours, and how the dark-mode alpha tokens are computed</li><li><strong>Figma kit confirmed absent (2026-08-18):</strong> <code>figma_kit: false</code> — source <a href="https://www.radix-ui.com/themes/docs/overview/resources" rel="noopener">https://www.radix-ui.com/themes/docs/overview/resources</a>. The documentation's Resources page introduces exactly <strong>two</strong> external assets, the first being &quot;<strong>Figma library — Unofficial Radix Themes components for Figma, by Victor Allegret</strong>&quot;. The project itself attached the word <code>Unofficial</code>, and the component source names this entry's React component <code>ThemesUnofficialFigmaLibrary</code> (the second is <code>ThemesUnofficialTailwindPlugin</code> — Viktor Bonino's Tailwind preset). The page closes with &quot;if you build something great with Radix Themes, reach out on Twitter or Discord&quot;, revealing it as <strong>a collection point for community work.</strong> Across the whole documentation (<code>/themes/docs/overview/{getting-started,styling,releases}</code>) there are zero other mentions of Figma, and <code>/themes/docs/resources/figma</code> is a 404</li><li><strong>Confirmed static site (2026-08-18):</strong> <code>radix-ui.com</code> puts the whole body in the SSR HTML, so no headless render is needed (the Resources page is 85KB, with the body extracting cleanly once scripts are stripped)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

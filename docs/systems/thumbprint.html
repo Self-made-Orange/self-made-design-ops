@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thumbprint — Self-Made DesignOps</title>
+<meta name="description" content="Thumbtack's (home-services marketplace) system. The top of the spacing scale is pure doubling above 32 (64 → 128 → 256), and round shapes are split across…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/thumbprint.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Thumbprint — Self-Made DesignOps">
+<meta property="og:description" content="Thumbtack's (home-services marketplace) system. The top of the spacing scale is pure doubling above 32 (64 → 128 → 256), and round shapes are split across…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/thumbprint.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thumbprint — Self-Made DesignOps">
+<meta name="twitter:description" content="Thumbtack's (home-services marketplace) system. The top of the spacing scale is pure doubling above 32 (64 → 128 → 256), and round shapes are split across…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Thumbprint",
+ "description": "Thumbtack's (home-services marketplace) system. The top of the spacing scale is pure doubling above 32 (64 → 128 → 256), and round shapes are split across…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/thumbprint.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Thumbprint",
+  "applicationCategory": "DesignApplication",
+  "url": "https://thumbprint.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-eight-steps-doubling-above-32">Spacing — eight steps, doubling above 32</a></li><li class="lvl3"><a href="#radii-round-shapes-take-two-tokens">Radii — round shapes take two tokens</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-buttoncss">Buttons (button.css)</a></li><li class="lvl3"><a href="#inputs-inputcss-react-textinput">Inputs (input.css · React TextInput)</a></li><li class="lvl3"><a href="#modals-react-modalindexmodulescss">Modals (React Modal/index.module.scss)</a></li><li class="lvl3"><a href="#motion-tokens-thumbprint-tokens1301">Motion tokens (thumbprint-tokens@13.0.1)</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Thumbtack</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://thumbprint.design" rel="noopener">Official site</a><br><a href="https://github.com/thumbtack/thumbprint" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/thumbprint.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Thumbprint</span></nav>
+    <h1>Thumbprint</h1>
+    <p class="doc-lede">Thumbtack · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Thumbtack's (home-services marketplace) system. The top of the spacing scale is <strong>pure doubling above 32</strong> (64 → 128 → <strong>256</strong>), and round shapes are split across <strong>two tokens, <code>full</code> (50%) and <code>sides</code> (9999px)</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-eight-steps-doubling-above-32">Spacing — eight steps, doubling above 32</h3>
+<pre class="md-code"><code>$tp-space__1: 4    __2: 8    __3: 16    __4: 24
+$tp-space__5: 32   __6: 64   __7: 128   __8: 256</code></pre>
+<ul class="md-list"><li>Holds <strong>the entire core <code>4/8/16/24/32</code></strong> — 12 and 48 are absent</li><li><strong>After 32 it doubles purely: 64, 128, 256.</strong> What Mantine does with radii (doubling 2 to 32), Thumbprint does at the top of its spacing scale</li><li><strong>256px is the largest value in an enumerated spacing scale</strong> (Base Web's 192 and Pajamas's 704 are irregular index extensions; Open Props's 480 is a different animal) — for the sample comparison see <code>tokens/scales.md</code></li><li>The keys are <strong>ordinals</strong> <code>__1</code> to <code>__8</code> (BEM-style underscore notation)</li></ul>
+<h3 id="radii-round-shapes-take-two-tokens">Radii — round shapes take two tokens</h3>
+<pre class="md-code"><code>base: 4px   big: 6px   full: 50%   sides: 9999px</code></pre>
+<p><strong>It distinguishes <code>full</code> (50% — a circle when the element is square) from <code>sides</code> (9999px — a pill).</strong> The same judgement as Paste splitting <code>circle</code> from <code>pill</code> (<code>tokens/scales.md</code>), with names pointing at the geometric result (&quot;the sides are round&quot;).</p>
+<p>There are only two stepped radii, 4 and 6 — the minimalism of the Ant (a single 6) and Blueprint (a single 4) family.</p>
+<h2 id="components">Components</h2>
+<p>Not in the token package. <code>dist/</code> ships SCSS · JS (cjs/es) · TypeScript · <strong>Android</strong> — these are cross-platform tokens (the Paste and Material 3 family). → Components are in separate packages. See the deep-dive below (2026-08-18).</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>The component CSS is <code>@thumbtack/thumbprint-scss@4.0.3</code> (classic CSS, last published 2022-05) and the React wrappers are <code>@thumbtack/thumbprint-react@14.18.2</code> (last published 2024-04, 35 components). <strong>The React button uses the scss <code>.tp-button</code> class directly</strong> — the values originate on the scss side.</p>
+<h3 id="buttons-buttoncss">Buttons (<code>button.css</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">Default</th><th style="text-align:center">small</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>52px</strong></td><td style="text-align:center">40px</td></tr><tr><td>Padding</td><td style="text-align:center">12px 22px</td><td style="text-align:center">8px vertical (22px horizontal kept)</td></tr><tr><td>Border</td><td style="text-align:center"><strong>2px</strong> (always present, transparent included)</td><td style="text-align:center">same</td></tr><tr><td>Radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr><tr><td>Type</td><td style="text-align:center">16px / 24px / <strong>700</strong></td><td style="text-align:center">14px / 20px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>No minimum width</strong> (<code>min-width</code> appears zero times). Height comes from <code>min-height</code> plus <code>box-sizing:border-box</code> (24 line height + 24 padding + 4 border = 52).</li><li><strong>Button type at 16px and 700</strong> — the same &quot;body size in bold&quot; camp as Backpack. 52px is at the upper end of the sample's heights.</li><li>Seven variants: primary (<code>#009fd9</code>) · secondary · tertiary · caution · solid · line · clear. <strong>Focus is <code>text-decoration: underline</code> plus a background change rather than a ring</strong> (<code>outline:none</code>).</li><li>small does not reduce the horizontal padding — only the vertical, 12 → 8px.</li></ul>
+<h3 id="inputs-inputcss-react-textinput">Inputs (<code>input.css</code> · React <code>TextInput</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">large (default)</th><th style="text-align:center">small</th></tr></thead><tbody><tr><td>Padding</td><td style="text-align:center">13px 15px (13px 16px in React)</td><td style="text-align:center">9px 15px</td></tr><tr><td>Border</td><td style="text-align:center">1px <code>#d3d4d5</code></td><td style="text-align:center">same</td></tr><tr><td>Radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr><tr><td>Type</td><td style="text-align:center">16px / 24px</td><td style="text-align:center">14px / 20px</td></tr><tr><td><strong>Derived height</strong></td><td style="text-align:center"><strong>52px</strong></td><td style="text-align:center"><strong>40px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The derived height matches the button's min-height exactly</strong> (52/40) — a case of aligning the two through a line-height-plus-padding formula rather than declaring a height (compensated by a 2px border on the button against 1px plus 1px of React wrapper padding on the input).</li><li>The label is a separate block (<code>.tp-label</code>) — <strong>weight 700, margin-bottom 4px</strong>, size inherited.</li><li>The React <code>TextInput</code> draws the border on an absolutely positioned <code>.inputStyles</code> layer rather than on the input — a structure that keeps the border a single stroke even with icons and buttons inserted.</li></ul>
+<h3 id="modals-react-modalindexmodulescss">Modals (React <code>Modal/index.module.scss</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">narrow</th><th style="text-align:center">medium (default)</th><th style="text-align:center">wide</th></tr></thead><tbody><tr><td>max-width</td><td style="text-align:center">416px</td><td style="text-align:center">632px</td><td style="text-align:center"><strong>1400px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li>Height variants exist separately — <code>heightMedium</code> 600px / <code>heightTall</code> 900px. <strong>Three widths crossed with two heights</strong> is a structure rare in the sample.</li><li>Entry 300ms (<code>$tp-duration__5</code>) / exit 250ms (<code>$tp-duration__4</code>), easing <code>$tp-ease__in-out</code> = <code>cubic-bezier(0.45, 0, 0.40, 1)</code>.</li><li><strong>On desktop (≥481px) the modal itself is <code>transition:none</code></strong> — only the curtain (<code>rgba(0,0,0,.8)</code>) fades and the body appears at once. Only on mobile (&lt;481px) is it full-screen with a <code>translate(0,100%)→0</code> slide-up. The breakpoint is <code>$tp-breakpoint__small: 481px</code>.</li><li>Content padding 20px (mobile) / 32px horizontal (<code>$tp-space__5</code>) and 40px bottom (desktop). The header (the close-button row) has min-height 56px / 64px (<code>$tp-space__6</code>). No radius declared (0).</li></ul>
+<h3 id="motion-tokens-thumbprint-tokens1301">Motion tokens (thumbprint-tokens@13.0.1)</h3>
+<p>Six durations, <code>75/150/200/250/300/350ms</code>, plus three easings — <code>in (0.50,0,1,1)</code> · <code>out (0,0,0.40,1)</code> · <code>in-out (0.45,0,0.40,1)</code>. <strong>These are its own curves, not Material's</strong> (Material's is (0.4,0,0.2,1)).</p>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Button and input derived heights aligned at 52/40px</strong> — one by min-height, the other by formula</li><li><strong>Button type at 16px and 700</strong> — the same camp as Backpack</li><li><strong>Focus as an underline</strong> (no ring) — rare in the sample</li><li><strong>No transition on desktop modals</strong> (only the curtain fades) plus a mobile slide-up</li><li><strong>Three modal widths and two heights separated orthogonally</strong></li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>Pure doubling at the top of the spacing scale → 256px</strong> — the largest enumerated</li><li><strong>Round shapes split in two</strong> (<code>full</code> 50% / <code>sides</code> 9999px)</li><li><strong>No 12 or 48</strong> — eight steps holding exactly the 4/8/16/24/32 core</li><li><strong>An Android build shipped alongside</strong> — a consumer app on two platforms</li><li>Underscored ordinal keys (<code>__1</code>) — a notation unique in the sample</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Documentation: https://thumbprint.design (blocked by the proxy)</li><li>Tokens: <code>npm pack @thumbtack/thumbprint-tokens@13.0.1</code> → <code>dist/scss/_index.scss</code></li><li>Component deep-dive: <code>@thumbtack/thumbprint-scss@4.0.3</code> (button/input/label.css) · <code>@thumbtack/thumbprint-react@14.18.2</code> (<code>dist/es/components/{Modal,TextInput}/index.module.scss</code>) (2026-08-18)</li><li>Licence: both component packages state <strong>Apache-2.0</strong> in package.json — reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> the full type scale · the colour palette (only some real button colours confirmed), <del>the component list</del> (35 React components confirmed — 2026-08-18), <del>the licence</del> (Apache-2.0 — 2026-08-18)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github thumbtack/thumbprint → <code>LICENSE</code> (matching the npm <code>@thumbtack/thumbprint-tokens@13.0.1</code> metadata)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

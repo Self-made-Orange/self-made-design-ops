@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KRDS (Korea Responsive Design System) — Self-Made DesignOps</title>
+<meta name="description" content="South Korea's digital government design system. A 17px body (the second after Apple), whitespace named by content relationship (h1-h2 · title-body), and…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/krds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="KRDS (Korea Responsive Design System) — Self-Made DesignOps">
+<meta property="og:description" content="South Korea's digital government design system. A 17px body (the second after Apple), whitespace named by content relationship (h1-h2 · title-body), and…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/krds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KRDS (Korea Responsive Design System) — Self-Made DesignOps">
+<meta name="twitter:description" content="South Korea's digital government design system. A 17px body (the second after Apple), whitespace named by content relationship (h1-h2 · title-body), and…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "KRDS (Korea Responsive Design System)",
+ "description": "South Korea's digital government design system. A 17px body (the second after Apple), whitespace named by content relationship (h1-h2 · title-body), and…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/krds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "KRDS (Korea Responsive Design System)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.krds.go.kr"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-768-of-them-in-six-modes">Tokens — 768 of them, in six modes</a></li><li class="lvl3"><a href="#the-root-is-10px-the-625-trick">The root is 10px (the 62.5% trick)</a></li><li class="lvl3"><a href="#spacing-primitives-22-steps">Spacing primitives — 22 steps</a></li><li class="lvl3"><a href="#whitespace-named-by-content-relationship-unique-in-the-sample">Whitespace named by content relationship — unique in the sample</a></li><li class="lvl3"><a href="#typography-a-17px-body-an-odd-numbered-scale">Typography — a 17px body, an odd-numbered scale</a></li><li class="lvl3"><a href="#radius-the-names-carry-numbers">Radius — the names carry numbers</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-a-five-step-8px-ladder-defaulting-to-large">Buttons — a five-step 8px ladder, defaulting to large</a></li><li class="lvl3"><a href="#inputs-xlarge-is-80px">Inputs — xlarge is 80px</a></li><li class="lvl3"><a href="#modals-three-widths-defaulting-to-760px">Modals — three widths, defaulting to 760px</a></li><li class="lvl3"><a href="#a-characteristic-decision-one-global-transition">A characteristic decision — one global transition</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Government of the Republic of Korea (NIA, the National Information Society Agency)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.krds.go.kr" rel="noopener">Official site</a><br><a href="https://github.com/KRDS-uiux/krds-uiux" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/krds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>KRDS (Korea Responsive Design System)</span></nav>
+    <h1>KRDS (Korea Responsive Design System)</h1>
+    <p class="doc-lede">Government of the Republic of Korea (NIA, the National Information Society Agency) · public · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>South Korea's digital government design system. <strong>A 17px body</strong> (the second after Apple), <strong>whitespace named by content relationship</strong> (<code>h1-h2</code> · <code>title-body</code>), and PC/mobile as <strong>token modes</strong>.</p>
+<p><strong>The first Korean sample and the fourth in the public-sector domain.</strong> An official package, with the maintainer confirmed as <code>uiux@nia.or.kr</code> (the National Information Society Agency).</p>
+<h2 id="tokens-768-of-them-in-six-modes">Tokens — 768 of them, in six modes</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>group</th><th style="text-align:center">tokens</th><th>character</th></tr></thead><tbody><tr><td><code>primitive</code></td><td style="text-align:center">242</td><td>raw (numeric scales, colours, typefaces)</td></tr><tr><td><code>mode-light</code></td><td style="text-align:center"><strong>190</strong></td><td>light semantic colours</td></tr><tr><td><strong><code>mode-high-contrast</code></strong></td><td style="text-align:center"><strong>190</strong></td><td><strong>high contrast — the same count as light</strong></td></tr><tr><td><strong><code>responsive-pc</code></strong></td><td style="text-align:center">49</td><td>PC sizes and whitespace</td></tr><tr><td><strong><code>responsive-mobile</code></strong></td><td style="text-align:center">49</td><td>mobile sizes and whitespace — the same structure as PC</td></tr><tr><td><code>semantic</code></td><td style="text-align:center">48</td><td>gap · padding · size-height · radius</td></tr></tbody></table></div>
+<p><strong>The viewport is a token mode.</strong> The same axis as Spectrum giving each token desktop and mobile values through <code>sets</code> (<code>tokens/scales.md</code>), except KRDS separates them into mode groups.</p>
+<p><strong>The high-contrast mode has the same 190 tokens as light</strong> — the same structure as Atlassian's <code>increased-contrast</code> matching the ordinary theme at 466 (<code>patterns/color.md</code>). Being structurally identical, switching is a matter of swapping values.</p>
+<h3 id="the-root-is-10px-the-625-trick">The root is 10px (the <code>62.5%</code> trick)</h3>
+<p><code>font-size: 62.5%</code> was confirmed in the CSS — <strong><code>1rem</code> = 10px.</strong> Since <code>primitive.number.*</code> is in units of <code>0.1rem</code>, the px conversions below hold.</p>
+<p><strong>KRDS is the only system in the sample with a 10px root.</strong> Carrying values over from another rem-based system puts you 1.6× off — <strong>a demonstration that rem values must not be copied between systems.</strong></p>
+<h3 id="spacing-primitives-22-steps">Spacing primitives — 22 steps</h3>
+<pre class="md-code"><code>1 · 2 · 4 · 6 · 8 · 10 · 12 · 16 · 20 · 24 · 28 · 32 · 36 · 40 · 44 · 48 · 56 · 64 · 72 · 80 · 96  (+ max 1000)</code></pre>
+<p>The core <code>4/8/16/24</code> plus <code>32</code> are all present, and the 2–12px range is dense at 2px steps.</p>
+<p>The semantic <code>gap</code> narrows to 12 steps — <code>2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80</code>. <strong>A two-tier structure narrowing 22 primitive steps to 12 semantic ones.</strong></p>
+<h3 id="whitespace-named-by-content-relationship-unique-in-the-sample">Whitespace named by content relationship — unique in the sample</h3>
+<p>The <code>gap-layout</code> group is named by <strong>which pair of elements the space falls between.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">PC</th><th style="text-align:center">mobile</th></tr></thead><tbody><tr><td><code>h1-h2</code></td><td style="text-align:center">48</td><td style="text-align:center">32</td></tr><tr><td><code>h2-h2</code></td><td style="text-align:center">64</td><td style="text-align:center">40</td></tr><tr><td><code>h2-h3</code></td><td style="text-align:center">40</td><td style="text-align:center">24</td></tr><tr><td><code>h3-h3</code></td><td style="text-align:center">56</td><td style="text-align:center">32</td></tr><tr><td><code>h4-h5</code></td><td style="text-align:center">16</td><td style="text-align:center">12</td></tr><tr><td><code>title-body-small</code></td><td style="text-align:center">16</td><td style="text-align:center">8</td></tr><tr><td><code>title-body-large</code></td><td style="text-align:center">24</td><td style="text-align:center">20</td></tr><tr><td><code>text-text-small</code></td><td style="text-align:center">12</td><td style="text-align:center">10</td></tr><tr><td><code>image-text-large</code></td><td style="text-align:center">32</td><td style="text-align:center">24</td></tr><tr><td><code>breadcrumb-h1</code></td><td style="text-align:center">40</td><td style="text-align:center">32</td></tr><tr><td><code>contents-footer</code></td><td style="text-align:center">64</td><td style="text-align:center">40</td></tr></tbody></table></div>
+<p><strong>&quot;40px between an h2 and an h3&quot; is a token.</strong> Every other system in the sample gives you whitespace sizes and leaves where to use them to you — KRDS <strong>tokenises the placement rule itself.</strong> <code>patterns/</code> repeatedly records that &quot;the judgement guidance exists only on the documentation site&quot;; <strong>KRDS is the first case of putting part of the judgement into the tokens.</strong></p>
+<p><strong>Repeating the same level (<code>h2-h2</code>) is wider than changing level (<code>h2-h3</code>)</strong> — 64 vs 40. Starting a new section opens up more than descending into a sub-item, and the rule holds at h3, h4 and h5 too.</p>
+<h3 id="typography-a-17px-body-an-odd-numbered-scale">Typography — a 17px body, an odd-numbered scale</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>PC</th><th>mobile</th></tr></thead><tbody><tr><td>Display</td><td>60 · 44 · 36</td><td><strong>44 · 32 · 28</strong></td></tr><tr><td>Heading</td><td>40 · 32 · 24 · 19 · 17 · 15</td><td>24 and up (large 24)</td></tr><tr><td><strong>Body</strong></td><td><strong>19 · 17 · 15 · 13</strong></td><td><strong>the same</strong></td></tr><tr><td>Label</td><td>19 · 17 · 15 · 13</td><td>the same</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong><code>body.medium</code> is 17px.</strong> In the sample, using 17 as the body default is <strong>the second case after Apple iOS (17pt), and the first in a web system.</strong> It revises <code>patterns/typography.md</code>'s conclusion that &quot;17 is Apple's alone&quot;</li><li><strong>The whole body scale is odd</strong> — 13 · 15 · 17 · 19. Exactly one notch off from the even grid (12/14/16/18) the majority of the sample uses</li><li><strong>Only Display and Heading shrink on mobile; Body and Label stay</strong> — the same judgement as Pajamas making only h1–h3 fluid (<code>patterns/typography.md</code>)</li></ul>
+<p>The typeface is a single <strong>Pretendard GOV</strong> — a government derivative of Pretendard. There are only two tracking tokens, <code>0</code> and <code>0.1rem</code> (1px).</p>
+<h3 id="radius-the-names-carry-numbers">Radius — the names carry numbers</h3>
+<pre class="md-code"><code>xsmall1·2·3 = 2px   small1·2·3 = 4px   medium1·2 = 6px
+medium3·4 = 8px     large1·2 = 10px    xlarge1·2 = 12px    max = 1000px</code></pre>
+<p><strong>The same value has several numbered variants</strong> — <code>xsmall1</code> through <code>3</code> are all 2px. The same pattern as Atlassian keeping <code>selected</code>/<code>focused</code> as separate tokens on the same value: dividing in advance the places that will later diverge.</p>
+<p><strong>There is a 10px radius</strong> (<code>large</code>) — a rare value in the sample (outside Spectrum).</p>
+<h2 id="components">Components</h2>
+<p>Distributed as HTML components in the <code>html/</code> directory (not React). <del>The list and dimensions were not checked.</del> → see the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><strong>The same <code>krds-uiux@1.1.0</code> package was confirmed to contain component markup and CSS</strong> (only the tokens had been collected): 42 SCSS files in <code>resources/scss/component/</code> plus <strong>74</strong> markup samples in <code>html/code/</code> (button, input and modal, alongside government-site scaffolding such as masthead, identifier, skip_link and critical_alerts). The values were resolved by following the SCSS's semantic token references through <code>krds_tokens.css</code> (a 10px root).</p>
+<h3 id="buttons-a-five-step-8px-ladder-defaulting-to-large">Buttons — a five-step 8px ladder, defaulting to large</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">xsmall</th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center"><strong>large (default)</strong></th><th style="text-align:center">xlarge</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center">40px</td><td style="text-align:center">48px</td><td style="text-align:center"><strong>56px</strong></td><td style="text-align:center">64px</td></tr><tr><td>inline padding</td><td style="text-align:center">10px</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td><td style="text-align:center">24px</td></tr><tr><td>radius</td><td style="text-align:center">4px</td><td style="text-align:center">6px</td><td style="text-align:center">6px</td><td style="text-align:center"><strong>8px</strong></td><td style="text-align:center">8px</td></tr><tr><td>type</td><td style="text-align:center">15px</td><td style="text-align:center">15px</td><td style="text-align:center">17px</td><td style="text-align:center">19px</td><td style="text-align:center">19px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>With no size class you get large (56px)</strong> — a choice to put the default at the large end, parting from the medium default of most systems (the inputs and modals below do the same).</li><li><strong>The height is fixed straight from a <code>size-height</code> token with zero block padding</strong> — the opposite pole from the derived-height camp.</li><li><strong>The radius grows with the size, 4→6→8px</strong> — this is what consumes the numbered radius variants (<code>medium1·2</code> 6px / <code>medium3·4</code> 8px). Where Backpack grows the radius only on large inputs, KRDS applies it across all five steps.</li><li>The five steps carry only three type values (15 · 15 · 17 · 19 · 19) — consuming the (odd-numbered) label scale.</li></ul>
+<h3 id="inputs-xlarge-is-80px">Inputs — xlarge is 80px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center"><strong>large (default)</strong></th><th style="text-align:center">xlarge</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">40px</td><td style="text-align:center">48px</td><td style="text-align:center"><strong>56px</strong></td><td style="text-align:center"><strong>80px</strong></td></tr><tr><td>radius</td><td style="text-align:center">6px</td><td style="text-align:center">6px</td><td style="text-align:center">8px</td><td style="text-align:center">10px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The xlarge input is 80px with heading-medium type in bold</strong> — absorbing the main search box into the input's size variants (KRDS is the only sample with a search-box-specific size).</li><li>A 1px border → <strong>on focus the border-width thickens to 2px.</strong> There is no outline and no box-shadow — the only form in the sample that indicates focus purely by a change in border thickness (NYSDS does the reverse, adding an outline precisely to avoid changing thickness).</li><li>Inline padding is 16px throughout, and state colours pass through an intermediate <code>--krds-input--*</code> variable layer.</li></ul>
+<h3 id="modals-three-widths-defaulting-to-760px">Modals — three widths, defaulting to 760px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td>sm <strong>400</strong> / md <strong>560</strong> / lg <strong>760px</strong> (lg by default)</td></tr><tr><td>radius · padding</td><td><strong>12px</strong> (<code>xlarge1</code>) · <strong>40px</strong></td></tr><tr><td>header top padding</td><td><strong>56px</strong></td></tr><tr><td>min-height</td><td>264px</td></tr><tr><td>transition</td><td>visibility/opacity over <strong>0.2s</strong> only (no keyframes)</td></tr><tr><td>mobile</td><td>switching to a <code>calc(100% − 32px)</code> width</td></tr></tbody></table></div>
+<ul class="md-list"><li>The default being the widest (760px) follows the same pattern as the buttons and inputs — <strong>KRDS puts every default at the large end.</strong></li><li>Footer buttons have a min-width of 78px.</li></ul>
+<h3 id="a-characteristic-decision-one-global-transition">A characteristic decision — one global transition</h3>
+<p>The reset CSS applies a single <code>transition: var(--krds-transition-base)</code> = <strong><code>.4s ease-in-out</code></strong> to every form element globally. Having no easing differentiation, a single curve, is the same extreme as Audi UI (one global easing), and the value being a keyword literal (<code>ease-in-out</code>) matches Backpack's mainline.</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Every default size is large</strong> — buttons 56 · inputs 56 · modals 760px</li><li><strong>A fixed five-step 8px height ladder (32–64) with zero block padding</strong></li><li><strong>Radius tracking size</strong> (4→6→8→10) — where the numbered radius variants are actually used</li><li><strong>Focus = a change in border thickness</strong> (1→2px, no ring)</li><li><strong>An 80px xlarge input</strong> — the search box absorbed as a size variant</li><li><strong>A single global transition, <code>.4s ease-in-out</code></strong></li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A 17px body</strong> — the second after Apple and the first on the web. The whole body scale is odd (13/15/17/19)</li><li><strong>Whitespace named by content relationship</strong> (<code>h1-h2</code> · <code>title-body</code> · <code>image-text</code>). The only sample to tokenise a placement judgement</li><li><strong>PC and mobile as token modes</strong> — the same 49-token structure twice. Body does not shrink; only Display does</li><li><strong>The high-contrast mode matches light in count (190)</strong></li><li><strong>A 10px root (62.5%)</strong> — unique in the sample, and a demonstration that rem values cannot be ported</li><li><strong>The fourth public-sector sample, and it diverges from GOV.UK again</strong> — its primitives are in the 4px family. The four public-sector bases: GOV.UK 5px / Codex multiples of 4 / USWDS 8px / <strong>KRDS the 4px family</strong> — <strong>5px remains GOV.UK's alone to the end</strong></li><li><strong>Numbered radius variants on the same value</strong> (<code>xsmall1·2·3</code>) — reserving the places that will diverge</li><li>A single typeface, <strong>Pretendard GOV</strong> — the first confirmed typeface in a CJK system</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li><strong>A 190-token high-contrast mode</strong> — structurally identical to the ordinary mode</li><li>The package description states responsiveness and accessibility explicitly (&quot;a responsive, accessible UI/UX&quot;)</li><li>WCAG/KWCAG target figures are unverified in the tokens and the package (the documentation site was unreachable)</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Documentation: https://www.krds.go.kr (blocked by the proxy)</li><li>Repository: https://github.com/KRDS-uiux/krds-uiux</li><li>Tokens: <code>npm pack krds-uiux@1.1.0</code> → <code>tokens/transformed_tokens.json</code> · <code>tokens/figma_token.json</code> (the Figma tokens ship separately)</li><li>CSS: <code>resources/css/token/krds_tokens.css</code></li><li>Components in depth: <code>resources/scss/component/*.scss</code> plus the 74 <code>html/code/*.html</code> samples from the same package (2026-08-18)</li><li><strong>Open questions:</strong> the colour palette structure (the 190 in detail), <del>the <code>size-height</code> semantics</del> <del>the component list</del> (resolved 2026-08-18 — the deep pass: size-height 1–11 = 8–80px, 42 SCSS files and 74 markup samples), the KWCAG target, and the licence (<code>package.json</code> says ISC, but it may be boilerplate — the repository and documentation need checking)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

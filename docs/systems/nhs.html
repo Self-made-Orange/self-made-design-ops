@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NHS design system (nhsuk-frontend) — Self-Made DesignOps</title>
+<meta name="description" content="It took GOV.UK's code and changed the spacing base to 4px — the source comment says &amp;quot;Original code taken from GDS&amp;quot; outright, and yet…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/nhs.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="NHS design system (nhsuk-frontend) — Self-Made DesignOps">
+<meta property="og:description" content="It took GOV.UK's code and changed the spacing base to 4px — the source comment says &amp;quot;Original code taken from GDS&amp;quot; outright, and yet…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/nhs.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NHS design system (nhsuk-frontend) — Self-Made DesignOps">
+<meta name="twitter:description" content="It took GOV.UK's code and changed the spacing base to 4px — the source comment says &amp;quot;Original code taken from GDS&amp;quot; outright, and yet…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "NHS design system (nhsuk-frontend)",
+ "description": "It took GOV.UK's code and changed the spacing base to 4px — the source comment says &quot;Original code taken from GDS&quot; outright, and yet…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/nhs.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "NHS design system (nhsuk-frontend)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://service-manual.nhs.uk/design-system"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#the-govuk-5px-question-is-closed">The GOV.UK 5px question is closed</a></li><li class="lvl3"><a href="#responsive-spacing-a-value-per-breakpoint">Responsive spacing — a value per breakpoint</a></li><li><a href="#type-breakpoints-plus-a-third-value-for-print">Type — breakpoints plus a third value for print</a></li><li><a href="#colour-function-based-with-a-yellow-focus">Colour — function-based, with a yellow focus</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-the-physical-metaphor-is-inherited-the-press-is-twice-as-deep">Buttons — the physical metaphor is inherited, the press is twice as deep</a></li><li class="lvl3"><a href="#form-controls-the-same-40px-only-the-padding-differs">Form controls — the same 40px, only the padding differs</a></li><li class="lvl3"><a href="#modals-confirmed-absent">Modals — confirmed absent</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>NHS (UK National Health Service)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://service-manual.nhs.uk/design-system" rel="noopener">Official site</a><br><a href="https://github.com/nhsuk/nhsuk-frontend" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nhs.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>NHS design system (nhsuk-frontend)</span></nav>
+    <h1>NHS design system (nhsuk-frontend)</h1>
+    <p class="doc-lede">NHS (UK National Health Service) · public · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p><strong>It took GOV.UK's code and changed the spacing base to 4px</strong> — the source comment says &quot;Original code taken from GDS&quot; outright, and yet <code>$nhsuk-spacing-points</code> runs <code>4 · 8 · 16 · 24 · 32 …</code>, multiples of 4. <strong>Direct evidence that GOV.UK's 5px was not inherited.</strong> Second in the healthcare domain, eighth in the public sector.</p>
+<h2 id="the-govuk-5px-question-is-closed">The GOV.UK 5px question is closed</h2>
+<pre class="md-code"><code class="language-scss">// @link https://github.com/alphagov/govuk-frontend
+//        Original code taken from GDS (Government Digital Service)
+$nhsuk-spacing-points: (0: 0, 1: 4px, 2: 8px, 3: 16px, 4: 24px,
+                        5: 32px, 6: 40px, 7: 48px, 8: 56px, 9: 64px);</code></pre>
+<ul class="md-list"><li><strong>The same code lineage (a GDS fork), and yet the spacing values alone were swapped for multiples of 4.</strong> The conclusion recorded in <code>tokens/scales.md</code> — that GOV.UK's 5px is a single system's choice, not a public-sector tendency — is now settled in the strongest form: <strong>the system that actually took that code changed the value.</strong></li><li>The structure (the responsive spacing map, the ordinal keys, the mixins) is inherited intact — <strong>what carried over is the mechanism; what changed is the value.</strong></li></ul>
+<h3 id="responsive-spacing-a-value-per-breakpoint">Responsive spacing — a value per breakpoint</h3>
+<pre class="md-code"><code class="language-scss">3: (null: 8px,  tablet: 16px)   // mobile 8 → tablet 16
+4: (null: 16px, tablet: 24px)
+5: (null: 24px, tablet: 32px)</code></pre>
+<p>The same token holds different values depending on the viewport — the same call as Spindle (three CSS files) and Mística (desktop/mobile pairs), made here through an <strong>SCSS map</strong>. This mechanism is shared with GOV.UK.</p>
+<h2 id="type-breakpoints-plus-a-third-value-for-print">Type — breakpoints plus a third value for print</h2>
+<pre class="md-code"><code class="language-scss">$nhsuk-typography-scale: (
+  64: (mobile 48px / desktop 64px / print 34pt),
+  48: (32px / 48px / 26pt),
+  36: (27px / 36px / 20pt),
+  26: (22px / 26px / 17pt),
+  22: (19px / 22px / 15pt), 19: (…)
+)</code></pre>
+<ul class="md-list"><li><strong>Print sizes are defined alongside, in <code>pt</code></strong> — NHS (and the GDS lineage) are the only places in the sample where print typography sits in the tokens. The reality of printing medical documents on paper has made it into the token file.</li><li>The size names are the <strong>desktop px values</strong> (<code>64</code> is 64px on desktop)</li><li>Odd numbers like 27px and 19px appear in the mobile values</li></ul>
+<h2 id="colour-function-based-with-a-yellow-focus">Colour — function-based, with a yellow focus</h2>
+<pre class="md-code"><code class="language-scss">$nhsuk-focus-colour: nhsuk-colour(&quot;yellow&quot;);
+$nhsuk-reverse-secondary-text-colour: nhsuk-tint($nhsuk-brand-colour, 78%);</code></pre>
+<ul class="md-list"><li>Colours are referenced through <strong>an <code>nhsuk-colour()</code> function lookup</strong> (a palette map plus an accessor) — the SCSS edition of the position SmartHR occupies with its transformation functions</li><li><strong>Focus is yellow</strong> — the same choice as GOV.UK, confirming again that public-sector systems share their accessibility structure (the public-sector table in <code>tokens/scales.md</code>)</li><li>It uses <strong>unconventional ratios</strong> like <code>nhsuk-tint()</code> at 78%</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>src/nhsuk/components/</code> (43 directories) in the same <code>nhsuk-frontend@10.6.0</code>. Since it derives from GOV.UK, this records mainly <strong>the differences against the original</strong> (<code>govuk-frontend@6.4.0</code>, the components section of <code>govuk.md</code>).</p>
+<h3 id="buttons-the-physical-metaphor-is-inherited-the-press-is-twice-as-deep">Buttons — the physical metaphor is inherited, the press is twice as deep</h3>
+<p>The physical button settling onto its shadow (<code>box-shadow 0 Npx 0</code> + <code>:active { top: Npx }</code>), the <code>::before</code> expansion widening the click target over the shadow, full-width on mobile becoming auto on tablet, the <code>forced-colors</code> branch — <strong>the mechanism is GDS's, unchanged.</strong> What changed are the values:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">GOV.UK</th><th style="text-align:center">NHS</th></tr></thead><tbody><tr><td>radius</td><td style="text-align:center"><strong>0</strong></td><td style="text-align:center"><strong>4px</strong></td></tr><tr><td>shadow / press depth</td><td style="text-align:center">2px</td><td style="text-align:center"><strong>4px</strong></td></tr><tr><td>min-height</td><td style="text-align:center">none (derived)</td><td style="text-align:center"><strong>44px / 56px on desktop</strong> (including the 4px shadow)</td></tr><tr><td>block padding</td><td style="text-align:center">fixed 8px</td><td style="text-align:center"><strong>10px → 14px on desktop</strong></td></tr><tr><td>inline padding</td><td style="text-align:center"><code>spacing(2)</code> = 10px</td><td style="text-align:center"><strong>16px</strong></td></tr><tr><td>small variant</td><td style="text-align:center">none</td><td style="text-align:center"><strong>yes</strong> (36px, padding 6/12, 16px type on desktop)</td></tr><tr><td>variants</td><td style="text-align:center">secondary · warning · inverse</td><td style="text-align:center">secondary (+solid) · reverse · warning · <strong>login</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The press is 4px, twice GDS's</strong> — <code>top: 4px</code> plus the shadow vanishing. The deepest physical movement in the corpus (shadcn 1px, GOV.UK 2px).</li><li><strong>Two things the original does not have</strong>: a 4px radius (leaving the square-cornered camp), and an explicit <code>min-height</code> with <strong>a control height that grows on desktop</strong> (a 40→52px body). GOV.UK declares no height and has a single size. The small variant and the <code>--login</code> variant (a colour set specific to NHS login) are additions too.</li><li>The type is shared — 19px, 19px line height, bold — so <strong>typography comes from the original while the dimensions are reassembled on multiples of 4</strong> (radius 4, shadow 4, inline padding 16). The token section's conclusion — mechanism inherited, values changed — repeats at the component layer.</li></ul>
+<h3 id="form-controls-the-same-40px-only-the-padding-differs">Form controls — the same 40px, only the padding differs</h3>
+<ul class="md-list"><li>Inputs: <strong>40px tall · 2px border · radius 0</strong> — identical to GOV.UK. The single difference is <strong>4px padding</strong> (<code>nhsuk-spacing(1)</code>) against GOV.UK's 5px — <strong>the place where the base swap (5→4px) shows through into component padding.</strong></li><li>Focused input: a black 2px border plus an inset box-shadow of the same thickness (a visually 4px border) plus a yellow 4px outline — the GDS structure, shared.</li><li>Checkboxes and radios: <strong>40px visually with a 44px touch target (a 4px gutter), small at 24px</strong> — the same values as GOV.UK. The tick is drawn with CSS borders, at <strong>22×10px with a 4px stroke</strong> — GOV.UK's multiple-of-5 stroke (23×12px, 5px) <strong>retuned to multiples of 4</strong>. The base swap reaches all the way into the thickness of a checkmark.</li></ul>
+<h3 id="modals-confirmed-absent">Modals — confirmed absent</h3>
+<p>There is no modal or dialog among the 43 components (<code>grep -ril &amp;quot;modal|&amp;lt;dialog&amp;quot;</code> returns nothing). GOV.UK ships no modal either, so <strong>even the &quot;government front end without a modal&quot; convention is inherited</strong> (though the tendency has a counterexample: USWDS ships usa-modal).</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>A 4px press depth</strong> — the deepest physical-button metaphor in the corpus</li><li><strong>Radius 0→4px</strong> plus an explicit responsive min-height (44→56px) — a layer the original lacks</li><li><strong>Added small and login variants</strong> — the fork widened the variant axis too</li><li><strong>Multiples of 4 reaching everywhere</strong>: input padding 5→4px, checkmark stroke 5→4px</li><li>No modal (the GDS convention, shared)</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A GDS code fork with spacing swapped to 4px</strong> — direct evidence that the 5px is a single system's choice</li><li><strong>Print <code>pt</code> sizes in the tokens</strong> — specific to the GDS lineage</li><li>Responsive spacing and type maps (a value per viewport)</li><li>Colour lookups through a function, and a yellow focus (shared with GOV.UK)</li><li>Second in the healthcare domain (after Nord) · eighth in the public sector</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li>The GDS accessibility structure is inherited, yellow focus included</li><li><del>The WCAG target is not stated in the package</del> → <strong>WCAG 2.2 level AA (resolved 2026-08-18).</strong> Source: <code>service-manual.nhs.uk/design-system</code> — &quot;We've updated the design system to meet WCAG 2.2 level AA&quot; (the v10 update notice)</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack nhsuk-frontend@10.6.0</code> → <code>src/nhsuk/core/settings/</code></li><li>Components in depth: <code>src/nhsuk/components/{button,input,checkboxes}/</code> and <code>core/tools/_{buttons,focused}.scss</code> from the same package, with <code>govuk-frontend@6.4.0</code> for comparison (2026-08-18)</li><li>A React wrapper <code>nhsuk-react-components@6.0.1</code> and a Vue one <code>nhsuk-frontend-vue</code> exist</li><li><strong>Open questions:</strong> the actual colour palette values, the accessibility target figure, <del>the component list</del> (resolved 2026-08-18 — 43 directories, no modal)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

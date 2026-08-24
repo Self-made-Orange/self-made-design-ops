@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rakuten ReX — Self-Made DesignOps</title>
+<meta name="description" content="Rakuten's (Japanese commerce) React component system — a sample published to npm between 2019 and 2021 and then discontinued, whose documentation and…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/rakuten-rex.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Rakuten ReX — Self-Made DesignOps">
+<meta property="og:description" content="Rakuten's (Japanese commerce) React component system — a sample published to npm between 2019 and 2021 and then discontinued, whose documentation and…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/rakuten-rex.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rakuten ReX — Self-Made DesignOps">
+<meta name="twitter:description" content="Rakuten's (Japanese commerce) React component system — a sample published to npm between 2019 and 2021 and then discontinued, whose documentation and…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Rakuten ReX",
+ "description": "Rakuten's (Japanese commerce) React component system — a sample published to npm between 2019 and 2021 and then discontinued, whose documentation and…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/rakuten-rex.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Rakuten ReX",
+  "applicationCategory": "DesignApplication",
+  "url": "https://rex.rakuten.design (403 — taken internal)"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#source-status-a-system-that-exists-only-on-npm-measured-2026-08-18">Source status — a system that exists only on npm (measured 2026-08-18)</a></li><li><a href="#typography-16-styles-with-lang-line-height-branching">Typography — 16 styles, with :lang() line-height branching</a></li><li><a href="#buttons-three-blue-steps-a-25rem-pill">Buttons — three blue steps, a 2.5rem pill</a></li><li><a href="#grid-12-columns-24px-gutter-six-breakpoints">Grid — 12 columns, 24px gutter, six breakpoints</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Rakuten (Japan)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://rex.rakuten.design (403 — taken internal)" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/rakuten-rex.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Rakuten ReX</span></nav>
+    <h1>Rakuten ReX</h1>
+    <p class="doc-lede">Rakuten (Japan) · commerce · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Rakuten's (Japanese commerce) React component system — a sample <strong>published to npm between 2019 and 2021 and then discontinued, whose documentation and repositories have all disappeared, leaving the npm tarballs as the only surviving source</strong>. Its typography has <strong><code>:lang(en)</code> / <code>:lang(ja)</code> line-height branching</strong> baked into the CSS (crossing LINE's language axis), and the shipped CSS carries <strong>a build bug that left <code>undefined</code> literals in place</strong>.</p>
+<h2 id="source-status-a-system-that-exists-only-on-npm-measured-2026-08-18">Source status — a system that exists only on npm (measured 2026-08-18)</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Channel</th><th>Status</th></tr></thead><tbody><tr><td>Docs rex.rakuten.design</td><td><strong>403</strong> (presumed taken internal — the Wayback record shows a 301 in 2024 and 403s through 2025–26)</td></tr><tr><td>Wayback 200 snapshots</td><td><strong>none</strong> (the CDX <code>statuscode:200</code> filter returns 0 rows — there is no snapshot from when it was public)</td></tr><tr><td>GitHub org rakuten-rex</td><td>the org returns 200 but <strong>public_repos: 0</strong> — the typography, button, core and grid repos all 404 (every repository URL in package.json is a dead link)</td></tr><tr><td>npm <code>@rakuten-rex/*</code></td><td><strong>36 packages confirmed</strong> (35 from search plus <code>core</code> by direct probe) · published between 2019-07 and 2021-02 (<code>icons@1.3.0</code> on 2021-02-18 was the last)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There is no token package</strong> — <code>color</code>, <code>colors</code>, <code>palette</code>, <code>spacing</code>, <code>tokens</code>, <code>design-tokens</code>, <code>theme</code>, <code>foundation</code>, <code>elevation</code> and <code>shadow</code> all 404 on probe. <code>core@3.0.1</code> is not tokens but <strong>normalize.css split into Sass mixins</strong>.</li><li>Values were measured from the component packages' <code>*.static.css</code> (one of five build outputs). An extreme case of the &quot;npm published package&quot; route in HARVESTING.md — one where <strong>no other route exists at all</strong>.</li></ul>
+<h2 id="typography-16-styles-with-lang-line-height-branching">Typography — 16 styles, with :lang() line-height branching</h2>
+<p><code>@rakuten-rex/typography@1.0.5</code> (2020-09-11). Default colour <code>#333</code>, a system font stack (-apple-system … Segoe UI Emoji). Weights 100/300/400/500/700 by class.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Style</th><th>Desktop</th><th>Mobile (≤25.875em = 414px)</th></tr></thead><tbody><tr><td>Display1</td><td>2.875rem (46px) / 1.391</td><td>2.25rem + <strong>:lang(en) 1.444 · :lang(ja) 1.333</strong></td></tr><tr><td>Display2</td><td>2.5rem (40) / 1.4</td><td>2rem / 1.375</td></tr><tr><td>Display3</td><td>2.25rem (36) / 1.5 + <strong>:lang branching (en 1.444 / ja 1.333)</strong></td><td>1.75rem / 1.429</td></tr><tr><td>Display4</td><td>2rem (32) / 1.375</td><td>1.5rem / 1.333</td></tr><tr><td>Display5</td><td>1.75rem (28) / 1.429</td><td>(no branching)</td></tr><tr><td>H1–H6</td><td>24/20/16/14/12/12px</td><td>20/16/14/12/10/10px</td></tr><tr><td>LeadBody · Body1 · Body2</td><td>20 / 16 / 14px (lh 1.4/1.5/1.429)</td><td>(fixed)</td></tr><tr><td>Caption · Overline</td><td>12 / 10px (lh 1.333/1.6)</td><td>(fixed)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Per-language (:lang) line-height branching exists as a CSS selector</strong> — ja takes a lower line height than en (1.333 vs 1.444). Where LINE (LDSG) puts the language axis in the token names, ReX branches <strong>at the selector layer</strong>. A counter-example to &quot;no per-language line-height or tracking rules were found&quot; in <code>patterns/typography.md</code> (line 623) · cross-reference <code>line.md</code> and <code>i18n/</code>.</li><li>A single responsive downshift boundary at <strong>414px</strong> (25.875em) — two-band typography.</li></ul>
+<h2 id="buttons-three-blue-steps-a-25rem-pill">Buttons — three blue steps, a 2.5rem pill</h2>
+<p><code>@rakuten-rex/button@1.5.1</code> (2020-11-16). Seven variants (Button, ButtonUi, Outline, Link plus three Pill forms).</p>
+<pre class="md-code"><code>Base    #134ff3 · hover #3a6dfa · active #053ace  (three blue steps)
+Shape   radius 0.25rem · Pill 2.5rem · border 1px · padding 0.5rem 1rem
+Text    1rem / 1.5 (system font)
+Outline: white background + blue text → fills on hover / Link: hover bg #ebebeb</code></pre>
+<ul class="md-list"><li><strong>An <code>undefined</code> literal shipped as a bug</strong>: <code>.rex-button.hover{background-color: undefined}</code> — a JS undefined serialised straight into CSS on the state mirror classes (<code>.hover</code> / <code>.active</code> / <code>.focus</code>), and distributed that way across every variant. Physical evidence of an unverified build pipeline.</li><li><code>:focus</code> holds the same values as <code>:hover</code> — no focus-specific indication (which, combined with <code>outline: none</code>, counts against accessibility).</li></ul>
+<h2 id="grid-12-columns-24px-gutter-six-breakpoints">Grid — 12 columns, 24px gutter, six breakpoints</h2>
+<p><code>@rakuten-rex/grid@1.6.0</code> (2020-07-01). A Bootstrap-style 12-column flexbox.</p>
+<pre class="md-code"><code>Breakpoints      375 · 414 · 768 · 1024 · 1280 · 1440px (xxl)
+Container max    290 · 345 · 384 · 696 · 936 · 1224px
+Gutter           24px (row -12 / col +12)</code></pre>
+<p><strong>414px is a first-class boundary in both the typography and the grid</strong> — a mobile-first commerce sample that takes the iPhone Plus/Max width straight as a breakpoint.</p>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The npm tarball is the only surviving source</strong> — docs 403, zero Wayback snapshots, repositories gone. A sample demonstrating that a discontinued system can still be measured after the fact</li><li>:lang(en) / :lang(ja) line-height branching at the selector layer — the third position for the language axis (LINE = token names · shadcn/ui = font slots · ReX = CSS selectors)</li><li>Packages split per component, each bundling five outputs (development/production/static × css/js) — static.css is the measurement window</li><li>A single 414px mobile boundary plus a 1440 xxl — traces of the device distribution in commerce traffic</li><li>The <code>undefined</code> shipping bug — a JS→CSS serialisation failure on the state tokens, distributed as-is</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified (<code>:focus</code> identical to hover plus <code>outline: none</code> — AA is doubtful without an explicit provision).</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>npm: https://www.npmjs.com/org/rakuten-rex (36 packages, 2019-07 to 2021-02)</li><li>Verification commands: <code>registry.npmjs.org/-/v1/search?text=%40rakuten-rex</code> plus individual probes (confirming <code>@rakuten-rex/&amp;lt;name&amp;gt;</code> 404s)</li><li><strong>Still to confirm:</strong> the full colour palette (there is no token package — sweeping the static.css of the remaining 30-odd packages such as text-field and checkbox would recover the list of colours in use), the contents of <code>icons@1.3.0</code> (the last release), what became of Rakuten's internal system after ReX, and the Figma kit</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

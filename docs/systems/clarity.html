@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clarity Design System — Self-Made DesignOps</title>
+<meta name="description" content="VMware's system — it ships reduced motion as a theme file (theme.low-motion.css), switches to CSS system colours (Canvas, CanvasText) in the high-contrast…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/clarity.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Clarity Design System — Self-Made DesignOps">
+<meta property="og:description" content="VMware's system — it ships reduced motion as a theme file (theme.low-motion.css), switches to CSS system colours (Canvas, CanvasText) in the high-contrast…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/clarity.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clarity Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="VMware's system — it ships reduced motion as a theme file (theme.low-motion.css), switches to CSS system colours (Canvas, CanvasText) in the high-contrast…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Clarity Design System",
+ "description": "VMware's system — it ships reduced motion as a theme file (theme.low-motion.css), switches to CSS system colours (Canvas, CanvasText) in the high-contrast…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/clarity.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Clarity Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://clarity.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#accessibility-the-themes-are-a-three-way-axis">Accessibility — the themes are a three-way axis</a></li><li><a href="#tokens-all-calc-multiplications">Tokens — all calc() multiplications</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-cds-button">Buttons (cds-button)</a></li><li class="lvl3"><a href="#inputs-cds-input-an-underline-by-default">Inputs (cds-input) — an underline by default</a></li><li class="lvl3"><a href="#modals-cds-modal-every-width-step-a-multiple-of-one-space-token">Modals (cds-modal) — every width step a multiple of one space token</a></li><li class="lvl3"><a href="#the-internal-multipliers-and-motion-tokens-clearing-the-backlog">The internal multipliers and motion tokens — clearing the backlog</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li class="lvl3"><a href="#the-wcag-target-is-absent-confirmed-by-render-2026-08-18">The WCAG target is absent — confirmed by render (2026-08-18)</a></li><li class="lvl3"><a href="#figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>VMware</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://clarity.design" rel="noopener">Official site</a><br><a href="https://github.com/vmware-clarity/core" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/clarity.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Clarity Design System</span></nav>
+    <h1>Clarity Design System</h1>
+    <p class="doc-lede">VMware · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>VMware's system — it <strong>ships reduced motion as a theme file</strong> (<code>theme.low-motion.css</code>), <strong>switches to CSS system colours (<code>Canvas</code>, <code>CanvasText</code>) in the high-contrast theme</strong>, and its spacing and typography are all <strong><code>calc(n × an internal multiplier)</code></strong>.</p>
+<h2 id="accessibility-the-themes-are-a-three-way-axis">Accessibility — the themes are a three-way axis</h2>
+<pre class="md-code"><code>styles/theme.dark.css          — dark
+styles/theme.high-contrast.css — high contrast (plus forced-colors support)
+styles/theme.low-motion.css    — reduced motion</code></pre>
+<ul class="md-list"><li><strong>The only sample that ships reduced motion as a separate theme file.</strong> Most handle it inside a <code>prefers-reduced-motion</code> media query (Cloudscape zeroes its durations, Spindle disables its View Transition); Clarity puts it <strong>at the same level as swapping a theme</strong></li><li><strong>The high-contrast theme uses CSS system colours such as <code>Canvas</code>/<code>CanvasText</code></strong> — handing the values over to the OS's forced-colors mode. A choice to abandon the brand colours and follow the OS setting, unique in the sample</li><li>Dark and high contrast override the same alias tokens (<code>--cds-alias-object-app-background</code>) with different values — the separate-theme-file camp</li></ul>
+<h2 id="tokens-all-calc-multiplications">Tokens — all <code>calc()</code> multiplications</h2>
+<pre class="md-code"><code class="language-css">--cds-global-space-3:  calc(4 * var(--cds-internal-scale-2));   /* 4 units */
+--cds-global-space-9?: … space-1(1) 2 4 6 8 12 16 24 32 36 48 64 72 96
+--cds-global-typography-font-size-4: calc(14 * var(--cds-internal-scale-3));</code></pre>
+<ul class="md-list"><li><strong>Every dimension is a product with an internal multiplier variable</strong> — one multiplier rescales the whole system. <strong>The most thorough form</strong> of the runtime-multiplier camp (Mantine, Radix, Vapor, Ring UI, Stacks), and using <strong>different multiplier variables</strong> for spacing and typography (<code>scale-2</code> / <code>scale-3</code>) is unique in the sample</li><li>The spacing steps <code>1 · 2 · 4 · 6 · 8 · 12 · 16 · 24 · 32 · 36 · 48 · 64 · 72 · 96</code> — including 36, and respecting the core</li><li>Font sizes <strong>10 · 11 · 12 · 13 · 14 · 16 · 20 · 24 …</strong> — including 13px (the same value as Stacks), with the lower range dense at 1px steps</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Parsed from the per-component style modules of <code>@cds/core@6.17.0</code> (<code>button/button.element.scss.js</code> · <code>input/input.element.scss.js</code> · <code>modal/modal.element.scss.js</code> · <code>internal-components/overlay/overlay.element.scss.js</code>) plus the animation definitions in <code>internal/motion/</code>. Being Lit <code>css</code> template strings, the CSS reads straight out of the build artefact (the same technique as the CSS-in-JS section of HARVESTING.md).</p>
+<blockquote><p><strong>A note on units.</strong> The numbers below are the tokens' coefficients. The real values are all <code>coefficient × (1rem / --cds-global-base)</code>, and since base defaults to <strong>20</strong>, <strong>the coefficient is the px value under a 20px (125%) root.</strong> At the usual 16px root everything renders at ×0.8. A <code>[cds-base-font=&amp;quot;16&amp;quot;]</code> attribute in global.css switches base to 16.</p></blockquote>
+<h3 id="buttons-cds-button">Buttons (<code>cds-button</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">default</th><th style="text-align:center">sm</th></tr></thead><tbody><tr><td><strong>height (fixed)</strong></td><td style="text-align:center"><strong>36</strong></td><td style="text-align:center"><strong>25</strong> (= space-9 24 + space-1 1)</td></tr><tr><td>padding</td><td style="text-align:center">12 − border (1) = 11</td><td style="text-align:center">6 block / 12 inline</td></tr><tr><td><strong>min-width</strong></td><td style="text-align:center"><strong>64</strong> (space-13)</td><td style="text-align:center">—</td></tr><tr><td>radius / border</td><td style="text-align:center">4 / 1</td><td style="text-align:center">same</td></tr><tr><td>type</td><td style="text-align:center"><strong>12 · 600 · uppercase · tracking 0.12em</strong></td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>uppercase plus 0.12em tracking</strong> — the same uppercase camp as MUI (uppercase, 0.02857em), but with more than four times the tracking. A composition that opens up 12px type with tracking so it reads.</li><li><strong>min-width 64</strong> — the same number as MUI. (The &quot;zero samples with an absolute min-width&quot; in patterns/button.md refers to documentation-layer guidance — at the code layer MUI, Clarity and Fluent all set absolutes.)</li><li>The sm height of 25 = 24+1 — an odd height built from the sum of two space tokens.</li><li>The background sits not on the element but on <strong>an <code>::after</code> pseudo-element (inset −1, z-index:−1)</strong>, and hover and focus on outline/inverse are handled by that layer's <code>opacity: .1</code>.</li><li>The padding's border subtraction (12−1) is in the code as a <code>calc()</code> — the same technique as MUI, Codex and Grommet.</li></ul>
+<h3 id="inputs-cds-input-an-underline-by-default">Inputs (<code>cds-input</code>) — an underline by default</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>value</th></tr></thead><tbody><tr><td>form</td><td><strong>border 0 plus a 1 border-bottom, radius 0</strong></td></tr><tr><td>height</td><td>the input element's height = line-height = <strong>24</strong> (+ the 1 underline = 25)</td></tr><tr><td>padding</td><td><code>2 6 0 6</code></td></tr><tr><td>type</td><td><strong>13</strong> (font-size-3)</td></tr><tr><td>focus</td><td>a gradient <strong><code>background-size</code> sweep, 0%→100%, 0.2s ease</strong> (<code>duration-quick</code>)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Not a box but an underline of the Material lineage.</strong> On focus the blue underline fills not by spreading from the centre but <strong>by sweeping horizontally</strong> — drawn as a <code>background-size</code> transition on a <code>linear-gradient</code> (the same technique as Backpack's background-size underline, applied to input focus rather than links).</li><li><strong>An input height of 25 = the sm button's height of 25</strong> — an odd height aligning across components.</li><li>The label is a separate block — <strong>13 · 400</strong> — and the default layout is horizontal (the label to the left), with the label's max width = the control's default width = <strong>192</strong> (= layout-space-xxxl 64 × 3).</li></ul>
+<h3 id="modals-cds-modal-every-width-step-a-multiple-of-one-space-token">Modals (<code>cds-modal</code>) — every width step a multiple of one space token</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th style="text-align:center">width</th><th>formula</th></tr></thead><tbody><tr><td>sm</td><td style="text-align:center">288</td><td><strong>4 × space-14 (72)</strong></td></tr><tr><td>default</td><td style="text-align:center">576</td><td><strong>8 × 72</strong></td></tr><tr><td>lg</td><td style="text-align:center">864</td><td><strong>12 × 72</strong></td></tr><tr><td>xl</td><td style="text-align:center">1152</td><td><strong>16 × 72</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The width scale derives from the single <code>--cds-global-space-14</code> (72) at 4, 8, 12 and 16 times.</strong> Neither the dedicated-width-token camp (Cloudscape) nor the reused-breakpoint camp (MUI) but <strong>multiples of a spacing token.</strong></li><li>Body max-height <strong>70vh</strong> (55vh in landscape tablet) · full-screen with radius 0 at ≤<strong>576px</strong> — the default modal width (576) and the full-screen breakpoint (576px) are the same number (the same pattern as Backpack's &quot;modal width = the 32rem breakpoint&quot;).</li><li>Radius 4 / border 1 / backdrop rgba(0,0,0,0.6).</li><li>Animation (WAAPI — not CSS transitions; the <code>internal/motion</code> runner reads its options from CSS custom properties): enter = the backdrop fading over <strong>0.5s</strong> (<code>duration-slow</code>) plus the dialog fading and sliding (translateY −15rem→0) over <strong>0.4s</strong> (<code>duration-primary</code>); exit <strong>0.3s</strong> (<code>duration-secondary</code>) — enter &gt; exit, joining the majority pattern in patterns/modal.md. The fallback when undefined is 300ms linear.</li><li>The easing <code>easing-primary</code> = <strong>cubic-bezier(0, 0.99, 0, 0.99)</strong> — an extreme deceleration curve that effectively arrives instantly and then settles. <code>easing-secondary</code> = cubic-bezier(0, 1.5, <strong>0.5, 1</strong>) — an overshooting curve with y = 1.5 (the same axis as TDS's <code>back</code> and Seed's overshoot family).</li></ul>
+<h3 id="the-internal-multipliers-and-motion-tokens-clearing-the-backlog">The internal multipliers and motion tokens — clearing the backlog</h3>
+<ul class="md-list"><li><strong>What the internal multiplier actually is</strong>: <code>--cds-internal-scale-N = (1rem / base) × the user multiplier</code>. base defaults to <strong>20</strong>, and the user multiplier (<code>--cds-global-scale-*</code>) defaults to <strong>1</strong>.</li><li>There are <strong>three</strong> multiplier axes, not two — <code>scale-1</code> (layout-space) · <code>scale-2</code> (space) · <code>scale-3</code> (typography). The token section's observation of &quot;two&quot; stands, but there is one more, for layout.</li><li>Nine duration tokens: instant 0 / quickest 0.1 / quicker 0.15 / quick 0.2 / secondary 0.3 / primary 0.4 / slow 0.5 / slower 0.7 / slowest 0.8s.</li><li><strong>What the low-motion theme actually does</strong>: the fast durations (quickest–primary) go to <strong>0</strong>, and the slow ones (slow–slowest) are <strong>stretched wholesale to 2s</strong> — transitions are switched off, while loops (spinners and the like) are <strong>slowed down</strong> rather than stopped. A two-way treatment.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Modal width = a space token (72) × 4/8/12/16</strong> — a third way of deriving a width scale</li><li><strong>Buttons uppercase with 0.12em tracking</strong> — the widest tracking in the uppercase camp</li><li><strong>An underline input with a background-size sweep focus</strong></li><li><strong>The sm button and the input aligned at an odd height of 25</strong></li><li><strong>low-motion splitting &quot;off&quot; from &quot;slower&quot;</strong></li><li>Asymmetric 0.4s enter / 0.3s exit plus an extreme deceleration easing (0,.99,0,.99)</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A reduced-motion theme file</strong> — unique in the sample</li><li><strong>CSS system colours in high contrast (forced-colors)</strong> — unique in the sample</li><li>Two multiplier variables per dimension axis (<code>scale-2</code>/<code>scale-3</code>) — unique in the sample</li><li>Every token a <code>calc()</code> product — the widest application of runtime multipliers</li><li>Font sizes 10–13 in 1px steps</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li>A high-contrast theme plus forced-colors system-colour support</li><li>A reduced-motion theme</li><li><del>The WCAG target figure is unverified</del> → <strong>confirmed absent (2026-08-18, headless render).</strong></li></ul>
+<h3 id="the-wcag-target-is-absent-confirmed-by-render-2026-08-18">The WCAG target is absent — confirmed by render (2026-08-18)</h3>
+<p>Even when rendered, Clarity <strong>does not publish a WCAG target (version or level).</strong></p>
+<ul class="md-list"><li>https://clarity.design/ — the accessibility card reads only &quot;Follow our <strong>WCAG-informed</strong> accessibility guidelines to ensure your application is inclusive and usable for all.&quot; <strong>&quot;WCAG-informed&quot; (referenced), not &quot;conformant&quot;.</strong></li><li>https://clarity.design/pages/accessibility — the body is not a target declaration but <strong>two pieces of practical guidance for the application side.</strong><ul class="md-list"><li><strong>ARIA Live Region:</strong> &quot;Clarity components will not make any announcements out of the box.&quot; — it states flatly that live-region announcements must be coordinated by <strong>the application, not the components</strong>, through a single <code>aria-live</code> region, and recommends <code>@angular/cdk</code>'s <code>LiveAnnouncer</code>. The one exception is <code>clr-accordion</code> announcing error states, described as something &quot;to be fixed in a future version&quot;.</li><li><strong>The autocomplete attribute:</strong> because <code>clr-date-container</code>, <code>clr-password-container</code>, <code>clr-input-container</code> and the rest receive their <code>input</code> element <strong>by projection from outside</strong>, setting <code>autocomplete</code> is the application's responsibility.</li><li>The external links cited are W3C's <code>aria-live</code>, MDN, WHATWG and <strong>W3C WCAG21 technique H98</strong> — links to technique documents, not a conformance declaration.</li><li>The opening sentence narrows the scope itself: &quot;Clarity tries to cover as many best practices for accessibility out of the box. However, some things are too application-specific for Clarity to provide.&quot;</li></ul></li></ul>
+<p><strong>Classified C, confirmed</strong> — the <em>implementation</em> is there (high-contrast and reduced-motion themes), but the system does not publish a <em>target figure.</em></p>
+<h3 id="figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</h3>
+<p>This is the basis for <code>figma_kit: false</code>. Rendering the documentation site yields <strong>the string <code>figma</code> zero times</strong> (across the root, <code>/pages/accessibility</code> and <code>/pages/designing</code>). What the designer-asset page (https://clarity.design/pages/designing) offers is just two things — <strong>the Metropolis font files</strong> and <strong>a zip of icon SVGs.</strong> The substance behind &quot;Clarity provides assets that help designers get started&quot; is <strong>fonts and icon sources</strong>, not a component library.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @cds/core@6.17.0</code> → <code>global.css</code>, <code>styles/theme.*.css</code></li><li>Components in depth: <code>*/**.element.scss.js</code> plus <code>internal/motion/</code> from the same package (2026-08-18)</li><li><strong>Open questions:</strong> <del>the internal multipliers' defaults</del> <del>the component list</del> (resolved 2026-08-18 — base 20, multiplier 1 and the three axes are in the deep pass; the components are the roughly 35 elements at the package's top level: accordion · alert · badge · breadcrumb · five buttons (action/expand/handle/inline/sort) · card · checkbox · datalist · date · divider · dropdown · file · forms · grid · icon · input · list · modal · navigation · pagination · password · progress-circle · radio · range · search · select · selection-panels · signpost · table · tag · textarea · time · toggle · tree-view), the full colour palette values (<code>construction</code> is confirmed as a blue-grey neutral family — 100 <code>#e3eaed</code> · 600 <code>#4f6169</code> · 900 <code>#21333b</code> and so on), and the accessibility target figure</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

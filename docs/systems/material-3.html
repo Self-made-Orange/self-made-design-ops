@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Material Design 3 — Self-Made DesignOps</title>
+<meta name="description" content="Google's cross-platform design system. It spans Android, the web and Flutter, and ships 32 theme variants on the same token structure.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/material-3.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Material Design 3 — Self-Made DesignOps">
+<meta property="og:description" content="Google's cross-platform design system. It spans Android, the web and Flutter, and ships 32 theme variants on the same token structure.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/material-3.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Material Design 3 — Self-Made DesignOps">
+<meta name="twitter:description" content="Google's cross-platform design system. It spans Android, the web and Flutter, and ships 32 theme variants on the same token structure.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Material Design 3",
+ "description": "Google's cross-platform design system. It spans Android, the web and Flutter, and ships 32 theme variants on the same token structure.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/material-3.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Material Design 3",
+  "applicationCategory": "DesignApplication",
+  "url": "https://m3.material.io"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-16",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#typography-roboto-15-steps">Typography — Roboto, 15 steps</a></li><li class="lvl3"><a href="#radius-shape-corner">Radius (shape corner)</a></li><li class="lvl3"><a href="#colour-197-per-theme">Colour — 197 per theme</a></li><li class="lvl3"><a href="#themes-32">Themes — 32</a></li><li class="lvl3"><a href="#spacing">Spacing</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#motion-obtained-from-the-androidx-source-2026-08-17">Motion — obtained from the androidx source (2026-08-17)</a></li><li><a href="#component-dimensions-androidx-generated-tokens-the-expressive-generation-2026-08-17">Component dimensions — androidx generated tokens (the Expressive generation, 2026-08-17)</a></li><li class="lvl3"><a href="#buttons-five-steps-v0110">Buttons, five steps (v0_11_0)</a></li><li class="lvl3"><a href="#other-measurements">Other measurements</a></li><li><a href="#elevation-and-scrim-androidx-generated-tokens-2026-08-18">Elevation and scrim — androidx generated tokens (2026-08-18)</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Google</b><br>full harvest · web · mobile<br>verified 2026-08-16<br><a href="https://m3.material.io" rel="noopener">Official site</a><br><a href="https://github.com/material-components/material-web" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/material-3.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Material Design 3</span></nav>
+    <h1>Material Design 3</h1>
+    <p class="doc-lede">Google · os · web · mobile</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Google's cross-platform design system. It spans Android, the web and Flutter, and ships <strong>32 theme variants</strong> on the same token structure.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="typography-roboto-15-steps">Typography — Roboto, 15 steps</h3>
+<p>A structure of five families × Large/Medium/Small.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>step</th><th style="text-align:center">size</th><th style="text-align:center">line height</th><th style="text-align:center">tracking</th><th style="text-align:center">default weight</th></tr></thead><tbody><tr><td><strong>Display</strong></td><td>Large</td><td style="text-align:center">57</td><td style="text-align:center">64</td><td style="text-align:center"><strong>-0.25</strong></td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Medium</td><td style="text-align:center">45</td><td style="text-align:center">52</td><td style="text-align:center">0</td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Small</td><td style="text-align:center">36</td><td style="text-align:center">44</td><td style="text-align:center">0</td><td style="text-align:center">Regular</td></tr><tr><td><strong>Headline</strong></td><td>Large</td><td style="text-align:center">32</td><td style="text-align:center">40</td><td style="text-align:center">0</td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Medium</td><td style="text-align:center">28</td><td style="text-align:center">36</td><td style="text-align:center">0</td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Small</td><td style="text-align:center">24</td><td style="text-align:center">32</td><td style="text-align:center">0</td><td style="text-align:center">Regular</td></tr><tr><td><strong>Title</strong></td><td>Large</td><td style="text-align:center">22</td><td style="text-align:center">28</td><td style="text-align:center">0</td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Medium</td><td style="text-align:center">16</td><td style="text-align:center">24</td><td style="text-align:center">+0.15</td><td style="text-align:center"><strong>Medium</strong></td></tr><tr><td></td><td>Small</td><td style="text-align:center">14</td><td style="text-align:center">20</td><td style="text-align:center">+0.10</td><td style="text-align:center"><strong>Medium</strong></td></tr><tr><td><strong>Body</strong></td><td>Large</td><td style="text-align:center">16</td><td style="text-align:center">24</td><td style="text-align:center">+0.50</td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Medium</td><td style="text-align:center">14</td><td style="text-align:center">20</td><td style="text-align:center">+0.25</td><td style="text-align:center">Regular</td></tr><tr><td></td><td>Small</td><td style="text-align:center">12</td><td style="text-align:center">16</td><td style="text-align:center">+0.40</td><td style="text-align:center">Regular</td></tr><tr><td><strong>Label</strong></td><td>Large</td><td style="text-align:center">14</td><td style="text-align:center">20</td><td style="text-align:center">+0.10</td><td style="text-align:center"><strong>Medium</strong></td></tr><tr><td></td><td>Medium</td><td style="text-align:center">12</td><td style="text-align:center">16</td><td style="text-align:center">+0.50</td><td style="text-align:center"><strong>Medium</strong></td></tr><tr><td></td><td>Small</td><td style="text-align:center">11</td><td style="text-align:center">16</td><td style="text-align:center">+0.50</td><td style="text-align:center"><strong>Medium</strong></td></tr></tbody></table></div>
+<p><strong>Tracking varies inversely with size.</strong> At 57px it is −0.25, above that 0, and from 22px downward it grows +0.10 → +0.25 → +0.50. <strong>The smaller it gets, the wider it is set.</strong></p>
+<p>Every style has a separate <code>Weight-emphasized</code> — the Regular family goes up to Medium, and the Medium family to SemiBold, one step each.</p>
+<p><strong>The same size takes different tracking in different families.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th style="text-align:center">size</th><th style="text-align:center">Title</th><th style="text-align:center">Body</th><th style="text-align:center">Label</th></tr></thead><tbody><tr><td style="text-align:center">16</td><td style="text-align:center">+0.15</td><td style="text-align:center">+0.50</td><td style="text-align:center">—</td></tr><tr><td style="text-align:center">14</td><td style="text-align:center">+0.10</td><td style="text-align:center">+0.25</td><td style="text-align:center">+0.10</td></tr><tr><td style="text-align:center">12</td><td style="text-align:center">—</td><td style="text-align:center">+0.40</td><td style="text-align:center">+0.50</td></tr></tbody></table></div>
+<p>At 14px alone it splits into Title 0.10 · Body 0.25 · Label 0.10. <strong>Tracking is decided by role, not by size.</strong></p>
+<p>Source: <code>tokens/shared/typescale.json</code></p>
+<h3 id="radius-shape-corner">Radius (shape corner)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td>None</td><td>0px</td></tr><tr><td>Extra-small</td><td>4px</td></tr><tr><td>Small</td><td>8px</td></tr><tr><td>Medium</td><td>12px</td></tr><tr><td>Large</td><td>16px</td></tr><tr><td>Large-increased</td><td>20px</td></tr><tr><td>Extra-large</td><td>28px</td></tr><tr><td>Extra-large-increased</td><td>32px</td></tr><tr><td>Extra-extra-large</td><td>48px</td></tr><tr><td><strong>Full</strong></td><td><strong>1000px</strong></td></tr></tbody></table></div>
+<p>Source: <code>tokens/shared/shape.json</code></p>
+<p><strong>The sources disagree.</strong> The Figma kit gives <code>Full = 1000px</code>, while <code>--md-sys-shape-corner-full</code> in npm <code>@material/web@2.5.0</code> is <strong><code>50cqmin</code></strong>. The design tool expresses the same concept as a large constant and the web implementation as a container-query unit. The other nine steps match exactly across both sources.</p>
+<h3 id="colour-197-per-theme">Colour — 197 per theme</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>group</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td>State Layers</td><td style="text-align:center"><strong>147</strong></td></tr><tr><td>Schemes</td><td style="text-align:center">49</td></tr><tr><td>Add-ons</td><td style="text-align:center">1</td></tr></tbody></table></div>
+<p><strong>State Layers outnumber Schemes three to one.</strong> Each colour role gets separate tokens for its per-state transparency layers.</p>
+<p><code>Schemes</code> repeats a four-way structure — <code>Primary</code> / <code>On Primary</code> / <code>Primary Container</code> / <code>On Primary Container</code> — for each colour role.</p>
+<h3 id="themes-32">Themes — 32</h3>
+<pre class="md-code"><code>16 hues × light/dark:
+  blue · chartreuse · cyan · green · indigo · monochrome · orange
+  pink · purple · red · rose · teal · yellow  (+ -lt / -dt)
+
+base:             light · dark
+contrast variants: light-medium-contrast · light-high-contrast
+                   dark-medium-contrast · dark-high-contrast</code></pre>
+<p><strong>Every theme has the same 197-token structure.</strong> Only the colours are swapped.</p>
+<p>There are two separate font themes, <code>baseline</code> and <code>wireframe</code>.</p>
+<h3 id="spacing">Spacing</h3>
+<p><strong>None.</strong> The whole variable export (<code>typescale</code> · <code>shape</code> · <code>shadows</code> · <code>typography</code> · <code>m3</code> · <code>font-theme</code>) was checked and there is no spacing collection. Nor is there one in the npm package.</p>
+<p>Material 3's 4dp grid is a concept in the documentation and <strong>is shipped as a token in neither source.</strong></p>
+<h2 id="components">Components</h2>
+<p>Unverified — the component pages could not be reached in the duplicate.</p>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>It does not tokenise spacing</strong>, as with Apple HIG. That both mobile operating systems leave whitespace out of their variables is where they part from the web systems.</li><li><strong>Tracking is decided by role.</strong> The same 14px is 0.10 in Title and 0.25 in Body — unlike systems that determine tracking from size alone.</li><li><strong>Every style has a paired emphasis weight</strong> — <code>Weight</code> / <code>Weight-emphasized</code>, raising Regular→Medium and Medium→SemiBold one step each.</li><li><strong>State Layers are first-class tokens</strong> — 147 per theme, 75% of the total. Hover, press and the rest are resolved in the tokens rather than in the implementation.</li><li><strong>It ships 32 themes</strong> — 16 hues × 2 modes plus 4 contrast variants. The most themes in the sample.</li><li><strong>It has <code>increased</code> variants</strong> — <code>Large-increased</code> (20) between <code>Large</code> (16) and <code>Extra-large</code> (28), and <code>Extra-large-increased</code> (32) after it. A different solution to the same problem as Fluent's <code>Nudge</code>.</li><li><strong>The radii are large.</strong> <code>Extra-extra-large</code> at 48px is the largest among the systems collected — the opposite axis from Carbon (aiming at 0) and Helios (maximum 8px).</li></ul>
+<h2 id="motion-obtained-from-the-androidx-source-2026-08-17">Motion — obtained from the androidx source (2026-08-17)</h2>
+<p>The motion tokens, unverified while <code>m3.material.io</code> was blocked, were obtained from <strong>the generated code in the androidx repository</strong> (<code>MotionTokens.kt</code> v0_103, <code>ExpressiveMotionTokens.kt</code> and <code>StandardMotionTokens.kt</code> v0_14_0):</p>
+<ul class="md-list"><li>Easings: <strong>three families — Emphasized/Standard/Legacy — × base, accelerate and decelerate</strong>. The full values are in the &quot;Material 3 — 10 easings plus 2 spring sets&quot; section of <code>patterns/motion.md</code></li><li>Durations: <strong>four families, Short–ExtraLong, × four steps = 16 tokens</strong> (50–1000ms) — the most in the corpus</li><li>The newest Expressive scheme uses <strong>springs (damping/stiffness)</strong> rather than beziers, and separates <code>Spatial</code> (position, allowed to overshoot) from <code>Effects</code> (colour and opacity, damping 1.0, no oscillation)</li></ul>
+<h2 id="component-dimensions-androidx-generated-tokens-the-expressive-generation-2026-08-17">Component dimensions — androidx generated tokens (the Expressive generation, 2026-08-17)</h2>
+<p>Component dimensions were obtained through the same channel as the motion (<code>tokens/*.kt</code>).</p>
+<h3 id="buttons-five-steps-v0110">Buttons, five steps (v0_11_0)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">XSmall</th><th style="text-align:center">Small (default)</th><th style="text-align:center">Medium</th><th style="text-align:center">Large</th><th style="text-align:center">XLarge</th></tr></thead><tbody><tr><td>height</td><td style="text-align:center">32</td><td style="text-align:center"><strong>40</strong></td><td style="text-align:center">56</td><td style="text-align:center"><strong>96</strong></td><td style="text-align:center"><strong>136dp</strong></td></tr><tr><td>icon</td><td style="text-align:center">20</td><td style="text-align:center">20</td><td style="text-align:center">24</td><td style="text-align:center">32</td><td style="text-align:center">40</td></tr><tr><td>inline padding</td><td style="text-align:center">16</td><td style="text-align:center">16</td><td style="text-align:center">24</td><td style="text-align:center">48</td><td style="text-align:center">64</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>XLarge at 136dp is the tallest button in the corpus</strong> (the existing distribution runs 28–48px). The Expressive generation pulls hero CTAs inside the button scale.</li><li><strong>The shape changes with state</strong> — alongside the two families <code>ContainerShapeRound</code> (full) and <code>Square</code> (medium–XL), there is a separate <strong><code>PressedContainerShape</code> one step tighter</strong>. The only sample where a <strong>shape morph</strong> on press is specified at the token layer.</li></ul>
+<h3 id="other-measurements">Other measurements</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>component</th><th>value</th></tr></thead><tbody><tr><td>Checkbox</td><td>18dp, <strong>StateLayer 40dp</strong> (visual 18 separated from a 40 touch layer)</td></tr><tr><td>RadioButton</td><td>20dp, StateLayer 40dp</td></tr><tr><td>Switch</td><td>track 52×32, <strong>a handle that resizes by state</strong>: unselected 16 → selected 24 → pressed 28dp</td></tr><tr><td>Slider</td><td>a <strong>4×44dp</strong> vertical bar handle (Expressive), track 16dp</td></tr><tr><td>FAB</td><td>Small 40 / Medium 80 / Large 96dp</td></tr><tr><td>Badge (dot)</td><td>6dp</td></tr><tr><td>AppBar Small · NavigationBar</td><td>64dp</td></tr><tr><td>state-layer alpha</td><td>hover 0.08 · focus/pressed 0.10 · dragged 0.16</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>M3 is the only system whose switch handle grows with state</strong> — Mantine has a five-step size axis but it is state-invariant (crossing <code>patterns/form.md</code>).</li><li>The shape scale's actual values (4/8/12/16/20/28/32/48 plus Increased 20/32) were re-confirmed in the code — <strong>matching what was collected from the Figma kit</strong> (an independent-channel cross-check).</li></ul>
+<h2 id="elevation-and-scrim-androidx-generated-tokens-2026-08-18">Elevation and scrim — androidx generated tokens (2026-08-18)</h2>
+<p>The origin corresponding to <code>shadows.json</code> (the shadows collection in the Figma variable export) was identified as androidx <code>ElevationTokens.kt</code> (v0_103):</p>
+<pre class="md-code"><code>Level0  0dp   Level1  1dp   Level2  3dp
+Level3  6dp   Level4  8dp   Level5 12dp</code></pre>
+<ul class="md-list"><li><strong>There is no <code>ShadowTokens.kt</code></strong> (zero hits when measuring the <code>tokens/</code> directory) — M3 tokenises shadow not as colour and blur values but <strong>only as six elevation steps in dp</strong>, delegating the actual shadow rendering to the platform (the Android elevation API). Where it parts from the web systems that ship shadows as lists of box-shadow values.</li><li>Scrim: <code>ScrimTokens.kt</code> (v0_117) — the colour role <code>Scrim</code> plus <strong>a fixed opacity of 0.32</strong>. It matches the scrim target (0.32) in <code>@material/web</code>'s dialog animation (an independent-channel cross-check — <code>patterns/motion.md</code>).</li><li>Typeface origin: <code>TypefaceTokens.kt</code> (v0_103) — both Brand and Plain are <code>SansSerif</code>, with three weights, Regular/Medium/Bold. <strong>That the typeface is specified as an abstract family</strong> is characteristic of the generated-code layer, which does not hardcode Roboto.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Four variants — <code>light-medium-contrast</code> · <code>light-high-contrast</code> · <code>dark-medium-contrast</code> · <code>dark-high-contrast</code> — are provided at the theme level. <strong>Confirmed to state no explicit conformance target</strong> (2026-08-18 — the accessibility documents mention WCAG only in general terms, with no version or level). At the implementation layer: <strong>a 40dp StateLayer on 18–20dp visual controls</strong> — a structure that guarantees the touch target through the size of the state layer, present in the generated tokens.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/material-components/material-web</li><li>Package: <code>@material/web</code> (contains <strong>only the shape tokens</strong>)</li><li>Figma: Material 3 Design Kit (Community) — the variable export is the most complete source</li><li><del>The component list and dimensions</del> → <strong>resolved (2026-08-17)</strong> — extracted from the 120 files in androidx <code>tokens/</code>. See &quot;Component dimensions&quot; above.</li><li><del>The actual TypeScale values</del> → <strong>resolved.</strong> 15 roles × Emphasized pairs = 30. Display 57/45/36 · Headline 32/28/24 · Title 22/16/14 · Body 16/14/12 · Label 14/12/11sp, with line heights of size + 8 (+7 at the large end). <strong>The rule for the Emphasized variants is &quot;weight up, tracking down&quot;</strong> — BodyLarge goes from Regular / tracking 0.5 to Medium / tracking 0.15. The same principle as Radix Themes' tracking correction on an active tab (−0.01em), <strong>systematised across the whole type scale</strong> (crossing <code>patterns/typography.md</code> and <code>navigation.md</code>).</li><li><del>The contents of <code>shadows.json</code></del> → <strong>resolved (2026-08-18)</strong> — see &quot;Elevation and scrim&quot; above. M3's shadows are six elevation tokens (0/1/3/6/8/12dp), and there is no separate shadow-value file.</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

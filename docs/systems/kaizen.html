@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kaizen — Self-Made DesignOps</title>
+<meta name="description" content="Culture Amp's system — spacing runs on a 6px grid (6 · 12 · 24 · 36 · 48 · 60 · 72), missing the core values 4, 8, 16 and 32 entirely. Kaizen is the only…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/kaizen.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Kaizen — Self-Made DesignOps">
+<meta property="og:description" content="Culture Amp's system — spacing runs on a 6px grid (6 · 12 · 24 · 36 · 48 · 60 · 72), missing the core values 4, 8, 16 and 32 entirely. Kaizen is the only…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/kaizen.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kaizen — Self-Made DesignOps">
+<meta name="twitter:description" content="Culture Amp's system — spacing runs on a 6px grid (6 · 12 · 24 · 36 · 48 · 60 · 72), missing the core values 4, 8, 16 and 32 entirely. Kaizen is the only…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Kaizen",
+ "description": "Culture Amp's system — spacing runs on a 6px grid (6 · 12 · 24 · 36 · 48 · 60 · 72), missing the core values 4, 8, 16 and 32 entirely. Kaizen is the only…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/kaizen.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Kaizen",
+  "applicationCategory": "DesignApplication",
+  "url": "https://cultureamp.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-a-6px-grid-leaving-the-core-behind-completely">Spacing — a 6px grid, leaving the core behind completely</a></li><li class="lvl3"><a href="#token-notation-a-css-variable-with-a-fallback-plus-an--id-pair">Token notation — a CSS variable with a fallback, plus an -id pair</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#a-discovery-at-the-token-layer-the-6px-grid-has-become-the-old-tier">A discovery at the token layer — the 6px grid has become the old tier</a></li><li class="lvl3"><a href="#buttons-min-height-and-min-width-from-the-same-variable">Buttons — min-height and min-width from the same variable</a></li><li class="lvl3"><a href="#inputs-inputtextfield-48px-taller-than-the-button">Inputs (Input/TextField) — 48px, taller than the button</a></li><li class="lvl3"><a href="#modals-a-bounce-entrance-and-201ms">Modals — a bounce entrance, and 201ms</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Culture Amp</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://cultureamp.design" rel="noopener">Official site</a><br><a href="https://github.com/cultureamp/kaizen-design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/kaizen.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Kaizen</span></nav>
+    <h1>Kaizen</h1>
+    <p class="doc-lede">Culture Amp · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Culture Amp's system — spacing runs on <strong>a 6px grid</strong> (6 · 12 · 24 · 36 · 48 · 60 · 72), <strong>missing the core values 4, 8, 16 and 32 entirely.</strong> Kaizen is the only 6px grid in the sample.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-a-6px-grid-leaving-the-core-behind-completely">Spacing — a 6px grid, leaving the core behind completely</h3>
+<pre class="md-code"><code class="language-scss">$spacing-xs:   0.375rem  // 6px
+$spacing-sm:   0.75rem   // 12px
+$spacing-md:   1.5rem    // 24px
+$spacing-lg:   2.25rem   // 36px
+$spacing-xl:   3rem      // 48px
+$spacing-xxl:  3.75rem   // 60px
+$spacing-xxxl: 4.5rem    // 72px</code></pre>
+<p><strong>Not one of <code>4</code>, <code>8</code>, <code>16</code> or <code>32</code> is present</strong> — only Kaizen and Grommet (a grid of divisors of 24: 3 · 6 · 12) leave all four core values at once in the sample, and <strong>both are in the 6px family.</strong> A 6px grid shares a least common multiple with the 4/8 grid at 12 and 24, but it cannot express 16.</p>
+<p>Seven t-shirt steps (xs–xxxl) — consistent with the tendency in <code>tokens/scales.md</code> that core departures come from small-step t-shirt scales.</p>
+<h3 id="token-notation-a-css-variable-with-a-fallback-plus-an--id-pair">Token notation — a CSS variable with a fallback, plus an <code>-id</code> pair</h3>
+<pre class="md-code"><code class="language-scss">$spacing-md:     var(--spacing-md, 1.5rem);   // a reference with the fallback built in
+$spacing-md-id:  --spacing-md;                // the variable's name as a value</code></pre>
+<ul class="md-list"><li><strong>Every SCSS variable is of the form <code>var(--x, fallback)</code></strong> — replaceable at runtime, and falling back to a static value when the variable is undefined</li><li><strong>The <code>-id</code>-suffixed tokens hold the variable's &quot;name&quot;</strong> — meant for <code>style.setProperty(spacingMdId, …)</code> in JS, and <strong>the only sample to ship a token's name as a value</strong></li><li>Typography has <strong>roles reserved for data display</strong>, such as <code>data-large</code>, at <strong>5.25rem (84px)</strong> — for dashboard figures, with a line height equal to the size (1:1)</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>The components are <code>@kaizen/components@3.3.12</code> (the successor to <code>@kaizen/component-library</code> — the frontmatter's 16.11.0 refers to the old package). A single <code>dist/styles.css</code> carries <code>@layer tokens, normalize, reset, kz-components</code> — <strong>four cascade layers</strong> shipping tokens and components together. Values were measured from <code>src/*/*.module.css</code> (the new tier) and <code>*.module.scss</code> (the old one).</p>
+<h3 id="a-discovery-at-the-token-layer-the-6px-grid-has-become-the-old-tier">A discovery at the token layer — the 6px grid has become the old tier</h3>
+<p><code>@layer tokens</code> contains <strong>two sets of spacing</strong>:</p>
+<ul class="md-list"><li><strong>A new scale named by px number</strong>, <code>--spacing-0…320</code> (0 · 1 · 2 · 4 · 6 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 …) — <strong>effectively a 4px grid</strong>, not the 6px grid that was Kaizen's unique value in the naming</li><li>The old t-shirt 6px grid survives as aliases, <code>--spacing-xs…xxxxxl</code> (6 · 12 · 24 · 36 · 48 · 60 · 72 · <strong>84 · 96</strong>) — the xxxxl (84) and xxxxxl (96) absent from the token md turn up here</li></ul>
+<p><strong>The 6px grid that was unique in the sample is regressing toward the core (the 4px family) inside its own system.</strong> The new-tier Button uses only the numeric scale while the old-tier Input uses only the 6px-grid SCSS variables — two generations coexisting in one package.</p>
+<p>Also: radius <strong>7px</strong> (<code>--border-solid-border-radius</code> — a rare odd value in the sample) · border <strong>2px</strong> · six easings (including <code>bounce-in/out/in-out</code>) · durations named <code>instant/immediate/rapid/fast/slow/deliberate</code> (0/100/200/300/400/700ms).</p>
+<h3 id="buttons-min-height-and-min-width-from-the-same-variable">Buttons — min-height and min-width from the same variable</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>min-height = min-width</strong></td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center"><strong>48px</strong></td></tr><tr><td>padding</td><td style="text-align:center">y <code>calc(8px − border)</code></td><td style="text-align:center">y 8−2, x 20−2</td><td style="text-align:center">y 12−2, x 24−2</td></tr><tr><td>type</td><td style="text-align:center">12px/16px</td><td style="text-align:center">16px/24px/500</td><td style="text-align:center">same</td></tr><tr><td>radius</td><td style="text-align:center">7px</td><td style="text-align:center">7px</td><td style="text-align:center">7px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>A single variable, <code>--button-min-x-y</code>, sets min-height and min-width at once</strong> — a square floor. An icon button automatically becomes a 40×40 square rather than a circle.</li><li><strong>The padding is <code>calc(spacing − the 2px border)</code></strong> — the border's share is subtracted from the padding to preserve the overall dimensions. The same intention as MUI reducing only outlined by 1px, applied <strong>to every variant through calc</strong>, and primary lays down a border in the same colour as its background so dimensions never change between variants.</li><li>States are not <code>:hover</code> but <strong>the attributes <code>[data-hovered]</code>, <code>[data-pressed]</code> and <code>[data-pending]</code></strong> — traces of a migration to react-aria. A rare case of tokenising the colour of a <code>pending</code> (loading) state.</li><li>Focus: a 2px ring (<code>blue-500</code>) with a 1px offset. The three reversed variants invert the ring to <code>blue-300</code>.</li></ul>
+<h3 id="inputs-inputtextfield-48px-taller-than-the-button">Inputs (Input/TextField) — 48px, taller than the button</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>height</strong></td><td><strong>a fixed 48px</strong> (<code>$input-height</code>)</td></tr><tr><td>inline padding</td><td>12px (<code>$spacing-sm</code> — the 6px grid)</td></tr><tr><td>border · radius</td><td>2px · 7px</td></tr><tr><td>type</td><td>16px / 1.5</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The input at 48px vs the medium button at 40px</strong> — the input matches the button's large. This parts from the majority, who align button and input heights within a form (Backpack 36/36).</li><li>Alongside <code>error</code> (red-500) there is a separate <strong><code>caution</code> (yellow-600)</strong> state — few systems in the sample distinguish warning from error in the field's border colour.</li><li>Focus applies a ring <strong>and a background tint</strong> (gray-200) at once; disabled is opacity 0.3.</li></ul>
+<h3 id="modals-a-bounce-entrance-and-201ms">Modals — a bounce entrance, and 201ms</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td>min 300 / <strong>max 600px</strong></td></tr><tr><td>radius · shadow</td><td>7px · <code>shadow-large</code></td></tr><tr><td>scrim</td><td>#000 at 50%</td></tr><tr><td>enter</td><td><strong>fade + zoom (0.5→1), 300ms, <code>bounce-in</code></strong> <code>(0.485,0.155,0.24,1.245)</code></td></tr><tr><td>exit</td><td>200ms <code>bounce-out</code></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>An overshooting (bounce) easing is actually used on the modal entrance.</strong> <del>Kaizen is the only sample using it on a default modal</del> → <strong>corrected (2026-08-18, the 83-sample re-synthesis in <code>patterns/motion.md</code>):</strong> there are at least eight (Blueprint 1.12 · HSDS's <code>boop</code> 1.2 and others). Kaizen is one of them.</li><li><strong>The scrim fade is 201ms</strong> — to avoid a bug in Chrome/Blink 102.x where 200ms animates the opacity all the way to 1, a <strong>literal one millisecond higher</strong> was pinned in place of the &quot;rapid&quot; token (200ms), with Jira KDS-523 cited in a source comment. The only sample where a browser-bug workaround is embalmed in a duration value.</li><li>The 0.5→1 zoom is the deepest contraction among the sample's modal scale entrances (Backpack is 0.9→1).</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>The 6px grid regressing on itself</strong> — the new numeric scale is in the 4px family, and only the old t-shirt scale keeps 6px</li><li><strong>A 7px radius</strong> — an odd radius, shared by every component</li><li><strong>Button min-width = min-height</strong> — a square floor from one variable</li><li><strong><code>calc(padding − border)</code> on every variant</strong> — dimensional invariance guaranteed by calc</li><li><strong>A bounce-in modal entrance plus the 201ms bug-workaround value</strong></li><li><strong>A <code>caution</code> field state</strong> — a warning border colour that is not an error</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A 6px grid</strong> — leaving the core 4, 8, 16 and 32 entirely, the only such grid in the sample. Though the components' new tier is moving to a 4px-family numeric scale (the deep pass above, 2026-08-18)</li><li><strong><code>-id</code> tokens (a variable's name as a value)</strong> — unique in the sample</li><li>Every token as <code>var(--x, fallback)</code> — supporting static and runtime at once</li><li><code>data-large</code> at 84px with a 1:1 line height — a role reserved for dashboard figures</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>Confirmed absent (2026-08-18, headless render).</strong></p>
+<p>Even when rendered, this system publishes no accessibility target. The documentation site is <strong>a single Storybook</strong>, and going through its <strong>197</strong> documentation entries (measured from <code>index.json</code>) turns up no document titled Accessibility or a11y. The structure is only Introduction/Welcome · Guides (App starter · Layout and spacing · the Tailwind family · the Tokens family) · Components (about 60) · Pages · Releases. Across every rendered page the string <code>WCAG</code> appears <strong>zero times</strong>. Sources: https://cultureamp.design/ · https://cultureamp.design/index.json (headless render, 2026-08-18)</p>
+<p>The Welcome document does mention accessibility once, as an object — a sentence saying the components aim at &quot;a high level of quality, <strong>accessibility</strong> and consistency with the overall platform&quot; — but <strong>there is no conformance criterion and no verification method</strong> (source: https://cultureamp.design/?path=/docs/introduction-welcome--docs). <code>@storybook/addon-a11y</code> is installed in the Storybook (the manager bundle <code>sb-addons/a11y-1</code>), so this is the type that <strong>checks automatically during development but does not document a target level.</strong></p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @kaizen/design-tokens@11.0.17</code> → <code>sass/</code></li><li>Components: <del><code>@kaizen/component-library@16.11.0</code></del> → <strong><code>@kaizen/components@3.3.12</code></strong> (the current package — used in the deep pass, 2026-08-18). <code>dist/styles.css</code> plus <code>src/*/*.module.css</code></li><li>Colour: entirely in <code>@layer tokens</code> of <code>dist/styles.css</code> — 7 hues × 7 steps (100–700, with 800 only for purple) plus white and black. Typefaces: Inter for body / <strong>Tiempos Headline</strong> (the display-0 serif) / IBM Plex Mono</li><li><strong>Figma (2026-08-18, headless render):</strong> no public kit is confirmed. The Welcome document writes &quot;We aim to have what's represented here in code <strong>equally matching Figma</strong>, to enable cross-functional teams to communicate with the same language&quot;, which <strong>implies an internal Figma library exists</strong>, but nowhere in the 197 Storybook entries is there a kit page, a download or a community link (that one sentence is the only mention of &quot;Figma&quot; in the whole rendered site). → at the time this read <code>figma_kit: unverified</code>: not &quot;there is none&quot; but &quot;it is not published&quot;. Source: https://cultureamp.design/?path=/docs/introduction-welcome--docs</li><li><strong>Figma — resolved to <code>true</code> (2026-08-23).</strong> The kit the sentence above only implied is linked directly from the <strong>repository</strong>, which the documentation-site render never covered: <code>CONTRIBUTING.md</code> line 165 sends icon contributors to &quot;our figma file&quot;, <code>figma.com/file/eZKEE5kXbEMY3lx84oz8iN</code> — the file is named <strong>💜 UI Kit: Heart</strong>. The address answers <strong>302</strong> (it redirects rather than serving the file), so this confirms <strong>the kit exists</strong>, not that it can be opened publicly — the same reading the corpus applies to Backpack. File key recorded here on purpose: without it the kit cannot be rechecked. Source: github <code>cultureamp/kaizen-design-system</code>, <code>CONTRIBUTING.md</code>, <code>main@5b691f46c5</code></li><li><strong>Open questions:</strong> <del>the colour, shadow and layout tokens</del> <del>the component list</del> (resolved 2026-08-18 — all in styles.css, with around 60 component directories), <del>the accessibility target</del> (confirmed absent 2026-08-18), the rationale for the 6px grid — <strong>the documentation site was read by headless render on 2026-08-18 (invalidating the earlier &quot;blocked by the proxy&quot; note), and no document, including <code>Guides/Layout and spacing</code>, explains why 6px was chosen</strong> — and whether a public Figma kit exists</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

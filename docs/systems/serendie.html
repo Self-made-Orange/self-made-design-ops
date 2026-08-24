@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Serendie Design System — Self-Made DesignOps</title>
+<meta name="description" content="Mitsubishi Electric's system (in collaboration with Takram) — the type scale ships in two sets, expanded and compact, elevation is not a shadow but an…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/serendie.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Serendie Design System — Self-Made DesignOps">
+<meta property="og:description" content="Mitsubishi Electric's system (in collaboration with Takram) — the type scale ships in two sets, expanded and compact, elevation is not a shadow but an…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/serendie.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Serendie Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="Mitsubishi Electric's system (in collaboration with Takram) — the type scale ships in two sets, expanded and compact, elevation is not a shadow but an…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Serendie Design System",
+ "description": "Mitsubishi Electric's system (in collaboration with Takram) — the type scale ships in two sets, expanded and compact, elevation is not a shadow but an…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/serendie.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Serendie Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://serendie.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-802-of-them-in-two-tiers-reference-and-system">Tokens — 802 of them, in two tiers, reference and system</a></li><li class="lvl3"><a href="#type-two-size-scales">Type — two size scales</a></li><li class="lvl3"><a href="#elevation-opacity-not-shadow">Elevation — opacity, not shadow</a></li><li class="lvl3"><a href="#colour-the-impression-family-plus-240-chart-specific-tokens">Colour — the impression family plus 240+ chart-specific tokens</a></li><li class="lvl3"><a href="#spacing-and-radius">Spacing and radius</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-button-the-label-is-not-bold">Buttons (Button) — the label is not bold</a></li><li class="lvl3"><a href="#inputs-textfield-outline-instead-of-border-and-yielding-with-layer">Inputs (TextField) — outline instead of border, and yielding with @layer</a></li><li class="lvl3"><a href="#modals-modaldialog-a-single-408px-width">Modals (ModalDialog) — a single 408px width</a></li><li class="lvl3"><a href="#themes-four-traditional-japanese-colours">Themes — four traditional Japanese colours</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Mitsubishi Electric (+ Takram)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://serendie.design" rel="noopener">Official site</a><br><a href="https://github.com/serendie/serendie" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/serendie.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Serendie Design System</span></nav>
+    <h1>Serendie Design System</h1>
+    <p class="doc-lede">Mitsubishi Electric (+ Takram) · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Mitsubishi Electric's system (in collaboration with Takram) — <strong>the type scale ships in two sets, expanded and compact</strong>, elevation is not a shadow but <strong>an opacity scale</strong>, and the semantic colour family is named <strong><code>impression</code></strong>. The <strong>fourth CJK sample</strong> with two weights (400/700).</p>
+<h2 id="tokens-802-of-them-in-two-tiers-reference-and-system">Tokens — 802 of them, in two tiers, reference and system</h2>
+<p><strong><code>reference</code> (raw) / <code>system</code> (role)</strong>, occupying the same position as M3's ref/sys. Even the tier names match M3's structure, though the source mentions no relationship.</p>
+<h3 id="type-two-size-scales">Type — two size scales</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>step</th><th style="text-align:center">expanded</th><th style="text-align:center">compact</th></tr></thead><tbody><tr><td>small</td><td style="text-align:center">14</td><td style="text-align:center">12</td></tr><tr><td><strong>medium</strong></td><td style="text-align:center"><strong>16</strong></td><td style="text-align:center"><strong>14</strong></td></tr><tr><td>large</td><td style="text-align:center">18</td><td style="text-align:center">16</td></tr><tr><td>5XL</td><td style="text-align:center">64</td><td style="text-align:center">56</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Both sets ship in full — 12 steps from 10 to 64px and 10 steps from 10 to 56px</strong> — making Spectrum (desktop/mobile sets) and Serendie (expanded/compact) the two samples with <strong>two type scales by density</strong>, and Serendie the first CJK case</li><li><del>compact's medium is <strong>14px</strong> — the 14px body of the two Chinese-language samples (Ant, Semi) appearing as a Japanese company's &quot;compact&quot; mode. expanded is 16px</del> → <strong>Interpretation corrected (2026-08-18, confirmed in the components deep pass):</strong> those are the reference-tier ramps, and <strong>in actual use (the system tier) the direction is reversed</strong> — compact is mobile (&lt;768px) with a 16px body, and expanded is desktop with a <strong>14px</strong> body. <code>body.medium_compact</code> refers to the compact ramp's <strong>large</strong> (16px) and <code>body.medium_expanded</code> to the expanded ramp's <strong>small</strong> (14px) — a cross-referencing structure. It is the desktop side that joins the 14px-body camp</li><li>Values like 21, 26, 43 and 37 are <strong>not integer multiples</strong> — neither arithmetic nor geometric</li><li><strong>Only two weights, regular 400 and bold 700</strong> — after KRDS, the Digital Agency and Charcoal, <strong>all four CJK samples ship two weights</strong></li><li><strong><code>fontFamily-primary: inherit</code></strong> — the only sample that specifies no system typeface and instead inherits from the page (only the monospace face is set, to Noto Sans Mono)</li></ul>
+<h3 id="elevation-opacity-not-shadow">Elevation — opacity, not shadow</h3>
+<pre class="md-code"><code>--sd-reference-elevation-opacity-scale-0~10: 0 – 1 (in steps of 0.1)</code></pre>
+<p><strong><code>elevation</code> is not a set of shadow presets but eleven opacity steps</strong> — the opposite reading from the Digital Agency's (eight steps of doubled shadow). A sample that adds a third meaning (opacity) to the &quot;ambiguity of elevation&quot; in <code>GLOSSARY.md</code>.</p>
+<p><del>Not shadows</del> → <strong>Supplemented (2026-08-18):</strong> the opacity is the reference tier; the system tier holds <code>elevation-shadow-level1~5</code> (<strong>drop-shadow</strong> — a filter, not box-shadow, crossing with Spindle's split) and <code>elevation-zIndex</code> (deepDive <strong>−1000</strong> · base 0 · docked 10 · dropdown 500 · modal 1000 · toast 2000). Elevation is <strong>a superordinate category binding opacity, shadow and z-index together</strong>, and the tokenised-z-index samples gain one more (the only one including a negative step).</p>
+<h3 id="colour-the-impression-family-plus-240-chart-specific-tokens">Colour — the <code>impression</code> family plus 240+ chart-specific tokens</h3>
+<pre class="md-code"><code>--sd-system-color-impression-primary / onPrimary / primaryContainer / onPrimaryContainer …</code></pre>
+<ul class="md-list"><li><strong>The <code>primary</code>/<code>onPrimary</code>/<code>Container</code> combinations are M3's vocabulary verbatim</strong>, but the family is called <code>impression</code> — M3's structure borrowed under a name of its own (180 tokens)</li><li><strong>There are 240+ chart-specific colours</strong> — <code>chart-mark-multi</code> 60, <code>chart-mark-{primary,positive,notice,negative}</code> 36 each, <code>chart-component</code> 36. The largest share of data-visualisation tokens in the sample (exceeding Cloudscape's chart tokens).</li></ul>
+<h3 id="spacing-and-radius">Spacing and radius</h3>
+<ul class="md-list"><li>Spacing: 12 t-shirt steps, <code>4 8 12 16 20 24 32 40 48 64 80</code> plus none — every core value (4/8/16/24/32) present</li><li>The raw <code>dimension-scale</code> is ordinal, 0–18 (0 · 1 · 2 · 4 · 8 · … · 96)</li><li>Radius: <code>2 4 8 12 16</code> plus <code>full</code> (9999px)</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>@serendie/ui@3.7.0</code> — built on <strong>Panda CSS recipes (cva/sva) plus headless Ark UI</strong> (the same combination as Park UI, in a corporate edition). <code>@serendie/design-token@1.4.5</code> is bundled into dist, and values were resolved from the bundled tokens and <code>styled-system/tokens</code>. What compact and expanded actually are was settled here: <strong><code>expanded</code> = the media condition <code>min-width: 768px</code>.</strong></p>
+<h3 id="buttons-button-the-label-is-not-bold">Buttons (<code>Button</code>) — the label is not bold</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">medium (default)</th><th style="text-align:center">small</th></tr></thead><tbody><tr><td>height</td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center">32px</td></tr><tr><td>padding</td><td style="text-align:center">24×12px</td><td style="text-align:center">12×4px</td></tr><tr><td>radius</td><td style="text-align:center"><strong>full (9999px)</strong></td><td style="text-align:center">same</td></tr><tr><td>label</td><td style="text-align:center">label.large — <strong>14px</strong> compact / 13px expanded, <strong>400</strong>, line height 1</td><td style="text-align:center">label.medium 12px/400</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Two steps, 48/32px — there is no 40px step.</strong> The default of 48px is at the top of the sample (touch-first), and it is one step off from Spindle (48/40/32) and Charcoal (40/32).</li><li><strong>The button label's weight is 400</strong> — the only one of the five Japanese samples whose buttons are not bold (SmartHR, Vibes, Charcoal and Spindle all use bold). In a two-weight system (400/700), assigning the button to the regular side (→ crossing the i18n axis: a label line height of 1.0 against a body line height of 1.6 — CJK leading split by role).</li><li>Four styleTypes: filled · ghost · outlined · <strong>rectangle</strong> — rectangle is outlined <strong>with only the radius changed to 8px</strong>. The only sample where &quot;shape&quot; becomes a variant axis.</li><li>filled's hover is not a colour swap but <strong>an <code>::after</code> overlay state layer</strong> — M3's state layer grammar (component-layer evidence of the M3 borrowing that is consistent with the impression vocabulary).</li><li>The label's textStyle is conditioned on compact/expanded, so <strong>the two densities reach right inside the components</strong> — the label is larger on mobile, compact 14px &gt; expanded 13px.</li></ul>
+<h3 id="inputs-textfield-outline-instead-of-border-and-yielding-with-layer">Inputs (<code>TextField</code>) — outline instead of border, and yielding with @layer</h3>
+<ul class="md-list"><li>A single <strong>48px</strong> height (no size variants), radius 8px, and <strong>an outline of 1px rather than a border</strong> → on focus <strong>a 2px (thick) outline in the primary colour</strong> — state expressed as a change of thickness. Invalid gets a negative outline plus a warning icon, and a <strong>clear button is built in</strong> when there is a value.</li><li>The default width <code>min(100%, 300px)</code> is <strong>declared inside <code>@layer components</code></strong> — a source comment says the priority is yielded so that consumer CSS always wins.</li><li>The right-hand icon's touch target is <strong>48px in compact / 44px in expanded</strong> — the density switch changes not only the typography but <strong>the touch-target size</strong>.</li></ul>
+<h3 id="modals-modaldialog-a-single-408px-width">Modals (<code>ModalDialog</code>) — a single 408px width</h3>
+<ul class="md-list"><li>Composed from Ark UI's dialog. <strong>A single maxWidth of 408px — there are no size variants</strong> (the actual width is <code>100% − spacing.large×2</code>). Radius 8px (medium, even for a modal — parting from Charcoal's and Spindle's large 20–24px radii), shadow <code>shadow.level5</code> (drop-shadow 0 8px 24px #00000033), a scrim token, and <code>zIndex.modal</code> 1000.</li><li><strong>The button order flips with density</strong> — by default (mobile) submit comes first; at expanded, <code>flex-direction: row-reverse</code> plus right alignment. The only implementation in the sample that settles the platform button-order argument with a single media condition.</li><li>The component library <strong>embeds a translation layer (<code>useTranslations</code>)</strong> — the close label and others come from multilingual resources.</li></ul>
+<h3 id="themes-four-traditional-japanese-colours">Themes — four traditional Japanese colours</h3>
+<p>Switching <code>data-panda-theme</code> ships four themes: asagi (浅葱 <code>#006066</code>) · kurikawa (栗皮 <code>#8F3D15</code>) · sumire (菫 <code>#7C3694</code>) · tsutsuji (躑躅 <code>#9B2657</code>) — a rare case of themes used <strong>as a matter of taste within one organisation rather than for multiple brands</strong>.</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>A 400-weight button label</strong> — the only non-bold button among the five Japanese samples</li><li><strong>What compact/expanded actually are, settled</strong> — a 768px media condition, with a 16px mobile body against a 14px desktop one (correcting the token section's reading)</li><li><strong>The rectangle styleType</strong> — radius as a variant axis, unique in the sample</li><li><strong>Touch targets follow the density too, 48→44px</strong> — the two-density split carried through completely</li><li><strong>Modal button order reversed by a media condition</strong> — unique in the sample</li><li>Ark UI plus Panda CSS — a corporate adoption of the headless combination</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Two type size scales</strong> <del>(a 16px expanded body / 14px compact)</del> (a 16px compact body on mobile / 14px expanded on desktop — corrected 2026-08-18) — the first CJK density split</li><li><strong>elevation = an opacity scale</strong> <del>— not shadows, a reading unique in the sample</del> (the reference tier only — the system tier carries five shadow steps and z-index alongside, supplemented 2026-08-18)</li><li><strong>The <code>impression</code> family</strong> — M3's vocabulary structure under a name of its own</li><li><strong>240+ chart colours</strong> — the largest data-visualisation token set in the sample</li><li><code>fontFamily-primary: inherit</code> — the only sample specifying no typeface</li><li><strong>Weights 400/700</strong> — confirming that all four CJK samples ship two weights</li><li>Two tiers, reference and system — the same structure as M3's ref/sys</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @serendie/design-token@1.4.6</code> → <code>dist/tokens.css</code></li><li>A Panda CSS preset (<code>panda-tokens.js</code>) ships alongside — a framework-integrated distribution</li><li>Components in depth: <code>npm pack @serendie/ui@3.7.0</code> → <code>dist/components/*</code> plus <code>dist/recipes/*</code> and the bundled <code>@serendie/design-token@1.4.5</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>the components (<code>@serendie/ui</code>)</del> <del>the expanded/compact switching criterion</del> (resolved 2026-08-18 — the deep pass: a 768px media condition), the Figma kit, and how dark mode is handled (the four themes are confirmed — whether they are all light is not)</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>serendie.design</code> → <code>figma.com/community/file/1433690846108785966/serendie-ui-kit</code></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

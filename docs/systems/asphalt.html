@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asphalt — Self-Made DesignOps</title>
+<meta name="description" content="Gojek's system — the corpus's first Southeast Asian sample. It keeps emboss/deboss (raised/sunken) shadow families, and in typography display and heading…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/asphalt.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Asphalt — Self-Made DesignOps">
+<meta property="og:description" content="Gojek's system — the corpus's first Southeast Asian sample. It keeps emboss/deboss (raised/sunken) shadow families, and in typography display and heading…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/asphalt.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Asphalt — Self-Made DesignOps">
+<meta name="twitter:description" content="Gojek's system — the corpus's first Southeast Asian sample. It keeps emboss/deboss (raised/sunken) shadow families, and in typography display and heading…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Asphalt",
+ "description": "Gojek's system — the corpus's first Southeast Asian sample. It keeps emboss/deboss (raised/sunken) shadow families, and in typography display and heading…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/asphalt.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Asphalt",
+  "applicationCategory": "DesignApplication",
+  "url": "https://asphalt.gojek.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-dtcg-format-value-type">Tokens — the DTCG format ({value, type})</a></li><li class="lvl3"><a href="#spacing-12-gap-steps-plus-a-spacelayout-reference-tier">Spacing — 12 gap steps plus a space.layout reference tier</a></li><li class="lvl3"><a href="#shadow-emboss-deboss">Shadow — emboss / deboss</a></li><li class="lvl3"><a href="#type-a-different-typeface-per-role">Type — a different typeface per role</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-padding-instead-of-height-with-the-border-offset-twice-over">Buttons — padding instead of height, with the border offset twice over</a></li><li class="lvl3"><a href="#inputs-textfield-the-same-four-step-ladder-as-the-button-and-an-input-with-hover">Inputs (textfield) — the same four-step ladder as the button, and an input with hover</a></li><li class="lvl3"><a href="#modals-a-native-dialog-with-no-width-scale">Modals — a native &lt;dialog&gt; with no width scale</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Gojek (GoTo)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://asphalt.gojek.com" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/asphalt.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Asphalt</span></nav>
+    <h1>Asphalt</h1>
+    <p class="doc-lede">Gojek (GoTo) · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Gojek's system — <strong>the corpus's first Southeast Asian sample</strong>. It keeps <strong><code>emboss</code>/<code>deboss</code> (raised/sunken) shadow families</strong>, and in typography <strong><code>display</code> and <code>heading</code> use different typefaces</strong> (Maison Neue Extended vs Maison Neue). Spacing is a <strong>12-step t-shirt scale from <code>3XS</code> to <code>6XL</code></strong>.</p>
+<blockquote><p><strong>A correction to the record.</strong> This corpus previously stated &quot;confirmed that Asphalt is not on npm&quot;. <strong>That was wrong</strong> — <code>@gojek/asphalt-web-tokens</code>, <code>@asphalt-react/*</code> and <code>@gojek/theme-asphalt-web-{carina,lynx}</code> are all public. The same kind of mistake as with Toss (probing a single name), and the second confirmed instance of lesson 9 in <code>HARVESTING.md</code>.</p></blockquote>
+<h2 id="tokens-the-dtcg-format-value-type">Tokens — the DTCG format (<code>{value, type}</code>)</h2>
+<p>Distributed in the W3C Design Tokens format — type metadata such as <code>type: &amp;quot;spacing&amp;quot;</code>, <code>&amp;quot;typography&amp;quot;</code> and <code>&amp;quot;boxShadow&amp;quot;</code> ships alongside the values. References use DTCG aliases too (<code>&amp;quot;{gap.2XL}&amp;quot;</code>), the same syntax as PrimeVue.</p>
+<h3 id="spacing-12-gap-steps-plus-a-spacelayout-reference-tier">Spacing — 12 <code>gap</code> steps plus a <code>space.layout</code> reference tier</h3>
+<pre class="md-code"><code>3XS 0.125rem(2) · 2XS 0.25(4) · XS 0.5(8) · S 0.75(12) · M 1(16) ·
+L 1.25(20) · XL 1.5(24) · 2XL 1.75(28) · 3XL 2(32) · 4XL 2.5(40) ·
+5XL 3(48) · 6XL 3.5(56)</code></pre>
+<ul class="md-list"><li><strong>A 12-step t-shirt scale</strong>, the most in the sample alongside Yoga (also 12). It extends by repeating the x prefix (<code>3XS</code>, <code>6XL</code>) — a different solution from Yoga's <code>huge</code>/<code>xhuge</code></li><li>With 4px intermediate steps such as 20 and 28px, every core value (4/8/16/24/32) is present</li><li><strong><code>space.layout</code> references <code>gap</code></strong> in a two-tier structure — the camp that puts layout whitespace in a separate namespace (Vanilla, Tegel, Pharos)</li></ul>
+<h3 id="shadow-emboss-deboss">Shadow — <code>emboss</code> / <code>deboss</code></h3>
+<pre class="md-code"><code class="language-js">emboss.low.top:    innerShadow  #ffffffb3  y1 blur1   // a white highlight above
+emboss.low.bottom: dropShadow   #ffffffb3  y1 blur1
+deboss.low.top:    innerShadow  #1e2c6a0a  y2 blur4   // a pressed-in inner shadow</code></pre>
+<ul class="md-list"><li><strong>Raised (emboss) and sunken (deboss) are separate families</strong> — the only sample that treats shadow not only as <code>elevation</code> (height) but as <strong>a direction, raised or sunken</strong></li><li>Each step is <strong>a pair of shadows, <code>top</code> and <code>bottom</code></strong> — a white highlight above plus a shadow below to build the relief (skeuomorphism tokenised)</li><li>The colour is <code>#1e2c6a0a</code>, <strong>a blue-tinged shadow</strong> (not pure black)</li></ul>
+<h3 id="type-a-different-typeface-per-role">Type — a different typeface per role</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>role</th><th>typeface</th><th style="text-align:center">weight</th><th style="text-align:center">line height</th></tr></thead><tbody><tr><td><code>display</code></td><td><strong>Maison Neue Extended</strong></td><td style="text-align:center">700</td><td style="text-align:center">1.5</td></tr><tr><td><code>heading</code></td><td>Maison Neue</td><td style="text-align:center">600</td><td style="text-align:center">1.29</td></tr><tr><td><code>code</code></td><td>Fira Code</td><td style="text-align:center">400</td><td style="text-align:center">1.56</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Only <code>display</code> uses the Extended (wide) face</strong> — the only sample that assigns a separate typeface family to large headings</li><li>Line heights are <strong>fractional ratios per role</strong>, like 1.29, 1.56 and 1.63</li><li>Tracking on <code>heading</code> is <strong>+0.015em (positive)</strong> — the opposite direction from the majority, who give large type negative tracking</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>A component distribution was confirmed — the individual <code>@asphalt-react/*</code> packages contain <strong>CSS Modules builds (<code>dist/index.css</code>)</strong> that can be measured directly. The figures come from <code>button@2.16.0</code>, <code>textfield@2.17.0</code> and <code>modal@2.16.0</code>; every colour and dimension takes the form <code>var(--token, fallback)</code>, so the fallback values are readable too.</p>
+<h3 id="buttons-padding-instead-of-height-with-the-border-offset-twice-over">Buttons — padding instead of height, with the border offset twice over</h3>
+<p>No height is declared; it derives from <strong>the type (with line height forced to 1) plus the block padding</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">L</th><th style="text-align:center">M</th><th style="text-align:center">S</th><th style="text-align:center">Xs</th></tr></thead><tbody><tr><td>type (600)</td><td style="text-align:center">18px</td><td style="text-align:center">16px</td><td style="text-align:center">14px</td><td style="text-align:center">12px</td></tr><tr><td>block padding (normal)</td><td style="text-align:center">19px</td><td style="text-align:center">16px</td><td style="text-align:center">13px</td><td style="text-align:center">12px</td></tr><tr><td>block padding (secondary)</td><td style="text-align:center">17px</td><td style="text-align:center">14px</td><td style="text-align:center">11px</td><td style="text-align:center">10px</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>56px</strong></td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center"><strong>36px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The border compensation is a double structure</strong> — on top of the base formula <code>--padding: calc(2px − var(--border-width))</code> (commented &quot;keeps the height when the border width changes&quot;), a <code>:not(.secondary)</code> selector adds 2px more padding to the border-less variants. Only secondary has a 2px border, so the total height matches either way — the same intention as MUI (subtracting 1px) and Backpack, solved here through a CSS-variable formula.</li><li>The variants form <strong>a grid</strong>: primary/secondary/tertiary/nude × brand/danger/system = <strong>12 combinations</strong>, plus link. The brand green is <code>#00aa13</code>.</li><li><strong>Every hover style sits inside <code>@media (hover: hover) and (pointer: fine)</code></strong> — a mobile-first decision not to ship hover states at all on touch devices. The first case in the sample of gating hover behind a media query.</li><li>There are <strong>12 size classes</strong> — four text steps plus four icon-only plus four compact (plus compactIcon). Radius 6px (<code>--roundness-action-control</code>).</li><li>Focus is <code>outline: 2px solid #86afff</code> (<code>--interactive-focus</code>) — a blue-only focus colour, kept separate from the brand green.</li><li><code>stick*</code> classes fold corners to <code>--roundness-sharp</code> (0) to build <strong>segmented groups</strong> (the same mechanism as Backpack's <code>--docked</code>).</li></ul>
+<h3 id="inputs-textfield-the-same-four-step-ladder-as-the-button-and-an-input-with-hover">Inputs (textfield) — the same four-step ladder as the button, and an input with hover</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">L</th><th style="text-align:center">M</th><th style="text-align:center">S</th><th style="text-align:center">Xs</th></tr></thead><tbody><tr><td><strong>field-height</strong></td><td style="text-align:center"><strong>56px</strong></td><td style="text-align:center">48px</td><td style="text-align:center">40px</td><td style="text-align:center">36px</td></tr><tr><td>block padding</td><td style="text-align:center">19px</td><td style="text-align:center">16px</td><td style="text-align:center">13px</td><td style="text-align:center">11px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Buttons and inputs share the 56/48/40/36 ladder</strong> — the same alignment as Backpack (sharing 36/48), across four steps. Inline padding 16px, border 1px <code>#cbcfd7</code>, radius 6px, min-width 160px.</li><li><strong>The input has a hover state</strong> — the background lifts to <code>#f5f7fa</code>. active turns the border <code>#1c3abb</code> (blue), and focus draws an outline — <strong>three states across three channels</strong> (background / border / outline).</li><li>The body line height is <strong>1.618</strong> — the <code>--text-regular-*</code> tokens use the golden ratio. Different again from the button (forced to 1) and heading (1.5), by role.</li><li><strong>A Hero input variant</strong> — the <code>display</code> typeface (Maison Neue <strong>Extended</strong> 700) builds a large search field at 68/72/76px and overlays the <strong><code>--shadow-deboss-mid-top</code> inner shadow</strong>. Confirmation that the token layer's emboss/deboss families really are used for a &quot;pressed-in input surface&quot; — the shadow-direction family's purpose demonstrated.</li><li>multiline (textarea) is not freely resizable but takes <strong>three named extent heights</strong> (76/92/108px). underline, nude and borderless variants ship too, along with a tracking class for OTP fields (<code>letter-spacing: 0.34–0.36rem</code>).</li></ul>
+<h3 id="modals-a-native-dialog-with-no-width-scale">Modals — a native <code>&amp;lt;dialog&amp;gt;</code> with no width scale</h3>
+<ul class="md-list"><li><strong>There are no width steps</strong> — <code>width: fit-content</code>. Content decides the width and the only ceiling is the viewport. A <strong>scale-less</strong> approach, different from Cloudscape's five steps, MUI's reused breakpoints and Yoga's fixed 580.</li><li>A native <code>&amp;lt;dialog&amp;gt;</code> plus <code>::backdrop</code>, with a <code>#32333acc</code> scrim (≈80%) — the same native camp as Backpack V2, at a heavier alpha.</li><li>Radius <strong>16px</strong> (<code>--roundness-container-M</code>) — component-layer confirmation of a token system that <strong>separates action (6px) and container (16px) radii by purpose name</strong>.</li><li>Shadow <code>0 2px 20px #1e2c6a14</code> — the <strong>blue tinge</strong> seen in the token layer is consistent in the modal shadow too.</li><li>Content padding 32px, max-height by an 85vh-minus-margins formula, top margin <code>clamp(56px, 12vh, 120px)</code>.</li><li><strong>Below 600px it becomes a bottom sheet in CSS alone</strong> — width 100%, bottom 0, bottom radii<ol class="md-list"><li>The same modal changes form with no separate component. The shipped CSS still carries the comment about correcting for the mobile address bar (vh).</li></ol></li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Hover gated behind <code>@media (hover:hover)</code></strong> — the first case in the sample</li><li>Buttons and inputs sharing <strong>four steps, 56/48/40/36</strong>, plus the doubled border-offset formula</li><li>A body line height of <strong>1.618 (the golden ratio)</strong>, with the button forced to 1</li><li><strong>The deboss shadow actually used for the Hero input's &quot;pressed surface&quot;</strong> — the token's purpose demonstrated</li><li>Scale-less modal width (fit-content) plus a mobile bottom-sheet switch in CSS alone</li><li>Action 6px / container 16px — radii separated by purpose name</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The first Southeast Asian sample</strong> — opening the third axis in the cultural-region priority</li><li><strong><code>emboss</code>/<code>deboss</code> raised and sunken shadows</strong> — unique in the sample</li><li><strong>A separate Extended typeface assigned to <code>display</code></strong> — unique in the sample</li><li>The DTCG format with type metadata shipped</li><li>A 12-step t-shirt scale (<code>3XS</code>–<code>6XL</code>) — the most, with Yoga</li><li>A blue-tinged shadow colour and positive tracking on <code>heading</code></li><li><code>UNLICENSED</code> stated on npm — publicly distributed but without a licence grant</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @gojek/asphalt-web-tokens@1.14.0</code></li><li>Components: <code>@asphalt-react/*</code> (split individually) — the <code>dist/index.css</code> of <code>button@2.16.0</code> · <code>textfield@2.17.0</code> · <code>modal@2.16.0</code> (used in the 2026-08-18 deep pass)</li><li>Brand themes: <code>@gojek/theme-asphalt-web-carina</code> · <code>-lynx</code> (not surveyed)</li><li><strong>Open questions:</strong> the colour palette, a full component list (a scope search confirms button, textfield, modal, popover, tab, tag, checkbox, selection, loader and others, but the enumeration is incomplete), how the carina and lynx themes differ, and the licence terms (what the UNLICENSED marking means)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

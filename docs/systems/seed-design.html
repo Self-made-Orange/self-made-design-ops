@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seed Design — Self-Made DesignOps</title>
+<meta name="description" content="Karrot's design system for its local-community and secondhand-trading service. One of the publicly available systems built in Korea that ships tokens.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/seed-design.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Seed Design — Self-Made DesignOps">
+<meta property="og:description" content="Karrot's design system for its local-community and secondhand-trading service. One of the publicly available systems built in Korea that ships tokens.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/seed-design.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Seed Design — Self-Made DesignOps">
+<meta name="twitter:description" content="Karrot's design system for its local-community and secondhand-trading service. One of the publicly available systems built in Korea that ships tokens.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Seed Design",
+ "description": "Karrot's design system for its local-community and secondhand-trading service. One of the publicly available systems built in Korea that ships tokens.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/seed-design.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Seed Design",
+  "applicationCategory": "DesignApplication",
+  "url": "https://seed-design.io"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#typography-18-steps-in-00625rem-1px-increments">Typography — 18 steps, in 0.0625rem (1px) increments</a></li><li class="lvl3"><a href="#tracking-three-negative-steps">Tracking — three negative steps</a></li><li class="lvl3"><a href="#colour">Colour</a></li><li class="lvl3"><a href="#the-token-tiers">The token tiers</a></li><li class="lvl3"><a href="#spacing-radius-absent-as-of-the-v1-stylesheet">Spacing / radius — absent (as of the v1 stylesheet)</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#in-v2-the-token-system-was-turned-over-spacing-radius-and-motion-appeared">In v2 the token system was turned over — spacing, radius and motion appeared</a></li><li class="lvl3"><a href="#buttons-actionbutton-the-press-is-a-scale-not-a-colour">Buttons (ActionButton) — the press is a scale, not a colour</a></li><li class="lvl3"><a href="#inputs-textinput-a-responsive-size-switching-density-by-breakpoint">Inputs (TextInput) — a &quot;responsive&quot; size switching density by breakpoint</a></li><li class="lvl3"><a href="#dialogs-a-272px-mobile-alert-with-a-contracting-entrance">Dialogs — a 272px mobile alert with a contracting entrance</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li class="lvl3"><a href="#contrast-lc-not-a-ratio-451">Contrast — Lc, not a ratio (4.5:1)</a></li><li class="lvl3"><a href="#target-size-and-interaction">Target size and interaction</a></li><li class="lvl3"><a href="#the-source-documents-not-wcag">The source documents (not WCAG)</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Danggeun (Karrot)</b><br>partial harvest · web · mobile<br>verified 2026-08-18<br><a href="https://seed-design.io" rel="noopener">Official site</a><br><a href="https://github.com/daangn/seed-design" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/seed-design.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Seed Design</span></nav>
+    <h1>Seed Design</h1>
+    <p class="doc-lede">Danggeun (Karrot) · commerce · web · mobile</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Karrot's design system for its local-community and secondhand-trading service. One of the <strong>publicly available systems built in Korea</strong> that ships tokens.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="typography-18-steps-in-00625rem-1px-increments">Typography — 18 steps, in 0.0625rem (1px) increments</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>rem</th><th>px</th></tr></thead><tbody><tr><td><code>font-size-10</code></td><td>0.625</td><td>10</td></tr><tr><td><code>font-size-25</code></td><td>0.6875</td><td>11</td></tr><tr><td><code>font-size-50</code></td><td>0.75</td><td>12</td></tr><tr><td><code>font-size-75</code></td><td>0.8125</td><td>13</td></tr><tr><td><code>font-size-100</code></td><td>0.875</td><td>14</td></tr><tr><td><code>font-size-150</code></td><td>0.9375</td><td>15</td></tr><tr><td><code>font-size-200</code></td><td>1</td><td>16</td></tr><tr><td><code>font-size-300</code></td><td>1.125</td><td>18</td></tr><tr><td><code>font-size-400</code></td><td>1.25</td><td>20</td></tr><tr><td><code>font-size-500</code></td><td>1.5</td><td>24</td></tr><tr><td><code>font-size-600</code></td><td>1.625</td><td>26</td></tr><tr><td><code>font-size-700</code></td><td>2</td><td>32</td></tr><tr><td><code>font-size-800</code></td><td>2.125</td><td>34</td></tr><tr><td><code>font-size-900</code></td><td>2.625</td><td>42</td></tr><tr><td><code>font-size-1000</code></td><td>3</td><td>48</td></tr><tr><td><code>font-size-1100</code></td><td>3.375</td><td>54</td></tr><tr><td><code>font-size-1200</code></td><td>3.75</td><td>60</td></tr><tr><td><code>font-size-1300</code></td><td>4.5</td><td>72</td></tr></tbody></table></div>
+<p><strong>The 10–16px range is filled completely at 1px steps</strong> (10 · 11 · 12 · 13 · 14 · 15 · 16). Seven steps inside a 6px span.</p>
+<p><strong>The densest type scale in the sample</strong>, against Carbon (12 · 14 · 16 · 18 · 20 — five steps) and Material 3 (11 · 12 · 14 · 16 — four).</p>
+<h3 id="tracking-three-negative-steps">Tracking — three negative steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>letter-spacing-none</code></td><td>0em</td></tr><tr><td><code>letter-spacing-narrow-200</code></td><td><strong>-0.02em</strong></td></tr><tr><td><code>letter-spacing-narrow-300</code></td><td><strong>-0.03em</strong></td></tr><tr><td><code>letter-spacing-narrow-400</code></td><td><strong>-0.04em</strong></td></tr></tbody></table></div>
+<p><strong>There is <code>narrow</code> and no <code>wide</code></strong> — three steps in the tightening direction only.</p>
+<p>Backpack tokenises tracking too, at different values (−0.02 / −0.04 / −0.05em). <strong>Both systems provide negatives only.</strong></p>
+<h3 id="colour">Colour</h3>
+<p>Defined by hue family in <code>@seed-design/stylesheet</code>'s <code>global.css</code>.</p>
+<p>The families confirmed: <code>gray</code> · <code>carrot</code> (the brand) · <code>blue</code> · <code>green</code> · <code>red</code> · <code>pink</code> · <code>purple</code>, each with a separate <code>-alpha-</code> variant (<code>gray-alpha-*</code> and so on).</p>
+<p><strong>The alpha variants are a token family of their own</strong> — providing values with the transparency already applied to the colour.</p>
+<h3 id="the-token-tiers">The token tiers</h3>
+<p><code>@seed-design/design-token</code> divides into three tiers.</p>
+<pre class="md-code"><code>scale/      raw values (dimension · color · letterSpacing)
+static/     fixed values (color · fontWeight · lineHeight)
+semantic/   by role (color · typography)</code></pre>
+<p>The JS exports are wrappers referencing the CSS variables.</p>
+<pre class="md-code"><code class="language-js">export const fontSize100 = &quot;var(--seed-scale-dimension-font-size-100)&quot;;</code></pre>
+<p>A structure where <strong>the real values are in CSS and the JS holds only references.</strong></p>
+<h3 id="spacing-radius-absent-as-of-the-v1-stylesheet">Spacing / radius — absent (as of the v1 stylesheet)</h3>
+<p><strong>The tokens do not exist.</strong> This is the result of checking all 744 variables in <code>global.css</code>. <strong>That verdict is limited to <code>stylesheet@1.1.2</code> (v1)</strong> — the newer <code>@seed-design/css@2.5.0</code> has spacing, radius and motion in full (the deep pass below, 2026-08-18).</p>
+<p>The distribution by category:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>tier</th><th>category</th><th style="text-align:center">variables</th></tr></thead><tbody><tr><td>semantic</td><td>typography-* (label · body · title · subtitle · h · caption)</td><td style="text-align:center">342</td></tr><tr><td>scale</td><td>color-* (7 hues plus alpha variants)</td><td style="text-align:center">256</td></tr><tr><td>scale</td><td>letter-spacing</td><td style="text-align:center">84</td></tr><tr><td>scale</td><td>dimension-font-size</td><td style="text-align:center">56</td></tr><tr><td>static</td><td>line-height</td><td style="text-align:center">41</td></tr><tr><td>static</td><td>font-weight</td><td style="text-align:center">40</td></tr><tr><td>semantic</td><td>color-*</td><td style="text-align:center">the remainder</td></tr></tbody></table></div>
+<p><strong>The <code>dimension</code> category contains only <code>font-size</code>.</strong> No variable corresponding to spacing or radius exists in any tier.</p>
+<p>Seed Design, in other words, is <strong>a system that tokenises only colour and typography.</strong> Whitespace and corners live directly in the components (<code>@seed-design/react</code>).</p>
+<p>Among the 34 samples, four have this structure: Apple HIG and Material 3 (mobile operating systems), Seed Design and Evergreen. <strong>But Seed is <code>platform: [web, mobile]</code>, so this cannot be read as a mobile-OS trait.</strong></p>
+<h2 id="components">Components</h2>
+<p><del>Unverified. <code>@seed-design/react@2.3.0</code> ships separately.</del> → the deep pass below (2026-08-18). The component CSS is not in stylesheet but in <strong><code>@seed-design/css</code></strong>.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><strong>Start with the generation.</strong> <code>@seed-design/stylesheet@1.1.2</code> contains no component CSS (a single <code>global.css</code> — exactly as the token section's exhaustive check found). The component layer is in <strong>the newer <code>@seed-design/css@2.5.0</code></strong>: <code>all.css</code> (13,000 lines) plus <strong>92</strong> <code>recipes/*.css</code> files. <code>@seed-design/react@2.3.0</code> holds behaviour only (with a peer dep on <code>@seed-design/css ^2.5.0</code>) and takes its classes from the css package's recipes. The primitives are per-component <code>@seed-design/react-*</code> packages plus Radix utilities.</p>
+<h3 id="in-v2-the-token-system-was-turned-over-spacing-radius-and-motion-appeared">In v2 the token system was turned over — spacing, radius and motion appeared</h3>
+<p>The section above's verdict that &quot;only colour and typography are tokenised&quot; <strong>stands for v1 (stylesheet 1.1.2)</strong>, while v2 (css 2.5.0) ships every axis:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>axis</th><th>scale</th></tr></thead><tbody><tr><td>dimension</td><td><code>x0_5</code>–<code>x16</code> = 2–64px (<strong>multiples of 4 under an <code>x</code> naming</strong>, including half-steps such as x2_5 = 10px)</td></tr><tr><td>radius</td><td><code>r0_5</code>–<code>r6</code> = 2–24px plus full</td></tr><tr><td>duration</td><td><code>d1</code>–<code>d6</code> = 50–300ms (even 50ms steps)</td></tr><tr><td>easing</td><td>linear · easing (.35,0,.35,1) · enter (0,0,.15,1) · exit (.35,0,1,1) plus <strong>an expressive pair</strong></td></tr><tr><td>semantic spacing</td><td><code>spacing-x-global-gutter</code> (16px) · <code>spacing-y-screen-bottom</code> (56px) and others, by role</td></tr></tbody></table></div>
+<ul class="md-list"><li>Typography was <strong>reorganised onto a t-scale</strong> too, <code>t1</code>–<code>t14</code> (11–48px), and <strong>every size is wrapped in <code>clamp(static×0.8, computed×multiplier, static×1.5)</code></strong> — the only structure in the sample where support for the OS font-size setting (<code>--seed-font-size-multiplier</code>) is built into the token definitions themselves. iOS Dynamic Type carried over into web tokens.</li></ul>
+<h3 id="buttons-actionbutton-the-press-is-a-scale-not-a-colour">Buttons (ActionButton) — the press is a scale, not a colour</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">xsmall</th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">32px</td><td style="text-align:center">36px</td><td style="text-align:center">40px</td><td style="text-align:center"><strong>52px</strong></td></tr><tr><td>radius</td><td style="text-align:center"><strong>full (a pill)</strong></td><td style="text-align:center">8px</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td></tr><tr><td>type</td><td style="text-align:center">13px</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">18px</td></tr><tr><td>inline padding</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td><strong>press scale</strong></td><td style="text-align:center"><strong>0.95</strong></td><td style="text-align:center">0.97</td><td style="text-align:center">0.97</td><td style="text-align:center"><strong>0.98</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>active is a <code>scale</code> contraction</strong> (<code>--seed-scale-s95/s97/s98</code>, with a 150ms easing of its own). <strong>The contraction differs by size</strong> — the smaller the button, the more it shrinks, equalising the visual change. Even the redefinition of all three variables to 1 under <code>prefers-reduced-motion</code> is handled at the token layer.</li><li><strong>Only xsmall is a pill (full); the rest are 8/12px</strong> — the size step changes the shape too (more radical than Backpack enlarging the radius on large inputs).</li><li>large skips 44 and 48 for <strong>52px</strong> — apparently the height of a primary mobile CTA.</li><li>Variants: brandSolid (weight 700), neutralSolid, neutralWeak, critical* and others, with bold applied alongside on the brand-coloured family.</li></ul>
+<h3 id="inputs-textinput-a-responsive-size-switching-density-by-breakpoint">Inputs (TextInput) — a &quot;responsive&quot; size switching density by breakpoint</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">large</th><th style="text-align:center">medium</th><th style="text-align:center">responsive</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>52px</strong></td><td style="text-align:center">40px</td><td style="text-align:center">&lt;1280px: 52 → ≥1280px: 40</td></tr><tr><td>radius</td><td style="text-align:center">12px</td><td style="text-align:center">8px</td><td style="text-align:center">12 → 8px</td></tr><tr><td>type</td><td style="text-align:center">16px</td><td style="text-align:center">14px</td><td style="text-align:center">16 → 14px</td></tr><tr><td>inline padding</td><td style="text-align:center">16px</td><td style="text-align:center">14px</td><td style="text-align:center">follows</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong><code>size=&amp;quot;responsive&amp;quot;</code> is a first-class size variant</strong> — with 1280px as the single boundary, dimensions, radius and type all shift together from mobile = large to desktop = medium. A way of resolving density switching neither through two token sets (Cloudscape) nor through a multiplier (Vapor) but <strong>through a media query inside a component's size variant</strong> — unique in the sample.</li><li>The outline is a 1px inset box-shadow with <strong>a 2px <code>::after</code> pseudo-element border</strong> layered over it, coloured in only on focus — so there is no layout shift from a change of thickness. There are two variants, outline and underline.</li></ul>
+<h3 id="dialogs-a-272px-mobile-alert-with-a-contracting-entrance">Dialogs — a 272px mobile alert with a contracting entrance</h3>
+<ul class="md-list"><li>Content <strong>max-width 272px</strong>, 32px inline margins, radius 20px (r5) — the narrowest in the sample (an order apart from Backpack's 512 and Vapor's 500px, and effectively the same value as iOS's UIAlertController at 270pt).</li><li><strong>The entrance is scale 1.3→1</strong> — arriving by shrinking from an enlarged state, a <strong>contracting entrance</strong> (enter-expressive, 200ms). The only reversed direction in a sample otherwise uniformly expanding (0.8–0.9→1). Exit and backdrop take 100ms.</li><li>The title is 20px/700 and the body 16px/400. The bottom sheet takes a 24px (r6) radius on the top only, plus a 28px handle and <code>--seed-safe-area-bottom</code> padding — the mobile-webview premise showing through in the CSS.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Every typography token wrapped in clamp() with an OS multiplier variable</strong> — accessibility scaling, tokenised</li><li><strong>The press as a size-graded scale contraction</strong> (0.95–0.98) plus reduced-motion handled in the tokens</li><li><strong><code>size=&amp;quot;responsive&amp;quot;</code></strong> — a size variant switching density on a single breakpoint (1280px)</li><li><strong>A 272px dialog with a scale 1.3 contracting entrance</strong> — an iOS convention ported to the web</li><li><strong>From two token axes in v1 to every axis in v2</strong> — the &quot;colour and typography only&quot; verdict is generation-specific</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The type scale runs in 1px steps.</strong> Seven steps between 10 and 16px. The densest in the sample, possibly related to the narrow range over which Korean body text can be adjusted, though the source gives no rationale.</li><li><strong>Tracking exists only in the tightening direction.</strong> Three <code>narrow</code> steps, no <code>wide</code>.</li><li><strong>Alpha colours form a separate family.</strong> <code>gray</code> and <code>gray-alpha-*</code> sit side by side.</li><li><strong>The tokens are divided into three tiers, scale / static / semantic.</strong> Where a two-tier raw/semantic split is common, <code>static</code> is an addition.</li><li><strong>The JS is a wrapper referencing CSS variables.</strong> The single source of truth is the CSS.</li><li><strong>The packages are split by purpose</strong> — <code>design-token</code> · <code>stylesheet</code> · <code>css</code> · <code>react</code>.</li><li><strong>Only colour and typography are tokenised.</strong> There is no spacing and no radius. Excluding the mobile operating systems (Apple, Material), it is unique in the sample. (<strong>v1 only</strong> — v2's <code>@seed-design/css</code> moves to tokenising every axis; see the deep pass)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>Resolved (2026-08-18, headless render).</strong></p>
+<p>Seed is <strong>the only case in the corpus that never mentions WCAG.</strong> The string &quot;WCAG&quot; does not appear anywhere in <code>/foundations/inclusive-design</code>, and the contrast criteria are written in <strong>Lc values from APCA (the Advanced Perceptual Contrast Algorithm).</strong></p>
+<h3 id="contrast-lc-not-a-ratio-451">Contrast — Lc, not a ratio (4.5:1)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>target</th><th>criterion</th></tr></thead><tbody><tr><td>readable text (body of two lines or more · screen titles · headlines · input fields · tooltips)</td><td><strong>at least Lc 75</strong>, recommended <strong>Lc 90</strong></td></tr><tr><td>other text</td><td><strong>at least Lc 60</strong> (bold if under 16px)</td></tr><tr><td>placeholder and disabled text</td><td><strong>at least Lc 30</strong></td></tr></tbody></table></div>
+<p>Using APCA's <code>Lc 75</code>, <code>Lc 60</code> and <code>Lc 30</code> in place of WCAG's <code>4.5:1</code> and <code>3:1</code> is a choice to <strong>replace the contrast model itself</strong> — the only such case in the corpus.</p>
+<h3 id="target-size-and-interaction">Target size and interaction</h3>
+<ul class="md-list"><li>A touch area of <strong>44×44px or more is ideal</strong>, with <strong>at least 24×24px guaranteed</strong> where constrained (numerically the same as WCAG 2.2's 24×24 minimum, though WCAG is not cited as the grounds)</li><li>Complex gestures (pinch-zoom, drag) must <strong>offer a simple-touch alternative</strong></li><li>Every interaction must be reachable through <strong>VoiceOver and TalkBack</strong></li><li>Errors give visual feedback plus <strong><code>aria-live</code></strong> notification to assistive technology</li><li><strong>No flashing more than three times a second</strong>, and audio auto-playing for more than three seconds must offer stop and volume control</li></ul>
+<h3 id="the-source-documents-not-wcag">The source documents (not WCAG)</h3>
+<p>The &quot;Related Documents&quot; at the foot of the page cite just four: <strong>the ARIA Authoring Practices Guide (APG)</strong> · <strong>Apple HIG (Accessibility)</strong> · <strong>Android Accessibility Best Practices</strong> · <strong>the APCA Readability Criterion.</strong> <strong>Rather than declaring conformance to a standard, it composes its criteria from platform guides plus APCA.</strong></p>
+<p>Source: https://seed-design.io/foundations/inclusive-design (render confirmed, 2026-08-18)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Documentation: https://seed-design.io (<strong>access confirmed by headless render 2026-08-18</strong> — the earlier note that it was &quot;blocked in this environment&quot; referred to curl; a browser render works normally)</li><li>Packages: <code>@seed-design/design-token</code> · <code>@seed-design/stylesheet</code> · <code>@seed-design/css</code> · <code>@seed-design/react</code></li><li><strong>Package names that do not exist:</strong> <code>@daangn/seed-design</code> · <code>@seed-design/token</code> · <code>@seed-design/token-web</code> · <code>@daangn/seed-design-token</code></li><li>Repository structure: <code>packages/{design-token,stylesheet,react-theming,icon,machines}</code> — the single source of values is <code>packages/stylesheet/global.css</code> (<strong>as of v1</strong> — in v2 the source is <code>base.css</code> in <code>@seed-design/css</code>)</li><li>Components in depth: <code>@seed-design/css@2.5.0</code> → <code>base.css</code> (tokens) · <code>recipes/{action-button,text-input,dialog,bottom-sheet}.css</code>, with <code>@seed-design/react@2.3.0</code>'s dependency structure confirmed (2026-08-18)</li><li><strong>Figma kit — confirmed absent (2026-08-18, <code>figma_kit: false</code>)</strong>: Seed uses Figma <strong>as an input for code generation, not as a design distribution channel.</strong> Nowhere on the documentation site is <strong>a UI kit or library file distributed</strong>, and every Figma-related document sits under <code>AI &amp;amp; Tools</code> in the tooling family — the <code>@seed-design/mcp</code> <strong>Figma MCP server</strong> (a REST API + PAT route and a WebSocket + plugin route), a Figma Community <strong>codegen plugin</strong> (https://www.figma.com/community/plugin/1496384010980477154), and <code>react/developer-tools/figma-integration/codegen</code>. As the PAT scope list shows (<code>library_assets:read</code>, <code>team_library_content:read</code> and so on), <strong>the team library presupposes Karrot's internal files</strong> and is not published. → <strong>No public Figma kit; only Figma→code automation is public</strong> (classified C). Renders checked: https://seed-design.io/get-started · https://seed-design.io/ai-integration/figma-mcp (2026-08-18)</li><li><strong>Open questions:</strong> the actual colour values, <del>the component list</del> (resolved 2026-08-18 — 92 recipes: accordion · action-button · app-bar · bottom-sheet · callout · chip · dialog · fab · manner-temp (a Karrot-specific domain concept) · pull-to-refresh · snackbar · wheel-picker and others), and v2's semantic colour system (only the names are confirmed, such as <code>--seed-color-bg-brand-solid</code>)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github daangn/seed-design → <code>LICENSE</code> (matching the npm metadata for <code>@seed-design/stylesheet@1.1.2</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

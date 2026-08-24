@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protocol — Self-Made DesignOps</title>
+<meta name="description" content="The design system for Mozilla's web properties (mozilla.org and the Firefox-related sites). Marketing and content pages are its main stage.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/protocol.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Protocol — Self-Made DesignOps">
+<meta property="og:description" content="The design system for Mozilla's web properties (mozilla.org and the Firefox-related sites). Marketing and content pages are its main stage.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/protocol.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Protocol — Self-Made DesignOps">
+<meta name="twitter:description" content="The design system for Mozilla's web properties (mozilla.org and the Firefox-related sites). Marketing and content pages are its main stage.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Protocol",
+ "description": "The design system for Mozilla's web properties (mozilla.org and the Firefox-related sites). Marketing and content pages are its main stage.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/protocol.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Protocol",
+  "applicationCategory": "DesignApplication",
+  "url": "https://protocol.mozilla.org"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-only-six-steps">Spacing — only six steps</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#radii-colour">Radii / colour</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-mzp-c-button-height-not-fixed-four-sizes">Buttons (.mzp-c-button) — height not fixed, four sizes</a></li><li class="lvl3"><a href="#inputs-forms-form-input">Inputs (forms form-input)</a></li><li class="lvl3"><a href="#modals-mzp-c-modal-a-theatre-rather-than-a-dialog">Modals (.mzp-c-modal) — a theatre rather than a dialog</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Mozilla</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://protocol.mozilla.org" rel="noopener">Official site</a><br><a href="https://github.com/mozilla/protocol" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/protocol.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Protocol</span></nav>
+    <h1>Protocol</h1>
+    <p class="doc-lede">Mozilla · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The design system for Mozilla's web properties (mozilla.org and the Firefox-related sites). Marketing and content pages are its main stage.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-only-six-steps">Spacing — only six steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th>Value</th></tr></thead><tbody><tr><td><code>$spacing-xs</code></td><td>4px</td></tr><tr><td><code>$spacing-sm</code></td><td>8px</td></tr><tr><td><code>$spacing-md</code></td><td>16px</td></tr><tr><td><code>$spacing-lg</code></td><td>24px</td></tr><tr><td><code>$spacing-xl</code></td><td>32px</td></tr><tr><td><code>$spacing-2xl</code></td><td>48px</td></tr></tbody></table></div>
+<p><strong>The fewest steps of any system harvested.</strong> There is no 12px or 20px, and it ends at 48px.</p>
+<p>The set is exactly <code>4, 8, 16, 24, 32, 48</code>, and the first five <strong>match the common core shared by 13 systems</strong> (<code>4/8/16/24/32</code>) exactly. Protocol has, in effect, adopted only the common core.</p>
+<h3 id="typography">Typography</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th>Value</th></tr></thead><tbody><tr><td><code>$title-3xs-size</code></td><td>16px</td></tr><tr><td><code>$title-2xs-size</code></td><td>20px</td></tr><tr><td><code>$title-xs-size</code></td><td>24px</td></tr><tr><td><code>$title-sm-size</code></td><td>32px</td></tr><tr><td><code>$title-md-size</code></td><td>40px</td></tr><tr><td><code>$title-lg-size</code></td><td>48px</td></tr><tr><td><code>$title-xl-size</code></td><td>56px</td></tr><tr><td><code>$title-2xl-size</code></td><td>64px</td></tr></tbody></table></div>
+<p>A heading-only scale stepping evenly by 8px (16 → 64px). The run after 40px — 48, 56, 64 — is particularly even.</p>
+<h3 id="radii-colour">Radii / colour</h3>
+<p>Unverified.</p>
+<p>Source: <code>@mozilla-protocol/core@22.0.0</code> → <code>protocol/css/includes/_themes-sass.scss</code></p>
+<h2 id="components">Components</h2>
+<p><del>Unverified.</del> (resolved 2026-08-18) <code>protocol/css/components/</code> holds <strong>25</strong> plus forms and logos: article · billboard · breadcrumb · button · callout · card · feature-card · footer · menu · modal · navigation · newsletter-form · notification-bar · picto · split · sticky-promo · video · zap and others. A composition in which <strong>the download button (plus its privacy link) is an independent component</strong> — the marketing-site domain reads straight off the list.</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured from the scss under <code>protocol/css/components/</code> in <code>@mozilla-protocol/core@22.0.0</code> together with the compiled <code>protocol-components.css</code>.</p>
+<h3 id="buttons-mzp-c-button-height-not-fixed-four-sizes">Buttons (<code>.mzp-c-button</code>) — height not fixed, four sizes</h3>
+<p>No height is declared; it derives from <strong>type × 1.5 line height + padding + a 4px border</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">md</th><th style="text-align:center">lg (default)</th><th style="text-align:center">xl</th></tr></thead><tbody><tr><td>Type</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td><td style="text-align:center">16px</td></tr><tr><td>Padding</td><td style="text-align:center">1px 8px</td><td style="text-align:center">4px 8px</td><td style="text-align:center">8px 16px</td><td style="text-align:center">10px 24px</td></tr><tr><td><strong>Derived height</strong></td><td style="text-align:center">24px</td><td style="text-align:center"><strong>33px</strong></td><td style="text-align:center">44px</td><td style="text-align:center">48px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The border is 2px</strong> — twice the 1px majority. Since hover works by inverting background and text colour (outline ↔ filled), the border is part of the form in this marketing-style button.</li><li><strong>The button radius is 0</strong> — radius tokens exist (2/4/8/16px) but are not used on buttons. Only form fields get 4px (<code>$field-border-radius: $border-radius-sm</code>). Square-versus-round splits along a component axis.</li><li>The md derived height is <strong>an odd 33px</strong> — no integer compensation (the opposite pole from MUI's half-pixel correction: laissez-faire).</li><li>Font weight <strong>700</strong>, transition 100ms (easing unspecified, so <code>ease</code>).</li><li>The icon gap is <strong><code>0.5ch</code></strong> — a character-width unit rather than px or rem.</li><li>Variants: primary (default) · secondary · product (Firefox blue) · neutral, crossed with a dark theme.</li></ul>
+<h3 id="inputs-forms-form-input">Inputs (forms <code>form-input</code>)</h3>
+<ul class="md-list"><li>Padding <strong>8px all round</strong>, 2px border, 4px radius, 16px type / 1.25 line height → a derived height of <strong>40px</strong>.</li><li><code>min-width: 256px</code> — from the formula <code>$content-xs(304) − $layout-xs(24)×2</code>. A rare route, back-computing an input's minimum width from a content-width token.</li><li>Comes with <code>margin-bottom: 24px</code> (<code>$field-v-spacing</code>).</li><li>The label is a separate block — 14px / bold / 8px below.</li><li>Focus ring <code>0 0 0 2px rgba(blue-40, .5)</code> plus a separate red ring for errors.</li></ul>
+<h3 id="modals-mzp-c-modal-a-theatre-rather-than-a-dialog">Modals (<code>.mzp-c-modal</code>) — a theatre rather than a dialog</h3>
+<ul class="md-list"><li><strong>Black on black</strong>: a full <code>rgba(0,0,0,.85)</code> scrim plus an inner <code>rgba(0,0,0,.9)</code> panel, with white text. There is no white dialog card at all — this is a lightbox for video and images.</li><li>No width steps, a single <code>max-width: 1200px</code>, 32px padding, radius 0.</li><li>Entry fade-in <strong>300ms ease-in</strong> (keyframes, <code>both</code>). The close button is a 42×42px white icon.</li><li><code>z-index: 9999999</code>, <code>height: 101%</code> — right down to the comment about compensating for mobile scroll drift, this is production marketing-site code.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Radius 0 on buttons versus 4px on fields</strong> — buttons stay square regardless of the radius tokens existing</li><li><strong>A 2px border plus inverting hover</strong> — a marketing button whose outline is the shape language</li><li><strong>The modal is a theatre (lightbox)</strong> — none of the product-UI dialog grammar (width steps, cards, footers)</li><li>Derived heights left alone (an odd 33px) — the type scale takes priority over height alignment</li><li>Icon gap in <code>ch</code> units</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>Only six spacing steps.</strong> Less than a third of Canvas's 19. Fewer options make decisions fast and keep things consistent, at the cost of fine adjustment.</li><li><strong>The values adopted match the common core exactly.</strong> <code>4/8/16/24/32</code> (+48). It can be read as a validation of the core derived from 13 systems — <strong>when reduced to a minimum, what remained was the core.</strong></li><li><strong>There is no 12px or 20px.</strong> These are the next layer out from the common core (adopted by 11/12 and 10/12 respectively), and Protocol excluded them. The gap between 8 and 16 matches Backpack.</li><li><strong>The heading scale steps evenly by 8px.</strong> It climbs evenly from 16 to 64. Keeping headings on their own scale, separate from body, resembles Paste (the display family).</li><li><strong>The t-shirt naming uses <code>2xl</code>.</strong> A numeric prefix rather than <code>xxl</code>, differing in notation from Material 3's <code>xxl</code> and Fluent's <code>XXXL</code>.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Repository: https://github.com/mozilla/protocol</li><li>Package: <code>@mozilla-protocol/core</code> (component deep-dive: <code>@mozilla-protocol/core@22.0.0</code> → <code>protocol/css/components/</code> + <code>includes/forms/</code>, 2026-08-18)</li><li>Licence: the package's <code>package.json</code> states <strong>MPL-2.0</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MPL-2.0</code> — source: github mozilla/protocol → <code>LICENSE</code> (matching the npm <code>@mozilla-protocol/core@22.0.0</code> metadata)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

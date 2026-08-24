@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nord — Self-Made DesignOps</title>
+<meta name="description" content="Nordhealth's design system for medical software. The only healthcare-domain system in the collection.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/nord.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Nord — Self-Made DesignOps">
+<meta property="og:description" content="Nordhealth's design system for medical software. The only healthcare-domain system in the collection.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/nord.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nord — Self-Made DesignOps">
+<meta name="twitter:description" content="Nordhealth's design system for medical software. The only healthcare-domain system in the collection.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Nord",
+ "description": "Nordhealth's design system for medical software. The only healthcare-domain system in the collection.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/nord.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Nord",
+  "applicationCategory": "DesignApplication",
+  "url": "https://nordhealth.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-six-steps-on-an-irregular-multiplier">Spacing — six steps, on an irregular multiplier</a></li><li class="lvl3"><a href="#icon-sizes-a-separate-scale">Icon sizes — a separate scale</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li class="lvl3"><a href="#other">Other</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-nord-button-the-height-is-arithmetic-on-spacing-tokens">Buttons (nord-button) — the height is arithmetic on spacing tokens</a></li><li class="lvl3"><a href="#inputs-nord-input">Inputs (nord-input)</a></li><li class="lvl3"><a href="#modals-nord-modal">Modals (nord-modal)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Nordhealth</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://nordhealth.design" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nord.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Nord</span></nav>
+    <h1>Nord</h1>
+    <p class="doc-lede">Nordhealth · health · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Nordhealth's design system for medical software. <strong>The only healthcare-domain system in the collection.</strong></p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-six-steps-on-an-irregular-multiplier">Spacing — six steps, on an irregular multiplier</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th><th style="text-align:center">vs. the previous step</th></tr></thead><tbody><tr><td><code>n_space_xs</code></td><td>4px</td><td style="text-align:center">—</td></tr><tr><td><code>n_space_s</code></td><td>8px</td><td style="text-align:center">×2</td></tr><tr><td><code>n_space_m</code></td><td>16px</td><td style="text-align:center">×2</td></tr><tr><td><code>n_space_l</code></td><td>24px</td><td style="text-align:center">×1.5</td></tr><tr><td><code>n_space_xl</code></td><td>36px</td><td style="text-align:center">×1.5</td></tr><tr><td><code>n_space_xxl</code></td><td>72px</td><td style="text-align:center">×2</td></tr></tbody></table></div>
+<p>The multiplier rises and falls: <strong>×2 → ×2 → ×1.5 → ×1.5 → ×2</strong>. 36px and 72px are multiples of 4 but not of 8, and both are rare values elsewhere.</p>
+<h3 id="icon-sizes-a-separate-scale">Icon sizes — a separate scale</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>n_size_icon_xxs</code></td><td>8px</td></tr><tr><td><code>n_size_icon_xs</code></td><td>10px</td></tr><tr><td><code>n_size_icon_s</code></td><td>12px</td></tr><tr><td><code>n_size_icon_m</code></td><td>16px</td></tr><tr><td><code>n_size_icon_l</code></td><td>24px</td></tr><tr><td><code>n_size_icon_xl</code></td><td>36px</td></tr><tr><td><code>n_size_icon_xxl</code></td><td>72px</td></tr></tbody></table></div>
+<p>It shares its top four steps with spacing (16 · 24 · 36 · 72) and adds 8, 10 and 12px of its own at the bottom.</p>
+<h3 id="radius">Radius</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>n_border_radius_sharp</code></td><td><strong>0.02em</strong></td></tr><tr><td><code>n_border_radius_s</code></td><td>3px</td></tr><tr><td><code>n_border_radius</code></td><td>5px</td></tr><tr><td><code>n_border_radius_pill</code></td><td>999px</td></tr><tr><td><code>n_border_radius_circle</code></td><td>50%</td></tr></tbody></table></div>
+<p><strong><code>sharp</code> is not 0 but <code>0.02em</code></strong> — a minuscule radius proportional to the font size.</p>
+<h3 id="other">Other</h3>
+<p>Layout constants such as <code>n_size_top_bar: 52px</code>, 12 <code>n_index_*</code> (z-index) tokens, six <code>n_line_*</code>, three <code>n_transition_*</code>, 16 <code>n_font_*</code> and 60 colours ship alongside.</p>
+<p>High-contrast themes exist as separate files (<code>color-nord-high-contrast.json</code>, <code>color-vet-dark-high-contrast.raw.json</code>).</p>
+<p>Source: <code>@nordhealth/tokens@9.0.4</code> → <code>lib/tokens.json</code></p>
+<h2 id="components">Components</h2>
+<p><del>Unverified.</del> → Buttons, inputs and modals are in the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>@nordhealth/components@5.3.0</code> (Lit web components — the CSS is embedded in the JS) and converted through <code>@nordhealth/tokens@9.0.4</code>. The token values needed: <code>--n-font-size-s/m/l</code> = 12/14/16px · <code>--n-line-height-form</code> = <strong>a fixed 20px</strong> · <code>--n-transition-quickly</code> = <strong>0.05s ease</strong> · <code>--n-font-weight</code> = 400.</p>
+<h3 id="buttons-nord-button-the-height-is-arithmetic-on-spacing-tokens">Buttons (<code>nord-button</code>) — the height is arithmetic on spacing tokens</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">s</th><th style="text-align:center">default (m)</th><th style="text-align:center">l</th></tr></thead><tbody><tr><td><strong>min-block-size</strong></td><td style="text-align:center"><code>calc(l + xs)</code> = <strong>28px</strong></td><td style="text-align:center"><code>space-xl</code> = <strong>36px</strong></td><td style="text-align:center"><code>calc(xxl − l)</code> = <strong>48px</strong></td></tr><tr><td>block padding</td><td style="text-align:center"><code>calc(xs − 1px)</code> = 3px</td><td style="text-align:center"><code>calc(s / 1.6)</code> = <strong>5px</strong></td><td style="text-align:center">(derived)</td></tr><tr><td>inline padding</td><td style="text-align:center"><code>calc(s + 1px)</code> = 9px</td><td style="text-align:center"><code>calc(m / 1.2)</code> = <strong>13.33px</strong></td><td style="text-align:center"><code>calc(l / 1.3)</code> = <strong>18.46px</strong></td></tr><tr><td>radius</td><td style="text-align:center">3px</td><td style="text-align:center">3px</td><td style="text-align:center"><strong>5px</strong></td></tr><tr><td>type</td><td style="text-align:center">12px</td><td style="text-align:center">14px / 20px / <strong>400</strong></td><td style="text-align:center">16px / <strong>500</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are no dedicated component dimension tokens; the sizes are computed out of the six-step spacing scale</strong> — the 48px height is <code>72 − 24</code>, 28px is <code>24 + 4</code>, and the paddings are <strong>fractional divisions</strong> like <code>16/1.2</code>. Keeping the token count at six is paid for by calc(), and it is unique in the sample.</li><li><strong>The default weight is 400</strong> — the lowest in the sample, against the 500–700 convention. Only large goes to 500.</li><li>The transition is <strong>50ms</strong> (<code>transition-quickly</code>) — the fastest in the sample, a quarter to a fifth of Backpack's 200ms or MUI's 250ms.</li><li>Every property is double-layered as <code>--_n-button-*: var(--n-button-*, var(--n-token))</code> — <strong>a public override hook (<code>--n-button-*</code>) laid under every property</strong>, the exact opposite signal from Backpack's <code>--bpk-private-*</code> (a declaration that overrides are forbidden).</li><li>The background carries <code>linear-gradient(to bottom, #0000 50%, rgba(0,0,0,.013) 100%)</code> — a 1.3%-opacity micro-gradient by default.</li></ul>
+<h3 id="inputs-nord-input">Inputs (<code>nord-input</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">s</th><th style="text-align:center">default (m)</th><th style="text-align:center">l</th></tr></thead><tbody><tr><td>block-size</td><td style="text-align:center">(derived, 28px)</td><td style="text-align:center"><strong>36px</strong> (<code>space-xl</code>)</td><td style="text-align:center">48px (<code>calc(xxl − l)</code>)</td></tr><tr><td>block padding</td><td style="text-align:center">3px</td><td style="text-align:center"><code>calc(h/2 − 20/2 − 1px)</code> = <strong>7px</strong></td><td style="text-align:center">the same formula</td></tr><tr><td>inline padding</td><td style="text-align:center"><code>xs×1.6</code> = 6.4px</td><td style="text-align:center"><code>s×1.6</code> = <strong>12.8px</strong></td><td style="text-align:center">12.8px</td></tr><tr><td>type</td><td style="text-align:center">12px</td><td style="text-align:center">14px / 20px</td><td style="text-align:center">16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The default width is a fixed 240px</strong> (<code>--n-input-inline-size: 240px</code>) — unlike the <code>width:100%</code> convention, it grows only when you opt in with <code>expand</code>.</li><li>The block padding is not a value but <strong>the height solved backwards</strong>: <code>height/2 − line-height/2 − 1px border</code>. Buttons and inputs share the same 36/48, but the button gets there by dividing constants and the input by back-calculation.</li><li><strong>At viewports ≤480px the type is promoted automatically from m (14) to l (16)</strong> — iOS's auto-zoom prevention built into the component as a media query.</li><li>Focus changes the border colour and adds <code>box-shadow: 0 0 0 1px</code> in the same colour — a 2px ring composed from a border plus a shadow.</li></ul>
+<h3 id="modals-nord-modal">Modals (<code>nord-modal</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th>max-inline-size</th></tr></thead><tbody><tr><td>s</td><td>440px</td></tr><tr><td>default (m)</td><td><strong>620px</strong></td></tr><tr><td>l</td><td>940px</td></tr><tr><td>xl</td><td>none (full width)</td></tr></tbody></table></div>
+<ul class="md-list"><li>Radius 5px, entering with <code>translateY(-10px) scale(0.97)</code> plus a fade over <strong>0.2s ease</strong> (<code>transition-slowly</code>).</li><li>The backdrop's top padding is <code>clamp(24px, min(10vh, 10vw) − 1em, 80px)</code> — <strong>the modal is clamped toward the top rather than centred vertically</strong>.</li><li>The header gets a 1px bottom border and its own background (<code>--n-color-header</code>); body padding is asymmetric, 24px top and 36px bottom.</li><li>The close button is 36×36px (reusing <code>space-xl</code>) with <code>::after { inset: -8px }</code> to <strong>expand only the hit area to 52×52</strong> — separating visual size from touch target.</li><li>The responsive breakpoint is <strong><code>min-width: 489px</code></strong> — neither 480 nor 488 but an odd boundary (and different from the input's 480px breakpoint).</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Dimensions = arithmetic on spacing tokens</strong> (<code>calc(xxl − l)</code>, <code>/1.2 /1.6 /1.3</code>) — zero dedicated dimension tokens</li><li><strong>A 50ms transition</strong> — the fastest in the sample</li><li><strong>Button default weight 400</strong> · a fixed 240px default input width</li><li><strong>A public override hook on every property</strong> (the <code>--n-button-*</code> family) — the polar opposite of Backpack's private layer</li><li>Automatic type promotion on mobile (≤480px) · the modal clamped toward the top</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>There is no true 0 radius.</strong> The sharpest value is <code>0.02em</code>. At 16px that is about 0.32px, effectively zero — but the difference is that it is <strong>proportional to the font size</strong>. As the text grows, the corners round very slightly. It is the only approach of its kind in the sample.</li><li><strong>The radii are 3px and 5px.</strong> Like Helios (HashiCorp), it uses odd numbers. The default is 5px, off the 4px/8px convention.</li><li><strong>The spacing multiplier is irregular.</strong> It mixes ×2 and ×1.5. Most systems keep a constant multiplier or a constant difference; Nord varies it by interval.</li><li><strong>It uses 36px and 72px</strong> instead of 32px and 64px. 36 is a multiple of 12 and 72 is twice 36, so both are multiples of 4 but neither fits an 8px grid.</li><li><strong>High-contrast themes are shipped as first-class</strong>, one for each of the default and veterinary themes.</li><li><strong>Every token carries the <code>n_</code> prefix.</strong></li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>High-contrast themes are provided at the theme level (for the default and veterinary themes alike). An explicit conformance target is unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Package: <code>@nordhealth/tokens</code> (the tokens live here, not in <code>@nordhealth/themes</code>)</li><li>Related: <code>@nordhealth/css</code></li><li>Components in depth: <code>@nordhealth/components@5.3.0</code> → <code>lib/{Button,Input,Modal}.js</code> plus the shared <code>TextField-*.js</code> chunk (CSS embedded in Lit); values converted through <code>@nordhealth/tokens@9.0.4</code> (2026-08-18)</li><li>Licence: the components package carries <strong>Nordhealth's own licence</strong> (<code>SEE LICENSE IN LICENSE.md</code> — not an open-source licence) — reflected in the frontmatter (2026-08-18)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Proprietary (Nordhealth internal use only — redistribution prohibited)</code> — source: npm <code>@nordhealth/tokens@9.0.4</code> → <code>LICENSE.md</code>. &quot;solely for the purpose of performing your duties for and on behalf of Nordhealth&quot; — <strong>it is on public npm but it is not open source</strong></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

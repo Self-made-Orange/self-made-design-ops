@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cedar — Self-Made DesignOps</title>
+<meta name="description" content="REI's system (outdoor retail). Spacing is named as fractions and multiples of a base unit x, insets come in squish and stretch variants, and the tokens…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/cedar.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Cedar — Self-Made DesignOps">
+<meta property="og:description" content="REI's system (outdoor retail). Spacing is named as fractions and multiples of a base unit x, insets come in squish and stretch variants, and the tokens…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/cedar.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cedar — Self-Made DesignOps">
+<meta name="twitter:description" content="REI's system (outdoor retail). Spacing is named as fractions and multiples of a base unit x, insets come in squish and stretch variants, and the tokens…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Cedar",
+ "description": "REI's system (outdoor retail). Spacing is named as fractions and multiples of a base unit x, insets come in squish and stretch variants, and the tokens…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/cedar.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Cedar",
+  "applicationCategory": "DesignApplication",
+  "url": "https://cedar.rei.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-fractions-and-multiples-of-x">Spacing — fractions and multiples of x</a></li><li class="lvl3"><a href="#inset-squish-stretch-variants">inset — squish / stretch variants</a></li><li class="lvl3"><a href="#shadow-prominence-decomposed-into-parts">Shadow — prominence, decomposed into parts</a></li><li class="lvl3"><a href="#distribution-two-sites-eight-platforms">Distribution — two sites × eight platforms</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-cdr-button">Buttons (cdr-button)</a></li><li class="lvl3"><a href="#inputs-cdr-input">Inputs (cdr-input)</a></li><li class="lvl3"><a href="#modals-cdr-modal">Modals (cdr-modal)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>REI</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://cedar.rei.com" rel="noopener">Official site</a><br><a href="https://github.com/rei/rei-cedar" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/cedar.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Cedar</span></nav>
+    <h1>Cedar</h1>
+    <p class="doc-lede">REI · commerce · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>REI's system (outdoor retail). Spacing is named as <strong>fractions and multiples of a base unit <code>x</code></strong>, insets come in <strong><code>squish</code> and <code>stretch</code> variants</strong>, and the tokens ship as <strong>two builds, one per site</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-fractions-and-multiples-of-x">Spacing — fractions and multiples of <code>x</code></h3>
+<pre class="md-code"><code class="language-scss">$cdr-space-eighth-x:         0.2rem;
+$cdr-space-half-x:           0.8rem;
+$cdr-space-one-x:            1.6rem;   // the base unit
+$cdr-space-one-and-a-half-x: 2.4rem;
+$cdr-space-two-x:            3.2rem;
+$cdr-space-three-x:          4.8rem;
+$cdr-space-four-x:           6.4rem;</code></pre>
+<p><strong>The names are prose</strong> — <code>one-and-a-half-x</code>. The only case in the sample of spelling multiples out in English ordinals (where Polaris writes <code>space-150</code> and USWDS <code>&amp;quot;105&amp;quot;</code> for the same 1.5×).</p>
+<p>Because the values are of the <code>1.6rem</code> family, <strong>a 10px root convention gives 2/8/16/24/32/48/64px</strong> — <del>the token package declares no root, so <strong>the px conversion is undetermined</strong>. It may be the second system after KRDS to use a 62.5% root, but that could not be confirmed from the source.</del> → <strong>Resolved (2026-08-18):</strong> <code>cdr-reset.css</code> in the component package <code>@rei/cedar@17.1.0</code> declares <code>html{font-size:10px}</code> — a <strong>literal 10px</strong>, not 62.5%. The px conversion is settled: one-x = 16px.</p>
+<h3 id="inset-squish-stretch-variants">inset — <code>squish</code> / <code>stretch</code> variants</h3>
+<pre class="md-code"><code class="language-scss">$cdr-space-inset-eighth-x:         0.2rem;           // even on all sides
+$cdr-space-inset-eighth-x-squish:  0 0.2rem;         // 0 vertically
+$cdr-space-inset-eighth-x-stretch: 0.4rem 0.2rem;    // twice vertically</code></pre>
+<p><strong>Padding combinations are tokenised in three forms</strong> — even / squish (vertically reduced) / stretch (vertically expanded). Each form also has <code>-top-bottom</code> and <code>-left-right</code> decomposition tokens.</p>
+<p>The problem Cloudscape solves with per-component horizontal and vertical tokens (<code>space-button-horizontal/vertical</code>), Cedar solves with <strong>a general-purpose inset grammar</strong> — unique in the sample.</p>
+<h3 id="shadow-prominence-decomposed-into-parts">Shadow — <code>prominence</code>, decomposed into parts</h3>
+<pre class="md-code"><code class="language-scss">$cdr-prominence-elevated: 0 0.4rem 0.4rem 0 rgba(46,46,43,0.2);
+$cdr-prominence-elevated-x / -y / -blur / -spread / -color   // per-part tokens</code></pre>
+<p>The names are of the <code>flat</code> / <code>raised</code> / <code>elevated</code> / <code>floating</code> family, and <strong>the composed value ships alongside x, y, blur, spread and colour part tokens.</strong> The same structure as Material 3's parallel composite and individual type tokens, applied to shadow. The shadow colour is identical at every step (<code>rgba(46,46,43,0.2)</code>) — a <strong>warm grey</strong>, not pure black.</p>
+<h3 id="distribution-two-sites-eight-platforms">Distribution — two sites × eight platforms</h3>
+<pre class="md-code"><code>dist/rei-dot-com/   dist/docsite/     ← a build per site
+  css scss js json ios android figma types</code></pre>
+<p><strong><code>rei-dot-com</code> (production) and <code>docsite</code> (the documentation site) each get a full build.</strong> The per-component token JSON (<code>cdr-tab.json</code> and so on) exists on both sides, with identical listings. Cedar is the only system in the sample that splits its token builds by consuming site.</p>
+<p><strong>iOS, Android and Figma builds ship together</strong> — cross-platform tokens of the Paste, Material 3 and Thumbprint family, and Atlassian (figma/*.json) and Cedar are the two that include a Figma build.</p>
+<h2 id="components">Components</h2>
+<p>Confirmed to exist through the per-component token JSON: tab · link · toggle-button · message · table and others. <del>Dimensions unverified.</del> → see the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>dist/style/cdr-{button,input,modal}.css</code> in <code>@rei/cedar@17.1.0</code> (the Vue component package). The px conversions use <code>html{font-size:10px}</code> from the same package's <code>cdr-reset.css</code>.</p>
+<h3 id="buttons-cdr-button">Buttons (<code>cdr-button</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>padding</td><td style="text-align:center">6×12</td><td style="text-align:center">8×16</td><td style="text-align:center">12×24</td></tr><tr><td>type</td><td style="text-align:center">14/18</td><td style="text-align:center">16/22</td><td style="text-align:center">16/22</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>30px</strong></td><td style="text-align:center"><strong>38px</strong></td><td style="text-align:center"><strong>46px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li>No height is declared; it derives from line height plus padding to 30/38/46px — a constant difference of 8, but <strong>none of them a multiple of 8</strong>. Only the icon-only button lands on an integer grid, at 8+24+8 = <strong>40px</strong>. <strong>There is no min-width.</strong></li><li>Radius 4px (<code>$cdr-radius-softer</code>), weight 500, tracking −0.08px.</li><li><strong>The border is an <code>inset box-shadow 0.1rem</code></strong> — <code>border:none</code>. The same technique as Ring UI (the second observation of it in the same day's deep pass).</li><li><strong>The class names carry the package version as a suffix</strong> — <code>.cdr-button--large_17-1-0</code>. Every class on every component bears a version stamp, so <strong>two different versions can coexist on one page without their CSS colliding.</strong></li><li><strong>The size prop accepts breakpoint combinations</strong> — <code>small@xs</code>, <code>medium@md</code> and so on. All the classes for three sizes × four breakpoints (@xs/@sm/@md/@lg) are precompiled.</li><li>Transition 0.2s <code>cubic-bezier(0.15, 0, 0.15, 0)</code> = <code>$cdr-timing-function-ease</code> plus <code>$cdr-duration-2-x</code> — the duration tokens too run <code>1-x</code>–<code>6-x</code> (100–600ms), the same <strong>x naming</strong> as spacing. There are only two easings (including <code>ease-out: cubic-bezier(0.32, 0.94, 0.60, 1)</code>).</li></ul>
+<h3 id="inputs-cdr-input">Inputs (<code>cdr-input</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>a fixed 40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>padding</td><td style="text-align:center">8px</td><td style="text-align:center">8px on the left</td></tr><tr><td>type</td><td style="text-align:center">16/22 · 500</td><td style="text-align:center">18/32</td></tr><tr><td>radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The button derives 38px while the input is fixed at 40px</strong> — set the two default sizes side by side and they are 2px out (in contrast to Backpack's shared 36/48 alignment).</li><li>The border is again an <code>inset box-shadow 0.1rem</code> — the same technique as the button.</li><li>The background is <code>#f7f5f326</code> — <strong>a sand tint with alpha</strong> (unlike the white/transparent convention).</li><li>The label is a separate block (<code>cdr-label-standalone</code>) — 14/18 · 400. Helper text in the same face and grey occupies two positions, above (2px under the label) and below (4px under the input).</li></ul>
+<h3 id="modals-cdr-modal">Modals (<code>cdr-modal</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td><strong>a single max-width of 640px</strong> (full-screen on mobile)</td></tr><tr><td>radius</td><td>4px</td></tr><tr><td>shadow</td><td><code>0 16px 16px rgba(46,46,43,0.2)</code> — warm grey</td></tr><tr><td>overlay</td><td><strong>a <code>#f7f5f3d9</code> light scrim plus a 16px backdrop blur</strong></td></tr><tr><td>animation</td><td><strong>a two-stage fade sequence</strong> — overlay 0.15s → content 0.15s (with a 0.15s delay)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The scrim is not black but a light sand colour</strong> (#F7F5F3 at 85% alpha), overlaid with <code>backdrop-filter: blur(1.6rem)</code> — the opposite direction from this deep pass's other samples (Backpack <code>rgba(0,0,0,.7)</code> · Ring UI black at 0.4/0.7 · F36 navy at 0.75).</li><li><strong>The entrance is staggered</strong> — the overlay appears first and the content fades in 0.15s later. Closing reverses the order (content first), with visibility and z-index switching at the 0.3s mark.</li><li>The title is set in <strong>the Stuart serif</strong> at 24/30 — a two-typeface composition against the Graphik sans body.</li><li>Content padding 24px (16 on mobile), 16px below the header, z-index hardcoded to <strong>9999</strong>.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Version-stamped class names</strong> (<code>_17-1-0</code>) — CSS isolation allowing versions to coexist</li><li><strong>Breakpoint syntax in the size prop</strong> (<code>small@md</code>) — responsive size variants precompiled</li><li><strong>A light scrim plus blur</strong> on the modal overlay — the reverse of the black-scrim convention</li><li>A <strong>two-stage staggered</strong> modal fade (opening: overlay→content; closing: the reverse)</li><li>Buttons derived at 30/38/46 vs inputs fixed at 40/48 — two layers that do not align</li><li>A literal <code>html{font-size:10px}</code> root — the premise of the token layer's rem conversion living in the component package's reset</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Prose multiple naming</strong> (<code>one-and-a-half-x</code>) — unique in the sample</li><li><strong>The three-form inset squish/stretch grammar</strong> — padding combinations tokenised generically, unique in the sample</li><li><strong>Shadows shipped decomposed into parts</strong> (x/y/blur/spread/colour individually)</li><li><strong>Two token builds, one per site</strong> — unique in the sample</li><li>A fixed warm-grey shadow colour — a case of brand tone entering the shadow</li><li>The name <code>prominence</code> — a third vocabulary alongside <code>elevation</code> (the majority) and <code>shadow</code></li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.2 Level AA (resolved 2026-08-18).</strong> Source: <code>cedar.rei.com/guidelines/accessibility</code> — &quot;Web Content Accessibility Guidelines (WCAG) 2.2 Level AA&quot;.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @rei/cdr-tokens@14.0.2</code> → <code>dist/rei-dot-com/scss/foundations/</code></li><li>Components in depth: <code>npm pack @rei/cedar@17.1.0</code> → <code>dist/style/cdr-*.css</code> · <code>dist/cdr-reset.css</code> (2026-08-18)</li><li>Licence: <code>@rei/cedar</code>'s LICENSE and its <code>license</code> field both say <strong>MIT</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Open questions:</strong> <del>the root font size (settling the px conversion)</del> (resolved 2026-08-18 — the literal <code>html{font-size:10px}</code> in <code>cdr-reset.css</code>), the type and colour scales, whether a quarter-x exists, how the docsite build's values differ, <del>the licence</del> (MIT)</li></ul>
+<blockquote><p>Re-verified (2026-08-17): 14.0.1 → 14.0.2 diff — no token values changed (only the italic and strong-weight declarations moved, plus identical tokens added to figma.json).</p></blockquote>
+<ul class="md-list"><li><strong>Licence resolved (2026-08-18):</strong> <code>code: MIT, tokens: ISC</code> — sources: github rei/rei-cedar → <code>LICENSE</code> (MIT) / github rei/rei-cedar-tokens → <code>LICENSE</code> (ISC). <strong>The component and token repositories carry different licences.</strong></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

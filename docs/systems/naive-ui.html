@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Naive UI — Self-Made DesignOps</title>
+<meta name="description" content="The second Vue framework sample — it does not enumerate neutrals, composing them at build time from two colours (white and black) and a table of some…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/naive-ui.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Naive UI — Self-Made DesignOps">
+<meta property="og:description" content="The second Vue framework sample — it does not enumerate neutrals, composing them at build time from two colours (white and black) and a table of some…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/naive-ui.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Naive UI — Self-Made DesignOps">
+<meta name="twitter:description" content="The second Vue framework sample — it does not enumerate neutrals, composing them at build time from two colours (white and black) and a table of some…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Naive UI",
+ "description": "The second Vue framework sample — it does not enumerate neutrals, composing them at build time from two colours (white and black) and a table of some…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/naive-ui.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Naive UI",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.naiveui.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#the-neutrals-are-a-formula">The neutrals are a formula</a></li><li class="lvl3"><a href="#sizes-and-weights-several-mismatches">Sizes and weights — several mismatches</a></li><li class="lvl3"><a href="#the-primary-is-green">The primary is green</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons">Buttons</a></li><li class="lvl3"><a href="#inputs">Inputs</a></li><li class="lvl3"><a href="#modals-three-tokens-presentation-delegated">Modals — three tokens, presentation delegated</a></li><li class="lvl3"><a href="#tables-data-table-three-sizes-but-medium-and-large-are-identical">Tables (data-table) — three sizes, but medium and large are identical</a></li><li class="lvl3"><a href="#navigation-layout-sider-menu-tabs-breadcrumb">Navigation (layout-sider · menu · tabs · breadcrumb)</a></li><li class="lvl3"><a href="#feedback-message-notification-alert-badge">Feedback (message · notification · alert · badge)</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Open source (out of TuSimple)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.naiveui.com" rel="noopener">Official site</a><br><a href="https://github.com/tusen-ai/naive-ui" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/naive-ui.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Naive UI</span></nav>
+    <h1>Naive UI</h1>
+    <p class="doc-lede">Open source (out of TuSimple) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The second Vue framework sample — it <strong>does not enumerate neutrals, composing them at build time from two colours (white and black) and a table of some twenty alphas</strong>, its <code>strong</code> weight is <strong>500</strong>, and its default primary is <strong>green</strong> (#18a058).</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="the-neutrals-are-a-formula">The neutrals are a formula</h3>
+<pre class="md-code"><code class="language-js">alphaBorder: &quot;0.12&quot;, alphaDivider: &quot;0.06&quot;, alphaPending: &quot;0.05&quot;,
+alphaDisabled: &quot;0.5&quot;, alphaScrollbar: &quot;0.25&quot;, …  // about twenty of them
+neutral(alpha) → composite(white background, black × alpha)   // composed at build time</code></pre>
+<p><strong>There is no grey ramp</strong> — every neutral is composed from <code>neutralBase</code> (#FFF), <code>neutralInvertBase</code> (#000) and <strong>a table of alpha constants</strong>. Going further than Ring UI (channel separation) and shadcn (alpha borders), it is the only sample <strong>whose palette itself is a formula</strong>. Dark swaps only the bases against the same alpha table.</p>
+<h3 id="sizes-and-weights-several-mismatches">Sizes and weights — several mismatches</h3>
+<pre class="md-code"><code>fontSize: Mini 12 = Tiny 12 · Small 14 = Medium 14 · Large 15 · Huge 16
+fontWeightStrong: 500 · borderRadius: 3px · lineHeight: 1.6
+height: 16/22/28/34/40/46 (stepping by 6px)</code></pre>
+<ul class="md-list"><li><strong>Mini = Tiny, Small = Medium</strong> — the second sample with duplicate scale values, after Vibe</li><li><strong><code>strong</code> is 500</strong> — a weight name-value mismatch, after Ring UI (bold = 600). A choice to use 500 rather than 700 as &quot;emphasis&quot; in a CJK context</li><li><strong>Large is 15px</strong> — odd-numbered. The 14px default makes it the third Greater China sample (Ant, Semi, Naive)</li><li>Control heights step by <strong>6px</strong> (medium 34px) — neither a multiple of 8 nor of 4</li><li>Default radius 3px — the odd-number radius camp (Helios, Semi, Shoelace)</li></ul>
+<h3 id="the-primary-is-green">The primary is green</h3>
+<p><code>#18a058</code> — Naive is the only sample whose default primary is not blue. It brightens to <code>#63e2b7</code> in dark (the same direction as Siemens iX).</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured from <code>naive-ui@2.45.0</code>'s per-component style modules (<code>es/*/styles/{_common,light}.mjs</code> — each component ships its own token object) and the structural CSS-in-JS (<code>es/*/src/styles/index.cssr.mjs</code>).</p>
+<h3 id="buttons">Buttons</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">tiny</th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">22px</td><td style="text-align:center">28px</td><td style="text-align:center"><strong>34px</strong></td><td style="text-align:center">40px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center">6px</td><td style="text-align:center">10px</td><td style="text-align:center">14px</td><td style="text-align:center">18px</td></tr><tr><td>Type</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">15px</td></tr></tbody></table></div>
+<ul class="md-list"><li>Heights step by 6px and padding by 4px — <strong>the two axes step differently</strong>. The round variant adds 4px to each padding. The radius is 3px at every size.</li><li><strong>The default button has no background</strong> — it starts as <code>color: &amp;quot;#0000&amp;quot;</code> (transparent) plus a 1px grey border, and on hover the background still does not change: <strong>only the text and border</strong> take the primary hover colour. A rare sample whose default is effectively a ghost.</li><li>The secondary/tertiary/quaternary variants are <code>rgba(46,51,56, .05/.09/.13)</code> — carving state out of <strong>three steps of black alpha</strong>. The shared tokens' alpha-formula philosophy holds all the way into the component layer.</li><li>On click, a <strong>box-shadow ripple</strong>: a ring spreading <code>0 0 0.5px</code> → <code>0 0 0.5px 4.5px</code> over 0.6s — not Material's internal ripple but <strong>the Ant family's outward wave</strong>.</li><li>The button weight is 400 (the fontWeight default) — it does not even use 500 (strong).</li></ul>
+<h3 id="inputs">Inputs</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">tiny</th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">22px</td><td style="text-align:center">28px</td><td style="text-align:center">34px</td><td style="text-align:center">40px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center">8px</td><td style="text-align:center">10px</td><td style="text-align:center">12px</td><td style="text-align:center">14px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The four heights are exactly the button's</strong> (22/28/34/40).</li><li>The background is <code>neutral(alphaInput = 0)</code> = <strong>fully transparent</strong> — the input background is registered in the alpha table at alpha 0. Only a 1px border (rgb 224,224,230) draws the surface.</li><li>Focus: a primaryHover (#36ad6a) border plus <strong>a <code>0 0 0 2px</code> ring of primary at 20%</strong> — the caret is primary too. The entire focus grammar is the brand colour (green).</li></ul>
+<h3 id="modals-three-tokens-presentation-delegated">Modals — three tokens, presentation delegated</h3>
+<p>The Modal itself has <strong>only three tokens</strong> (color, textColor, boxShadow). Its actual presentation <strong>references other components' themes</strong> through <code>peers: { Dialog, Card, Scrollbar }</code> — a structure where the theme tree is a dependency graph between components.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Dialog</th><th>Value</th></tr></thead><tbody><tr><td>Width</td><td><strong>a single 446px</strong> (max-width calc(100vw − 32px))</td></tr><tr><td>Padding</td><td><strong>16px 28px 20px 28px</strong> — vertically asymmetric</td></tr><tr><td>Title</td><td>18px / <strong>500</strong> (fontWeightStrong)</td></tr><tr><td>Entry/exit</td><td>0.2s, scale 0.9 ↔ 1</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There is one width step</strong> — 446px. The same 440s convergence as Semi's 448 and MUI's 444, but with no scale at all.</li><li>The title weight is 500 — the <code>strong = 500</code> mismatch running all the way into the heading hierarchy.</li><li>The easing is <strong>symmetric in duration and asymmetric in curve</strong>: entry easeOut (0,0,.2,1) / exit easeIn (.4,0,1,1) — a textbook application of the Material convention, adjusting the opposite axis from MUI (225/195 — asymmetric in time).</li></ul>
+<h3 id="tables-data-table-three-sizes-but-medium-and-large-are-identical">Tables (<code>data-table</code>) — three sizes, but medium and large are identical</h3>
+<p><code>naive-ui@2.45.0</code> <code>es/data-table/styles/_common.mjs</code> and <code>light.mjs</code>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Item</th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><code>thPadding</code></td><td style="text-align:center"><strong>8px</strong></td><td style="text-align:center"><strong>12px</strong></td><td style="text-align:center"><strong>12px (identical)</strong></td></tr><tr><td><code>tdPadding</code></td><td style="text-align:center">8px</td><td style="text-align:center">12px</td><td style="text-align:center"><strong>12px (identical)</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The cell padding is the same for medium and large.</strong> The size axis is exposed as three steps while the actual values are only two — a case in the harvested sample of the size steps and the value steps disagreeing.</li><li>The colour tokens are <strong><code>composite(cardColor, …)</code> formulas</strong> — <code>tdColorHover</code>, <code>tdColorStriped</code> and <code>thColorSorting</code> are all made by compositing alpha over the card background. Inside a modal, <code>-Modal</code> suffixed tokens recompose against <code>modalColor</code> instead — <strong>recalculation per container background, expressed in the token names</strong>.</li><li><strong>The sorted column has its own background</strong> (<code>thColorSorting</code> · <code>tdColorSorting</code>) — not just the header but <strong>the body cells</strong> change colour. A case in the harvested sample of emphasising the entire sorted column, with wider reach than Carbon's (<code>table-sort--active</code> header background).</li><li>Sort icons <strong>15px</strong> (<code>sorterSize</code>) and filters 15px — odd icon sizes.</li><li>Column resizing: a <strong>2px</strong> indicator (<code>resizableSize</code>) inside an <strong>8px</strong> handle area (<code>resizableContainerSize</code>).</li><li>Empty-state padding <code>48px 0</code>, 12px above the pagination, action-bar padding 8/12px.</li></ul>
+<h3 id="navigation-layout-sider-menu-tabs-breadcrumb">Navigation (<code>layout-sider</code> · <code>menu</code> · <code>tabs</code> · <code>breadcrumb</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Sider width</td><td><strong>272px</strong> (<code>LayoutSider.props.width</code>)</td></tr><tr><td>Collapsed sider width</td><td><strong>48px</strong> (<code>collapsedWidth</code>)</td></tr><tr><td>Collapse method</td><td><code>collapseMode: 'transform'</code> by default</td></tr><tr><td>Menu item height</td><td><strong>42px</strong> (<code>itemHeight</code>)</td></tr><tr><td>Menu indent</td><td><strong>32px</strong> (<code>indent</code>) · root indent <strong>24px</strong> (<code>rootIndent</code>)</td></tr><tr><td>Tab (line) padding</td><td>small <code>6px 0</code> · medium <code>10px 0</code> · large <code>14px 0</code></td></tr><tr><td>Tab gap</td><td><strong>36px</strong> (<code>tabGap*Line</code> / <code>*Bar</code>) · 8px vertical</td></tr><tr><td>Tab (card) padding</td><td>8/16 · 10/20 · 12/24px · 4px card gap</td></tr><tr><td>Tab type</td><td>14 / 14 / <strong>16px</strong></td></tr><tr><td>Breadcrumb active weight</td><td><strong>400</strong> (<code>fontWeightActive</code>)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The 272px sider is the widest expanded width in the harvested sample</strong> (Ant 200 · Semi 240 · shadcn/ui, Carbon and Vuetify 256 · Cloudscape 280 next).</li><li><strong>The indent differs between root (24) and children (32).</strong> Most use a single value (Vuetify 16 · PrimeVue 16 · Cloudscape 20 · Carbon 32).</li><li>The 36px tab gap is the largest in the harvested sample (Blueprint 20 · Semi 24 · Ant 32).</li><li><strong>It does not bold the active breadcrumb</strong> (<code>fontWeightActive: 400</code>) — the current position is distinguished by colour alone rather than weight.</li></ul>
+<h3 id="feedback-message-notification-alert-badge">Feedback (<code>message</code> · <code>notification</code> · <code>alert</code> · <code>badge</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td><strong>Message width</strong></td><td><strong>min 420px / max 720px</strong></td></tr><tr><td>Message padding</td><td><strong>10 / 20px</strong> · 8px below between items</td></tr><tr><td><strong>Message default duration</strong></td><td><strong>3000ms</strong> (<code>MessageProvider.props.duration</code>)</td></tr><tr><td>Message placement</td><td><strong><code>'top'</code></strong> by default</td></tr><tr><td>Message icon and close</td><td>20px / 20px (icon 16px)</td></tr><tr><td><strong>Notification width</strong></td><td><strong>365px</strong> · padding <strong>16px</strong></td></tr><tr><td>Notification type</td><td>title 16px · meta and body <strong>12px</strong></td></tr><tr><td><strong>Alert padding</strong></td><td><strong>13px</strong> · icon 24px (margin <code>11px 8px 0 12px</code>)</td></tr><tr><td>Alert close</td><td>20px (icon 16px), margin <code>13px 14px 0 0</code></td></tr><tr><td><strong>Badge</strong></td><td>count height and line height <strong>18px</strong> · dot <strong>8px</strong> · type 12px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The alert padding is 13px</strong> — an odd value off any multiple of 4 or 8, and the icon margin <code>11px 8px 0 12px</code> differs on all four sides. Optical alignment pinned as literals.</li><li><strong>The 3000ms message default</strong> is a code-layer sample of a sub-five-second duration (the same value as Tizen CircularUI's 3000ms).</li><li><strong>Messages and notifications have different width specifications</strong> — messages are fluid between min and max (420–720px), notifications fixed at 365px. Two toast-family components in the same system using different strategies.</li><li>Messages sit <strong>top-centre</strong> while notifications take a <code>placement</code> prop — the same family as Semi (top-centre).</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs sharing four heights (22/28/34/40)</strong> — stepping by 6px</li><li><strong>The default button is a ghost</strong> — no background even on hover, only the colour changes (and the weight is 400)</li><li>State fills as three steps of black alpha (.05/.09/.13) — the component edition of the alpha-formula philosophy</li><li>A click wave (an outward ripple) — the Ant lineage</li><li>A single 446px modal width plus the peers delegation structure</li><li>Asymmetric entry/exit curves with symmetric durations</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>Neutrals = two colours plus an alpha table</strong> — the only sample whose palette is a formula</li><li><code>strong</code> = 500 — the second weight mismatch</li><li>The third Greater China 14px sample · line height 1.6 (loose, for CJK)</li><li>Control heights stepping by 6px · a green default primary</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>confirmed absent (2026-08-18, headless render).</strong></p>
+<p>Even rendered, this system publishes no accessibility target. The documentation site was opened headlessly to confirm — the left navigation's documentation entries are only Introduction · Installation · Usage in SFC · UMD · Fonts · Import on Demand · <strong>Supported Platforms</strong> · Common Issues · Controlled &amp; Uncontrolled · JSX/TSX · SSR · Nuxt.js · Vitepress · Vite SSG · Customizing Theme · i18n · Create Themed Component · Potential Style Conflict · Third-Party Libraries · Changelog, and <strong>there is no accessibility (无障碍 / 可访问性) document at all.</strong> Even &quot;Supported Platforms&quot;, which covers scope of support, speaks only of browsers and Vue versions (&quot;IE is not supported. Modern browsers such as Edge, Firefox, Chrome, Safari are tested on the latest 2 versions&quot;). Across every documentation page rendered, the string <code>WCAG</code> appears <strong>zero times</strong>. Sources: https://www.naiveui.com/en-US/os-theme/docs/introduction · https://www.naiveui.com/en-US/os-theme/docs/supported-platforms (rendered 2026-08-18)</p>
+<p>A shape that recurs in framework-style open source (the shadcn and Ring UI family), where adopting an accessibility target is pushed onto the product side.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack naive-ui@2.45.0</code> → <code>es/_styles/common/</code></li><li>Component deep-dive: the same package's <code>es/{button,input,modal,dialog}/styles/</code> plus <code>src/styles/index.cssr.mjs</code> (2026-08-18)</li><li><strong>Figma kit — confirmed absent (2026-08-18, headless render):</strong> the design file offered by <code>Resources &amp;gt; Design Resources</code> at the top of the documentation site is <strong>a single Sketch file</strong> (<code>NaiveUI-Design-Library-en-US.sketch</code>, behind a download button). Across the full site render the string &quot;Figma&quot; appears <strong>zero times</strong> — there is no Figma kit. <strong>A rare sample distributing its design kit in Sketch only.</strong> Source: https://www.naiveui.com/en-US/os-theme (rendered 2026-08-18; the link target is <code>https://naive-ui.oss-accelerate.aliyuncs.com/NaiveUI-Design-Library-en-US.sketch</code>)</li><li><strong>Still to confirm:</strong> <del>the accessibility target</del> <del>the Figma kit</del> (2026-08-18 — both confirmed absent by rendering the documentation site), <del>the spacing scheme (absent from the shared tokens — per-component unexamined)</del> (partly resolved 2026-08-18 — there is no global scale, and it is confirmed as literals in each component's <code>_common.mjs</code>, such as the button's 4px-stepping padding), <del>the component list (reported as 90+ — unverified)</del> (resolved 2026-08-18 — <strong>105</strong> component directories measured under <code>es/</code>, including helpers)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bolt Design System — Self-Made DesignOps</title>
+<meta name="description" content="Bolt's system — the horizontal and vertical spacing bases differ, and neither is an integer (x: 1.55 / y: 1.35). Multiplying these near-irrational…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/bolt.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Bolt Design System — Self-Made DesignOps">
+<meta property="og:description" content="Bolt's system — the horizontal and vertical spacing bases differ, and neither is an integer (x: 1.55 / y: 1.35). Multiplying these near-irrational…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/bolt.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bolt Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="Bolt's system — the horizontal and vertical spacing bases differ, and neither is an integer (x: 1.55 / y: 1.35). Multiplying these near-irrational…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Bolt Design System",
+ "description": "Bolt's system — the horizontal and vertical spacing bases differ, and neither is an integer (x: 1.55 / y: 1.35). Multiplying these near-irrational…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/bolt.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Bolt Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://boltdesignsystem.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-a-base-per-axis-a-multiplier-all-in-calc">Tokens — a base per axis × a multiplier, all in calc()</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#first-the-token-layer-the-deep-pass-resolved-backlog-cleared">First, the token layer the deep pass resolved (backlog cleared)</a></li><li class="lvl3"><a href="#buttons-even-the-derived-heights-are-non-integer">Buttons — even the derived heights are non-integer</a></li><li class="lvl3"><a href="#inputs-form-the-1px-border-subtracted-from-the-padding-with-the-reason-in-a-comment">Inputs (form) — the 1px border subtracted from the padding, with the reason in a comment</a></li><li class="lvl3"><a href="#modals-75ch-among-the-width-options-and-a-light-overlay-variant">Modals — 75ch among the width options, and a light overlay variant</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Pega (Bolt DS)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://boltdesignsystem.com" rel="noopener">Official site</a><br><a href="https://github.com/bolt-design-system/bolt" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/bolt.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Bolt Design System</span></nav>
+    <h1>Bolt Design System</h1>
+    <p class="doc-lede">Pega (Bolt DS) · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Bolt's system — <strong>the horizontal and vertical spacing bases differ, and neither is an integer</strong> (<code>x: 1.55</code> / <code>y: 1.35</code>). Multiplying these near-irrational per-axis bases produces <strong>values unrelated to any 4px grid</strong> (24.8px · 21.6px). A structure unique in the sample.</p>
+<h2 id="tokens-a-base-per-axis-a-multiplier-all-in-calc">Tokens — a base per axis × a multiplier, all in <code>calc()</code></h2>
+<pre class="md-code"><code class="language-scss">$bolt-spacing-system: ('x': 1.55, 'y': 1.35);   // unitless (deliberately)
+$bolt-spacing-multiplier-system: (
+  xxsmall .125 · xsmall .25 · small .5 · medium 1 ·
+  large 2 · xlarge 4 · xxlarge 8 · xxxlarge 16
+);
+$bolt-spacing-x-system: (
+  'medium': calc(var(--bolt-spacing-x) * var(--bolt-spacing-multiplier-medium) * 1rem)
+);</code></pre>
+<p>Converted to px (at a 16px root):</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>step</th><th style="text-align:center">horizontal (x)</th><th style="text-align:center">vertical (y)</th></tr></thead><tbody><tr><td>xxsmall</td><td style="text-align:center">3.1</td><td style="text-align:center">2.7</td></tr><tr><td>small</td><td style="text-align:center">12.4</td><td style="text-align:center">10.8</td></tr><tr><td><strong>medium</strong></td><td style="text-align:center"><strong>24.8</strong></td><td style="text-align:center"><strong>21.6</strong></td></tr><tr><td>large</td><td style="text-align:center">49.6</td><td style="text-align:center">43.2</td></tr><tr><td>xlarge</td><td style="text-align:center">99.2</td><td style="text-align:center">86.4</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Not one value sits on a 4 or 8px grid.</strong> It is a different character from the off-grid list (Kaizen's 6px · Artsy's 10px · GOV.UK's 5px · Grommet's divisors of 24) — the only case where <strong>there is no grid at all, only ratios</strong></li><li><strong>Horizontal is 15% wider than vertical</strong> (1.55 vs 1.35). Unlike Lightning and Vanilla, which separate the axes but use the same grid values, <strong>the base itself differs per axis</strong>. The typesetting habit of giving more horizontal room is pinned into the base</li><li><strong>The reason the base is unitless is in the comments</strong> — &quot;to enable pure math&quot; (so it can be swapped to <code>* 1em</code> where <code>em</code> is wanted instead of <code>rem</code>). The <strong>third unitless-token case</strong> after Braid (grid multiples) and PIE (unitless globals), and the only one where the reason is written in the source</li><li>The multipliers run from <code>.125</code> in <strong>eight geometric doublings</strong> — the same call as Priceline (whose values themselves are geometric), made here at the multiplier layer</li><li>Every token value is a <strong>formula string</strong> of the form <code>calc(var() * var() * 1rem)</code> — a comment says they are kept as formulas &quot;so that changing only the base and the multiplier updates everything&quot;</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Components ship as individual <code>@bolt/components-*</code> packages (Web Components plus SCSS). <code>src/*.scss</code> from <code>components-button@5.8.0</code>, <code>components-form@5.8.0</code> and <code>components-modal@5.8.2</code> was resolved against the settings in <code>core-v3.x@5.8.0</code>. Because what ships is <strong>the SCSS source</strong> rather than compiled CSS, the design comments are readable too.</p>
+<h3 id="first-the-token-layer-the-deep-pass-resolved-backlog-cleared">First, the token layer the deep pass resolved (backlog cleared)</h3>
+<ul class="md-list"><li><strong>Type</strong>: eight steps, 0.7 / 0.8 / 0.9 / 1 / 1.15 / 1.4 / 1.75 / 2.35rem — in px, 11.2 / 12.8 / 14.4 / 16 / 18.4 / 22.4 / 28 / 37.6. <strong>Off-grid, like the spacing.</strong> Line height is a per-size multiplier (1.25–1.55) plus a separate multiplier (tight 0.77 / regular 1 / loose 1.2).</li><li><strong>Weights</strong>: light 300 / regular 400 / semibold 600 / <strong>bold 800</strong> — <strong>there is no 500 and no 700.</strong> The only sample that skips 700 and uses 800 as bold.</li><li><strong>Radius</strong>: small <strong>3px</strong> / large <strong>0.75em</strong> / full 100em — only three steps, and large is <strong>a relative em value</strong> (the same &quot;decide at the point of consumption&quot; philosophy as the unitless base).</li><li><strong>Transition</strong>: a single token, <code>--bolt-transition: ease-in-out 200ms</code>.</li><li>Breakpoints: nine steps from 320 to 1920px (<code>xxsmall</code>–<code>xxxxlarge</code>).</li></ul>
+<h3 id="buttons-even-the-derived-heights-are-non-integer">Buttons — even the derived heights are non-integer</h3>
+<p>No height is declared; it derives from <strong>type × line height + block padding (= the y spacing ÷ 2)</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">xsmall</th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th><th style="text-align:center">xlarge</th></tr></thead><tbody><tr><td>type</td><td style="text-align:center">12.8px</td><td style="text-align:center">12.8px</td><td style="text-align:center"><strong>12.8px</strong></td><td style="text-align:center">16px</td><td style="text-align:center">18.4px</td></tr><tr><td>block padding</td><td style="text-align:center">2.7px</td><td style="text-align:center">5.4px</td><td style="text-align:center">10.8px</td><td style="text-align:center">10.8px</td><td style="text-align:center">21.6px</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>≈25.3px</strong></td><td style="text-align:center"><strong>≈30.7px</strong></td><td style="text-align:center"><strong>≈41.5px</strong></td><td style="text-align:center"><strong>≈48.4px</strong></td><td style="text-align:center"><strong>≈72.8px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The padding is wired straight into the spacing system</strong> — <code>calc(var(--bolt-spacing-y-medium) / 2)</code> block plus <code>--bolt-spacing-x-medium</code> inline. The 1.55/1.35 per-axis bases flow right into the button dimensions, so <strong>no size has an integer height</strong> (the extreme form of MUI's tolerance for fractions).</li><li><strong>The default (medium) button's type is xsmall (12.8px)</strong> — smaller than the body (16px). The polar opposite of Backpack (body size at 700). medium and large share padding and differ only in type.</li><li><strong>Hover lifts</strong> — <code>translate3d(0, −2px, 0)</code> plus a cross-fade between two stacked shadows: a ::before (grey, <code>0 0.2em 0.75em</code> at 0.8) and an ::after (<strong>its own primary colour</strong>, <code>0 0.4em 1.5em</code> at 0.4). <strong>The shadow offsets are in em</strong>, so they scale with the type. The only case in the sample of moving a button's position on hover.</li><li>text-transform ships as <strong>class variants</strong> (uppercase/lowercase/capitalize) — optional, unlike MUI's forced uppercase.</li><li>Radius 3px (small), weight semibold 600, focus <code>outline: var(--bolt-focus-ring)</code> with a 2px offset.</li></ul>
+<h3 id="inputs-form-the-1px-border-subtracted-from-the-padding-with-the-reason-in-a-comment">Inputs (form) — the 1px border subtracted from the padding, with the reason in a comment</h3>
+<ul class="md-list"><li>Padding is <code>calc(var(--bolt-spacing-y-medium) / 2 − 1px)</code> — the comment reads <strong>&quot;match the line height to the button, and offset the input's 1px border&quot;</strong>. A case where the formula aligning a border-less button with a 1px-bordered input survives in the source as a sentence.</li><li><strong>On mobile the type is forced to 16px</strong> — the comment: &quot;below 16px, iOS Safari zooms on focus&quot;. An accessibility/UX correction stated explicitly in code.</li><li>Floating label: scaled down to <strong>0.8</strong>, reusing <code>--bolt-transition</code> (200ms). The input background <strong>does not follow the theme and is always white</strong> (stated in a comment).</li><li><strong>Checkbox and radio transitions use <code>cubic-bezier(0.45, 1.8, 0.5, 0.75)</code></strong> — an overshooting bounce with a second control point of <strong>1.8</strong>. The checkmark springs out with <code>rotate(45deg) scale(0.1→1)</code>. A <strong>curve reserved for micro-interactions</strong>, separate from the mainline ease-in-out 200ms.</li></ul>
+<h3 id="modals-75ch-among-the-width-options-and-a-light-overlay-variant">Modals — <code>75ch</code> among the width options, and a light overlay variant</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>width option</th><th>value</th></tr></thead><tbody><tr><td>regular</td><td><code>clamp(200px, 10/12 of 100%, 1400px)</code></td></tr><tr><td><strong>optimal</strong></td><td><strong>75ch</strong></td></tr><tr><td>full</td><td>100% − margins</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong><code>optimal</code> is in character units (75ch)</strong> — the only case in the sample of defining a modal's width as &quot;a readable measure&quot;. regular is 10 of a 12-column grid, clamped by the xxlarge breakpoint (1400px).</li><li>Enter: <strong>scale 0.95→1 plus a fade</strong>, 200ms ease-in-out (exposed as the <code>$bolt-modal-animation-scale</code> variable). max-height 80vh, radius 3px.</li><li>The overlay is navy-xdark <strong>at 0.8</strong> by default, with a separate <strong><code>--overlay-light</code> (white) variant</strong> — a rare case of offering a light scrim as an option.</li><li><strong>Below 600px it goes full-screen</strong> and the overlay is removed. The iOS Safari corrections (<code>-webkit-fill-available</code>, a 150vh spill, Safari targeting via <code>@supports (-webkit-touch-callout: none)</code>) are still there, with comments linking to the bug tracker.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Every derived button height is non-integer</strong> (≈25.3–72.8px) — the per-axis non-integer base reaching through to the components</li><li><strong>A 12.8px default button type</strong> — button text smaller than the body</li><li><strong>A hover lift (−2px) with an em-based shadow cross-fade</strong> — unique in the sample</li><li>Weights <strong>300/400/600/800</strong> — no 500 and no 700</li><li>A <strong><code>75ch</code></strong> modal width option plus a <strong>light overlay</strong> variant</li><li>The checkbox bounce curve <code>(0.45, 1.8, 0.5, 0.75)</code> — easing separated by purpose</li><li><strong>The reasons behind the alignment formulas and browser corrections ship as comments</strong> — a by-product of distributing the SCSS source</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A non-integer base per axis</strong> (x 1.55 / y 1.35) — unique in the sample, and entirely unrelated to a 4px grid</li><li><strong>A unitless base with the reason in a comment</strong> — the unit is decided at the point of use</li><li>Eight geometric doubling multipliers, with token values as <code>calc()</code> formulas</li><li>The v2 package delegates to v3 by <code>@import</code> plus a deprecation <code>@warn</code> — a case of the migration being visible in the code (the Spindle, Mística and Vibes family)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @bolt/core-v3.x@5.8.0</code> → <code>styles/01-settings/</code> (<code>@bolt/core@2.30.3</code> only delegates to v3)</li><li>Components: <code>@bolt/components-button@5.8.0</code> · <code>-form@5.8.0</code> · <code>-modal@5.8.2</code> → <code>src/*.scss</code> (used in the 2026-08-18 deep pass)</li><li><strong>Open questions:</strong> <del>the type and radius settings</del> (resolved 2026-08-18 — the deep pass), the actual colour palette values, a full component list, and the rationale behind the 1.55/1.35 choice (the documentation site is blocked by the proxy)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

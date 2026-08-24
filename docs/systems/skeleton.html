@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skeleton — Self-Made DesignOps</title>
+<meta name="description" content="The corpus's first sample from the Svelte ecosystem. Its 24 themes each carry different structural values — type scaling and radii — not just colour, and…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/skeleton.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Skeleton — Self-Made DesignOps">
+<meta property="og:description" content="The corpus's first sample from the Svelte ecosystem. Its 24 themes each carry different structural values — type scaling and radii — not just colour, and…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/skeleton.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skeleton — Self-Made DesignOps">
+<meta name="twitter:description" content="The corpus's first sample from the Svelte ecosystem. Its 24 themes each carry different structural values — type scaling and radii — not just colour, and…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Skeleton",
+ "description": "The corpus's first sample from the Svelte ecosystem. Its 24 themes each carry different structural values — type scaling and radii — not just colour, and…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/skeleton.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Skeleton",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.skeleton.dev"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-24-themes-structural-values-included">Tokens — 24 themes, structural values included</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-btn-every-dimension-derived-from-one-variable">Buttons (btn) — every dimension derived from one variable</a></li><li class="lvl3"><a href="#inputs-input">Inputs (input)</a></li><li class="lvl3"><a href="#dialogs-dialog-a-native-dialog-plus-starting-style">Dialogs (dialog) — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Skeleton Labs</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.skeleton.dev" rel="noopener">Official site</a><br><a href="https://github.com/skeletonlabs/skeleton" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/skeleton.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Skeleton</span></nav>
+    <h1>Skeleton</h1>
+    <p class="doc-lede">Skeleton Labs · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p><strong>The corpus's first sample from the Svelte ecosystem.</strong> Its 24 themes each carry different <strong>structural values — type scaling and radii — not just colour</strong>, and <strong>community colour schemes like Dracula and Catppuccin ship as official themes</strong>.</p>
+<h2 id="tokens-24-themes-structural-values-included">Tokens — 24 themes, structural values included</h2>
+<pre class="md-code"><code class="language-css">/* cerberus */  --text-scaling: 1;     --radius-base: 0.5rem;  --radius-container: 0.5rem;
+/* wintry   */  --text-scaling: 1.067; --radius-base: 0.375rem; --radius-container: 0.75rem;</code></pre>
+<ul class="md-list"><li><strong>A theme changes <code>--text-scaling</code> (a global type multiplier) and the radii, not just the colours</strong> — the only sample where the theme axis reaches into structure, and at this scale (24 of them). It is the runtime-scaling camp (Mantine and others) with the multiplier set by the theme</li><li><strong>Radii are two semantic layers, <code>base</code> and <code>container</code></strong> — element versus container (a coarser two-step than Mística's per-component semantics)</li><li><code>--spacing: 0.25rem</code> — inherited from the Tailwind base (<strong>the third member of the don't-enumerate camp</strong>)</li><li><strong>Dracula · Catppuccin · Rosé Pine are in the official theme list</strong> — the only sample where developer-community colour schemes entered a design system's official distribution (Vibe's hacker and Grommet's hacktoberfest are single easter eggs; here they are part of the scheme)</li></ul>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured from <code>src/utilities/*.css</code> in the same <code>@skeletonlabs/skeleton@5.0.0</code>. This package's components are <strong>entirely Tailwind v4 <code>@utility</code> classes</strong> (24 files including <code>btn</code>, <code>input</code> and <code>dialog</code>). Behaviour (JS) lives in separate <code>skeleton-svelte</code> / <code>skeleton-react</code> packages, and the visual layer is this one CSS file regardless of framework.</p>
+<h3 id="buttons-btn-every-dimension-derived-from-one-variable">Buttons (<code>btn</code>) — every dimension derived from one variable</h3>
+<pre class="md-code"><code class="language-css">--btn-size: var(--text-base);            /* size = a typography token */
+line-height: var(--btn-size);
+padding-block:  calc((var(--btn-size) - 2px) / 2);
+padding-inline: calc((var(--btn-size) - 2px) / 2 + 4px);</code></pre>
+<ul class="md-list"><li><strong>There is one size parameter, <code>--btn-size</code>, and its value is a font-size token.</strong> Height and padding are all derived by formula: <strong>height = 2 × font − 2px</strong> (base 16px → 30px, sm 14px → 26px). There is no border.</li><li><strong>There are 13 size variants (xs–9xl), one-to-one with the entire Tailwind type scale.</strong> Even <code>btn-9xl</code> (font 8rem, height 254px) exists syntactically — the only sample to delegate its size axis wholesale to the typography axis.</li><li><code>btn-icon</code> is a square at <code>2 × font − 2px</code> — the derivation formula made visible.</li><li><strong>Hover is a filter rather than a colour</strong>: <code>brightness(125%)</code> (75% in dark). There are zero per-variant hover colour tokens — the same &quot;no hover tokens&quot; camp as Vapor's grey overlay, by different means (a filter versus a state layer).</li><li>Colour comes from separate <code>preset-*</code> utility combinations, as in <code>preset-filled-primary-500</code>. There are <strong>more than 140 light-dark pair tokens</strong> like <code>--color-primary-50-950</code> (50 and 950 swapping in dark), each with its own <code>-contrast-</code> counterpart.</li><li>The radius is <code>--radius-base</code> — each of the 24 themes sets its own (see the token section).</li></ul>
+<h3 id="inputs-input">Inputs (<code>input</code>)</h3>
+<ul class="md-list"><li><strong>Exactly the same formula as the button</strong> (<code>--field-size</code>, height = 2 × font − 2px) — buttons and inputs align at 30px in the base. The same 13 size variants (<code>field-*</code>).</li><li><strong>No border</strong> — the outline is drawn with a Tailwind ring (an inset 1px <code>box-shadow</code>), and focus changes only the ring colour to <code>primary-500</code>.</li><li>The label is a separate block, <code>label-text</code> (xs, medium weight) — not floating.</li></ul>
+<h3 id="dialogs-dialog-a-native-dialog-plus-starting-style">Dialogs (<code>dialog</code>) — a native <code>&amp;lt;dialog&amp;gt;</code> plus <code>@starting-style</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>Value</th></tr></thead><tbody><tr><td>max-width</td><td><strong>640px</strong></td></tr><tr><td>Padding / inner gap</td><td>16px / 16px</td></tr><tr><td>Radius</td><td><code>--radius-container</code> (owned by the theme)</td></tr><tr><td>Scrim</td><td><code>color-mix(… surface-50-950 75%, transparent)</code></td></tr><tr><td>Entry/exit</td><td>fade only, <strong>250ms</strong>, <code>@starting-style</code> + <code>transition … allow-discrete</code></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>A modal transition with no JS</strong> — the current-CSS route of transitioning <code>&amp;lt;dialog&amp;gt;</code>'s display through <code>allow-discrete</code>. A generation beyond Backpack V2 (<code>&amp;lt;dialog&amp;gt;</code> plus keyframes).</li><li>The inner structure is selected through <strong>semantic elements</strong> (<code>header</code> / <code>article</code> / <code>footer</code>) rather than classes.</li><li>The fullscreen variant (<code>dialog-fullscreen</code>) is implemented purely by redefining variables.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>One dimension parameter, a font token</strong> — height = 2 × font − 2px by formula</li><li><strong>13 size variants = the entire type scale</strong> — btn-9xl exists</li><li><strong>No hover tokens (a brightness filter)</strong> — no state colour is defined at all</li><li><strong>More than 140 light-dark pair tokens</strong> (<code>primary-50-950</code>) — dark mode built into the token names</li><li><strong>A native <code>&amp;lt;dialog&amp;gt;</code> plus <code>@starting-style</code></strong> — a modal transition with no JS</li><li><code>--corner-shape-base/container</code> variables — a preparatory layer for squircles (<code>corner-shape</code>)</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The first Svelte sample</strong> — opening the non-React axis alongside Vue (Vuetify, Naive, PrimeVue)</li><li>Themes own structural values (type scaling, radii) — unique in the sample at this scale</li><li>Inherits Tailwind's <code>--spacing</code> — the same layered relationship as shadcn/ui</li><li>Community colour schemes taken in officially</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @skeletonlabs/skeleton@5.0.0</code> → <code>src/themes/</code></li><li>Component deep-dive: the same package's <code>src/utilities/{buttons,form-inputs,form-core,dialogs,presets}.css</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>components (the Svelte-side package)</del> <del>the dark-mode approach</del> (resolved 2026-08-18 — the visual layer is entirely this package's CSS utilities with the Svelte and React packages handling only behaviour, and dark is the light-dark pair tokens plus <code>@variant dark</code>), and an exhaustive listing of values per theme</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

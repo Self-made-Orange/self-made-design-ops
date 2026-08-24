@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aurora Design System (GCTools) — Self-Made DesignOps</title>
+<meta name="description" content="The design guidance of the Government of Canada's collaboration tools (GCTools) — the second documentation-layer sample (after LINE). There is no token or…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/aurora-gc.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Aurora Design System (GCTools) — Self-Made DesignOps">
+<meta property="og:description" content="The design guidance of the Government of Canada's collaboration tools (GCTools) — the second documentation-layer sample (after LINE). There is no token or…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/aurora-gc.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aurora Design System (GCTools) — Self-Made DesignOps">
+<meta name="twitter:description" content="The design guidance of the Government of Canada's collaboration tools (GCTools) — the second documentation-layer sample (after LINE). There is no token or…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Aurora Design System (GCTools)",
+ "description": "The design guidance of the Government of Canada's collaboration tools (GCTools) — the second documentation-layer sample (after LINE). There is no token or…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/aurora-gc.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Aurora Design System (GCTools)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://design.gccollab.ca"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#the-state-of-the-source-frozen-since-2019-06">The state of the source — frozen since 2019-06</a></li><li><a href="#colour-six-swatch-families-five-hexes">Colour — six swatch families × five hexes</a></li><li class="lvl3"><a href="#four-semantic-colours-each-with-dark-text-the-colour-itself-and-a-pale-background">Four semantic colours (each with dark text, the colour itself, and a pale background)</a></li><li><a href="#type-rubik-and-nunito-sans-on-a-pt-scale">Type — Rubik and Nunito Sans, on a pt scale</a></li><li><a href="#components-a-bootstrap-413-skin-no-dimensions-of-its-own">Components — a Bootstrap 4.1.3 skin (no dimensions of its own)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Government of Canada (GCTools / Digital Collaboration Division)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://design.gccollab.ca" rel="noopener">Official site</a><br><a href="https://github.com/gctools-outilsgc/aurora-design-system (MIT)" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/aurora-gc.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Aurora Design System (GCTools)</span></nav>
+    <h1>Aurora Design System (GCTools)</h1>
+    <p class="doc-lede">Government of Canada (GCTools / Digital Collaboration Division) · government · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The design guidance of the Government of Canada's collaboration tools (GCTools) — <strong>the second documentation-layer sample</strong> (after LINE). There is no token or code distribution, only documentation, but <strong>because it is a static Gatsby v1 site the server-rendered HTML can simply be scraped</strong>, so no workaround was needed (a different texture from LINE's page-data JSON). The components are <strong>a skin over Bootstrap 4.1.3</strong> and so have no dimensions of their own; the substance of the system is its colour swatches and typographic rules. A government legacy sample whose <strong>repository has been frozen since 2019-06-13</strong>.</p>
+<blockquote><p><strong>A note on documentation-layer samples.</strong> The values in this entry come not from npm or a repository but from the official documentation HTML. Re-verification route: <code>design.gccollab.ca/component/&amp;lt;page&amp;gt;/</code> (Gatsby v1 — the body is in the HTML with no JS. Without the trailing slash you get a 301). The repository is MIT, so there is no read-only restriction as there is with LINE.</p></blockquote>
+<h2 id="the-state-of-the-source-frozen-since-2019-06">The state of the source — frozen since 2019-06</h2>
+<ul class="md-list"><li>The repository <code>gctools-outilsgc/aurora-design-system</code>: last pushed <strong>2019-06-13</strong> (the final commits delete old files and add personas). Not archived — abandoned.</li><li>The documentation site's code, <code>gctools-outilsgc/design-system-code</code>: <code>gatsby ^1.9.277</code> plus <code>bootstrap ^4.1.3</code> (measured from package.json) — being <strong>Gatsby v1</strong> it has no <code>/page-data/*.json</code> channel as LINE does (that is v2+); the HTML itself is complete instead.</li><li>As of 2026-08 the site still returns 200 — the lifespan curve peculiar to government samples, where only the code dies and the documentation lives on (the exact opposite of Rakuten ReX, where the documentation died and the npm package remains).</li></ul>
+<h2 id="colour-six-swatch-families-five-hexes">Colour — six swatch families × five hexes</h2>
+<p>The substance of the system. The model is that a team picks two or three swatches to compose its palette — <strong>a catalogue of swatch families, not a single enforced palette</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>five hexes</th></tr></thead><tbody><tr><td><strong>Aurora Borealis</strong> (the main palette)</td><td>#002D42 · #137991 · #6DD2DA · #15A3A6 · #92CC6F</td></tr><tr><td>Canada.ca Theme</td><td>#333000 · #26374A · #AF3C43 · #F5F5F5 · #FFFFFF</td></tr><tr><td>Thunder and Lightning</td><td>#002D42 · #4D5D6C · #96A8B2 · #CECECE · #FEC04F</td></tr><tr><td>Blue Complimentary</td><td>#0D467D · #137991 · #6DD2DA · #FF9F40 · #FEC04F</td></tr><tr><td>Triad</td><td>#7E0C33 · #024571 · #5DC1BE · #F6CF22 · #EDDB7C</td></tr><tr><td>Green and Blue</td><td>#0278A4 · #4E4741 · #83C3F2 · #C9DF61 · #C1D699</td></tr></tbody></table></div>
+<ul class="md-list"><li>Canada.ca Theme's #26374A and #AF3C43 are <strong>the point of contact with the Canadian federal web standard colours</strong> (the Canada.ca header navy and signature red).</li><li>Aurora Borealis exists in the documentation as raw data — a <strong>full palette of 30 hexes</strong>, five swatches × six shades (a brightness ramp of the form #002D42→#F3F8FA) — plus the source of four CSS gradients.</li></ul>
+<h3 id="four-semantic-colours-each-with-dark-text-the-colour-itself-and-a-pale-background">Four semantic colours (each with dark text, the colour itself, and a pale background)</h3>
+<pre class="md-code"><code>Error    #923534 · #D3080C · #F3E9E8
+Warning  #66512C · #FF9900 · #F9F4D4
+Success  #2B542C · #278400 · #D8EECA
+Info     #245269 · #269ABC · #D7FAFF</code></pre>
+<ul class="md-list"><li>Interface colours: text #252525 (off-black) · #FFFFFF · muted #666666. Light theme #CCCCCC/#F5F5F5/#FAFAFA/#FFFFFF · dark theme #000000/#212121/#303030/#424242 — a sample in which <strong>a four-step dark theme was already specified in a 2019 government document</strong>.</li></ul>
+<h2 id="type-rubik-and-nunito-sans-on-a-pt-scale">Type — Rubik and Nunito Sans, on a pt scale</h2>
+<p>The roles are split: <strong>Rubik for titles and headings / Nunito Sans for subheadings, buttons and body</strong> (both open-source from Google Fonts — with a Calibri fallback stated in writing for environments that block web fonts).</p>
+<pre class="md-code"><code>H1  Rubik Light    36pt        H4  Rubik Regular       21pt (1.3125em)
+H2  Rubik Regular  28pt (1.75em)   H5  Nunito Sans Regular 18pt (1.125em)
+H3  Rubik Medium   24pt (1.5em, tracking 10)   H6  Nunito Sans Bold 16pt (1em)
+body Nunito Sans Regular 16pt / leading 24pt</code></pre>
+<ul class="md-list"><li><strong>A two-typeface scale where the face changes from H5 down</strong> — the hierarchy axis is the family, not just the size (the same family as Fleet's Montserrat/Lora role split).</li><li>Pull quotes in full: 50px indent · a 4px vertical rule · 8px between rule and text · 1.25em/200% — the documentation supplies even the inline style source.</li><li>A stated target body measure of &quot;about 60 characters&quot;.</li></ul>
+<h2 id="components-a-bootstrap-413-skin-no-dimensions-of-its-own">Components — a Bootstrap 4.1.3 skin (no dimensions of its own)</h2>
+<ul class="md-list"><li>The button documentation exposes <strong>eight Bootstrap classes as they are</strong>, <code>btn btn-primary</code> through <code>btn-dark</code>, plus btn-sm/lg/block — there are no dimensions or radius rules of its own.</li><li>The grid is likewise Bootstrap's 12 columns by way of WET (Canada's Web Experience Toolkit) — no breakpoints of its own.</li><li>In other words <strong>this system's own contribution is the colour, type and content-guidance layer</strong>, and the component layer is borrowed. An explicit corpus sample of the &quot;design system = framework skin&quot; type (in contrast to government systems like GOV.UK that implement their own).</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The second documentation-layer sample</strong> — but unlike LINE (closed JSON, read-only), it is the opposite extreme: <strong>static HTML plus an MIT repository</strong>, with no barrier to collection</li><li>It does not impose a palette but offers <strong>a catalogue of six swatch families</strong> — a government system that presupposes variation across a product suite (GCTools)</li><li>A two-typeface hierarchy (Rubik/Nunito Sans, changing over at H5)</li><li>The whole component layer delegated to Bootstrap 4.1.3</li><li>Frozen in 2019-06 — a living site with a dead repository</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>The colour page states in writing that <strong>AA contrast or better is required and AAA recommended</strong>. The button page forbids conveying meaning by colour alone and gives <code>.sr-only</code> alternative-text guidance. <del>No other target declaration confirmed.</del> → <strong>Resolved 2026-08-18 — the version of the standard is stated as <code>WCAG 2.1</code>.</strong></p>
+<p>Source <a href="https://design.gccollab.ca/overview/introduction" rel="noopener">https://design.gccollab.ca/overview/introduction</a> — it says that using Aurora <strong>complements the Web Experience Toolkit (WET), the Canada.ca style guide, the Federal Identity Program (FiP) and WCAG 2.1</strong>. That is, Aurora does not claim conformance itself but <strong>positions itself as a complement to four federal standards</strong>, and no level (A/AA/AAA) is attached to that sentence — the levels appear only in the colour page's contrast requirement (AA required, AAA recommended).</p>
+<p>The home page carries a principle-level statement too: Aurora <strong>&quot;follows Government of Canada obligations such as official languages and accessibility&quot;</strong> (under the Diverse heading). <strong>There is no separate accessibility page, VPAT or conformance statement</strong> (2026-08-18, measured from the server-rendered HTML of <a href="https://design.gccollab.ca/" rel="noopener">https://design.gccollab.ca/</a> — the site's entire navigation is just four axes: Overview · Components · Content · Data).</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>Basis for the Figma kit (false):</strong> no Figma kit — the official UI Kit is produced in Adobe Illustrator and prototyped in Adobe XD, and the site mentions Figma zero times, confirmed 2026-08-18</li><li>Documentation: https://design.gccollab.ca (bilingual EN/FR)</li><li>Repository: https://github.com/gctools-outilsgc/aurora-design-system (MIT, created 2017-12, last pushed 2019-06-13) · the site's code is in <code>design-system-code</code></li><li><strong>Open questions:</strong> whether the UI Kit (.ai/.xd) bundled in the repository matches the documentation's figures, how the FR content differs, the source of the icon set (presumed FontAwesome — to be confirmed from the site code's dependencies), and whether the GCTools products actually used this skin</li><li><strong>Figma kit confirmed absent (2026-08-18):</strong> <code>figma_kit: false</code> — source <a href="https://design.gccollab.ca/overview/download" rel="noopener">https://design.gccollab.ca/overview/download</a>. There are only two official downloads (a compiled CSS/JS bundle and the UI kit), and the UI kit is stated to have been <strong>&quot;created in Adobe Illustrator&quot;</strong>, with each component exportable <strong>&quot;into Adobe XD to make an interactive prototype&quot;</strong>. The Introduction page repeats that <strong>&quot;downloading the UI kit (for Adobe Illustrator)&quot;</strong> gives you sketches of every component. Across the home, Download, Introduction and Components pages the string <strong>Figma appears zero times, Sketch zero times</strong>. This matches the timing — <strong>the 2019-06 freeze predates Figma becoming a corporate standard.</strong> Even when rendered, this system publishes no Figma kit</li><li><strong>Confirmed no render needed (2026-08-18):</strong> although it is a Gatsby static site, <strong>the body is present in the server-rendered HTML</strong>, so the full text can be read with curl alone (no headless render required). Note that <code>sitemap.xml</code> is a 404, so the page list has to be followed through internal links</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

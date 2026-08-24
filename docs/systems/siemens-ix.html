@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Siemens Industrial Experience (iX) — Self-Made DesignOps</title>
+<meta name="description" content="Siemens' industrial UI system — the type-size names are a modular scale including negative exponents (ms--2 to ms-6), text roles are single tokens in CSS…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/siemens-ix.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Siemens Industrial Experience (iX) — Self-Made DesignOps">
+<meta property="og:description" content="Siemens' industrial UI system — the type-size names are a modular scale including negative exponents (ms--2 to ms-6), text roles are single tokens in CSS…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/siemens-ix.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Siemens Industrial Experience (iX) — Self-Made DesignOps">
+<meta name="twitter:description" content="Siemens' industrial UI system — the type-size names are a modular scale including negative exponents (ms--2 to ms-6), text roles are single tokens in CSS…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Siemens Industrial Experience (iX)",
+ "description": "Siemens' industrial UI system — the type-size names are a modular scale including negative exponents (ms--2 to ms-6), text roles are single tokens in CSS…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/siemens-ix.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Siemens Industrial Experience (iX)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://ix.siemens.io"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-240-per-theme">Tokens — 240 per theme</a></li><li class="lvl3"><a href="#type-the-ms-exponent-scale">Type — the ms exponent scale</a></li><li class="lvl3"><a href="#text-roles-are-css-font-shorthand">Text roles are CSS font shorthand</a></li><li class="lvl3"><a href="#themes-a-classic-light-classic-dark-file-pair">Themes — a classic-light / classic-dark file pair</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-one-size-only-and-a-1px-focus">Buttons — one size only, and a 1px focus</a></li><li class="lvl3"><a href="#inputs-state-painted-as-a-background-colour">Inputs — state painted as a background colour</a></li><li class="lvl3"><a href="#modals-the-class-names-are-px-values-and-the-motion-is-js-reading-css-variables">Modals — the class names are px values, and the motion is JS reading CSS variables</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Siemens</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://ix.siemens.io" rel="noopener">Official site</a><br><a href="https://github.com/siemens/ix" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/siemens-ix.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Siemens Industrial Experience (iX)</span></nav>
+    <h1>Siemens Industrial Experience (iX)</h1>
+    <p class="doc-lede">Siemens · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Siemens' industrial UI system — the type-size names are <strong>a modular scale including negative exponents</strong> (<code>ms--2</code> to <code>ms-6</code>), text roles are <strong>single tokens in CSS <code>font</code> shorthand</strong>, and the base size is 14px (a dense industrial UI).</p>
+<h2 id="tokens-240-per-theme">Tokens — 240 per theme</h2>
+<h3 id="type-the-ms-exponent-scale">Type — the <code>ms</code> exponent scale</h3>
+<pre class="md-code"><code>ms--2: 10px · ms--1: 12px · ms-0: 14px · ms-1: 16px · ms-2: 20px
+ms-3: 24px · ms-4: 29px · ms-5: 35px · ms-6: 42px</code></pre>
+<ul class="md-list"><li><strong>The names are modular-scale exponents</strong> — <code>ms-0</code> is the base (14px) and the negative exponents (<code>ms--1</code>, with a double hyphen) are the steps below. The only case in the sample of <strong>making explicit in the naming system</strong> what EUI does by placing its base mid-scale</li><li><strong>A 14px base</strong> — the dense-enterprise 14px camp, with Ring UI and Blueprint. The upper steps 29/35/42 are ratio-derived values off any 4px grid</li><li>Line heights are unitless ratios (1 · 1.091 · 1.2 · 1.3 · 1.43 · 1.5)</li></ul>
+<h3 id="text-roles-are-css-font-shorthand">Text roles are CSS <code>font</code> shorthand</h3>
+<pre class="md-code"><code class="language-css">--theme-h1: var(--weight-bold) var(--ms-4)/var(--line-height-sm) var(--font-sans);
+--theme-body: var(--weight-normal) var(--ms-0)/var(--line-height-md) var(--font-sans);</code></pre>
+<p><strong>Weight, size, line height and family are composed into one token as a CSS <code>font</code> shorthand</strong>, so <code>font: var(--theme-h1)</code> finishes the styling in a single line — unique in the sample. The typographic edition of the same shorthand camp as Ring UI (duration + easing composed). There are 20-plus roles: display (xxl–xs) · h1–h6 · body (lg–xs) · label · code.</p>
+<h3 id="themes-a-classic-light-classic-dark-file-pair">Themes — a classic-light / classic-dark file pair</h3>
+<p><code>--theme-color-primary</code> moves from <code>#006e93</code> in light to <code>#00bde3</code> in dark — <strong>replaced by a brighter cyan in dark mode</strong> (the same direction as TDS's ramp inversion, handled here at the semantic layer). Seventeen chart-specific colour families are included in the theme — the chart-token camp of the industrial and data domains, with Serendie.</p>
+<h2 id="components">Components</h2>
+<p>Web Components (Stencil) shipped alongside React, Angular and Vue wrappers — <strong>supporting four frameworks at once is unique in the sample</strong> (most ship React alone). → Buttons, inputs and modals are in the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>dist/collection/components/*/**.css</code> (the uncompressed Stencil collection) and <code>dist/siemens-ix/siemens-ix-core.css</code> (the component variable layer) of <code>@siemens/ix@5.2.0</code>.</p>
+<h3 id="buttons-one-size-only-and-a-1px-focus">Buttons — one size only, and a 1px focus</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>height</strong></td><td><strong>a fixed 2rem (32px) — no size variants</strong></td></tr><tr><td>inline padding</td><td>8px (the public <code>--ix-button-padding</code> variable)</td></tr><tr><td>radius</td><td><strong>2px</strong> (<code>--theme-btn--border-radius</code> → small 0.125rem)</td></tr><tr><td>border</td><td>1px — always, on every variant including primary</td></tr><tr><td>type</td><td><strong>14px / 700</strong> / 1.429em (≈20px)</td></tr><tr><td>focus</td><td><strong>a 1px outline</strong> with a 2px offset (<code>#199fff</code>)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are no size variants</strong> — a single 32px, in contrast to Tegel's four steps and Kontur's three. A dense industrial UI fixing density at one value.</li><li><strong>The button type is 14px at weight 700</strong> — the same bold camp as Backpack (16px, 700), at a dense size.</li><li><strong>The focus outline is 1px</strong> — the thinnest in a sample where 2px and above is the majority.</li><li>The three radius steps are min (0) / small (<strong>2px</strong>) / default (4px), with buttons and inputs on 2px and cards and modals on 4px. An ultra-low-radius system with nothing in the 8px range at all.</li><li><code>--ix-button-border-radius-left/right</code> are separated so that a grouped (joined) button can fold one side to 0 — the variable edition of Backpack's <code>--docked</code>.</li></ul>
+<h3 id="inputs-state-painted-as-a-background-colour">Inputs — state painted as a background colour</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>min-height</td><td><strong>2rem (32px)</strong> — the same as the button</td></tr><tr><td>padding</td><td>4px 8px</td></tr><tr><td>radius</td><td>2px · border 1px</td></tr><tr><td>type</td><td><code>--theme-ms-0</code> (14px) / 400</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>invalid, warning and info change not just the border colour but the background itself</strong> — the variable layer carries a per-state background set, <code>--theme-input--background--invalid: var(--theme-color-component-error)</code> and so on. This parts from the majority, who change only the border.</li><li>Focus is the same 1px outline as the button plus a border swapped to <code>--theme-color-dynamic</code> (#00eaff) — the two signals overlaid.</li></ul>
+<h3 id="modals-the-class-names-are-px-values-and-the-motion-is-js-reading-css-variables">Modals — the class names are px values, and the motion is JS reading CSS variables</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size class</th><th>width</th></tr></thead><tbody><tr><td><code>modal-size-360</code></td><td>22.5rem (360px)</td></tr><tr><td><code>modal-size-480</code></td><td>30rem</td></tr><tr><td><code>modal-size-600</code></td><td>37.5rem</td></tr><tr><td><code>modal-size-720</code></td><td>45rem</td></tr><tr><td><code>modal-size-840</code></td><td>52.5rem</td></tr><tr><td>+ <code>full-width</code> 95% / <code>full-screen</code></td><td></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The width-step names are the px values</strong> (the same philosophy as Tegel's value-named <code>element-16</code>, applied to a modal API). Five steps plus two full options, max-height <strong>80vh</strong>, radius 4px, scrim <code>--theme-color-lightbox</code> (rgba(0,0,0,.549)).</li><li><strong>The entrance animation is not CSS but animejs (a JS library)</strong> — by default a 40px slide-down plus fade over 300ms, top-aligned; with <code>centered</code>, translateY −90%→−50%. The default position is the top, not vertical centre.</li><li><strong>The duration is read out of a CSS variable by JS via <code>getComputedStyle</code></strong> (the <code>Animation</code> utility — <code>--theme-short/default/medium/slow/x-slow-time</code>, with fallbacks of 0/150/300/500/1000ms). Those variables are not in the theme files, so the effective values are the fallbacks — meaning <strong>short = 0ms</strong>, with &quot;instant&quot; as the first step of the scale. Under <code>prefers-reduced-motion</code> JS sets every step to 0 — <strong>blocking motion at the JS layer</strong> rather than through a CSS media query, unique in the sample.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>One button size (32px)</strong> — the size axis is simply not offered</li><li><strong>A 1px focus outline</strong> — the thinnest in the sample</li><li><strong>A 2px radius on buttons and inputs</strong> — an ultra-low three-step system (0/2/4)</li><li><strong>Input state as a background colour</strong> — the opposite pole from the border-signal camp</li><li><strong>Modal class names = px values</strong> · the default position is the top</li><li><strong>Motion values consumed in JS</strong> (CSS variable → getComputedStyle → animejs) — reduced-motion handled in JS too</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The <code>ms</code> negative-exponent naming system</strong> — the mid-scale base made explicit in the name, unique in the sample</li><li><strong>Text roles as single CSS <code>font</code> shorthand tokens</strong> — unique in the sample</li><li>A 14px base — the dense industrial UI camp</li><li>Web Components plus three framework wrappers — the widest distribution in the sample</li><li>primary replaced by a brighter value in dark, plus 17 chart colour families</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG AA (resolved 2026-08-18 — though no version is stated).</strong> Source: <code>ix.siemens.io/docs/guidelines/accessibility/overview</code> — &quot;We strive to meet WCAG AA standards&quot;. The individual guidelines carry success-criterion numbers (1.1, 1.3, 2.1, 2.5 and so on) and state a <strong>minimum target of 24×24px</strong>.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>Basis for the Figma kit (true):</strong> the &quot;iX Design System&quot; library on the Siemens AG Global Figma account — internal licence only, with guest and classic access on request, confirmed 2026-08-18</li><li>Tokens: <code>npm pack @siemens/ix@5.2.0</code> → <code>dist/siemens-ix/*.css</code></li><li>Components in depth: <code>dist/collection/components/{button,input,modal}/*.css</code> · <code>dist/collection/components/utils/animation.js</code> · <code>dist/siemens-ix/siemens-ix-core.css</code> from the same package (2026-08-18)</li><li><strong>Open questions:</strong> <del>the spacing system</del> (resolved 2026-08-18 — <strong>confirmed to have no spacing tokens</strong>: zero occurrences of <code>--theme-spacing*</code> in the whole of core.css, with 0.25/0.5rem literals in the component CSS), <del>whether a brand theme (siemens-brand) exists</del> (resolved 2026-08-18 — the Figma library embeds <strong>four themes: Brand dark · Brand light · Classic dark · Classic light</strong>, and Siemens AG applications are <strong>required to use the Corporate Brand Theme</strong> — source <a href="https://ix.siemens.io/docs/styles/theming/usage-designers" rel="noopener">https://ix.siemens.io/docs/styles/theming/usage-designers</a>), <del>the accessibility target</del> (resolved 2026-08-18 — see the accessibility section)</li><li><strong>Figma kit resolved (2026-08-18):</strong> <code>figma_kit: true</code> — source <a href="https://ix.siemens.io/docs/home/overview" rel="noopener">https://ix.siemens.io/docs/home/overview</a>, which states that &quot;our <strong>Figma library contains all the tokens, components and blueprints you need to design your app</strong>&quot;. Access, however, is <strong>gated in three ways</strong>: ① the main library is administered on the <strong>Siemens AG Global Figma account</strong> and used by <strong>Siemens employees with a Figma licence, who search for &quot;iX Design System&quot;</strong>; ② <strong>guest access and the classic (open-source) library are provided individually on request</strong>; ③ the library contains <strong>Siemens brand assets</strong>. The asymmetry — MIT open-source code with a <strong>design kit that is internal-first and request-based</strong> — is characteristic of this system</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

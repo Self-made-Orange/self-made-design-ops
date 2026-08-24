@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>tvOS Design (HIG) — Self-Made DesignOps</title>
+<meta name="description" content="Apple TV — the second tv sample, which opened up cross-comparison with Android TV. The safe area is a 60pt top/bottom, 80pt left/right inset (against…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/tvos.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="tvOS Design (HIG) — Self-Made DesignOps">
+<meta property="og:description" content="Apple TV — the second tv sample, which opened up cross-comparison with Android TV. The safe area is a 60pt top/bottom, 80pt left/right inset (against…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/tvos.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="tvOS Design (HIG) — Self-Made DesignOps">
+<meta name="twitter:description" content="Apple TV — the second tv sample, which opened up cross-comparison with Android TV. The safe area is a 60pt top/bottom, 80pt left/right inset (against…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "tvOS Design (HIG)",
+ "description": "Apple TV — the second tv sample, which opened up cross-comparison with Android TV. The safe area is a 60pt top/bottom, 80pt left/right inset (against…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/tvos.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "tvOS Design (HIG)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-17",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#specifications-hig-layout">Specifications (HIG layout)</a></li><li class="lvl3"><a href="#safe-area-the-overscan-inset">Safe area — the overscan inset</a></li><li class="lvl3"><a href="#grid-the-column-count-sets-the-width">Grid — the column count sets the width</a></li><li class="lvl3"><a href="#focus-spacing">Focus spacing</a></li><li><a href="#cross-comparison-the-two-tv-samples">Cross-comparison — the two tv samples</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Apple</b><br>partial harvest · tv<br>verified 2026-08-17<br><a href="https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/tvos.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>tvOS Design (HIG)</span></nav>
+    <h1>tvOS Design (HIG)</h1>
+    <p class="doc-lede">Apple · os · tv</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Apple TV — the <strong>second <code>tv</code> sample</strong>, which opened up cross-comparison with Android TV. The safe area is a <strong>60pt top/bottom, 80pt left/right inset</strong> (against overscan), and the grid <strong>enumerates unfocused content width per column count</strong> (2 columns 860pt, 3 columns 560pt…). Minimum distance between button centres is <strong>60pt</strong>.</p>
+<h2 id="specifications-hig-layout">Specifications (HIG layout)</h2>
+<h3 id="safe-area-the-overscan-inset">Safe area — the overscan inset</h3>
+<pre class="md-code"><code>top/bottom: 60pt   left/right: 80pt</code></pre>
+<p>The stated reason is &quot;unintended cropping from overscanning on older TVs&quot;. <strong>The overscan figures unavailable in the Android TV documentation were obtained from Apple's side</strong> — an asymmetric inset, wider horizontally than vertically.</p>
+<h3 id="grid-the-column-count-sets-the-width">Grid — the column count sets the width</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th style="text-align:center">Grid</th><th style="text-align:center">Unfocused content width</th><th style="text-align:center">Horizontal gap</th><th style="text-align:center">Minimum vertical gap</th></tr></thead><tbody><tr><td style="text-align:center">2 columns</td><td style="text-align:center">860pt</td><td style="text-align:center">40pt</td><td style="text-align:center">100pt</td></tr><tr><td style="text-align:center">3 columns</td><td style="text-align:center">560pt</td><td style="text-align:center">40pt</td><td style="text-align:center">100pt</td></tr></tbody></table></div>
+<p><strong>Structurally identical to Android TV's enumeration of card widths by count</strong> (1 card 844dp to 5 cards 124dp) — the two TV platforms independently chose a &quot;number visible → width&quot; enumeration, and even the two-column values are close (Apple 860pt vs Google 844dp). <strong>The first confirmed convergence pattern on the tv platform.</strong></p>
+<h3 id="focus-spacing">Focus spacing</h3>
+<p><strong>A minimum of 60pt between button centres</strong> — the spacing that prevents mis-selection when moving focus with a D-pad or remote. What makes this specific to tv is that it is a <strong>distance-between-targets specification</strong>, not a target size one (the same kind as Android Automotive's 24dp between targets, at 2.5× the value).</p>
+<h2 id="cross-comparison-the-two-tv-samples">Cross-comparison — the two tv samples</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>Android TV</th><th>tvOS</th></tr></thead><tbody><tr><td>Safe area</td><td>not obtained</td><td><strong>60/80pt asymmetric inset</strong></td></tr><tr><td>Width enumeration</td><td>1–5 cards, 844→124dp</td><td>grid 2–n columns, 860→…pt</td></tr><tr><td>Focus feedback</td><td><strong>1.1× scale</strong> specified</td><td>(figure not obtained)</td></tr><tr><td>Focus spacing</td><td>not obtained</td><td><strong>60pt between centres</strong></td></tr></tbody></table></div>
+<p>The two documents quantify different axes, so <strong>combining them completes the tv specification</strong>.</p>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The second tv sample</strong> — opened cross-comparison with Android TV</li><li>60/80pt asymmetric overscan inset — a kind of safe area unique to tv</li><li>Width enumerated per column count — independent convergence with Android TV (860 ≈ 844)</li><li>60pt focus spacing — a distance specification</li><li>No official Figma kit — the documentation is the only source</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li><strong>Basis for figma_kit (false):</strong> no official kit in the community — <strong>re-confirmed 2026-08-23</strong> against <code>developer.apple.com/design/resources/</code>, which answers 200. The tvOS downloads on that page are <strong><code>tvOS-18-Design-Templates-Sketch.dmg</code>, <code>tvOS-18-Production-Templates-Sketch.dmg</code> and <code>tvOS-18-Production-Templates-Photoshop.dmg</code> only</strong> — Sketch and Photoshop, no Figma. The same page does link Figma community files for visionOS, watchOS 26 and ten feature kits, so the absence is specific to tvOS rather than Apple not using Figma. <code>figma_kit: false</code> stands</li><li>Source: the HIG DocC JSON channel (<code>HARVESTING.md</code>) — the tvOS section of layout.json</li><li><strong>Still to confirm:</strong> the type scale (tvOS-specific sizes), the focus scale factor, the full designing-for-tvos page, and colour and material specifications</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

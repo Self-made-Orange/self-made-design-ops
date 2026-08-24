@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fleet (Boston Patterns) — Self-Made DesignOps</title>
+<meta name="description" content="The City of Boston's pattern library — a municipal sample whose colour names are local identity (Charles Blue · Freedom Trail Red · Optimistic Blue). Its…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/fleet-boston.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Fleet (Boston Patterns) — Self-Made DesignOps">
+<meta property="og:description" content="The City of Boston's pattern library — a municipal sample whose colour names are local identity (Charles Blue · Freedom Trail Red · Optimistic Blue). Its…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/fleet-boston.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fleet (Boston Patterns) — Self-Made DesignOps">
+<meta name="twitter:description" content="The City of Boston's pattern library — a municipal sample whose colour names are local identity (Charles Blue · Freedom Trail Red · Optimistic Blue). Its…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Fleet (Boston Patterns)",
+ "description": "The City of Boston's pattern library — a municipal sample whose colour names are local identity (Charles Blue · Freedom Trail Red · Optimistic Blue). Its…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/fleet-boston.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Fleet (Boston Patterns)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://patterns.boston.gov"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#source-status-the-dual-licence-structure">Source status · the dual licence structure</a></li><li><a href="#colour-the-names-are-geography">Colour — the names are geography</a></li><li><a href="#typography-calc-fluid-formulas-a-rare-sample">Typography — calc() fluid formulas (a rare sample)</a></li><li><a href="#components-the-radius-0-camp-hover-swapping-brand-colours">Components — the radius-0 camp, hover swapping brand colours</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>City of Boston (Digital Team)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://patterns.boston.gov" rel="noopener">Official site</a><br><a href="https://github.com/CityOfBoston/patterns" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/fleet-boston.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Fleet (Boston Patterns)</span></nav>
+    <h1>Fleet (Boston Patterns)</h1>
+    <p class="doc-lede">City of Boston (Digital Team) · government(municipal) · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The City of Boston's pattern library — a municipal sample <strong>whose colour names are local identity</strong> (Charles Blue · Freedom Trail Red · Optimistic Blue). Its typography pairs Montserrat and Lora with <strong><code>calc()</code> fluid formulas</strong> (pre-clamp-generation fluid typography — a rare sample in the corpus), it belongs to the <strong>border-radius 0 camp</strong> (no decorative radius at all), and its button hover <strong>swaps brand colours</strong>, blue to red. The repository was pushed 2026-04 — <strong>active</strong>.</p>
+<h2 id="source-status-the-dual-licence-structure">Source status · the dual licence structure</h2>
+<ul class="md-list"><li>The repository <code>CityOfBoston/patterns</code>: created 2016-06, <strong>last pushed 2026-04-16 (active)</strong>, default branch develop. The GitHub API license field is None, but <strong>package.json states <code>&amp;quot;license&amp;quot;: &amp;quot;CC0-1.0&amp;quot;</code></strong>.</li><li>The README opens with a contrary clause: this project contains the marks and trade dress of the City of Boston's digital assets and <strong>may not be reused without the city's express permission</strong> — <strong>the code is public domain, the identity is locked</strong>. An explicit sample of dual licensing in government (contrasting with the single licences of uswds and govuk).</li><li>Two verification routes for the values: the live <code>css/public.css</code> (184,235B) is byte-identical to the scratch harvest, and the originals in the repo's <code>stylesheets/variables/*.styl</code> were compared against it.</li></ul>
+<h2 id="colour-the-names-are-geography">Colour — the names are geography</h2>
+<p>The named palette in <code>variables/_colors.styl</code> (<strong>20 distinct hexes</strong> measured in public.css):</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Name</th><th>Hex</th><th>Note</th></tr></thead><tbody><tr><td>Charles Blue</td><td>#091F2F</td><td>the primary dark — the Charles River. Appears 167 times in the css</td></tr><tr><td>Optimistic Blue (light/dark)</td><td><strong>#1871BD (identical)</strong></td><td>the comments distinguish light from dark yet <strong>the real values match</strong> — a trace of a 2019-01 renaming refactor</td></tr><tr><td>Optimistic Blue SR</td><td>#28A7DF</td><td>&quot;screen readers&quot; — a comment stating outright that <strong>a contrast failure was patched with a colour</strong></td></tr><tr><td>Optimistic Blue hover</td><td>#175182</td><td></td></tr><tr><td>Freedom Trail Red light/dark</td><td>#FB4D42 / #D22D23</td><td>light for dark backgrounds · dark for text on white — <strong>split by contrast direction</strong></td></tr><tr><td>Yellow</td><td>#FCB61A</td><td>hover is the formula <code>darken($yellow, 20)</code> (emitting #AE7902)</td></tr><tr><td>Body Text</td><td>#58585B</td><td>body grey</td></tr><tr><td>Grey 000–300</td><td>#F3F3F3 · #E0E0E0 · #C8C8C8 · #828282</td><td>four steps</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>-light and -dark are not a lightness ramp but an axis of &quot;text on which background&quot;</strong> — the comments attach usage like clauses (focus = Optimistic light · error border = Freedom light · error text = Freedom dark).</li><li>There is no separate semantic palette — errors and focus reuse brand colours under new designations.</li></ul>
+<h2 id="typography-calc-fluid-formulas-a-rare-sample">Typography — calc() fluid formulas (a rare sample)</h2>
+<p>Typefaces: <strong>Montserrat</strong> (Arial fallback — display, buttons, uppercase) plus <strong>Lora</strong> (Georgia fallback — a body serif). A serif body is an unusual choice in government.</p>
+<p><strong>The fluid typography uses <code>calc()</code> plus media-query bounds rather than <code>clamp()</code></strong> (the formulas verbatim, measured from public.css):</p>
+<pre class="md-code"><code class="language-css">.h1  { font-size: calc(30px + 45 * ((100vw - 480px) / 960)); }  /* 30→75px between 480 and 1440px */
+@media (min-width:1440px) { .h1 { font-size: 75px } }            /* the ceiling pinned */
+.btn { font-size: calc(14px + 2 * ((100vw - 480px) / 960)); }    /* 14→16px */
+.hro-t--l { font-size: calc(45px + 45 * ((100vw - 420px) / 860)); } /* hero 45→90px */</code></pre>
+<ul class="md-list"><li>The pattern is <code>calc(min + increment * ((100vw − start vp) / vp width))</code> — <strong>linear interpolation unrolled by hand</strong>. A specimen of the pre-clamp() (standardised 2020) generation of fluid typography, alive on a live site → crossing the &quot;fluid scale&quot; section of <code>patterns/typography.md</code> (Pajamas clamp() · Mantine/Radix runtime scaling) as its <strong>third form</strong>. rem-based formulas coexist too (<code>calc(.875rem + .125 * ((100vw - 30rem) / 60))</code>).</li><li>The fixed scale is the eight steps in <code>_fonts.styl</code>: 12/14/16/18/20/25 (1.4rem &quot;fixed&quot;)/ ~26.7 (1.6667rem)/45px (2.8125rem) — the comment's &quot;~20px&quot; is an error (1.6667rem ≈ 26.7px). The largest fixed px measured is 75px (the h1 ceiling), with only the hero extension reaching 90px.</li><li>Eight line heights (1/1.1/1.2/1.32/1.5/2/2.5/3.5) · eight border widths (0–10px, with fractional rems like 0.222rem wedged in) · twelve spacing steps (0–4rem, with <strong>intermediate insertions like 275 and 450</strong> — the name-value inversion family in GLOSSARY).</li></ul>
+<h2 id="components-the-radius-0-camp-hover-swapping-brand-colours">Components — the radius-0 camp, hover swapping brand colours</h2>
+<ul class="md-list"><li><strong>Zero decorative border-radius</strong> — the only radii in public.css are 0, 50% and 100% (circles). The municipal sample of the square-cornered government camp, with govuk and nysds.</li><li>Buttons: Montserrat 700 uppercase with 1px letter-spacing · 1.25rem padding · no radius · <strong>base blue (#1871BD) → Freedom Trail Red (#FB4D42) on hover</strong> — a rare rule where hover is <strong>a swap to the second brand colour</strong> rather than a lightness change.</li><li>Four colour variants (default blue · <code>--w</code> white/blue · <code>--y</code> yellow · <code>--c</code> Charles Blue) plus a <code>--br</code> 3px outlined form plus hover overrides (<code>--r-hov</code> / <code>--w-hov</code>) — each variant specifies its own hover colour (yellow darkens to #AE7902; the white form becomes a white background with red text).</li><li>Seven breakpoints (480/768/840/980/1280/1300 plus the 1440 typography ceiling) — <strong>unconventional values like 840, 980 and 1300</strong> (content-fitted boundaries).</li><li>The build is Stylus → PostCSS, the documentation is Fractal, and new components are Stencil web components (alongside in <code>web-components/</code>) — a cross-section of a CSS library migrating to web components.</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li>Colour names as city geography and history (Charles Blue · Freedom Trail Red) — a sample where the naming doubles as the branding document</li><li>calc() linear-interpolation fluid typography — a pre-clamp specimen, with the formulas captured verbatim</li><li>-light/-dark defined by <strong>contrast direction rather than lightness</strong>, plus a screen-reader-specific colour</li><li>Radius 0 plus hover swapping brand colours — a square, vivid municipal identity</li><li>Dual licensing: CC0 code, forbidden trade dress</li><li>Montserrat plus Lora — a serif body, unusual in government</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>No stated target confirmed. The clues: a <code>-SR</code> (screen reader) colour variable, a comment stating that the <code>-dark</code> variants exist &quot;to strengthen contrast against white&quot;, and a specified focus-indicator colour.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Documentation: https://patterns.boston.gov (Fractal — the page title is &quot;Overview | Fleet&quot;)</li><li>CSS: https://patterns.boston.gov/css/public.css (184KB)</li><li>Repository: https://github.com/CityOfBoston/patterns (develop, pushed 2026-04)</li><li><strong>Still to confirm:</strong> tokens in the Stencil web-component layer (a separate build), a Figma/Sketch kit, a stated accessibility target (only a wiki working-agreement link was found), real grid-system values (<code>stylesheets/grid/</code> not harvested), and whether Optimistic Blue light and dark holding the same value is intentional (possibly an unfinished renaming refactor)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>visionOS Design Resources — Self-Made DesignOps</title>
+<meta name="description" content="Apple Vision Pro's spatial UI guidance. The only spatial-computing platform in the sample, and although it uses the same SF Pro as iOS, the numbers differ.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/visionos.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="visionOS Design Resources — Self-Made DesignOps">
+<meta property="og:description" content="Apple Vision Pro's spatial UI guidance. The only spatial-computing platform in the sample, and although it uses the same SF Pro as iOS, the numbers differ.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/visionos.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="visionOS Design Resources — Self-Made DesignOps">
+<meta name="twitter:description" content="Apple Vision Pro's spatial UI guidance. The only spatial-computing platform in the sample, and although it uses the same SF Pro as iOS, the numbers differ.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "visionOS Design Resources",
+ "description": "Apple Vision Pro's spatial UI guidance. The only spatial-computing platform in the sample, and although it uses the same SF Pro as iOS, the numbers differ.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/visionos.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "visionOS Design Resources",
+  "applicationCategory": "DesignApplication",
+  "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-16",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#typography-sf-pro-with-different-values-from-ios">Typography — SF Pro, with different values from iOS</a></li><li class="lvl3"><a href="#colour-two-values-joined-by-a-comma">Colour — two values joined by a comma</a></li><li class="lvl3"><a href="#spacing-radii">Spacing / radii</a></li><li><a href="#component-detail">Component detail</a></li><li class="lvl3"><a href="#drop-down-button-it-has-a-hover-state">Drop Down Button — it has a Hover state</a></li><li><a href="#components">Components</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Apple</b><br>partial harvest · spatial<br>verified 2026-08-16<br><a href="https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/visionos.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>visionOS Design Resources</span></nav>
+    <h1>visionOS Design Resources</h1>
+    <p class="doc-lede">Apple · os · spatial</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Apple Vision Pro's spatial UI guidance. <strong>The only spatial-computing platform in the sample</strong>, and although it uses the same SF Pro as iOS, <strong>the numbers differ.</strong></p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="typography-sf-pro-with-different-values-from-ios">Typography — SF Pro, with different values from iOS</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Style</th><th style="text-align:center">visionOS</th><th style="text-align:center">iOS 26</th><th>Difference</th></tr></thead><tbody><tr><td>Title 2</td><td style="text-align:center">22 / 28 · tracking <strong>0</strong></td><td style="text-align:center">22 / 28 · tracking <strong>-0.26</strong></td><td>same size, <strong>different tracking</strong></td></tr><tr><td>Title 3</td><td style="text-align:center"><strong>19</strong> / 24 · tracking <strong>0</strong></td><td style="text-align:center"><strong>20</strong> / 25 · tracking <strong>-0.45</strong></td><td>size, leading and tracking all differ</td></tr></tbody></table></div>
+<p><strong>Same typeface, same style name, different values.</strong></p>
+<ul class="md-list"><li><strong>Title 3 is 19px.</strong> On iOS it is 20px. A rare instance of an odd-numbered size.</li><li><strong>All tracking is 0.</strong> iOS uses negative values in this range (-0.26 to -0.45). <strong>One could read this as not tightening tracking on a screen viewed at a distance, but the kit gives no reason.</strong></li><li><strong>The default weight is Bold (700).</strong> The same styles on iOS default to Regular (400).</li></ul>
+<p>Only two styles were confirmed. The full scale is unverified.</p>
+<h3 id="colour-two-values-joined-by-a-comma">Colour — two values joined by a comma</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th>Value</th></tr></thead><tbody><tr><td><code>Text/Primary</code></td><td><code>#FFFFFF</code></td></tr><tr><td><code>Text/Secondary</code></td><td><code>#FFFFFF, #545454</code></td></tr><tr><td><code>Text/Tertiary</code></td><td><code>#FFFFFF, #5E5E5E</code></td></tr><tr><td><code>Controls/Hover</code></td><td><code>#FFFFFF, #5E5E5E</code></td></tr><tr><td><code>Controls/Disabled</code></td><td><code>#FFFFFF, #5E5E5E</code></td></tr><tr><td><code>Colors/Black</code></td><td><code>#000000</code></td></tr><tr><td><code>Colors/Gray</code></td><td><code>#98989D</code></td></tr></tbody></table></div>
+<p><strong>Most tokens hold two colours joined by a comma.</strong> Only <code>Text/Primary</code> and <code>Colors/*</code> are single-valued. What the two values mean (a gradient, per mode, above and below a material) could not be determined from the kit.</p>
+<p><strong><code>Text/Primary</code> is white.</strong> That means dark by default, unlike iOS (which has both light and dark themes).</p>
+<h3 id="spacing-radii">Spacing / radii</h3>
+<p>Unverified.</p>
+<h2 id="component-detail">Component detail</h2>
+<h3 id="drop-down-button-it-has-a-hover-state">Drop Down Button — it has a Hover state</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>State</th><th>Size</th></tr></thead><tbody><tr><td>Idle (<strong>No Platter</strong>)</td><td>120 × 44</td></tr><tr><td><strong>Hover</strong></td><td>120 × 44</td></tr><tr><td>Selected</td><td>120 × 44</td></tr><tr><td>Disabled</td><td>120 × 44</td></tr></tbody></table></div>
+<p><strong>The touch-target height of 44pt matches the iOS top toolbar.</strong></p>
+<p>Two things diverge from iOS and Android.</p>
+<ul class="md-list"><li><strong>A <code>Hover</code> state exists.</strong> The iOS kit has none. visionOS points at things with gaze, so there is a &quot;being looked at&quot; state before the tap. <strong>The only case of hover on a platform with no mouse.</strong></li><li><strong>It uses the state name <code>No Platter</code>.</strong> A platter in visionOS is the glass panel laid behind a control. A default state of &quot;no platter&quot; means the background is optional.</li></ul>
+<h2 id="components">Components</h2>
+<p>Confirmed from the Drop Downs page: Drop Down Button (4 states). Other pages are unverified.</p>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>It uses the same typeface and style names as iOS with different values.</strong> Title 3 at 19px vs 20px, tracking 0 vs -0.45. <strong>This is the evidence for not treating &quot;the Apple design system&quot; as one thing.</strong></li><li><strong>Tracking is uniformly 0.</strong> In contrast to iOS, which traces a U-curve across sizes.</li><li><strong>Dark by default.</strong> <code>Text/Primary</code> is white.</li><li><strong>Colour tokens hold two values.</strong> No other sample has this structure.</li><li><strong>A Hover state is defined.</strong> Because of gaze input, which sets it apart from touch-only platforms.</li><li><strong>The default weight is Bold.</strong> Both confirmed styles default to Bold (700).</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Documentation: https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos (blocked from this environment)</li><li>Figma: &quot;Apple Design Resources - visionOS (Community)&quot;</li><li><strong>Still to confirm:</strong> the full type scale, spacing, radii, depth (z-axis) tokens, and components on pages other than Drop Downs</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

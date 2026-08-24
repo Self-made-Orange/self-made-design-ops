@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spindle — Self-Made DesignOps</title>
+<meta name="description" content="Ameba's (CyberAgent's) system — the same spacing token holds different values across three viewport-specific CSS files, it is the only sample to tokenise…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/spindle.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Spindle — Self-Made DesignOps">
+<meta property="og:description" content="Ameba's (CyberAgent's) system — the same spacing token holds different values across three viewport-specific CSS files, it is the only sample to tokenise…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/spindle.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spindle — Self-Made DesignOps">
+<meta name="twitter:description" content="Ameba's (CyberAgent's) system — the same spacing token holds different values across three viewport-specific CSS files, it is the only sample to tokenise…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Spindle",
+ "description": "Ameba's (CyberAgent's) system — the same spacing token holds different values across three viewport-specific CSS files, it is the only sample to tokenise…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/spindle.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Spindle",
+  "applicationCategory": "DesignApplication",
+  "url": "https://spindle.ameba.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-20-steps-3-viewports-2-families">Spacing — 20 steps × 3 viewports × 2 families</a></li><li class="lvl3"><a href="#motion-verb-semantics-plus-view-transitions">Motion — verb semantics plus View Transitions</a></li><li class="lvl3"><a href="#shadow-filter-and-box-shadow-kept-separate">Shadow — filter and box-shadow kept separate</a></li><li class="lvl3"><a href="#type-version-numbers-in-the-stack">Type — version numbers in the stack</a></li><li class="lvl3"><a href="#what-is-missing">What is missing</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#colour-bundled-in-the-ui-package-the-cut-explained">Colour (bundled in the UI package) — the cut explained</a></li><li class="lvl3"><a href="#buttons-spui-button-a-pill-radius-by-em-arithmetic">Buttons (.spui-Button) — a pill radius by em arithmetic</a></li><li class="lvl3"><a href="#inputs-spui-textfield">Inputs (.spui-TextField)</a></li><li class="lvl3"><a href="#dialogs-and-modals-a-native-dialog-plus-starting-style">Dialogs and modals — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>CyberAgent (Ameba)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://spindle.ameba.design" rel="noopener">Official site</a><br><a href="https://github.com/openameba/spindle" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/spindle.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Spindle</span></nav>
+    <h1>Spindle</h1>
+    <p class="doc-lede">CyberAgent (Ameba) · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Ameba's (CyberAgent's) system — <strong>the same spacing token holds different values across three viewport-specific CSS files</strong>, it is <strong>the only sample to tokenise the View Transitions API</strong>, and the font-stack names carry <strong>version numbers</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-20-steps-3-viewports-2-families">Spacing — 20 steps × 3 viewports × 2 families</h3>
+<p>Three files, <code>spacing-{desktop,tablet,mobile}.css</code>, put <strong>different values under the same variable names</strong>:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">desktop</th><th style="text-align:center">mobile</th></tr></thead><tbody><tr><td><code>absolute-spacing-lv1</code></td><td style="text-align:center"><strong>4px</strong></td><td style="text-align:center"><strong>2px</strong></td></tr><tr><td><code>absolute-spacing-lv3</code></td><td style="text-align:center">8px</td><td style="text-align:center">6px</td></tr><tr><td><code>absolute-spacing-lv20</code></td><td style="text-align:center">96px</td><td style="text-align:center">(reduced)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Spacing split by viewport</strong> — the same call as Spectrum's desktop/mobile sets, implemented by swapping CSS files</li><li>Two parallel families, <code>relative-*</code> (rem) and <code>absolute-*</code> (px) — the same distinction as Cloudscape's scaled/static</li><li>Desktop absolute: <code>4 6 8 12 14 16 20 24 28 36 40 44 48 56 64 72 80 84 88 96</code> — even numbers throughout, including 14. Fine 4px steps like 84 and 88 appear at the top too</li></ul>
+<h3 id="motion-verb-semantics-plus-view-transitions">Motion — verb semantics plus View Transitions</h3>
+<p>Above four raw easings and four durations sits <strong>a layer of verb semantics</strong>:</p>
+<pre class="md-code"><code>move · appear-in · disappear · in-view · out-of-view ·
+content-change · scale-up · scale-down (+ -pop / -fast variants)</code></pre>
+<ul class="md-list"><li><code>ease-out-bounce: cubic-bezier(0.55, 2.05, 0.65, 0.75)</code> — <strong>an overshoot of 2.05</strong>, the largest bezier in the sample (beating TDS's <code>back</code> at 1.56)</li><li><strong><code>view-transition.css</code> tokenises MPA page transitions</strong> — unique in the sample. It sets <code>@view-transition { navigation: auto }</code>, hangs fade-plus-slide combination variables on <code>::view-transition-old/new(root)</code>, and disables the whole thing under <code>prefers-reduced-motion</code>. The first sample in which &quot;page transition&quot; falls under the jurisdiction of design tokens</li></ul>
+<h3 id="shadow-filter-and-box-shadow-kept-separate">Shadow — filter and box-shadow kept separate</h3>
+<pre class="md-code"><code>--drop-shadow-lv2-normal: 0 3.25px 3.875px 0 #08121a1f
+--box-shadow-lv2-normal:  0 3.25px 7.75px 0 #08121a1f</code></pre>
+<ul class="md-list"><li><strong>Two families, <code>drop-shadow</code> (for filter) and <code>box-shadow</code></strong> — at the same level the blur differs (3.875 vs 7.75). The only case in the sample of compensating for the rendering difference between filter and box-shadow in the values themselves</li><li><strong>The blurs are fractional px</strong> (3.25 / 3.875 / 4.75 / 7.125) — sub-pixel shadows</li><li>Nine combinations, lv2/4/6 × weak/normal/strong, in three alpha steps of <code>#08121a</code></li></ul>
+<h3 id="type-version-numbers-in-the-stack">Type — version numbers in the stack</h3>
+<pre class="md-code"><code>--font-font-family-basic-version-1: Meiryo, 'Yu Gothic Medium', system-ui, …
+--font-font-family-basic-version-2: 'Helvetica Neue', …, 'Hiragino Sans', …</code></pre>
+<p><strong><code>version-1</code> and <code>version-2</code> coexist in the font-stack tokens</strong> — a case of a migration state surfacing in a token name (the same kind of signal as TDS's old-scope traces).</p>
+<h3 id="what-is-missing">What is missing</h3>
+<p>This package has <strong>no colour and no font-size tokens</strong> — it ships only spacing, shadow, motion and font stacks. The exact opposite cut from Semi (which ships colour only). → <strong>The colours turned out to be bundled in the <code>spindle-ui</code> package</strong> (confirmed 2026-08-18, the deep pass). Font sizes are absent from the UI package too; there are only em literals in the components.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>@openameba/spindle-ui@3.3.0</code> (per-component CSS plus a combined <code>index.css</code>, with a <code>spui-</code> class prefix). <strong>The colours missing from the token package were here</strong> — the other half of the &quot;partial distribution cut&quot; is bundled into the <code>:root</code> of the UI package's <code>index.css</code>, in two tiers, raw and semantic.</p>
+<h3 id="colour-bundled-in-the-ui-package-the-cut-explained">Colour (bundled in the UI package) — the cut explained</h3>
+<ul class="md-list"><li>Raw: 11 steps of <code>primary-green</code> (5–100) · <strong>a dual solid/alpha ramp</strong> of gray (11 steps each) · focus-blue · highlight-yellow · seven expressive hues.</li><li><strong>Third-party social brand colours are tokens</strong> — facebook · twitter · <strong>x</strong> · instagram · apple · youtube · amazon · rakuten · yahoo, two colours each (<code>--color-third-party-*</code>). The only case in the sample of raising other companies' brand colours, for social sign-in and share buttons, into the official token layer.</li><li><strong>Two focus semantics</strong>: <code>--color-focus-clarity</code> (#0091ff, opaque) and <code>--color-focus-ambiguous</code> (30% alpha) — focus indication split into a clear and a subtle step.</li></ul>
+<h3 id="buttons-spui-button-a-pill-radius-by-em-arithmetic">Buttons (<code>.spui-Button</code>) — a pill radius by em arithmetic</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>min-height</td><td style="text-align:center">32px</td><td style="text-align:center">40px</td><td style="text-align:center">48px</td></tr><tr><td>type</td><td style="text-align:center">.8125em (13px)</td><td style="text-align:center">.875em (14px)</td><td style="text-align:center">1em (16px)</td></tr><tr><td>padding</td><td style="text-align:center">6×10px</td><td style="text-align:center">8×16px</td><td style="text-align:center">8×16px</td></tr><tr><td>radius</td><td style="text-align:center"><strong>2.46154em</strong></td><td style="text-align:center"><strong>2.85714em</strong></td><td style="text-align:center"><strong>3em</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The radius is em arithmetic</strong> — 2.46154×13 = 32, 2.85714×14 = 40, 3×16 = 48: at each size it yields exactly the same px as the min-height, <strong>a pill implemented in em</strong>. The same goal as Charcoal's (999999px) by different means.</li><li>outlined and danger take a <strong>2px border</strong>, and only at small is the block padding reduced 6→5px to account for it (the same intention as MUI and Vibes, applied partially).</li><li><strong>Every hover sits inside an <code>@media (hover: hover)</code> guard</strong> — touch first. The only sample that manages <code>-webkit-tap-highlight-color</code> as a token.</li><li>Disabled opacity .3. A <code>height: 1px</code> hack for IE high-contrast mode is still present.</li><li>Five variants: contained · outlined · <strong>lighted</strong> (a pale green fill) · neutral · danger. Focus is a 2px clarity outline with a 1px offset, released by <code>:focus:not(:focus-visible)</code> — except <strong>inside a modal, where it is replaced by a box-shadow ring</strong> (avoiding interference with the backdrop).</li></ul>
+<h3 id="inputs-spui-textfield">Inputs (<code>.spui-TextField</code>)</h3>
+<ul class="md-list"><li>Two heights, 48/40px (the button's 32px step is absent), radius 8px, a 1px medium-emphasis border, padding 0 16px, type 1em.</li><li>Focus = a darker border plus <strong>a 3px <code>focus-ambiguous</code> alpha ring</strong> — the other focus token from the button's (a clarity outline). The two-way split does real work.</li><li>It uses the <strong><code>:user-invalid</code> pseudo-class</strong> — the newest form-validation selector in the sample. Under <code>prefers-reduced-motion</code> the transition shrinks to 0.1ms.</li></ul>
+<h3 id="dialogs-and-modals-a-native-dialog-plus-starting-style">Dialogs and modals — a native <code>&amp;lt;dialog&amp;gt;</code> plus @starting-style</h3>
+<ul class="md-list"><li><strong><code>&amp;lt;dialog&amp;gt;</code> + <code>@starting-style</code> + <code>transition: display allow-discrete</code></strong> — the only sample implementing enter and exit with the 2024 CSS trio. There is no JS transition library, and background scroll is locked with <code>html:has(:modal)</code>.</li><li>Dialog (a confirmation): <strong>352px wide, 328px at ≥768px</strong> — <strong>an inversion where desktop is narrower than mobile</strong>. Radius 20px, backdrop <code>rgba(0,0,0,.8)</code>, asymmetric .35s enter / .15s exit, <code>cubic-bezier(0,0,0,1)</code>.</li><li>SemiModal: two forms, popup and sheet, × widths small 480 / medium 840 / large 1024px. The sheet slides up with translateY(100%). AppealModal (promotional) is slower at .5s — duration graded by purpose.</li><li>Shadow <code>0 11px 28px rgba(8,18,26,.12)</code> — matching the <code>#08121a</code> shadow colour from the token section.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>A native <code>&amp;lt;dialog&amp;gt;</code> plus @starting-style and allow-discrete</strong> — unique in the sample</li><li><strong>Colours bundled in the UI package</strong> — the answer to the token package's cut was where it ships</li><li><strong>A pill radius by em arithmetic</strong> (radius = min-height)</li><li><strong>Two focus tokens (clarity/ambiguous) dividing the work</strong> — a button outline vs an input ring</li><li><strong>Social brand-colour tokens</strong> plus a blanket <code>@media (hover:hover)</code> guard on hover</li><li>Inverted dialog widths (mobile 352 &gt; desktop 328px)</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Three viewport-specific CSS files</strong> — the same token names, different values (mobile lv1 = 2px, desktop 4px)</li><li><strong>The View Transitions API tokenised</strong> — unique in the sample, and the first token data on page transitions</li><li><strong>Separate drop-shadow/box-shadow families plus fractional-px blur</strong> — unique in the sample</li><li>A 2.05 overshoot bezier — the largest in the sample</li><li>Version numbers in the font stack — a migration surfacing in token names</li><li>Verb-form motion semantics (move/appear/disappear/in-view …)</li><li>No colour and no sizes — a partial-distribution cut</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li>The whole View Transition is disabled under <code>prefers-reduced-motion</code> (built into the token file)</li><li><del>Otherwise unverified</del> → <strong>Its own guidelines, based on WCAG 2.1 (resolved 2026-08-18).</strong> Source: <code>spindle.ameba.design/principles/accessibility/</code> — &quot;WCAG2.1の内容を簡略化し、 Amebaのサービスでよくある事例を追加したガイドラインを独自で作成&quot; (the Ameba Accessibility Guidelines). <strong>The same structure as SmartHR</strong> — rather than adopting WCAG as the stated target, it translates it into guidelines of its own.</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @openameba/spindle-tokens@1.10.0</code></li><li>Components in depth: <code>npm pack @openameba/spindle-ui@3.3.0</code> → <code>index.css</code> plus <code>&amp;lt;component&amp;gt;/*.css</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>colour (presumed inside <code>spindle-ui</code> — not surveyed)</del> (resolved 2026-08-18 — bundled in the UI package's <code>index.css</code>, the deep pass), type size tokens (still absent — only em literals in the components), the Figma kit, <code>spindle-mcp-server</code> (the only sample that ships an MCP server — not surveyed)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

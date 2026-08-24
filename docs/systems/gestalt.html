@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gestalt — Self-Made DesignOps</title>
+<meta name="description" content="Pinterest's design system for its consumer service. Being an image-grid-centred service, its radii are large and finely subdivided.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/gestalt.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Gestalt — Self-Made DesignOps">
+<meta property="og:description" content="Pinterest's design system for its consumer service. Being an image-grid-centred service, its radii are large and finely subdivided.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/gestalt.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gestalt — Self-Made DesignOps">
+<meta name="twitter:description" content="Pinterest's design system for its consumer service. Being an image-grid-centred service, its radii are large and finely subdivided.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Gestalt",
+ "description": "Pinterest's design system for its consumer service. Being an image-grid-centred service, its radii are large and finely subdivided.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/gestalt.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Gestalt",
+  "applicationCategory": "DesignApplication",
+  "url": "https://gestalt.pinterest.systems"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-an-arithmetic-series-in-4px">Spacing — an arithmetic series in 4px</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li class="lvl3"><a href="#per-component-radius-combinations">Per-component radius combinations</a></li><li class="lvl3"><a href="#typography-colour">Typography / colour</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-three-min-height-steps-a-fixed-24px-radius">Buttons — three min-height steps, a fixed 24px radius</a></li><li class="lvl3"><a href="#inputs-textfield-physically-sharing-the-buttons-height-classes">Inputs (TextField) — physically sharing the button's height classes</a></li><li class="lvl3"><a href="#modals-540-720-900px-plus-an-arbitrary-px">Modals — 540 / 720 / 900px plus an arbitrary px</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Pinterest</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://gestalt.pinterest.systems" rel="noopener">Official site</a><br><a href="https://github.com/pinterest/gestalt" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/gestalt.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Gestalt</span></nav>
+    <h1>Gestalt</h1>
+    <p class="doc-lede">Pinterest · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Pinterest's design system for its consumer service. Being an image-grid-centred service, its radii are large and finely subdivided.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-an-arithmetic-series-in-4px">Spacing — an arithmetic series in 4px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>--space-0</code></td><td>0px</td></tr><tr><td><code>--space-100</code></td><td>4px</td></tr><tr><td><code>--space-200</code></td><td>8px</td></tr><tr><td><code>--space-300</code></td><td>12px</td></tr><tr><td><code>--space-400</code></td><td>16px</td></tr><tr><td><code>--space-500</code></td><td>20px</td></tr><tr><td><code>--space-600</code></td><td>24px</td></tr><tr><td><code>--space-700</code></td><td>28px</td></tr><tr><td><code>--space-1000</code></td><td>40px</td></tr><tr><td><code>--space-1100</code></td><td>44px</td></tr><tr><td><code>--space-1200</code></td><td>48px</td></tr><tr><td><code>--space-1300</code></td><td>52px</td></tr><tr><td><code>--space-1400</code></td><td>56px</td></tr><tr><td><code>--space-1500</code></td><td>60px</td></tr><tr><td><code>--space-1600</code></td><td>64px</td></tr></tbody></table></div>
+<p><strong>It runs in 4px steps all the way to 64px.</strong> The number in the name is px × 25 (<code>space-400</code> = 16px).</p>
+<p>The same arithmetic-series approach as Paste (Twilio); neither system widens its steps toward the top.</p>
+<h3 id="radius">Radius</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>--rounding-0</code></td><td>0px</td></tr><tr><td><code>--rounding-100</code></td><td>4px</td></tr><tr><td><code>--rounding-200</code></td><td>8px</td></tr><tr><td><code>--rounding-300</code></td><td>12px</td></tr><tr><td><code>--rounding-400</code></td><td>16px</td></tr><tr><td><code>--rounding-500</code></td><td>20px</td></tr><tr><td><code>--rounding-600</code></td><td>24px</td></tr><tr><td><code>--rounding-700</code></td><td>28px</td></tr><tr><td><code>--rounding-800</code></td><td>32px</td></tr><tr><td><code>--rounding-circle</code></td><td>50%</td></tr></tbody></table></div>
+<h3 id="per-component-radius-combinations">Per-component radius combinations</h3>
+<p>Above the raw radii sit <strong>component-specific combination tokens</strong>.</p>
+<pre class="md-code"><code class="language-css">--rounding-datepicker-container: var(--rounding-400);
+--rounding-datepicker-days: var(--rounding-circle);
+--rounding-datepicker-range-end:
+    var(--rounding-0) var(--rounding-circle) var(--rounding-circle) var(--rounding-0);
+--rounding-datepicker-range-middle: var(--rounding-0);</code></pre>
+<p><strong>The value with four differently specified corners is itself made a token.</strong></p>
+<p>Source: <code>gestalt@177.0.12</code> → <code>dist/gestalt.css</code></p>
+<h3 id="typography-colour">Typography / colour</h3>
+<p><del>Unverified.</del> → only the size scale is confirmed (the 2026-08-18 deep pass): <code>--font-size-100</code>–<code>600</code> = <strong>12 / 14 / 16 / 20 / 28 / 36px</strong>. Colour remains unverified. A separate <code>--opacity-*</code> scale exists (0–500 = 0 / 0.04 / 0.2 / 0.4 / 0.8 / 0.9).</p>
+<h2 id="components">Components</h2>
+<p><del>Unverified. The token names confirm a datepicker.</del> → buttons, inputs and modals are in the deep pass below (2026-08-18). For the datepicker combination tokens, see the radius section above.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><code>dist/gestalt.css</code> in <code>gestalt@177.0.12</code> has hashed class names and cannot be read alone. The measurements come from <strong>cross-referencing the CSS-module mapping object (original name → hash) in <code>dist/gestalt.es.js</code> with the <code>sourcesContent</code> of <code>dist/gestalt.es.js.map</code>, which bundles the components' <code>.tsx</code> sources</strong>. The original CSS was re-verified against the GitHub tag <code>v177.0.12</code>.</p>
+<h3 id="buttons-three-min-height-steps-a-fixed-24px-radius">Buttons — three min-height steps, a fixed 24px radius</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">md (default)</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center"><strong>48px</strong></td></tr><tr><td>inline padding</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td></tr><tr><td>block padding</td><td style="text-align:center">4px</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td></tr><tr><td>type</td><td style="text-align:center">14px <strong>bold</strong></td><td style="text-align:center">16px bold</td><td style="text-align:center">16px bold</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The radius is a fixed 24px at every size</strong> (<code>--rounding-600</code>). A separate pill token exists (<code>--rounding-pill: 999px</code>) but the button does not use it — though since the height tops out at 48px, a 24px radius <strong>renders effectively as a pill at every size</strong>.</li><li>The height is not <code>height</code> but <strong>min-height</strong> (the same choice as Backpack). The minimum width is a single <strong>60px</strong> — parting from Canvas (three steps by size).</li><li><strong>The button type is 16px bold</strong> — the &quot;bold at body size&quot; camp, with Backpack (16px, 700). Zero border, nine colour variants (grey by default, red, blue, transparent and lightness families).</li><li><strong>The press feedback is a fixed-pixel shrink</strong> — <code>useTapFeedback</code> measures the element at runtime and computes <code>scale((longest edge − 4px) / longest edge)</code> so that <strong>whatever the size, it shrinks by exactly 4px</strong>, transitioning the transform over 85ms ease-out. This parts from the existing press samples (Atlassian's 150ms colour transition, M3's shape morph, Radix's ratio-fixed <code>scale(0.97)</code> — <code>patterns/motion.md</code>, <code>button.md</code>) by <strong>fixing the amount of the reduction</strong>.</li><li><strong>A VR theme (the experimental next generation) coexists</strong>: min-heights drop to 24/32/44px and radii come down to 8/12/16px (<code>--sema-rounding-*</code>), undoing the pill. Padding 4×8 / 6×12 / 8×16. Intermediate steps such as <code>--sema-space-150</code> (6px) appear — values absent from the main theme's 4px series (<code>gestalt-design-tokens@177.0.12</code> vr-theme).</li></ul>
+<h3 id="inputs-textfield-physically-sharing-the-buttons-height-classes">Inputs (TextField) — physically sharing the button's height classes</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">md (default)</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center">32px</td><td style="text-align:center">40px</td><td style="text-align:center">48px</td></tr><tr><td>padding</td><td style="text-align:center">4px 8px</td><td style="text-align:center">8px 12px</td><td style="text-align:center">12px 16px</td></tr><tr><td><strong>radius</strong></td><td style="text-align:center"><strong>8px</strong></td><td style="text-align:center"><strong>12px</strong></td><td style="text-align:center"><strong>16px</strong></td></tr><tr><td>type</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td><td style="text-align:center">16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>They share min-height with the button through the same CSS classes</strong> (<code>layout.small/medium/large</code>) — not merely equal values but <strong>the same declaration reused</strong>. A tighter coupling than Backpack's 36/48px alignment (shared values).</li><li><strong>The radius tracks the size (8→12→16px)</strong> — Backpack changes 8→12px only at large, while Gestalt differs across all three. The type differs too, but only at sm (14px).</li><li><strong>The border is 2px</strong> (<code>--color-border-container</code>), parting from the 1px majority. Focus is <strong>a 4px solid outline at offset 0</strong> — the thick-outline camp.</li><li>The label is a separate block (FormLabel) — <strong>fixed at 12px</strong>, with 4px below (8px only at lg).</li><li>If there is a trailing icon button, padding-end widens to 32px (<code>--space-800</code>).</li><li>In tag-input mode the input is absolutely positioned and <strong>an invisible spacer div mirrors the content</strong> to achieve flex wrapping (an input cannot wrap).</li></ul>
+<h3 id="modals-540-720-900px-plus-an-arbitrary-px">Modals — 540 / 720 / 900px plus an arbitrary px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td>sm <strong>540</strong> / md <strong>720</strong> / lg <strong>900px</strong> plus <strong>an arbitrary width via a numeric prop</strong></td></tr><tr><td>radius</td><td>16px (<code>--rounding-400</code>)</td></tr><tr><td>margin / max height</td><td>16px inline / <code>calc(100vh − 32px)</code></td></tr><tr><td>header and body padding</td><td>24px (Box <code>padding={6}</code> = 6×4px)</td></tr><tr><td>scrim</td><td><strong><code>rgba(0,0,0,.8)</code></strong></td></tr><tr><td>animation</td><td>scrim fade over <strong>400ms linear</strong> (symmetric in and out) — the panel itself does not move</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The width steps skew wide</strong> — the smallest is 540px, larger than Mantine's default (440), Canvas's (440) and Backpack's (512). Allowing 900px plus an arbitrary number, it is aimed at content (pin grid) modals.</li><li><strong>The scrim is black at 80%, among the darkest in the sample</strong> (Backpack is 70%), with a 400ms <strong>linear</strong> fade — a scrim with no easing is also rare.</li><li><strong>The panel has no entrance motion.</strong> Only the scrim fades; the panel is simply placed (the opposite pole from Canvas's 150ms translate and Backpack's scale 0.9→1).</li><li>With <code>closeOnOutsideClick</code>, <strong>the scrim's cursor becomes <code>zoom-out</code></strong> — announcing &quot;click outside = close&quot; through the cursor. No comparable case is recorded among the existing samples in <code>patterns/modal.md</code>.</li><li>On mobile the component is <strong>swapped for SheetMobile (full screen)</strong> rather than a modal.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs physically reuse the height classes</strong> — three min-height steps, 32/40/48</li><li><strong>Press motion as a runtime-computed &quot;fixed 4px shrink&quot;</strong> — an absolute compression, not a ratio</li><li><strong>Input radius and type track the size</strong> (8/12/16px · 14/16/16px)</li><li><strong>Modals: three wide widths plus an arbitrary px, a 0.8 scrim, a motionless panel and a zoom-out cursor</strong></li><li><strong>A coexisting VR theme</strong> — a next generation (lower heights, smaller radii) switched by a flag in the same package through a second <code>--sema-*</code> token tier</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The radii share the spacing's rhythm.</strong> Both are arithmetic in 4px, with similar step counts. The result resembles Polaris deriving both from one <code>size</code> map, except Gestalt has separate scales that happen (or were made) to line up.</li><li><strong>Multi-corner radius combinations are tokenised.</strong> <code>rounding-datepicker-range-end</code> is not a single value but a four-value combination like <code>0 50% 50% 0</code> — pinning down the &quot;square on the left, round on the right&quot; shape of a date-range selection as a token. <strong>It is the only multi-value radius token among the systems collected.</strong></li><li><strong><code>circle</code> is expressed as 50%</strong> — the ratio approach, as in Spectrum (0.5) and Paste (50%).</li><li><strong>The maximum radius is 32px</strong> — the second largest after Material 3 (48px). (Supplement, 2026-08-18: <code>--rounding-pill: 999px</code> exists separately, outside the numeric scale — the arithmetic scale still tops out at 32px, with the pill as a dedicated token.)</li><li><strong>There is a separate opacity scale</strong>, <code>--opacity-0</code> through <code>--opacity-500</code>. Few systems in the sample tokenise opacity.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/pinterest/gestalt</li><li>Packages: <code>gestalt@177.0.12</code> (components and tokens in one package) · <code>gestalt-design-tokens@177.0.12</code> (the VR theme's <code>--sema-*</code> values — used in the 2026-08-18 deep pass)</li><li>Method for the deep pass: cross-referencing the CSS-module mapping in <code>dist/gestalt.es.js</code> with the <code>.tsx</code> sources in <code>dist/gestalt.es.js.map</code>'s <code>sourcesContent</code>, re-verified against the original CSS at GitHub tag <code>v177.0.12</code></li><li>Licence: <code>package.json</code> states <strong>Apache-2.0</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Open questions:</strong> the full type scale (the deep pass confirmed only <code>--font-size-100</code>–<code>600</code> = 12/14/16/20/28/36px), the actual colour palette values, figma_kit and a11y_target</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github pinterest/gestalt → <code>LICENSE</code> (matching the npm metadata for <code>gestalt@177.0.12</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

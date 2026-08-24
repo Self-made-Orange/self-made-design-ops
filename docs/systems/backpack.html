@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backpack — Self-Made DesignOps</title>
+<meta name="description" content="Skyscanner's design system for its travel-search service, covering web and React Native together.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/backpack.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Backpack — Self-Made DesignOps">
+<meta property="og:description" content="Skyscanner's design system for its travel-search service, covering web and React Native together.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/backpack.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Backpack — Self-Made DesignOps">
+<meta name="twitter:description" content="Skyscanner's design system for its travel-search service, covering web and React Native together.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Backpack",
+ "description": "Skyscanner's design system for its travel-search service, covering web and React Native together.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/backpack.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Backpack",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.skyscanner.design/latest"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-rem-based-t-shirt-sizes">Spacing — rem-based t-shirt sizes</a></li><li class="lvl3"><a href="#role-aliases">Role aliases</a></li><li class="lvl3"><a href="#tracking-letter-spacing">Tracking (letter-spacing)</a></li><li class="lvl3"><a href="#typography-colour">Typography / colour</a></li><li class="lvl3"><a href="#radius-five-t-shirt-steps-plus-aliases-obtained-2026-08-18">Radius — five t-shirt steps plus aliases (obtained 2026-08-18)</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-bpk-component-button">Buttons (bpk-component-button)</a></li><li class="lvl3"><a href="#inputs-bpk-component-input">Inputs (bpk-component-input)</a></li><li class="lvl3"><a href="#modals-bpk-component-modal-three-generations-coexisting-v1-v2-and-v3">Modals (bpk-component-modal) — three generations coexisting, V1, V2 and V3</a></li><li class="lvl3"><a href="#easings-confirmed-to-have-no-tokens-backlog-cleared">Easings — confirmed to have no tokens (backlog cleared)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Skyscanner</b><br>partial harvest · web · mobile<br>verified 2026-08-18<br><a href="https://www.skyscanner.design/latest" rel="noopener">Official site</a><br><a href="https://github.com/Skyscanner/backpack" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/backpack.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Backpack</span></nav>
+    <h1>Backpack</h1>
+    <p class="doc-lede">Skyscanner · consumer · web · mobile</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Skyscanner's design system for its travel-search service, covering web and React Native together.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-rem-based-t-shirt-sizes">Spacing — rem-based t-shirt sizes</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>rem</th><th>px</th></tr></thead><tbody><tr><td><code>SPACING_NONE</code></td><td>0</td><td>0</td></tr><tr><td><code>SPACING_XXS</code></td><td>0.0625</td><td>1</td></tr><tr><td><code>SPACING_XS</code></td><td>0.125</td><td>2</td></tr><tr><td><code>SPACING_SM</code></td><td>0.25</td><td>4</td></tr><tr><td><code>SPACING_MD</code></td><td>0.5</td><td>8</td></tr><tr><td><code>SPACING_BASE</code></td><td>1</td><td>16</td></tr><tr><td><code>SPACING_LG</code></td><td>1.5</td><td>24</td></tr><tr><td><code>SPACING_XL</code></td><td>2</td><td>32</td></tr><tr><td><code>SPACING_XXL</code></td><td>2.5</td><td>40</td></tr><tr><td><code>SPACING_XXXL</code></td><td>4</td><td>64</td></tr><tr><td><code>SPACING_XXXXL</code></td><td>6</td><td>96</td></tr></tbody></table></div>
+<p><strong>There is no 12px.</strong> After 8 comes 16.</p>
+<p>Source: <code>@skyscanner/bpk-foundations-web@24.7.0</code> → <code>tokens/base.raw.json</code></p>
+<h3 id="role-aliases">Role aliases</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>SPACING_ICON_TEXT</code></td><td>0.5rem (8px)</td></tr><tr><td><code>CALENDAR_DAY_SPACING</code></td><td>0.5rem (8px)</td></tr></tbody></table></div>
+<h3 id="tracking-letter-spacing">Tracking (letter-spacing)</h3>
+<p>Separately from spacing, <strong>tracking tokens are provided.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>LETTER_SPACING_TIGHT</code></td><td>-0.02em</td></tr><tr><td><code>LETTER_SPACING_HERO</code></td><td>-0.04em</td></tr><tr><td><code>LETTER_SPACING_DISPLAY</code></td><td>-0.05em</td></tr></tbody></table></div>
+<h3 id="typography-colour">Typography / colour</h3>
+<p>Unverified.</p>
+<h3 id="radius-five-t-shirt-steps-plus-aliases-obtained-2026-08-18">Radius — five t-shirt steps plus aliases (obtained 2026-08-18)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>rem</th><th>px</th></tr></thead><tbody><tr><td><code>$bpk-border-radius-xs</code></td><td>0.25</td><td>4</td></tr><tr><td><code>$bpk-border-radius-sm</code></td><td>0.5</td><td>8</td></tr><tr><td><code>$bpk-border-radius-md</code></td><td>0.75</td><td>12</td></tr><tr><td><code>$bpk-border-radius-lg</code></td><td>1.5</td><td>24</td></tr><tr><td><code>$bpk-border-radius-xl</code></td><td>2.5</td><td>40</td></tr><tr><td><code>$bpk-border-radius-full</code></td><td>—</td><td>100%</td></tr></tbody></table></div>
+<p>There are separate component aliases — <code>$bpk-button-border-radius: 0.5rem</code> · <code>$bpk-select-border-radius: 0.5rem</code> · <code>$bpk-border-radius-nav-tabs: 1.125rem</code> (18px) · <code>$bpk-flare-corner-radius: 1.3125rem</code> (21px). <strong>From md (12) it doubles to lg (24).</strong></p>
+<p>Source: <code>@skyscanner/bpk-foundations-web@24.7.0</code> → <code>tokens/base.default.scss</code></p>
+<h2 id="components">Components</h2>
+<p><del>Unverified — the documentation site was not reached.</del> → see the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>The components have been consolidated from individual <code>bpk-component-*</code> packages into <strong>the single package <code>@skyscanner/backpack-web@43.19.0</code></strong> (the old unscoped <code>bpk-component-*</code> packages are frozen). Every value below is measured from that package's <code>bpk-component-*/src/*.module.css</code>.</p>
+<h3 id="buttons-bpk-component-button">Buttons (<code>bpk-component-button</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>2.25rem (36px)</strong></td><td style="text-align:center">3rem (48px)</td></tr><tr><td>block padding</td><td style="text-align:center">6px</td><td style="text-align:center">12px</td></tr><tr><td>inline padding</td><td style="text-align:center">16px</td><td style="text-align:center">16px</td></tr><tr><td>icon-only inline</td><td style="text-align:center">10px</td><td style="text-align:center">12px</td></tr><tr><td>radius</td><td style="text-align:center">8px (<code>--bpk-private-button-dimension-radius</code>)</td><td style="text-align:center">8px</td></tr><tr><td>type</td><td style="text-align:center">16px / 24px / <strong>700</strong></td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The height is <code>min-height</code>, not <code>height</code></strong> — it grows when the content overflows. <strong>There is no minimum width</strong> (<code>min-width</code> appears zero times).</li><li><strong>The button type is 16px at weight 700</strong> — body size with bold laid over it, parting from the 14px/500–600 majority.</li><li>There are <strong>only two size steps</strong> (default and large). There is no small.</li><li>Every colour and dimension goes through <code>--bpk-private-button-*</code> CSS variables with a fallback chain — an internal theme-injection layer that marks itself as not for consumer overrides by <strong>putting <code>private</code> in the name</strong>. The opposite signal from the &quot;overrides welcome&quot; family (SLDS hooks, Cloudscape's <code>--awsui-style-*</code>).</li><li>Variants: primary · secondary · destructive · featured · link · link-underlined, plus on-dark/on-light. <strong>link-underlined draws and erases its underline with a <code>background-size</code> transition (200ms ease)</strong> — not <code>text-decoration</code>.</li></ul>
+<h3 id="inputs-bpk-component-input">Inputs (<code>bpk-component-input</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>2.25rem (36px)</strong></td><td style="text-align:center">3rem (48px)</td></tr><tr><td>padding</td><td style="text-align:center">8px</td><td style="text-align:center">16px inline</td></tr><tr><td>radius</td><td style="text-align:center">8px</td><td style="text-align:center"><strong>12px</strong></td></tr><tr><td>border</td><td style="text-align:center">1px <code>#c1c7cf</code></td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li>The same two steps as the button, 36/48px — but <strong>the button uses min-height while the input uses a fixed height.</strong></li><li><strong>At large the radius grows 8→12px</strong> — a rare case of a size variant changing the radius.</li><li>The label is not floating but <strong>a separate block element</strong> (<code>bpk-component-label</code>) — 12px / 16px / 700, placed above the input.</li><li>The valid/invalid icons are <strong>base64 SVGs inlined as a <code>background</code></strong> — not DOM elements.</li><li>A <code>--docked</code> variant folds the first, middle and last radii to build <strong>a search-bar assembly</strong> (the flight-search form).</li></ul>
+<h3 id="modals-bpk-component-modal-three-generations-coexisting-v1-v2-and-v3">Modals (<code>bpk-component-modal</code>) — three generations coexisting, V1, V2 and V3</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>V1</th><th>V2 (<code>&amp;lt;dialog&amp;gt;</code>)</th></tr></thead><tbody><tr><td>width</td><td>max-width <strong>32rem (512px)</strong></td><td>width 32rem</td></tr><tr><td>wide variant</td><td>64rem (1024px)</td><td>64rem</td></tr><tr><td>radius</td><td>8px (<code>--bpk-radius-sm</code>)</td><td><strong>12px</strong> (<code>--bpk-radius-md</code>)</td></tr><tr><td>enter</td><td>scale(0.9)→1 plus fade, <strong>200ms ease-in-out</strong></td><td>the same (keyframes)</td></tr><tr><td>content padding</td><td>16px</td><td>16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are only two width steps, 512 and 1024px</strong> (plus full-screen on mobile) — the opposite pole from Cloudscape's five.</li><li>At viewports of <code>32rem</code> and below it goes full-screen automatically — <strong>the modal width and the breakpoint are the same value.</strong></li><li>Scrim <code>rgba(0,0,0,.7)</code>, fading over 200ms. V2 uses the native <code>&amp;lt;dialog&amp;gt;</code> plus <code>::backdrop</code>.</li><li>V3 uses 400ms <code>cubic-bezier(0.5, 0, 0, 1)</code> — see the easing section below.</li></ul>
+<h3 id="easings-confirmed-to-have-no-tokens-backlog-cleared">Easings — confirmed to have no tokens (backlog cleared)</h3>
+<p>Across every file of <code>bpk-foundations-web@24.7.0</code> (raw.json, scss, js), <code>easing</code> and <code>cubic-bezier</code> appear <strong>zero times</strong>. The only motion tokens are three durations (<code>$bpk-duration-xs/sm/base</code> = 50/200/400ms).</p>
+<p>The distribution of easing use at the component layer (measured across all of backpack-web 43.19.0's CSS):</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>easing</th><th style="text-align:center">uses</th><th>where</th></tr></thead><tbody><tr><td>the <code>ease-in-out</code> literal</td><td style="text-align:center">42 (200ms) + 13 (400ms)</td><td>modals, cards, forms — most things</td></tr><tr><td>the <code>ease</code> literal</td><td style="text-align:center">13</td><td>link underlines and the like</td></tr><tr><td><code>cubic-bezier(0.4, 0, 0.2, 1)</code></td><td style="text-align:center">8</td><td>chatbot-input · chat-thought-bubble</td></tr><tr><td><code>cubic-bezier(0.5, 0, 0, 1)</code></td><td style="text-align:center">5</td><td><strong>ModalV3</strong></td></tr><tr><td><code>cubic-bezier(0.2, 0, 0, 1)</code></td><td style="text-align:center">2</td><td>chat-bubble</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The mainline is the <code>ease-in-out</code> literal plus a duration token</strong> (<code>transition: opacity $bpk-duration-sm ease-in-out</code>).</li><li><strong>Material's curves are drifting in by hand through the newer components (chat, ModalV3)</strong> — <code>(0.4,0,0.2,1)</code> is Material standard and <code>(0.2,0,0,1)</code> matches M3 standard. Three different curves are scattered across five files with no tokens — a sample of drift beginning in a system that never tokenised its easings.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs share two steps, 36/48px</strong> — no small, with height alignment across components</li><li><strong>A 16px, 700 button type</strong> — bold at body size</li><li><strong>The <code>--bpk-private-*</code> variable layer</strong> — declaring &quot;do not override&quot; in the name</li><li><strong>No easing tokens, a literal mainline, and Material curves drifting in through newer components</strong></li><li><strong>Modal width = the breakpoint (32rem)</strong> — one value, two roles</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The gap between 8px and 16px is empty.</strong> There is no 12px. Backpack and Protocol are the only systems in the sample without a 12px.</li><li><strong>Spacing is defined in rem.</strong> The source unit is rem, not px. Whitespace responds to the user's font-size setting, which helps accessibility but is hard to reconcile with a fixed pixel grid.</li><li><strong>The bottom reaches 1px.</strong> <code>SPACING_XXS</code> is 0.0625rem (1px) — a rare case of including a border-thickness value in a spacing scale.</li><li><strong>Tracking is tokenised.</strong> Most systems bury tracking inside a type style; Backpack exposes it as independent tokens. All three are negative.</li><li><strong>It uses the name <code>BASE</code>.</strong> In the middle of the t-shirt scale sits <code>BASE</code> rather than <code>MD</code>, with <code>MD</code> (8px) below it. The name alone gives you little sense of the size.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>rem-based spacing helps accessibility in that it responds to the user's font settings.</p>
+<p><del>The explicit conformance target is unverified.</del> → <strong>Resolved (2026-08-18, headless render).</strong> The documentation site states the target — &quot;We aim for all components to meet the Web Content Accessibility Guidelines (<strong>WCAG 2.2 AA</strong>) and all design decisions to be inclusive.&quot;</p>
+<p>A rare case in the corpus of targeting <strong>2.2 rather than 2.1</strong>. The contrast criteria stated alongside: body text <strong>4.5:1</strong>, large text (large and bold) <strong>3:1</strong>, UI components <strong>3:1</strong> (with decorative text and disabled states excepted). In the Product Design swatch palette the colours are marked with an <code>AA</code> symbol, and <strong>colours without the symbol are not intended for use with text.</strong></p>
+<p>Another distinguishing feature is that the accessibility documentation <strong>branches four ways by role</strong> (Product Designers · Engineers · Content Designers · Product Owners).</p>
+<p>Source: https://www.skyscanner.design/latest/accessibility/for-product-designers-q334fp0Q (the role branching is at https://www.skyscanner.design/latest/accessibility/overview-8grGx1o6)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/Skyscanner/backpack</li><li>Packages: <code>@skyscanner/bpk-foundations-web</code> (tokens) · <code>@skyscanner/backpack-web@43.19.0</code> (the consolidated components — used in the 2026-08-18 deep pass)</li><li>Licence: the component CSS headers state <strong>Apache-2.0</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Figma kit (resolved 2026-08-18 — <code>figma_kit: true</code>)</strong>: the documentation has a &quot;Backpack in Figma&quot; section of its own, stating that <strong>foundations, components and patterns ship as Figma Libraries</strong>. Ownership is documented too — design belongs to the Backpack Designers, and the code to Web = Clover Squad and Apps = Donburi Squad, with patterns owned by the individual product designers and squads. The page links the file <code>figma.com/file/yN0hFyZlKL0Jwbpi0rEKYT/Backpack-Beta</code> (internal access required — the kit's existence is confirmed; whether it can be viewed publicly is a separate matter). Source: https://www.skyscanner.design/latest/getting-started/backpack-in-figma/foundations-components-and-patterns-4b5yBAjl</li><li><strong>The documentation site's real host — <code>url</code> replaced (2026-08-23)</strong>: the frontmatter used to read <code>https://backpack.github.io</code>, which responds only at the root and returns 404 for every sub-path. The documentation is served from <strong>https://www.skyscanner.design/latest</strong> (hosted on Supernova), and <code>backpack.github.io/</code> returns the same shell as that site (an identical 64,804B DOM, measured 2026-08-18). Rechecked 2026-08-23 — root <strong>200</strong>, <code>/components/</code> <strong>404</strong>, <code>www.skyscanner.design/latest</code> <strong>200</strong> — so <code>url:</code> now carries the Supernova address. Every 2026-08-18 render cited here was already taken from <code>www.skyscanner.design</code>; only the frontmatter had been left behind. <strong><code>verified:</code> is unchanged</strong> — it pins the token harvest, and no token was re-measured.</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github Skyscanner/backpack → <code>LICENSE</code> (matching the npm metadata for <code>@skyscanner/bpk-foundations-web@24.7.0</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

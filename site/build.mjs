@@ -11,7 +11,7 @@
  *    any summary sentence — the agents/design-review.md rule)
  *  · the one-line conclusions: written by a person, with the source file recorded
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { messages } from '../tools/cli-i18n.mjs';
@@ -186,6 +186,8 @@ const KIT = [
     { path: 'site/build.mjs', what: 'The corpus into the data this page reads' },
     { path: 'site/design-spec.mjs', what: 'This site\'s own stylesheet into a graded DESIGN.md' },
     { path: 'site/check-headlines.mjs', what: 'The axis conclusions on this page against the documents they summarise' },
+    { path: 'site/markdown.mjs', what: 'The corpus\'s Markdown into HTML — only the constructs it actually uses' },
+    { path: 'site/build-pages.mjs', what: 'A page on this site for every document in the corpus' },
   ] },
   { group: 'Procedures', items: [
     { path: 'agents/system-selection.md', what: 'Pick a reference system on evidence, not on taste' },
@@ -280,9 +282,18 @@ const DOCS = join(ROOT, 'docs');
 /** The newest verification date in the corpus — deterministic, and the honest "last modified". */
 const lastmod = systems.map((s) => s.verified).filter(Boolean).sort().at(-1);
 
+/* Every document has a page, so every document is in the sitemap. The list is derived here
+ * rather than read from build-pages.mjs's output — that script reads corpus.json, which this
+ * one writes, and having them read each other would be a cycle. Both use the same rule:
+ * the file's name without `.md`. */
+const patternFiles = readdirSync(join(ROOT, 'design-systems', 'patterns'))
+  .filter((f) => f.endsWith('.md') && !f.endsWith('.ko.md')).sort();
+
 const PAGES = [
   { loc: BASE, priority: '1.0' },
-  { loc: `${BASE}catalog.html`, priority: '0.8' },
+  { loc: `${BASE}catalog.html`, priority: '0.9' },
+  ...patternFiles.map((f) => ({ loc: `${BASE}patterns/${f.replace(/\.md$/, '')}.html`, priority: '0.8' })),
+  ...systems.map((s) => ({ loc: `${BASE}systems/${s.file.replace(/\.md$/, '')}.html`, priority: '0.7' })),
 ];
 
 writeFileSync(join(DOCS, 'sitemap.xml'),
@@ -368,7 +379,7 @@ const rows = systems.map((s) => {
   return `<div class="row">` +
     `<span class="mark" style="--h:${hue(slug)}"><span class="ini">${esc(initials(s.name))}</span></span>` +
     `<span class="cell-nm">` +
-      `<a class="nm" href="${out.repo}/blob/main/design-systems/systems/${s.file}">${esc(s.name)}</a>` +
+      `<a class="nm" href="./systems/${slug}.html">${esc(s.name)}</a>` +
       marks +
     `</span>` +
     `<span class="ds">${esc(s.org)} · ${esc(s.domain)}</span>` +
@@ -419,7 +430,7 @@ fillRegion('index.html', 'pr-kit', '\n' + KIT.map((g) =>
   `</div>`).join('\n') + '\n  ');
 
 fillRegion('index.html', 'pr-axes', '\n' + out.axes.map((a) =>
-  `<a class="card" href="${out.repo}/blob/main/${a.path}">` +
+  `<a class="card" href="./patterns/${a.file.replace(/\.md$/, '')}.html">` +
     `<div class="axis-figure"><span class="axis-num">${a.samples}</span>` +
       `<span class="axis-unit">samples</span></div>` +
     `<h3>${esc(a.title)}</h3><p>${esc(a.headline)}</p>` +
@@ -435,7 +446,7 @@ const PREVIEW = 10;
 fillRegion('index.html', 'pr-preview', '\n' + systems.filter((s) => s.coverage === 'full')
   .slice(0, PREVIEW).map((s) => {
     const sl = s.file.replace(/\.md$/, '');
-    return `<a class="dsrow" href="${out.repo}/blob/main/design-systems/systems/${s.file}">` +
+    return `<a class="dsrow" href="./systems/${sl}.html">` +
       `<span class="mark" style="--h:${hue(sl)}"><span class="ini">${esc(initials(s.name))}</span></span>` +
       `<span class="nm">${esc(s.name)}</span>` +
       `<span class="ds">${esc(s.org)} · ${esc(s.domain)}</span>` +

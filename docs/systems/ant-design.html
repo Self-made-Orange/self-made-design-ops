@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ant Design — Self-Made DesignOps</title>
+<meta name="description" content="Ant Group's design system for enterprise products. The most widely used system in the Chinese-speaking world, and characterised by a structure that…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/ant-design.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Ant Design — Self-Made DesignOps">
+<meta property="og:description" content="Ant Group's design system for enterprise products. The most widely used system in the Chinese-speaking world, and characterised by a structure that…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/ant-design.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ant Design — Self-Made DesignOps">
+<meta name="twitter:description" content="Ant Group's design system for enterprise products. The most widely used system in the Chinese-speaking world, and characterised by a structure that…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Ant Design",
+ "description": "Ant Group's design system for enterprise products. The most widely used system in the Chinese-speaking world, and characterised by a structure that…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/ant-design.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Ant Design",
+  "applicationCategory": "DesignApplication",
+  "url": "https://ant.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#seed-tokens">Seed tokens</a></li><li class="lvl3"><a href="#spacing-derived-from-the-seed">Spacing — derived from the seed</a></li><li class="lvl3"><a href="#padding-and-margin-are-not-separate-scales">Padding and margin are not separate scales</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#colour">Colour</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-tables-navigation-and-feedback-2026-08-18">Components in depth — tables, navigation and feedback (2026-08-18)</a></li><li class="lvl3"><a href="#tables-establestyleindexjs-horizontal-shrinks-more">Tables (es/table/style/index.js) — horizontal shrinks more</a></li><li class="lvl3"><a href="#navigation-layout-menu-tabs-breadcrumb">Navigation (layout · menu · tabs · breadcrumb)</a></li><li class="lvl3"><a href="#feedback-message-notification-alert-badge">Feedback (message · notification · alert · badge)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Ant Group</b><br>full harvest · web<br>verified 2026-08-18<br><a href="https://ant.design" rel="noopener">Official site</a><br><a href="https://github.com/ant-design/ant-design" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/ant-design.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Ant Design</span></nav>
+    <h1>Ant Design</h1>
+    <p class="doc-lede">Ant Group · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Ant Group's design system for enterprise products. The most widely used system in the Chinese-speaking world, and characterised by a structure that <strong>derives every token algorithmically from a handful of seed values</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="seed-tokens">Seed tokens</h3>
+<p>The entire system is computed from these.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>seed</th><th>value</th></tr></thead><tbody><tr><td><code>sizeUnit</code></td><td>4</td></tr><tr><td><code>sizeStep</code></td><td>4</td></tr><tr><td><code>fontSize</code></td><td>14</td></tr><tr><td><code>borderRadius</code></td><td>6</td></tr><tr><td><code>lineWidth</code></td><td>1</td></tr><tr><td><code>controlHeight</code></td><td>32</td></tr><tr><td><code>sizePopupArrow</code></td><td>16</td></tr></tbody></table></div>
+<p>Source: <code>antd@6.6.1</code> → <code>lib/theme/themes/seed.js</code></p>
+<h3 id="spacing-derived-from-the-seed">Spacing — derived from the seed</h3>
+<pre class="md-code"><code class="language-js">sizeXXS: sizeUnit * (sizeStep - 3)   // 4
+sizeXS:  sizeUnit * (sizeStep - 2)   // 8
+sizeSM:  sizeUnit * (sizeStep - 1)   // 12
+size:    sizeUnit * sizeStep         // 16
+sizeMS:  sizeUnit * sizeStep         // 16
+sizeMD:  sizeUnit * (sizeStep + 1)   // 20
+sizeLG:  sizeUnit * (sizeStep + 2)   // 24
+sizeXL:  sizeUnit * (sizeStep + 4)   // 32
+sizeXXL: sizeUnit * (sizeStep + 8)   // 48</code></pre>
+<p>The resulting values on the default seed: <strong>4, 8, 12, 16, 20, 24, 32, 48</strong></p>
+<p>Source: <code>lib/theme/themes/shared/genSizeMapToken.js</code></p>
+<h3 id="padding-and-margin-are-not-separate-scales">Padding and margin are not separate scales</h3>
+<p>Every <code>padding*</code> and <code>margin*</code> is an alias referring straight to <code>size*</code>.</p>
+<pre class="md-code"><code>paddingXXS → sizeXXS    marginXXS → sizeXXS
+padding    → size       margin    → size
+paddingLG  → sizeLG     marginLG  → sizeLG</code></pre>
+<p>The <strong>content-padding family, however, is mapped one step out of alignment</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>refers to</th><th>value</th></tr></thead><tbody><tr><td><code>paddingContentHorizontal</code></td><td><code>sizeMS</code></td><td>16</td></tr><tr><td><code>paddingContentVertical</code></td><td><code>sizeSM</code></td><td>12</td></tr><tr><td><code>paddingContentHorizontalLG</code></td><td><code>sizeLG</code></td><td>24</td></tr><tr><td><code>paddingContentVerticalLG</code></td><td><code>sizeMS</code></td><td>16</td></tr><tr><td><code>paddingContentHorizontalSM</code></td><td><code>size</code></td><td>16</td></tr><tr><td><code>paddingContentVerticalSM</code></td><td><code>sizeXS</code></td><td>8</td></tr></tbody></table></div>
+<p>Horizontal padding is always one step larger than vertical.</p>
+<p>Source: <code>lib/theme/util/alias.js</code></p>
+<h3 id="radius">Radius</h3>
+<p>The seed is <code>borderRadius: 6</code>. <strong>Not 4 and not 8, but 6.</strong></p>
+<h3 id="typography">Typography</h3>
+<p>The base is <code>fontSize: 14</code>. This parts ways with Western systems that default to 16px.</p>
+<h3 id="colour">Colour</h3>
+<p>Unverified — <code>themes/default/colorAlgorithm.js</code> holds the algorithmic palette generation.</p>
+<h2 id="components">Components</h2>
+<p>Unverified — the documentation site is blocked.</p>
+<h2 id="components-in-depth-tables-navigation-and-feedback-2026-08-18">Components in depth — tables, navigation and feedback (2026-08-18)</h2>
+<p>Measured from the component token generators (<code>prepareComponentToken</code> in <code>es/*/style/index.js</code>) of <code>antd@6.6.1</code>. Ant is CSS-in-JS, so there is no shipped CSS and <strong>component tokens exist only as expressions derived from the seed</strong>.</p>
+<h3 id="tables-establestyleindexjs-horizontal-shrinks-more">Tables (<code>es/table/style/index.js</code>) — horizontal shrinks more</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th style="text-align:center">cell block padding</th><th style="text-align:center">cell inline padding</th></tr></thead><tbody><tr><td>default</td><td style="text-align:center"><code>padding</code> = <strong>16px</strong></td><td style="text-align:center"><code>padding</code> = <strong>16px</strong></td></tr><tr><td>middle</td><td style="text-align:center"><code>paddingSM</code> = <strong>12px</strong></td><td style="text-align:center"><code>paddingXS</code> = <strong>8px</strong></td></tr><tr><td>small</td><td style="text-align:center"><code>paddingXS</code> = <strong>8px</strong></td><td style="text-align:center"><code>paddingXS</code> = <strong>8px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>At middle, horizontal shrinks more than vertical</strong> (16→8 vs 16→12) — <strong>the opposite direction</strong> from Cloudscape and Semi, which shrink only the vertical and keep the horizontal. It is the only case in the collected sample where raising density cuts the horizontal harder.</li><li><strong>The cell type stays at <code>fontSize</code> (14px) across all three sizes</strong> (<code>cellFontSize</code> = <code>cellFontSizeMD</code> = <code>cellFontSizeSM</code>) — in contrast to Polaris, which drops 14→13px on desktop.</li><li>Fixed columns and headers use <code>z-index: 2</code> (a <code>zIndexTableFixed</code> literal).</li><li>The selection column's width is <code>controlHeight</code> (<strong>32px</strong>) — the button height, reused.</li><li>Header radius is <code>borderRadiusLG</code> (8px); the scrollbar radius is <strong>100px</strong>.</li><li>Sort state gets three colour tokens — <code>headerSortActiveBg</code> · <code>headerSortHoverBg</code> · <strong><code>bodySortBg</code></strong>. As in Naive UI, the sort emphasis reaches <strong>into the body cells</strong>.</li></ul>
+<h3 id="navigation-layout-menu-tabs-breadcrumb">Navigation (<code>layout</code> · <code>menu</code> · <code>tabs</code> · <code>breadcrumb</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>Sider width</td><td><strong>200px</strong> (<code>Sider.props.width</code>)</td></tr><tr><td>Sider collapsed width</td><td><strong>80px</strong> (<code>collapsedWidth</code>)</td></tr><tr><td>Sider background</td><td><strong>hardcoded <code>#001529</code></strong> (<code>siderBg</code>) · trigger <code>#002140</code></td></tr><tr><td>Header height</td><td><code>controlHeight × 2</code> = <strong>64px</strong> · inline padding <code>controlHeightLG × 1.25</code> = <strong>50px</strong></td></tr><tr><td>Trigger height</td><td><code>controlHeightLG + marginXXS × 2</code> = <strong>48px</strong></td></tr><tr><td>Menu item height</td><td><code>controlHeightLG</code> = <strong>40px</strong> · item spacing <code>marginXXS</code> (4px)</td></tr><tr><td>Menu collapsed width</td><td><code>controlHeightLG × 2</code> = <strong>80px</strong> · icon 14 → 16px when collapsed</td></tr><tr><td>Menu dropdown width</td><td><strong>160px</strong></td></tr><tr><td>Tabs card height</td><td>SM <code>controlHeight</code> (32) · default <code>controlHeightLG</code> (40) · LG <strong>48px</strong></td></tr><tr><td>Tabs item gap</td><td><strong>32px</strong> (<code>horizontalItemGutter</code>) · padding <code>paddingSM</code> (12px) / 0</td></tr><tr><td>Breadcrumb separator space</td><td><code>marginXS</code> = <strong>8px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The 80px collapsed width is the widest in the collected sample</strong> (shadcn/ui, Carbon and Naive at 48 · Cloudscape 52–54 · Vuetify 56 · Semi 60). With a 16px icon that leaves 32px on each side.</li><li><strong>The sider background is the literal <code>#001529</code></strong> — a colour pinned into the component token without passing through the seed or alias layers. The sider stays dark even in the light theme (a separate <code>lightSiderBg</code> is required to make it white). The <strong>same goal, the opposite implementation</strong> from Cloudscape, which reaches the same result by overriding 182 tokens in a <code>top-navigation</code> context.</li><li>Tab card padding is <strong>solved backwards from the height</strong> — <code>(cardHeight − fontHeight) / 2 − lineWidth</code>. The value is not written down; the formula is.</li><li>There is no XL for <code>controlHeightLG</code>, so <strong>the LG card height is written directly as <code>controlHeightLG + 8</code></strong> (a source comment explains why).</li></ul>
+<h3 id="feedback-message-notification-alert-badge">Feedback (<code>message</code> · <code>notification</code> · <code>alert</code> · <code>badge</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>Message duration</strong></td><td><strong>3 seconds</strong> (<code>DEFAULT_DURATION</code>) · 8px top offset</td></tr><tr><td>Message width</td><td><strong><code>max-content</code></strong> (no fixed width)</td></tr><tr><td>Message padding</td><td><code>(controlHeightLG − fontSize × lineHeight) / 2</code> / <code>paddingSM</code> (12px)</td></tr><tr><td><strong>Notification width</strong></td><td><strong>384px</strong></td></tr><tr><td><strong>Notification duration</strong></td><td><strong>4.5 seconds</strong> · default position <strong><code>topRight</code></strong></td></tr><tr><td>Notification padding</td><td><code>paddingMD</code> (20px) / <code>paddingContentHorizontalLG</code> (24px)</td></tr><tr><td>Notification progress bar</td><td><strong>2px</strong> tall, <code>linear-gradient(90deg, …)</code></td></tr><tr><td>Notification screen margin</td><td><code>marginLG</code> = 24px</td></tr><tr><td><strong>Alert padding</strong></td><td>default <code>paddingContentVerticalSM</code> / <strong>a fixed 12px</strong> · with description 20 / 24px</td></tr><tr><td>Alert radius</td><td><code>borderRadiusLG</code> = 8px · description icon <code>fontSizeHeading3</code></td></tr><tr><td><strong>Badge</strong></td><td>height <code>round(fontSize × lineHeight) − 2 × lineWidth</code> = <strong>20px</strong> · dot 6px</td></tr><tr><td>Badge type</td><td><strong>12px / weight <code>normal</code></strong> · inline padding <code>paddingXS</code> (8px)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Only the alert's horizontal padding is a 12px literal</strong> — a source comment nails it down with <code>// Fixed value here.</code> It is the exception in a system where everything else derives from the seed.</li><li><strong>The badge's font weight is <code>normal</code> (400)</strong> — the only such case in the collected sample (Chakra and Vuetify use medium/500, PrimeVue 700, EUI medium).</li><li><strong>Duration differs per component</strong> — message 3 seconds, notification 4.5. Both are under five seconds, which conflicts at the code layer with the &quot;five-second floor&quot; observed in the documentation layer.</li><li>Notifications include <strong>a progress bar (a 2px gradient)</strong> as a spec — a sample that makes visualising the remaining time a tokenised axis.</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The scale is a function, not data.</strong> Change just <code>sizeUnit</code> and <code>sizeStep</code> and the whole spacing scale recomputes. What Carbon applies only to typography, Ant Design applies system-wide. Theme customisation becomes powerful, at the cost of making individual steps of the scale hard to adjust.</li><li><strong>The base font size is 14px</strong>, unlike the Western systems that default to 16px. The same value as Material 3's Body Medium (14px) and Helios (13–14px). <strong>In multilingual work this difference propagates through the whole layout.</strong></li><li><strong>The radius is 6px.</strong> Not the common 4px (Fluent medium) or 8px. The radius is deliberately decoupled from the spacing scale (multiples of 4).</li><li><strong>Horizontal and vertical content padding are asymmetric.</strong> Horizontal is always one step larger.</li><li><strong><code>size</code> and <code>sizeMS</code> hold the same value (16).</strong> They are aliases, and in practice it is a source of confusion about which to use.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/ant-design/ant-design</li><li>Package: <code>antd</code></li><li>Token logic: <code>lib/theme/themes/seed.js</code>, <code>lib/theme/themes/shared/genSizeMapToken.js</code></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

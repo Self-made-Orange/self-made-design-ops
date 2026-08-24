@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Primer — Self-Made DesignOps</title>
+<meta name="description" content="The design system behind GitHub's products, built around screens peculiar to developer tooling — code views, diagrams and the like.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/primer.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Primer — Self-Made DesignOps">
+<meta property="og:description" content="The design system behind GitHub's products, built around screens peculiar to developer tooling — code views, diagrams and the like.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/primer.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Primer — Self-Made DesignOps">
+<meta name="twitter:description" content="The design system behind GitHub's products, built around screens peculiar to developer tooling — code views, diagrams and the like.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Primer",
+ "description": "The design system behind GitHub's products, built around screens peculiar to developer tooling — code views, diagrams and the like.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/primer.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Primer",
+  "applicationCategory": "DesignApplication",
+  "url": "https://primer.style"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#size-spacing">Size / spacing</a></li><li class="lvl3"><a href="#the-negative-scale">The negative scale</a></li><li class="lvl3"><a href="#border-widths">Border widths</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#colour">Colour</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#the-component-token-tier-srctokenscomponent-confirmed-2026-08-18">The component token tier — src/tokens/component/ (confirmed 2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>GitHub</b><br>full harvest · web<br>verified 2026-08-18<br><a href="https://primer.style" rel="noopener">Official site</a><br><a href="https://github.com/primer/primitives" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/primer.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Primer</span></nav>
+    <h1>Primer</h1>
+    <p class="doc-lede">GitHub · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The design system behind GitHub's products, built around screens peculiar to developer tooling — code views, diagrams and the like.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="size-spacing">Size / spacing</h3>
+<p><strong>The token key is the px figure</strong> — the key <code>16</code> holds the value <code>16px</code>. Nothing needs interpreting, at the cost of a structure where changing the scale means changing the keys too. (The final name form once built into CSS variables is unverified.)</p>
+<pre class="md-code"><code>2, 4, 6, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 64, 80, 96, 112, 128</code></pre>
+<p>The increment pattern: 2px steps → 4px steps (from 8 to 48) → 16px steps (after 48).</p>
+<h3 id="the-negative-scale">The negative scale</h3>
+<p>Primer provides <strong>negative tokens as first-class.</strong></p>
+<pre class="md-code"><code>-2, -4, -6, -8, -12, -16, -20, -24, -28, -32, -36, -40, -44, -48</code></pre>
+<p>Exactly symmetric with the positive scale up to 48. There are no negatives beyond 64.</p>
+<p>Source: <code>src/tokens/base/size/size.json5</code></p>
+<h3 id="border-widths">Border widths</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>borderWidth.thin</code></td><td>1px</td></tr><tr><td><code>borderWidth.thick</code></td><td>2px</td></tr><tr><td><code>borderWidth.thicker</code></td><td>4px</td></tr><tr><td><code>borderWidth.default</code></td><td>→ <code>thin</code> (1px)</td></tr></tbody></table></div>
+<p>Source: <code>src/tokens/functional/size/border.json5</code></p>
+<h3 id="typography">Typography</h3>
+<p><del>Unverified — <code>src/tokens/base/typography</code> needs checking</del> → <strong>resolved (2026-08-18, <code>@primer/primitives@11.10.0</code>).</strong></p>
+<p><strong>The base tier — six sizes (rem), four weights, five line heights (unitless)</strong> (<code>src/tokens/base/typography/typography.json5</code>)</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th><code>base.text.size</code></th><th style="text-align:center">rem</th><th style="text-align:center">px</th><th>the source's description</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">0.75</td><td style="text-align:center">12</td><td>captions and dense UI</td></tr><tr><td><code>sm</code></td><td style="text-align:center">0.875</td><td style="text-align:center"><strong>14</strong></td><td><strong>the UI's default body</strong></td></tr><tr><td><code>md</code></td><td style="text-align:center">1</td><td style="text-align:center">16</td><td>larger body and small headings</td></tr><tr><td><code>lg</code></td><td style="text-align:center">1.25</td><td style="text-align:center">20</td><td>medium headings and subheadings</td></tr><tr><td><code>xl</code></td><td style="text-align:center">2</td><td style="text-align:center">32</td><td>large headings and page headings</td></tr><tr><td><code>2xl</code></td><td style="text-align:center">2.5</td><td style="text-align:center">40</td><td>hero display</td></tr></tbody></table></div>
+<p><strong>After 20px comes 32px directly</strong> — there is no 24 and no 28.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th><code>base.text.weight</code></th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>light</code></td><td style="text-align:center">300</td></tr><tr><td><code>normal</code></td><td style="text-align:center">400</td></tr><tr><td><code>medium</code></td><td style="text-align:center">500</td></tr><tr><td><code>semibold</code></td><td style="text-align:center"><strong>600</strong> (the maximum)</td></tr></tbody></table></div>
+<p><strong>There is no 700 (bold).</strong> The weight ceiling is 600.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th><code>base.text.lineHeight</code></th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>tight</code></td><td style="text-align:center">1.25</td></tr><tr><td><code>snug</code></td><td style="text-align:center">1.375</td></tr><tr><td><code>normal</code></td><td style="text-align:center">1.5</td></tr><tr><td><code>relaxed</code></td><td style="text-align:center">1.625</td></tr><tr><td><code>loose</code></td><td style="text-align:center">1.75</td></tr></tbody></table></div>
+<p><strong>Each line-height token records in its <code>$description</code> when to use it</strong> — <code>normal</code> says &quot;use this if you are not sure which&quot;, while <code>loose</code> says &quot;reserve it for very small type or where maximum legibility is needed&quot;. <strong>The selection rule, not just the value, ships with the token.</strong></p>
+<p><strong>The functional tier — eight roles</strong> (<code>src/tokens/functional/typography/typography.json5</code>)</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>role</th><th style="text-align:center">size</th><th style="text-align:center">line height</th><th style="text-align:center">weight</th><th>typeface</th></tr></thead><tbody><tr><td><code>display</code></td><td style="text-align:center">40px (<code>2xl</code>)</td><td style="text-align:center">1.375</td><td style="text-align:center">500</td><td>sansSerifDisplay</td></tr><tr><td><code>title-large</code></td><td style="text-align:center">32px (<code>xl</code>)</td><td style="text-align:center">1.5</td><td style="text-align:center">600</td><td>sansSerifDisplay</td></tr><tr><td><code>title-medium</code></td><td style="text-align:center">20px (<code>lg</code>)</td><td style="text-align:center">1.625</td><td style="text-align:center">600</td><td>sansSerifDisplay</td></tr><tr><td><code>title-small</code></td><td style="text-align:center">16px (<code>md</code>)</td><td style="text-align:center">1.5</td><td style="text-align:center">600</td><td>sansSerif</td></tr><tr><td><code>subtitle</code></td><td style="text-align:center">20px (<code>lg</code>)</td><td style="text-align:center">1.625</td><td style="text-align:center">400</td><td>sansSerifDisplay</td></tr><tr><td><code>body-large</code></td><td style="text-align:center">16px (<code>md</code>)</td><td style="text-align:center">1.5</td><td style="text-align:center">400</td><td>sansSerif</td></tr><tr><td><code>body-medium</code></td><td style="text-align:center"><strong>14px (<code>sm</code>)</strong></td><td style="text-align:center">1.5</td><td style="text-align:center">400</td><td>sansSerif</td></tr><tr><td><code>body-small</code></td><td style="text-align:center">12px (<code>xs</code>)</td><td style="text-align:center">1.625</td><td style="text-align:center">400</td><td>sansSerif</td></tr><tr><td><code>caption</code></td><td style="text-align:center">12px (<code>xs</code>)</td><td style="text-align:center">1.25</td><td style="text-align:center">400</td><td>sansSerif</td></tr><tr><td><code>codeBlock</code></td><td style="text-align:center"><strong>0.8125rem (13px)</strong></td><td style="text-align:center">1.5</td><td style="text-align:center">400</td><td>monospace</td></tr><tr><td><code>codeInline</code></td><td style="text-align:center"><strong>0.9285em</strong></td><td style="text-align:center">—</td><td style="text-align:center">400</td><td>monospace</td></tr></tbody></table></div>
+<ul class="md-list"><li><code>codeInline</code> is in <strong><code>em</code></strong> — proportional to its parent. It has no line-height token.</li><li><code>codeBlock</code>'s 13px is not in the base scale (specified directly in the functional tier).</li><li>The <code>title-medium</code> comment says in the source that <strong>20 × 1.625 = a 32px line height that matches the medium control height</strong> — a rare case of the rationale for aligning leading to a control height being written down.</li><li>The <code>caption</code> comment says <strong>&quot;it is too small to pass accessibility requirements, so use it only in single-line situations&quot;</strong> — a token stating its own limits.</li></ul>
+<p><strong>There are CSS <code>font</code> shorthand tokens.</strong></p>
+<pre class="md-code"><code class="language-css">--text-body-shorthand-medium:
+  var(--text-body-weight) var(--text-body-size-medium)
+  / var(--text-body-lineHeight-medium) var(--fontStack-sansSerif);</code></pre>
+<p>All eleven roles have a <code>*-shorthand</code> token, and <strong>the individual property tokens are exposed alongside.</strong> Unlike Atlassian's literal strings, which cannot be decomposed, Primer's shorthand is a composition of <code>var()</code>s, so <strong>both are usable.</strong></p>
+<p>Four font stacks. <code>system</code>, <code>sansSerif</code> and <code>sansSerifDisplay</code> <strong>hold completely identical values</strong> (<code>&amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;</code>) and differ only in name — a source comment states that <code>sansSerifDisplay</code> is &quot;the same as sansSerif but semantically distinct&quot;. Only <code>monospace</code> actually differs. There are no tracking tokens.</p>
+<h3 id="colour">Colour</h3>
+<p><del>Unverified — <code>src/tokens/functional/color</code> needs checking</del> → <strong>resolved (2026-08-18).</strong> The full hex list is not reproduced (<code>../SCHEMA.md</code>) — only the structure.</p>
+<p><strong>Three tiers, and the bottom one is excluded from the public distribution.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>tier</th><th>source</th><th>public CSS</th></tr></thead><tbody><tr><td>base ramps</td><td><code>src/tokens/base/color/{light,dark}/*.json5</code></td><td><strong>none</strong> — only in <code>dist/internalCss/</code></td></tr><tr><td>functional roles</td><td><code>src/tokens/functional/color/*.json5</code> (8 files)</td><td><code>dist/css/functional/themes/*.css</code></td></tr><tr><td>component</td><td><code>src/tokens/component/</code></td><td>included in the theme files above</td></tr></tbody></table></div>
+<p>The preamble of <code>dist/css/primitives.css</code> states the rule: <strong>&quot;Never use raw values (hex, px). Use only semantic tokens.&quot;</strong> The public theme CSS contains <strong>zero</strong> <code>--base-color-*</code> variables; they exist only in <code>dist/internalCss/</code> (for internal use).</p>
+<h4 id="the-base-ramps-8-hues-10-steps-plus-a-14-step-neutral">The base ramps — 8 hues × 10 steps, plus a 14-step neutral</h4>
+<p><code>blue</code> · <code>green</code> · <code>yellow</code> · <code>orange</code> · <code>red</code> · <code>purple</code> · <code>pink</code> · <code>coral</code> each run <strong>10 steps, 0–9</strong>, and <code>neutral</code> alone runs <strong>14, 0–13</strong>. Four more stand apart: <code>black</code> · <code>white</code> · <code>transparent</code> (alpha 0) · <code>inset</code> (an alias of <code>neutral.0</code>). <code>neutral.0</code> = white and <code>neutral.13</code> = black, so both ends are aliases.</p>
+<p><strong>There is no separate alpha ramp</strong> — where it parts from Polaris (<code>blackAlpha</code>/<code>whiteAlpha</code>) and Spectrum (<code>transparent-black/white</code>).</p>
+<p>Colour values record <strong>HSL components alongside the hex</strong> — <code>{colorSpace: 'hsl', components: [213.3, 12.7, 13.9], hex: '#1f2328'}</code>. This notation (naming the colour space and giving the hex too) is Primer's alone in the corpus.</p>
+<p>Light and dark hold <strong>different ramp values</strong> (<code>blue-5</code> is <code>#0969da</code> in light and <code>#1f6feb</code> in dark) — the same ramp is not reused.</p>
+<h4 id="the-functional-tier-eight-role-families">The functional tier — eight role families</h4>
+<p><code>bgColor</code> · <code>fgColor</code> · <code>borderColor</code> · <code>control</code> · <code>selection</code> · <code>data-vis</code> · <code>display</code> · <code>syntax</code> (prettylights).</p>
+<p>One light theme comes to <strong>959 tokens.</strong> The distribution across the top-level families:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td><code>display-*</code></td><td style="text-align:center"><strong>285</strong></td></tr><tr><td><code>label-*</code></td><td style="text-align:center">133</td></tr><tr><td><code>button-*</code></td><td style="text-align:center">68</td></tr><tr><td><code>color-*</code> (prettylights and others)</td><td style="text-align:center">47</td></tr><tr><td><code>prettylights-*</code></td><td style="text-align:center">42</td></tr><tr><td><code>control-*</code></td><td style="text-align:center">38</td></tr><tr><td><code>buttonKeybindingHint-*</code></td><td style="text-align:center">35</td></tr><tr><td><code>data-*</code></td><td style="text-align:center">34</td></tr><tr><td><code>bgColor-*</code></td><td style="text-align:center">33</td></tr><tr><td><code>borderColor-*</code></td><td style="text-align:center">30</td></tr><tr><td><code>border-*</code></td><td style="text-align:center">30</td></tr><tr><td><code>diffBlob-*</code></td><td style="text-align:center">21</td></tr><tr><td><code>fgColor-*</code></td><td style="text-align:center">20</td></tr><tr><td><code>codeMirror-*</code></td><td style="text-align:center">19</td></tr><tr><td><code>contribution-*</code></td><td style="text-align:center">18</td></tr></tbody></table></div>
+<p><strong>The product-specific families are large</strong> — <code>diffBlob</code> (code diffs), <code>codeMirror</code> (the editor), <code>contribution</code> (the contribution graph) and <code>prettylights</code> (syntax highlighting) exceed 100 tokens between them. The 285 <code>display-*</code> are derivatives of a 21-hue display palette (<code>src/tokens/base/color/{light,dark}/display-*.json5</code>).</p>
+<p><strong>The role tokens (<code>bgColor</code>, <code>fgColor</code>, <code>borderColor</code>) number only 83</strong>, with the remaining 876 reserved for components and product screens.</p>
+<h4 id="fourteen-themes">Fourteen themes</h4>
+<pre class="md-code"><code>light · light-high-contrast · light-colorblind · light-colorblind-high-contrast
+       · light-tritanopia · light-tritanopia-high-contrast
+dark  · dark-dimmed · dark-high-contrast · dark-colorblind
+       · dark-colorblind-high-contrast · dark-tritanopia
+       · dark-tritanopia-high-contrast · dark-dimmed-high-contrast</code></pre>
+<p><strong>There are three axes</strong>: mode (light/dark) × colour vision (default/colorblind/tritanopia) × contrast (default/high-contrast), with <code>dimmed</code> added on the dark side only. The base sources are five (<code>light</code> · <code>light.high-contrast</code> · <code>dark</code> · <code>dark.dimmed</code> · <code>dark.high-contrast</code>), and the nine colour-vision variants are generated at build time.</p>
+<p>The theme CSS selectors combine <code>[data-color-mode=&amp;quot;auto&amp;quot;][data-light-theme=&amp;quot;light&amp;quot;]</code> with <code>@media (prefers-color-scheme: dark)</code> — data attributes and a media query together.</p>
+<h3 id="radius">Radius</h3>
+<p><del>Unverified</del> → <strong>resolved (2026-08-18, <code>dist/css/functional/size/radius.css</code>).</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>rem</th><th>px</th></tr></thead><tbody><tr><td><code>--borderRadius-small</code></td><td>0.1875</td><td>3</td></tr><tr><td><code>--borderRadius-medium</code></td><td>0.375</td><td>6</td></tr><tr><td><code>--borderRadius-large</code></td><td>0.75</td><td>12</td></tr><tr><td><code>--borderRadius-default</code></td><td>→ <code>medium</code></td><td>6</td></tr><tr><td><code>--borderRadius-full</code></td><td><strong>624.9375</strong></td><td>9999</td></tr></tbody></table></div>
+<p>Only three steps, with a <code>default</code> alias pointing at medium (6px). <code>full</code> is 9999px converted to rem as <code>624.9375rem</code> (the same notation as the Polaris WC bundle).</p>
+<h2 id="components">Components</h2>
+<p><del>Unverified</del> → <strong>the <code>@primer/css@22.3.0</code> deep pass (2026-08-17).</strong> A legacy CSS line (the current lines are Primer React and ViewComponents), but the component SCSS is on npm.</p>
+<ul class="md-list"><li>Buttons have no height token and derive from padding: the default is <code>5px/16px</code> with a 20px line height (≈32px including the border), and small is <code>3px/12px</code> (≈28px) — the same derived family as GOV.UK</li><li><strong>The large button is em-driven</strong>: <code>padding: $em-spacer-6 1.5em; font-size: inherit</code> — a design in which raising the type size scales the whole button proportionally. A <strong>type-relative sizing</strong> axis, unlike the fixed-px camp</li><li>A comment on the 20px line height notes that it is &quot;declared so as not to inherit the body default&quot; — deliberately separating global leading from control leading</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Negative spacing is promoted to a token.</strong> Most systems do not tokenise negative whitespace and handle it with arbitrary values. Primer folds it into the scale, so overlap layouts are handled inside the system too.</li><li><strong>The token name is the actual px.</strong> The opposite philosophy from Polaris (<code>space-400</code> = 16px). More legible, at the risk that a rebrand or rescale turns every name into a lie.</li><li><strong>It keeps <code>default</code> aliases.</strong> With <code>borderWidth.default → thin</code>, the default is stated as a token, so &quot;what do I get if I don't choose?&quot; is answered at the token layer rather than in code.</li><li><strong>There are many theme variants.</strong> Beyond light and dark it provides high-contrast and colour-vision variants as separate themes. → <strong>Measured at 14 (2026-08-18)</strong>: 2 modes × 3 colour-vision (default, colorblind, tritanopia) × 2 contrast, plus 2 dark-only <code>dimmed</code>. <strong>Primer is the only system in the corpus to raise colour vision into a theme axis</strong> (Unify has three types but does not multiply them as an axis, <code>../patterns/color.md</code>).</li><li><strong>The raw ramps were pulled out of the public distribution</strong> (2026-08-18). <code>--base-color-*</code> exists only in <code>dist/internalCss/</code>, with zero occurrences in the public theme CSS. The preamble of <code>primitives.css</code> writes the rule as &quot;no raw values, semantics only&quot;. <strong>A way of enforcing the token hierarchy through the build artefact rather than the documentation.</strong></li><li><strong>The weight ceiling is 600.</strong> <code>bold</code> (700) is not in the base scale.</li><li><strong>Usage rules ship with the line-height and tracking tokens.</strong> <code>lineHeight.normal</code> says &quot;use this if you are not sure&quot; and <code>caption</code> says &quot;it falls short of accessibility requirements, so single lines only&quot; — in the <code>$description</code>.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Three colour-vision axes and high-contrast themes are provided at the token level (see &quot;Fourteen themes&quot; above). The conformance target is stated as <strong>WCAG 2.2 AA</strong> (the frontmatter's <code>a11y_target</code>, confirmed 2026-08-18).</p>
+<h2 id="the-component-token-tier-srctokenscomponent-confirmed-2026-08-18">The component token tier — <code>src/tokens/component/</code> (confirmed 2026-08-18)</h2>
+<p>The last tier left on the TODO. <strong>27 files, 364 tokens</strong> (color 354 / shadow 5 / dimension 4 / border 1) — the component tier is <strong>effectively colour-only</strong>, with dimensions handled by the functional tier: a division of labour.</p>
+<pre class="md-code"><code>avatar · avatarStack · button · card · codeMirror · contribution · counter ·
+dashboard · diffBlob · focus · header · headerSerach · highlight · label ·
+menu · overlay · page · progressBar · reactionButton · selectMenu · sideNav ·
+skeletonLoader · timelineBadge · tooltip · topicTag · treeView · underlineNav</code></pre>
+<ul class="md-list"><li><strong>The dark overrides are inlined inside the tokens</strong> — the dark value sits alongside in <code>$extensions</code>' <code>org.primer.overrides.dark</code> (76 of them in the button file alone). A way of <strong>writing both modes at the point of the token's definition</strong>, unlike the separate-theme-file majority.</li><li><strong>Figma Variables synchronisation metadata is embedded in the tokens</strong> — <code>org.primer.figma</code> (collection · group · scopes) is attached to every token, so the token files describe their own code→Figma variable publishing. The only sample in the corpus to put Figma synchronisation information into the token schema.</li><li><code>focus</code> is a <code>$type: border</code> <strong>composite type</strong> (colour + style + width in one value) — a real use of a DTCG composite type. A 2px outline.</li><li>Every reference goes to the functional tier (<code>{control.*}</code> and so on) — the three-tier discipline of never touching base directly is upheld in the component tier too.</li><li><strong>A typo in a file name, <code>headerSerach.json5</code>, survives in the distribution</strong> — the only typo embalmed in a namespace in the sample (a demonstration of the irreversibility of token names: fixing the name would break consumers).</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/primer/primitives</li><li>Token package: <code>@primer/primitives</code></li><li>Build: Style Dictionary generating CSS variables from JSON</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

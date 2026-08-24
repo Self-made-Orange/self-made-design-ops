@@ -1,41 +1,41 @@
 {
- "brief": "사이트 SEO 4종: sitemap/robots · OG태그 · 카탈로그 프리렌더 · JSON-LD",
- "created": "2026-08-24T04:48:27.117636+00:00",
+ "brief": "코퍼스 문서를 사이트 페이지로: systems 116 + patterns 축별 페이지 생성",
+ "created": "2026-08-24T06:53:20.333682+00:00",
  "goals": [
   {
    "id": "G001",
-   "title": "sitemap",
-   "objective": "build.mjs가 sitemap.xml + robots.txt 생성 (결정적 lastmod)",
+   "title": "survey",
+   "objective": "코퍼스가 쓰는 마크다운 문법 전수 조사 → 렌더러 범위 확정",
    "status": "complete",
-   "evidence": "build.mjs가 docs/sitemap.xml(2 URL)·docs/robots.txt 생성. lastmod는 코퍼스 최신 verified(2026-08-23)에서 도출 — new Date()를 쓰면 site.yml의 재생성 diff 검사가 다음 날 깨짐"
+   "evidence": "128문서 문법 전수 조사 완료 — 인라인코드 9622·굵게 9251·표 5708행·불릿 3742·헤딩 2042·펜스 922·인용 583·취소선 316·hr 234·기울임 159·링크 145·순서목록 6·이미지 0"
   },
   {
    "id": "G002",
-   "title": "og-tags",
-   "objective": "index/catalog에 Open Graph + Twitter Card 태그",
+   "title": "renderer",
+   "objective": "의존성 0 마크다운→HTML 렌더러 (조사된 문법만)",
    "status": "complete",
-   "evidence": "index/catalog에 OG 7종+이미지3+locale, twitter 4종 = 각 14개 태그"
+   "evidence": "site/markdown.mjs — 의존성 0 렌더러. 코드 스팬을 U+E000로 선격리해 강조가 토큰명을 훼손하지 않게 하고, 전부 이스케이프 후 마크업 적용"
   },
   {
    "id": "G003",
-   "title": "prerender",
-   "objective": "catalog.html의 116행을 정적 HTML로 프리렌더",
+   "title": "pages",
+   "objective": "페이지 템플릿 + 생성기 (systems/*, patterns/*), canonical·OG·JSON-LD·breadcrumb",
    "status": "complete",
-   "evidence": "catalog.html의 116행을 <!--prerender:start/end--> 구간에 정적 생성. 정적 텍스트 1,311 → 9,750자. 행 구조는 JS의 row()와 동일한 6컬럼 클래스(mark/cell-nm/ds/cell-cov/rt/rt), 아바타 img만 제외(런타임 프로브)"
+   "evidence": "site/build-pages.mjs — systems 116 + patterns 11 = 127 페이지. 각 페이지에 자체 canonical·OG·TechArticle JSON-LD·breadcrumb·on-this-page TOC·메타 사이드바. 내용은 전부 .md 렌더 결과이고 새로 쓴 문장 없음. carbon.html 정적 텍스트 16,721자·표 8개"
   },
   {
    "id": "G004",
-   "title": "jsonld",
-   "objective": "JSON-LD Dataset 스키마",
-   "status": "complete",
-   "evidence": "index.html에 JSON-LD Dataset — name/description/url/sameAs/license(CC BY 4.0)/creator/dateModified/keywords/variableMeasured(9축)/distribution(corpus.json). 숫자·날짜 전부 생성"
+   "title": "wire",
+   "objective": "카탈로그 링크 내부 전환 · sitemap 확장 · 내비게이션",
+   "status": "in_progress",
+   "evidence": null
   },
   {
    "id": "G005",
    "title": "verify",
-   "objective": "전체 검사 + 배포 + 라이브 확인",
-   "status": "complete",
-   "evidence": "배포 성공 5862d589, 라이브 4종 전부 확인"
+   "objective": "렌더 검증 + 링크 무결성 + 배포 + 라이브 확인",
+   "status": "pending",
+   "evidence": null
   }
  ]
 }

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Agency Design System (デジタル庁) — Self-Made DesignOps</title>
+<meta name="description" content="Japan's government system. Line height is eight pure ratios from 1 to 1.75 (the most in the sample), weight is just 400/700, and the scale contains 17px —…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/digital-go-jp.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Digital Agency Design System (デジタル庁) — Self-Made DesignOps">
+<meta property="og:description" content="Japan's government system. Line height is eight pure ratios from 1 to 1.75 (the most in the sample), weight is just 400/700, and the scale contains 17px —…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/digital-go-jp.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Agency Design System (デジタル庁) — Self-Made DesignOps">
+<meta name="twitter:description" content="Japan's government system. Line height is eight pure ratios from 1 to 1.75 (the most in the sample), weight is just 400/700, and the scale contains 17px —…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Digital Agency Design System (デジタル庁)",
+ "description": "Japan's government system. Line height is eight pure ratios from 1 to 1.75 (the most in the sample), weight is just 400/700, and the scale contains 17px —…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/digital-go-jp.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Digital Agency Design System (デジタル庁)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://design.digital.go.jp"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-241-of-them">Tokens — 241 of them</a></li><li><a href="#typography-the-first-cjk-measurements">Typography — the first CJK measurements</a></li><li class="lvl3"><a href="#colour-four-families">Colour — four families</a></li><li class="lvl3"><a href="#radius-the-name-is-the-px-value">Radius — the name is the px value</a></li><li class="lvl3"><a href="#elevation-eight-steps-of-doubled-shadow">Elevation — eight steps of doubled shadow</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-four-steps-and-small-ones-get-a-44px-hit-area-from-a-pseudo-element">Buttons — four steps, and small ones get a 44px hit area from a pseudo-element</a></li><li class="lvl3"><a href="#inputs-the-type-forbids-placeholders">Inputs — the type forbids placeholders</a></li><li class="lvl3"><a href="#modals-a-native-dialog-plus-container-queries">Modals — a native dialog plus container queries</a></li><li class="lvl3"><a href="#focus-a-double-ring-yellow-inside-and-black-outside">Focus — a double ring, yellow inside and black outside</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Government of Japan (Digital Agency)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://design.digital.go.jp" rel="noopener">Official site</a><br><a href="https://github.com/digital-go-jp/design-tokens" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/digital-go-jp.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Digital Agency Design System (デジタル庁)</span></nav>
+    <h1>Digital Agency Design System (デジタル庁)</h1>
+    <p class="doc-lede">Government of Japan (Digital Agency) · public · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Japan's government system. <strong>Line height is eight pure ratios from 1 to 1.75</strong> (the most in the sample), weight is <strong>just 400/700</strong>, and the scale contains <strong>17px</strong> — the first sample to fill in the CJK typography gap.</p>
+<h2 id="tokens-241-of-them">Tokens — 241 of them</h2>
+<p><code>--color</code> 198 · <code>--font</code> 19 · <code>--line</code> 8 · <code>--elevation</code> 8 · <code>--border</code> 8. <strong>There are no spacing tokens</strong> — the fifth in the Apple HIG / Material 3 / Seed / Evergreen family.</p>
+<h2 id="typography-the-first-cjk-measurements">Typography — the first CJK measurements</h2>
+<p>15 size steps (the name is the px value):</p>
+<pre class="md-code"><code>14 · 16 · 17 · 18 · 20 · 22 · 24 · 26 · 28 · 32 · 36 · 45 · 48 · 57 · 64</code></pre>
+<ul class="md-list"><li><strong>17px is present</strong> — the third after Apple (17pt Body) and KRDS (body.medium 17px). <strong>All three are CJK contexts</strong> (iOS globally / Korea's government / Japan's government). The tokens assign no roles, so whether it is the body default is undetermined</li><li><strong>45 and 57 are exactly Material 3's Display Medium/Large</strong> — the top of the scale, 36/45/57, matches M3. The source mentions no relationship</li><li>The 14–28px stretch is dense, in 2px steps (with 17 as the exception)</li></ul>
+<p><strong>Line height — eight pure ratios, the most in the sample:</strong></p>
+<pre class="md-code"><code>1 · 1.2 · 1.3 · 1.4 · 1.5 · 1.6 · 1.7 · 1.75</code></pre>
+<p>Most of the sample either fixes line height in px per size or offers one to three ratios (<code>patterns/typography.md</code>). <strong>Only the Digital Agency goes to eight, down to a step as loose as 1.7</strong> — Japanese body-text practice (looser leading) showing up as the width of the scale, though the source gives no rationale.</p>
+<p><strong>Weight — only 400 and 700:</strong></p>
+<p>Exactly KRDS's composition (Regular/Bold). <strong>Both CJK government systems ship two weights</strong> — the opposite extreme from nine weights in hundreds (Tailwind, Chakra). This lines up with how many real weight files CJK typefaces ship, but no rationale is recorded.</p>
+<p>Typefaces: <strong>Noto Sans JP</strong> / Noto Sans Mono.</p>
+<h3 id="colour-four-families">Colour — four families</h3>
+<pre class="md-code"><code>primitive 151 · neutral 26 · key 13 · semantic 8</code></pre>
+<p><strong>The <code>key</code> family stands apart</strong> — 13 core brand colours sitting between the semantic layer (8) and the primitives (151). The same position as Seed's three-tier <code>static</code>, under a different name.</p>
+<h3 id="radius-the-name-is-the-px-value">Radius — the name is the px value</h3>
+<pre class="md-code"><code>--border-radius-4/6/8/12/16/24/32 + full (624.9375rem = 9999px)</code></pre>
+<p>Primer's value-as-name approach. <strong>Converting <code>full</code> into rem</strong> (9999px ÷ 16) is a notation unique in the sample.</p>
+<h3 id="elevation-eight-steps-of-doubled-shadow">Elevation — eight steps of doubled shadow</h3>
+<p><code>--elevation-1</code> through <code>8</code>, every step a <strong>pair: a diffuse shadow plus a close one</strong>.</p>
+<h2 id="components">Components</h2>
+<p><del>Not in the token package.</del> → Not on npm, but <strong>shipped from the official GitHub repository</strong> — see the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>There is no component package on npm (confirmed via the search API — the <code>@digital-go-jp</code> scope holds only design-tokens, tailwind-theme-plugin and abr-*), and the official components are <strong><code>digital-go-jp/design-system-example-components-react</code> v2.7.0</strong> (GitHub, MIT, most recent commit 2026-08-05) plus an <code>-html</code> edition of the same content. 46 components (Accordion through UtilityLink, plus deprecated/v1). The implementation is not a CSS distribution but an <strong>export of Tailwind class strings</strong> (presupposing <code>@digital-go-jp/tailwind-theme-plugin@1.0.1</code>) — a government edition of shadcn's copy-the-source distribution.</p>
+<h3 id="buttons-four-steps-and-small-ones-get-a-44px-hit-area-from-a-pseudo-element">Buttons — four steps, and small ones get a 44px hit area from a pseudo-element</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">lg</th><th style="text-align:center">md</th><th style="text-align:center">sm</th><th style="text-align:center">xs</th></tr></thead><tbody><tr><td>min-height</td><td style="text-align:center"><strong>56px</strong></td><td style="text-align:center">48px</td><td style="text-align:center">36px</td><td style="text-align:center">28px</td></tr><tr><td>min-width</td><td style="text-align:center">136px</td><td style="text-align:center">96px</td><td style="text-align:center">80px</td><td style="text-align:center">72px</td></tr><tr><td>radius</td><td style="text-align:center">8px</td><td style="text-align:center">8px</td><td style="text-align:center">6px</td><td style="text-align:center">4px</td></tr><tr><td>padding (x/y)</td><td style="text-align:center">16/12px</td><td style="text-align:center">16/8</td><td style="text-align:center">12/2</td><td style="text-align:center">8/2</td></tr><tr><td>type</td><td style="text-align:center">16px · 700 · line-height 1</td><td style="text-align:center">same</td><td style="text-align:center">same</td><td style="text-align:center"><strong>14px</strong> · 700</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>sm and xs stretch an <code>after:</code> pseudo-element vertically to guarantee a 44px hit area</strong> — a button 28px tall visually still has a 44px touch target. This is WCAG 2.5.5 / Apple's 44pt implemented in code, and a rare case in the sample of separating visual size from target size.</li><li>Three variants — solid-fill / outline / text — and <strong>all three add an underline on hover</strong> (state is not signalled by colour alone).</li><li>The solid-fill border is <strong>4px double, in the background colour</strong> — invisible normally, it survives as an outline in forced-colors mode.</li></ul>
+<h3 id="inputs-the-type-forbids-placeholders">Inputs — the type forbids placeholders</h3>
+<p>Three heights, <code>sm/md/lg</code> = <strong>40/48/56px, with lg (56px) as the default</strong>. Radius 8px, border 1px (solid-gray-600), turning black on hover.</p>
+<ul class="md-list"><li><strong><code>placeholder?: never</code></strong> — the TypeScript type forbids the placeholder prop outright. &quot;Use a label&quot; enforced by the type system; unique in the sample.</li><li>Read-only is distinguished by a <strong>dashed border</strong> (a border style, not a background colour).</li></ul>
+<h3 id="modals-a-native-dialog-plus-container-queries">Modals — a native dialog plus container queries</h3>
+<ul class="md-list"><li>The <code>&amp;lt;dialog&amp;gt;</code> element with <code>::backdrop</code>. Content radius 8px, <strong>a 1px black border</strong>, min-width <code>min(30rem, 100cqw - 2rem)</code> — a width floor set in container-query units (cqw).</li><li>There are no width presets — a <code>--modal-dialog-width</code> variable (default fit-content).</li><li>The dialog itself is <code>color-scheme: dark</code> while the content box is light — a dual colour scheme that darkens only the scrim and the scrollbars.</li><li><code>shrink-[9999]</code> spacers above and below (120px by default, 16px minimum) — an elastic structure where overflow eats the whitespace first.</li><li>Closing is not an icon alone but <strong>an X alongside the text &quot;閉じる&quot;</strong>.</li></ul>
+<h3 id="focus-a-double-ring-yellow-inside-and-black-outside">Focus — a double ring, yellow inside and black outside</h3>
+<p>Common to every component: <code>ring 2px yellow-300</code> (hugging the element) plus <code>outline 4px black offset 2px</code> outside it. The same yellow-and-black pairing as the GOV.UK family, except <strong>the black is on the outside</strong>. On the text variant of the button, focus turns the background itself yellow.</p>
+<p>Source: measured from <code>src/components/*/*.tsx</code> in the repository; the actual values behind the radius and type classes were resolved from <code>dist/index.es.js</code> in <code>@digital-go-jp/tailwind-theme-plugin@1.0.1</code> (<code>rounded-8</code> = 8px, <code>oln-16B-100</code> = 16px/700/ line-height 1, <code>std-16N-170</code> = 16px/400/1.7).</p>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Eight pure line-height ratios</strong> — the most in the sample; the first data on the CJK leading axis</li><li><strong>Weights 400/700</strong> — the same two steps as KRDS. A shared CJK-government pattern (2 of 2 in the sample)</li><li><strong>17px present</strong> — the third, and all three are CJK contexts</li><li>The top of the scale (36/45/57) <strong>matches Material 3's Display</strong></li><li><strong>No spacing tokens</strong> — the fifth</li><li>The <code>key</code> colour family — a brand layer between primitive and semantic</li><li>Sixth public-sector sample: counting the missing spacing scale, the only thing the public sector reliably shares is still <strong>its accessibility structure</strong></li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>This package carries no high-contrast or colour-contrast tokens. The JIS/WCAG target is unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @digital-go-jp/design-tokens@2.0.1</code> → <code>dist/tokens.css</code></li><li>Components: GitHub <code>digital-go-jp/design-system-example-components-react</code> v2.7.0 (MIT) — the deep pass above (2026-08-18)</li><li><strong>Open questions:</strong> the role assigned to each size (confirming the body default), the colour primitive structure, the Figma kit in detail, the licence (of the token package — the component repository is confirmed MIT)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: github digital-go-jp/design-tokens → <code>LICENSE</code> (matching the npm metadata for <code>@digital-go-jp/design-tokens@2.0.1</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -207,6 +207,9 @@ section{padding:var(--sp-7) 0;border-bottom:1px solid var(--border)}
   text-transform:uppercase;color:var(--text-dim);font-weight:600;
   padding-bottom:var(--sp-2);border-bottom:1px solid var(--border-strong)}
 .rowgrp + .rowgrp{margin-top:var(--sp-6)}
+/* The catalogue preview's group follows the claim box rather than another group,
+ * so the sibling rule above never reaches it. */
+.claim + .rowgrp{margin-top:var(--sp-6)}
 .ruler,.row,.kititem{display:grid;grid-template-columns:minmax(0,1fr)}
 .row,.kititem{position:relative;padding:9px var(--sp-2);border-bottom:1px solid var(--border);
   text-decoration:none;color:inherit;transition:background-color .1s var(--ease)}
@@ -368,3 +371,53 @@ section:last-of-type{border-bottom:0}
 .reset{height:28px;padding:0 var(--sp-3);background:transparent;color:var(--text-mut);
   border:1px solid var(--border-strong);border-radius:var(--r-control);font:inherit;font-size:12px;cursor:pointer}
 .reset:hover{border-color:var(--accent);color:var(--text)}
+
+/* ── Document pages ───────────────────────────────────────────────────────
+ * One page per corpus document (site/build-pages.mjs). The content is the .md file rendered,
+ * so these rules dress markup this stylesheet does not otherwise meet: tables, code blocks,
+ * lists and the breadcrumb above them. */
+.doc{max-width:78ch}
+.doc h1{margin:0 0 var(--sp-2);font-size:clamp(26px,3.4vw,38px);font-weight:720;letter-spacing:-.02em}
+.doc-lede{margin:0 0 var(--sp-6);color:var(--text-mut);font-size:15px}
+.doc h2{margin:var(--sp-7) 0 var(--sp-3);font-size:22px;font-weight:680;letter-spacing:-.01em;
+  padding-bottom:var(--sp-2);border-bottom:1px solid var(--border)}
+.doc h3{margin:var(--sp-6) 0 var(--sp-2);font-size:17px;font-weight:660}
+.doc h4,.doc h5,.doc h6{margin:var(--sp-5) 0 var(--sp-2);font-size:15px;font-weight:640}
+.doc p{margin:0 0 var(--sp-4);line-height:1.7}
+.doc hr{border:0;border-top:1px solid var(--border);margin:var(--sp-6) 0}
+.doc blockquote{margin:0 0 var(--sp-4);padding:var(--sp-3) var(--sp-4);
+  background:var(--surface);border-left:2px solid var(--accent)}
+.doc blockquote p:last-child{margin-bottom:0}
+.doc a{color:var(--accent-text);text-underline-offset:2px}
+
+.md-list{margin:0 0 var(--sp-4);padding-left:var(--sp-5);line-height:1.7}
+.md-list li{margin-bottom:var(--sp-2)}
+.md-list .md-list{margin:var(--sp-2) 0 0}
+/* the TODO convention's checkbox, as a marker rather than a control */
+.md-task{display:inline-block;width:11px;height:11px;margin-right:6px;vertical-align:baseline;
+  border:1px solid var(--border-strong);border-radius:2px}
+.md-task.done{background:var(--accent);border-color:var(--accent)}
+
+/* Tables are the corpus's main unit — 782 of them — and some are far wider than the column.
+ * Each scrolls inside its own wrapper so the page itself never scrolls sideways. */
+.md-tablewrap{overflow-x:auto;margin:0 0 var(--sp-5);border:1px solid var(--border)}
+.md-table{border-collapse:collapse;width:100%;font-size:13.5px}
+.md-table th,.md-table td{padding:7px var(--sp-3);border-bottom:1px solid var(--border);
+  text-align:left;vertical-align:top}
+.md-table th{background:var(--surface);font-weight:640;white-space:nowrap;
+  border-bottom:1px solid var(--border-strong)}
+.md-table tr:last-child td{border-bottom:0}
+.md-table code{font-size:12px}
+
+.md-code{background:var(--panel);border:1px solid var(--panel-line);color:#f5f5f5;
+  font-family:var(--mono);font-size:12.5px;line-height:1.7;padding:var(--sp-4);
+  overflow-x:auto;margin:0 0 var(--sp-5)}
+.doc :not(pre) > code{font-family:var(--mono);font-size:.88em;padding:1px 5px;
+  background:var(--chip-bg);border:1px solid var(--chip-border);border-radius:3px}
+
+.crumb{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-5);
+  font-family:var(--mono);font-size:11px;color:var(--text-dim)}
+.crumb a{color:var(--text-mut);text-decoration:none}
+.crumb a:hover{color:var(--accent-text)}
+.crumb .sep{color:var(--border-strong)}
+.rail .sub .lvl3 a{padding-left:var(--sp-4);font-size:12.5px;color:var(--text-dim)}

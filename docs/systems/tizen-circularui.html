@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tizen Wearable CircularUI — Self-Made DesignOps</title>
+<meta name="description" content="The UI for Samsung Galaxy Watch (Tizen) — the second wearable sample. It defines the content area as &amp;quot;the square inscribed in the circle&amp;quot;, takes…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/tizen-circularui.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Tizen Wearable CircularUI — Self-Made DesignOps">
+<meta property="og:description" content="The UI for Samsung Galaxy Watch (Tizen) — the second wearable sample. It defines the content area as &amp;quot;the square inscribed in the circle&amp;quot;, takes…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/tizen-circularui.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tizen Wearable CircularUI — Self-Made DesignOps">
+<meta name="twitter:description" content="The UI for Samsung Galaxy Watch (Tizen) — the second wearable sample. It defines the content area as &amp;quot;the square inscribed in the circle&amp;quot;, takes…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Tizen Wearable CircularUI",
+ "description": "The UI for Samsung Galaxy Watch (Tizen) — the second wearable sample. It defines the content area as &quot;the square inscribed in the circle&quot;, takes…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/tizen-circularui.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Tizen Wearable CircularUI",
+  "applicationCategory": "DesignApplication",
+  "url": "https://samsung.github.io/Tizen.CircularUI"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-17",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#the-geometry-of-a-round-screen-a-different-answer-from-wear-os">The geometry of a round screen — a different answer from Wear OS</a></li><li><a href="#bezel-rotation-a-hardware-input-axis">Bezel rotation — a hardware input axis</a></li><li><a href="#toast-the-first-duration-sample">Toast — the first duration sample</a></li><li><a href="#other">Other</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Samsung</b><br>partial harvest · wearable<br>verified 2026-08-17<br><a href="https://samsung.github.io/Tizen.CircularUI" rel="noopener">Official site</a><br><a href="https://github.com/Samsung/Tizen.CircularUI" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/tizen-circularui.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Tizen Wearable CircularUI</span></nav>
+    <h1>Tizen Wearable CircularUI</h1>
+    <p class="doc-lede">Samsung · os · wearable</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The UI for Samsung Galaxy Watch (Tizen) — the <strong>second wearable sample</strong>. It defines the content area as <strong>&quot;the square inscribed in the circle&quot;</strong>, takes <strong>bezel rotation</strong> as an input axis, and pins <strong>a 3000ms default toast duration into an API default</strong> — the corpus's <strong>first sample of a toast duration</strong>.</p>
+<h2 id="the-geometry-of-a-round-screen-a-different-answer-from-wear-os">The geometry of a round screen — a different answer from Wear OS</h2>
+<pre class="md-code"><code>TwoButtonPage: &quot;takes the square area inscribed in the Circle as the Contents area&quot;
+             + an Overlap option (whether content may overlap the buttons)
+CircleStackLayout: lays children out linearly within the circular area
+CircleImage: crops an image to a circle</code></pre>
+<ul class="md-list"><li><strong>Google's Wear OS avoids clipping by setting margins as percentages; Samsung defines the safe area geometrically, as the inscribed square</strong> — two companies with different solutions to the same round-screen problem (cross-reference <code>systems/wear-os.md</code>)</li><li>Control names are <strong>twenty <code>Circle*</code>-prefixed types</strong> (CircleListView · CircleScrollView · CircleDateTimeSelector · CircleProgressBar…) — handling round screens is the component namespace itself</li></ul>
+<h2 id="bezel-rotation-a-hardware-input-axis">Bezel rotation — a hardware input axis</h2>
+<p><code>BezelInteractionPage</code> · <code>CircleSliderSurfaceItem</code> (&quot;responds to bezel actions&quot;) — <strong>rotating the watch bezel is the scroll and value-adjustment input.</strong> Samsung's answer in the same slot as Apple's crown, and it adds <strong>bezel rotation</strong> to the input axis (<code>platforms.md</code>).</p>
+<h2 id="toast-the-first-duration-sample">Toast — the first duration sample</h2>
+<pre class="md-code"><code class="language-csharp">public static void DisplayText(string text, int duration = 3000)</code></pre>
+<p><strong>The 3000ms (3 second) default is stated as a default value in the API signature.</strong> The &quot;toast duration — absent from every sample&quot; gap in <code>patterns/feedback.md</code> was first filled here. It dismisses itself once the time elapses.</p>
+<h2 id="other">Other</h2>
+<ul class="md-list"><li><code>CircleDateTimeSelector</code> is <strong>inline in the page rather than a popup</strong> — an explicit departure from the Xamarin default (a popup). A judgement that avoids stacking modals on a small screen</li><li><code>TwoButtonPage/Popup</code> — standardises the two-button layout for a round screen as a page type</li><li><strong>The design documents are in Korean</strong> (<code>doc/design/*.md</code>) — the corpus's only non-Korean company with Korean as the primary documentation language</li><li>Status: built on Xamarin.Forms (legacy since Galaxy Watch moved to Wear OS — the repository's activity status is unverified)</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The second wearable sample</strong> — a round safe area as an inscribed square (contrasting with Wear OS's percentages)</li><li><strong>Bezel rotation as an input axis</strong> — the only hardware input of its kind in the sample</li><li><strong>A 3000ms toast default</strong> — the corpus's first toast-duration sample</li><li>Date selection inline (avoiding a popup)</li><li>Twenty types in the <code>Circle*</code> namespace</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Source: <code>git clone --depth 1 Samsung/Tizen.CircularUI</code> (cloning is the workaround when raw.githubusercontent is temporarily 429ing — <code>HARVESTING.md</code>)</li><li><strong>Still to confirm:</strong> dimensional specifications (the documentation carries no px values — they are screenshot-based), the current system on Galaxy Watch (after the move to Wear OS), and the relationship to One UI Watch</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

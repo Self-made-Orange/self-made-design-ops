@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Helios — Self-Made DesignOps</title>
+<meta name="description" content="HashiCorp's design system for its infrastructure products (Terraform, Vault, Consul and others).">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/helios.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Helios — Self-Made DesignOps">
+<meta property="og:description" content="HashiCorp's design system for its infrastructure products (Terraform, Vault, Consul and others).">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/helios.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Helios — Self-Made DesignOps">
+<meta name="twitter:description" content="HashiCorp's design system for its infrastructure products (Terraform, Vault, Consul and others).">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Helios",
+ "description": "HashiCorp's design system for its infrastructure products (Terraform, Vault, Consul and others).",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/helios.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Helios",
+  "applicationCategory": "DesignApplication",
+  "url": "https://helios.hashicorp.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#radii-centred-on-odd-values">Radii — centred on odd values</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#spacing">Spacing</a></li><li class="lvl3"><a href="#colour">Colour</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-hds-button">Buttons (.hds-button)</a></li><li class="lvl3"><a href="#inputs-hds-form-text-input">Inputs (.hds-form-text-input)</a></li><li class="lvl3"><a href="#modals-hds-modal-a-native-dialog">Modals (.hds-modal) — a native &lt;dialog&gt;</a></li><li class="lvl3"><a href="#the-copyright-notice-in-the-distributed-css">The copyright notice in the distributed CSS</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>HashiCorp</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://helios.hashicorp.design" rel="noopener">Official site</a><br><a href="https://github.com/hashicorp/design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/helios.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Helios</span></nav>
+    <h1>Helios</h1>
+    <p class="doc-lede">HashiCorp · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>HashiCorp's design system for its infrastructure products (Terraform, Vault, Consul and others).</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="radii-centred-on-odd-values">Radii — centred on odd values</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th>Value</th></tr></thead><tbody><tr><td><code>--token-border-radius-x-small</code></td><td><strong>3px</strong></td></tr><tr><td><code>--token-border-radius-small</code></td><td><strong>5px</strong></td></tr><tr><td><code>--token-border-radius-medium</code></td><td>6px</td></tr><tr><td><code>--token-border-radius-large</code></td><td>8px</td></tr></tbody></table></div>
+<p><strong>It uses 3px and 5px, departing from the multiple-of-4-or-8 convention.</strong> There are only four steps, the fewest of any system harvested.</p>
+<h3 id="typography">Typography</h3>
+<p>Split into three families.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Family</th><th>Token</th><th>Value</th></tr></thead><tbody><tr><td>Display</td><td><code>display-100</code></td><td>13px</td></tr><tr><td></td><td><code>display-200</code></td><td>16px</td></tr><tr><td></td><td><code>display-300</code></td><td>18px</td></tr><tr><td></td><td><code>display-400</code></td><td>24px</td></tr><tr><td></td><td><code>display-500</code></td><td>30px</td></tr><tr><td>Body</td><td><code>body-100</code></td><td>13px</td></tr><tr><td></td><td><code>body-200</code></td><td>14px</td></tr><tr><td></td><td><code>body-300</code></td><td>16px</td></tr><tr><td>Code</td><td><code>code-100</code></td><td>13px</td></tr><tr><td></td><td><code>code-200</code></td><td>14px</td></tr><tr><td></td><td><code>code-300</code></td><td>16px</td></tr></tbody></table></div>
+<p><strong>Body and Code share the same three sizes (13/14/16).</strong></p>
+<h3 id="spacing">Spacing</h3>
+<p><strong>Unverified.</strong> The <code>--token-*</code> prefix listing was checked and no general spacing scale was found. Per-component tokens do exist (<code>--token-badge-padding</code>, <code>--token-badge-gap</code> and so on).</p>
+<p>It may be a structure like Cloudscape's, exposing only component tokens with no primitive spacing scale, but since that is not confirmed it is not asserted.</p>
+<h3 id="colour">Colour</h3>
+<p>There are per-product brand colour tokens (<code>--token-color-consul</code> and others).</p>
+<p>Source: <code>@hashicorp/design-system-tokens@5.1.0</code></p>
+<h2 id="components">Components</h2>
+<p>Confirmed from the token names: badge, app-header, app-side. → button, input and modal dimensions are in the deep-dive below (2026-08-18). Motion (six component-scoped tokens, with no global scale) is covered in the Helios section of <code>patterns/motion.md</code>.</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured from the distributed CSS of <code>@hashicorp/design-system-components@6.5.0</code> (Ember), <code>dist/styles/@hashicorp/design-system-components.css</code> (390KB, with the token definitions embedded). Dimensions only — motion is recorded in <code>patterns/motion.md</code> and not repeated.</p>
+<h3 id="buttons-hds-button">Buttons (<code>.hds-button</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center"><strong>1.75rem (28px)</strong></td><td style="text-align:center">2.25rem (36px)</td><td style="text-align:center">3rem (48px)</td></tr><tr><td>Vertical padding</td><td style="text-align:center">6px</td><td style="text-align:center">9px</td><td style="text-align:center">11px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center"><strong>11px</strong></td><td style="text-align:center"><strong>15px</strong></td><td style="text-align:center"><strong>19px</strong></td></tr><tr><td>Type</td><td style="text-align:center">13px / 14px</td><td style="text-align:center">14px / 16px</td><td style="text-align:center">16px / 24px</td></tr><tr><td>Icon</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">24px</td></tr><tr><td>Radius</td><td style="text-align:center">5px (<code>border-radius-small</code>)</td><td style="text-align:center">same</td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Every padding falls 1px short of the 4px grid</strong> (11 = 12−1, 15 = 16−1, 19 = 20−1) — the 1px border subtracted. The reasoning survives as a comment in the distributed CSS, right beside the input token: <code>--token-form-control-padding: 7px; /** Notice: we have to take in account the border, so it's 1px less than in Figma. */</code> — <strong>the only sample to document the &quot;Figma value minus border&quot; principle in a comment</strong> (the same intent as MUI's outlined −1px).</li><li>The button type aligns with the typography tokens: 13/14/16 = display-100 = body-100/200/300.</li><li>The focus ring is a double structure, floating a <code>::before</code> out by −4px and drawing a 3px border — the radius follows as <code>calc(5px + 3px)</code>.</li><li><strong>A misuse warning is built into the CSS</strong>: if <code>button.hds-button[href]</code>, it applies a red background and injects the message &quot;you should use an @href argument&quot; on screen through <code>::after</code> — the only sample linting at runtime through CSS.</li></ul>
+<h3 id="inputs-hds-form-text-input">Inputs (<code>.hds-form-text-input</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>Value</th></tr></thead><tbody><tr><td>Padding</td><td><strong>7px</strong> (<code>form-control-padding</code> — the token from the comment above)</td></tr><tr><td>Border</td><td>1px, radius <strong>5px</strong> (<code>form-control-border-radius</code>)</td></tr><tr><td>Type</td><td>14px / 20px (body-200 — the template injects the typography class)</td></tr><tr><td><strong>Derived height</strong></td><td><strong>36px</strong> (aligning with the medium button)</td></tr></tbody></table></div>
+<ul class="md-list"><li>A default <code>box-shadow: elevation-inset</code> — only inputs carry an inner shadow.</li><li>focus: a border colour plus <code>outline: 3px solid</code> (offset 0) — a different mechanism from the button's (<code>::before</code>).</li><li>Only the derived filter-bar search input shrinks, to 3px padding and 13px type.</li></ul>
+<h3 id="modals-hds-modal-a-native-dialog">Modals (<code>.hds-modal</code>) — a native <code>&amp;lt;dialog&amp;gt;</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th>Width</th></tr></thead><tbody><tr><td>small</td><td>min(400px, 95vw)</td></tr><tr><td>medium</td><td><strong>min(600px, 95vw)</strong></td></tr><tr><td>large</td><td>min(800px, 95vw)</td></tr></tbody></table></div>
+<ul class="md-list"><li>400/600/800 — three steps of 200px. Radius <strong>8px</strong> (<code>border-radius-large</code> — the top of the scale assigned to modals), max-height 95vh.</li><li>It is a native <code>&amp;lt;dialog&amp;gt;</code>, but <code>::backdrop</code> is turned off with <code>display:none</code> and <strong>a separate overlay element</strong> is used (a neutral-700 palette colour at opacity 0.5) — z-index 50/49 as literals.</li><li>The header and footer take a different background from the body (<code>surface-faint</code>) plus a 1px divider — a &quot;framed&quot; three-part split. Padding: header 16px 24px · body 24px · footer 16px 24px.</li><li>The warning and critical colour variants change only the header background and border.</li></ul>
+<h3 id="the-copyright-notice-in-the-distributed-css">The copyright notice in the distributed CSS</h3>
+<p>All 102 headers in 6.5.0's distributed CSS and source read <strong><code>Copyright IBM Corp. 2021, 2025</code></strong> (the licence stays MPL-2.0) — IBM's 2025 acquisition of HashiCorp reflected in the design system's build output. The corpus's first case of an organisational change appearing in a distribution.</p>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>The &quot;Figma value minus a 1px border&quot; padding principle written into a comment</strong> — applied consistently across buttons and inputs</li><li>Three button steps at 28/36/48 plus a 36px input alignment, with the type reusing the body scale</li><li><strong>A misuse warning injected through CSS</strong> (the <code>[href]</code> guard) — unique in the sample</li><li>A native <code>&amp;lt;dialog&amp;gt;</code> used alongside its own overlay, with modal widths stepping 400/600/800</li><li>The copyright notice transitioned to IBM (MPL-2.0 retained)</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>It uses 3px and 5px radii.</strong> Where most systems use 2, 4, 6 and 8, it chose odd numbers. A rare case, alongside Spectrum (which includes 3, 5, 7 and 9px).</li><li><strong>There are only four radii.</strong> 3, 5, 6 and 8px, all 8px or under. With no large radius at all, it holds a square-cornered infrastructure-tool tone. The opposite axis from Material 3 (which goes to 48px).</li><li><strong>Body and code type sizes are identical.</strong> They share 13/14/16px.</li><li><strong>The body default is in the 14px range.</strong> <code>body-100</code> is 13px and <code>body-200</code> 14px — smaller than the Western convention of a 16px default, and close to Ant Design (14px).</li><li><strong>It keeps per-product colour tokens.</strong> Terraform, Vault, Consul and the rest each have brand colours.</li><li><strong>It ships separate tokens for email</strong> (<code>dist/cloud-email/</code>).</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.2 AA (resolved 2026-08-18).</strong> Source: <code>helios.hashicorp.design/about/accessibility-statement</code> — &quot;formalizing our commitment to WCAG 2.2 AA conformance with an internal policy&quot;. <strong>A sample that keeps an accessibility statement on its own page and codifies it as internal policy.</strong></p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Repository: https://github.com/hashicorp/design-system</li><li>Package: <code>@hashicorp/design-system-tokens</code></li><li>Component deep-dive: <code>@hashicorp/design-system-components@6.5.0</code> → <code>dist/styles/@hashicorp/design-system-components.css</code> (2026-08-18)</li><li>Licence: the components package states <strong>MPL-2.0</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Confirming the spacing scale is still outstanding.</strong> The component CSS also uses literal px (8, 16, 24) for padding, strengthening the circumstantial case that there are no primitive spacing tokens — but the conclusion is withheld.</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MPL-2.0</code> — source: github hashicorp/design-system → <code>LICENSE</code> (matching the npm <code>@hashicorp/design-system-tokens@5.1.0</code> metadata)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

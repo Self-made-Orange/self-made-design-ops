@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evergreen — Self-Made DesignOps</title>
+<meta name="description" content="Segment's design system for its data-pipeline products. The tokens are unnamed arrays, and there are no spacing tokens.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/evergreen.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Evergreen — Self-Made DesignOps">
+<meta property="og:description" content="Segment's design system for its data-pipeline products. The tokens are unnamed arrays, and there are no spacing tokens.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/evergreen.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evergreen — Self-Made DesignOps">
+<meta name="twitter:description" content="Segment's design system for its data-pipeline products. The tokens are unnamed arrays, and there are no spacing tokens.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Evergreen",
+ "description": "Segment's design system for its data-pipeline products. The tokens are unnamed arrays, and there are no spacing tokens.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/evergreen.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Evergreen",
+  "applicationCategory": "DesignApplication",
+  "url": "https://evergreen.segment.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#radius-an-unnamed-three-step-array">Radius — an unnamed three-step array</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#tracking-the-only-one-in-px-and-the-only-one-with-a-wide">Tracking — the only one in px, and the only one with a wide</a></li><li class="lvl3"><a href="#typefaces">Typefaces</a></li><li class="lvl3"><a href="#spacing">Spacing</a></li><li class="lvl3"><a href="#unusual-token-families">Unusual token families</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-componentsbuttonjs">Buttons (components/button.js)</a></li><li class="lvl3"><a href="#inputs-componentsinputjs">Inputs (components/input.js)</a></li><li class="lvl3"><a href="#dialogs-dialogsrcdialogjs-componentsdialog-js">Dialogs (dialog/src/Dialog.js + components/dialog-*.js)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Segment</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://evergreen.segment.com" rel="noopener">Official site</a><br><a href="https://github.com/segmentio/evergreen" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/evergreen.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Evergreen</span></nav>
+    <h1>Evergreen</h1>
+    <p class="doc-lede">Segment · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Segment's design system for its data-pipeline products. <strong>The tokens are unnamed arrays</strong>, and there are no spacing tokens.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="radius-an-unnamed-three-step-array">Radius — an unnamed three-step array</h3>
+<pre class="md-code"><code class="language-js">radii[0] = '0px'
+radii[1] = '4px'
+radii[2] = '8px'</code></pre>
+<p><strong>The tokens have no names.</strong> They are referenced only by array index — no naming like <code>xs</code>/<code>sm</code>/<code>md</code>, and no numbering like <code>radius-100</code>.</p>
+<p>Three steps, all 8px or under — the same square-cornered family as Helios (3 · 5 · 6 · 8px) and Lightning (2 · 4 · 8px).</p>
+<p>Source: <code>src/themes/default/tokens/radii.js</code></p>
+<h3 id="typography">Typography</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>sizes</td><td>10 · 12 · 14 · 16 · 18 · 20 · 24 · 32px</td></tr><tr><td>line heights</td><td>16 · 18 · 20 · 24 · 28 · 32 · 40px</td></tr><tr><td>body default</td><td><strong>14px</strong></td></tr><tr><td>heading default</td><td>16px</td></tr><tr><td>caption</td><td>10px</td></tr></tbody></table></div>
+<p>Sizes and line heights are <strong>arrays</strong> too. Above them sit only the aliases <code>body</code> / <code>heading</code> / <code>caption</code> as names.</p>
+<p><strong>There is a 10px size</strong> — the smallest body-grade value in the sample; Seed Design also has 10px.</p>
+<h3 id="tracking-the-only-one-in-px-and-the-only-one-with-a-wide">Tracking — the only one in px, and the only one with a <code>wide</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>tightest</code></td><td><strong>-0.2px</strong></td></tr><tr><td><code>tighter</code></td><td>-0.07px</td></tr><tr><td><code>tight</code></td><td>-0.05px</td></tr><tr><td><code>normal</code></td><td>0</td></tr><tr><td><strong><code>wide</code></strong></td><td><strong>+0.6px</strong></td></tr></tbody></table></div>
+<p>Two things are unique in the sample.</p>
+<ul class="md-list"><li><strong>Tracking is defined in px.</strong> Backpack and Seed Design use <code>em</code>; Apple and Material use fractional px. Being fixed in px, the tracking does not scale as the type grows.</li><li><strong>A positive <code>wide</code> is provided.</strong> Backpack and Seed Design offer only negatives.</li></ul>
+<p>It uses hundredth-of-a-pixel values like <code>-0.07px</code> and <code>-0.05px</code>.</p>
+<h3 id="typefaces">Typefaces</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>default</th></tr></thead><tbody><tr><td>Display</td><td>SF UI Display → the system stack</td></tr><tr><td>UI</td><td>SF UI Text → the system stack</td></tr><tr><td>Mono</td><td>SF Mono → Monaco · Inconsolata · Fira Mono …</td></tr></tbody></table></div>
+<p><strong>Display and UI are separated</strong> — a different typeface for headings than for the interface.</p>
+<h3 id="spacing">Spacing</h3>
+<p><strong>None.</strong> The <code>src/themes/default/tokens/</code> directory looks like this:</p>
+<pre class="md-code"><code>colors.js  fills.js  index.js  intents.js
+radii.js   shadows.js  typography.js  z-indices.js</code></pre>
+<p><strong>There is no spacing file.</strong> Whitespace lives directly in the components.</p>
+<h3 id="unusual-token-families">Unusual token families</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>file</th><th>contents</th></tr></thead><tbody><tr><td><code>intents.js</code></td><td>colour bundles per intent (success · warning · danger · none)</td></tr><tr><td><code>fills.js</code></td><td>colours reserved for background fills</td></tr><tr><td><code>z-indices.js</code></td><td>the z-index scale</td></tr></tbody></table></div>
+<p><strong><code>intents</code> is a family of its own</strong> — state colours separated out as an independent concept rather than living inside <code>color</code>.</p>
+<h2 id="components">Components</h2>
+<p><del>Unverified.</del> <code>src/themes/default/components/</code> holds <strong>38 files</strong> of per-component theming. → see the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>src/themes/default/components/*.js</code>, <code>src/dialog/src/Dialog.js</code> and <code>src/overlay/src/Overlay.js</code> in GitHub <code>segmentio/evergreen@master</code> (commit <code>9b774ae</code>, 2025-06-11, v7.1.9). Because the npm distribution omits the tokens (HARVESTING lesson 5), the component layer was read from GitHub <code>src/</code> too.</p>
+<h3 id="buttons-componentsbuttonjs">Buttons (<code>components/button.js</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>24px</strong></td><td style="text-align:center">32px</td><td style="text-align:center">40px</td></tr><tr><td>inline padding</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td><strong>min-width</strong></td><td style="text-align:center"><strong>24px (= the height)</strong></td><td style="text-align:center">32px</td><td style="text-align:center">40px</td></tr><tr><td>type</td><td style="text-align:center">12px (<code>fontSizes.1</code>)</td><td style="text-align:center"><strong>12px</strong></td><td style="text-align:center">14px (<code>fontSizes.2</code>)</td></tr><tr><td>radius</td><td style="text-align:center">4px (<code>radii.1</code>)</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr></tbody></table></div>
+<ul class="md-list"><li>Single-line alignment via <code>line-height: height</code>. <strong>min-width = its own height</strong> — a square floor guaranteeing icon-only buttons, the same decision as Polaris (<code>min-width</code> = height, <code>patterns/button.md</code>).</li><li><strong>The type stays at 12px right through the medium (32px) button</strong> — smaller than the body (14px). Only large goes to 14px. A structure where the control type is smaller than the body type.</li><li>The only transition is <strong><code>box-shadow 80ms ease-in-out</code></strong> — no colour or background transition, only the focus ring animates. 80ms is at the short end of the sample.</li><li>Variants: primary / default (a white background with a border) / minimal (transparent) / destructive, plus intent (success, danger), which swaps the colour key wholesale (blue→green/red) — the <code>intents</code> token family (above) feeding directly into how button colours are computed.</li></ul>
+<h3 id="inputs-componentsinputjs">Inputs (<code>components/input.js</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">24px</td><td style="text-align:center">32px</td><td style="text-align:center">40px</td></tr><tr><td>inline padding</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td></tr><tr><td>type</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td><td style="text-align:center">12px (only the line height moves, 16→18px)</td></tr><tr><td>radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr><tr><td>border</td><td style="text-align:center">1px <code>gray400</code></td><td style="text-align:center">same</td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The same three steps as the button, 24/32/40px</strong> — the same alignment pattern as Backpack (two shared steps, 36/48), differing only in the number of steps.</li><li><strong>Inline padding is fixed at 12px</strong> — the size variants change only the height, not the padding. This parts from the majority (EUI, MUI and others), who vary padding by height.</li><li>The type is fixed at 12px too — large grows only its line height, to 18px.</li><li>Focus: <code>shadows.focusRing</code> plus a <code>blue200</code> border / invalid: a <code>red500</code> border.</li><li>Labels: <code>FormField</code> uses a separate block label (<code>Label</code> size 400 = 14px/18px, weight 500 semibold) plus <code>marginBottom: 8px</code>. Not floating. <code>Label</code>'s baseStyle is the Display typeface, but <strong>size 400 overrides it with the UI typeface</strong> — in the default combination the label is set in the UI face too.</li></ul>
+<h3 id="dialogs-dialogsrcdialogjs-componentsdialog-js">Dialogs (<code>dialog/src/Dialog.js</code> + <code>components/dialog-*.js</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td><strong>a single 560px default</strong> (a free <code>width</code> prop — no steps)</td></tr><tr><td>ceiling</td><td><code>calc(100% − 16px×2)</code> · block margin <code>topOffset: 12vmin</code></td></tr><tr><td>radius</td><td><strong>8px</strong> (<code>radii.2</code> — the top of the scale)</td></tr><tr><td>shadow</td><td>elevation 4 (the top of a five-step scale)</td></tr><tr><td>enter</td><td>scale(0.8)→1 plus fade, <strong>200ms <code>deceleration (0,0,0.2,1)</code></strong></td></tr><tr><td>exit</td><td>the reverse, 200ms <code>acceleration (0.4,0,1,1)</code></td></tr><tr><td>scrim</td><td><strong>rgba(67, 90, 111, 0.7)</strong> (<code>colors.overlay</code>) · fading over <strong>240ms</strong></td></tr><tr><td>padding</td><td>header <code>32 32 24</code> · body 8 block / 32 inline · footer <code>24 32 32</code></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are no width steps</strong> — one 560px default, with a free value accepted through a prop. The polar opposite of Cloudscape's five and Braid's four, and close to Mantine, in the same &quot;single default&quot; camp.</li><li><strong>The easing names are Material's terms verbatim</strong> (<code>deceleration</code>/<code>acceleration</code> = the Material standard curves). They are not tokenised but re-declared as constants in each component file.</li><li><strong>The panel takes 200ms and the scrim 240ms</strong> — because durations are hardcoded per component (Dialog 200 · Overlay/SideSheet/Toast/CornerDialog 240), the scrim finishes 40ms after the panel on entry. A textbook drift from the absence of motion tokens.</li><li>The scrim is not black but <strong>a blue-grey at 70%</strong> — almost exactly EUI's value (rgba(72,89,117,.7)). A convergence between two data-tooling samples.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs share three steps, 24/32/40px</strong>, with min-width = the height</li><li><strong>A 12px control type right through medium</strong> — smaller than the 14px body</li><li><strong>Input padding and type fixed regardless of the size variant</strong> (only the height and line height move)</li><li><strong>No dialog width steps</strong> (a single 560px default)</li><li><strong>Every motion value hardcoded per file</strong> — the 200/240ms mismatch, and Material's curves borrowed</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The tokens have no names.</strong> Radii, sizes and line heights are all arrays referenced by index. Unique in the sample. Adding or removing a step <strong>shifts the existing indices and breaks them.</strong></li><li><strong>There are no spacing tokens.</strong> One of four, with Apple HIG, Material 3 and Seed Design.</li><li><strong>Tracking is in px, and it goes positive.</strong> Both traits are unique in the sample.</li><li><strong>Display and UI typefaces are separated.</strong> Most systems use a single font stack.</li><li><strong><code>intents</code> is an independent family.</strong> State colours pulled out of the colour palette.</li><li><strong>The body is 14px.</strong> The same family as Ant Design, Material 3 and Helios.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/segmentio/evergreen</li><li>Package: <code>evergreen-ui</code> (the theme ships inside the component package)</li><li>Tokens: <code>src/themes/default/tokens/*.js</code></li><li>Components in depth: GitHub <code>segmentio/evergreen</code> commit <code>9b774ae</code> (2025-06-11, v7.1.9) → <code>src/themes/default/components/{button,input,dialog-*}.js</code> · <code>src/dialog/src/Dialog.js</code> · <code>src/overlay/src/Overlay.js</code> · <code>src/form-field/src/FormField*.js</code> (2026-08-18)</li><li><strong>Note:</strong> the npm package's <code>esm/</code> holds only components; the theme tokens live in <code>src/</code>. Reading from GitHub is the reliable route.</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: github segmentio/evergreen → <code>LICENSE</code> (matching the npm metadata for <code>evergreen-ui@7.1.9</code>)</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — the &quot;Evergreen Figma Library&quot; in the resource list at <code>evergreen.segment.com</code></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

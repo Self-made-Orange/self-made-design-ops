@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Props — Self-Made DesignOps</title>
+<meta name="description" content="It ships CSS custom properties alone, with no components. 603 of them, the most in the sample, and its 113 easings and fluid whitespace are axes no other…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/open-props.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Open Props — Self-Made DesignOps">
+<meta property="og:description" content="It ships CSS custom properties alone, with no components. 603 of them, the most in the sample, and its 113 easings and fluid whitespace are axes no other…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/open-props.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Open Props — Self-Made DesignOps">
+<meta name="twitter:description" content="It ships CSS custom properties alone, with no components. 603 of them, the most in the sample, and its 113 easings and fluid whitespace are axes no other…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Open Props",
+ "description": "It ships CSS custom properties alone, with no components. 603 of them, the most in the sample, and its 113 easings and fluid whitespace are axes no other…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/open-props.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Open Props",
+  "applicationCategory": "DesignApplication",
+  "url": "https://open-props.style"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-603-of-them">Tokens — 603 of them</a></li><li class="lvl3"><a href="#space-and-size-four-parallel-families">Space and size — four parallel families</a></li><li class="lvl3"><a href="#radius-1e5px">Radius — 1e5px</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#borders-up-to-25px">Borders — up to 25px</a></li><li class="lvl3"><a href="#z-index---layer-">z-index — --layer-*</a></li><li class="lvl3"><a href="#easings-113-of-them-in-33-families">Easings — 113 of them, in 33 families</a></li><li class="lvl3"><a href="#shadow-recomposed-at-runtime">Shadow — recomposed at runtime</a></li><li class="lvl3"><a href="#everything-else">Everything else</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Adam Argyle (open source)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://open-props.style" rel="noopener">Official site</a><br><a href="https://github.com/argyleink/open-props" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/open-props.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Open Props</span></nav>
+    <h1>Open Props</h1>
+    <p class="doc-lede">Adam Argyle (open source) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>It ships <strong>CSS custom properties alone</strong>, with no components. <strong>603 of them, the most in the sample</strong>, and its <strong>113 easings</strong> and <strong>fluid whitespace</strong> are axes no other system has.</p>
+<h2 id="tokens-603-of-them">Tokens — 603 of them</h2>
+<p>There is no framework and no build step. <code>@import</code> the CSS file and the variables exist.</p>
+<p>It occupies a similar position to Tailwind, except that <strong>it generates no utility classes</strong> — it provides values only, and you apply them in your own CSS.</p>
+<h3 id="space-and-size-four-parallel-families">Space and size — four parallel families</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">steps</th><th style="text-align:center">unit</th><th>purpose</th></tr></thead><tbody><tr><td><code>--size-*</code></td><td style="text-align:center">15 (+<code>00</code>)</td><td style="text-align:center">rem</td><td>general</td></tr><tr><td><strong><code>--size-fluid-*</code></strong></td><td style="text-align:center"><strong>10</strong></td><td style="text-align:center"><code>max(min())</code></td><td><strong>fluid</strong></td></tr><tr><td><strong><code>--size-relative-*</code></strong></td><td style="text-align:center">17 (+<code>00</code>)</td><td style="text-align:center"><strong><code>ch</code></strong></td><td>character-based</td></tr><tr><td><code>--size-content-*</code> · <code>--size-header-*</code></td><td style="text-align:center">3 · 3</td><td style="text-align:center"><code>ch</code></td><td>body and heading widths</td></tr></tbody></table></div>
+<p>The base scale (px):</p>
+<pre class="md-code"><code>4 · 8 · 16 · 20 · 24 · 28 · 32 · 48 · 64 · 80 · 120 · 160 · 240 · 320 · 480</code></pre>
+<p><strong>There is no <code>12</code></strong> — after 8 comes 16. The core <code>4/8/16/24</code> and <code>32</code> are all present.</p>
+<p><code>--size-00</code> is <strong>−4px</strong>. <strong>Negatives are expressed with a <code>00</code> suffix</strong> — the same rule applies to <code>--font-size-00</code>, <code>--font-lineheight-00</code>, <code>--size-px-00</code> and <code>--size-relative-00</code>. The same purpose as Atlassian's <code>space.negative.*</code>, in a different notation.</p>
+<h4 id="fluid-whitespace-unique-in-the-sample">Fluid whitespace — unique in the sample</h4>
+<pre class="md-code"><code class="language-css">--size-fluid-1:  max(.5rem,  min(1vw,  1rem));
+--size-fluid-2:  max(1rem,   min(2vw,  1.5rem));
+--size-fluid-5:  max(4rem,   min(5vw,  5rem));
+--size-fluid-10: max(20rem,  min(40vw, 30rem));</code></pre>
+<p><strong>Ten steps of the form <code>max(floor, min(viewport, ceiling))</code>.</strong></p>
+<p>Pajamas makes <strong>typography</strong> fluid with <code>clamp()</code> (<code>tokens/scales.md</code>), but <strong>Open Props is the only system to make whitespace fluid.</strong></p>
+<p><code>clamp(a, b, c)</code> and <code>max(a, min(b, c))</code> give the same result; Open Props uses the latter.</p>
+<h4 id="the-ch-family-proportional-to-character-width">The <code>ch</code> family — proportional to character width</h4>
+<pre class="md-code"><code class="language-css">--size-relative-3:  1ch;      /* corresponding to the general scale's --size-3: 1rem */
+--size-content-2:   45ch;     /* body width */
+--size-header-2:    25ch;     /* heading width */</code></pre>
+<p><strong>It keeps a second copy of the 15-step general scale in <code>ch</code></strong> (<code>--size-relative-*</code>, 17 steps).</p>
+<p><code>--size-content-*</code> is <code>20ch · 45ch · 60ch</code> — <strong>the readable measure, tokenised.</strong> <code>--size-header-*</code> is <code>20ch · 25ch · 35ch</code>, narrower than the body's.</p>
+<p><strong>Open Props is the only system in the sample to use <code>ch</code>.</strong> A different direction from Codex merging whitespace and layout widths into one <code>size</code> scale — <strong>Open Props adds families by changing the unit.</strong></p>
+<p>It connects directly to the text-expansion problem in <code>i18n/README.md</code> — a width based on <code>ch</code> changes in actual px when the typeface or language changes.</p>
+<h3 id="radius-1e5px">Radius — <code>1e5px</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>--radius-1</code></td><td style="text-align:center">2px</td></tr><tr><td><code>--radius-2</code></td><td style="text-align:center"><strong>5px</strong></td></tr><tr><td><code>--radius-3</code></td><td style="text-align:center">1rem (16)</td></tr><tr><td><code>--radius-4</code></td><td style="text-align:center">2rem (32)</td></tr><tr><td><code>--radius-5</code></td><td style="text-align:center">4rem (64)</td></tr><tr><td><code>--radius-6</code></td><td style="text-align:center">8rem (128)</td></tr><tr><td><strong><code>--radius-round</code></strong></td><td style="text-align:center"><strong><code>1e5px</code></strong> (100,000)</td></tr></tbody></table></div>
+<p><strong>Only six steps, doubling from the third</strong> (16 → 32 → 64 → 128). The <code>4</code>, <code>8</code> and <code>12</code> most of the sample uses are <strong>absent</strong> — after 2px comes 5px.</p>
+<p><strong>The 5px joins the odd-radius cases, with Helios and Spectrum.</strong></p>
+<p><strong>The <code>1e5px</code> exponential notation is unique in the sample.</strong> As a way of expressing a full circle it is the <strong>seventh form</strong>, after <code>9999px</code> (Polaris, Atlassian) · <code>10000px</code> (Fluent) · <code>999px</code> (Nord) · <code>50%</code> · <code>0.5</code> · <code>50cqmin</code> (Material 3).</p>
+<p>There are <code>--radius-blob-*</code> and <code>--radius-conditional-*</code> families too (<del>values unverified</del> → <strong>measured and resolved 2026-08-18</strong>, source <a href="https://unpkg.com/open-props@1.7.23/open-props.min.css" rel="noopener">https://unpkg.com/open-props@1.7.23/open-props.min.css</a>).</p>
+<p><strong><code>--radius-blob-*</code>, five of them — eight-value <code>border-radius</code> shorthands making organic blobs</strong></p>
+<pre class="md-code"><code class="language-css">--radius-blob-1: 30% 70% 70% 30% / 53% 30% 70% 47%;
+--radius-blob-2: 53% 47% 34% 66% / 63% 46% 54% 37%;
+--radius-blob-3: 37% 63% 56% 44% / 49% 56% 44% 51%;
+--radius-blob-4: 63% 37% 37% 63% / 43% 37% 63% 57%;
+--radius-blob-5: 49% 51% 48% 52% / 57% 44% 56% 43%;</code></pre>
+<p>All are <strong>eight percentage values (four horizontal / four vertical)</strong>, and the corresponding pairs on each axis <strong>interlock to 100%</strong> — <code>30/70</code> against <code>70/30</code> — so left and right, top and bottom push against each other into an asymmetric curve. <code>blob-5</code> (49/51 · 48/52 …) is closest to a circle and <code>blob-1</code> (30/70) the most distorted.</p>
+<p><strong><code>--radius-drawn-*</code>, six of them — an eight-value px family with a hand-drawn feel</strong> ships alongside.</p>
+<pre class="md-code"><code class="language-css">--radius-drawn-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
+--radius-drawn-2: 125px 10px 20px 185px / 25px 205px 205px 25px;
+--radius-drawn-3: 15px 255px 15px 225px / 225px 15px 255px 15px;
+--radius-drawn-4: 15px 25px 155px 25px / 225px 150px 25px 115px;
+--radius-drawn-5: 250px 25px 15px 20px / 15px 80px 105px 115px;
+--radius-drawn-6: 28px 100px 20px 15px / 150px 30px 205px 225px;</code></pre>
+<p>Where blob is in percentages and so stretches with the element's size, drawn is in <strong>fixed px</strong>, so a small element comes out almost circular and a large one reads as a sketch with rounded corners.</p>
+<p><strong><code>--radius-conditional-*</code>, six of them — conditional tokens that fold the radius to 0 once the container fills the viewport width</strong></p>
+<pre class="md-code"><code class="language-css">--radius-conditional-1: clamp(0px, calc(100vw - 100%) * 1e5, var(--radius-1));
+/* …-2 through -6 share the structure, differing only in the last argument, --radius-2 to -6 */</code></pre>
+<p><code>calc(100vw - 100%)</code> is <strong>0</strong> when the element spans the full viewport and positive otherwise. Multiplying by <code>1e5</code> inflates it to an extreme and <code>clamp</code> cuts it, so the result is <strong>0px at full width and the corresponding radius step otherwise</strong> — a CSS trick that implements &quot;remove the radius when a card fills the screen on mobile&quot; without a media query. The same exponential notation seen earlier in <code>1e5px</code> (<code>--radius-round</code>) <strong>is reused here as a multiplier.</strong></p>
+<h3 id="typography">Typography</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>--font-size-00</code></td><td style="text-align:center">0.5rem (8)</td></tr><tr><td><code>--font-size-0</code></td><td style="text-align:center">0.75rem (12)</td></tr><tr><td><code>--font-size-1</code></td><td style="text-align:center">1rem (16)</td></tr><tr><td><code>--font-size-2</code></td><td style="text-align:center"><strong>1.1rem</strong> (17.6)</td></tr><tr><td><code>--font-size-3</code></td><td style="text-align:center">1.25rem (20)</td></tr><tr><td><code>--font-size-4</code></td><td style="text-align:center">1.5rem (24)</td></tr><tr><td><code>--font-size-5</code></td><td style="text-align:center">2rem (32)</td></tr><tr><td><code>--font-size-6</code></td><td style="text-align:center">2.5rem (40)</td></tr><tr><td><code>--font-size-7</code></td><td style="text-align:center">3rem (48)</td></tr><tr><td><code>--font-size-8</code></td><td style="text-align:center">3.5rem (56)</td></tr></tbody></table></div>
+<p><strong>There is a <code>1.1rem</code> (17.6px)</strong> — the only fractional-rem body size in the sample. There is <strong>no 14px step</strong> (after 12 comes 16).</p>
+<p>Seven line heights — <code>00</code> 0.95 · <code>0</code> 1.1 · <code>1</code> 1.25 · <code>2</code> 1.375 · <code>3</code> 1.5 · <code>4</code> 1.75 · <code>5</code> 2.</p>
+<p><strong><code>0.95</code> is below 1.</strong> The leading is tighter than the type size, so lines overlap — Open Props is the only sample with a sub-1 line height.</p>
+<p>Eight tracking steps — <code>0</code> <strong>−0.05em</strong> · <code>1</code> 0.025 · <code>2</code> 0.05 · <code>3</code> 0.075 · <code>4</code> 0.15 · <code>5</code> <strong>0.5em</strong> · <code>6</code> 0.75em · <code>7</code> <strong>1em</strong>.</p>
+<p><strong>One negative, seven positive, with a maximum of 1em</strong> — <strong>ten times</strong> Tailwind's maximum (<code>widest</code> 0.1em), and by far the most extreme in the sample.</p>
+<p>Nine weights (100–900), keyed as ordinals <code>1</code>–<code>9</code>.</p>
+<h3 id="borders-up-to-25px">Borders — up to 25px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>--border-size-1</code></td><td style="text-align:center">1px</td></tr><tr><td><code>--border-size-2</code></td><td style="text-align:center">2px</td></tr><tr><td><code>--border-size-3</code></td><td style="text-align:center"><strong>5px</strong></td></tr><tr><td><code>--border-size-4</code></td><td style="text-align:center"><strong>10px</strong></td></tr><tr><td><code>--border-size-5</code></td><td style="text-align:center"><strong>25px</strong></td></tr></tbody></table></div>
+<p><strong>The thickest in the sample.</strong> Of the common 1/2/4, <code>4</code> is missing, and it goes 5, 10, 25 — more than three times thicker than Chakra UI's maximum (8px).</p>
+<h3 id="z-index---layer-">z-index — <code>--layer-*</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>--layer-1</code> – <code>--layer-5</code></td><td style="text-align:center">1 · 2 · 3 · 4 · 5</td></tr><tr><td><strong><code>--layer-important</code></strong></td><td style="text-align:center"><strong>2147483647</strong></td></tr></tbody></table></div>
+<p><strong>Ordinals rather than role names</strong>, in contrast to Chakra UI's 13 steps named by role (<code>dropdown</code>, <code>modal</code>, <code>toast</code>).</p>
+<p><strong><code>--layer-important</code> holds exactly the same value as Chakra's <code>max</code></strong> (int32's maximum).</p>
+<h3 id="easings-113-of-them-in-33-families">Easings — 113 of them, in 33 families</h3>
+<p>Overwhelming, in sample terms. Atlassian has 5, Canvas 6, Cloudscape 5.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">count</th><th>contents</th></tr></thead><tbody><tr><td><code>--ease-1</code>–<code>5</code></td><td style="text-align:center">5</td><td>the basics</td></tr><tr><td><code>--ease-in-*</code> · <code>out-*</code> · <code>in-out-*</code></td><td style="text-align:center">15</td><td>direction × 5</td></tr><tr><td><strong><code>--ease-elastic-*</code></strong></td><td style="text-align:center">5</td><td>elastic</td></tr><tr><td><code>--ease-elastic-in/out/in-out-*</code></td><td style="text-align:center">15</td><td>elastic × direction</td></tr><tr><td><strong><code>--ease-squish-*</code></strong></td><td style="text-align:center">5</td><td>squish (aliases of <code>elastic-in-out</code>)</td></tr><tr><td><strong><code>--ease-spring-*</code></strong></td><td style="text-align:center">5</td><td><strong><code>linear()</code> multi-stop</strong></td></tr><tr><td><strong><code>--ease-bounce-*</code></strong></td><td style="text-align:center">5</td><td>bounce</td></tr><tr><td><strong><code>--ease-step-*</code></strong></td><td style="text-align:center">5</td><td><strong><code>steps(n)</code></strong></td></tr><tr><td>the Penner curves</td><td style="text-align:center">33</td><td><code>quad</code> · <code>cubic</code> · <code>quart</code> · <code>quint</code> · <code>sine</code> · <code>expo</code> · <code>circ</code> × in/out/in-out</td></tr></tbody></table></div>
+<p><strong><code>--ease-spring-3</code> is a multi-stop <code>linear()</code>.</strong></p>
+<pre class="md-code"><code class="language-css">--ease-spring-3: linear(0, 0.009, 0.035 2.1%, 0.141 4.4%, 0.723 12.9%, 0.938 16.7%, 1.017, …);</code></pre>
+<p><strong>The same technique as Atlassian's, except Open Props keeps five spring steps.</strong> Atlassian has one 65-stop curve, used in a single place (<code>patterns/motion.md</code>).</p>
+<p><strong><code>--ease-step-3: steps(4)</code></strong> — a stepped easing as a token. Unique in the sample.</p>
+<p><strong>There are alias families</strong> — <code>--ease-elastic-3</code> is <code>var(--ease-elastic-out-3)</code>, and <code>--ease-squish-2</code> is <code>var(--ease-elastic-in-out-2)</code>. <strong>Short names as aliases, abbreviating the common combinations.</strong></p>
+<h3 id="shadow-recomposed-at-runtime">Shadow — recomposed at runtime</h3>
+<pre class="md-code"><code class="language-css">--shadow-color: 220 3% 15%;
+--shadow-strength: 1%;
+--shadow-1: 0 1px 2px -1px hsl(var(--shadow-color) / var(--shadow-strength-10));</code></pre>
+<p><strong>Colour and strength are separated and combined through HSL.</strong> Change <code>--shadow-color</code> and the tint of all six shadow steps follows.</p>
+<p>The same purpose as Radix Themes referencing a grey token through <code>color-mix(in oklab, …)</code>, except <strong>Open Props assembles the HSL channels directly</strong> (working without an <code>@supports</code> branch).</p>
+<p>There is a separate <code>--inner-shadow-*</code> family (for <code>inset</code> only).</p>
+<h3 id="everything-else">Everything else</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">count</th><th>contents</th></tr></thead><tbody><tr><td><code>--gradient-*</code></td><td style="text-align:center"><strong>31</strong></td><td>finished gradients</td></tr><tr><td><strong><code>--noise-*</code></strong></td><td style="text-align:center"><strong>4</strong></td><td><strong>SVG noise textures (data URIs)</strong></td></tr><tr><td><code>--ratio-*</code></td><td style="text-align:center">6</td><td><code>golden</code> 1.618 · <code>square</code> · <code>portrait</code> · <code>landscape</code> · <code>ultrawide</code> 18/5 · <code>widescreen</code> 16/9</td></tr><tr><td><code>--animation-*</code></td><td style="text-align:center">6</td><td><code>spin</code> · <code>ping</code> · <code>blink</code> · <code>float</code> · <code>pulse</code> · <code>bounce</code></td></tr><tr><td>palettes</td><td style="text-align:center">13 hues × 13 steps</td><td><code>jungle</code> · <code>camo</code> · <code>sand</code> · <code>stone</code> and others</td></tr></tbody></table></div>
+<p><strong><code>--noise-*</code> holds SVG filter noise as data URIs.</strong> Open Props is the only system in the sample to tokenise texture.</p>
+<p><strong>The six <code>--ratio-*</code> match Chakra UI's <code>aspect-ratios</code> exactly in name and value</strong> (including <code>golden</code> 1.618 and <code>ultrawide</code> 18/5) — a coincidence between two unrelated systems.</p>
+<p><strong><code>--animation-*</code> references <code>--ease-*</code></strong> — <code>--animation-bounce</code> is <code>bounce 2s var(--ease-squish-2) infinite</code>. Unlike Tailwind, which pins <code>cubic-bezier</code> directly into its animation definitions (<code>patterns/motion.md</code>).</p>
+<p>The palette hue names are unusual — <code>jungle</code> · <code>camo</code> · <code>sand</code> · <code>stone</code> · <code>choco</code> and so on. A <code>-hsl</code> variant file ships per hue (<code>teal.min.css</code> · <code>camo-hsl.min.css</code>).</p>
+<h2 id="components">Components</h2>
+<p><strong>None.</strong> It ships variables only. There are optional files such as <code>buttons.min.css</code>, but it is not a component library.</p>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>603 CSS custom properties, the most in the sample</strong>, with no build step</li><li><strong>It makes whitespace fluid</strong> (<code>--size-fluid-*</code>, 10 steps, <code>max(min())</code>). Unique in the sample — Pajamas makes only typography fluid</li><li><strong>It keeps a parallel <code>ch</code> family</strong> (<code>--size-relative-*</code>, 17 steps, plus <code>content</code> and <code>header</code>), tokenising the readable measure (45ch, 60ch)</li><li><strong>Negatives are written with a <code>00</code> suffix</strong> (<code>--size-00</code> = −4px)</li><li><strong>113 easings in 33 families</strong> — 18× the runner-up (Canvas's 6). <code>elastic</code> · <code>squish</code> · <code>spring</code> · <code>bounce</code> · <code>step</code> plus every Penner curve</li><li><strong>A <code>steps(n)</code> stepped easing as a token</strong></li><li><strong>Five spring steps as <code>linear()</code></strong> (Atlassian has one)</li><li><strong>Alias families among the easings</strong> (<code>--ease-elastic-3</code> → <code>--ease-elastic-out-3</code>)</li><li><strong>Shadows recomposed from HSL channels</strong> (<code>--shadow-color</code> + <code>--shadow-strength</code>)</li><li><strong>SVG noise textures tokenised</strong> (<code>--noise-1</code>–<code>4</code>)</li><li><strong>A sub-1 line height</strong> (<code>--font-lineheight-00: 0.95</code>)</li><li><strong>Tracking reaching 1em</strong> — ten times Tailwind's maximum</li><li><strong>Borders up to 25px</strong> — the thickest in the sample</li><li><strong>No 4, 8 or 12px in the radii</strong> (2 → 5 → 16 → 32 → 64 → 128)</li><li><strong>A circle expressed as <code>1e5px</code>, in exponential notation</strong></li><li><strong>z-index as five ordinals</strong> — in contrast to Chakra's 13 by role. <code>--layer-important</code> holds the same value as Chakra's <code>max</code></li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>There is no accessibility target at the token or CSS level. <code>--size-content-*</code> (45ch, 60ch) is a readable-measure specification and so is indirectly related, but the file gives no rationale.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>Basis for the Figma kit (false):</strong> no UI kit — only JSON for the Figma Tokens plugin is distributed, and the installation instructions are community-written, confirmed 2026-08-18</li><li>Documentation: https://open-props.style</li><li>Repository: https://github.com/argyleink/open-props</li><li>Tokens: <code>npm pack open-props@1.7.23</code> → <code>package/open-props.min.css</code></li><li>Per-hue files: <code>package/&amp;lt;hue&amp;gt;.min.css</code> · <code>&amp;lt;hue&amp;gt;-hsl.min.css</code></li><li><strong>Open questions:</strong> <del>the actual values of <code>--radius-blob-*</code> and <code>--radius-conditional-*</code></del> (resolved 2026-08-18 — see the radius section, with the six <code>--radius-drawn-*</code> measured alongside), the 31 <code>--gradient-*</code>, every step of the 13-hue palette, and the full values of the six <code>--shadow-*</code> steps</li><li><strong>Figma kit confirmed absent (2026-08-18):</strong> <code>figma_kit: false</code> — source <a href="https://open-props.style" rel="noopener">https://open-props.style</a>. In the documentation site's full text (about 50,000 characters once scripts are stripped) <strong>Figma appears three times</strong>, all about the Figma Tokens distribution files — <code>open-props.figma-tokens.json</code> and <code>open-props.figma-tokens.sync.json</code>, downloaded from unpkg and <strong>fed to the Figma Tokens plugin</strong> — and even the setup instructions are marked &quot;<strong>Community created setup instructions</strong>&quot;. <strong>There is no Figma UI kit containing components or styles</strong> — consistent with its being a token-only system with no components in the first place. Sketch and Adobe are mentioned zero times</li><li><strong>The absence of an accessibility target re-confirmed (2026-08-18):</strong> the strings <code>accessib</code> and <code>WCAG</code> appear <strong>zero times</strong> in the documentation site's full text. Instead it tokenises <code>prefers-contrast</code>, <code>prefers-reduced-transparency</code>, <code>forced-colors</code> and <code>inverted-colors</code> as <code>@custom-media</code>, <strong>providing the user-preference queries</strong> while declaring no conformance target (<code>a11y_target: null</code> retained)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

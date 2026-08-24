@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yoga — Self-Made DesignOps</title>
+<meta name="description" content="Wellhub's system (fitness subscriptions) — a breakpoint is a bundle of three values: width, margin and gutter, elevation splits into platform-specific…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/yoga.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Yoga — Self-Made DesignOps">
+<meta property="og:description" content="Wellhub's system (fitness subscriptions) — a breakpoint is a bundle of three values: width, margin and gutter, elevation splits into platform-specific…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/yoga.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yoga — Self-Made DesignOps">
+<meta name="twitter:description" content="Wellhub's system (fitness subscriptions) — a breakpoint is a bundle of three values: width, margin and gutter, elevation splits into platform-specific…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Yoga",
+ "description": "Wellhub's system (fitness subscriptions) — a breakpoint is a bundle of three values: width, margin and gutter, elevation splits into platform-specific…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/yoga.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Yoga",
+  "applicationCategory": "DesignApplication",
+  "url": "https://gympass.github.io/yoga"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#breakpoints-as-bundles-of-three-layout-values">Breakpoints as bundles of three layout values</a></li><li class="lvl3"><a href="#scales-12-steps-with-a-huge-suffix">Scales — 12 steps, with a huge suffix</a></li><li class="lvl3"><a href="#elevation-in-platform-specific-files">Elevation in platform-specific files</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-pills-throughout-with-states-as-alpha-arithmetic">Buttons — pills throughout, with states as alpha arithmetic</a></li><li class="lvl3"><a href="#inputs-a-material-notch-floating-label-with-the-width-fixed-too-320px">Inputs — a Material notch floating label, with the width fixed too (320px)</a></li><li class="lvl3"><a href="#dialogs-one-width-580px-and-a-purple-tinged-scrim">Dialogs — one width (580px), and a purple-tinged scrim</a></li><li class="lvl3"><a href="#motion-tokens-as-unnamed-arrays">Motion tokens as unnamed arrays</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li class="lvl3"><a href="#figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Wellhub (formerly Gympass)</b><br>partial harvest · web · mobile<br>verified 2026-08-18<br><a href="https://gympass.github.io/yoga" rel="noopener">Official site</a><br><a href="https://github.com/gympass/yoga" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/yoga.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Yoga</span></nav>
+    <h1>Yoga</h1>
+    <p class="doc-lede">Wellhub (formerly Gympass) · consumer · web · mobile</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Wellhub's system (fitness subscriptions) — <strong>a breakpoint is a bundle of three values: width, margin and gutter</strong>, elevation splits into <strong>platform-specific files</strong> (<code>.ios</code>/<code>.android</code>), and the size names run to <code>huge</code> and <code>xhuge</code> across <strong>12 t-shirt steps</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="breakpoints-as-bundles-of-three-layout-values">Breakpoints as bundles of three layout values</h3>
+<pre class="md-code"><code class="language-js">xxs: { width: 0,    margin: 20, gutter: 16 }
+lg:  { width: 1024, margin: 71, gutter: 24 }
+xxxl:{ width: 1600, margin: 71, gutter: 24 }</code></pre>
+<ul class="md-list"><li><strong>Each breakpoint defines its margin and gutter alongside</strong> — most of the sample makes a breakpoint a single width, whereas Yoga <strong>ships the layout whitespace to use at that width bundled with it</strong>. The same coupling as USWDS (breakpoints derived from spacing), made from the opposite direction</li><li><strong><code>margin: 71px</code></strong> — not a multiple of 8 or 4 (throughout lg and above). 71 is a kind of number unique in the sample, and the source gives no rationale</li><li>Eight steps, xxs–xxxl (0 · 360 · 480 · 768 · 1024 · 1200 · 1366 · 1600) — including 1366, a real laptop width</li></ul>
+<h3 id="scales-12-steps-with-a-huge-suffix">Scales — 12 steps, with a <code>huge</code> suffix</h3>
+<pre class="md-code"><code>spacing:  0 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 56 · 72 · 80
+fontSize: 10 · 12 · 14 · 16 · 20 · 24 · 32 · 40 · 48 · 60
+lineHeight: 12 · 16 · 20 · 24 · 28 · 32 · 40 · 48 · 56 · 60 (fixed px)
+radii: sharp 0 · xsmall 4 · small 8 · regular 16 · circle 9999</code></pre>
+<ul class="md-list"><li><strong>The t-shirt names extend into <code>huge</code> and <code>xhuge</code></strong> — past xxxlarge it moves to a new word rather than repeating the x prefix. Twelve t-shirt steps is the most in the sample (a real-world response to the limits of t-shirt extension noted in <code>GLOSSARY.md</code>)</li><li><strong>Line height is a separate scale with the same number of steps as size</strong> (both ten, in fixed px) — the consumer decides the pairing</li><li>The largest square radius step is named <strong><code>regular</code></strong> (16) — a scale that ends at regular rather than large (the name-ordering family in <code>GLOSSARY.md</code>)</li><li>Weights start at <code>light 300</code> — few systems include 300</li></ul>
+<h3 id="elevation-in-platform-specific-files">Elevation in platform-specific files</h3>
+<pre class="md-code"><code>elevations.js · elevations.ios.js · elevations.android.js</code></pre>
+<p><strong>Shadows ship across three files, for web, iOS and Android</strong> — inevitable in a system that supports RN, but Yoga is the only one in the sample that branches elevation by platform (TDS keeps a separate RN package but does not branch its shadows). They are generated from a colour by an <code>elevate()</code> function.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Components were measured from <code>@gympass/yoga@7.144.4</code> (web and RN together, styled-components). Each component's <code>*.theme.js</code> defines its dimensions as token references, so they were resolved through to the real values in <code>yoga-tokens@3.9.0</code>. There are 39 component directories (including Theme), with web and native implementations coexisting under <code>web/</code> and <code>native/</code>.</p>
+<h3 id="buttons-pills-throughout-with-states-as-alpha-arithmetic">Buttons — pills throughout, with states as alpha arithmetic</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">default</th><th style="text-align:center">small</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center">32px</td></tr><tr><td>inline padding</td><td style="text-align:center">24px</td><td style="text-align:center">16px</td></tr><tr><td>radius</td><td style="text-align:center"><strong>9999 (<code>radii.circle</code>)</strong></td><td style="text-align:center">same</td></tr><tr><td>type</td><td style="text-align:center">16px / 24px / <strong>500</strong></td><td style="text-align:center">14px / 16px</td></tr><tr><td>icon</td><td style="text-align:center">24px (8px gap)</td><td style="text-align:center">16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Every button is a pill</strong> — it skips the square radius scale (4 · 8 · 16) and goes straight to <code>radii.circle</code> (9999). Unlike the majority, where buttons and inputs share a radius (Backpack's 8px and so on), <strong>only the button's shape differs</strong> here (the input is 8px).</li><li><strong>Hover does not change the background</strong> — it turns on a glow, <code>box-shadow: 0 4px 8px</code> in <strong>45% alpha of the button's own background colour</strong>. The same family as Bolt (lift plus glow), except Yoga does the shadow without the movement.</li><li><strong>Pressed is 75% alpha of the same colour</strong> — <code>hexToRgb(primary, 0.75)</code>. Rather than keeping a state palette, it <strong>generates state colours by alpha arithmetic</strong> (a minimal form of the SmartHR state-colour-function family).</li><li>Two size steps (48/32) — the same two-step camp as Backpack (36/48), with a larger base.</li><li>The transition is the literal <code>transition: all 0.2s</code> — it does not use the motion tokens (below).</li></ul>
+<h3 id="inputs-a-material-notch-floating-label-with-the-width-fixed-too-320px">Inputs — a Material notch floating label, with the width fixed too (320px)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>width</strong></td><td><strong>a fixed 320px</strong></td></tr><tr><td>height</td><td>52px</td></tr><tr><td>padding</td><td>16px all round</td></tr><tr><td>border · radius</td><td>1px · 8px (<code>radii.small</code>)</td></tr><tr><td>type</td><td>14px / 400 / 20px line height</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The default width is a fixed 320px</strong> — most of the sample follows the parent's width or sets only a min-width (Asphalt 160, Pluralsight 192). A rare case of pinning a finished dimension.</li><li>The label shrinks 14→12px and rises by <strong>translateY(−24px)</strong> (derived by the formula <code>height/2 − 2</code>), and the <code>&amp;lt;legend&amp;gt;</code>'s <code>max-width</code> switches from 0 to <code>max-content</code> to <strong>cut a notch in the border</strong> — a floating label of the same Material lineage as MUI's, implemented with fieldset/legend.</li><li>The label transition is <strong>500ms <code>cubic-bezier(0, 0.75, 0.1, 1)</code></strong> — 2.5× the button's 200ms, making the label float the longest transition in the system.</li></ul>
+<h3 id="dialogs-one-width-580px-and-a-purple-tinged-scrim">Dialogs — one width (580px), and a purple-tinged scrim</h3>
+<ul class="md-list"><li>A <strong>single 580px width</strong> (no variants) · min-height 160px · radius 16px (<code>radii.regular</code> — <strong>the largest square step, used as-is</strong>).</li><li>Padding: 40px on top (24px when there is a close button), 32px inline and at the bottom.</li><li><strong>The scrim is <code>rgba(35, 27, 34, 0.48)</code></strong> — not pure black but <strong>48% of #231B22, a purple-tinged dark</strong>. It parts from the achromatic-scrim majority.</li><li><strong>There is no entrance animation</strong> — zero keyframes and zero transitions. It does only FocusLock, a portal and moving the initial focus.</li><li>The close button is a 40px container (spacing.xxlarge) holding a 20px icon (spacing.medium).</li></ul>
+<h3 id="motion-tokens-as-unnamed-arrays">Motion tokens as unnamed arrays</h3>
+<pre class="md-code"><code class="language-js">duration: [200, 500]
+timing: [[0, 0.75, 0.1, 1]]</code></pre>
+<p>Consumption is <strong>by index</strong>, <code>transition.duration[1]</code> and <code>transition.timing[0]</code> — the only unnamed-array form among the samples that tokenise motion, and the source says nothing about what each slot is for (observed use: 500ms for the floating label; the button uses a literal 0.2s rather than the token). Tokenising the easing and yet keeping literals alongside is the same drift as Backpack (no tokens plus literals), by a different route.</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Every button a pill (9999)</strong> with a self-coloured hover glow and <strong>pressed at 75% alpha</strong> — state colours from alpha arithmetic rather than a palette</li><li><strong>A fixed 320px default input width</strong> — rare in the sample</li><li><strong>A fieldset/legend notch floating label</strong>, with a 500ms curve of its own</li><li>A dialog scrim of <code>rgba(35,27,34,.48)</code> — a purple-tinged brand scrim</li><li><strong>Motion tokens as unnamed arrays</strong> (consumed as <code>duration[1]</code>) — unique in the sample</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Breakpoint = width + margin + gutter bundled</strong> — unique in the sample</li><li><code>margin: 71px</code> — an off-grid value</li><li><strong>Twelve t-shirt steps</strong> (<code>huge</code>/<code>xhuge</code>) — the most steps in the sample</li><li>Elevation in three platform-specific files — unique in the sample</li><li>The largest square radius step is named <code>regular</code></li><li>Both platforms, <code>[web, mobile]</code> (RN supported alongside)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified</del> → <strong>Confirmed absent (2026-08-18, headless render).</strong></p>
+<p>Even when rendered, Yoga <strong>publishes no accessibility documentation.</strong> The documentation site's top level is <strong>just three items</strong> — Guidelines · Components · System — and within Guidelines the sidebar is <strong>a single Design Tokens group</strong>: Borders · Breakpoints · Colors · Elevations · Font-Sizes · Font-Weights · Fonts · Line-Heights · Shapes · Spacing · Typography. There is no accessibility entry at all.</p>
+<p>Render paths checked (the strings <code>WCAG</code> and <code>accessib</code> appear zero times on each):</p>
+<ul class="md-list"><li>https://gympass.github.io/yoga/ — the landing page, introducing only the three sections</li><li>https://gympass.github.io/yoga/guidelines/tokens/borders — the Guidelines sidebar expanded</li><li>https://gympass.github.io/yoga/system/getting-started/ — the System section</li></ul>
+<p>The landing page describes Guidelines as &quot;Design principles, practical patterns and high quality design resources&quot;, while what is actually beneath it is <strong>a token reference and nothing else</strong> — a case of the claim and the contents diverging. <strong>Classified C, confirmed.</strong></p>
+<h3 id="figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</h3>
+<p>This is the basis for <code>figma_kit: false</code>. Rendering the three pages above yields <strong>the string <code>figma</code> zero times</strong>. There is no download or link on the documentation site corresponding to the &quot;high quality design resources&quot; the landing page promises.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @gympass/yoga-tokens@3.9.0</code> → <code>esm/global/</code></li><li>Components: <code>@gympass/yoga@7.144.4</code> → <code>esm/{Button,Input,Dialog}/</code> <code>*.theme.js</code> plus <code>web/*.js</code> (used in the 2026-08-18 deep pass)</li><li>Documentation site: https://gympass.github.io/yoga (headless render, 2026-08-18 — Guidelines is a token reference only)</li><li><strong>Open questions:</strong> the colour palette, <del>the component list</del> (resolved 2026-08-18 — 39 directories, the deep pass), <del>the Figma kit</del> and <del>the accessibility target</del> (rendered 2026-08-18 — both confirmed absent, sections above), the rationale for the <code>71px</code> margin, and dark mode</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

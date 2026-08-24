@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LeafyGreen — Self-Made DesignOps</title>
+<meta name="description" content="MongoDB's system — the colour tokens are a three-dimensional property × role × state structure (background.primary.hover), and the spacing numbers are px…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/leafygreen.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="LeafyGreen — Self-Made DesignOps">
+<meta property="og:description" content="MongoDB's system — the colour tokens are a three-dimensional property × role × state structure (background.primary.hover), and the spacing numbers are px…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/leafygreen.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LeafyGreen — Self-Made DesignOps">
+<meta name="twitter:description" content="MongoDB's system — the colour tokens are a three-dimensional property × role × state structure (background.primary.hover), and the spacing numbers are px…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "LeafyGreen",
+ "description": "MongoDB's system — the colour tokens are a three-dimensional property × role × state structure (background.primary.hover), and the spacing numbers are px…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/leafygreen.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "LeafyGreen",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.mongodb.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#colour-is-three-dimensional">Colour is three-dimensional</a></li><li class="lvl3"><a href="#spacing-the-number-is-px-25">Spacing — the number is px × 25</a></li><li class="lvl3"><a href="#breakpoints">Breakpoints</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-leafygreen-uibutton2521">Buttons (@leafygreen-ui/button@25.2.1)</a></li><li class="lvl3"><a href="#inputs-text-input1623-form-field409">Inputs (text-input@16.2.3 → form-field@4.0.9)</a></li><li class="lvl3"><a href="#modals-leafygreen-uimodal2201-a-native-dialog-plus-starting-style">Modals (@leafygreen-ui/modal@22.0.1) — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>MongoDB</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.mongodb.design" rel="noopener">Official site</a><br><a href="https://github.com/mongodb/design" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/leafygreen.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>LeafyGreen</span></nav>
+    <h1>LeafyGreen</h1>
+    <p class="doc-lede">MongoDB · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>MongoDB's system — the colour tokens are a <strong>three-dimensional property × role × state structure</strong> (<code>background.primary.hover</code>), and the spacing numbers are <strong>px × 25</strong> (<code>spacing[100]</code> = 4px).</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="colour-is-three-dimensional">Colour is three-dimensional</h3>
+<pre class="md-code"><code class="language-js">Property: Background · Border · Icon · Text
+Variant:  Primary · Secondary · Tertiary · InversePrimary · Info · Warning ·
+          Error · Success · Link · OnInfo · OnError · OnSuccess … (17 of them)
+InteractionState: Default · Hover · Focus
+→ color[theme][property][variant][state]</code></pre>
+<p><strong>A structure unique in the sample, holding 4 properties × 17 roles × 3 states as enumerated axes.</strong> Most systems attach the state as a suffix to a single semantic name (<code>border-hover</code>); LeafyGreen <strong>separates state into its own dimension</strong> and reads it as a lookup. The opposite solution to the same problem Ring UI solved by enumerating compound states in the name.</p>
+<h3 id="spacing-the-number-is-px-25">Spacing — the number is px × 25</h3>
+<pre class="md-code"><code class="language-js">spacing = { 0:0, 25:1, 50:2, 100:4, 150:6, 200:8, 300:12, 400:16, 500:20, 600:24,
+            800:32, 900:36, 1000:40, 1200:48, 1400:56, 1600:64, 1800:72 }
+            (+ legacy keys 1–7 = 4/8/16/24/32/64/88 coexisting)</code></pre>
+<p>Since <code>100</code> is 4px, <strong>the number is px × 25</strong> — adding a <strong>seventh numeric basis</strong> to the &quot;sixteen ways to say the same 16px&quot; table in <code>tokens/scales.md</code> (real px / tens / rem×100 / rem×12.5 / rem×200 / multiples of 4 / multiples of 8 / ordinals / <strong>px×25</strong>).</p>
+<p><del>The scale ends at 24px — anything larger is handled without tokens.</del> (Corrected 2026-08-18 — re-measuring the same tokens@4.2.2 shows it <strong>continues to 1800 (72px)</strong>. The original record misread the <code>borderRadius</code> map (0–600, see the deep-dive below) as spacing. The legacy ordinal keys 1–7 coexisting in the same object puts it in <strong>a dual-naming transition</strong> state.)</p>
+<h3 id="breakpoints">Breakpoints</h3>
+<p><code>Mobile 320 · Tablet 768 · Desktop 1024 · XLDesktop 1440</code> — four steps. Unlike USWDS these are independent values rather than derived from the spacing.</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Components are split across many packages. The emotion style JS of <code>@leafygreen-ui/button@25.2.1</code> · <code>text-input@16.2.3</code> (whose styling is delegated to its dependency <code>form-field@4.0.9</code>) · <code>modal@22.0.1</code> was parsed. The shared tokens are <code>tokens@4.2.2</code>.</p>
+<h3 id="buttons-leafygreen-uibutton2521">Buttons (<code>@leafygreen-ui/button@25.2.1</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">xsmall</th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">22px</td><td style="text-align:center">28px</td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center">48px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center">7px</td><td style="text-align:center">11px</td><td style="text-align:center">11px</td><td style="text-align:center">15px</td></tr><tr><td>Type</td><td style="text-align:center"><strong>12px uppercase</strong></td><td style="text-align:center">13/16px</td><td style="text-align:center">13px or 16px</td><td style="text-align:center">18px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The padding comment states the border subtraction</strong> — the code reads <code>padding: 0 11px; // 12px - 1px border</code>. The 1px subtraction MUI applies only to outlined is applied to every variant here (the border is always <code>1px solid transparent</code>).</li><li>Radius <strong>6px</strong>, with the inner state overlay at <strong>5px = 6−1</strong> — even the radius inside the border is compensated.</li><li><strong>Only xsmall (22px) is uppercase, with 0.4px letter-spacing and semiBold</strong> — a rare case of a size variant changing the typographic style as well.</li><li>The base type is a prop (<code>baseFontSize</code>) toggling 13/16px — the token section's dual body1 (13) / body2 (16) basis surfacing as a component API.</li><li>Transition <code>all 150ms ease-in-out</code> (<code>transitionDuration.default</code>). <strong>No min-width.</strong></li><li>Six variants: default · primary · primaryOutline · danger · dangerOutline · baseGreen.</li></ul>
+<h3 id="inputs-text-input1623-form-field409">Inputs (<code>text-input@16.2.3</code> → <code>form-field@4.0.9</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">xsmall</th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">22px</td><td style="text-align:center">28px</td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center">48px</td></tr><tr><td>Horizontal padding</td><td style="text-align:center">8px</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Buttons and inputs share all four heights, 22/28/36/48</strong> — a wider alignment than Backpack (which shares two, 36/48). The 1px border and 6px radius match the button too.</li><li>The label is a <strong>separate block element</strong> rather than floating (<code>Label</code> from the <code>typography</code> package).</li><li>Focus and hover are <strong>box-shadow ring tokens</strong> (<code>focusRing</code> / <code>hoverRing</code>) rather than a border colour — <code>transition-property: border-color, box-shadow</code>.</li></ul>
+<h3 id="modals-leafygreen-uimodal2201-a-native-dialog-plus-starting-style">Modals (<code>@leafygreen-ui/modal@22.0.1</code>) — a native <code>&amp;lt;dialog&amp;gt;</code> plus @starting-style</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th>Width</th></tr></thead><tbody><tr><td>small</td><td>400px</td></tr><tr><td><strong>default</strong></td><td><strong>600px</strong></td></tr><tr><td>large</td><td>720px → <strong>960px</strong> (above 1025px)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Only large is responsive across two steps</strong> (720/960) — a breakpoint intervening in a width step.</li><li>Padding <strong>40px 36px</strong> (<code>spacing[1000]</code> / <code>spacing[900]</code>) — a rare arrangement with more vertical than horizontal.</li><li>Radius <strong>24px</strong> (<code>borderRadius[600]</code>) — four times the button and input (6px). <strong><code>borderRadius</code> exists as its own nine-step scale on the same px×25 numbering as the spacing</strong> (0–600 = 24px) — one of the few samples to tokenise radii as a full scale.</li><li>Transitions: <code>opacity 150ms ease-in-out</code> plus <strong><code>overlay</code> / <code>display 150ms allow-discrete</code></strong> — the first sample to handle <code>&amp;lt;dialog&amp;gt;</code> display transitions with 2024-and-later CSS, together with <code>@starting-style</code>. The scrim is <code>transparentize(0.4, black)</code> = rgba(0,0,0,0.6), also 150ms.</li><li>The close button's position is a literal <strong>18px</strong> rather than a token.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs share all four heights (22/28/36/48)</strong> — the most steps aligned in the sample</li><li><strong>Border-subtracted padding written into a comment</strong>, plus the inner radius compensated at 5 = 6−1</li><li><strong>Radii as an independent nine-step scale on px×25 numbering</strong> — naming unified with the spacing</li><li><strong><code>&amp;lt;dialog&amp;gt;</code> + @starting-style + allow-discrete</strong> — at the front of adopting current CSS</li><li>A single transition duration (150ms) running through buttons, inputs, modals and the scrim alike</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>Three-dimensional colour (property × role × state)</strong> — unique in the sample</li><li>Spacing number = px × 25 — the seventh numeric basis</li><li><del>The scale ends at 24px</del> (corrected 2026-08-18 — it runs to 1800 = 72px; see the token section)</li><li>An <code>On*</code> family in the roles (OnInfo, OnError…) — vocabulary borrowed from M3</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.1 + Section 508 (resolved 2026-08-18 — no level is stated).</strong> Source: <code>mongodb.design/foundations/accessibility</code> — &quot;accessibility requirements outlined in Section 508 of the WCAG 2.1&quot;. <strong>The original wording conflates the two standards</strong> (Section 508 is not a sub-clause of WCAG) — it is transcribed as written.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @leafygreen-ui/tokens@4.2.2</code> → <code>dist/esm/index.js</code></li><li>The palette is a separate package, <code>@leafygreen-ui/palette@5.0.2</code></li><li>Component deep-dive: <code>@leafygreen-ui/button@25.2.1</code> · <code>text-input@16.2.3</code> · <code>form-field@4.0.9</code> · <code>modal@22.0.1</code> (parsed from the dist/esm emotion styles, 2026-08-18)</li><li><strong>Still to confirm:</strong> real palette values, the full type scale (only body1 13/20 and body2 16/28 confirmed), and the component list (split across many packages — no exhaustive listing yet)</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>mongodb.design</code> → <code>figma.com/design/4h2VwjCuJUbeZ7hzD2J1rq/LeafyGreen-Design-System</code></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

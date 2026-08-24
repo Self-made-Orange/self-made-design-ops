@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audi UI — Self-Made DesignOps</title>
+<meta name="description" content="Audi's brand web UI — the only sample in which the modular scale's ratio grows with the viewport class (1.14→1.25), where the global easing is a single…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/audi-ui.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Audi UI — Self-Made DesignOps">
+<meta property="og:description" content="Audi's brand web UI — the only sample in which the modular scale's ratio grows with the viewport class (1.14→1.25), where the global easing is a single…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/audi-ui.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Audi UI — Self-Made DesignOps">
+<meta name="twitter:description" content="Audi's brand web UI — the only sample in which the modular scale's ratio grows with the viewport class (1.14→1.25), where the global easing is a single…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Audi UI",
+ "description": "Audi's brand web UI — the only sample in which the modular scale's ratio grows with the viewport class (1.14→1.25), where the global easing is a single…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/audi-ui.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Audi UI",
+  "applicationCategory": "DesignApplication",
+  "url": "https://styleguide.audi.com/hub/271"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#type-a-modular-scale-ratio-per-viewport">Type — a modular-scale ratio per viewport</a></li><li><a href="#motion-one-global-easing">Motion — one global easing</a></li><li><a href="#colour-an-achromatic-brand">Colour — an achromatic brand</a></li><li><a href="#other-figures">Other figures</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-backlog-cleared-an-effective-height-of-51px-and-that-height-is-responsive">Buttons — backlog cleared: an effective height of 51px, and that height is responsive</a></li><li class="lvl3"><a href="#text-fields-an-underline-with-a-floating-label">Text fields — an underline with a floating label</a></li><li class="lvl3"><a href="#modals-not-an-overlay-but-a-replacement-surface">Modals — not an overlay but a replacement surface</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Audi</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://styleguide.audi.com/hub/271" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/audi-ui.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Audi UI</span></nav>
+    <h1>Audi UI</h1>
+    <p class="doc-lede">Audi · automotive-brand · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Audi's brand web UI — the only sample in which <strong>the modular scale's ratio grows with the viewport class</strong> (1.14→1.25), where the global easing is <strong>a single curve</strong>, and where colour is effectively <strong>an achromatic ramp plus the brand red</strong>. Being a car maker's <strong>brand web</strong> rather than an in-car HMI, it sits on a different axis from Android Automotive and CarPlay.</p>
+<h2 id="type-a-modular-scale-ratio-per-viewport">Type — a modular-scale ratio per viewport</h2>
+<pre class="md-code"><code class="language-scss">$aui-modular-scale: (
+  default: ( base: 16px, ratio: 1.14 ),
+  small:   (            ratio: 1.17 ),
+  large:   ( base: 18px, ratio: 1.21 ),
+  huge:    ( base: 20px, ratio: 1.25 ),
+);</code></pre>
+<p><strong>The larger the screen, the larger both the base and the ratio</strong> — from 16px/1.14 to 20px/1.25. The corpus's other modular-scale samples (Odyssey and the rest) fix the ratio; in Audi <strong>the ratio itself is responsive</strong>. Hierarchical contrast widens on large screens.</p>
+<h2 id="motion-one-global-easing">Motion — one global easing</h2>
+<pre class="md-code"><code class="language-scss">$aui-easing: cubic-bezier(0.75, 0.02, 0.5, 1);</code></pre>
+<p>There is <strong>only one</strong> easing token (no differentiation by direction or intensity). With x1 = 0.75 it starts late and rushes through the middle — far more dramatic than Material Legacy's (0.4, 0, 0.2, 1). Field transitions take 0.25s.</p>
+<h2 id="colour-an-achromatic-brand">Colour — an achromatic brand</h2>
+<ul class="md-list"><li>Chromatic: <strong>red <code>#bb0a30</code> (the brand) · yellow · green</strong> — three colours in all, doubling as the state colours</li><li>Achromatic: <code>gray10</code> to <code>gray95</code>, <strong>11 steps</strong>, plus black and white — the number corresponds to the lightness percentage (gray95 = <code>#f2f2f2</code>)</li><li>The same German-car-brand axis as Porsche, but Porsche uses modern CSS like <code>light-dark()</code> while Audi is a 2019-era SCSS variable system (frozen at 1.0.0-alpha.2)</li></ul>
+<h2 id="other-figures">Other figures</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>base unit</td><td>4px (<code>$aui-base-unit</code>), rem root 16px</td></tr><tr><td>field height</td><td><code>unit(10)</code> = 40px</td></tr><tr><td>icons</td><td>24/48px plus a <strong>&quot;system&quot; variant at 23/45px</strong> (1.1px stroke)</td></tr><tr><td>grid</td><td>12 columns, gutter unit(1), container offset <strong>4.375%</strong></td></tr><tr><td>breakpoints</td><td>7 steps (480–1584px)</td></tr><tr><td>z-index</td><td>header 100 · dropdown 1000 — only two</td></tr></tbody></table></div>
+<ul class="md-list"><li><code>$aui-circle-smoothing-factor: 2</code> — <strong>a smoothing coefficient that draws circles at twice the size and scales them down, to work around Chrome's sub-pixel rendering</strong>, exists as a variable. A rare case of a rendering-bug workaround rising into the token layer.</li><li>53 component directories, each with its own <code>*-themes.scss</code> — the theme split into a file per component.</li><li>Typefaces <code>AudiTypeScreen</code> and <code>AudiTypeExtended</code> — a separate Extended face for display (the same type as Asphalt's Extended split).</li></ul>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><strong>These are measurements of a snapshot frozen in 2017-11</strong> — <code>@audi/audi-ui@1.0.0-alpha.2</code> is the final npm release and the repository has been deleted, so the values below are a historical sample, not the current Audi specification. The real values were verified against the <strong>compiled <code>dist/audi-ui.css</code> bundled alongside the SCSS source</strong>.</p>
+<h3 id="buttons-backlog-cleared-an-effective-height-of-51px-and-that-height-is-responsive">Buttons — backlog cleared: an effective height of 51px, and that height is responsive</h3>
+<p>The actual declarations in the compiled CSS:</p>
+<pre class="md-code"><code class="language-css">html { font-size: 16px; }                 /* ≥1264px: 18px · ≥1584px: 20px */
+.aui-button {
+  font-size: 0.9375rem;                   /* 15px at a 16px root */
+  line-height: 1.5rem;                    /* 24px */
+  padding: 0.8666666667em 0 0.8em;        /* 13px / 12px at 15px type */
+  border: 1px solid transparent;
+}</code></pre>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>viewport</th><th style="text-align:center">root</th><th style="text-align:center">button type</th><th style="text-align:center">effective height (line height + padding + border)</th></tr></thead><tbody><tr><td>default</td><td style="text-align:center">16px</td><td style="text-align:center">15px</td><td style="text-align:center"><strong>51px</strong> (24+13+12+2)</td></tr><tr><td>≥1264px</td><td style="text-align:center">18px</td><td style="text-align:center">16.875px</td><td style="text-align:center"><strong>≈57.1px</strong></td></tr><tr><td>≥1584px</td><td style="text-align:center">20px</td><td style="text-align:center">18.75px</td><td style="text-align:center"><strong>≈63.3px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><del>em-based padding, so it depends on the font size</del> — settled: type and line height are in rem while the padding is in em, so <strong>the button height itself grows with the root font (16→18→20px), 51→57→63px.</strong> The per-viewport modular scale (the type section above) reaches right through to the component dimensions — a different layer entirely from the fixed-px height camp.</li><li><strong>The block padding is asymmetric, 13/12px</strong> — 1px more on top (the trace of an optical correction for the typeface).</li><li><strong>The default variant is a text button</strong> — transparent background, transparent border and <strong>zero inline padding</strong>. Only with <code>--primary</code> (a black fill) or <code>--secondary</code> (a border) does it gain 32px of inline padding (= root × 2, itself responsive at 36/40px). The opposite pole from the majority, where a filled button is the default.</li><li><strong>Radius 0</strong> — square. And the button colour is <strong>black</strong>, not the brand red.</li><li>disabled is opacity 0.30 — lower than Astro's and Atlassian's 40%.</li></ul>
+<h3 id="text-fields-an-underline-with-a-floating-label">Text fields — an underline with a floating label</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>form</td><td><strong>underline only</strong> (<code>border-bottom</code> 1px rgba(0,0,0,.3)) — no background, no box</td></tr><tr><td>min-height</td><td><code>unit(10)</code> = 2.5rem = <strong>40px at a 16px root</strong> (→ responsive 45/50px)</td></tr><tr><td>label</td><td><strong>floating</strong> — rises and shrinks to 0.75rem (12px)</td></tr><tr><td>states</td><td>hover/focus/dirty all rgba(0,0,0,.8) — <strong>an opacity ramp instead of colour</strong></td></tr><tr><td>transition</td><td>0.25s, the global easing</td></tr></tbody></table></div>
+<ul class="md-list"><li>An underline field with no border or background is contemporary with first-generation Material practice (2017) — the same form as MUI's <code>standard</code> variant, here as the default.</li><li>State is expressed not by a change of hue but by <strong>an alpha ramp of black</strong> (.3→.8) — the achromatic brand principle applied to field states.</li></ul>
+<h3 id="modals-not-an-overlay-but-a-replacement-surface">Modals — not an overlay but a replacement surface</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>default form</td><td><strong>the dialog itself is 100vh of <code>#333333</code> (gray20), full-bleed</strong> — not a scrim plus a card</td></tr><tr><td>body width</td><td><strong>62.5%</strong> at ≥600px, max <strong>1200px</strong></td></tr><tr><td>variants</td><td>fullpage / window (80%, a dark panel over a transparent background) / layer (entering with translateY 10px)</td></tr><tr><td>transition</td><td>a fade over <strong>0.4s with a 0.4s delay</strong> (delay 0 only on the morph variant) — the global easing</td></tr><tr><td>close button</td><td><strong>45px → 81px</strong> (≥600px) — with a &quot;sync with JS&quot; comment</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The modal is a dark, full-bleed surface over a light page</strong> — a brand gesture that replaces the whole screen, unlike the entire blur-the-background and scrim camp.</li><li>The 0.4s delay is a two-part choreography that brings the content up once the background transition has finished — 0.8s in total, the slowest modal in the sample (slower even than Astro's 0.5s).</li><li>Values shared with JS, such as the 45/81px close button, <strong>are kept in sync by comment</strong> — a hand-maintained contract from the pre-token generation, preserved intact.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>A responsive effective button height</strong> (51→57→63px) — a dual em/rem scale reaching into the dimensions</li><li><strong>The default button is a text button with zero inline padding</strong> — filled is the modifier</li><li><strong>Radius 0 throughout</strong> plus state as an alpha ramp — the achromatic, square-cornered extreme of the brand</li><li><strong>The modal as a replacement surface</strong> (a 100vh dark field) with a 0.4s + 0.4s two-part choreography</li><li>Asymmetric block padding, 13/12 — a 1px optical correction</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A modular-scale ratio per viewport</strong> (1.14→1.25) — unique in the corpus</li><li>One global easing — the extreme of minimalist motion</li><li>An 11-step achromatic ramp plus the brand red — a monotone car brand</li><li>Integer/non-integer icon pairs (24/23, 48/45) — traces of optical correction</li><li>Development stopped at alpha (1.0.0-alpha.2, Apache-2.0)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified. (An <code>sr-only</code> component exists — a screen-reader-only utility.)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>URL corrected (confirmed 2026-08-18):</strong> the old <code>github.com/audi/audi-ui</code> is an <strong>HTTP 404</strong> (the repository was deleted). <code>url</code> now points to the successor Frontify brand hub and <code>repo</code> is <code>null</code> — npm <code>@audi/audi-ui@1.0.0-alpha.2</code> is the only surviving source</li><li><del>Why development stopped, and whether a successor exists</del> → <strong>timeline settled (2026-08-18).</strong> npm <code>@audi/audi-ui</code>'s <strong>last release was 1.0.0-alpha.2 in 2017-11</strong> (with no deprecated flag) → GitHub <code>audi/audi-ui</code> was <strong>archived 2024-11-25 and then deleted</strong> (the API now returns 404; the archive banner is visible in the Wayback snapshot of 2025-01-08) → the React Storybook (react.ui.audi) has been offline since 2025-01-24. <strong>The successor is not open source but a gated internal portal</strong> — the old <code>audi.com/ci</code> redirects to a Frontify brand hub (styleguide.audi.com/hub/271), and a separate designsystem.audi.com (login required) is in operation. Only the fonts and icons survive publicly, in the <code>oneaudi</code> org (audi-type, audi-icon). <strong>No official deprecation announcement was found</strong> — the &quot;why&quot; remains unverified.</li><li><strong>Open questions:</strong> <del>measuring the button height (em-based padding makes it depend on the font size)</del> (resolved 2026-08-18 — the components deep pass: 51px at a 16px root, responsive 51→57→63px, verified against the compiled <code>dist/audi-ui.css</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

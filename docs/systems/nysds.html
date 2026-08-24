@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>New York State Design System (NYSDS) — Self-Made DesignOps</title>
+<meta name="description" content="New York State government — the tenth government sample (a state layer distinct from the US federal USWDS). Its spacing step names are percentages with…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/nysds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="New York State Design System (NYSDS) — Self-Made DesignOps">
+<meta property="og:description" content="New York State government — the tenth government sample (a state layer distinct from the US federal USWDS). Its spacing step names are percentages with…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/nysds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="New York State Design System (NYSDS) — Self-Made DesignOps">
+<meta name="twitter:description" content="New York State government — the tenth government sample (a state layer distinct from the US federal USWDS). Its spacing step names are percentages with…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "New York State Design System (NYSDS)",
+ "description": "New York State government — the tenth government sample (a state layer distinct from the US federal USWDS). Its spacing step names are percentages with…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/nysds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "New York State Design System (NYSDS)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://designsystem.ny.gov"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#spacing-percentage-naming-with-8px-100">Spacing — percentage naming with 8px = 100</a></li><li><a href="#radii-1776px">Radii — 1776px</a></li><li><a href="#other">Other</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#variable-architecture-private-and-public-hooks-at-once">Variable architecture — private and public hooks at once</a></li><li class="lvl3"><a href="#buttons-nys-button-fixed-heights-of-404856">Buttons (nys-button) — fixed heights of 40/48/56</a></li><li class="lvl3"><a href="#inputs-nys-textinput-the-size-axis-is-width-not-height">Inputs (nys-textinput) — the size axis is width, not height</a></li><li class="lvl3"><a href="#modals-nys-modal-439px">Modals (nys-modal) — 439px</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>New York State Government (ITS-HCD)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://designsystem.ny.gov" rel="noopener">Official site</a><br><a href="https://github.com/ITS-HCD/nysds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nysds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>New York State Design System (NYSDS)</span></nav>
+    <h1>New York State Design System (NYSDS)</h1>
+    <p class="doc-lede">New York State Government (ITS-HCD) · government · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>New York State government — the <strong>tenth government sample</strong> (a state layer distinct from the US federal USWDS). Its spacing step names are <strong>percentages with 8px as 100</strong>, and its <code>round</code> radius value is <strong><code>1776px</code></strong> (&quot;Ever upward!&quot; — the year of the Declaration of Independence), planting the state's identity in the slot for an infinite radius.</p>
+<h2 id="spacing-percentage-naming-with-8px-100">Spacing — percentage naming with 8px = 100</h2>
+<pre class="md-code"><code>50 = 4px   100 = 8px   150 = 12px   200 = 16px   250 = 20px   300 = 24px
+400 = 32px 500 = 40px  600 = 48px   700 = 56px   800 = 64px   1200 = 96px</code></pre>
+<p>The step numbers are <strong><code>px ÷ 8 × 100</code></strong> — naming from which the value can be back-computed (the same family as Braid's grid multiples and Italia's <code>1x–24x</code>, with 8px percentages as the basis). The values themselves are 12 steps of multiples of 4px, reinforcing the <strong>government 4px camp</strong> once again.</p>
+<h2 id="radii-1776px">Radii — 1776px</h2>
+<pre class="md-code"><code class="language-json">&quot;round&quot;: { &quot;$value&quot;: &quot;1776px&quot;, &quot;$description&quot;: &quot;Ever upward!&quot; }</code></pre>
+<p>Into the slot for the excess value that produces a pill (the corpus's samples: <code>9999px</code> · <code>999px</code> · <code>calc(infinity*1px)</code> — the pill section of GLOSSARY) it puts <strong>the New York State motto and the year of the Declaration of Independence</strong>. Functionally identical to 9999px, but <strong>the only sample with a cultural signature inside a token value</strong>. The rest are six steps of 1/2/4/8/12/16px.</p>
+<h2 id="other">Other</h2>
+<ul class="md-list"><li>The tokens use DTCG syntax (<code>$value</code> / <code>$type</code> / <code>$description</code>) — one of the two government DTCG samples, with Italia</li><li>Five typeface families: sans <strong>Proxima Nova</strong> (commercial) · serif Noto Serif · <strong>alt Oswald</strong> · mono · <strong>agency</strong> — there is a separate typeface slot per agency</li><li><code>form.width</code> sm/md/lg = 88/200/384px — form widths tokenised (the Cloudscape family)</li><li>Distribution: Web Components (<code>@nysds/components</code>) plus Angular plus <strong>an MCP server</strong> (<code>@nysds/mcp-server</code>) — <strong>the first sample of a design system officially distributing an MCP server</strong></li></ul>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured from <code>@nysds/components@1.20.0</code> — Lit web components, with the styles inside CSS strings in the <code>dist/nysds.es.js</code> bundle. <strong>All 48 tags were confirmed exhaustively</strong> from <code>custom-elements.json</code> (including government-site skeleton components like <code>nys-skipnav</code> · <code>nys-processlist</code> · <code>nys-stepper</code> · <code>nys-unavheader</code>).</p>
+<h3 id="variable-architecture-private-and-public-hooks-at-once">Variable architecture — private and public hooks at once</h3>
+<p>Every value is a <strong>three-level fallback chain</strong>: <code>--_nys-button-*</code> (the underscore convention for private) ← <code>--nys-button-*</code> (a public override hook) ← <code>--nys-*</code> (a global token). Unlike Backpack, which forbids overrides with <code>--bpk-private-*</code>, this <strong>distributes a private layer and a public hook in the same component</strong> — a &quot;do not touch&quot; marking and a &quot;welcome&quot; marking cohabiting.</p>
+<h3 id="buttons-nys-button-fixed-heights-of-404856">Buttons (<code>nys-button</code>) — fixed heights of 40/48/56</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">sm</th><th style="text-align:center">md (default)</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center"><strong>56px</strong></td></tr><tr><td>Padding</td><td style="text-align:center"><code>calc(8−2)</code> / <code>calc(16−2)</code></td><td style="text-align:center">12/20 −2px</td><td style="text-align:center">16/24 −2px</td></tr><tr><td>Radius</td><td style="text-align:center"><strong>12px</strong> (<code>--nys-radius-xl</code>)</td><td style="text-align:center">same</td><td style="text-align:center">same</td></tr><tr><td>Type</td><td style="text-align:center">16px / 24px / <strong>600</strong> Proxima Nova</td><td style="text-align:center">same</td><td style="text-align:center">same</td></tr></tbody></table></div>
+<ul class="md-list"><li>Heights are <strong>fixed directly to the size tokens</strong> <code>--nys-size-500/600/700</code> — not derived.</li><li>A permanent 2px border plus <strong>the border subtracted from the padding</strong> (<code>calc(space − border)</code>) — the same dimension-preserving arithmetic as Kaizen, showing up in a government system too.</li><li>Five variants: <code>filled / outline / ghost / text</code> plus <strong><code>strong</code></strong>.</li><li>Focus: 2px <code>#004dd1</code> (<code>--nys-color-focus</code>) with a 2px offset.</li></ul>
+<h3 id="inputs-nys-textinput-the-size-axis-is-width-not-height">Inputs (<code>nys-textinput</code>) — the size axis is width, not height</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td><strong>height</strong></td><td><strong>a single 40px</strong> (<code>--nys-size-500</code>)</td></tr><tr><td>Width variants</td><td><strong>sm 88 / md 200 / lg 384px / full</strong> (<code>--nys-form-width-*</code>)</td></tr><tr><td>Radius</td><td><strong>4px</strong> (<code>--nys-radius-md</code>)</td></tr><tr><td>Border</td><td>1px <code>#909395</code></td></tr><tr><td>Padding · type</td><td>8px · 16px/24px/400, tracking <strong>0.044px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are no height variants, only width variants</strong> — the token section's <code>form.width</code> (88/200/384) turns out to be this component's size axis. The input's 40px aligns only with the small button (out of step with the 48px default).</li><li>Hover <strong>draws an additional 1px black outline</strong> so the border appears to thicken — without changing the border width, so there is no layout shift.</li><li>A <code>0.044px</code> tracking token — a rare case of tokenising sub-pixel tracking.</li><li>The <code>inverted</code> mode has its own focus colour, <code>#7aa5e7</code>.</li></ul>
+<h3 id="modals-nys-modal-439px">Modals (<code>nys-modal</code>) — 439px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Width</td><td><strong>439px</strong> (min 320px)</td></tr><tr><td>Radius · border</td><td>8px (<code>--nys-radius-lg</code>) · 1px</td></tr><tr><td>Padding · gap</td><td>24px · 16px</td></tr><tr><td>Scrim</td><td><strong>rgba(27,27,27,.7)</strong> — based on an ink colour (#1b1b1b) rather than pure black</td></tr><tr><td>Animation</td><td><strong>none</strong> (zero transitions or keyframes)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The width is 439px</strong> — a value 1px off a 4px grid, hard-coded (not a token, a literal <code>--_nys-modal-width: 439px</code>). A precise figure of unknown origin.</li><li>The footer buttons are <code>column-reverse</code> on mobile (the primary action on top) and <code>row</code> from 480px.</li><li>NYSDS is the only modal in the sample with no entry motion at all (Astro at least has a fade).</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Three radii by role</strong> — button 12 / modal 8 / input 4px. The more control-like, the rounder</li><li><strong>The input's size axis is width</strong> (88/200/384) — a single 40px height</li><li><strong>A dual variable layer, private (<code>--_</code>) plus public hooks</strong> — prohibition and welcome cohabiting</li><li><strong>A 439px modal literal plus no animation</strong></li><li><strong>Hover as an added outline</strong> — emphasis without layout change</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li>8px = 100 percentage spacing naming — added to the list of naming types</li><li><code>1776px</code> — a cultural signature in a token value</li><li>A government system officially distributing an MCP server (assuming agent consumption)</li><li>A two-layer US federal (USWDS) / state (NYSDS) sample composition</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.2 AA (resolved 2026-08-18).</strong> Source: <code>designsystem.ny.gov/foundations/accessibility/</code> — &quot;Our standard is WCAG 2.2 AA&quot;. <strong>A rare case of statutory deadlines being written in alongside</strong> — it states that New York State technology law (STL §103-d) requires WCAG 2.2 AA from 2027-01, and a US Department of Justice rule requires WCAG 2.1 AA from 2027-04-26.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Component deep-dive: <code>npm pack @nysds/components@1.20.0</code> → <code>dist/nysds.es.js</code> plus <code>custom-elements.json</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> colour palette detail, <del>the component list</del> (resolved 2026-08-18 — all 48 tags, see the deep-dive), the relationship to USWDS (an independent implementation or a derivative), the MCP server's contents, and the origin of the modal's 439px</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>designsystem.ny.gov</code> → <code>figma.com/community/file/1574803287825265318/new-york-state-design-system</code> (the team file is <code>figma.com/design/U2QpuSUXRTxbgG64Fzi9bu</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mantine — Self-Made DesignOps</title>
+<meta name="description" content="A React component library. It adjusts the whole UI's density through a --mantine-scale multiplier variable, and manages component dimensions bound to size…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/mantine.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Mantine — Self-Made DesignOps">
+<meta property="og:description" content="A React component library. It adjusts the whole UI's density through a --mantine-scale multiplier variable, and manages component dimensions bound to size…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/mantine.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mantine — Self-Made DesignOps">
+<meta name="twitter:description" content="A React component library. It adjusts the whole UI's density through a --mantine-scale multiplier variable, and manages component dimensions bound to size…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Mantine",
+ "description": "A React component library. It adjusts the whole UI's density through a --mantine-scale multiplier variable, and manages component dimensions bound to size…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/mantine.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Mantine",
+  "applicationCategory": "DesignApplication",
+  "url": "https://mantine.dev"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#the-multiplier-variable-every-dimension-is-a-calc">The multiplier variable — every dimension is a calc()</a></li><li class="lvl3"><a href="#spacing-five-steps-name-based">Spacing — five steps, name-based</a></li><li class="lvl3"><a href="#radii-pure-doubling">Radii — pure doubling</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#colour-14-hues-10-steps">Colour — 14 hues × 10 steps</a></li><li class="lvl3"><a href="#breakpoints-in-em">Breakpoints — in em</a></li><li class="lvl3"><a href="#shadows">Shadows</a></li><li><a href="#component-dimensions-the-size-name-determines-the-height">Component dimensions — the size name determines the height</a></li><li><a href="#components">Components</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Mantine (open source)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://mantine.dev" rel="noopener">Official site</a><br><a href="https://github.com/mantinedev/mantine" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/mantine.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Mantine</span></nav>
+    <h1>Mantine</h1>
+    <p class="doc-lede">Mantine (open source) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>A React component library. It adjusts the whole UI's density through a <strong><code>--mantine-scale</code> multiplier variable</strong>, and manages <strong>component dimensions bound to size names (xs–xl)</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="the-multiplier-variable-every-dimension-is-a-calc">The multiplier variable — every dimension is a <code>calc()</code></h3>
+<pre class="md-code"><code class="language-css">--mantine-scale: 1;
+--mantine-spacing-md: calc(1rem * var(--mantine-scale));
+--mantine-radius-md: calc(0.5rem * var(--mantine-scale));
+--mantine-font-size-md: calc(1rem * var(--mantine-scale));</code></pre>
+<p><strong>Spacing, radii and font sizes all multiply by the same factor.</strong> Unlike Vapor UI, which separates the dimension and radius multipliers, Mantine has <strong>one</strong>.</p>
+<p>Systems using the same approach:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>System</th><th>Multiplier variables</th><th style="text-align:center">Count</th></tr></thead><tbody><tr><td>Vapor UI</td><td><code>--vapor-scale-factor</code> · <code>--vapor-radius-factor</code></td><td style="text-align:center">2</td></tr><tr><td><strong>Mantine</strong></td><td><strong><code>--mantine-scale</code></strong></td><td style="text-align:center"><strong>1</strong></td></tr><tr><td>Radix Themes</td><td><code>--scaling</code> · <code>--radius-factor</code></td><td style="text-align:center">2</td></tr><tr><td>shadcn/ui</td><td><code>--radius</code> (a base-value approach)</td><td style="text-align:center">1 (radius only)</td></tr></tbody></table></div>
+<h3 id="spacing-five-steps-name-based">Spacing — five steps, name-based</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th style="text-align:center">rem</th><th style="text-align:center">px (at scale 1)</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">0.625rem</td><td style="text-align:center"><strong>10</strong></td></tr><tr><td><code>sm</code></td><td style="text-align:center">0.75rem</td><td style="text-align:center">12</td></tr><tr><td><code>md</code></td><td style="text-align:center">1rem</td><td style="text-align:center">16</td></tr><tr><td><code>lg</code></td><td style="text-align:center">1.25rem</td><td style="text-align:center">20</td></tr><tr><td><code>xl</code></td><td style="text-align:center">2rem</td><td style="text-align:center">32</td></tr></tbody></table></div>
+<p><strong>There are only five steps.</strong> Most of the sample has 8–14 (<code>tokens/scales.md</code>).</p>
+<p><strong>There is no 4 or 8px.</strong> <code>xs</code> starts at 10px — where the corpus confirmed <code>4/8/16/24</code> as universal (17 of 17), Mantine skips both 4 and 8. There is no <code>24</code> either — 20 is followed by 32.</p>
+<p>The increments: <strong>+2 / +4 / +4 / +12.</strong> The last interval opens up sharply.</p>
+<h3 id="radii-pure-doubling">Radii — pure doubling</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th style="text-align:center">rem</th><th style="text-align:center">px</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">0.125rem</td><td style="text-align:center">2</td></tr><tr><td><code>sm</code></td><td style="text-align:center">0.25rem</td><td style="text-align:center">4</td></tr><tr><td><code>md</code></td><td style="text-align:center">0.5rem</td><td style="text-align:center">8</td></tr><tr><td><code>lg</code></td><td style="text-align:center">1rem</td><td style="text-align:center">16</td></tr><tr><td><code>xl</code></td><td style="text-align:center">2rem</td><td style="text-align:center">32</td></tr></tbody></table></div>
+<p><strong>2 → 4 → 8 → 16 → 32. Exactly doubling.</strong> <code>--mantine-radius-default</code> points at <code>md</code> (8px).</p>
+<p>Mantine is the only sample whose radii are a pure geometric series — the rest fill in intermediate values like 2/4/6/8/12/16.</p>
+<h3 id="typography">Typography</h3>
+<p>Five body sizes:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th style="text-align:center">rem</th><th style="text-align:center">px</th><th style="text-align:center">Line height</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">0.75rem</td><td style="text-align:center">12</td><td style="text-align:center">1.4</td></tr><tr><td><code>sm</code></td><td style="text-align:center">0.875rem</td><td style="text-align:center">14</td><td style="text-align:center">1.45</td></tr><tr><td><code>md</code></td><td style="text-align:center">1rem</td><td style="text-align:center">16</td><td style="text-align:center">1.55</td></tr><tr><td><code>lg</code></td><td style="text-align:center">1.125rem</td><td style="text-align:center">18</td><td style="text-align:center">1.6</td></tr><tr><td><code>xl</code></td><td style="text-align:center">1.25rem</td><td style="text-align:center">20</td><td style="text-align:center">1.65</td></tr></tbody></table></div>
+<p><strong>The line height differs per size</strong> — tighter when small (1.4), looser when large (1.65).</p>
+<p><strong>The direction is the reverse of convention.</strong> Apple and Material 3 reduce the line-height ratio as type grows (Apple Large Title 34→41 = 1.21, Caption 2 11→13 = 1.18, though Body 17→22 = 1.29). Mantine increases the ratio as type grows. <code>--mantine-line-height</code> defaults to 1.55, the same as <code>md</code>.</p>
+<p>Six heading steps — <strong>all at weight 700</strong>:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th style="text-align:center">rem</th><th style="text-align:center">px</th><th style="text-align:center">Line height</th><th style="text-align:center">Weight</th></tr></thead><tbody><tr><td><code>h1</code></td><td style="text-align:center">2.125rem</td><td style="text-align:center">34</td><td style="text-align:center">1.3</td><td style="text-align:center">700</td></tr><tr><td><code>h2</code></td><td style="text-align:center">1.625rem</td><td style="text-align:center">26</td><td style="text-align:center">1.35</td><td style="text-align:center">700</td></tr><tr><td><code>h3</code></td><td style="text-align:center">1.375rem</td><td style="text-align:center">22</td><td style="text-align:center">1.4</td><td style="text-align:center">700</td></tr><tr><td><code>h4</code></td><td style="text-align:center">1.125rem</td><td style="text-align:center">18</td><td style="text-align:center">1.45</td><td style="text-align:center">700</td></tr><tr><td><code>h5</code></td><td style="text-align:center">1rem</td><td style="text-align:center">16</td><td style="text-align:center">1.5</td><td style="text-align:center">700</td></tr><tr><td><code>h6</code></td><td style="text-align:center">0.875rem</td><td style="text-align:center">14</td><td style="text-align:center">1.5</td><td style="text-align:center">700</td></tr></tbody></table></div>
+<p><strong>Heading line heights are likewise tighter when smaller</strong> (1.3 → 1.5). The same direction as the body.</p>
+<p>Size increments: 34 → 26 → 22 → 18 → 16 → 14. Narrowing by <strong>−8 / −4 / −4 / −2 / −2</strong>.</p>
+<p><code>h4</code> (18), <code>h5</code> (16) and <code>h6</code> (14) hold the same values as body <code>lg</code>, <code>md</code> and <code>sm</code> — differing only in weight and line height. The same structure as Atlassian's <code>font.heading.xsmall</code> (14px) sharing a size with <code>font.body.[default]</code> (14px).</p>
+<p>There are no tracking tokens.</p>
+<h3 id="colour-14-hues-10-steps">Colour — 14 hues × 10 steps</h3>
+<pre class="md-code"><code>blue · cyan · dark · grape · gray · green · indigo
+lime · orange · pink · red · teal · violet · yellow</code></pre>
+<p>The steps run <code>0</code> to <code>9</code>, <strong>ten of them</strong> (Tailwind and Radix have 11–12). 140 primitive colours plus derived tokens come to <strong>270 in total</strong>.</p>
+<p><strong><code>dark</code> is a hue family.</strong> Separate from <code>gray</code>, there is <code>--mantine-color-dark-0..9</code> — dark-mode surface colours kept as a hue ramp.</p>
+<p>Derived tokens — every hue has state and purpose variants:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Suffix</th><th>Purpose</th></tr></thead><tbody><tr><td><code>-filled</code></td><td>filled background</td></tr><tr><td><code>-filled-hover</code></td><td>filled hover</td></tr><tr><td><code>-light</code></td><td>light background</td></tr><tr><td><code>-light-hover</code></td><td>light background hover</td></tr><tr><td><code>-light-color</code></td><td>text on a light background</td></tr><tr><td><code>-outline</code> · <code>-outline-hover</code></td><td>outlined variants</td></tr></tbody></table></div>
+<p>The same family as <strong>Orbit putting state inside colour names</strong> (<code>normalHover</code> and so on) (<code>patterns/color.md</code>). Mantine adds <strong>the variant (filled / light / outline)</strong> on top.</p>
+<p>A <code>--mantine-primary-color-*</code> alias family exists, defaulting to <code>blue</code> — <code>--mantine-primary-color-6: var(--mantine-color-blue-6)</code>. <strong>The primary colour is swapped in one place.</strong></p>
+<h3 id="breakpoints-in-em">Breakpoints — in <code>em</code></h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Token</th><th style="text-align:center">Value</th><th style="text-align:center">px (at 16px)</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">36em</td><td style="text-align:center">576</td></tr><tr><td><code>sm</code></td><td style="text-align:center">48em</td><td style="text-align:center">768</td></tr><tr><td><code>md</code></td><td style="text-align:center">62em</td><td style="text-align:center">992</td></tr><tr><td><code>lg</code></td><td style="text-align:center">75em</td><td style="text-align:center">1200</td></tr><tr><td><code>xl</code></td><td style="text-align:center">88em</td><td style="text-align:center">1408</td></tr></tbody></table></div>
+<p><strong>They are <code>em</code>.</strong> Tailwind uses <code>rem</code> and most others px. In a media query <code>em</code> and <code>rem</code> behave identically against the root font size, but the unit differs when read as a token value.</p>
+<p><code>62em</code> (992) · <code>75em</code> (1200) · <code>88em</code> (1408) — <strong>landing on integer px with no fractions.</strong></p>
+<h3 id="shadows">Shadows</h3>
+<p>Five steps, <code>xs</code> · <code>sm</code> · <code>md</code> · <code>lg</code> · <code>xl</code>. Compound values, not subject to the scale multiplier.</p>
+<h2 id="component-dimensions-the-size-name-determines-the-height">Component dimensions — the size name determines the height</h2>
+<p>Button, Input and Section share <strong>one height scale</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Size</th><th style="text-align:center">Height</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">30px</td></tr><tr><td><strong><code>sm</code></strong></td><td style="text-align:center"><strong>36px</strong></td></tr><tr><td><code>md</code></td><td style="text-align:center">42px</td></tr><tr><td><code>lg</code></td><td style="text-align:center">50px</td></tr><tr><td><code>xl</code></td><td style="text-align:center">60px</td></tr></tbody></table></div>
+<p><strong>The default is <code>sm</code> (36px)</strong> — not <code>md</code>. <code>--button-height: var(--button-height-sm)</code>.</p>
+<p>Increments: <strong>+6 / +6 / +8 / +10.</strong> Opening up toward the top.</p>
+<p><strong>Button and Input have entirely identical height scales.</strong> Placing the two side by side in a form aligns them through the same <code>size</code> value.</p>
+<p>The input's line height is computed from its height:</p>
+<pre class="md-code"><code class="language-css">--input-line-height: calc(var(--input-height) - calc(0.125rem * var(--mantine-scale)));</code></pre>
+<p><strong>It uses the height minus 2px as the line height</strong> — 1px top and bottom for the border.</p>
+<h2 id="components">Components</h2>
+<p><strong>101 of them</strong> by style file. They are split into per-component CSS under <code>styles/</code> (<code>Button.css</code> · <code>NumberInput.css</code> · <code>Cascader.css</code> · <code>EmptyState.layer.css</code> and so on).</p>
+<p>Files with a <code>.layer.css</code> suffix go into a CSS <code>@layer</code>.</p>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>One multiplier variable adjusts spacing, radii and font sizes together.</strong> Unlike Vapor UI and Radix Themes, which separate the radius.</li><li><strong>Spacing has only five steps and no 4, 8 or 24px.</strong> It is <code>10/12/16/20/32</code>. Of the <code>4/8/16/24</code> the corpus confirmed as universal, only 16 is present.</li><li><strong>The radii are a pure doubling series</strong> (2/4/8/16/32). Unique in the sample.</li><li><strong>The line height grows with the type size</strong> (1.4 → 1.65). The reverse direction from Apple and Material.</li><li><strong>All six heading steps are weight 700.</strong> The same structure as Pajamas being uniformly 600, at a different value.</li><li><strong><code>dark</code> is kept as a hue family.</strong> A ten-step ramp separate from <code>gray</code>.</li><li><strong>The default component size is <code>sm</code>.</strong> <code>md</code> is the middle value but not the default.</li><li><strong>Button and Input share a height scale</strong> (30/36/42/50/60).</li><li><strong>The breakpoints are <code>em</code>.</strong></li><li><strong>The input's line height is back-computed from its height</strong> (<code>height − 2px</code>).</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>No stated WCAG target was found in the tokens or CSS. The <code>-light-color</code> token keeps a separate text colour for light backgrounds, but no contrast-ratio target is written in the source.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Documentation: https://mantine.dev</li><li>Repository: https://github.com/mantinedev/mantine</li><li>Tokens: <code>npm pack @mantine/core@9.5.1</code> → <code>package/styles.css</code></li><li>Component styles: <code>package/styles/*.css</code></li><li><strong>Still to confirm:</strong> the dark-mode token mapping rules, real shadow values, and any additional tokens in subpackages beyond <code>@mantine/hooks</code></li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: false</code> — <strong>it states the absence explicitly</strong> — <code>mantine.dev/getting-started</code>: &quot;Design is not a part of the development process – there are no official Figma or Sketch design files.&quot; Community kits exist in number, but it pins down that the team does not maintain them. <strong>The only sample to put the absence in writing.</strong></li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

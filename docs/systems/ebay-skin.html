@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skin (eBay Evo) — Self-Made DesignOps</title>
+<meta name="description" content="eBay's system — it keeps 42 colours reserved for AI features (--color-ai-*, gradients included), its breakpoints carry separate iOS and Android families…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/ebay-skin.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Skin (eBay Evo) — Self-Made DesignOps">
+<meta property="og:description" content="eBay's system — it keeps 42 colours reserved for AI features (--color-ai-*, gradients included), its breakpoints carry separate iOS and Android families…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/ebay-skin.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skin (eBay Evo) — Self-Made DesignOps">
+<meta name="twitter:description" content="eBay's system — it keeps 42 colours reserved for AI features (--color-ai-*, gradients included), its breakpoints carry separate iOS and Android families…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Skin (eBay Evo)",
+ "description": "eBay's system — it keeps 42 colours reserved for AI features (--color-ai-*, gradients included), its breakpoints carry separate iOS and Android families…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/ebay-skin.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Skin (eBay Evo)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://ebay.github.io/skin"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#a-colour-family-reserved-for-ai-the-first-case-in-the-corpus">A colour family reserved for AI — the first case in the corpus</a></li><li class="lvl3"><a href="#breakpoints-os-families-alongside">Breakpoints — OS families alongside</a></li><li class="lvl3"><a href="#dimensions-the-dimension-number-px-125">Dimensions — the dimension number = px × 12.5</a></li><li class="lvl3"><a href="#borders-05px">Borders — 0.5px</a></li><li class="lvl3"><a href="#four-themes">Four themes</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-btn-afake-btn">Buttons (.btn / a.fake-btn)</a></li><li class="lvl3"><a href="#inputs-textbox">Inputs (.textbox)</a></li><li class="lvl3"><a href="#dialogs-dialog-the-native-dialog">Dialogs (.dialog — the native &lt;dialog&gt;)</a></li><li class="lvl3"><a href="#motion-tokens-durations-on-a-60fps-frame-grid">Motion tokens — durations on a 60fps frame grid</a></li><li class="lvl3"><a href="#the-type-scale-obtained-in-the-deep-pass">The type scale (obtained in the deep pass)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>eBay</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://ebay.github.io/skin" rel="noopener">Official site</a><br><a href="https://github.com/eBay/skin" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/ebay-skin.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Skin (eBay Evo)</span></nav>
+    <h1>Skin (eBay Evo)</h1>
+    <p class="doc-lede">eBay · commerce · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>eBay's system — it keeps <strong>42 colours reserved for AI features</strong> (<code>--color-ai-*</code>, gradients included), its breakpoints carry <strong>separate iOS and Android families</strong>, and its border widths include <strong>0.5px</strong>. The themes are <code>light</code>/<code>dark</code> × <code>live</code>, four in all.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="a-colour-family-reserved-for-ai-the-first-case-in-the-corpus">A colour family reserved for AI — the first case in the corpus</h3>
+<pre class="md-code"><code class="language-css">--color-ai-solid-blue-strong: #0968f6;   --color-ai-solid-blue-subtle: #f0f6fe;
+--color-ai-solid-{green,purple,red,yellow}-{strong,subtle}
+--color-ai-gradient-blue-strong · -green-strong · -purple-strong
+--color-ai-gradient-full-spectrum</code></pre>
+<ul class="md-list"><li><strong>42 colours reserved for AI-feature UI</strong> — the first case in the sample of AI being tokenised as a colour family. There are two kinds, <code>solid</code> and <code>gradient</code>, and <strong><code>full-spectrum</code></strong> is a gradient passing through several hues</li><li>The same position as Intergalactic's (Semrush's) highlight theme, whose gradients marked &quot;new and paid&quot; — <strong>the pattern of a particular feature group owning a colour family</strong> now has two cases. Here it is <strong>a family inside the ordinary themes</strong> rather than a separate theme file</li></ul>
+<h3 id="breakpoints-os-families-alongside">Breakpoints — OS families alongside</h3>
+<pre class="md-code"><code class="language-css">--breakpoint-extra-small 320 · small 512 · medium 600 · large 800 ·
+  extra-large 1100 · extra-large-2 1400 · extra-large-3 1920
+--breakpoint-ios-compact 320 · ios-regular 600 · ios-expanded 800
+--breakpoint-android-compact 320 · android-medium 600 · android-expanded 800</code></pre>
+<ul class="md-list"><li><strong>Separate iOS and Android families sit alongside the seven web steps</strong> — the values are the same (320/600/800), but the names match <strong>the OS documentation's vocabulary</strong> (<code>compact</code>/<code>regular</code>/<code>expanded</code> = Apple's size classes, <code>compact</code>/<code>medium</code>/<code>expanded</code> = Material's window size classes). The only case in the sample of carrying OS size-class vocabulary into web tokens</li><li><code>extra-large-3</code> is 1920px — the same upper end as Artsy and Welcome UI</li></ul>
+<h3 id="dimensions-the-dimension-number-px-125">Dimensions — the <code>dimension</code> number = px × 12.5</h3>
+<pre class="md-code"><code>0 · 25:2 · 50:4 · 75:6 · 100:8 · 150:12 · 200:16 · 250:20 ·
+300:24 · 400:32 · 500:40 · 600:48 · 800:64 · 1000:80</code></pre>
+<p>Since <code>100</code> is 8px, <strong>the number = px × 12.5</strong> — the same ratio as Vapor UI (rem × 12.5), but based on px. <strong><code>200</code></strong> joins the list of ways to name 16px.</p>
+<h3 id="borders-05px">Borders — 0.5px</h3>
+<pre class="md-code"><code class="language-css">--border-width-thin: 0.5px · medium: 1px · thick: 2px</code></pre>
+<p><strong>A sub-pixel border is a token</strong> — the second sub-pixel value after TDS's 0.7px underline, and the only one on a border in the sample (presupposing a high-resolution display).</p>
+<h3 id="four-themes">Four themes</h3>
+<p><code>evo-light</code> · <code>evo-dark</code> · <strong><code>evo-live-light</code></strong> · <strong><code>evo-live-dark</code></strong> plus <code>evo-core</code> (shared) — the <code>live</code> family <strong>has no AI colours</strong> (confirmed by diff). Copies with a <code>-class</code> suffix ship alongside, supporting class-scoped application.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>The same <code>@ebay/skin@19.32.0</code> package contains <strong>91 components as <code>dist/&amp;lt;name&amp;gt;/&amp;lt;name&amp;gt;.css</code></strong> (the root's <code>button.css</code> and the rest are one-line <code>@import</code> shells — you have to look at dist. The same trap structure as the tokens' &quot;empty root <code>tokens.css</code>&quot;). What follows is measured from <code>dist/button</code>, <code>dist/textbox</code> and <code>dist/dialog</code>.</p>
+<h3 id="buttons-btn-afake-btn">Buttons (<code>.btn</code> / <code>a.fake-btn</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>min-height</strong></td><td style="text-align:center">32px</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>inline padding</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td><td style="text-align:center">20px</td></tr><tr><td>radius</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td><td style="text-align:center">24px</td></tr><tr><td>type</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">16px (<code>--font-size-medium</code>)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The radius is exactly a pill at half the height, but as per-size literal fallbacks rather than a token</strong> — 16/20/24 hardcoded across the three sizes in the form <code>var(--btn-border-radius, 20px)</code>. <code>--border-radius-100</code> (16) and <code>-150</code> (24) exist and go unused (20px is not in the tokens).</li><li>min-width <strong>88px</strong> (default size only). The height is a <code>min-height</code>, and a <code>--fixed-height</code> variant separately fixes <code>height</code> — both approaches coexisting, unlike Backpack (min-height only).</li><li><strong>States are a Material-style state layer</strong> — an <code>:after</code> overlay painted with <code>--color-state-layer-hover</code> (black 4%) / <code>-pressed</code> (8%) / <code>-focus</code> (4%). A sample assembling a state layer in vanilla CSS (Vuetify does the same pattern with an <code>__overlay</code> element).</li><li><strong><code>transform: scale(0.97)</code> on <code>:active</code></strong> — the press expressed as a shrink.</li><li>Transition <code>all 167ms cubic-bezier(0,0,0,1)</code> (<code>quick-enter</code>).</li><li>Only primary is weight 700. Variants: primary · secondary · tertiary · destructive · borderless · form · slim. The class that disguises a link is named <strong><code>fake-btn</code></strong> — &quot;fake&quot; written straight into the class name.</li></ul>
+<h3 id="inputs-textbox">Inputs (<code>.textbox</code>)</h3>
+<ul class="md-list"><li><strong>The wrapper owns the border, and the inner input's height is <code>calc(40px − 2px)</code></strong> — the 2px border is subtracted from the child's height to reach 40px in total (48px at large). The heights are <code>--input-default-height: 40px</code> and <code>--input-large-height: 48px</code> on <code>:root</code>.</li><li>Radius 8px (<code>--border-radius-50</code>), border 1px. On focus the border colour intensifies plus <strong>a <code>box-shadow 0 0 0 1px</code> in the same colour</strong> — a visually 2px border with no layout shift.</li><li>The state selectors are <strong><code>:has()</code>-based</strong> (<code>.textbox:has(&amp;gt; .textbox__control:focus)</code>) — a child's state reflected on the wrapper without JS. readonly removes the border entirely.</li><li>placeholder is <strong>font-weight 200</strong>. textarea min-height 200px.</li></ul>
+<h3 id="dialogs-dialog-the-native-dialog">Dialogs (<code>.dialog</code> — the native <code>&amp;lt;dialog&amp;gt;</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>width</th><th>value</th></tr></thead><tbody><tr><td>narrow</td><td>480px</td></tr><tr><td>default · lightbox</td><td><strong>616px</strong></td></tr><tr><td>wide</td><td>896px</td></tr></tbody></table></div>
+<ul class="md-list"><li>max-width 88% · max-height 90%. Radius <strong>24px</strong> (<code>--border-radius-150</code>).</li><li>Scrim <code>rgb(17 24 32 / 0.7)</code> — not pure black but <strong>a navy-tinted ink</strong>.</li><li><strong>The entrance splits into two tracks</strong>: scale 0.75→1 over <strong>500ms</strong> on standard (0.3,0,0,1), while opacity takes <strong>167ms</strong> on continuous — the shape slow, the fade fast. On exit the scale uses soft-exit <code>(0.3,0,1,1)</code>. It even uses <code>transition: display/overlay allow-discrete</code> — a current-generation CSS implementation.</li><li>Inner padding 16px all round (<code>--spacing-200</code>), close button 32px.</li></ul>
+<h3 id="motion-tokens-durations-on-a-60fps-frame-grid">Motion tokens — durations on a 60fps frame grid</h3>
+<p>All ten durations in <code>evo-core.css</code> are frame counts: 17/50/83/167/250/333/500/667/833/1000ms = <strong>1/3/5/10/15/20/30/40/50/60 frames</strong>. The intent is clear from <code>instant</code> being 17ms (exactly one frame) — the only case in the sample of <strong>quantising durations to multiples of a frame</strong> rather than milliseconds. There are seven easings (standard <code>(0.3,0,0,1)</code> · quick/soft × enter/exit · bounce <code>(0.3,0,0,1.25)</code> · continuous · linear).</p>
+<h3 id="the-type-scale-obtained-in-the-deep-pass">The type scale (obtained in the deep pass)</h3>
+<p>Eleven steps — 10/12/14/16/18/20/24/30/36/46/64px. The semantic names such as <code>--font-size-body</code> (14) are the originals, with <strong>numeric aliases like <code>--font-size-14</code> shipped in parallel</strong> (18 and 64 have no semantic name).</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Ten durations = multiples of a 60fps frame</strong> — unique in the sample</li><li><strong>The pill radius as per-size literal fallbacks</strong> (bypassing the tokens)</li><li><strong>A state-layer overlay plus scale(0.97)</strong> — Material's grammar ported into vanilla CSS</li><li>Inputs: a wrapper border with the child's height subtracted, and <code>:has()</code> state reflection</li><li>Dialogs: a two-track entrance, scale over 500ms and fade over 167ms</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>42 colours reserved for AI features</strong> (solid/gradient/full-spectrum) — the first case in the corpus</li><li><strong>iOS and Android size-class vocabulary carried into web breakpoints</strong> — unique in the sample</li><li><strong>A 0.5px sub-pixel border token</strong> — unique on a border in the sample</li><li>Dimension numbers = px × 12.5 (16px is called <code>200</code>)</li><li>Four themes plus class-scoped copies</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>Resolved (2026-08-18, headless render).</strong></p>
+<p><strong>It states WCAG 2.2 AA as an explicit target</strong> — the documentation home reads &quot;Accessibility First / <strong>WCAG 2.2 AA</strong> aligned components built for everyone, on every device&quot;, and the &quot;Accessibility Considerations&quot; item lists <code>WCAG 2.2 AA</code> · Semantic HTML · ARIA Roles, States &amp; Properties · Keyboard Support · Screen Reader Support · Color Contrast. Testing is described as using &quot;keyboard, screen readers, and automated accessibility tools aligned with WCAG compliance&quot;. Source: https://opensource.ebay.com/skin/ (where <code>ebay.github.io/skin</code> redirects to; headless render, 2026-08-18)</p>
+<p><strong>The volume of accessibility documentation is at the top of the sample</strong> — there is a top-level <code>Accessibility</code> navigation entry branching into <strong>patterns · anti-patterns · techniques · misc (FAQ)</strong>. The anti-patterns alone number nine — <code>disabling-pinch-to-zoom</code> · <code>hand-cursor-on-buttons</code> · <code>javascript-href</code> · <code>layout-table</code> · <code>non-interactive-hover</code> · <code>open-new-window</code> · <code>setting-focus-on-page-load</code> · <code>tabindex-itis</code> · <code>title-tooltip</code> — <strong>the only structure in the sample that pins &quot;what not to do&quot; into the documentation hierarchy.</strong> The FAQ settles &quot;button or link?&quot; on whether browser history changes (<code>use links for anything that updates browser history state</code>), and explicitly forbids a hand cursor on buttons and using a focused button as a live region. Sources: https://opensource.ebay.com/evo-web/accessibility · https://opensource.ebay.com/evo-web/accessibility/misc/faq (rendered 2026-08-18)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @ebay/skin@19.32.0</code> → <code>dist/tokens/</code> (the root <code>tokens.css</code> is an empty file, so you must look at <code>dist/tokens/</code>)</li><li>Components in depth: <code>dist/button/button.css</code> · <code>dist/textbox/textbox.css</code> · <code>dist/dialog/dialog.css</code> from the same package, resolved against <code>dist/tokens/evo-core.css</code> (2026-08-18)</li><li><strong>Open questions:</strong> what the <code>live</code> theme is for (presumed live commerce — no evidence), <del>the type scale and the component list</del> (resolved 2026-08-18 — the deep pass: an 11-step scale, 91 items in dist), guidance on using the AI colours, <del>the accessibility target</del> <del>the Figma kit</del> (both resolved 2026-08-18)</li><li><strong>The documentation site (headless render, 2026-08-18):</strong> <code>ebay.github.io/skin</code> is not an SPA but <strong>a 301 redirect to <code>opensource.ebay.com/skin/</code></strong>. Its internal links are absolute paths of the form <code>/evo-web/...</code>, so <code>ebay.github.io/skin/evo-web/...</code> returns 404 — to read the accessibility documents you must open <code>opensource.ebay.com/evo-web/...</code> directly</li><li><strong>Figma kit — confirmed absent (2026-08-18):</strong> even when rendered, this system publishes no Figma kit. Rendering the documentation home, the components and the whole accessibility section yields the string &quot;Figma&quot; <strong>zero times</strong> (confirmed by rendering <code>https://opensource.ebay.com/skin/</code>). It is the type that leaves design-tool integration out of the documentation and publishes only code and tokens</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

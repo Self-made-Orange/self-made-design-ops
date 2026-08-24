@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odyssey — Self-Made DesignOps</title>
+<meta name="description" content="Okta's system — spacing runs in sevenths, like 0.28571429rem. It presupposes a 14px root (×14 = 4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56px); read at 16px…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/odyssey.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Odyssey — Self-Made DesignOps">
+<meta property="og:description" content="Okta's system — spacing runs in sevenths, like 0.28571429rem. It presupposes a 14px root (×14 = 4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56px); read at 16px…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/odyssey.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Odyssey — Self-Made DesignOps">
+<meta name="twitter:description" content="Okta's system — spacing runs in sevenths, like 0.28571429rem. It presupposes a 14px root (×14 = 4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56px); read at 16px…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Odyssey",
+ "description": "Okta's system — spacing runs in sevenths, like 0.28571429rem. It presupposes a 14px root (×14 = 4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56px); read at 16px…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/odyssey.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Odyssey",
+  "applicationCategory": "DesignApplication",
+  "url": "https://odyssey.okta.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-225-of-them">Tokens — 225 of them</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#the-14px-root-assumption-explicitly-confirmed-in-code-backlog-cleared">The 14px root assumption — explicitly confirmed in code (backlog cleared)</a></li><li class="lvl3"><a href="#buttons-muibutton-override">Buttons (MuiButton override)</a></li><li class="lvl3"><a href="#inputs-muiinputbase-override-the-floating-label-is-abolished">Inputs (MuiInputBase override) — the floating label is abolished</a></li><li class="lvl3"><a href="#dialogs-muidialog-override-the-width-is-measured-in-characters">Dialogs (MuiDialog override) — the width is measured in characters</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li><li><a href="#drift-record-1661-1670-2026-08-23">Drift record — 1.66.1 → 1.67.0 (2026-08-23)</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Okta</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://odyssey.okta.com" rel="noopener">Official site</a><br><a href="https://github.com/okta/odyssey" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/odyssey.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Odyssey</span></nav>
+    <h1>Odyssey</h1>
+    <p class="doc-lede">Okta · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Okta's system — spacing runs in <strong>sevenths, like <code>0.28571429rem</code></strong>. It <strong>presupposes a 14px root</strong> (×14 = 4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56px); read at 16px it becomes 4.57px. The <strong>third case</strong> of a mismatched rem basis.</p>
+<h2 id="tokens-225-of-them">Tokens — 225 of them</h2>
+<pre class="md-code"><code class="language-scss">$spacing-1: 0.28571429rem;  // = 2/7 rem → 4px at a 14px root
+$spacing-4: 1.14285714rem;  // = 16/14 rem → 16px
+$spacing-9: 4rem;           // 56px</code></pre>
+<ul class="md-list"><li><strong>The denominator is 7</strong> — 4/14 = 2/7. The target values are multiples of 4px while the rem notation is based on 14px, so they come out as repeating decimals. After Strapi (62.5% → a 10px root) and Stacks (a 13px root), this is the <strong>third system with a different rem-root assumption</strong>, and all three assume something different: 10, 13 and 14px</li><li>The resulting scale is <code>4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56</code> — <strong>the values themselves respect the core</strong>. The names are ordinals, 0–9</li><li>Tracking uses <code>em</code> (<code>letter-spacing-overline: .05em</code>) — proportional to size</li></ul>
+<p><strong>Recorded as the third case under &quot;when you move a rem&quot; in <code>GLOSSARY.md</code>.</strong> Copying the token values alone puts you 12% off (a 16px basis against 14px).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><code>@okta/odyssey-react-mui@1.66.1</code> — <strong>confirmed to derive from MUI v5</strong> (it depends on <code>@mui/material ^5.18.0</code> and injects components/palette/shape/spacing/typography into <code>createTheme()</code>). What follows records <strong>only the differences from MUI's defaults</strong>. Token values were resolved from <code>@okta/odyssey-design-tokens@1.66.1</code>.</p>
+<h3 id="the-14px-root-assumption-explicitly-confirmed-in-code-backlog-cleared">The 14px root assumption — explicitly confirmed in code (backlog cleared)</h3>
+<ul class="md-list"><li><code>CssBaseline</code> forces <code>html { font-size: calc((14/16)*100%) }</code> = <strong>87.5%</strong>, the theme's <code>pxToRem = px =&amp;gt; px/14</code>, and the token <code>TypographySizeBase = 87.5%</code>. The token section's &quot;14px root assumption&quot; is not an inference but <strong>an explicit specification in shipped code</strong> — every px conversion below is a real value at a 14px root.</li><li>MUI's <code>transitions</code> are <strong>not injected</strong> — enter and exit on Dialog and the rest keep MUI's defaults (Fade 225/195ms, <code>(0.4,0,0.2,1)</code>).</li><li><code>theme.spacing</code> is not MUI's &quot;8px × multiplier&quot; function but <strong>a 10-element array</strong> (Spacing0–9) — <code>spacing(3)</code> is 12px, not 24px (an ordinal index).</li></ul>
+<h3 id="buttons-muibutton-override">Buttons (MuiButton override)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th><th>MUI default</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>32px</strong> (<code>Spacing6</code>)</td><td style="text-align:center"><strong>40px</strong> (<code>Spacing7</code>)</td><td style="text-align:center">48px (<code>Spacing8</code>)</td><td>none (derived 30.75–42.25px)</td></tr><tr><td>padding block/inline</td><td style="text-align:center">8/12px</td><td style="text-align:center">12/16px</td><td style="text-align:center">16/16px</td><td>6/16px etc.</td></tr><tr><td>min-width</td><td style="text-align:center"><strong>unset</strong></td><td style="text-align:center">←</td><td style="text-align:center">←</td><td>64px</td></tr><tr><td>radius</td><td style="text-align:center">6px (<code>BorderRadiusMain</code>)</td><td style="text-align:center">←</td><td style="text-align:center">←</td><td>4px</td></tr><tr><td>type</td><td style="text-align:center">14px (1rem)/500/1.2 · Aeonik</td><td style="text-align:center">←</td><td style="text-align:center">←</td><td>14px/500/1.75 · uppercase</td></tr><tr><td>transition</td><td style="text-align:center"><strong>100ms linear</strong></td><td style="text-align:center">←</td><td style="text-align:center">←</td><td>250ms <code>(0.4,0,0.2,1)</code></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>It throws away MUI's derived (fractional) heights and pins the height to spacing tokens</strong> — with no height-specific tokens, <code>Spacing6/7/8</code> are used as heights directly.</li><li><strong>The variant axis itself is replaced</strong> — contained/outlined/text are dropped for <code>primary</code> (default) · secondary · danger · dangerSecondary · floating · floatingAction. Uppercase is removed, <code>disableElevation</code> is the default, and the <code>button</code> typography variant is deleted by setting it to <code>undefined</code>.</li><li>The transition is <strong>linear over 100ms</strong> — a rare choice in the sample, leaving MUI's curve camp.</li><li>Focus: a double ring, <code>0 0 0 2px white, 0 0 0 4px #546be7</code>.</li></ul>
+<h3 id="inputs-muiinputbase-override-the-floating-label-is-abolished">Inputs (MuiInputBase override) — the floating label is abolished</h3>
+<ul class="md-list"><li><strong>MUI's floating label is switched off</strong> — <code>MuiInputLabel</code> gets <code>disableAnimation</code> plus <code>shrink:false</code> plus <code>transform:none/position:initial</code>, making it <strong>a fixed block label above the field</strong>. A case of removing the emblem of the Material lineage (the counterpart to the floating-label entry in the MUI document).</li><li>Padding: <code>calc(Spacing3 − 1px)</code> = <strong>11px</strong> block / 12px inline — the border-subtracting formula (MUI uses a half-pixel 16.5px correction). Instead of the outlined variant's fieldset notch it uses <strong>a plain border with a 6px radius</strong>.</li><li><code>height:auto</code> — the derived height is about <strong>40.8px</strong> (14 × 1.2 line height = 16.8, plus 22, plus 2). No size variants.</li><li>Focus: the border colour plus an overlaid <code>0 0 0 1px</code> box-shadow. Transition 100ms.</li></ul>
+<h3 id="dialogs-muidialog-override-the-width-is-measured-in-characters">Dialogs (MuiDialog override) — the width is measured in characters</h3>
+<ul class="md-list"><li><strong>It does not use width steps</strong> — the paper's <code>maxWidth: calc(55ch + 64px)</code> (<code>TypographyLineLengthMax 55ch</code> plus <code>Spacing6</code> × 2). MUI's five steps (xs–xl, i.e. the breakpoints) are replaced by <strong>a single ceiling derived from the maximum line length</strong> — the only case in the sample of setting modal width in <code>ch</code>.</li><li>Radius <strong>12px</strong> (<code>BorderRadiusOuter</code> — an outer value twice the 6px inner one), dropping to 0 in the compact query.</li><li>Instead of <code>box-shadow</code> it uses <strong>three stacked <code>drop-shadow</code> filters</strong>.</li><li>Padding: 32px inline in the body (<code>Spacing6</code>) · 24px block on the actions (<code>Spacing5</code>) · the title renders <code>h5</code> (18px) into an <code>h1</code> element. Enter and exit inherit MUI's defaults of 225/195ms (see above).</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>CssBaseline forces the 14px root</strong> — the rem mismatch is design, not accident</li><li><strong>Button height = spacing tokens</strong> (32/40/48) — MUI's derived-height policy rejected</li><li><strong>The floating label removed</strong> — a MUI derivative selectively abolishing Material grammar</li><li><strong>Dialog width = 55ch</strong> — a width set by typography, unique in the sample</li><li><strong>A single 100ms linear transition</strong> against MUI's curves and asymmetric durations</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A 14px root assumption</strong> — the third mismatched rem basis, with values as repeating sevenths</li><li>Converted to px, the core values are respected exactly (4–56)</li><li>Built on MUI (<code>odyssey-react-mui</code>) — a corporate system laid over a framework</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified — <strong>the documentation site sits behind a login and cannot be opened even by a headless render (confirmed 2026-08-18).</strong></p>
+<p>Opening <code>https://odyssey.okta.com/</code> headlessly yields not documentation but <strong>an Okta SSO login screen</strong> (asking you to sign in to your account to access &quot;Supernova SAML&quot; — Okta FastPass or a username). The documentation is <strong>internal-only, hosted on Supernova</strong>; the alternative candidate <code>https://odyssey.okta.design/</code> shows the same login screen, and <code>https://okta.github.io/odyssey/</code> is a GitHub Pages 404. Recorded as <strong>the sample where the documentation site itself is behind authentication</strong> — this is an access-permission problem rather than an SPA-rendering one, so this system's accessibility target and Figma kit can only be narrowed down from public material (the npm packages). URLs checked: https://odyssey.okta.com/ · https://odyssey.okta.design/ · https://okta.github.io/odyssey/ (headless render, 2026-08-18)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @okta/odyssey-design-tokens@1.66.1</code> → <code>dist/index.scss</code></li><li>Components in depth: <code>@okta/odyssey-react-mui@1.66.1</code> → <code>dist/cjs/theme/{components/{Button,Input,Dialog,CssBaseline},typography,spacing,shape,pxToRem}.cjs</code> plus an execution-time read of <code>@okta/odyssey-design-tokens@1.66.1</code> <code>dist/index.cjs</code> (2026-08-18)</li><li>Documentation site: <strong>authentication required</strong> (Okta SSO / hosted on Supernova) — confirmed by headless render 2026-08-18. <code>figma_kit</code> and <code>a11y_target</code> cannot be resolved through the documentation site; the only remaining routes are the npm packages and the repository (README, <code>@okta/odyssey-react-mui</code> sources)</li><li><del>The full colour and type sets</del> → <strong>fully resolved (2026-08-18, <code>@okta/odyssey-design-tokens@1.66.1</code> — 206 tokens in all: Hue 91 · Typography 40 · Palette 36 · Border 15 · Spacing 10 · Focus 7 · Depth 3 · Shadow 2 · Transition 2).</strong><ul class="md-list"><li>A <strong>13-step</strong> type scale (Scale0–12, 12–51px at a 14px root), 10 text-colour roles, and Overline at <code>0.7142857143rem</code> (= 10/14 — confirming again how to read the repeating decimals)</li><li><strong>A single global transition pair, <code>100ms linear</code></strong> — the same minimalist camp as Audi (one easing), but more extreme for being linear</li><li><strong><code>BorderWidthHeavy: 1.5px</code></strong> — a non-integer border-width token, unique in the sample</li><li><code>BorderRadiusRound: 1.5em</code> — an em radius (proportional to type) is also rare</li><li><strong>Three Depth steps coexist with two ShadowScale steps</strong> — the values are nearly identical, so it reads as a migration in progress (the same type as Atlassian's coexisting radius fallbacks)</li><li><del>The full component list</del> → <strong>confirmed (2026-08-18, measured from <code>@okta/odyssey-react-mui@1.66.1</code> dist/esm, ≈95)</strong> — Accordion · Autocomplete · Badge · Banner · Breadcrumbs · Callout · Card · DataTable · DatePickers · Dialog · Drawer · EmptyState · the Field family … plus labs (UserProfile and others). The MUI wrapping structure is confirmed again.</li><li><strong>Open questions:</strong> the accessibility target and the Figma kit (the documentation site is behind SSO — confirmed unresolvable through the npm route), <del>whether the 14px root is stated</del> (resolved 2026-08-18 — stated in code as CssBaseline <code>font-size: 87.5%</code> plus <code>pxToRem = px/14</code>; see the deep pass)</li></ul></li></ul>
+<h2 id="drift-record-1661-1670-2026-08-23">Drift record — 1.66.1 → 1.67.0 (2026-08-23)</h2>
+<p><code>@okta/odyssey-design-tokens</code>: <code>dist/index.scss</code> differs by <strong>one line, the generation timestamp</strong>. Every one of the 225 <code>$</code> variables is unchanged. <code>@okta/odyssey-react-mui</code>: <code>theme/components.js</code> (which carries the MuiButton, MuiInputBase and MuiDialog overrides recorded above), <code>theme/spacing.js</code>, <code>theme/typography.js</code>, <code>theme/shape.js</code>, <code>theme/theme.js</code> and <code>theme/pxToRem.js</code> are all <strong>identical</strong>. The only real change is outside what this entry records: <code>CircularProgress.thickness</code> <strong>10 → <code>44/12</code> (≈3.667)</strong>, named upstream <code>STROKE_WIDTH_FOR_ONE_TO_TWELVE_RATIO</code>. A reference point for whenever the progress components are harvested. <strong>No recorded value changed.</strong></p>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

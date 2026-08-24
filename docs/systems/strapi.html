@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strapi Design System — Self-Made DesignOps</title>
+<meta name="description" content="The admin-UI system of the headless CMS Strapi — font sizes ship on a 10px-rem assumption (1.4rem = 14px), and spacing is an unnamed array (the Evergreen…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/strapi.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Strapi Design System — Self-Made DesignOps">
+<meta property="og:description" content="The admin-UI system of the headless CMS Strapi — font sizes ship on a 10px-rem assumption (1.4rem = 14px), and spacing is an unnamed array (the Evergreen…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/strapi.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Strapi Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="The admin-UI system of the headless CMS Strapi — font sizes ship on a 10px-rem assumption (1.4rem = 14px), and spacing is an unnamed array (the Evergreen…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Strapi Design System",
+ "description": "The admin-UI system of the headless CMS Strapi — font sizes ship on a 10px-rem assumption (1.4rem = 14px), and spacing is an unnamed array (the Evergreen…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/strapi.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Strapi Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://design-system.strapi.io"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#type-the-625-trick-baked-into-the-token-values">Type — the 62.5% trick baked into the token values</a></li><li class="lvl3"><a href="#spacing-an-unnamed-12-step-array">Spacing — an unnamed 12-step array</a></li><li class="lvl3"><a href="#themes">Themes</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-the-height-is-a-function-of-the-breakpoint">Buttons — the height is a function of the breakpoint</a></li><li class="lvl3"><a href="#inputs-textinputfield-the-type-is-responsive-too">Inputs (TextInput/Field) — the type is responsive too</a></li><li class="lvl3"><a href="#modals-the-lightest-scrim-in-the-sample">Modals — the lightest scrim in the sample</a></li><li class="lvl3"><a href="#26-easings-a-gap-between-the-catalogue-and-the-usage">26 easings — a gap between the catalogue and the usage</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li class="lvl3"><a href="#figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Strapi</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://design-system.strapi.io" rel="noopener">Official site</a><br><a href="https://github.com/strapi/design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/strapi.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Strapi Design System</span></nav>
+    <h1>Strapi Design System</h1>
+    <p class="doc-lede">Strapi · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The admin-UI system of the headless CMS Strapi — font sizes ship on a <strong>10px-rem assumption</strong> (<code>1.4rem</code> = 14px), and spacing is <strong>an unnamed array</strong> (the Evergreen family).</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="type-the-625-trick-baked-into-the-token-values">Type — the 62.5% trick baked into the token values</h3>
+<pre class="md-code"><code class="language-js">fontSizes: [&quot;1.1rem&quot;,&quot;1.2rem&quot;,&quot;1.4rem&quot;,&quot;1.6rem&quot;,&quot;1.8rem&quot;,&quot;2rem&quot;,&quot;2.8rem&quot;,&quot;3.2rem&quot;]</code></pre>
+<p><strong>These are values that assume <code>html { font-size: 62.5% }</code> (1rem = 10px)</strong> — the real sizes are 11/12/14/16/18/20/28/32px. Read at the browser default (16px), the rem values break into 17.6px and the like. <strong>The only sample where a root-redefinition assumption is pinned into the token values themselves</strong>, and, alongside Stacks (rem in thirteenths), a demonstration of the &quot;mismatched rem basis&quot; hazard.</p>
+<h3 id="spacing-an-unnamed-12-step-array">Spacing — an unnamed 12-step array</h3>
+<pre class="md-code"><code class="language-js">spaces: ['0px','4px','8px','12px','16px','20px','24px','32px','40px','48px','56px','64px']</code></pre>
+<p>An array token referenced by index — <strong>the same unnamed-array camp as Evergreen</strong>. Steps of 4px, then steps of 8px from 32 up; every core value is present.</p>
+<h3 id="themes">Themes</h3>
+<p>A <code>lightTheme</code> / <code>darkTheme</code> object pair (the separate-theme-file approach) plus an <code>extendTheme</code> extension function. Button variants use <strong>variant × tone combination names</strong> like <code>success-light</code> and <code>danger-light</code>, and there are four sizes: <code>XS/S/M/L</code>.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Parsed from the <code>dist/index.mjs</code> bundle of <code>@strapi/design-system@2.2.4</code> (the styled-components template literals survive as plain text). 46 components. <strong>Every rem below assumes 10px</strong> — the token section's 62.5% trick runs right through the component dimensions.</p>
+<h3 id="buttons-the-height-is-a-function-of-the-breakpoint">Buttons — the height is a function of the breakpoint</h3>
+<p><code>theme.sizes.button</code> is not a value but <strong>a responsive map</strong>:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th style="text-align:center">default (mobile)</th><th style="text-align:center">≥768px</th></tr></thead><tbody><tr><td>S</td><td style="text-align:center">4rem (40px)</td><td style="text-align:center">3.2rem (32px)</td></tr><tr><td>M</td><td style="text-align:center">4.4rem (44px)</td><td style="text-align:center">3.6rem (36px)</td></tr><tr><td>L</td><td style="text-align:center">4.8rem (48px)</td><td style="text-align:center">4rem (40px)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Mobile is 8px larger and desktop shrinks</strong> — touch-first, in an admin UI. A structure in which the component-height token itself produces a media query is seen here for the first time in the sample.</li><li>Four sizes XS/S/M/L (S by default), a single 4px radius, inline padding <code>spaces[4]</code> = 16px, gap <code>spaces[2]</code> = 8px.</li><li>Eight variants, as variant × tone combinations: default (primary) · secondary · tertiary · ghost · danger · success plus <strong>success-light · danger-light</strong> (a 600 fill against a 100 background with 700 text). The primary fill is <code>buttonPrimary600</code> (#4945ff) — <strong>the same value as the palette's <code>primary600</code>, shipped a second time under a button-specific alias</strong>.</li><li>Transitions: background and text over 120ms easeOutQuad, border over 200ms — and <strong>the entire transition declaration sits inside <code>@media (prefers-reduced-motion: no-preference)</code></strong>. A guard that puts reduced motion on the default side.</li></ul>
+<h3 id="inputs-textinputfield-the-type-is-responsive-too">Inputs (TextInput/Field) — the type is responsive too</h3>
+<ul class="md-list"><li>Type 1.6rem (16px) → 1.4rem (14px) at ≥768px, line height 2.4rem → 2.2rem — <strong>16px on mobile is the iOS focus-zoom convention</strong>, tokenised.</li><li>Derived heights (line height + padding + 1px border × 2): M is <strong>40px on desktop / 50px on mobile</strong>, S 32px / 42px. It converges on the same 40/36/32 family as the button.</li><li>The wrapper (<code>Field</code>) owns the 1px <code>neutral200</code> border and the 4px radius. Focus: a <code>primary600</code> (#4945ff) border plus <strong><code>box-shadow 0 0 0 2px</code> in the same colour</strong>. Errors set both properties to <code>danger600</code>.</li></ul>
+<h3 id="modals-the-lightest-scrim-in-the-sample">Modals — the lightest scrim in the sample</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">Modal</th><th style="text-align:center">Dialog</th></tr></thead><tbody><tr><td>max-width</td><td style="text-align:center"><strong>83rem (830px)</strong></td><td style="text-align:center">42rem (420px)</td></tr><tr><td>radius</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td></tr></tbody></table></div>
+<ul class="md-list"><li>Enter is <code>modalPopIn</code>, scale 0.8→1 over <strong>200ms <code>authenticMotion</code></strong> (= Material's <code>(0.4,0,0.2,1)</code>, shipped under that name); exit is <strong>120ms easeOutQuad</strong> — asymmetric enter/exit (the same camp as MUI's 225/195ms).</li><li><strong>The scrim is <code>neutral800</code> (#32324d) at 20%</strong> — built in JS by appending an alpha byte to the hex string (<code>Math.floor(0.2×255).toString(16)</code>). Against eBay's 0.7 and Vuetify's 0.32, it is at the lightest end of the sample.</li><li>z-index is a seven-step semantic token set: navigation 100 · overlay 300 · modal 310 · dialog 320 · popover 500 · notification 700 · tooltip 1000.</li></ul>
+<h3 id="26-easings-a-gap-between-the-catalogue-and-the-usage">26 easings — a gap between the catalogue and the usage</h3>
+<p>The whole Penner family (Sine through Back × In/Out/InOut) ships as cubic-beziers, but <strong>the seven InOut entries (Sine · Quad · Cubic · Quart · Quint · Expo · Circ) hold the same values as their Out counterparts</strong> (only Back has a true InOut value) — a copy-paste trace left intact in dist. In practice only easeOutQuad and authenticMotion are used, and there are just three duration tokens: 120/200/320ms.</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Button height and input type as functions of the breakpoint</strong> — component dimensions tokenised responsively</li><li><strong>A <code>neutral800</code> 20% scrim</strong> — the lightest end of the sample</li><li>26 easings shipped with seven duplicated InOut values — a sample of an unverified catalogue</li><li>Transitions declared only inside a reduced-motion guard</li><li>The 62.5% rem assumption reaching all the way into the modal width (83rem) — misread, that is 1328px</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The 10px-rem (62.5%) assumption baked into the token values</strong> — unique in the sample, and a hazard when porting</li><li>Unnamed-array spacing — the second in the Evergreen family</li><li>A light/dark theme object pair plus <code>extendTheme</code></li><li>An admin (back-office) domain — the Strapi CMS admin UI</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified</del> → <strong>Resolved (2026-08-18, confirmed by headless render).</strong> <strong>But the target level is confirmed absent.</strong></p>
+<p>Source: https://design-system.strapi.io/iframe.html?id=foundations-accessibility--docs&amp;viewMode=docs (Storybook docs render inside an iframe, so the body is only readable by opening <code>iframe.html?id=…&amp;amp;viewMode=docs</code> directly.)</p>
+<ul class="md-list"><li><strong>It never mentions WCAG once.</strong> The rendered page contains the string <code>WCAG</code> zero times — no version, no level, no contrast figures. <strong>Classified C, confirmed.</strong></li><li><strong>It declares an aspiration rather than an achievement</strong> — a rare stance in the sample. In its own words: &quot;Its not completely true for now, but it's an objective we're aiming for.&quot; (the <code>## An inclusive usability</code> section) Where other systems write &quot;we conform to AA&quot;, Strapi writes <strong>&quot;not yet&quot;</strong>.</li><li>It enumerates only the categories of disability addressed — vision · hearing · cognitive · mobility.</li><li><strong>The only concrete implementation guidance is one line about alternative text</strong> (<code>## Coding standards</code>): attach alt text to assets that prompt an action or convey information, such as links, dropdowns and CTAs.</li><li><strong>It reduces accessibility to using the components</strong> (&quot;Using our components is a way to improve accessibility and consistency&quot;) — <strong>offering library adoption as the means</strong>, rather than conformance to a specification.</li><li>The closing section asks for error reports: &quot;If we've made any mistakes in this style guide, please reach out by creating a GitHub issue.&quot;</li><li>For reference, the package does contain accessibility-specific utilities — the Storybook index's <code>utilities-accessible-icon--docs</code> (AccessibleIcon), plus <code>FocusTrap</code>, <code>VisuallyHidden</code> and <code>LiveRegions</code>.</li></ul>
+<h3 id="figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</h3>
+<p>This is the basis for <code>figma_kit: false</code>. The Storybook index (https://design-system.strapi.io/index.json, 285 entries) has no Figma-related entry, and rendering the Welcome document (<code>iframe.html?id=getting-started-welcome--docs&amp;amp;viewMode=docs</code>) yields the string <code>figma</code> zero times. The sidebar's top level is six groups — Getting Started · Foundations · Utilities · Primitives · Inputs · Components — with no design-asset entry.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @strapi/design-system@2.2.4</code></li><li>Components in depth: parsed from the <code>dist/index.mjs</code> bundle of the same package (2026-08-18)</li><li><strong>Open questions:</strong> <del>the colour palette</del> (light-theme values confirmed — primary600 <code>#4945ff</code> · danger600 <code>#d02b20</code> · 12 neutral steps from 0 to 1000 plus the <code>buttonPrimary*</code> aliases), <del>the component list</del> (46), <del>the line-height system</del> (a unitless array <code>[1.14, 1.22, 1.25, 1.33, 1.43, 1.45, 1.5]</code> — weights are 400/500/600, with semiBold = 500), <del>the Figma kit</del> (2026-08-18 render — confirmed absent, section above), <del>the accessibility target</del> (confirmed absent, section above)</li><li>Documentation site: https://design-system.strapi.io (Storybook — curl returns an empty shell; resolved by headless render. The body is reached via <code>iframe.html?id=…&amp;amp;viewMode=docs</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

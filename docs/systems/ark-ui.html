@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ark UI — Self-Made DesignOps</title>
+<meta name="description" content="A system with no tokens at all — 68 unstyled headless primitives (@zag-js/* state machines) wrapped and shipped as 74 components. anatomy (the definition…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/ark-ui.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Ark UI — Self-Made DesignOps">
+<meta property="og:description" content="A system with no tokens at all — 68 unstyled headless primitives (@zag-js/* state machines) wrapped and shipped as 74 components. anatomy (the definition…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/ark-ui.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ark UI — Self-Made DesignOps">
+<meta name="twitter:description" content="A system with no tokens at all — 68 unstyled headless primitives (@zag-js/* state machines) wrapped and shipped as 74 components. anatomy (the definition…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Ark UI",
+ "description": "A system with no tokens at all — 68 unstyled headless primitives (@zag-js/* state machines) wrapped and shipped as 74 components. anatomy (the definition…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/ark-ui.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Ark UI",
+  "applicationCategory": "DesignApplication",
+  "url": "https://ark-ui.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#why-it-is-in-the-corpus">Why it is in the corpus</a></li><li><a href="#the-corpuss-dependency-relationships-laid-out">The corpus's dependency relationships, laid out</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#no-visual-values-confirmed">No visual values — confirmed</a></li><li class="lvl3"><a href="#the-style-contract-a-three-layer-data-attribute-grammar">The style contract — a three-layer data-attribute grammar</a></li><li class="lvl3"><a href="#the-modals-place-dialog">The modal's place — Dialog</a></li><li class="lvl3"><a href="#the-buttons-and-inputs-place-no-button-and-field">The button's and input's place — no Button, and Field</a></li><li class="lvl3"><a href="#the-scale-re-measured">The scale, re-measured</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li><li><a href="#drift-record-5382-5390-2026-08-23">Drift record — 5.38.2 → 5.39.0 (2026-08-23)</a></li></ul>
+  </div>
+  <div class="railfoot"><b>The Chakra team (Segun Adebayo and others)</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://ark-ui.com" rel="noopener">Official site</a><br><a href="https://github.com/chakra-ui/ark" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/ark-ui.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Ark UI</span></nav>
+    <h1>Ark UI</h1>
+    <p class="doc-lede">The Chakra team (Segun Adebayo and others) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p><strong>A system with no tokens at all</strong> — 68 unstyled headless primitives (<code>@zag-js/*</code> state machines) wrapped and shipped as 74 components. <code>anatomy</code> (the definition of part names) is effectively the only public contract.</p>
+<h2 id="why-it-is-in-the-corpus">Why it is in the corpus</h2>
+<p>It is <strong>the extreme case of &quot;a design system may have no tokens.&quot;</strong> It adds a <strong>fourth kind — no style layer whatsoever</strong> — to the three kinds of missing spacing in <code>platforms.md</code> (doesn't define it / inherits it / doesn't enumerate it).</p>
+<ul class="md-list"><li>There is no token file, and no CSS is shipped either (0 <code>.css</code> files)</li><li>It exposes <strong><code>anatomy</code></strong> — the definition of the part names a component is made of (<code>root</code>/<code>trigger</code>/<code>content</code> …), onto which a styling library attaches values. <strong>Park UI (a Panda preset) and Chakra v3 sit on top of it</strong></li><li>The state machines are <strong>split across 68 <code>@zag-js/*</code> packages</strong> — component behaviour (focus trapping, keyboard navigation, ARIA) implemented independently of any framework</li><li><strong>Four frameworks supported — React, Vue, Solid, Svelte</strong> — the widest distribution in the sample alongside Siemens iX (Web Components + 3 wrappers), reached here by sharing state machines</li></ul>
+<h2 id="the-corpuss-dependency-relationships-laid-out">The corpus's dependency relationships, laid out</h2>
+<pre class="md-code"><code>Ark UI (behaviour, anatomy)
+  ├── Park UI      = Ark UI + a Panda CSS preset + the Radix Colors palette
+  └── Chakra UI v3 = rewritten on top of Ark UI (systems/chakra-ui.md)
+
+Radix Primitives (behaviour)
+  ├── shadcn/ui    = Radix Primitives + Tailwind tokens
+  └── Radix Themes = Radix Primitives + its own style layer</code></pre>
+<p><strong>Two lineages separate behaviour from style</strong> (Ark / Radix Primitives), and each carries two styling systems on top — a structure confirmed within the corpus.</p>
+<h2 id="components">Components</h2>
+<p><strong>74</strong> (accordion · angle-slider · carousel · clipboard · collapsible · color-picker · combobox · date-picker · file-upload · pin-input · qr-code · signature-pad · toast · toc · tour · tree-view and more). It includes specialised components like <code>angle-slider</code>, <code>signature-pad</code> and <code>tour</code>.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Because it is headless, the subject of the deep pass is not visual values but the <strong>contract structure</strong>. Measured from <code>@ark-ui/react@5.38.2</code> plus the pinned <code>@zag-js/*@1.43.1</code>.</p>
+<h3 id="no-visual-values-confirmed">No visual values — confirmed</h3>
+<ul class="md-list"><li>0 <code>.css</code> files, re-confirmed. The only style string in the package is the <code>margin:0; padding:0; box-sizing:border-box</code> reset the <code>frame</code> component injects into its iframe — <strong>there is not a single dimension, colour or type value in the entire package</strong>. &quot;Measuring the values&quot; of buttons, inputs and modals does not apply here; what follows takes that place as the structural contract.</li></ul>
+<h3 id="the-style-contract-a-three-layer-data-attribute-grammar">The style contract — a three-layer data-attribute grammar</h3>
+<p><code>createAnatomy(name).parts(…).build()</code> from <code>@zag-js/anatomy</code> generates, for each part, <code>attrs: { &amp;quot;data-scope&amp;quot;: &amp;quot;dialog&amp;quot;, &amp;quot;data-part&amp;quot;: &amp;quot;content&amp;quot; }</code> and the selector <code>[data-scope=&amp;quot;dialog&amp;quot;][data-part=&amp;quot;content&amp;quot;]</code> — a styling library attaches itself through <strong>attribute selectors, not classes</strong>. The state vocabulary has three layers:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>layer</th><th>attribute</th><th>value</th></tr></thead><tbody><tr><td>identity</td><td><code>data-scope</code> / <code>data-part</code></td><td>component/part name (kebab)</td></tr><tr><td>discrete state</td><td><code>data-state</code></td><td><code>&amp;quot;open&amp;quot;</code> / <code>&amp;quot;closed&amp;quot;</code> etc.</td></tr><tr><td>boolean state</td><td><code>data-disabled</code> <code>data-invalid</code> <code>data-readonly</code> <code>data-required</code> …</td><td>presence, no value</td></tr></tbody></table></div>
+<h3 id="the-modals-place-dialog">The modal's place — Dialog</h3>
+<ul class="md-list"><li>The anatomy has <strong>7 parts</strong>: trigger · backdrop · <strong>positioner</strong> · content · title · description · closeTrigger. The positioner is a part of its own — a design that <strong>pushes placement (centred, bottom-anchored) onto the style layer</strong>, in structural contrast to systems where the CSS owns placement (Semi, Naive).</li><li>The state machine has <strong>two states, open/closed</strong>. Behavioural options: trapFocus · preventScroll · restoreFocus · closeOnEscape · closeOnInteractOutside. A <code>role</code> prop switches between dialog and alertdialog, and aria-modal, aria-labelledby and aria-describedby are wired in.</li><li>Enter and exit are handled by the <strong>Presence</strong> utility: <code>data-state</code> plus <code>unmountOnExit</code> · <code>lazyMount</code> · <code>skipAnimationOnMount</code> — it ships no animation values, only <strong>the timing hook that waits for the CSS animation to finish before unmounting</strong>.</li></ul>
+<h3 id="the-buttons-and-inputs-place-no-button-and-field">The button's and input's place — no Button, and Field</h3>
+<ul class="md-list"><li><strong>There is no button component</strong> — evidence of the principle that elements needing no state machine do not get built (button is absent from all 61 directories, while toggle and download-trigger are present).</li><li>Inputs are wrapped by <strong>Field</strong> — <strong>8 parts</strong>: root · <strong>input · textarea · select</strong> (one anatomy covering all three form elements) · label · helperText · errorText · requiredIndicator. State is four booleans (data-disabled/invalid/readonly/required), with invalid double-marked alongside aria-invalid.</li></ul>
+<h3 id="the-scale-re-measured">The scale, re-measured</h3>
+<ul class="md-list"><li><strong>67 dependencies = 66 <code>@zag-js/*</code> + 1 <code>@internationalized/date</code></strong> — all of them state machines, zero general-purpose utilities.</li><li>The 73 entries in <code>dist/components</code> break down as <strong>61 component directories + 12 barrel files</strong> (anatomy, factory and index in four formats each). Of the 61, <strong>51 expose an anatomy</strong>; the other 10 are behavioural utilities — portal · presence · focus-trap · client-only · format · frame and so on.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Zero visual values, confirmed</strong> — the only CSS string is frame's iframe reset</li><li>The style contract is <strong>data-scope/part/state attribute selectors</strong> (not classes)</li><li><strong>A positioner part</strong> — even placement is outsourced to the style layer</li><li><strong>No button</strong> — elements without a state machine do not get built</li><li>Presence — unmount timing without animation values</li><li>Field covers input, textarea and select under one anatomy</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>0 tokens · 0 CSS</strong> — the only sample with no style layer at all</li><li><code>anatomy</code> (part names) as the contract with a styling library</li><li>State machines split across 68 packages (<code>@zag-js/*</code>)</li><li>Four frameworks supported — in the widest-distribution group</li><li>The shared foundation under Park UI and Chakra v3</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Keyboard and ARIA behaviour is implemented in the state machines, but <strong>the target level and the verification method are unverified</strong>.</del> → <strong>Claims WCAG compliance (resolved 2026-08-18 — with no version or level given).</strong> Source: github chakra-ui/ark → <code>README.md</code> — &quot;WCAG compliant components tested with real assistive technologies out of the box&quot;. It says only that verification uses real assistive technology; the tools and reports are not published.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Package: <code>npm pack @ark-ui/react@5.38.2</code> (+ <code>@zag-js/dialog@1.43.1</code> · <code>@zag-js/anatomy@1.43.1</code> — used in the 2026-08-18 deep pass)</li><li><strong>Open questions:</strong> <del>the part structure of all 73 components</del> (partly resolved 2026-08-18 — the deep pass confirms 51 expose an anatomy and measures Dialog's 7 parts and Field's 8; the remaining 49 were not enumerated), the accessibility verification method, how much code is shared with Chakra v3</li></ul>
+<blockquote><p>Re-verified (2026-08-17): 5.38.1 → 5.38.2 patch — this entry ships anatomy without tokens or CSS, so no values are affected. Pin updated only.</p></blockquote>
+<h2 id="drift-record-5382-5390-2026-08-23">Drift record — 5.38.2 → 5.39.0 (2026-08-23)</h2>
+<p><strong>The first minor in this freshness pass that moved a recorded number.</strong> Re-measured:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">5.38.2</th><th style="text-align:center">5.39.0</th></tr></thead><tbody><tr><td><code>dist/components</code> entries</td><td style="text-align:center">73</td><td style="text-align:center"><strong>74</strong></td></tr><tr><td>— component directories</td><td style="text-align:center">61</td><td style="text-align:center"><strong>62</strong></td></tr><tr><td>— barrel files</td><td style="text-align:center">12</td><td style="text-align:center">12</td></tr><tr><td>dependencies</td><td style="text-align:center">67</td><td style="text-align:center"><strong>69</strong></td></tr><tr><td>— <code>@zag-js/*</code></td><td style="text-align:center">66</td><td style="text-align:center"><strong>68</strong></td></tr><tr><td>— other</td><td style="text-align:center"><code>@internationalized/date</code></td><td style="text-align:center">←</td></tr><tr><td>pinned <code>@zag-js/*</code></td><td style="text-align:center">1.43.1</td><td style="text-align:center"><strong>1.43.3</strong></td></tr></tbody></table></div>
+<p>One component was added: <strong><code>toc</code></strong>, a directory that re-exports its anatomy from <code>@zag-js/toc</code> (<code>toc.anatomy.js</code> is two lines), with the parts nav · list · item · link · content · indicator · title · root. Counting it, the anatomy-exposing directories go 51 → 52; nothing else under <code>dist/components</code> changed.</p>
+<p><strong>Two <code>@zag-js/*</code> packages were added but only one component</strong> — <code>@zag-js/hotkeys</code> has <strong>no component directory</strong>. The &quot;zero general-purpose utilities&quot; observation in the deep pass above was measured at 5.38.2 and this entry does not extend it to 5.39.0; what is measured here is that the dependency exists and no wrapper for it ships.</p>
+<p>The deep-pass section above stays pinned to <code>@ark-ui/react@5.38.2</code> + <code>@zag-js/*@1.43.1</code>, the versions its part-structure measurements were taken from.</p>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

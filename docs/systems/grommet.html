@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grommet — Self-Made DesignOps</title>
+<meta name="description" content="HPE's system — the entire theme is generated from a single number (baseSpacing: 24), the default body is 18px, the largest in the sample, and the maximum…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/grommet.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Grommet — Self-Made DesignOps">
+<meta property="og:description" content="HPE's system — the entire theme is generated from a single number (baseSpacing: 24), the default body is 18px, the largest in the sample, and the maximum…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/grommet.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Grommet — Self-Made DesignOps">
+<meta name="twitter:description" content="HPE's system — the entire theme is generated from a single number (baseSpacing: 24), the default body is 18px, the largest in the sample, and the maximum…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Grommet",
+ "description": "HPE's system — the entire theme is generated from a single number (baseSpacing: 24), the default body is 18px, the largest in the sample, and the maximum…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/grommet.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Grommet",
+  "applicationCategory": "DesignApplication",
+  "url": "https://v2.grommet.io"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-a-single-generatebasespacing-scale">Tokens — a single generate(baseSpacing, scale)</a></li><li class="lvl3"><a href="#spacing-edgesize-derived-by-division">Spacing (edgeSize) — derived by division</a></li><li class="lvl3"><a href="#type-an-18px-body-the-largest-in-the-sample">Type — an 18px body, the largest in the sample</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-no-fixed-height-they-use-the-text-scale-directly">Buttons — no fixed height; they use the text scale directly</a></li><li class="lvl3"><a href="#inputs-the-border-subtraction-is-written-into-the-padding-formula-in-code">Inputs — the border subtraction is written into the padding formula in code</a></li><li class="lvl3"><a href="#layer-the-modal-no-width-steps">Layer (the modal) — no width steps</a></li><li class="lvl3"><a href="#further-confirmation-of-seed-derivation-breakpoints-and-dark-mode">Further confirmation of seed derivation — breakpoints and dark mode</a></li><li class="lvl3"><a href="#tables-datatable-only-t-shirt-names-not-values">Tables (dataTable) — only t-shirt names, not values</a></li><li class="lvl3"><a href="#navigation-sidebar-tab-menu">Navigation (sidebar · tab · menu)</a></li><li class="lvl3"><a href="#feedback-notification">Feedback (notification)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>HPE (Hewlett Packard Enterprise)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://v2.grommet.io" rel="noopener">Official site</a><br><a href="https://github.com/grommet/grommet" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/grommet.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Grommet</span></nav>
+    <h1>Grommet</h1>
+    <p class="doc-lede">HPE (Hewlett Packard Enterprise) · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>HPE's system — <strong>the entire theme is generated from a single number (<code>baseSpacing: 24</code>)</strong>, the default body is <strong>18px, the largest in the sample</strong>, and <strong>the maximum measure is computed as font size × 24</strong> (with a source comment citing UX StackExchange).</p>
+<h2 id="tokens-a-single-generatebasespacing-scale">Tokens — a single <code>generate(baseSpacing, scale)</code></h2>
+<pre class="md-code"><code class="language-js">generate(baseSpacing = 24, scale = 6)
+baseFontSize = 24 × 0.75        // 18px
+fontScale    = 24 / 6           // 4
+size         = 18 + factor × 4  // 4px per step
+height       = 24 + factor × 4  // line height
+maxWidth     = 24 × size        // the maximum measure</code></pre>
+<p><strong>Spacing, borders, type, line height and measure all come out of the single 24</strong> — the widest derivation range among the seed-derived family (Ant, Tailwind, SmartHR).</p>
+<h3 id="spacing-edgesize-derived-by-division">Spacing (edgeSize) — derived by division</h3>
+<pre class="md-code"><code>none 0 · hair 1px · xxsmall 2 · xsmall 24/8=3 · small 24/4=6
+medium 24/2=12 · large 24 · xlarge 48</code></pre>
+<blockquote><p><strong>Correction (2026-08-18).</strong> The table above holds the values of the <strong><code>breakpoints.small</code> (≤768px) override.</strong> Running <code>base.js</code> confirms that the <strong>default (desktop) scale</strong> is one step larger throughout: <code>xxsmall 3 · xsmall 6 · small 12 · medium 24 · large 48 · xlarge 96</code>. Below 768px the whole edgeSize, borderSize and size scale is swapped for the halved family (a mobile density switch — the same names, halved values). The observation that the grid consists of divisors of 24 stands.</p></blockquote>
+<ul class="md-list"><li><strong>3px · 6px · 12px</strong> — not a 4px grid but <strong>a grid of divisors of 24.</strong> After Garden (multipliers 1 · 2 · 3 · 5 …), the second system to miss the 4/8/16 core entirely</li><li><code>hair</code> (1px) — a hairline name Charcoal also has</li><li>Borders work the same way: 1 · 2 · 24/6=4 · 24/2=12 · 24</li></ul>
+<h3 id="type-an-18px-body-the-largest-in-the-sample">Type — an 18px body, the largest in the sample</h3>
+<ul class="md-list"><li><strong>An 18px default</strong> — above the sample's body-default axis (13 · 14 · 15 · 16 · 17). The steps are 18 + factor × 4, arithmetic</li><li><strong>The maximum measure is a token</strong> — <code>maxWidth = 24 × fontSize</code> (432px at an 18px body). The source comment: &quot;~50 characters wide, see ux.stackexchange.com/a/34125&quot; — <strong>the only sample with the rationale linked in the code.</strong> The second measure data point after Charcoal (nine fixed paragraph-width tokens), and where Charcoal enumerates, Grommet computes</li></ul>
+<h2 id="components">Components</h2>
+<p>Included in the same package — <strong>about 95</strong> under <code>components/</code> (Box, Layer, DataTable, Chart, Diagram, WorldMap and other visualisations). Event themes such as <code>hacktoberfest2022</code> ship alongside in the theme files.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p><code>themes/base.js</code> of <code>grommet@2.56.0</code> was <strong>actually executed in node</strong> to dump the theme object (after installing peer dependencies such as <code>grommet-icons</code> and <code>styled-components</code>), and compared against the style formulas in <code>components/Button/StyledButton.js</code> and <code>components/Layer/StyledLayer.js</code>.</p>
+<h3 id="buttons-no-fixed-height-they-use-the-text-scale-directly">Buttons — no fixed height; they use the text scale directly</h3>
+<p><code>fontStyle()</code> in <code>StyledButton.js</code> <strong>references <code>theme.text[size]</code> directly</strong> — there is no button-specific typography; it shares the body type scale.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>type/line height (shared with <code>text</code>)</td><td style="text-align:center">14/20px</td><td style="text-align:center"><strong>18/24px</strong></td><td style="text-align:center">22/28px</td></tr><tr><td>block padding</td><td style="text-align:center">4px</td><td style="text-align:center">4px</td><td style="text-align:center">8px</td></tr><tr><td>inline padding</td><td style="text-align:center">20px</td><td style="text-align:center">22px</td><td style="text-align:center">32px</td></tr><tr><td>border</td><td style="text-align:center">2px</td><td style="text-align:center">2px</td><td style="text-align:center">2px</td></tr><tr><td>radius</td><td style="text-align:center">18px</td><td style="text-align:center">18px</td><td style="text-align:center"><strong>24px</strong></td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center"><strong>48px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The radius equals half the derived height</strong> — medium 36/2 = 18, large 48/2 = 24. Written as fixed values, they are <strong>pills in effect</strong> (small clamps, since 18 &gt; 16).</li><li><strong>The border is 2px</strong> — parting from the 1px majority, and 2px even in the default (inactive) state.</li><li>The button's body type is <strong>18px</strong> — the largest body value carried straight into the button.</li><li>Transition 100ms <code>ease-in-out</code> (across colour, background, border and shadow) · disabled <strong>opacity 0.3</strong>.</li><li>No minimum width (only the skeleton variant sets a min of 100px).</li></ul>
+<h3 id="inputs-the-border-subtraction-is-written-into-the-padding-formula-in-code">Inputs — the border subtraction is written into the padding formula in code</h3>
+<pre class="md-code"><code class="language-js">// base.js
+input.padding = baseSpacing/2 − controlBorderWidth  // 12 − 1 = 11px</code></pre>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>value</th></tr></thead><tbody><tr><td>padding</td><td><strong>11px</strong> all round (= the 12 − 1px border formula)</td></tr><tr><td>border / radius</td><td><code>global.control</code>: 1px / <strong>4px</strong></td></tr><tr><td>type</td><td>shared with the text scale (18/24px by default) · <strong>weight 600</strong></td></tr><tr><td><strong>derived height</strong></td><td>24 + 22 + 2 = <strong>48px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The input's value type is semibold (600)</strong> — where most systems use 400.</li><li><strong>The button's radius (18px) and the input's (4px) live in different tiers</strong> — the button's in <code>button.size[*].border.radius</code>, the input's in <code>global.control.border.radius</code>.</li><li>The label (FormField) is a separate block — margins of <code>xsmall</code> (6px) vertically and <code>small</code> (12px) horizontally, with the field border on <strong>the bottom only</strong> (<code>position: inner, side: bottom</code> — an underline form).</li></ul>
+<h3 id="layer-the-modal-no-width-steps">Layer (the modal) — no width steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>value</th></tr></thead><tbody><tr><td>width</td><td><strong>no steps — the content's size</strong> (controlled only through <code>full</code>, <code>margin</code> and position)</td></tr><tr><td>radius</td><td>4px (<code>layer.border.radius</code>)</td></tr><tr><td>overlay</td><td>rgba(0,0,0,0.5)</td></tr><tr><td>enter</td><td>centred: <strong>scale 0.8→1</strong> · edge-anchored: a slide (eight keyframe sets, one per position)</td></tr><tr><td>duration / easing</td><td><strong>200ms ease-in-out forwards</strong> — <code>animationDuration = 200</code>, <strong>a hardcoded constant</strong></td></tr><tr><td>responsive</td><td>full-screen at or below <code>responsiveBreakpoint: small</code> (768px)</td></tr></tbody></table></div>
+<ul class="md-list"><li>A sample with no modal width scale at all — a third axis again, beside Cloudscape's five steps and MUI's reused breakpoints. If you need a width, you set <code>width</code> yourself.</li><li>The duration is a JS constant outside the theme, so <strong>it cannot be changed through the theme</strong> — in a system where everything derives from the seed, motion alone sits outside the derivation.</li></ul>
+<h3 id="further-confirmation-of-seed-derivation-breakpoints-and-dark-mode">Further confirmation of seed derivation — breakpoints and dark mode</h3>
+<ul class="md-list"><li><strong>The breakpoints derive from the seed too</strong>: small = 24×32 = <strong>768</strong> · medium = 24×64 = <strong>1536</strong>. The &quot;widest derivation range in the sample&quot; observation extends to responsiveness.</li><li><strong>Dark mode is not a theme file but a pair inside each colour token</strong> — <code>text: {dark:'#f8f8f8', light:'#444444'}</code>, a <code>{dark, light}</code> object per colour. Which applies depends on the background context (Box's <code>dark</code> prop). A <strong>pair-in-token</strong> approach, distinct from the theme-swapping camp (Clarity and others).</li><li>The focus colour is a single <strong>#6FFFB0</strong> (a fluorescent mint) — a high-visibility colour unrelated to the brand purple (#7D4CDB).</li></ul>
+<h3 id="tables-datatable-only-t-shirt-names-not-values">Tables (<code>dataTable</code>) — only t-shirt names, not values</h3>
+<p><code>themes/base.js</code> of <code>grommet@2.56.0</code>. The table tokens are <strong>entirely references to scale names.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>container gap</td><td><code>gap: 'xsmall'</code> = <strong>6px</strong></td></tr><tr><td>sort icon gap</td><td><code>sort.gap: 'xsmall'</code> = 6px</td></tr><tr><td>column resize</td><td>border <code>color: 'border'</code>, <code>side: 'end'</code> · vertical padding <code>xsmall</code> (6px)</td></tr><tr><td>expand toggle</td><td><code>expand.size: 'xxsmall'</code> = 3px</td></tr><tr><td>group end rule</td><td><code>border.side: 'bottom'</code></td></tr><tr><td>pinned header and footer</td><td>background <code>opacity: 'strong'</code></td></tr><tr><td>header primary column</td><td><code>weight: 'bold'</code></td></tr><tr><td>search field</td><td>left padding <code>small</code> (12px)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There are no cell-padding or row-height tokens.</strong> Table cells simply use <code>Box</code>'s pad rules, so the values do not exist in the table token tier — the &quot;do not fix the height&quot; attitude seen in buttons and inputs continues into the table.</li><li><strong>Pinned headers and footers are handled with <code>opacity: 'strong'</code> rather than a colour</strong> — raising the background's opacity so the rows beneath do not show through, and the only case in the collected sample of specifying a pinned area through opacity.</li><li>Column selection and reordering UI (<code>dataTableColumns</code>) has its own token group — tab padding <code>small</code> (12px), a selection list with <code>small</code> vertical padding and <code>xsmall</code> (6px) gaps.</li></ul>
+<h3 id="navigation-sidebar-tab-menu">Navigation (<code>sidebar</code> · <code>tab</code> · <code>menu</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>Sidebar</td><td><code>gap: 'large'</code> (<strong>48px</strong>) · <code>pad: 'small'</code> (<strong>12px</strong>) — <strong>no width token</strong></td></tr><tr><td>Tab active indicator</td><td><code>border.side: 'bottom'</code>, <code>size: 'small'</code> = <strong>2px</strong></td></tr><tr><td>Tab colours</td><td>default <code>control</code>, active <code>text</code>, hover black/white</td></tr><tr><td>Tab gap</td><td><code>gap: 'small'</code> = 12px</td></tr><tr><td>Menu group</td><td>vertical padding <code>xsmall</code> (6px) · separator <code>size: 'xsmall'</code> (the 1px family)</td></tr><tr><td>Menu separator padding</td><td>horizontal <code>small</code> (12px)</td></tr><tr><td>skipLinks</td><td>position <code>top</code> · radius <code>small</code> · padding <code>medium</code> (24px)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The sidebar has no width value</strong> — the only case among the ten navigation samples collected that does not set one (the rest run 200–280px). It delegates to <code>Box</code>'s width rules.</li><li><strong>The tab hover colour is stated as black in light and white in dark</strong> (<code>{dark: 'white', light: 'black'}</code>) — and the active border colour is the same pair.</li><li>A sample that makes skip links (<code>skipLinks</code>) a theme token.</li></ul>
+<h3 id="feedback-notification">Feedback (<code>notification</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>Toast width</strong></td><td><code>container.width: 'medium'</code> = <strong>384px</strong></td></tr><tr><td><strong>Toast duration</strong></td><td><strong>8000ms</strong> (<code>notification.toast.time</code>)</td></tr><tr><td>Toast position and margin</td><td><code>layer.position: 'top'</code> · <code>margin: 'medium'</code> (24px) · elevation medium</td></tr><tr><td>Inline container</td><td>radius <code>xsmall</code> · padding horizontal <code>small</code> (12px) / vertical <code>xsmall</code> (6px)</td></tr><tr><td><strong>Global banner</strong></td><td>radius <strong><code>none</code></strong> · padding horizontal <code>large</code> (<strong>48px</strong>) / vertical <code>xsmall</code> (6px)</td></tr><tr><td>Gap between parts</td><td><code>gap: 'small'</code> (12px) · icon right <code>small</code> · text gap <code>medium</code> (24px)</td></tr><tr><td>Title</td><td><code>weight: 'bold'</code></td></tr><tr><td>Actions</td><td>right margin <code>xsmall</code> (6px)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>8000ms is the longest duration among the code-layer samples collected</strong> (Naive and Ant message 3000 · Sonner 4000 · Ant notification 4500 · Blueprint 5000). The same value Atlassian specifies at the documentation layer, eight seconds.</li><li><strong>The three forms — inline, global and toast — differ only in their container specification.</strong> The content structure (icon, title, body, actions) is shared, and only <code>container</code> (radius and padding) and <code>layer</code> branch. The global banner presupposes filling the screen width, with <strong>radius 0 and 48px on each side.</strong></li><li>Per-state icons are enumerated as <code>critical</code>, <code>warning</code>, <code>normal</code>, <code>unknown</code> and so on, each a pair of an icon component and a background colour.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>The button's type = the body text scale as-is</strong> (18px) — no button-specific typography</li><li><strong>A radius equal to half the derived height, so pills in effect</strong>, plus a 2px border</li><li><strong>A border subtraction in the input's padding formula</strong> (12−1) — the same technique as MUI and Codex, expressed as a formula</li><li><strong>A weight of 600 for input values</strong></li><li><strong>No modal width steps</strong>, with the 200ms duration as a constant outside the theme</li><li><strong>Below 768px, the whole spacing, border and size scale is swapped for halved values</strong></li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>A single seed (24) deriving spacing, borders, type, line height and measure</strong> — the widest derivation range in the sample</li><li><strong>An 18px body</strong> — the largest default size in the sample</li><li><strong>A measure = font size × 24 formula</strong> with the rationale linked in a comment — unique in the sample</li><li>Spacing on a grid of divisors of 24 (3/6/12) — the second case of departing from the core values</li><li><code>generate()</code> is public — a user can change the seed and regenerate the whole theme</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.1 (resolved 2026-08-18 — with no level stated).</strong> Source: <code>v2.grommet.io/accessibility</code> — &quot;grommet provides support for W3c's WCAG 2.1 spec&quot;.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>2.56.1 re-verified — recorded values unchanged (2026-08-18).</strong> Every token section this entry records (<code>dataTable</code>, <code>sidebar</code>, <code>tab</code>, <code>menu</code>, <code>notification</code>) was compared section by section and confirmed <strong>identical.</strong> Two things changed — <strong>a new <code>dateTimeInput</code> component token</strong> and <strong>the insertion of SPDX headers</strong> (<code>SPDX-License-Identifier: Apache-2.0</code> — the licence has begun to be stated in file headers).</li><li>Tokens: <code>npm pack grommet@2.56.0</code> → <code>es6/themes/base.js</code></li><li>Components in depth: <code>themes/base.js</code> from the same package, executed, plus <code>components/Button/StyledButton.js</code> and <code>components/Layer/StyledLayer.js</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>the colour palette structure</del> <del>the component list</del> <del>dark mode</del> (resolved 2026-08-18 — the deep pass: colours are <code>{dark, light}</code> pairs, with the full palette values not enumerated; about 95 components; dark handled as pairs inside the tokens), and the relationship to the HPE-specific theme (<code>grommet-theme-hpe</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

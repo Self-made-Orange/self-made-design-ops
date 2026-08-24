@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WMN Design System — Self-Made DesignOps</title>
+<meta name="description" content="The UK's West Midlands transport authority — the transit domain sample. Its colour taxonomy has mode of transport (modal: bus · metro · railway ·…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/wmn.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="WMN Design System — Self-Made DesignOps">
+<meta property="og:description" content="The UK's West Midlands transport authority — the transit domain sample. Its colour taxonomy has mode of transport (modal: bus · metro · railway ·…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/wmn.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WMN Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="The UK's West Midlands transport authority — the transit domain sample. Its colour taxonomy has mode of transport (modal: bus · metro · railway ·…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "WMN Design System",
+ "description": "The UK's West Midlands transport authority — the transit domain sample. Its colour taxonomy has mode of transport (modal: bus · metro · railway ·…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/wmn.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "WMN Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://designsystem.tfwm.org.uk"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#colour-mode-of-transport-is-a-taxonomy-axis">Colour — mode of transport is a taxonomy axis</a></li><li><a href="#distributed-as-patterns">Distributed as patterns</a></li><li><a href="#figures-measured-from-mincss">Figures (measured from min.css)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-wmnds-btn">Buttons (.wmnds-btn)</a></li><li class="lvl3"><a href="#inputs-wmnds-fe-input">Inputs (.wmnds-fe-input)</a></li><li class="lvl3"><a href="#focus-one-global-rule">Focus — one global rule</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>West Midlands Network (UK transport authority)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://designsystem.tfwm.org.uk" rel="noopener">Official site</a><br><a href="https://github.com/wmcadigital/wmn-design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/wmn.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>WMN Design System</span></nav>
+    <h1>WMN Design System</h1>
+    <p class="doc-lede">West Midlands Network (UK transport authority) · transit · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The UK's West Midlands transport authority — the <strong>transit domain sample</strong>. Its colour taxonomy has <strong>mode of transport (<code>modal</code>: bus · metro · railway · susTravel · roads)</strong> as a first-class axis, and it distributes <strong>task patterns like &quot;buy a ticket&quot;</strong> rather than components.</p>
+<h2 id="colour-mode-of-transport-is-a-taxonomy-axis">Colour — mode of transport is a taxonomy axis</h2>
+<pre class="md-code"><code>brand:          primary/secondary (purple)
+modal:          bus · metro · railway · susTravel · roads   ← colour per transport mode
+web:            text · cta · error · warning · success · information
+backgroundOnly: plannedDisruption · disable · background</code></pre>
+<ul class="md-list"><li><strong><code>modal</code> here means transport modality, not a dialog</strong> — a case of terminology collision in the corpus (a GLOSSARY candidate). The convention of route-map colours raised into a token system — the <strong>transit edition</strong> of the domain-specific colour family axis (charts, sidebars and the like).</li><li><code>plannedDisruption</code> exists separately as a <strong>background-only colour</strong> — a case of a transport service's state vocabulary reaching the token names.</li></ul>
+<h2 id="distributed-as-patterns">Distributed as patterns</h2>
+<p>What ships is <strong>task-pattern HTML</strong> rather than a component list:</p>
+<pre class="md-code"><code>buy-a-ticket · live-departures · find-a-timetable · find-a-stop-or-station ·
+travel-updates · question-form · feedback-loop · cookies …</code></pre>
+<p>GOV.UK's pattern orientation (centred on service tasks) moved into the transit domain — a system where <strong>the unit is the journey, not the component.</strong></p>
+<h2 id="figures-measured-from-mincss">Figures (measured from min.css)</h2>
+<ul class="md-list"><li>Focus: <code>0 0 0 2px #fff, 0 0 0 4px #9d5baf</code> — <strong>a double ring, a 2px white gap plus 4px purple</strong> (the same structure as GOV.UK's double yellow ring, in the brand purple)</li><li>16px root (1rem) with 1rem dominant in body text — padding runs 0.25–3rem (multiples of 4px predominate, with a few outliers like <code>0.7rem</code>)</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The first transit domain sample</strong> — transport mode on the colour axis, service disruption in the state vocabulary</li><li>Distributed as task patterns (domain specialisation of the GOV.UK lineage)</li><li>A double focus ring (inheriting the UK government convention)</li><li>The <code>modal</code> terminology collision — the same spelling meaning different things in different systems</li></ul>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>There is a component layer inside the same package (<code>wmn-design-system@2.4.0</code>) — <strong>21 Nunjucks macros</strong> under <code>build/njk/components/</code> plus <code>build/css/wmnds-components.min.css</code> (consolidated into wmnds.min.css). The form elements sit under form-elements (checkbox, radio, date/number/text-input, textarea, dropdown, file upload), exactly as GOV.UK arranges them. <strong>There is no modal or dialog component</strong> — an exhaustive grep of the <code>.wmnds-*</code> classes turns up nothing in the modal/dialog/overlay/popup family except <code>branded-banner__modal</code> (a sub-element of the banner, not a dialog). Fitting for a system whose unit is the journey, it has no overlay UI at all.</p>
+<h3 id="buttons-wmnds-btn">Buttons (<code>.wmnds-btn</code>)</h3>
+<ul class="md-list"><li><strong>min-height 50px</strong> — a large target. Padding is only 4px 8px, with flex vertical centring filling the height. 5px radius · 1rem/<strong>700</strong>/1.3rem line height · transition 0.2s ease-in-out.</li><li>The base form is <code>justify-content: space-between</code> — a layout that <strong>assumes an icon on the right</strong> (the macro has iconLeft/iconRight/loading-spinner slots).</li><li>Colours: base <strong>#1d7bbf blue</strong> (hover #145686 · active/focus #0f3e60) · primary #3c1053 (brand purple) · secondary a purple outline · <strong>start #00703c · destructive #d4351c — GOV.UK's button green and red verbatim.</strong> The colour lineage is split in two, a brand axis (purple, blue) and a borrowed GOV.UK axis (green, red).</li></ul>
+<h3 id="inputs-wmnds-fe-input">Inputs (<code>.wmnds-fe-input</code>)</h3>
+<ul class="md-list"><li>12px padding · <strong>1px purple #3c1053 border</strong> (a brand-colour border rather than grey) · radius 0 (square-cornered — the GOV.UK lineage) · 1rem / 1.5rem line height · width 100%.</li><li>Errors: a 2px #d4351c border plus <strong>a 5px red bar on the left</strong> of the group (<code>fe-group--error</code>) — GOV.UK's error grammar verbatim.</li></ul>
+<h3 id="focus-one-global-rule">Focus — one global rule</h3>
+<p>A single selector, <code>[class*=wmnds-] :focus</code>, covers every component — <code>0 0 0 2px #fff, 0 0 0 4px #9d5baf</code> (the same values as the double ring in the token section). A <strong>one-global-rule</strong> approach that defines almost no per-component focus; only buttons additionally lay a #0f3e60 background over focus and active.</p>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified (the double focus ring is the GOV.UK family's high-contrast pattern — the one-global-rule application is covered in the deep-dive above).</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li><strong>URL moved (confirmed 2026-08-18):</strong> <code>designsystem.wmnetwork.co.uk</code> → <code>designsystem.tfwm.org.uk</code> (301, following an organisation rename)</li><li><del>Licence</del> → <strong>confirmed unspecified (2026-08-18).</strong> No LICENSE file (the root was checked exhaustively) · no license field in package.json · zero mentions in the README · GitHub API <code>license: null</code>. <strong>Effectively all rights reserved</strong> — reusing the code or patterns requires asking WMCA first. (Derivative repositories in the same org are MIT, but that does not apply to this one. The repository is active — last pushed 2026-06-01.)</li><li><strong>Still to confirm:</strong> the full set of real colour values (the JSON holds only varName — real values for the button and error families were partly obtained from min.css in the deep-dive), the full type scale, and the WCAG target</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canvas — Self-Made DesignOps</title>
+<meta name="description" content="Workday's design system for its HR and finance products. Its distinguishing feature is a scale exceptionally dense at 2px steps.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/canvas.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Canvas — Self-Made DesignOps">
+<meta property="og:description" content="Workday's design system for its HR and finance products. Its distinguishing feature is a scale exceptionally dense at 2px steps.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/canvas.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Canvas — Self-Made DesignOps">
+<meta name="twitter:description" content="Workday's design system for its HR and finance products. Its distinguishing feature is a scale exceptionally dense at 2px steps.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Canvas",
+ "description": "Workday's design system for its HR and finance products. Its distinguishing feature is a scale exceptionally dense at 2px steps.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/canvas.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Canvas",
+  "applicationCategory": "DesignApplication",
+  "url": "https://canvas.workday.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#size-spacing">Size / spacing</a></li><li class="lvl3"><a href="#baseline-multiples">Baseline multiples</a></li><li class="lvl3"><a href="#radius-colour-type">Radius / colour / type</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-basebutton-four-steps-pills-and-absolute-minimum-widths">Buttons (BaseButton) — four steps, pills, and absolute minimum widths</a></li><li class="lvl3"><a href="#inputs-textinput-a-single-40px-with-a-280px-min-width">Inputs (TextInput) — a single 40px, with a 280px min-width</a></li><li class="lvl3"><a href="#modals-a-single-440px-width-radius-32px">Modals — a single 440px width, radius 32px</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Workday</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://canvas.workday.com" rel="noopener">Official site</a><br><a href="https://github.com/Workday/canvas-tokens" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/canvas.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Canvas</span></nav>
+    <h1>Canvas</h1>
+    <p class="doc-lede">Workday · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Workday's design system for its HR and finance products. Its distinguishing feature is a scale <strong>exceptionally dense at 2px steps</strong>.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="size-spacing">Size / spacing</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>rem</th><th>px</th></tr></thead><tbody><tr><td><code>--cnvs-base-size-0</code></td><td>0</td><td>0</td></tr><tr><td><code>--cnvs-base-size-25</code></td><td>0.125</td><td>2</td></tr><tr><td><code>--cnvs-base-size-50</code></td><td>0.25</td><td>4</td></tr><tr><td><code>--cnvs-base-size-75</code></td><td>0.375</td><td>6</td></tr><tr><td><code>--cnvs-base-size-100</code></td><td>0.5</td><td>8</td></tr><tr><td><code>--cnvs-base-size-125</code></td><td>0.625</td><td>10</td></tr><tr><td><code>--cnvs-base-size-150</code></td><td>0.75</td><td>12</td></tr><tr><td><code>--cnvs-base-size-175</code></td><td>0.875</td><td>14</td></tr><tr><td><code>--cnvs-base-size-200</code></td><td>1</td><td>16</td></tr><tr><td><code>--cnvs-base-size-225</code></td><td>1.125</td><td>18</td></tr><tr><td><code>--cnvs-base-size-250</code></td><td>1.25</td><td>20</td></tr><tr><td><code>--cnvs-base-size-300</code></td><td>1.5</td><td>24</td></tr><tr><td><code>--cnvs-base-size-350</code></td><td>1.75</td><td>28</td></tr><tr><td><code>--cnvs-base-size-400</code></td><td>2</td><td>32</td></tr><tr><td><code>--cnvs-base-size-450</code></td><td>2.25</td><td>36</td></tr><tr><td><code>--cnvs-base-size-500</code></td><td>2.5</td><td>40</td></tr><tr><td><code>--cnvs-base-size-600</code></td><td>3</td><td>48</td></tr><tr><td><code>--cnvs-base-size-700</code></td><td>3.5</td><td>56</td></tr><tr><td><code>--cnvs-base-size-800</code></td><td>4</td><td>64</td></tr></tbody></table></div>
+<p><strong>The 2–20px range is filled in completely at 2px steps</strong> (2 · 4 · 6 · 8 · 10 · 12 · 14 · 16 · 18 · 20). After 20px it widens to 4px steps, and after 40px to 8px steps.</p>
+<h3 id="baseline-multiples">Baseline multiples</h3>
+<p>The larger values are defined as multiples of the <code>--cnvs-base-baseline</code> variable.</p>
+<pre class="md-code"><code class="language-css">--cnvs-base-size-1600: calc(var(--cnvs-base-baseline) * 16.00)
+--cnvs-base-size-3200: calc(var(--cnvs-base-baseline) * 32.00)</code></pre>
+<p>Change the one baseline and the large sizes move with it.</p>
+<p>The base font size is <code>--cnvs-base-font-size: 1rem</code> (16px).</p>
+<p>Source: <code>@workday/canvas-tokens-web@4.4.0</code> → <code>css/base/_variables.css</code></p>
+<h3 id="radius-colour-type">Radius / colour / type</h3>
+<p><del>Unverified.</del> → <strong>radius resolved (the 2026-08-18 deep pass)</strong> — the shape scale in <code>css/legacy/system.css</code>: sm 4 / md 8 / lg 12 / xl 16 / xxl 24 / xxxl 32px / <strong>full 65rem (a pill)</strong>. For type, the deep pass confirmed only subtext.md (12/16), subtext.lg (14/20) and body.sm (16/24). The full type scale and colour palette remain unverified.</p>
+<h2 id="components">Components</h2>
+<p><del>Unverified.</del> → buttons, inputs and modals are in the deep pass below (2026-08-18). The package also contains a separate <code>sana</code> theme.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Component values were measured from <code>@workday/canvas-kit-react@16.0.6</code>. That package ships <strong>the <code>.tsx</code> sources rather than a build artefact</strong>, so the stencil (<code>createStencil</code>) declarations can be read directly. Token references were resolved all the way through <code>css/legacy/{system,base}.css</code> and <code>css/base/_variables.css</code> of <code>@workday/canvas-tokens-web@4.4.0</code>.</p>
+<p><strong>The namespace kit v16 consumes is <code>system.legacy.*</code></strong> — tokens v4 lays the old names (<code>size-md</code>, <code>padding-lg</code> …) as an alias tier over a new scale (<code>--cnvs-sys-space-x1</code>–<code>x20</code>, multiples of <code>--cnvs-base-unit: 0.25rem</code>), and the current components use those aliases: <strong>a generational changeover in progress.</strong></p>
+<h3 id="buttons-basebutton-four-steps-pills-and-absolute-minimum-widths">Buttons (BaseButton) — four steps, pills, and absolute minimum widths</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">extraSmall</th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">24px</td><td style="text-align:center">32px</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>inline padding</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td><strong>min-width</strong></td><td style="text-align:center">auto</td><td style="text-align:center"><strong>72px</strong></td><td style="text-align:center"><strong>88px</strong></td><td style="text-align:center"><strong>104px</strong></td></tr><tr><td>type</td><td style="text-align:center">12/16</td><td style="text-align:center">14/20</td><td style="text-align:center">14/20</td><td style="text-align:center">16/24</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The radius is <code>shape.full</code> = 65rem (1040px) — every variant is a pill.</strong> Primary, Secondary and Tertiary all set the same value explicitly. The same camp as Cloudscape (a 20px pill), parting from MUI (4px) and Backpack (8px).</li><li><strong>There are three absolute px minimum widths by size (72/88/104).</strong> The documentation-layer survey found zero samples with an absolute min-width (<code>patterns/button.md</code> — only Spectrum, with a height × 2.25 proportion); at the code layer this is the third after Fluent (64/96) and MUI (64), and <strong>the widest.</strong></li><li><strong>Padding is reduced one token step on the icon's side</strong> — at medium with icon-start it is 12px left and 16px right (nine start/end/only combinations declared as compound modifiers). icon-only gets zero padding plus <code>min-width = height</code> (a square).</li><li>Weight 500, a 1px border (only the colour varies by variant), transition <strong>120ms linear</strong> (box-shadow, border, background, colour), <strong>shortened to 40ms</strong> on <code>hover:active</code>.</li><li>Focus is a double ring: a 2px white inner ring plus a 4px brand outer box-shadow.</li></ul>
+<h3 id="inputs-textinput-a-single-40px-with-a-280px-min-width">Inputs (TextInput) — a single 40px, with a 280px min-width</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>height</td><td><strong>40px</strong> (<code>size.md</code>) — <strong>no size variants</strong></td></tr><tr><td>padding</td><td>8px all round (<code>padding.xs</code>, commented &quot;Compensate for border&quot;)</td></tr><tr><td>border / radius</td><td>1px / <strong>12px</strong> (<code>shape.lg</code>)</td></tr><tr><td><strong>min-width</strong></td><td><strong>280px</strong> (hardcoded <code>px2rem(280)</code>)</td></tr><tr><td>type</td><td>14/20 (subtext.lg)</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The button has four steps while the input has a single 40px</strong> — the stencil's modifiers are only grow and error.</li><li><strong>min-width 280px</strong> — <code>patterns/form.md</code> records that &quot;a minimum input width exists in no system&quot;; <strong>Canvas is the first counterexample.</strong> The label (below) also has a min-width of 180px.</li><li>The label is not floating but <strong>a separate block</strong> (FormField.Label) — 14px, weight 500, with a 4px label-to-input gap in the vertical arrangement and a 180px label min-width for the horizontal one. FormField itself carries a 24px bottom margin (<code>gap.lg</code>).</li><li>Focus: the border turns brand-coloured plus <strong>a 1px inset box-shadow</strong>, giving the effect of 2px. Errors use a 2px inset, and there are <strong>two error variants</strong> (error/caution).</li></ul>
+<h3 id="modals-a-single-440px-width-radius-32px">Modals — a single 440px width, radius 32px</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td><strong>only 440px</strong> (<code>px2rem(440)</code>, no size prop)</td></tr><tr><td>margin / max height</td><td>40px / <code>calc(100dvh − 40px)</code> (the default offset)</td></tr><tr><td>radius</td><td><strong>32px</strong> (<code>shape.xxxl</code> — commented &quot;modals and large containers&quot;)</td></tr><tr><td>padding</td><td>24px (<code>padding.xl</code>, inherited from Popup.Card)</td></tr><tr><td>shadow</td><td><code>depth-6</code> = 0 6px 24px 13% + 0 12px 48px 9% (oklch)</td></tr><tr><td>scrim</td><td>fading in over <strong>300ms</strong> (keyframes, no easing specified = ease)</td></tr><tr><td>card entrance</td><td>a translate toward 0 from the placement direction + <strong>150ms ease-out</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Modal is an extension of Popup.Card</strong> — Dialog, Modal and Popup share one stencil lineage, and Modal overrides only the width, margin and radius. A single 440px with no width steps is exactly Mantine's default <code>md</code> = 440px (<code>patterns/modal.md</code>).</li><li>Inner padding: title <code>8px 8px 4px</code> · body <code>4px 8px 8px</code> (inside the card's 24px).</li><li>At ≤768px it <strong>switches to a bottom sheet</strong> (<code>alignItems: end</code> plus 16px margin and padding).</li><li><strong>An escape hatch that disables animation through the global class <code>.wd-no-animation</code></strong> is built into the stencil — reduced motion offered as a class rather than a token.</li><li>The code contains <strong>a sub-pixel centring correction</strong> that makes the container width even on odd viewports with <code>calc(100vw − 1px)</code> (with a comment about a Chrome flexbox issue).</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Pills everywhere (65rem) plus three absolute minimum widths by size (72/88/104px)</strong> — the combination of the two rules appears to be unique to Canvas in the corpus</li><li><strong>Four button steps vs a single 40px input</strong> — control-height policy asymmetric per component</li><li><strong>A 280px input min-width and a 180px label min-width</strong> — even form dimensions specified in absolutes</li><li><strong>A single 440px modal width</strong> — no width scale at all (the opposite pole from Cloudscape's five steps, and fewer even than Backpack's two)</li><li><strong>Consuming <code>system.legacy.*</code></strong> — the current kit using an alias tier over a new token scale, a generational changeover in progress. Because the <code>.tsx</code> sources ship, the stencil declarations serve as the documentation</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The lower range is dense at 2px steps.</strong> There are ten steps between 2 and 20px — twice Ant Design's (4 · 8 · 12 · 16 · 20, five steps). Fine adjustment becomes possible, at the cost of having to decide &quot;10px or 12px?&quot; every time.</li><li><strong>A single name, <code>size</code>, covers spacing and dimensions together.</strong> There is no separate scale for whitespace. Similar to Polaris deriving space and radius from <code>size</code>, except Canvas derives nothing and uses just the one.</li><li><strong>rem is the source unit</strong>, as in Backpack.</li><li><strong>The large values use baseline multiples.</strong> Small values are fixed rem and large ones are variable multiples, so two systems are mixed within one scale.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>WCAG 2.1 A/AA (resolved 2026-08-18).</strong> Source: <code>canvas.workday.com/accessibility</code> — &quot;guided by the Web Content Accessibility Guidelines (WCAG) 2.1 A/AA&quot;. <strong>Writing the level as A and AA together is a rare notation.</strong></p>
+<p>Re-confirmed against the original by headless render 2026-08-18 — https://canvas.workday.com/guidelines/accessibility/overview (&quot;We are guided by the Web Content Accessibility Guidelines (WCAG) 2.1 A/AA&quot;). The same page adopts POUR (Perceivable · Operable · Understandable · Robust) as its four categories and splits the accessibility sub-documents into <strong>Overview / For Designers / For Developers tabs</strong> — though for some, such as <code>Accessible Forms</code>, <strong>the For Designers tab is internal-only</strong>.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/Workday/canvas-tokens</li><li>Packages: <code>@workday/canvas-tokens-web@4.4.0</code> (tokens) · <code>@workday/canvas-kit-react@16.0.6</code> (components — used in the 2026-08-18 deep pass: <code>button/lib/BaseButton.tsx</code> · <code>text-input/lib/TextInput.tsx</code> · <code>form-field/lib/FormFieldLabel.tsx</code> · <code>modal/lib/ModalCard.tsx</code> · <code>popup/lib/PopupCard.tsx</code>)</li><li>Licence: canvas-kit-react's <code>package.json</code> says <strong>Apache-2.0</strong> (matching the frontmatter)</li><li><strong>Figma kit — confirmed absent (2026-08-18, <code>figma_kit: false</code>)</strong>: even rendering the documentation site headlessly, <strong>there is no public Figma kit.</strong> The root navigation is only <code>Get Started → Introduction / For Developers / For Contributors</code>, and <strong><code>For Designers</code> is absent from the public navigation.</strong> The Next.js route manifest does contain a <code>for-designers</code> node under <code>get-started</code>, but <code>https://canvas.workday.com/get-started/for-designers</code> is a <strong>404</strong>, and the <code>For Designers</code> tabs in the upgrade guide and accessibility documents are marked <code>&amp;quot;internal&amp;quot;: true</code>. Across the whole site &quot;figma&quot; appears in exactly <strong>one place — a search-tag string on the <code>for-developers/resources</code> page</strong> — and there is not a single figma.com link. → <strong>A system that gates its designer and Figma documentation internally</strong> (classified C). Renders checked: https://canvas.workday.com/ · https://canvas.workday.com/get-started/introduction · https://canvas.workday.com/get-started/for-developers/resources (2026-08-18)</li><li><strong>Open questions:</strong> the full type scale and actual colour palette values, and how the <code>sana</code> theme differs</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

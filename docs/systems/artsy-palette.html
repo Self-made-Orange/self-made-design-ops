@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palette — Self-Made DesignOps</title>
+<meta name="description" content="Artsy's (art marketplace) system — spacing is five steps in units of 10px (1 = 10px) with half (5px) as the only exception. Typography tops out at 102px…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/artsy-palette.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Palette — Self-Made DesignOps">
+<meta property="og:description" content="Artsy's (art marketplace) system — spacing is five steps in units of 10px (1 = 10px) with half (5px) as the only exception. Typography tops out at 102px…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/artsy-palette.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Palette — Self-Made DesignOps">
+<meta name="twitter:description" content="Artsy's (art marketplace) system — spacing is five steps in units of 10px (1 = 10px) with half (5px) as the only exception. Typography tops out at 102px…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Palette",
+ "description": "Artsy's (art marketplace) system — spacing is five steps in units of 10px (1 = 10px) with half (5px) as the only exception. Typography tops out at 102px…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/artsy-palette.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Palette",
+  "applicationCategory": "DesignApplication",
+  "url": "https://palette.artsy.net"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-units-of-10px-five-steps">Spacing — units of 10px, five steps</a></li><li class="lvl3"><a href="#typography-11102px-names-abbreviating-size">Typography — 11–102px, names abbreviating size</a></li><li class="lvl3"><a href="#breakpoints-a-1920px-top">Breakpoints — a 1920px top</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Artsy</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://palette.artsy.net" rel="noopener">Official site</a><br><a href="https://github.com/artsy/palette" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/artsy-palette.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Palette</span></nav>
+    <h1>Palette</h1>
+    <p class="doc-lede">Artsy · commerce · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Artsy's (art marketplace) system — spacing is <strong>five steps in units of 10px</strong> (<code>1</code> = 10px) with <code>half</code> (5px) as the only exception. Typography tops out at <strong>102px</strong>, and there is a <code>bq</code> (blockquote) variant. <strong>Breakpoints go up to 1920px.</strong></p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-units-of-10px-five-steps">Spacing — units of 10px, five steps</h3>
+<pre class="md-code"><code class="language-js">space = { 0.5: '5px', half: '5px', 1: '10px', 2: '20px',
+          4: '40px', 6: '60px', 12: '120px' }</code></pre>
+<ul class="md-list"><li><strong>Number 1 is 10px</strong> — the <strong>fourth in the 10px family</strong> after GOV.UK (5px), Blueprint (10px grid) and KRDS (10px root, and Artsy is the only one to build the spacing scale purely from multiples of 10px</li><li><strong>There is no 4px, 8px or 16px at all</strong> — the second complete departure from the core, after Kaizen (a 6px grid). The two systems' grids differ from each other, at 6px and 10px</li><li><strong><code>0.5</code> and <code>half</code> are two names for one value</strong> — the only duplication of its kind in the sample, offering a numeric key and a word key at once</li><li><strong>Five steps (plus half)</strong>, the smallest family in the sample (Protocol 6 · Bootstrap 6 · Nord 6)</li></ul>
+<h3 id="typography-11102px-names-abbreviating-size">Typography — 11–102px, names abbreviating size</h3>
+<pre class="md-code"><code>xxxl 102/108 · bq 50/60 · xxl 60/70 · xl 40/48 · lg 26/40 · md 20/32
+sm 16/26 · xs 13/20 · xxs 11/14 (+ lg-display · sm-display)</code></pre>
+<ul class="md-list"><li><strong>A maximum of 102px</strong> — the largest type size in the sample (beyond Kaizen's 84px and the Digital Agency's 64px). Display typography for artwork pages</li><li><strong>A <code>bq</code> (blockquote) variant</strong> — the only case in the sample of an HTML element appearing directly in a role name (a 50px pull quote)</li><li><code>-display</code> suffixed pairs — display variants at the same size (lg / lg-display)</li><li>Line heights are fixed px per size and run wide, like 26/40 (lg) at <strong>a ratio of 1.54</strong></li><li>One custom typeface, <code>ll-unica77</code>; only the fallbacks are system fonts</li></ul>
+<h3 id="breakpoints-a-1920px-top">Breakpoints — a 1920px top</h3>
+<pre class="md-code"><code>xs ≤767 · sm 768 · md 1280 · lg 1920</code></pre>
+<p><strong>The top is 1920px</strong> — higher than LeafyGreen (1440) and most others (1200–1440). A domain characteristic of showing artwork images large on big screens, and it ships a unitless copy alongside as <code>unitlessBreakpoints</code>.</p>
+<p>The dark theme is a separate file, <code>themes/v3Dark.js</code>.</p>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>Spacing in five steps of 10px</strong> — 4, 8 and 16 entirely absent; the fourth in the 10px family</li><li><code>0.5</code> and <code>half</code> as two names for one value — the only duplication in the sample</li><li><strong>Typography up to 102px</strong> — the largest in the sample</li><li><strong>A <code>bq</code> variant named after an HTML element</strong> — unique in the sample</li><li>A 1920px top breakpoint — the highest in the sample</li><li>Ships breakpoints in both unit-bearing and unitless form</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>It declares no conformance level (resolved 2026-08-18 — confirmed as none).</strong></p>
+<p>The Storybook <code>Guides › Accessibility</code> document was read by headless render (<a href="https://palette.artsy.net/?path=/story/guides--accessibility" rel="noopener">https://palette.artsy.net/?path=/story/guides--accessibility</a>). A WCAG level or version <strong>never appears once</strong>; instead this single sentence is the whole of it:</p>
+<blockquote><p>Palette's components are generally built with accessibility best practices in mind, but may still have some issues — if you find one, file a bug with the Design System Working Group, or as an external user open a GitHub issue</p></blockquote>
+<p>Instead of a target it keeps <strong>two pieces of practical guidance</strong>:</p>
+<ul class="md-list"><li><strong>Click handlers</strong> — when putting <code>onClick</code> on UI that is neither a <code>Button</code> nor an anchor with a valid <code>href</code>, use <code>Clickable</code> (a stripped <code>button</code> tag built on <code>Box</code>). <code>&amp;lt;Box onClick={…}&amp;gt;</code> is named explicitly as the forbidden example</li><li><strong>Alternative text</strong> — the WebAIM guidance is quoted directly. No &quot;image of …&quot; or &quot;graphic of …&quot;, no duplication of the surrounding text. There is a self-diagnosis that <strong>duplicated alt on large anchor-area images with text beneath them</strong> is common in the Artsy codebase, and it says <code>alt=&amp;quot;&amp;quot;</code> is acceptable in those cases</li></ul>
+<p>So <strong>there is no declared target and no regression guard in the documentation.</strong> All that can be confirmed is that an a11y addon (<code>sb-addons/a11y-3</code>) is installed in Storybook.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li><strong>Basis for figma_kit (false):</strong> no official kit — zero mentions of Figma across the documentation and README, confirmed by render 2026-08-18</li><li>Tokens: <code>npm pack @artsy/palette-tokens@7.3.0</code> → <code>dist/themes/v3.js</code></li><li>Components: <code>@artsy/palette@46.9.3</code>, charts in <code>palette-charts</code></li><li><strong>Still to confirm:</strong> the colour palette, the relationship to versions before v3, the component list, <del>the accessibility target</del> (resolved 2026-08-18 — confirmed absent), <del>the Figma kit</del> (resolved 2026-08-18 — confirmed absent)</li><li><strong>Absence of a Figma kit confirmed (2026-08-18):</strong> all four Storybook guides (<code>guides--getting-started</code> · <code>guides--how-palette-works</code> · <code>guides--developing-for-palette</code> · <code>guides--accessibility</code>) were rendered headlessly and <code>README.md</code> at <code>github.com/artsy/palette</code> was checked as well, with <strong>not one mention of Figma, Sketch or a design kit.</strong> Even rendered, this system publishes no design-tool kit (2026-08-18, confirmed by rendering <a href="https://palette.artsy.net/" rel="noopener">https://palette.artsy.net/</a>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base Web — Self-Made DesignOps</title>
+<meta name="description" content="Uber's design system, covering consumer services (rides, delivery) and internal tools alike.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/base-web.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Base Web — Self-Made DesignOps">
+<meta property="og:description" content="Uber's design system, covering consumer services (rides, delivery) and internal tools alike.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/base-web.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Base Web — Self-Made DesignOps">
+<meta name="twitter:description" content="Uber's design system, covering consumer services (rides, delivery) and internal tools alike.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Base Web",
+ "description": "Uber's design system, covering consumer services (rides, delivery) and internal tools alike.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/base-web.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Base Web",
+  "applicationCategory": "DesignApplication",
+  "url": "https://baseweb.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#size-spacing-dense-at-2px-steps">Size / spacing — dense at 2px steps</a></li><li class="lvl3"><a href="#the-irregularity-of-the-numbering">The irregularity of the numbering</a></li><li class="lvl3"><a href="#radius-2026-08-18-themessharedbordersjs">Radius (2026-08-18, themes/shared/borders.js)</a></li><li class="lvl3"><a href="#motion-tokens-2026-08-18-themessharedanimationjs">Motion tokens (2026-08-18, themes/shared/animation.js)</a></li><li class="lvl3"><a href="#typography-colour">Typography / colour</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-buttonstyled-componentsjs-no-declared-height-aligned-to-the-scale">Buttons (button/styled-components.js) — no declared height, aligned to the scale</a></li><li class="lvl3"><a href="#inputs-inputstyled-componentsjs-a-2px-border">Inputs (input/styled-components.js) — a 2px border</a></li><li class="lvl3"><a href="#modals-modalstyled-componentsjs-one-named-width">Modals (modal/styled-components.js) — one named width</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Uber</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://baseweb.design" rel="noopener">Official site</a><br><a href="https://github.com/uber/baseweb" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/base-web.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Base Web</span></nav>
+    <h1>Base Web</h1>
+    <p class="doc-lede">Uber · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Uber's design system, covering consumer services (rides, delivery) and internal tools alike.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="size-spacing-dense-at-2px-steps">Size / spacing — dense at 2px steps</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>scale0</code></td><td>2px</td></tr><tr><td><code>scale100</code></td><td>4px</td></tr><tr><td><code>scale200</code></td><td>6px</td></tr><tr><td><code>scale300</code></td><td>8px</td></tr><tr><td><code>scale400</code></td><td>10px</td></tr><tr><td><code>scale500</code></td><td>12px</td></tr><tr><td><code>scale550</code></td><td>14px</td></tr><tr><td><code>scale600</code></td><td>16px</td></tr><tr><td><code>scale650</code></td><td>18px</td></tr><tr><td><code>scale700</code></td><td>20px</td></tr><tr><td><code>scale750</code></td><td>22px</td></tr><tr><td><code>scale800</code></td><td>24px</td></tr><tr><td><code>scale850</code></td><td>28px</td></tr><tr><td><code>scale900</code></td><td>32px</td></tr><tr><td><code>scale950</code></td><td>36px</td></tr><tr><td><code>scale1000</code></td><td>40px</td></tr><tr><td><code>scale1200</code></td><td>48px</td></tr><tr><td><code>scale1400</code></td><td>56px</td></tr><tr><td><code>scale1600</code></td><td>64px</td></tr><tr><td><code>scale2400</code></td><td>96px</td></tr><tr><td><code>scale3200</code></td><td>128px</td></tr><tr><td><code>scale4800</code></td><td>192px</td></tr></tbody></table></div>
+<p><strong>The 2–24px range is filled completely at 2px steps</strong> (2 · 4 · 6 · 8 · 10 · 12 · 14 · 16 · 18 · 20 · 22 · 24) — going further than Canvas (Workday), which fills up to 20px.</p>
+<p>Source: <code>baseui@18.2.0</code> → <code>themes/shared/sizing.js</code></p>
+<h3 id="the-irregularity-of-the-numbering">The irregularity of the numbering</h3>
+<p>The numbers bear no constant proportion to the values.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>interval</th><th style="text-align:center">number gap</th><th style="text-align:center">value gap</th></tr></thead><tbody><tr><td><code>scale0</code> → <code>scale100</code></td><td style="text-align:center">100</td><td style="text-align:center">2px</td></tr><tr><td><code>scale500</code> → <code>scale550</code></td><td style="text-align:center">50</td><td style="text-align:center">2px</td></tr><tr><td><code>scale800</code> → <code>scale850</code></td><td style="text-align:center">50</td><td style="text-align:center">4px</td></tr><tr><td><code>scale1000</code> → <code>scale1200</code></td><td style="text-align:center">200</td><td style="text-align:center">8px</td></tr><tr><td><code>scale3200</code> → <code>scale4800</code></td><td style="text-align:center">1600</td><td style="text-align:center">64px</td></tr></tbody></table></div>
+<p><strong>The same gap of 50 is 2px in one place and 4px in another.</strong> Intermediate numbers like <code>550</code>, <code>650</code>, <code>750</code>, <code>850</code> and <code>950</code> exist. The same unevenness appears in Spectrum (<code>85</code>, <code>350</code>).</p>
+<h3 id="radius-2026-08-18-themessharedbordersjs">Radius (2026-08-18, <code>themes/shared/borders.js</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th>value</th></tr></thead><tbody><tr><td><code>radius100</code></td><td>2px</td></tr><tr><td><code>radius200</code></td><td>4px</td></tr><tr><td><code>radius300</code></td><td>8px</td></tr><tr><td><code>radius400</code></td><td>12px</td></tr><tr><td><code>radius500</code></td><td>16px</td></tr></tbody></table></div>
+<p>Above the five raw steps sit <strong>component-specific tokens</strong>: <code>buttonBorderRadius</code> 8 · <code>inputBorderRadius</code> 8 (mini 4) · <code>popoverBorderRadius</code> 8 · <code>tagBorderRadius</code> 24 · <strong><code>checkboxBorderRadius</code> 0</strong> · <strong><code>surfaceBorderRadius</code> 0</strong> (used by Card, Datepicker and Drawer — a dual system with round controls and square surfaces. Modal, however, uses <code>radius500</code> directly rather than this token).</p>
+<h3 id="motion-tokens-2026-08-18-themessharedanimationjs">Motion tokens (2026-08-18, <code>themes/shared/animation.js</code>)</h3>
+<p><strong>Seventeen durations</strong> (0 · 100–1000ms in hundreds, plus 150/250 · 1500 · 3000 · 5000 · 7000ms) — the second most after Canvas (20 steps, <code>patterns/motion.md</code>), and the 7000ms ceiling is the highest in the sample (Canvas tops out at 1000ms, Codex at 2000ms).</p>
+<p>The easings carry <strong>two naming generations coexisting in the same file</strong>:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>new name (semantic)</th><th>old name (curve name)</th><th>value</th></tr></thead><tbody><tr><td><code>easeLinear</code></td><td><code>linearCurve</code></td><td><code>cubic-bezier(0, 0, 1, 1)</code></td></tr><tr><td><code>easeDecelerate</code></td><td><code>easeOutQuinticCurve</code></td><td><code>cubic-bezier(0.22, 1, 0.36, 1)</code></td></tr><tr><td><code>easeAccelerate</code></td><td><code>easeInQuinticCurve</code></td><td><code>cubic-bezier(0.64, 0, 0.78, 0)</code></td></tr><tr><td><code>easeAccelerateDecelerate</code></td><td>—</td><td><code>cubic-bezier(0.83, 0, 0.17, 1)</code></td></tr><tr><td><code>easeResponsiveAccelerate</code></td><td>—</td><td><code>cubic-bezier(0.11, 0, 0.5, 0)</code></td></tr><tr><td>—</td><td><code>easeOutCurve</code></td><td><code>cubic-bezier(.2, .8, .4, 1)</code></td></tr><tr><td>—</td><td><code>easeInCurve</code></td><td><code>cubic-bezier(.8, .2, .6, 1)</code></td></tr><tr><td>—</td><td><code>easeInOutCurve</code></td><td><code>cubic-bezier(0.4, 0, 0.2, 1)</code></td></tr><tr><td>—</td><td><code>easeInOutQuinticCurve</code></td><td><code>cubic-bezier(0.86, 0, 0.07, 1)</code></td></tr></tbody></table></div>
+<p><strong>Actual component use clusters on the old names</strong> (grepping every component in 18.2.0): <code>easeOutCurve</code> 28 times · <code>easeOutQuinticCurve</code> 7 · <code>linearCurve</code> 6 · <code>easeInOutQuinticCurve</code> 4, with <strong>the four new names at zero</strong> — the semantic renaming layer exists only in the token file and has not penetrated the components.</p>
+<h3 id="typography-colour">Typography / colour</h3>
+<p><code>themes/shared/typography.js</code>: two tiers — a numeric scale <code>font100</code>–<code>font1050</code> with semantic aliases such as <code>ParagraphSmall</code>, <code>LabelMedium</code> and <code>HeadingLarge</code> above it. The Label family is all weight 500; the Paragraph family is normal. Colour is unverified — only the per-theme light/dark override structure is confirmed.</p>
+<h2 id="components">Components</h2>
+<p><del>Unverified.</del> → see the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Parsed from the per-component <code>styled-components.js</code> (JS object styles) of <code>baseui@18.2.0</code>, with the referenced <code>$theme.sizing/typography/borders</code> tokens resolved to real values.</p>
+<h3 id="buttons-buttonstyled-componentsjs-no-declared-height-aligned-to-the-scale">Buttons (<code>button/styled-components.js</code>) — no declared height, aligned to the scale</h3>
+<p>No height is declared; it <strong>derives from the label's line height plus block padding.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">mini</th><th style="text-align:center">compact</th><th style="text-align:center"><strong>default</strong></th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>type (Label*)</td><td style="text-align:center">12/16</td><td style="text-align:center">14/16</td><td style="text-align:center">16/20</td><td style="text-align:center">18/24</td></tr><tr><td>block padding</td><td style="text-align:center">6px</td><td style="text-align:center">10px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td></tr><tr><td>inline padding</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td><td style="text-align:center">20px</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>28px</strong></td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center"><strong>56px</strong></td></tr><tr><td>min-width (fill only)</td><td style="text-align:center">52px</td><td style="text-align:center">60px</td><td style="text-align:center">72px</td><td style="text-align:center">80px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The derived heights match the sizing scale exactly</strong> — 28/36/48/56 = <code>scale850/950/1200/1400</code>. Unlike MUI, which tolerates fractional derived heights (36.5px), Base Web <strong>back-calculated line heights and padding to land on the scale values.</strong> The same values are also declared as <code>minHeight</code> tokens, so the two paths cross-check.</li><li><strong>The default height is 48px</strong> — not the desktop-web majority (32–36) but the touch-target camp. The same reasoning structure as Orbit's 44px (rides and delivery = mobile B2C).</li><li>There are absolute px minimum widths (52–80 = height + 24), but <strong>only when <code>widthType=&amp;quot;fill&amp;quot;</code></strong> — with hug (the default) there are none. Added as a conditional sample to <code>patterns/button.md</code>'s &quot;has a minimum width at the code layer&quot; family (Carbon 176 · Fluent 64/96 · MUI 64).</li><li><strong>The <code>minHitArea=&amp;quot;tap&amp;quot;</code> prop</strong>: without changing the visual size, it stretches a transparent <code>::before</code> pseudo-element to <strong>48px</strong> (<code>scale1200</code>), expanding the hit area alone. Separating visual size from touch target is the same idea as M3's StateLayer (40dp, <code>patterns/form.md</code>), except M3 applies it always and Base Web makes it an <strong>opt-in prop</strong> (defaulting to <code>click</code>, no expansion).</li><li>The type is weight <strong>500</strong> at every size, with no uppercase. The radius is 8px at every size (a <code>buttonBorderRadiusMini</code> 4px token exists but is <strong>used zero times</strong> — a dead token). pill = 999px, with separate circle/square icon-only variants.</li><li>Six kinds: primary/secondary/tertiary × three danger variants. The selected state is drawn not with a border but with <strong>two stacked box-shadows</strong> (inset 2px + outer 2px), reusing <code>sizing.scale0</code> (2px) as that thickness — a sample of a spacing token doubling as a border width.</li><li>Transition: background only, <strong>200ms <code>linearCurve</code></strong>.</li></ul>
+<h3 id="inputs-inputstyled-componentsjs-a-2px-border">Inputs (<code>input/styled-components.js</code>) — a 2px border</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">mini</th><th style="text-align:center">compact</th><th style="text-align:center"><strong>default</strong></th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>type (font100–400)</td><td style="text-align:center">12/20</td><td style="text-align:center">14/20</td><td style="text-align:center">16/24</td><td style="text-align:center">18/28</td></tr><tr><td>block padding</td><td style="text-align:center">4px</td><td style="text-align:center">6px</td><td style="text-align:center">10px</td><td style="text-align:center">14px</td></tr><tr><td>inline padding</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td></tr><tr><td>border</td><td style="text-align:center">2px</td><td style="text-align:center">2px</td><td style="text-align:center">2px</td><td style="text-align:center">2px</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center"><strong>60px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The border is 2px</strong> — parting from the 1px majority (Backpack, Orbit and others). Since focus only changes the colour, there is no layout shift from a thickness jump.</li><li><strong>Inline padding is fixed at 14px (<code>scale550</code>) across every size</strong> — only the vertical tracks the size.</li><li>The default input's 48px aligns with the default button's 48px, and compact's 36 matches the button's compact too.</li><li>The type weight is normal (400) — a hierarchy step below the button's 500.</li><li>Radius 8px, <strong>4px only at mini</strong> (<code>inputBorderRadiusMini</code> — unlike the button's mini token, this one is actually used).</li><li>Labels (<code>form-control</code>): a separate block in <code>font250</code> (14/16/500), with captions in <code>font100</code> (12px).</li><li>The border transitions over <strong>200ms <code>easeOutCurve</code></strong>.</li></ul>
+<h3 id="modals-modalstyled-componentsjs-one-named-width">Modals (<code>modal/styled-components.js</code>) — one named width</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th>value</th></tr></thead><tbody><tr><td><code>default</code></td><td><strong>500px</strong></td></tr><tr><td><code>full</code></td><td>100%</td></tr><tr><td><code>auto</code></td><td>auto</td></tr><tr><td>(a numeric prop)</td><td>an arbitrary px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>There is only one named width, 500px</strong> — added as the second sample to the one-step camp in <code>patterns/modal.md</code> (shadcn/ui at 512px). 512 vs 500, a 12px difference. If you need more steps you pass a number, the opposite pole from the five px steps of Cloudscape, Mantine and Orbit.</li><li>Radius <strong>16px</strong> (referencing <code>radius500</code> directly — the exception that does not use the <code>surfaceBorderRadius</code> 0px token).</li><li>Animation: the scrim fades while the dialog <strong>fades and translates Y (20px→0)</strong>, both over <strong>400ms <code>easeOutCurve</code></strong>. Unlike MUI (225/195 asymmetric), enter and exit are symmetric.</li><li>The inner space comes not from padding but <strong>from the children's margins</strong>: the title (<code>font550</code> 20/28/700) mt 32 · ms 24 · me 32 (8px wider at the end, for the close button) · the body mx 24 · the footer mx 24 plus py 12. The close button is 24×24, 12px from the top right.</li><li>Scrim <code>rgba(0, 0, 0, 0.5)</code>.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Derived heights aligned to the sizing scale</strong> (28/36/48/56) — line heights and padding back-calculated to hit the scale. The opposite of MUI's tolerance for fractions</li><li><strong>The <code>minHitArea</code> pseudo-element hit expansion</strong> — an opt-in 48px touch target with an unchanged visual size</li><li><strong>The semantic easing renaming has not penetrated</strong> — the four new names used zero times, with <code>easeOutCurve</code> as the mainline</li><li><strong>A 2px input border</strong> plus inline padding fixed at 14px</li><li><strong>One named modal width (500px) plus an arbitrary-number escape hatch</strong></li><li><strong><code>scale0</code> (2px) doubling as a border width</strong> — reusing the smallest non-zero spacing token</li><li><strong>A checkbox radius token of 0px</strong> — the checkbox alone kept square among 8px controls</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>It keeps 2px steps all the way to 24px.</strong> Twelve steps, the densest lower range among the systems collected — wider than Canvas (ten steps to 20px).</li><li><strong>The proportion between number and value is broken.</strong> <code>scale550</code> (14px) and <code>scale850</code> (28px) both add 50 to the previous step, yet the value increases by 2px and 4px respectively. <strong>You cannot compute the value from the number.</strong></li><li><strong><code>scale0</code> is 2px, not 0.</strong> There is no zero-valued token, unlike most systems, which keep a <code>space-0: 0</code>.</li><li><strong>The top reaches 192px</strong>, larger than Carbon's (160px). Spacing and layout sizes are handled by the single <code>sizing</code> scale.</li><li><strong>The structure is per-theme overrides.</strong> Besides <code>themes/shared/</code> there are <code>themes/move-theme/</code> and others, so typography and the rest can be swapped per brand.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>Confirmed absent (2026-08-18, headless render).</strong></p>
+<p>Even rendered, the documentation site <strong>declares no WCAG version or level target anywhere.</strong> The home page has only the sentence &quot;Built-in accessibility — components are built with accessibility being a first-class citizen&quot;, with no conformance criterion, and the Guides navigation (Internationalization · Bidirectionality · Theming · Styling · Overrides · Colors) <strong>contains no accessibility guide at all.</strong></p>
+<p>What it offers instead is characteristic: <strong>a runtime validation component</strong> — <code>Unstable_A11y</code> (<code>import { Unstable_A11y } from 'baseui/a11y'</code>, in the Utility category) inspects the rendered tree at runtime with the <strong>axe-core</strong> library. It is introduced as an &quot;Experimental utility for validating accessibility at runtime&quot; and still carries the <code>Unstable_</code> prefix.</p>
+<p>A case of <strong>shipping an inspection tool as code instead of declaring a target in documentation</strong> — a <code>verification</code> approach rather than a <code>declaration</code> one (classified C — conformance target not published).</p>
+<p>Sources: https://baseweb.design/ (the home page's &quot;Built-in accessibility&quot; section) · https://baseweb.design/components/unstable-a11y/ (render confirmed, 2026-08-18)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Repository: https://github.com/uber/baseweb</li><li>Package: <code>baseui</code> (the theme and tokens ship inside the component package)</li><li><strong>Note:</strong> the tokens are not a separate package but live in <code>themes/shared/*.js</code> inside <code>baseui</code>. A general-purpose scanner sweeping for <code>.json</code>/<code>.css</code> will not find them.</li><li>Components in depth (2026-08-18): <code>baseui@18.2.0</code> → <code>button/styled-components.js</code> · <code>input/styled-components.js</code> · <code>form-control/styled-components.js</code> · <code>modal/styled-components.js</code> · <code>modal/constants.js</code> plus <code>themes/shared/{animation,borders,typography}.js</code></li><li><strong>Figma kit (resolved 2026-08-18 — <code>figma_kit: true</code>)</strong>: the home page's &quot;Figma Community&quot; section states &quot;You can find all the Base Web components on Figma Community.&quot; The <strong>&quot;Base Gallery&quot;</strong> file published on <strong>Uber's Figma Community profile (https://www.figma.com/@uber)</strong> is duplicated by the user, with the procedure described in the 2020-02-13 blog post &quot;Base Web on Figma Communities&quot;. A rare form in the corpus: distribution through <strong>a public Figma Community gallery rather than an internal library.</strong> Source: https://baseweb.design/blog/base-figma-community/ (render confirmed, 2026-08-18)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

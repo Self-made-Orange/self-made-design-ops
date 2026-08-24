@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TDS (Toss Design System) — Self-Made DesignOps</title>
+<meta name="description" content="Toss's design system — published to npm in split packages alongside the mini-app (Apps-in-Toss) SDK. It tokenises springs as physical parameters, embeds a…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/toss-tds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="TDS (Toss Design System) — Self-Made DesignOps">
+<meta property="og:description" content="Toss's design system — published to npm in split packages alongside the mini-app (Apps-in-Toss) SDK. It tokenises springs as physical parameters, embeds a…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/toss-tds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TDS (Toss Design System) — Self-Made DesignOps">
+<meta name="twitter:description" content="Toss's design system — published to npm in split packages alongside the mini-app (Apps-in-Toss) SDK. It tokenises springs as physical parameters, embeds a…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "TDS (Toss Design System)",
+ "description": "Toss's design system — published to npm in split packages alongside the mini-app (Apps-in-Toss) SDK. It tokenises springs as physical parameters, embeds a…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/toss-tds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "TDS (Toss Design System)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://tossmini-docs.toss.im"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-17",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#motion-springs-as-physical-parameters">Motion — springs as physical parameters</a></li><li class="lvl3"><a href="#typography-1142px-continuous-in-1px-with-four-companions-at-each-size">Typography — 11–42px continuous in 1px, with four companions at each size</a></li><li class="lvl3"><a href="#accessibility-font-scaling-a-remapping-table-built-in">Accessibility font scaling — a remapping table built in</a></li><li class="lvl3"><a href="#colour-the-ramp-inverts-in-dark">Colour — the ramp inverts in dark</a></li><li><a href="#distribution-one-body-with-the-mini-app-sdk">Distribution — one body with the mini-app SDK</a></li><li><a href="#components-107-exports-measured-from-the-251-dist-2026-08-18">Components — 107 exports (measured from the 2.5.1 dist, 2026-08-18)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Toss (Viva Republica)</b><br>full harvest · web · mobile<br>verified 2026-08-17<br><a href="https://tossmini-docs.toss.im" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/toss-tds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>TDS (Toss Design System)</span></nav>
+    <h1>TDS (Toss Design System)</h1>
+    <p class="doc-lede">Toss (Viva Republica) · consumer · web · mobile</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Toss's design system — <strong>published to npm in split packages alongside the mini-app (Apps-in-Toss) SDK</strong>. It <strong>tokenises springs as physical parameters</strong>, embeds <strong>a table remapping sizes per accessibility font scale</strong>, and its type runs <strong>32 continuous 1px steps from 11 to 42px</strong>.</p>
+<blockquote><p><strong>A correction to the record.</strong> This corpus twice recorded &quot;Toss has no npm token package&quot; (from probing the single name <code>@toss/tds</code>). <strong>That was wrong</strong> — it ships <strong>split across packages</strong>: <code>@toss/tds-colors</code> · <code>-typography</code> · <code>-easings</code> · <code>-spring-easing</code> · <code>-mobile</code> · <code>-react-native</code> and <strong><code>-mobile-ait</code></strong> (for Apps-in-Toss). A limitation of single-name probing, recorded as a lesson in <code>HARVESTING.md</code>.</p></blockquote>
+<h2 id="tokens">Tokens</h2>
+<h3 id="motion-springs-as-physical-parameters">Motion — springs as physical parameters</h3>
+<pre class="md-code"><code class="language-js">spring: {
+  basic:  { stiffness: 200,  damping: 30, mass: 1 },
+  small:  { stiffness: 480,  damping: 50, mass: 1 },
+  quick:  { stiffness: 800,  damping: 55, mass: 1 },
+  medium: { stiffness: 270,  damping: 25, mass: 1 },
+  large:  { stiffness: 100,  damping: 15, mass: 1 },
+  slow:   { stiffness: 70,   damping: 20, mass: 1 },
+  rapid:  { stiffness: 1000, damping: 55, mass: 1 },
+  bounce: { stiffness: 300,  damping: 15, mass: 1 },
+}</code></pre>
+<p><strong>The third spring representation in the sample, and the only physics-based one.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>approach</th><th>system</th><th>character</th></tr></thead><tbody><tr><td>one <code>linear()</code> with 65 stops</td><td>Atlassian</td><td>the curve approximation precomputed</td></tr><tr><td><code>linear()</code> in 5 steps</td><td>Open Props</td><td>〃</td></tr><tr><td><strong>8 presets of physical parameters</strong></td><td><strong>TDS</strong></td><td><strong>computed at runtime</strong> (a <code>getSpringEasing</code> function ships alongside)</td></tr></tbody></table></div>
+<p><strong>Stiffness 70–1000 and damping 15–55 — the eight presets cover the stiffness/damping space.</strong> <code>bounce</code> (300/15) has low damping and oscillates several times, while <code>rapid</code> (1000/55) settles immediately. Having presets by element size (<code>small</code>/<code>medium</code>/<code>large</code>) is the same judgement as Atlassian's per-component durations, made in spring space.</p>
+<p>There are five beziers too — <code>expo</code> at <code>(0.16, 1, 0.3, 1)</code> is <strong>the same curve as Radix Themes' dialog easing</strong>, and <code>back</code> (0.34, 1.56, 0.64, 1) has a 1.56 overshoot.</p>
+<h3 id="typography-1142px-continuous-in-1px-with-four-companions-at-each-size">Typography — 11–42px continuous in 1px, with four companions at each size</h3>
+<pre class="md-code"><code class="language-js">fixedTypographySizeMap[&quot;17&quot;] = {
+  text:  { fontSize: 17, lineHeight: 25.5 },
+  icon:  { height: 19 },
+  badge: { fontSize: 10, padding: [3,7], borderRadius: 9 },
+  link:  { verticalPadding: 0, horizontalPadding: 4,
+           borderRadius: 4, lightThickness: 0.7, boldThickness: 1 },
+}</code></pre>
+<ul class="md-list"><li><strong>The sizes run continuously from <code>11</code> to <code>42</code>, 32 steps</strong> — the densest 1px scale in the sample (well beyond Seed Design's 18 steps and USWDS's 12–18 stretch). The two Korean systems (Seed and TDS) are first and second in the 1px-step camp</li><li><strong>The line height is exactly ×1.5 at every step</strong> (11→16.5, 17→25.5), with fractional values left as they are — the opposite choice from a 4px grid (Atlassian)</li><li><strong>Each size carries an icon height, badge spec and even a link underline with it</strong> — the only sample to tokenise <strong>the spec of accompanying elements</strong>, as in &quot;the icon beside text at this size is 19px&quot;</li><li><strong>The link underline thickness is a token</strong> — <code>lightThickness: 0.7</code> / <code>boldThickness: 1</code>. A 0.7px sub-pixel underline. Unique in the sample</li></ul>
+<p>The role tier is <code>t1</code>–<code>t7</code> plus <code>st1</code>–<code>st13</code>, <strong>20 steps</strong>, mapped onto the fixed sizes through a CSS-variable fallback chain (<code>var(--tds-t-t1-text-fontSize, --tds-t-f30-text-fontSize)</code>).</p>
+<h3 id="accessibility-font-scaling-a-remapping-table-built-in">Accessibility font scaling — a remapping table built in</h3>
+<pre class="md-code"><code class="language-js">iosFontScales: { Large: 100, xLarge: 110, xxLarge: 120, xxxLarge: 135,
+                 A11y_Medium: 160, … A11y_xxxLarge: 310 }
+iosTypographyRules: {
+  Large:  [30,29,28,…,11],   // the base
+  xLarge: [32,31,30,…,13],   // every step +2
+  …
+}</code></pre>
+<p><strong>A table remapping the px of 20 roles at each of iOS Dynamic Type's nine scale steps</strong> ships as a token — up to 310%.</p>
+<p>The only sample to move what Apple does at the OS level <strong>into a web/RN token layer</strong>. It is also the first data in which &quot;accessibility support&quot; appears not as a high-contrast theme (Atlassian, KRDS) or reduced motion (Cloudscape) but as <strong>font-size remapping</strong>.</p>
+<h3 id="colour-the-ramp-inverts-in-dark">Colour — the ramp inverts in dark</h3>
+<pre class="md-code"><code>--blue50:  #e8f3ff  →  --darkThemeBlue50:  #202c4d   (light → dark)
+--blue900: #194aa6  →  --darkThemeBlue900: #c8e7ff   (dark → light)</code></pre>
+<p><strong>Light's 50–900 lightness direction reverses exactly in the dark theme</strong> — <code>darkThemeBlue900</code> is sky blue. The only sample that exposes, unmediated, a structure in which &quot;a bigger number means darker&quot; flips with the mode (most absorb it in a semantic tier).</p>
+<p>Backgrounds use <strong>a level system</strong> — <code>darkThemeBackgroundLevel01/02/B01</code> · <code>FloatBackground</code> · <code>LayeredBackground</code>. Dark surfaces are managed by storey (a third approach again, alongside Mantine's <code>dark</code> ramp and Cloudscape's contexts).</p>
+<h2 id="distribution-one-body-with-the-mini-app-sdk">Distribution — one body with the mini-app SDK</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>package</th><th>purpose</th></tr></thead><tbody><tr><td><code>@toss/tds-mobile</code> (5MB)</td><td>mobile web components</td></tr><tr><td><strong><code>@toss/tds-mobile-ait</code></strong></td><td><strong>a build specific to Apps-in-Toss (mini apps)</strong></td></tr><tr><td><code>@toss/tds-react-native</code></td><td>RN</td></tr><tr><td><code>@apps-in-toss/framework</code> · <code>@granite-js/react-native</code></td><td>the mini-app framework (Granite)</td></tr></tbody></table></div>
+<p><strong>Opening the mini-app ecosystem is what drove the design system's publication</strong> — a third party building an app inside Toss needs TDS, so it went to npm. The description of <code>@toss/tds-migration</code> shows the old scope (<code>@toss-design-system/*</code>) — the migration from an internal scope to a public one is legible in the packages.</p>
+<h2 id="components-107-exports-measured-from-the-251-dist-2026-08-18">Components — 107 exports (measured from the 2.5.1 dist, 2026-08-18)</h2>
+<p><code>dist/esm/index.js</code> has 107 capitalised exports. Beyond the general-purpose components, what stands out is <strong>how directly the domain surfaces in the namespace</strong>:</p>
+<ul class="md-list"><li><strong>Finance and authentication specifics</strong>: <code>AlphabetKeypad</code> · <code>NumberKeypad</code> · <code>FullSecureKeypad</code> (three secure keypads) · <code>CodeAuthModule</code> · <code>AgreementModule</code> (terms consent, in BottomSheet/FloatButton/FullPage/Gradient variants with V3/V4 generations coexisting)</li><li><strong>A finely divided CTA hierarchy</strong>: <code>BottomCTA</code> · <code>FixedBottomCTA</code> · <code>CTAButton</code> · <code>PointCTAOverlay</code> — the bottom conversion button specified across four positions</li><li><strong>Charts built in</strong>: <code>BarChart</code> · <code>Doughnut(Chart/Label)</code> — a rare case in the corpus of including charts in the core</li><li><strong>Accessibility utilities as first-class</strong>: <code>FontScaleLimit</code> · <code>ColorSchemeArea</code> · <code>GlobalConfigProvider</code> — the component counterpart of the scale remapping detailed above</li><li>The standard set: Button · TextField · Modal · Toast · Tooltip · Tab · Switch · Checkbox · List (Row/Header/Footer) · TopNavigation (+ three buttons) · Wheel (DatePicker/DateSheet) and others</li></ul>
+<p>The RN edition's documentation (<code>tds-react-native</code>) covers 40+ components including Button, Dialog, Dropdown, Carousel and Navbar: https://tossmini-docs.toss.im/tds-react-native/</p>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Eight spring presets as physical parameters</strong> — the sample's only runtime spring</li><li><strong>A size-remapping table per accessibility scale</strong> (9 steps × 20 roles, up to 310%) — unique in the sample</li><li><strong>32 continuous 1px steps from 11 to 42px</strong> — the densest in the sample, with a ×1.5 line height at every step</li><li><strong>Companion-element specs</strong> (icon / badge / link underline) bound to the font size — unique in the sample</li><li><strong>A 0.7px underline-thickness token</strong> — unique in the sample</li><li><strong>The number-to-lightness inversion of the dark colour ramp exposed as it is</strong></li><li>The mini-app SDK (<code>-ait</code>) as the driver of public distribution — the first large Korean consumer-app sample</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li>iOS Dynamic Type remapping across nine steps is built in (detailed above)</li><li>High contrast and contrast figures are unverified in these packages</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Mini-app documentation: https://tossmini-docs.toss.im (blocked by the proxy)</li><li>Tokens: <code>npm pack @toss/tds-colors @toss/tds-typography @toss/tds-easings</code></li><li><del>The spacing and radius systems — the inside of tds-mobile was not surveyed</del> → <strong>surveyed (the 2.5.1 build).</strong> In the 2.5MB dist of <code>@toss/tds-mobile</code> 2.5.1, <strong>no central spacing token object is detected</strong> — padding and gaps are all inline literals, distributed <strong>8 (28 occurrences) &gt; 24 (15) &gt; 4 (12) &gt; 16 (11)</strong>. The corpus's strongest values, 8 and 16, with 24 wedged in between. The radii appear as <strong>almost continuous values</strong> from 4 to 16 (4 · 5 · 6 · 7 · 8 · 9 · 10 · 11 · 12 · 13 · 14 · 16), with no trace of a multiplied scale — it reads as per-component tuning. Being a build artefact, the possibility that source-side tokens were inlined cannot be ruled out (even then, the value distribution itself is measured).</li><li><del>The component list</del> → <strong>resolved (2026-08-18)</strong> — the &quot;Components — 107 exports&quot; section above.</li><li><del>Whether a web package exists</del> → <strong>confirmed: no general-purpose web package (2026-08-18).</strong> <code>@toss/tds-web</code>, <code>@toss/tds</code>, <code>@toss/tds-desktop</code> and <code>@toss/tds-react</code> all 404 on npm. That said, <code>@toss/tds-mobile</code> <strong>is effectively the React DOM (web) package</strong> — the official install command requires <code>react-dom</code> (its purpose being limited to WebViews inside the Toss app). The bundle's <code>LEGACY_TDS_WEB_BUTTON_CLASS_NAME</code> export is a trace of a &quot;tds-web&quot; predecessor. The old internal scope <code>@toss-design-system/web</code> also 404s on npm (kept private).</li><li><del>The licence</del> → <strong>confirmed unstated for the main packages (2026-08-18).</strong> <code>tds-mobile</code> (plus -ait, colors, typography, easings, css-utils) all lack a license field and a LICENSE file. <strong>The exception: only <code>@toss/tds-react-native</code> 2.0.5 is Apache-2.0.</strong></li><li><del>How it couples with Granite</del> → <strong>confirmed as peerDependencies (2026-08-18).</strong> <code>@toss/tds-react-native</code>'s peerDeps are <code>@granite-js/native</code> and <code>@granite-js/react-native</code> — <strong>the RN edition of TDS runs only on Granite</strong> (Toss's RN microservice framework, Apache-2.0, github.com/toss/granite). The mini-app two-track structure: WebView = tds-mobile (+ -ait) / RN = Granite + tds-react-native. The config file is migrating from <code>granite.config.ts</code> to <code>apps-in-toss.config.ts</code>.</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

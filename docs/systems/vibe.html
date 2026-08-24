@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vibe — Self-Made DesignOps</title>
+<meta name="description" content="monday.com's system — the size scale contains the same value twice (10 and 20 are both 14px), the default font stack includes Hebrew, Arabic and Japanese…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/vibe.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Vibe — Self-Made DesignOps">
+<meta property="og:description" content="monday.com's system — the size scale contains the same value twice (10 and 20 are both 14px), the default font stack includes Hebrew, Arabic and Japanese…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/vibe.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vibe — Self-Made DesignOps">
+<meta name="twitter:description" content="monday.com's system — the size scale contains the same value twice (10 and 20 are both 14px), the default font stack includes Hebrew, Arabic and Japanese…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Vibe",
+ "description": "monday.com's system — the size scale contains the same value twice (10 and 20 are both 14px), the default font stack includes Hebrew, Arabic and Japanese…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/vibe.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Vibe",
+  "applicationCategory": "DesignApplication",
+  "url": "https://vibe.monday.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-919-variables-monday-ui-style-is-the-token-layer">Tokens — 919 variables (monday-ui-style is the token layer)</a></li><li class="lvl3"><a href="#type-duplicate-values-in-the-scale">Type — duplicate values in the scale</a></li><li class="lvl3"><a href="#typefaces-a-multi-script-default-stack">Typefaces — a multi-script default stack</a></li><li class="lvl3"><a href="#spacing-and-radius">Spacing and radius</a></li><li class="lvl3"><a href="#themes-light-black-hacker">Themes — light · black · hacker</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-button-five-fixed-heights">Buttons (Button) — five fixed heights</a></li><li class="lvl3"><a href="#inputs-textfield-the-same-324048-axis-as-the-button">Inputs (TextField) — the same 32/40/48 axis as the button</a></li><li class="lvl3"><a href="#modals-modal-the-v4-form-px-widths-that-grow-with-the-viewport">Modals (Modal, the v4 form) — px widths that grow with the viewport</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li class="lvl3"><a href="#figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>monday.com</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://vibe.monday.com" rel="noopener">Official site</a><br><a href="https://github.com/mondaycom/vibe" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/vibe.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Vibe</span></nav>
+    <h1>Vibe</h1>
+    <p class="doc-lede">monday.com · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>monday.com's system — the size scale contains <strong>the same value twice</strong> (10 and 20 are both 14px), the default font stack <strong>includes Hebrew, Arabic and Japanese faces</strong>, and the official themes include <strong>a <code>hacker</code> easter-egg theme.</strong></p>
+<h2 id="tokens-919-variables-monday-ui-style-is-the-token-layer">Tokens — 919 variables (<code>monday-ui-style</code> is the token layer)</h2>
+<p>The token CSS (<code>monday-ui-style</code>) and the components (<code>@vibe/core</code>) ship separately — the same cut as TDS (colors and typography split out).</p>
+<h3 id="type-duplicate-values-in-the-scale">Type — duplicate values in the scale</h3>
+<pre class="md-code"><code>--font-size-10: 14px   --font-size-40: 18px
+--font-size-20: 14px   --font-size-50: 24px
+--font-size-30: 16px   --font-size-60: 30px
+h1=60(30px) · h2=50(24px) · h3=50(24px) · h4=40(18px)</code></pre>
+<ul class="md-list"><li><strong><code>10</code> and <code>20</code> are both 14px, and <code>h2</code> and <code>h3</code> are both 24px</strong> — the only sample where the step number does not guarantee the value. The trace of roles being consolidated, left in the scale (the name/value-inversion family in <code>GLOSSARY.md</code>)</li><li>Tracking is <strong>enumerated for every role × weight combination</strong> (<code>h1-bold/normal/light</code> are all −0.5px) — every combination kept even where the values are identical</li></ul>
+<h3 id="typefaces-a-multi-script-default-stack">Typefaces — a multi-script default stack</h3>
+<pre class="md-code"><code>Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif</code></pre>
+<p><strong>The only sample naming Hebrew, Arabic and Japanese faces in the default stack</strong> — an Israeli company's RTL script region reflected in the typeface tokens. It contrasts handling CJK through the font stack (Vibe) with handling it through the weight and size systems (the four CJK samples).</p>
+<h3 id="spacing-and-radius">Spacing and radius</h3>
+<pre class="md-code"><code>spacing: 4 8 16 24 32 48 64 (no 12)
+radius: small 4 · medium 8 · big 16
+disabled opacity: 0.38</code></pre>
+<p>Seven core-focused steps with 12px missing. The <code>0.38</code> disabled value is the same coefficient as M3's (the source mentions no relationship).</p>
+<h3 id="themes-light-black-hacker">Themes — light · black · <strong>hacker</strong></h3>
+<pre class="md-code"><code class="language-scss">.hacker_theme-app-theme {
+  --primary-color: #fe78c6;            /* pink */
+  --primary-background-color: #282a36; /* dark */
+}</code></pre>
+<p><strong>A joke theme ships in the official distribution</strong> — dark is named <code>black</code>, and <code>hacker</code> is a pink-on-dark easter egg. With Grommet's <code>hacktoberfest2022</code> theme, one of two samples using the theme slot as a playground.</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>@vibe/core@4.5.8</code>. This package <strong>ships no CSS files</strong> — the component CSS is <strong>bundled as strings inside <code>*.module.scss.js</code> and injected into <code>&amp;lt;head&amp;gt;</code> at runtime</strong> (stated in the README; SSR uses a <code>globalThis.injectedStyles</code> hook). The values below were read by extracting each module's bundled CSS string, with token references resolved through the same package's <code>dist/style</code> (a bundled <code>@vibe/style</code> 4.x build). There are <strong>about 70</strong> component directories (<code>dist/components/</code>).</p>
+<h3 id="buttons-button-five-fixed-heights">Buttons (<code>Button</code>) — five fixed heights</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">xxs</th><th style="text-align:center">xs</th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center"><strong>16px</strong></td><td style="text-align:center">24px</td><td style="text-align:center">32px</td><td style="text-align:center"><strong>40px</strong></td><td style="text-align:center">48px</td></tr><tr><td>padding</td><td style="text-align:center">2px 4px</td><td style="text-align:center">4px 8px</td><td style="text-align:center">4px 8px</td><td style="text-align:center">8px 16px</td><td style="text-align:center">12px 24px</td></tr><tr><td>type</td><td style="text-align:center">14px (text2)</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center"><strong>16px</strong> (text1)</td><td style="text-align:center">16px</td></tr><tr><td>line height</td><td style="text-align:center">16px (redefined)</td><td style="text-align:center">21px (redefined)</td><td style="text-align:center">24px (redefined)</td><td style="text-align:center">22px</td><td style="text-align:center">22px</td></tr></tbody></table></div>
+<ul class="md-list"><li>Radius <strong>4px</strong> at every size (<code>--border-radius-small</code>), and <strong>no minimum width</strong> (<code>min-width: auto</code> — though min-width does get a 100ms transition for the loading state).</li><li><strong>A <code>scale(0.95)</code> press transform on <code>:active</code></strong> plus a <code>--motion-productive-short</code> (70ms) transform transition — the decision to put the scale on <strong>the button</strong> rather than the modal (Atlassian's and shadcn's 0.95).</li><li>The default weight is <strong>400</strong> (<code>--font-text*-normal</code>) — the same non-bold camp as Stacks.</li><li>The focus ring is a <strong>hardcoded</strong> 3px <code>hsla(209, 100%, 50%, 0.5)</code> — among 919 variables, the focus colour alone sits outside the tokens.</li><li>Icon size is branched in JS rather than CSS: 16 for xxs/xs, 20 otherwise.</li></ul>
+<h3 id="inputs-textfield-the-same-324048-axis-as-the-button">Inputs (<code>TextField</code>) — the same 32/40/48 axis as the button</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium (default)</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong> (fixed on the wrapper)</td><td style="text-align:center">32px</td><td style="text-align:center">40px</td><td style="text-align:center">48px</td></tr><tr><td>padding</td><td style="text-align:center">block 8px · start 8px</td><td style="text-align:center">block 8px · <strong>start 12px / end 4px</strong></td><td style="text-align:center">as medium</td></tr><tr><td>type</td><td style="text-align:center">14px (text2)</td><td style="text-align:center">16px (text1)</td><td style="text-align:center">16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The inline padding is asymmetric, 12/4px</strong> — the 4px at the end is the icon container's place (24×24). Border 1px, radius 4px (plus <code>round</code> 50px and <code>square</code> 0 variants).</li><li><strong>On hover the border becomes the text colour</strong> (<code>--primary-text-color</code>) — grey to black. Focus takes <code>--primary-color</code>. The transition is the literal <code>border-color 100ms ease-in</code>.</li><li>The label (<code>FieldLabel</code>) is a separate block — 14px/20 · <strong>weight 400</strong> · 4px below. A non-bold label too, parting from Stacks (700 labels).</li></ul>
+<h3 id="modals-modal-the-v4-form-px-widths-that-grow-with-the-viewport">Modals (<code>Modal</code>, the v4 form) — px widths that grow with the viewport</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th style="text-align:center">size</th><th style="text-align:center">base</th><th style="text-align:center">≥1280px</th><th style="text-align:center">≥1440px</th><th style="text-align:center">max-height</th></tr></thead><tbody><tr><td style="text-align:center">small</td><td style="text-align:center">460px</td><td style="text-align:center">480px</td><td style="text-align:center">520px</td><td style="text-align:center">50%</td></tr><tr><td style="text-align:center">medium</td><td style="text-align:center">540px</td><td style="text-align:center">580px</td><td style="text-align:center">620px</td><td style="text-align:center">80%</td></tr><tr><td style="text-align:center">large</td><td style="text-align:center">800px</td><td style="text-align:center">840px</td><td style="text-align:center">900px</td><td style="text-align:center">80%</td></tr></tbody></table></div>
+<p>(plus <code>fullView</code> = inset 0, leaving 40px at the top)</p>
+<ul class="md-list"><li><strong>The px width itself grows in three steps through media queries</strong> — a third way, between the fixed-px camp (Mantine, shadcn, Cloudscape) and the viewport-percentage camp (Carbon) (compare the width section of <code>patterns/modal.md</code>).</li><li>Radius <strong>16px</strong> (<code>--border-radius-big</code>) — the top of the radius scale assigned to the modal. Padding: 32px inline · 32px above the header · 32px below the content · <code>20px 24px</code> on the footer.</li><li>The scrim is <strong><code>rgba(41, 47, 76, 0.7)</code> — a navy tint rather than black</strong> (the black theme uses <code>rgba(33,33,33,0.7)</code>).</li><li>Animation: enter over <strong>150ms</strong> <code>cubic-bezier(0, 0, 0.4, 1)</code>, scale 0.8→1 plus a fade; exit over <strong>100ms</strong> <code>cubic-bezier(0.6, 0, 1, 1)</code> — enter &gt; exit, the mainline (anchorPop 200/150 · fullView 250/100ms).</li><li><strong>Delays are imitated with keyframes</strong> — centerPopIn completes at <code>50%, 100%</code> (an effective 75ms of the 150), and the out animation waits through <code>0%, 50%</code> before moving. There is not a single <code>animation-delay</code>.</li><li><strong>Motion timing tokens exist, and the modal uses literals</strong> — the tokens are enter <code>(0, 0, 0.35, 1)</code> / exit <code>(0.4, 0, 1, 1)</code>, while the modal measures <code>(0, 0, 0.4, 1)</code> / <code>(0.6, 0, 1, 1)</code> — <strong>close but not matching.</strong> The same drift family as Backpack's deep pass (&quot;hand-written curves drifting into newer components&quot;). For reference, <code>--motion-timing-transition</code> is <code>(0.4, 0, 0.2, 1)</code> — the Material standard curve.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Five button steps (16–48px) and three input steps (32–48px) sharing one axis</strong> — a dense lower end reaching down to 16px at xxs</li><li><strong><code>scale(0.95)</code> on the button's <code>:active</code></strong> — the press as a scale</li><li><strong>Modal px widths growing across three viewport steps</strong> — neither fixed px nor percentages, a third camp</li><li><strong>A navy-tinted scrim</strong> (41, 47, 76)</li><li><strong>Motion tokens present, with near-but-not-matching literals in the modal</strong> — an easing drift sample</li><li>No CSS distribution; a runtime-injection architecture (with a separate SSR hook)</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Duplicate values in the scale</strong> (10 = 20 = 14px, h2 = h3) — a sample where the step number cannot be trusted</li><li><strong>A multi-script (Hebrew, Arabic, Japanese) default font stack</strong> — unique in the sample</li><li>A <code>hacker</code> easter-egg theme in the official distribution</li><li>Tracking enumerated exhaustively by role × weight</li><li>Token and component packages separated (<code>monday-ui-style</code> / <code>@vibe/core</code>)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified</del> → <strong>Resolved (2026-08-18, confirmed by headless render).</strong> <strong>But the target level is confirmed absent.</strong></p>
+<p>Source: https://vibe.monday.com/iframe.html?id=foundations-accessibility--docs&amp;viewMode=docs (Storybook docs render inside an iframe, so <code>iframe.html?id=…&amp;amp;viewMode=docs</code> has to be opened directly — the parent URL shows only the sidebar.)</p>
+<ul class="md-list"><li><strong>It cites WCAG as grounds but states no version or level.</strong> The body goes only as far as &quot;Web Accessibility is based on guidelines published by The World Wide Web Consortium (W3C) ... called Web Content Accessibility Guidelines or WCAG&quot;, with no target notation such as <code>2.1</code> or <code>AA</code>. Across the whole page <code>WCAG</code> appears <strong>twice</strong> — in that sentence and in a &quot;WCAG Quick Reference&quot; link.</li><li><strong>The contrast requirements are nailed down numerically</strong> (the same numbers as WCAG AA's thresholds):<ul class="md-list"><li>Text: at least <strong>4.5:1</strong> against the background, including placeholders and text shown on hover or keyboard focus.</li><li>The large-text exception: 18pt (about 24px) and up, or 14pt (about 18.66px) bold, at <strong>3:1</strong></li><li>Non-text: <strong>3:1</strong> — UI components (input, radio and checkbox borders, focus indication) and graphical objects needed to understand the content</li><li>Excluded: disabled UI, decoration (icons, illustrations) and logotypes</li><li><strong>It uses its own vocabulary for the four principles instead of W3C's standard terms</strong> — Clear · Operable · Understandable · Robust. A sample that <strong>replaces POUR's <code>Perceivable</code> with <code>Clear</code>.</strong></li><li><strong>The checklist ships as a download</strong> (&quot;Get our Accessibility checklist&quot;) — a case of handing it over <strong>as an artefact rather than documentation.</strong></li><li>Images: informative images' alt text must carry the same information, and expressions like &quot;graphic&quot;, &quot;An image of&quot;, &quot;A picture of&quot; and &quot;an icon of&quot; are <strong>explicitly forbidden.</strong> Decorative images take <code>role=&amp;quot;presentation&amp;quot;</code> or move into a CSS background.</li><li>Focus: every interactive element must be reachable in tab order, and when a dynamic component closes <strong>focus returns to where the interaction began.</strong></li><li>Assistive technologies are named by product — JAWS · NVDA (Windows) · VoiceOver (macOS) · ZoomText (magnification) · Dragon Naturally Speaking (speech recognition). It also explains the distinction between a screen reader's Virtual/Browse mode and its Input/Forms mode.</li></ul></li></ul>
+<h3 id="figma-kit-absent-confirmed-by-render-2026-08-18">Figma kit absent — confirmed by render (2026-08-18)</h3>
+<p>This is the basis for <code>figma_kit: false</code>. Nowhere in the Storybook index (https://vibe.monday.com/index.json, 653 entries) is there a Figma-related entry, and the accessibility document's only mention of <code>figma</code> is <strong>a single recommendation of a &quot;contrast figma plugin&quot;</strong> for checking contrast — not a kit. The sidebar's top level is likewise Getting Started · Catalog · MCP · Playground · Changelog · Migration Guide · Contributing · Foundations · Components · Layout · Text · Theming · Accessibility · Hooks, with no design-asset entry.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>4.5.9 re-verified — the token source unchanged (2026-08-18).</strong> What moved was only the component package (<code>@vibe/core</code> 4.5.8 → 4.5.9); <strong><code>monday-ui-style</code>, this entry's token source, is still at 0.26.2</strong> (confirmed against the registry). No re-collection needed.</li><li>Tokens: <code>npm pack monday-ui-style@0.26.2</code> → <code>dist/index.css</code></li><li>Components: <code>@vibe/core@4.5.8</code> (React ≥16.9)</li><li>Components in depth: the bundled CSS strings extracted from <code>@vibe/core@4.5.8</code>'s <code>dist/components/button/dist/Button/Button.module.scss.js</code> · <code>dist/src/components/TextField/TextField.module.scss.js</code> · <code>dist/src/components/Modal/**/*.module.scss.js</code> · <code>FieldLabel.module.scss.js</code>, with tokens resolved through <code>dist/style/dist/index.min.css.js</code> (2026-08-18)</li><li>Accessibility documentation: https://vibe.monday.com/iframe.html?id=foundations-accessibility--docs&amp;viewMode=docs (headless render, 2026-08-18)</li><li>Storybook index: https://vibe.monday.com/index.json (653 entries, 2026-08-18)</li><li><strong>Open questions:</strong> the colour palette structure, <del>the component list</del> (resolved 2026-08-18 — the deep pass, about 70), <del>the accessibility target</del> (rendered 2026-08-18 — a general WCAG reference exists but the version and level target are confirmed absent), <del>the Figma kit</del> (confirmed absent), and a full diff between the black and hacker themes</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

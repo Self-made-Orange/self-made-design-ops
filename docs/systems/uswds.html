@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USWDS (U.S. Web Design System) — Self-Made DesignOps</title>
+<meta name="description" content="The U.S. federal government's web design system. An 8px base, with breakpoints derived from the spacing map and negative spacing reaching −120px.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/uswds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="USWDS (U.S. Web Design System) — Self-Made DesignOps">
+<meta property="og:description" content="The U.S. federal government's web design system. An 8px base, with breakpoints derived from the spacing map and negative spacing reaching −120px.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/uswds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="USWDS (U.S. Web Design System) — Self-Made DesignOps">
+<meta name="twitter:description" content="The U.S. federal government's web design system. An 8px base, with breakpoints derived from the spacing map and negative spacing reaching −120px.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "USWDS (U.S. Web Design System)",
+ "description": "The U.S. federal government's web design system. An 8px base, with breakpoints derived from the spacing map and negative spacing reaching −120px.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/uswds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "USWDS (U.S. Web Design System)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://designsystem.digital.gov"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-an-8px-base-and-spacing-multiple">Spacing — an 8px base and spacing-multiple()</a></li><li class="lvl3"><a href="#the-breakpoints-derive-from-the-spacing-unique-in-the-sample">The breakpoints derive from the spacing — unique in the sample</a></li><li class="lvl3"><a href="#negative-spacing-down-to-120px-the-deepest-in-the-sample">Negative spacing — down to −120px, the deepest in the sample</a></li><li class="lvl3"><a href="#typography-20-steps-with-1218px-in-1px-increments">Typography — 20 steps, with 12–18px in 1px increments</a></li><li class="lvl3"><a href="#measure-six-steps-in-ex">Measure — six steps in ex</a></li><li><a href="#components">Components</a></li><li class="lvl3"><a href="#the-deep-pass-2026-08-17-uswdsuswds3130-packagesusa-button-and-others">The deep pass (2026-08-17, @uswds/uswds@3.13.0 packages/usa-button and others)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>U.S. federal government (GSA)</b><br>full harvest · web<br>verified 2026-08-18<br><a href="https://designsystem.digital.gov" rel="noopener">Official site</a><br><a href="https://github.com/uswds/uswds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/uswds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>USWDS (U.S. Web Design System)</span></nav>
+    <h1>USWDS (U.S. Web Design System)</h1>
+    <p class="doc-lede">U.S. federal government (GSA) · public · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The U.S. federal government's web design system. <strong>An 8px base</strong>, with <strong>breakpoints derived from the spacing map</strong> and negative spacing reaching <strong>−120px</strong>.</p>
+<p><strong>The second piece of evidence that GOV.UK's 5px base is not a public-sector tendency</strong> — the British and American government systems use different bases (GOV.UK 5px / USWDS 8px).</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="spacing-an-8px-base-and-spacing-multiple">Spacing — an 8px base and <code>spacing-multiple()</code></h3>
+<pre class="md-code"><code class="language-scss">&quot;05&quot;: spacing-multiple(0.5),   // 4px
+1:    spacing-multiple(1),     // 8px
+&quot;105&quot;: spacing-multiple(1.5),  // 12px
+2:    spacing-multiple(2),     // 16px</code></pre>
+<p><strong>The key is the multiple, with fractions encoded as strings</strong> — <code>0.5</code> → <code>&amp;quot;05&amp;quot;</code>, <code>1.5</code> → <code>&amp;quot;105&amp;quot;</code>, <code>2.5</code> → <code>&amp;quot;205&amp;quot;</code>. USWDS is the only system in the sample that folds the decimal point into a string.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>group</th><th>values (px)</th></tr></thead><tbody><tr><td><code>smaller</code></td><td>1 · 2</td></tr><tr><td><code>small</code></td><td>4 · 8 · 12 · 16 · 20 · 24</td></tr><tr><td><code>medium</code></td><td>32 · 40 · 48 · 56 · 64 · 72 · 80 · 120</td></tr><tr><td><code>large</code></td><td><strong>160 (<code>card</code>) · 240 (<code>card-lg</code>) · 320 (<code>mobile</code>)</strong></td></tr><tr><td><code>larger</code></td><td>480 (<code>mobile-lg</code>) · 640 (<code>tablet</code>) · 880 (<code>tablet-lg</code>)</td></tr><tr><td><code>largest</code></td><td>1024 (<code>desktop</code>) · 1200 (<code>desktop-lg</code>) · 1400 (<code>widescreen</code>)</td></tr></tbody></table></div>
+<p>The core <code>4/8/16/24</code> plus <code>32</code> are all present. The same family as Ant Design's seed derivation, except <strong>the function name <code>spacing-multiple</code> reveals the 8px base.</strong></p>
+<p><strong>The scale is stratified by group name</strong> — seven groups, <code>smaller</code> through <code>largest</code>. And <strong>the keys of the large values are device names</strong> (<code>mobile</code> · <code>tablet</code> · <code>desktop</code> · <code>widescreen</code>).</p>
+<h3 id="the-breakpoints-derive-from-the-spacing-unique-in-the-sample">The breakpoints derive from the spacing — unique in the sample</h3>
+<pre class="md-code"><code class="language-scss">$system-breakpoints: general.map-collect(
+  map.get(spacing.$system-spacing, &quot;large&quot;),
+  map.get(spacing.$system-spacing, &quot;larger&quot;),
+  map.get(spacing.$system-spacing, &quot;largest&quot;)
+);</code></pre>
+<p><strong>There is no separate breakpoint scale.</strong> The <code>large</code>–<code>largest</code> groups of the spacing map are collected as the breakpoints — <code>mobile</code> 320 · <code>tablet</code> 640 · <code>desktop</code> 1024 · <code>widescreen</code> 1400.</p>
+<p>It goes a step further than Codex putting viewports into its size scale as <code>size-viewport-*</code> — <strong>whitespace and screen width are different stretches of the same map.</strong></p>
+<h3 id="negative-spacing-down-to-120px-the-deepest-in-the-sample">Negative spacing — down to −120px, the deepest in the sample</h3>
+<p>A <code>neg-</code> prefix <strong>mirrors the whole 4–120px positive range into negatives.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>system</th><th style="text-align:center">negative floor</th></tr></thead><tbody><tr><td>Atlassian</td><td style="text-align:center">−32px</td></tr><tr><td>Primer</td><td style="text-align:center">−48px</td></tr><tr><td><strong>USWDS</strong></td><td style="text-align:center"><strong>−120px</strong></td></tr></tbody></table></div>
+<p>The first two share the judgement that &quot;overlap is a small-scale adjustment&quot; (<code>systems/atlassian.md</code>); USWDS opens negatives up to the layout scale. There are <code>-1px</code> and <code>-2px</code> too (<code>smaller-negative</code>).</p>
+<h3 id="typography-20-steps-with-1218px-in-1px-increments">Typography — 20 steps, with 12–18px in 1px increments</h3>
+<pre class="md-code"><code>10(micro) · 12 · 13 · 14 · 15 · 16 · 17 · 18 · 20 · 22 · 24 · 28 · 32 · 36 · 40 · 48 · 56 · 64 · 80 · 120</code></pre>
+<p><strong>12–18px is seven steps at 1px each.</strong> The same density as Seed Design (10–16px in 1px steps), one band higher. The odd 13, 15 and 17 are all present.</p>
+<p>Six line heights — <code>1</code> 1 · <code>2</code> 1.2 · <code>3</code> 1.35 · <code>4</code> 1.5 · <code>5</code> <strong>1.62</strong> · <code>6</code> 1.75. <strong>There is a 1.62</strong> — neither 1.6 nor 1.625.</p>
+<p>A separate <code>$project-type-scale</code> merges with the system scale through <code>map-collect</code> — <strong>a slot for project extension built into the token structure</strong> (part of the <code>$theme-*</code> settings family).</p>
+<h3 id="measure-six-steps-in-ex">Measure — six steps in <code>ex</code></h3>
+<pre class="md-code"><code class="language-scss">$system-measure-smaller: 44ex;
+$system-measure-base:    64ex;
+$system-measure-largest: 88ex;</code></pre>
+<p><strong>The readable line length is tokenised in <code>ex</code> (x-height) units.</strong> The second measure token after Open Props's <code>20ch/45ch/60ch</code> (character widths), and <strong>the unit differs</strong> — <code>ex</code> is the lowercase height, <code>ch</code> the width of a <code>0</code>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>system</th><th style="text-align:center">unit</th><th>values</th></tr></thead><tbody><tr><td>Open Props</td><td style="text-align:center"><code>ch</code></td><td>20 · 45 · 60</td></tr><tr><td><strong>USWDS</strong></td><td style="text-align:center"><strong><code>ex</code></strong></td><td>44 · 60 · 64 · 68 · 72 · 88</td></tr></tbody></table></div>
+<h2 id="components">Components</h2>
+<p>Split into <code>usa-*</code> packages under <code>packages/</code> (<code>usa-type-spacing</code> and so on).</p>
+<h3 id="the-deep-pass-2026-08-17-uswdsuswds3130-packagesusa-button-and-others">The deep pass (2026-08-17, <code>@uswds/uswds@3.13.0</code> packages/usa-button and others)</h3>
+<ul class="md-list"><li><strong>Buttons</strong>: padding <code>units(1.5) units(2.5)</code> (12/20px), <strong>weight bold</strong>, radius <code>$theme-button-border-radius: &amp;quot;md&amp;quot;</code> — <strong>a settings variable rather than a value.</strong> Dimensions, colours and radii all pass through a <code>$theme-*</code> settings layer — the source structure makes clear that USWDS is not &quot;a system that gives you values&quot; but <strong>a system you assemble through settings</strong> (dovetailing with the existing record that NASA's WDS is an overlay built by overriding this settings layer).</li><li><strong>The outline variant uses a 2px <code>inset box-shadow</code> rather than a border</strong> — a technique for drawing an edge without changing the size (<code>$button-stroke: inset 0 0 0 2px</code>).</li><li>A <code>@media (forced-colors: active)</code> branch sits directly in the component source — Windows high-contrast support pinned at the button level (the Clarity family).</li><li>Inputs are likewise settings-driven, with <code>$theme-input-line-height: 3</code> (a line height of 3×) and the rest. <del><code>$theme-input-select-border-width: 2px</code> = the GOV.UK/NHS 2px border convention</del> → <strong>corrected (2026-08-18, measured against the compiled CSS bundled with nasawds):</strong> that variable is <strong>specific to checkboxes and radios (the select family)</strong>, and a text input's actual border is <strong>1px</strong>. It is not the same convention as GOV.UK and NHS (2px on text inputs).</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>An 8px base.</strong> Squarely at odds with GOV.UK (5px) — among the three public-sector samples (GOV.UK · Codex · USWDS), only GOV.UK uses 5px</li><li><strong>The breakpoints are a subset of the spacing map.</strong> Unique in the sample</li><li><strong>The large spacing values are named after devices</strong> (<code>card</code> · <code>mobile</code> · <code>tablet</code> · <code>desktop</code>)</li><li><strong>Negative spacing down to −120px</strong> — the deepest in the sample</li><li><strong>Fractional keys encoded as strings</strong> (<code>&amp;quot;05&amp;quot;</code> = 0.5×)</li><li><strong>12–18px typography in 1px steps</strong> — the same density as Seed Design, in a different band</li><li><strong>The measure tokenised in <code>ex</code></strong> — the second measure-token case, and the first use of <code>ex</code></li><li><strong>A <code>$project-*</code> extension slot built into the token structure</strong></li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>No stated target was found in the package sources (the documentation site was unreachable). There is presumably documentation about the federal procurement requirement (Section 508), but it is <strong>unverified</strong>.</del> → <strong>Resolved 2026-08-18</strong> — measured from the documentation site <a href="https://designsystem.digital.gov/documentation/accessibility/" rel="noopener">https://designsystem.digital.gov/documentation/accessibility/</a>.</p>
+<p><strong>The documentation explains the relationship between Section 508 and WCAG directly.</strong> Section 508 of the Rehabilitation Act of 1973, amended in 1998, obliges federal agencies to make information technology accessible, and <strong>in 2018 it incorporated the WCAG 2.0 Level AA success criteria.</strong> The legal baseline is therefore 2.0 AA.</p>
+<p>USWDS <strong>aims above that baseline</strong>:</p>
+<ul class="md-list"><li>&quot;While 2.0 AA is the baseline for legal conformance, USWDS strives to meet the higher standard of <strong>WCAG 2.1 AA</strong> — which also satisfies the legal requirement&quot;</li><li>It records that <strong>WCAG 2.2, published in October 2023, is not currently a legal requirement</strong>, but that it tries to meet as many of the newest success criteria as possible, <strong>moving gradually toward AAA</strong></li><li>As evidence of conformance it publishes an ACR based on a <strong>VPAT (Voluntary Product Accessibility Template)</strong> — testing against WCAG 2.0 was carried out in <strong>March 2025</strong> and the report published in <strong>May 2025</strong></li><li>It also draws a boundary of responsibility: &quot;our testing does not guarantee your project's conformance — for full WCAG conformance, do your own research and testing&quot;</li></ul>
+<p>The same wording appears on the design-assets side — &quot;all designs meet the WCAG 2.0 AA guidelines and conform to Section 508 of the Rehabilitation Act&quot; (<a href="https://designsystem.digital.gov/documentation/getting-started-for-designers/" rel="noopener">https://designsystem.digital.gov/documentation/getting-started-for-designers/</a>).</p>
+<p>Per component, a <code>/components/&amp;lt;name&amp;gt;/accessibility-tests/</code> page exists separately <strong>for as many components as there are</strong> (a large share of the sitemap's 257 URLs) — the only structure in the sample that puts accessibility testing at the same URL tier as the component documentation.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li><strong>3.14.0 re-verified — recorded values unchanged (2026-08-18).</strong> The whole token directory was compared against 3.13.0 with <code>diff -rq</code>: only two files differ. <code>font/stacks.scss</code> is <strong>a formatting change, line breaks only</strong> (the font-stack values are identical), while <code>color/assignments-theme-color.scss</code> carries <strong>a real change: the <code>&amp;quot;ink&amp;quot;</code> mapping moves from <code>$theme-color-base-darkest</code> to <code>$theme-color-base-ink</code>.</strong> The latter is in a colour layer this entry has not yet collected, so the recorded values are unaffected — but <strong>when colour is collected, the post-change values must be the baseline.</strong></li><li><strong>Basis for the Figma kit (true):</strong> an official Figma design kit — provided since 2024-11, alongside Sketch, with Adobe XD discontinued, confirmed 2026-08-18</li><li>Documentation: https://designsystem.digital.gov (<del>blocked by the proxy</del> → access succeeded from a local session, 2026-08-18)</li><li>Tokens: <code>npm pack @uswds/uswds@3.13.0</code> → <code>packages/uswds-core/src/styles/tokens/units/spacing.scss</code> · <code>font/type-scale.scss</code></li><li><strong>Open questions:</strong> colour (the official palette <code>$system-colors</code>) · radius · component dimensions · the full <code>$theme-*</code> settings · <del>the Section 508 description</del> (resolved 2026-08-18 — see the accessibility section)</li><li><strong>Figma kit resolved (2026-08-18):</strong> <code>figma_kit: true</code> — source <a href="https://designsystem.digital.gov/documentation/getting-started-for-designers/" rel="noopener">https://designsystem.digital.gov/documentation/getting-started-for-designers/</a>. It states that USWDS 3's design assets are maintained in <strong>Figma and Sketch</strong> formats and that <strong>an official USWDS Figma design kit has been provided since November 2024.</strong> There are two distribution routes — a <strong>17.6MB ZIP of the Figma + Sketch kits</strong> from GitHub (the <code>uswds/uswds-for-designers</code> repo), or <strong>installing directly from Figma Community.</strong> The 2025-01-08 changelog entry says &quot;<strong>removed links to third-party Figma kits</strong>&quot;, confirming that unofficial kits were cleared from the documentation when the official one arrived. <strong>Adobe XD assets have been discontinued</strong> (Adobe no longer supports XD)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Public domain (CC0-1.0, a U.S. government work) + fonts SIL OFL-1.1 / icons Apache-2.0</code> — source: github uswds/uswds → <code>LICENSE.md</code>. GSA's modifications are CC0, the bundled fonts (Source Sans Pro, Merriweather, Public Sans) are OFL-1.1, and the Material Icons derivatives are Apache-2.0</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

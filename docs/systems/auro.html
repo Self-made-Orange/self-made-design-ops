@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Auro — Self-Made DesignOps</title>
+<meta name="description" content="Alaska Air Group's system. Three airline brands (alaska · hawaiian · atmos) run on the same 290 keys with only 162 values swapped — a merger expressed as…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/auro.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Auro — Self-Made DesignOps">
+<meta property="og:description" content="Alaska Air Group's system. Three airline brands (alaska · hawaiian · atmos) run on the same 290 keys with only 162 values swapped — a merger expressed as…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/auro.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auro — Self-Made DesignOps">
+<meta name="twitter:description" content="Alaska Air Group's system. Three airline brands (alaska · hawaiian · atmos) run on the same 290 keys with only 162 values swapped — a merger expressed as…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Auro",
+ "description": "Alaska Air Group's system. Three airline brands (alaska · hawaiian · atmos) run on the same 290 keys with only 162 values swapped — a merger expressed as…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/auro.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Auro",
+  "applicationCategory": "DesignApplication",
+  "url": "https://auro.alaskaair.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-three-brands-identical-keys">Tokens — three brands, identical keys</a></li><li class="lvl3"><a href="#tiers-basic-advanced-two-of-them">Tiers — basic / advanced, two of them</a></li><li class="lvl3"><a href="#typography-a-serif-display">Typography — a serif display</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-a-shape-size-matrix-aurodesignsystemauro-button1232">Buttons — a shape × size matrix (@aurodesignsystem/auro-button@12.3.2)</a></li><li class="lvl3"><a href="#inputs-aurodesignsystemauro-input434-a-built-in-floating-label">Inputs (@aurodesignsystem/auro-input@4.3.4) — a built-in floating label</a></li><li class="lvl3"><a href="#dialogs-auro-dialog420-a-desktop-dialog-and-a-mobile-bottom-sheet">Dialogs (auro-dialog@4.2.0) — a desktop dialog and a mobile bottom sheet</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Alaska Airlines (Alaska Air Group)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://auro.alaskaair.com" rel="noopener">Official site</a><br><a href="https://github.com/AlaskaAirlines/AuroDesignTokens" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/auro.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Auro</span></nav>
+    <h1>Auro</h1>
+    <p class="doc-lede">Alaska Airlines (Alaska Air Group) · consumer · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Alaska Air Group's system. <strong>Three airline brands</strong> (alaska · hawaiian · atmos) run on <strong>the same 290 keys with only 162 values swapped</strong> — a merger expressed as a token contract.</p>
+<h2 id="tokens-three-brands-identical-keys">Tokens — three brands, identical keys</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>theme</th><th>character</th></tr></thead><tbody><tr><td><code>alaska</code></td><td>the Alaska Airlines brand proper</td></tr><tr><td><strong><code>hawaiian</code></strong></td><td><strong>Hawaiian Airlines</strong> (acquired in 2024)</td></tr><tr><td><code>atmos</code></td><td>the combined loyalty programme</td></tr></tbody></table></div>
+<pre class="md-code"><code>shared keys 290 / keys whose value differs 162 (56%)</code></pre>
+<p><strong>A multi-brand axis of the Paste (SendGrid multi-brand), Helios (per-product colour) and Atlassian (rovo) family</strong> — except Auro is the only case of <strong>laying an acquired company's brand onto the same token contract.</strong> Leave the components alone, swap the CSS file, and the airline changes.</p>
+<p><strong>Even the focus colour is per-brand</strong> — <code>state-focused</code> is <code>#463c8f</code> (purple) for alaska and <code>#101d2c</code> (navy) for hawaiian. Where Radix Themes separates focus from the accent and fixes it, in Auro focus follows the brand.</p>
+<h3 id="tiers-basic-advanced-two-of-them">Tiers — <code>basic</code> / <code>advanced</code>, two of them</h3>
+<pre class="md-code"><code>basic.color    89   (basic semantics: texticon, surface and so on)
+advanced.color 165  (header, dropdown, interactive — close to components)
+basic.type     36</code></pre>
+<p>Rather than raw/semantic, this <strong>divides the semantic layer in two by depth</strong> — <code>advanced</code> occupies a position close to Astro UXDS's component tier.</p>
+<h3 id="typography-a-serif-display">Typography — a serif display</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th>typeface</th></tr></thead><tbody><tr><td>display</td><td><strong>Teodor (a serif)</strong> — falling back to Georgia</td></tr><tr><td>heading · body · accent</td><td>AS Circular (a bespoke sans)</td></tr></tbody></table></div>
+<p><strong>Only display is a serif.</strong> Carbon (IBM Plex Serif) and Auro are the two systems in the sample with a serif as a token family, and Auro's is display-only.</p>
+<p>A <code>brand-*</code> prefixed family (<code>brand-family-primary</code> and so on) exists alongside the ordinary one — the same structure as Atlassian's Charlie (a separate brand typeface).</p>
+<p>Tracking has two positive steps, <strong>accent 0.05em / accent2 0.10em</strong>. Line heights <strong>mix</strong> ratios (1.3) and rem (1.625rem) — the unit differs by family.</p>
+<h2 id="components">Components</h2>
+<p>The <code>@aurodesignsystem/auro-*</code> family of Web Components packages (Lit). → Buttons, inputs and dialogs are in the deep pass below (2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>The embedded CSS of the dist bundles of <code>@aurodesignsystem/auro-button@12.3.2</code>, <code>@aurodesignsystem/auro-input@4.3.4</code> and <code>auro-dialog@4.2.0</code> was parsed, with the button cross-checked against its source SCSS (<code>AlaskaAirlines/auro-button</code> <code>src/styles/{style,shapeSize}.scss</code>).</p>
+<h3 id="buttons-a-shape-size-matrix-aurodesignsystemauro-button1232">Buttons — a shape × size matrix (<code>@aurodesignsystem/auro-button@12.3.2</code>)</h3>
+<p>Size is not a per-component value but <strong>a generated <code>$sizeMap</code> × <code>$shapeConfig</code> matrix</strong> (six shapes — rounded, pill, pill-left, pill-right, circle, square — × five sizes = 30 classes).</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th style="text-align:center">visual height</th><th style="text-align:center">pill radius</th><th style="text-align:center">inline space (contentWrapper)</th></tr></thead><tbody><tr><td>xs</td><td style="text-align:center">24px</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td></tr><tr><td>sm</td><td style="text-align:center">36px</td><td style="text-align:center">18px</td><td style="text-align:center">16px</td></tr><tr><td><strong>md (default)</strong></td><td style="text-align:center"><strong>48px</strong></td><td style="text-align:center">24px</td><td style="text-align:center"><strong>24px</strong></td></tr><tr><td>lg</td><td style="text-align:center">56px</td><td style="text-align:center">28px</td><td style="text-align:center">32px</td></tr><tr><td>xl</td><td style="text-align:center">72px</td><td style="text-align:center">36px</td><td style="text-align:center">40px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The height sets min-height and max-height at once — completely fixed.</strong> The CSS is content-box, so the classes record <code>height − 2×border</code> (md rounded = 44px + 2px×2). min and max are recomputed for each border variant (default 2px / thin 1px / simple 0) to <strong>keep the visual height invariant.</strong></li><li><strong>The inline space is not padding</strong> — <code>.auro-button</code>'s <code>padding</code> is erased with <code>padding-inline:unset</code> and the per-size space comes from the inner <code>.contentWrapper</code>'s <code>margin-inline</code>.</li><li>Radius: rounded <strong>6px</strong> (4px only at xs) · pill = height/2 · circle 50%. The default shape is rounded.</li><li>Type: a type class mapped per size — sm <code>body-sm</code> (14) / <strong>md <code>body-default</code> (16px/24px)</strong> / lg and xl <code>body-lg</code> (18). The weight across the body family is <strong>450</strong>. Icon-only switches to the heading family.</li><li><strong>No min-width</strong> (only circle and square set min/max-width = height + border).</li><li>active is <code>transform: scale(0.95)</code> — the press expressed as a shrink.</li><li>Focus is not an outline but <strong>an inset box-shadow</strong>, whose thickness is specified individually through a variant × shape × size map — lg circle primary even reaches a fractional <strong>3.33px</strong>.</li><li>Colours all run a <code>--ds-auro-button-*</code> → <code>--ds-advanced-color-button-*</code> fallback chain — confirming that the token section's <strong><code>advanced</code> tier is the real source of component colour.</strong></li><li>Variants: primary (default) · secondary · tertiary · ghost · flat, plus <code>ondark</code> and <code>appearance=inverse</code>.</li></ul>
+<h3 id="inputs-aurodesignsystemauro-input434-a-built-in-floating-label">Inputs (<code>@aurodesignsystem/auro-input@4.3.4</code>) — a built-in floating label</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>value</th></tr></thead><tbody><tr><td><strong>height</strong></td><td>min and max fixed at <strong>58px</strong> (<code>--ds-size-700</code> (56px) + <code>--ds-size-25</code> (2px))</td></tr><tr><td>padding</td><td>32px top (the label's share) / 4px bottom / 0 inline</td></tr><tr><td>default form</td><td><strong>1px borders top and bottom</strong> (an underline form) — with the <code>bordered</code> attribute, a 1px border all round plus a 6px radius (<code>--ds-border-radius: 0.375rem</code>)</td></tr><tr><td>label</td><td>absolute floating — centred → rising to 2px from the top and shrinking to 12px, <code>all 300ms cubic-bezier(0.215, 0.61, 0.355, 1)</code></td></tr></tbody></table></div>
+<ul class="md-list"><li>There are no size variants — a single 58px, in contrast to the button's five-step matrix.</li><li><strong>It uses a size token (<code>--ds-size-200</code>, 1rem) for font-size</strong> — a rare notation, using a dimension token for type size rather than a typography token.</li><li><strong>The component CSS's fallbacks reveal the <code>--ds-size-*</code> numbering</strong> — 50 = 4px · 100 = 8px · 150 = 12px · 200 = 16px · 300 = 24px … <strong>the number = rem × 200</strong> (the Helios and KRDS family). The component layer fills the gap the token section left as &quot;spacing not exposed&quot;.</li></ul>
+<h3 id="dialogs-auro-dialog420-a-desktop-dialog-and-a-mobile-bottom-sheet">Dialogs (<code>auro-dialog@4.2.0</code>) — a desktop dialog and a mobile bottom sheet</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>size</th><th style="text-align:center">&lt;768px (max-height)</th><th style="text-align:center">≥768px (max-width)</th><th style="text-align:center">≥1024px (max-width)</th></tr></thead><tbody><tr><td>sm</td><td style="text-align:center">30%</td><td style="text-align:center">40%</td><td style="text-align:center"><strong>740px</strong></td></tr><tr><td>md</td><td style="text-align:center">50%</td><td style="text-align:center">70%</td><td style="text-align:center"><strong>986px</strong></td></tr><tr><td>default</td><td style="text-align:center">90%</td><td style="text-align:center">80%</td><td style="text-align:center"><strong>986px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>On mobile it is a bottom sheet rather than a dialog</strong> — a <code>bottom:-100% → 0</code> slide-up, with <code>opacity/visibility/bottom 300ms ease-in-out</code>. The size attribute changes the width on desktop and <strong>the height</strong> (30/50/90%) on mobile.</li><li>The desktop width ceiling is 986px (shared by md and the default), so there are really only two steps (740/986). A separate <code>lg</code> attribute is not a width but <strong>a height modifier</strong> that raises sm and md's max-height back to 80–90%.</li><li>Padding: <code>0 64px 64px</code> on desktop (<code>--ds-size-800</code>) / 48px for sm / <code>0 32px 32px</code> on mobile. The header's padding-top is 64px. <strong>No radius is declared (0)</strong> — a square-cornered modal.</li><li>The overlay transitions use <code>cubic-bezier(.4, 0, .2, 0)</code> and <code>(.4, 0, .5, 0)</code> — <strong>non-standard curves with y2 = 0</strong> (differing from Material's <code>(.4,0,.2,1)</code> only in the last coordinate; whether that is intentional or a typo is unverified).</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>A generated shape × size matrix with height recomputed per border thickness</strong> — the principle of an invariant visual height</li><li><strong>Space from an inner margin-inline rather than padding</strong> — rare in the sample</li><li><strong>Focus ring thickness as a three-axis variant × shape × size map</strong> (including a fractional 3.33px)</li><li><strong>Mobile = a bottom-sheet switch</strong> — the same component changing pattern by viewport</li><li>A button weight of 450 — between the bold camp (Backpack, Thumbprint at 700) and the medium camp</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>An acquired brand integrated into the same token contract</strong> — 290 keys fixed, 56% of the values swapped. Unique in the sample</li><li><strong>The focus colour follows the brand</strong></li><li><strong>A two-tier <code>basic</code>/<code>advanced</code> semantic layer</strong> — a different axis from raw/semantic separation</li><li><strong>A serif display</strong> (Teodor) plus a bespoke sans (AS Circular)</li><li>Line-height units mixed by family (ratios / rem)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p><del>Unverified.</del> → <strong>Resolved (2026-08-18, headless render).</strong> There are per-brand <code>state-focused</code> tokens, but still no contrast figures.</p>
+<p>Auro is one of the rare corpus entries with <strong>a standalone accessibility statement page</strong> — <code>/a11y-statement</code>, written 2020-12-03 with the <strong>W3C Accessibility Statement Generator Tool</strong>.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>content</th></tr></thead><tbody><tr><td>conformance target</td><td><strong>WCAG 2.0 Level AA</strong></td></tr><tr><td>conformance status</td><td><strong>partially conformant</strong> — &quot;some parts of the content do not fully conform&quot;</td></tr><tr><td>evaluation method</td><td><strong>Self-evaluation</strong> — no external audit</td></tr><tr><td>technologies relied upon</td><td>HTML · WAI-ARIA · CSS · JavaScript</td></tr><tr><td>feedback</td><td>GitHub issues, targeting <strong>a response within 48 hours</strong></td></tr></tbody></table></div>
+<p>Two things stand out. First, <strong>it is 2.0, not 2.1 or 2.2</strong> — the lowest version target in the corpus (against Backpack's 2.2 AA and Canvas's 2.1 A/AA). Second, <strong>it states &quot;partially conformant&quot; in writing.</strong> Where most systems record a target and say nothing about whether they meet it, this one puts the shortfall in the statement.</p>
+<p>Source: https://auro.alaskaair.com/a11y-statement (render confirmed, 2026-08-18)</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @aurodesignsystem/design-tokens@9.3.3</code> → <code>dist/web/</code></li><li>Components in depth: <code>@aurodesignsystem/auro-button@12.3.2</code> · <code>@aurodesignsystem/auro-input@4.3.4</code> · <code>auro-dialog@4.2.0</code> (the dist bundles' CSS cross-checked against the GitHub SCSS sources, 2026-08-18)</li><li>Licence: the component packages' package.json states <strong>Apache-2.0</strong> — reflected in the frontmatter (2026-08-18)</li><li><strong>Open questions:</strong> <del>spacing and radius (not exposed in the variables)</del> (partly resolved 2026-08-18 — the component CSS fallbacks confirm the <code>--ds-size-*</code> = rem × 200 system and a 6px <code>--ds-border-radius</code>. The design-tokens package's own full size scale remains unverified), what the atmos theme is for in detail, <del>the licence</del> (Apache-2.0 — 2026-08-18), <del>figma_kit and a11y_target</del> (resolved / confirmed absent 2026-08-18)</li><li><strong>Figma kit — confirmed absent (2026-08-18, <code>figma_kit: false</code>)</strong>: even rendered, the documentation site has <strong>not a single Figma kit or link.</strong> The left navigation is <code>Welcome / Design philosophy / Status / Releases / Support / Getting started (Engineering · Developer support · Design tokens · WCSS) / Contributing / CSS guidelines / Color / Typography / Icons / Voice and tone / Components / CSS / Dev resources</code> — <strong>an engineering axis throughout</strong>, with no designer section and no kit distribution notice. Zero <code>figma.com</code> links in the entire site DOM. → The type that publishes tokens and web components on npm but <strong>does not publish the design source</strong> (classified C). Renders checked: https://auro.alaskaair.com/ · https://auro.alaskaair.com/design-philosophy · https://auro.alaskaair.com/a11y-statement (2026-08-18)</li><li><strong>The documentation site exposes a three-brand theme switcher</strong> (rendered 2026-08-18) — a <code>Site Theme: Alaska / Hawaiian / Atmos</code> selector in the header, so the three-way structure observed in the tokens surfaces in the documentation UI as well.</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github AlaskaAirlines/AuroDesignTokens → <code>LICENSE</code> (matching the npm metadata for <code>@aurodesignsystem/design-tokens@9.3.3</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

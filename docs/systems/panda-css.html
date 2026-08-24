@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panda CSS — Self-Made DesignOps</title>
+<meta name="description" content="The Chakra team's build-time style engine. Its default token set (preset-panda) enumerates Tailwind's values verbatim while adding half-steps (4.5, 5.5)…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/panda-css.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Panda CSS — Self-Made DesignOps">
+<meta property="og:description" content="The Chakra team's build-time style engine. Its default token set (preset-panda) enumerates Tailwind's values verbatim while adding half-steps (4.5, 5.5)…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/panda-css.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Panda CSS — Self-Made DesignOps">
+<meta name="twitter:description" content="The Chakra team's build-time style engine. Its default token set (preset-panda) enumerates Tailwind's values verbatim while adding half-steps (4.5, 5.5)…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Panda CSS",
+ "description": "The Chakra team's build-time style engine. Its default token set (preset-panda) enumerates Tailwind's values verbatim while adding half-steps (4.5, 5.5)…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/panda-css.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Panda CSS",
+  "applicationCategory": "DesignApplication",
+  "url": "https://panda-css.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-17",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-preset-panda">Tokens (preset-panda)</a></li><li><a href="#where-it-sits-in-this-corpus">Where it sits in this corpus</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Chakra team (Segun Adebayo and others)</b><br>minimal harvest · web<br>verified 2026-08-17<br><a href="https://panda-css.com" rel="noopener">Official site</a><br><a href="https://github.com/chakra-ui/panda" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/panda-css.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Panda CSS</span></nav>
+    <h1>Panda CSS</h1>
+    <p class="doc-lede">Chakra team (Segun Adebayo and others) · framework · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>The Chakra team's build-time style engine. Its default token set (<code>preset-panda</code>) <strong>enumerates Tailwind's values verbatim</strong> while <strong>adding half-steps (4.5, 5.5) and a <code>2xs</code></strong>. Where Tailwind is &quot;one base plus generation&quot;, Panda <strong>enumerates the same values as tokens</strong> — a direct sample of the generate-versus-enumerate contrast on the GLOSSARY's &quot;three systems with no spacing scale&quot; axis.</p>
+<h2 id="tokens-preset-panda">Tokens (preset-panda)</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Axis</th><th>Values</th></tr></thead><tbody><tr><td>Spacing</td><td>identical to Tailwind's enumeration (0.125rem steps) + <strong>added half-steps 4.5 (18px) and 5.5 (22px)</strong></td></tr><tr><td>Font size</td><td>xs–9xl with <strong><code>2xs</code> (8px) added</strong> — a bottom step Tailwind does not have</td></tr><tr><td>Radii</td><td>identical to Tailwind (2–32px + full 9999px)</td></tr><tr><td>Easing</td><td><code>default (0.4,0,0.2,1)</code> + in/out/in-out — <strong>the M3 Legacy curves as-is</strong></td></tr><tr><td>Duration</td><td><strong>seven steps, 50–500ms</strong> (fastest–slowest) — an axis Tailwind does not ship</td></tr><tr><td>Breakpoints</td><td>identical to Tailwind (640–1536)</td></tr><tr><td>Container</td><td><strong>twelve steps</strong> (320–1440px)</td></tr><tr><td>Aspect ratio</td><td>square · landscape · portrait · wide · ultrawide · <strong>golden (1.618)</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li>This is the <strong>third shipped form of the Tailwind value lineage</strong> — Tailwind (generates) → shadcn (inherits) → <strong>Panda (enumerates and extends)</strong>. What was added (half-steps, <code>2xs</code>, durations) doubles as a list of where the original fell short in practice.</li><li><code>preset-base</code> ships <strong>utility definitions</strong> (75KB) rather than values, distributed separately from the value layer (<code>preset-panda</code>).</li></ul>
+<h2 id="where-it-sits-in-this-corpus">Where it sits in this corpus</h2>
+<p><strong>Ark UI (behaviour) and Panda (style) come from the same team</strong> — the Chakra v3 ecosystem decomposed into Zag (state machines) → Ark (components) → Panda (style engine). It is the second instance of a &quot;behaviour and style split across a product line&quot;, after the Headless UI / Tailwind pair from Tailwind Labs.</p>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li>Re-ships Tailwind's values in enumerated form, extended with half-steps</li><li>Seven duration steps — filling the motion axis Tailwind leaves out</li><li>A golden (1.618) aspect-ratio token — the only one in the sample</li><li>Build-time generation, so no runtime CSS-in-JS cost</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li><strong>Still to confirm:</strong> the real values in the semantic token layer (<code>semanticTokens</code>), which recipes ship by default, and whether values are shared with Chakra v3 proper</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SGDS (Singapore Government Design System) — Self-Made DesignOps</title>
+<meta name="description" content="Singapore's government system. The first sample whose Bootstrap ancestry is confirmable from the tokens, and in forking it restored the 32px that…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/sgds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="SGDS (Singapore Government Design System) — Self-Made DesignOps">
+<meta property="og:description" content="Singapore's government system. The first sample whose Bootstrap ancestry is confirmable from the tokens, and in forking it restored the 32px that…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/sgds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SGDS (Singapore Government Design System) — Self-Made DesignOps">
+<meta name="twitter:description" content="Singapore's government system. The first sample whose Bootstrap ancestry is confirmable from the tokens, and in forking it restored the 32px that…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "SGDS (Singapore Government Design System)",
+ "description": "Singapore's government system. The first sample whose Bootstrap ancestry is confirmable from the tokens, and in forking it restored the 32px that…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/sgds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "SGDS (Singapore Government Design System)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://www.designsystem.tech.gov.sg"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#ancestry-the-bootstrap-fingerprints-are-intact">Ancestry — the Bootstrap fingerprints are intact</a></li><li class="lvl3"><a href="#spacers-what-the-fork-fixed">Spacers — what the fork fixed</a></li><li class="lvl3"><a href="#radii-the-default-is-5px">Radii — the default is 5px</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-and-inputs-a-20-line-height-straightens-the-height-ladder">Buttons and inputs — a 2.0 line height straightens the height ladder</a></li><li class="lvl3"><a href="#modals-original-widths-only-padding-and-radius-changed">Modals — original widths, only padding and radius changed</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Singapore Government (GovTech)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.designsystem.tech.gov.sg" rel="noopener">Official site</a><br><a href="https://github.com/govtechsg/sgds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/sgds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>SGDS (Singapore Government Design System)</span></nav>
+    <h1>SGDS (Singapore Government Design System)</h1>
+    <p class="doc-lede">Singapore Government (GovTech) · public · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Singapore's government system. The first sample <strong>whose Bootstrap ancestry is confirmable from the tokens</strong>, and in forking it <strong>restored the 32px that Bootstrap lacked</strong> to its spacers.</p>
+<h2 id="tokens">Tokens</h2>
+<h3 id="ancestry-the-bootstrap-fingerprints-are-intact">Ancestry — the Bootstrap fingerprints are intact</h3>
+<pre class="md-code"><code class="language-scss">$spacer: 1rem !default;
+$border-radius-pill: 50rem !default;   // a Bootstrap-specific value
+$grid-breakpoints: (xs: 0, …);
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);</code></pre>
+<p>Derivation from <code>$spacer</code> · the <code>$enable-*</code> flags · <code>negativify-map</code> · <strong>the <code>50rem</code> pill</strong> — all of it is Bootstrap's structure (<code>systems/bootstrap.md</code>). <strong>The only case in the sample where being a fork of another system is provable from the token source.</strong></p>
+<h3 id="spacers-what-the-fork-fixed">Spacers — what the fork fixed</h3>
+<pre class="md-code"><code class="language-scss">$spacers: (0, .25, .5, 1, 1.5, 2, 2.5, 3, 3.5) × $spacer
+        = 0 · 4 · 8 · 16 · 24 · 32 · 40 · 48 · 56</code></pre>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>Bootstrap</th><th>SGDS</th></tr></thead><tbody><tr><td>Steps</td><td>6</td><td><strong>9</strong></td></tr><tr><td>32px</td><td><strong>absent</strong></td><td><strong>present</strong></td></tr><tr><td>Top</td><td>48</td><td>56</td></tr></tbody></table></div>
+<p><strong>The fork restored the 32px (a core value) the original skipped.</strong> Because the multipliers step by 0.5, there is still no 20px. It holds the entire core <code>4/8/16/24/32</code> — the fifth public-sector sample, and its base differs again (multiples of a 16px <code>$spacer</code> — unlike GOV.UK's 5, USWDS's 8 or the KRDS 4 family).</p>
+<h3 id="radii-the-default-is-5px">Radii — the default is 5px</h3>
+<pre class="md-code"><code class="language-scss">$border-radius:     .3125rem;   // 5px
+$border-radius-sm:  .2rem;      // 3.2px
+$border-radius-lg:  .3rem;      // 4.8px
+$border-radius-xl:  1rem;       // 16
+$border-radius-2xl: 2rem;       // 32</code></pre>
+<p><strong>A 5px default</strong> — changed from Bootstrap's 6px. It joins the odd-number radius camp (Helios, Spectrum, Open Props, Semi), and <strong><code>sm</code> (3.2px) and <code>lg</code> (4.8px) are fractional px</strong> — SGDS is the only sample with deliberately fractional px radii (the same family as Polaris's 0.66 border).</p>
+<p><strong><code>lg</code> (4.8px) is smaller than the default (5px)</strong> — the only case where the name order and the value order disagree.</p>
+<h3 id="typography">Typography</h3>
+<p>h1–h6: 40 · 32 · 24 · 18 · <strong>16 · 16</strong> — <strong>h5 and h6 are the same</strong> (Bootstrap has 20/16). Body stays at 16px.</p>
+<h2 id="components">Components</h2>
+<p><del>Web Components (<code>sgds-*</code>). List unverified.</del> Corrected 2026-08-18: this package (<code>@govtechsg/sgds</code> v2) is <strong>a CSS/Sass framework</strong>. The Web Components are split into a separate package, <code>@govtechsg/sgds-web-component</code> (currently 3.26.0), not yet harvested.</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>Measured in the same <code>@govtechsg/sgds@2.3.6</code>. Since the component SCSS is one <code>@import &amp;quot;~bootstrap/scss/buttons&amp;quot;</code> line plus a few additions (<strong>depending on bootstrap ~5.2.0</strong>), <strong>every component dimension is decided by editing variables in the vendored <code>_variables.scss</code></strong> — the fork's point of intervention is the variable layer, not the CSS.</p>
+<h3 id="buttons-and-inputs-a-20-line-height-straightens-the-height-ladder">Buttons and inputs — a 2.0 line height straightens the height ladder</h3>
+<p>Two key edits: <strong><code>$line-height-base: 1.5 → 2</code></strong> and <strong><code>$input-btn-padding-y: 6px → 7px</code></strong> (horizontal 12 → 16px). Because heights are derived (Bootstrap's way, unchanged), those two change the entire ladder:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Derived height</th><th style="text-align:center">sm</th><th style="text-align:center">default</th><th style="text-align:center">lg</th></tr></thead><tbody><tr><td>Bootstrap</td><td style="text-align:center">31px</td><td style="text-align:center">38px</td><td style="text-align:center">48px</td></tr><tr><td><strong>SGDS</strong></td><td style="text-align:center"><strong>38px (14×2+8+2)</strong></td><td style="text-align:center"><strong>48px (16×2+14+2)</strong></td><td style="text-align:center"><strong>58px (20×2+16+2)</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The irregular 31/38/48 is realigned to an even 10px step, 38/48/58.</strong> The default lands on exactly 48px — Bootstrap's lg becoming SGDS's default, a ladder pushed up one rung.</li><li><strong>A body line height of 2.0 is the highest in the sample</strong> (most are 1.4–1.6). In Bootstrap's structure, buttons, inputs and body share the same variable, so deciding a reading line height <em>is</em> deciding control heights — both a side effect of the shared variable layer and a lever on it.</li><li>Radii: default 5px · sm 3.2px · lg 4.8px (the fractional px from the token section applied as-is).</li><li><strong>A 2px focus ring</strong> (<code>$input-btn-focus-width: .25rem → .125rem</code>) — half of Bootstrap's 4px. The alpha-0.25 ring approach is kept.</li><li>Button weight 400 and a <code>.15s ease-in-out</code> transition across four properties — Bootstrap's defaults kept. Input border 1px <code>$gray-400</code>, with the same 48px height as the button (a shared variable).</li><li>Checkbox <code>1.125em</code> = <strong>18px</strong> (enlarged from Bootstrap's 1em = 16px).</li></ul>
+<h3 id="modals-original-widths-only-padding-and-radius-changed">Modals — original widths, only padding and radius changed</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">Bootstrap 5.2</th><th style="text-align:center">SGDS</th></tr></thead><tbody><tr><td>Width steps</td><td style="text-align:center">300/500/800/1140px</td><td style="text-align:center"><strong>identical</strong> (unchanged)</td></tr><tr><td>Inner padding</td><td style="text-align:center">16px</td><td style="text-align:center"><strong>24px</strong> (<code>$modal-inner-padding: 1.5rem</code>)</td></tr><tr><td>Radius</td><td style="text-align:center">8px (<code>$border-radius-lg: .5rem</code>)</td><td style="text-align:center"><strong>4.8px</strong> (fallout from the <code>.3rem</code> redefinition)</td></tr><tr><td>Footer</td><td style="text-align:center">has a border</td><td style="text-align:center"><strong>transparent border plus padding-top 0</strong></td></tr><tr><td>Entry</td><td style="text-align:center"><code>translate(0,-50px)</code> + <code>.3s ease-out</code></td><td style="text-align:center">identical</td></tr><tr><td>Scrim</td><td style="text-align:center">black 50%</td><td style="text-align:center">identical</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The 4.8px modal radius</strong> was not chosen directly; changing <code>$border-radius-lg</code> to 4.8px flowed through the modal variable's reference. A place where the path of a fractional px radius propagating into components is visible.</li><li>The additions are minor — removing the footer padding within a <code>.sgds.modal</code> scope, the close-button size. The <code>centered-align-icon</code> variant (a header with a centred icon) is its own addition.</li></ul>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>A global 2.0 line height</strong> — the highest in the sample, governing control heights too</li><li><strong>The height ladder realigned to an even 10px step</strong> (38/48/58) — a 48px default</li><li><strong>Intervention only at the variable layer</strong> — the component SCSS is one import line (the Bootstrap edition of NASA WDS's single settings file, an even thinner layer than NHS's &quot;replace the values&quot;)</li><li>A halved focus ring (2px) · the 4.8px modal radius fallout · an 18px checkbox</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>Bootstrap fork ancestry provable from the tokens</strong> — unique in the sample</li><li><strong>The fork restored a core gap in the original (32px)</strong> — a record of a derived system overturning the original's judgement</li><li><strong>A 5px default radius plus fractional px steps (3.2/4.8)</strong> — including the <code>lg</code> &lt; default inversion</li><li>h5 = h6 = 16px</li><li>The fifth public-sector sample, with all five bases different (5px / multiples of 4 / 8 / the 4px family / multiples of 16)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack @govtechsg/sgds@2.3.6</code> → <code>sass/_variables.scss</code></li><li>Component deep-dive: the same package's <code>sass/_{buttons,forms,modal}.scss</code> plus <code>_variables.scss</code> (depending on bootstrap ~5.2.0, 2026-08-18)</li><li><del>Licence</del> a LICENSE is bundled in the package — <strong>MIT</strong> (with an appended clause excluding the Singapore state crest and public-agency insignia, confirmed 2026-08-18) · reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> colour · the component list (the Web Components edition <code>@govtechsg/sgds-web-component@3.26.0</code> is not harvested) · the full set of changes against Bootstrap</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: npm <code>@govtechsg/sgds@2.3.6</code> → <code>package.json</code>. The repository root (GovTechSG/sgds) has no LICENSE file</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

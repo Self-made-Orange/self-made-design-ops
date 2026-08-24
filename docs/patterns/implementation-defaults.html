@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Implementation Defaults — Self-Made DesignOps</title>
+<meta name="description" content="This page collects the &amp;quot;implementation defaults&amp;quot; sections of the nine pattern documents in this directory into one file.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/patterns/implementation-defaults.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Implementation Defaults — Self-Made DesignOps">
+<meta property="og:description" content="This page collects the &amp;quot;implementation defaults&amp;quot; sections of the nine pattern documents in this directory into one file.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/patterns/implementation-defaults.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Implementation Defaults — Self-Made DesignOps">
+<meta name="twitter:description" content="This page collects the &amp;quot;implementation defaults&amp;quot; sections of the nine pattern documents in this directory into one file.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Implementation Defaults",
+ "description": "This page collects the &quot;implementation defaults&quot; sections of the nine pattern documents in this directory into one file.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/patterns/implementation-defaults.html",
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-23",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#contents">Contents</a></li><li><a href="#typography">Typography</a></li><li><a href="#color">Color</a></li><li><a href="#button">Button</a></li><li><a href="#form">Form</a></li><li><a href="#motion">Motion</a></li><li><a href="#modal">Modal</a></li><li><a href="#table">Table</a></li><li><a href="#navigation">Navigation</a></li><li><a href="#feedback">Feedback</a></li></ul>
+  </div>
+  <div class="railfoot">Cross-system comparison<br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/patterns/implementation-defaults.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../#patterns">Pattern axes</a><span class="sep">/</span><span>Implementation Defaults</span></nav>
+    <h1>Implementation Defaults</h1>
+<h1 id="implementation-defaults">Implementation Defaults</h1>
+<p>This page collects the &quot;implementation defaults&quot; sections of the nine pattern documents in this directory into one file.</p>
+<p><strong>Regenerated 2026-08-18, after the re-synthesis.</strong> All seven measurable axes were re-synthesised against the component-level measurements now held for 68–83 systems — <strong>Button 77 · Form 78 · Modal 79 · Motion 83 · Color 79 · Typography 68 · Table 6</strong>. Everything below reflects that re-synthesis rather than the earlier small-sample reading: desktop-web control height is <strong>40px</strong>, not 36px; modal entry scale clusters at <strong>0.8</strong>, not 0.95; web modal radius is <strong>not</strong> concentrated at 8–12px; centred modals <strong>do</strong> travel in most systems; three duration steps, not five, are the sample mode; and colour state handling splits <strong>six</strong> ways, not four. Navigation and Feedback are carried over unchanged — this round of deepening added no new samples on those two axes.</p>
+<p><strong>This page is the conclusions, not the evidence.</strong> The distributions, the per-system tables and the corrections that produced these numbers live in the individual pattern documents, and each section links to its source. Where the two disagree, the pattern document is authoritative.</p>
+<h2 id="contents">Contents</h2>
+<ul class="md-list"><li><a href="#typography">Typography</a></li><li><a href="#color">Color</a></li><li><a href="#button">Button</a></li><li><a href="#form">Form</a></li><li><a href="#motion">Motion</a></li><li><a href="#modal">Modal</a></li><li><a href="#table">Table</a></li><li><a href="#navigation">Navigation</a></li><li><a href="#feedback">Feedback</a></li></ul>
+<h2 id="typography">Typography</h2>
+<p>Source: <a href="typography.md">typography.md</a></p>
+<p><strong>Body size — it splits by platform. It cannot be unified.</strong></p>
+<pre class="md-code"><code>Automotive  24  (Android Automotive minimum. Cannot go below this)
+iOS         17  (Apple Body)
+Web         16  (majority) or 14 (dense admin screens)</code></pre>
+<p>Set <strong>16 as the web baseline, 14 where density is needed</strong>, and keep iOS and automotive separate.</p>
+<p><strong>The 14px camp is the largest in the sample — 13 systems</strong> (corrected 2026-08-18; the previous edition said 7). Ant Design · Material 3 (Body Medium) · Helios · Evergreen · Seed · Atlassian · shadcn/ui · Ring UI · Siemens iX · Serendie (compact) · Vibes · Naive UI · PrimeVue. <strong>It is the admin-screen and enterprise cluster with three more Greater China samples added</strong> (see the body-size section of <code>typography.md</code>).</p>
+<p><strong>Distinguish the token default from the values components actually use.</strong> shadcn/ui's token is 16px while its components are all 14px. If this mismatch goes undocumented, implementations drift. <strong>The 68-system sample strengthened the basis for this recommendation</strong> — eight systems set control type smaller than body (Bolt 12.8 · Evergreen 12 · Clarity 12 · Charcoal 14 …) and four set it larger. <strong>&quot;Body = control&quot; is not a convention.</strong></p>
+<p><strong>Consider raising only input fields to 16px on mobile</strong> (expanded 2026-08-18). It blocks iOS Safari's automatic zoom, and <strong>it is not a shadcn/ui idiosyncrasy but a problem seven systems address in common</strong> — Bolt (global enforcement) · Nord (<code>≤480px</code> promotion) · Strapi (responsive token) · Priceline (responsive array) · Orbit (input type larger than body, at 16px) · Stacks (<code>@supports</code> iOS branch) · <strong>Charcoal</strong> (renders at 16px, then counter-corrects with <code>scale(0.875)</code>). The comparison of approaches is in <code>form.md</code>.</p>
+<p><strong>Letter spacing — split it by platform.</strong></p>
+<pre class="md-code"><code>iOS       positive at large sizes / negative in the middle   (Apple curve)
+Android   increasingly positive as sizes get smaller          (Material curve)
+Web       0, or a slight negative only on large headings      (Pajamas -0.01em approach)</code></pre>
+<p><strong>A single unified value will be wrong on both iOS and Android.</strong> This is fact, not taste.</p>
+<p><code>em</code> scales with size and <code>px</code> does not. <strong><code>em</code> is recommended</strong> — with fixed px, as in Evergreen, letter spacing becomes relatively tighter on large headings.</p>
+<p><strong>Decide whether letter spacing lives in the size tokens or stands as an independent utility, as in Tailwind.</strong> Independent utilities compose freely, but <strong>letter spacing does not follow when you change the size.</strong> Building it into the scale is consistent, but exceptions require overrides.</p>
+<p><strong>Having no letter-spacing tokens at all is also an option</strong> — Atlassian and Mantine do this. It means trusting the typeface's default spacing, and it is not a fringe position in the sample.</p>
+<p><strong>Number of steps</strong></p>
+<pre class="md-code"><code>Start with 6–8 steps</code></pre>
+<p>Protocol runs 8 heading steps, Evergreen and Radix Themes run 8–9. Mantine is body 5 + heading 6.</p>
+<p><strong>The 10–16px band needs only 3 steps: <code>12 · 14 · 16</code>.</strong> All four frameworks do exactly that, without exception, and none of them define 11, 13 or 15px.</p>
+<p>To go in 1px increments like Seed Design (18 steps), you need a case <strong>where glyph density is high enough — Korean and CJK — that a 1px difference is actually visible.</strong> Otherwise you are only adding decision cost.</p>
+<p><strong>Line height</strong></p>
+<pre class="md-code"><code>Ratio 1.25–1.5  (headings 1.25, body 1.5)</code></pre>
+<p>Pajamas unifies every heading at 1.25. It is easier to manage than fixed px per size.</p>
+<p><strong>If you use ratios, reduce them as size grows.</strong> Four of the five samples run in the decreasing direction (only Mantine increases). Large type has enough absolute spacing even at a small ratio.</p>
+<p><strong>Check how your controls get their height before you settle line height</strong> (added 2026-08-18). In systems that never declare a height, <strong>line height is a layout value, not a typographic one</strong> — SGDS lets a body line height of 2.0 govern the entire button and input height ladder, and MUI's unitless 1.75 lands button height on a fractional 36.5px. The opposite extreme is <strong>the camp that kills line height to 1 and relies on padding alone</strong> (Asphalt is 1.618 for body but 1 for buttons; Origami sets <code>line-height = font-size</code>). <strong>If you want control heights to stay integers, fix line height in px or derive it from the height</strong> — Shoelace, Vibes and Garden do it with <code>calc(height − border)</code>.</p>
+<p><strong>If you use fixed px, consider aligning to a 4px grid</strong> (the Atlassian approach). The ratios wobble between 1.125 and 1.429, but the absolute value is always a multiple of 4, which keeps layout math simple.</p>
+<p>That said, <strong>Apple and Material use fixed px per size, so when porting their specs, use the values as given rather than converting to ratios</strong> — the mismatch shows up at small sizes in particular (Apple Caption 2 is 11px with a 13px line height = 1.18).</p>
+<p><strong>Decide whether body and heading line heights are separate.</strong> Radix Themes tightens headings by 2px only at the small steps (14–20px). At 24px and above the values are identical — <strong>the band where the split is needed is narrow.</strong></p>
+<p><strong>Weight</strong></p>
+<pre class="md-code"><code>400 (body) · 500 (emphasis) · 600–700 (headings)</code></pre>
+<p><strong>Unifying heading weight to a single value is a common choice in the sample</strong> (Pajamas 600 · Atlassian 653 · Mantine 700). But <strong>the values have not converged</strong> — your team has to pick.</p>
+<p><strong>Start control weight at 500</strong> (added 2026-08-18). 500 is the majority across the 68 systems, with the extremes at 400 (10 systems) and 800 (PIE · Unify, 2 systems). <strong>Bold controls (700) are not a fringe position at 16 systems</strong>, so do not assume &quot;buttons are medium&quot; — <strong>body size with bold laid on top</strong> (16px/700) recurs in Backpack · Codex · Gestalt · Pharos · Thumbprint · 디지털청.</p>
+<p><strong>Decide control weight together with the body hierarchy.</strong> Stacks inverts the majority with <strong>buttons 400 · labels 700</strong>, Paste is buttons 600 / inputs 500, and Grommet sets only the input value to 600. <strong>Once controls disagree on weight within a single system, weight stops working as a hierarchy signal.</strong></p>
+<p><strong>In a two-weight (400/700) system, which side the button lands on decides the impression.</strong> All four CJK samples (KRDS · 디지털청 · Charcoal · Serendie) are two-weight, and <strong>only Serendie puts buttons at 400.</strong></p>
+<p><strong>Do not define all 9 steps (100–900).</strong> Only Tailwind does, and unless the face is variable, most of those steps have no actual font file behind them.</p>
+<p><strong>If you use fluid type (<code>clamp()</code>), keep fixed variants alongside it.</strong> That is why Pajamas pairs every step with a <code>-fixed</code> counterpart — there are places, like tables and code blocks, where size must not move. <strong>Porsche solves the same problem by size band</strong> — 2xs–sm (12 · 14 · 16px) are static and only md and above are fluid. <strong>Keeping the body and control band out of the fluid range is easier to manage</strong> (added 2026-08-18).</p>
+<p><strong>There are four ways to do fluid type</strong> (added 2026-08-18).</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Approach</th><th>Example</th><th>Consequence</th></tr></thead><tbody><tr><td><code>clamp()</code></td><td>Pajamas · Seed Design · Porsche</td><td>Size alone is continuous</td></tr><tr><td><code>calc()</code> linear interpolation + media-query bounds</td><td><strong>Fleet</strong></td><td>The pre-<code>clamp()</code> generation. Same result, longer expressions</td></tr><tr><td><strong>Responsive root font</strong></td><td><strong>Audi</strong> (16→18→20px)</td><td><strong>Every component dimension moves with it</strong> — buttons 51→57→63px</td></tr><tr><td>Breakpoint functions</td><td>Strapi · Priceline · Mística · DSFR · Nord</td><td>Stepped</td></tr></tbody></table></div>
+<p><strong>If you pick a responsive root, know that it is a layout decision, not a typographic one.</strong> In Audi, the rem-type + em-padding combination means a root change pushes control heights up too.</p>
+<p><strong>To support OS accessibility scaling, one option is to bound it inside <code>clamp()</code></strong> — Seed Design wraps every typography token as <code>clamp(static × 0.8, computed × scale, static × 1.5)</code>.</p>
+<p><strong>If you use a runtime scale factor (<code>calc(1rem * var(--scale))</code>), document the baseline factor.</strong> Mantine's and Radix Themes' values assume a 100% factor. Radix Themes moves between 90% and 110%, so <code>--font-size-3</code> runs 14.4–17.6px.</p>
+<p><strong>Multilingual support</strong></p>
+<p><strong>Decide early whether to keep per-language font slots.</strong> shadcn/ui keeps <code>--font-ar</code> and <code>--font-he</code>. RTL is not only a direction problem — it is <strong>a typeface problem.</strong></p>
+<blockquote><p><strong>Correction (2026-08-18).</strong> Both &quot;no system in the sample keeps CJK font slots&quot; and &quot;shadcn/ui is the only one&quot; are <strong>disproved.</strong> <strong>LINE</strong> makes language a <strong>first-class axis of the token name</strong> (<code>$ldsg-en-title-xxl-200</code> — language EN/JP/TC/TH × type × size × weight), and on the LDSM side the scale carries a <strong>per-language typeface mapping</strong> (iOS SF Pro · JP Hiragino · ZH PingFang · TH Thonburi · KO Apple SD Gothic Neo). <strong>Vibe</strong> names Hebrew, Arabic and Japanese fonts in its default stack, and <strong>Charcoal</strong> designates a CJK-only open-source face (Sarasa UI J) as its system font.</p></blockquote>
+<p><strong>The question is which of three layers handles it</strong> (organised 2026-08-18).</p>
+<pre class="md-code"><code>Token name axis   LINE (language × type × size × weight)          — total; token count multiplies by language
+Font slot         shadcn/ui (--font-ar/-he) · Charcoal            — swap a single value
+Font stack        Vibe · Vibes (Japanese names dual-listed)       — no tokens; handled by the fallback chain
+Selector branch   Rakuten (:lang(en)/:lang(ja) line height)       — when only line height differs, not size</code></pre>
+<p><strong>If you handle CJK, check line height first.</strong> It <strong>breaks before size does</strong> (14 vs 16 vs 17) — Rakuten splits the same style into <code>:lang(en)</code> 1.444 / <code>:lang(ja)</code> 1.333, and Serendie divides by role at labels 1.0 / body 1.6.</p>
+<p><strong>If you deal with Japanese typesetting, consider putting <code>text-spacing-trim</code> in your reset</strong> — SmartHR sets <code>space-all</code> in its preflight base (avoiding Windows Yu Gothic's over-aggressive punctuation compression). <strong>SmartHR is the sample where a CJK typesetting property made it into the system reset CSS.</strong></p>
+<p><strong>For Arabic and RTL, still no rule beyond the font slot has been confirmed</strong> — every observed per-language line-height and letter-spacing rule comes from <strong>CJK samples.</strong> Body size splits too — read <code>i18n/README.md</code> alongside this.</p>
+<h2 id="color">Color</h2>
+<p>Source: <a href="color.md">color.md</a></p>
+<p><strong>Layers</strong> — start with 2 layers.</p>
+<pre class="md-code"><code>scale/     primitive colors (gray-100 … gray-900)
+semantic/  purpose (text-primary · surface · border · danger …)</code></pre>
+<p><strong>Do not skip the semantic layer.</strong> Tailwind is the only case with primitives alone, and the price is that <strong>adding a high-contrast theme becomes nearly impossible.</strong> Once <code>bg-gray-100</code> is hardcoded throughout the codebase, there is no midpoint left to change later.</p>
+<p>shadcn/ui's structure is how you layer semantics on top of Tailwind — it inserts one step: <code>--primary</code> → <code>--color-primary</code> → <code>bg-primary</code>.</p>
+<p>Add a third layer like Seed Design's <code>static</code> only when values appear that are genuinely neither primitive nor semantic.</p>
+<p><strong>Use background/foreground pairing rules.</strong> Material 3 (<code>On Primary</code>) and shadcn/ui (<code>-foreground</code>) share the same structure. It <strong>guarantees contrast by pairing rather than by checking ratio values</strong>, and the token name answers &quot;which text color goes on this background&quot; for you.</p>
+<p><strong>Keep a primary-color alias.</strong> Like Mantine's <code>--mantine-primary-color-*</code> and Radix Themes' <code>--accent-*</code>, it is a layer you can swap in one place. Changing the brand color becomes a one-line token edit.</p>
+<p><strong>State handling</strong> — pick one of <strong>six approaches</strong> early (corrected 2026-08-18; the previous edition listed four). Changing later is very expensive.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Approach</th><th>Example</th><th>Trade-off</th></tr></thead><tbody><tr><td>State layer tokens</td><td>Material 3 · <strong>Vapor</strong> · <strong>Vuetify</strong></td><td>Free composition. 4x the token count</td></tr><tr><td><strong>Intensity × state combinations</strong></td><td><strong>Atlassian</strong> · <strong>EUI</strong> · <strong>Charcoal</strong></td><td>Explicit. 12 per color (4 intensities × 3 states)</td></tr><tr><td>State baked into color names</td><td>Orbit · Mantine · <strong>LINE</strong> (<code>p</code> suffix)</td><td>Intuitive. Each new color adds 10 more</td></tr><tr><td><strong>Alpha at the point of use</strong></td><td><strong>shadcn/ui</strong> (<code>bg-primary/90</code>) · <strong>Yoga</strong></td><td>Zero tokens. <strong>Mismatch with design tools</strong></td></tr><tr><td><strong>Build-time functions</strong></td><td><strong>bf-solid</strong> (<code>darken()</code>) · <strong>SmartHR</strong> · Stacks · Origami</td><td>Zero tokens, fixed results. <strong>No per-state exceptions possible</strong></td></tr><tr><td><strong>Runtime CSS functions</strong></td><td><strong>PIE</strong> · <strong>PrimeVue</strong> (<code>color-mix()</code>) · <strong>Blueprint</strong> (<code>oklch(from …)</code>)</td><td>Follows theme swaps automatically. <strong>Needs a fallback</strong></td></tr></tbody></table></div>
+<blockquote><p><strong>Correction (2026-08-18).</strong> The old four-approach table <strong>left out the camp that derives colors through functions.</strong> Across 79 systems, 5 build-time function cases and 6 or more runtime CSS function cases are confirmed. <strong>Skeleton goes further still, defining no state colors at all and handling them with a <code>brightness()</code> filter</strong> — it has zero per-variant hover color tokens.</p></blockquote>
+<p><strong>The <code>bg-primary/90</code> approach is the cheapest, but Figma has no corresponding variable.</strong> If design-code parity matters, precompute the alphas into tokens like Radix Themes (that comes to 24 per color).</p>
+<p><strong>Every function camp — build-time, runtime and filter — pays the same price:</strong> hover and press colors do not exist as tokens, so there is nothing to carry into a design tool, and &quot;give this one variant a different hover&quot; is impossible. <strong>Recommended only when you have a single brand and few variants.</strong></p>
+<p><strong>Status color range</strong> — the sample splits widely.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>System</th><th>Status colors</th></tr></thead><tbody><tr><td><strong>Atlassian</strong></td><td>danger · warning · success · <strong>discovery</strong> · information (10 each)</td></tr><tr><td>Evergreen</td><td>success · warning · danger · none</td></tr><tr><td><strong>shadcn/ui</strong></td><td><strong><code>destructive</code> only</strong></td></tr></tbody></table></div>
+<p><strong>Not having <code>success</code> and <code>warning</code> is a real choice that exists in practice</strong> (shadcn/ui). But adding them later is hard without a semantic layer.</p>
+<p><strong>Start with at least 4 (danger · warning · success · info)</strong>, and if you have a slot like &quot;new feature announcements&quot;, look at Atlassian's <code>discovery</code>. <strong>The 79-system sample keeps this recommendation intact</strong> — at the far end, <strong>PrimeVue ships 9</strong> (primary · secondary · success · info · warn · <strong>help</strong> · danger · contrast and so on) and <strong>Vapor ships 6</strong>. Slots that carry domain vocabulary, like <code>help</code>, differ by system, so <strong>laying down the 4 first and adding domain colors afterwards is the safe order.</strong></p>
+<p><strong>Note the cases where the domain rewrites the status vocabulary.</strong> <strong>Astro</strong> works in the operations domain, so <code>standby</code> and <code>off</code> are first-class status colors; <strong>Vitamin</strong> is commerce, so <code>conversion</code> (purchase conversion only) appears in variant names; and <strong>Kaizen</strong> keeps a <code>caution</code> field state as a warning tier short of error, plus a separate <code>pending</code> color for loading. <strong>There are real points where the success/warning/error trichotomy runs out for a domain.</strong></p>
+<p><strong>Dark mode</strong> — separate theme files or a CSS class override are recommended.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Approach</th><th>Systems</th><th>Fits when</th></tr></thead><tbody><tr><td>Separate theme files</td><td>Atlassian · Material 3 · Pajamas · <strong>Clarity</strong> · <strong>Codex</strong></td><td>3 or more themes</td></tr><tr><td>CSS class (<code>.dark</code>)</td><td>shadcn/ui · Radix Themes · <strong>Vibe</strong> · <strong>Ring UI</strong></td><td>Just light/dark</td></tr><tr><td><strong><code>light-dark()</code> in one line</strong></td><td><strong>Porsche</strong> · <strong>PrimeVue</strong></td><td>When you want both values in one place</td></tr></tbody></table></div>
+<p>The visionOS-style &quot;two values in one token&quot; is awkward to parse and to integrate with tooling. <strong>Grommet's per-color <code>{dark, light}</code> object pairs sit in the same slot</strong>, but application depends on background context (a <code>Box</code>'s <code>dark</code> prop), which makes debugging a different proposition from the theme-swap camp (added 2026-08-18).</p>
+<p><strong>Two of the 79 systems adopted <code>light-dark()</code></strong> — it halves the declaration count and needs no class toggle, but <strong>extracting per-mode values with tooling requires parsing.</strong> PrimeVue mixes <code>color-mix()</code> into the same value on top of that, effectively giving up on static extraction.</p>
+<p><strong>Consider switching borders to alpha in dark mode</strong> (the shadcn/ui approach). When surfaces come in multiple steps, borders adapt to each surface — <code>oklch(1 0 0 / 10%)</code> works on any dark surface.</p>
+<p><strong>High contrast</strong> — you do not need it from day one, but <strong>with a semantic layer it is easy to add later, and without one it is nearly impossible.</strong> This is the practical reason the semantic layer exists.</p>
+<p>None of the four frameworks provide high contrast, so <strong>if you build on a framework, you must build high contrast yourself.</strong> The structure that is easiest to maintain is Atlassian's — a file with <strong>the same token set as the regular theme, differing only in values</strong>. <strong>KRDS uses the same structure</strong> (<code>mode-high-contrast</code>, 190 tokens = the same count as light; added 2026-08-18).</p>
+<p><strong>If setting the values yourself is hard, you can hand the job to the OS</strong> (added 2026-08-18). Clarity switches to <strong>CSS system color keywords</strong> like <code>Canvas</code> and <code>CanvasText</code> in its high-contrast theme, and Carbon writes <code>ButtonBorder</code> directly into component source. You avoid building another full palette, but you give up design control.</p>
+<p><strong>If you draw borders with inset box-shadow, add a <code>forced-colors</code> countermeasure alongside.</strong> In forced-color modes the shadow vanishes and the element's outline disappears entirely. Four means are confirmed — restoring a real border (<strong>Pajamas</strong> · <strong>DSFR</strong>) · pre-laying a transparent outline (<strong>Stacks</strong>) · a double border in the background color (<strong>디지털청</strong>) · showing an outline only in this mode (<strong>Porsche</strong>).</p>
+<p><strong>Color vision deficiency is a separate axis from high contrast.</strong> Only two cases are confirmed at the token layer (Primer's colorblind variant · <strong>Unify</strong>'s three separate deuteranopia/protanopia/tritanopia <strong>CSS files</strong>), and <strong>Unify is the only one that splits by type.</strong> If you plan to build it yourself, decide <strong>whether to separate red-green from blue-yellow</strong> before assuming &quot;one colorblind set.&quot;</p>
+<p><strong>Color space</strong> — consider <code>oklch()</code>.</p>
+<pre class="md-code"><code class="language-css">--primary: oklch(0.577 0.245 27.325);   /* lightness chroma hue */</code></pre>
+<p>Adjusting only lightness becomes a one-digit edit. With hex you must recompute all 3 channels. Only shadcn/ui uses it in the sample, but browser support is sufficient.</p>
+<p><strong>Add a P3 fallback palette only when needed.</strong> Radix Themes is the only case, and it grows to 1,579 declarations. Wrapped in <code>@supports</code>, the fallback is automatic.</p>
+<p><strong>Scrim</strong> — decide the color and the opacity separately (added 2026-08-18).</p>
+<pre class="md-code"><code>Opacity   start near 0.5          (the modal band across 79 systems — but the axis spans 0.1–0.9, so there is no standard value)
+Color     ink or navy, not pure black   (nearly half the sample uses a chromatic tint)</code></pre>
+<p><strong>Setting only the opacity and leaving the color black puts you at odds with the sample majority.</strong> EUI and Evergreen arrived independently at the same blue-gray at 70%, and eBay · Vibe · Paste · NYSDS · Yoga each use their own ink. <strong>A dark value from the same family as the background surface</strong> sits better than black.</p>
+<p><strong>If you use a light scrim, add blur with it.</strong> Three of the five inverted samples (Cedar · Park UI · shadcn/ui Drawer) pair it with <code>backdrop-filter</code> — a light scrim alone does not separate the background.</p>
+<p><strong>Decide early whether opacity differs between light and dark.</strong> Ring UI (0.4/0.7) and Braid (0.4/0.6) go heavier in dark. You can also expose it as three semantic steps (Priceline dark/medium/light). The modal-side value comparison is in <code>modal.md</code>.</p>
+<p><strong>disabled</strong> — the majority convention is a single opacity value rather than a color (added 2026-08-18).</p>
+<pre class="md-code"><code>Start at 0.35–0.4   (Astro · Atlassian 0.4 · Vitamin · Vibe 0.38 — near the sample median)</code></pre>
+<p><strong>Across the 79 systems the axis spans 0.26 (Vuetify) to 0.5 (shadcn/ui · Shoelace · HeroUI · Naive UI), close to a factor of two</strong> — do not port another system's value directly. <strong>Tying it to the scrim opacity as Vapor does</strong> collapses the attenuation constant to one value and simplifies maintenance (0.32).</p>
+<p><strong>Expressing disabled through opacity alone also destroys text contrast.</strong> No system in the sample manages this as a value, so <strong>you must check it yourself.</strong> Cases that pair it with a non-color cue are worth referencing — Welcome UI (diagonal hatching) · Vibes (background swap + <code>not-allowed</code> cursor).</p>
+<p><strong>Focus ring color</strong> — do not default to the brand color; <strong>check for palette collisions first</strong> (added 2026-08-18).</p>
+<pre class="md-code"><code>Simple color system     brand color as-is       (Naive UI · Strapi · Welcome UI)
+Many status colors      a dedicated color outside the palette   (Astro pale purple · Grommet neon mint · Asphalt blue)
+Varied backgrounds      an achromatic double ring   (Italia · Canvas · Odyssey · WMN · Vibes 3 layers)</code></pre>
+<p><strong>The more of the color wheel a system's grade and status colors already occupy, the further the focus color moves outside the palette.</strong> Astro picking a pale purple to dodge 6 grades plus 6 status colors is the clearest case.</p>
+<p><strong>If you plan to support both dark and light surfaces, use a double ring with a white gap.</strong> A single ring color will always disappear on one side. <strong>Extracting the ring as a component, as Vibes does,</strong> lets you apply the same spec to elements beyond buttons.</p>
+<p><strong>Do not leave the focus color outside the token layer</strong> — Vibe defines 919 CSS variables and still hardcodes the focus ring color as a literal, so it drops out of theme swaps.</p>
+<p><strong>Chart colors</strong> — decide by category count.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th style="text-align:center">Categories</th><th>Approach</th><th>Example</th></tr></thead><tbody><tr><td style="text-align:center">~5</td><td>Single-hue lightness ramp</td><td>shadcn/ui (<code>blue</code> 300–800)</td></tr><tr><td style="text-align:center">6+</td><td>Hue differentiation + prescribed usage order</td><td>Atlassian (<code>categorical</code> 16)</td></tr></tbody></table></div>
+<p><strong>Lightness ramps hold up better for color vision deficiency.</strong> If you never plan to exceed 5, this side is recommended. If you differentiate by hue, <strong>tokenize the usage order too</strong> — otherwise every chart will order its colors differently.</p>
+<p><strong>Dedicated series for layout regions</strong> — if you have regions with a clearly distinct tone, like a sidebar or code blocks, consider a dedicated series as shadcn/ui does. It is more explicit than overriding semantic tokens.</p>
+<h2 id="button">Button</h2>
+<p>Source: <a href="button.md">button.md</a></p>
+<p><strong>Height</strong> — it splits by platform. It cannot be unified into one value.</p>
+<pre class="md-code"><code>Mobile/touch       48    (Material 48dp · Apple 48pt · 2nd most common across 77 systems, ~8)
+Desktop web        40    (most common across 77 systems, ~14)
+Desktop dense      32    (Codex · Pajamas · Semi · Vapor defaults · Ant · Orbit · Radix size 2)
+Text button        36    (Apple baseline)</code></pre>
+<p><strong>Start desktop web at 40px</strong> (corrected 2026-08-18). The previous edition recommended 36px, but that was a value on which two frameworks — Mantine and shadcn/ui — happened to agree. <strong>Across 77 systems the mode is 40px</strong> and 36px ranks third. Even the mode covers only about 23%, so <strong>do not take it as a &quot;standard height&quot;; pick to match your density requirement.</strong></p>
+<p>Only the iOS top toolbar allows 44pt; <strong>for touch environments, use 48</strong> — the value where both OSes meet.</p>
+<p><strong>Start with 4 size steps.</strong> Of the three frameworks, two have 4 steps and one has 5. An 8px arithmetic increment (Radix Themes) is the easiest to manage — it reuses the spacing tokens directly.</p>
+<p><strong>If you plan to support touch, put the largest step at 48 or above.</strong> shadcn/ui tops out at 40px, so no step of it can produce 48.</p>
+<p><strong>Border radius</strong> — set it equal to or smaller than the container's radius. Making buttons rounder than their container, as Cloudscape does, must be a deliberate choice.</p>
+<p><strong>Decide whether radius changes per size.</strong> shadcn/ui uses the same 8px at every size, so small buttons look relatively rounder. To scale with size, one approach is <code>em</code>-based, as in Radix Themes (<code>calc(0.35em * var(--radius-factor))</code>).</p>
+<p><strong>Padding</strong> — the shadcn/ui ratio is the reference.</p>
+<pre class="md-code"><code>height 24 → horizontal  8
+height 32 → horizontal 12
+height 36 → horizontal 16
+height 40 → horizontal 24</code></pre>
+<p><strong>It grows faster than height</strong> (height 1.67x / padding 3x). If you want separate vertical padding, Cloudscape's 4px is the only confirmed case.</p>
+<p><strong>When an icon is present, reduce horizontal padding by 2–8px and set an icon-label <code>gap</code> of 4–8px.</strong> CSS <code>:has()</code> can automate this, but it cannot be expressed as tokens, so it belongs in the component implementation.</p>
+<p><strong>Provide a square icon-only variant at every size step.</strong> shadcn/ui has one at all 4 steps. Use the height as the width (<code>size-9</code> = 36×36).</p>
+<p><strong>States</strong> — the minimum set is this.</p>
+<pre class="md-code"><code>default · hover(web/spatial) · pressed · selected · disabled · focus-visible</code></pre>
+<p><strong>If you plan to support spatial UI (visionOS), do not drop <code>hover</code>.</strong> Built touch-only, the gaze-input stage ends up empty.</p>
+<p><strong>Hook the error state on <code>aria-invalid</code></strong> (the shadcn/ui approach). A separate <code>error</code> prop lets the accessibility attribute and the visual state drift apart.</p>
+<p><strong>Name your emphasis states up front.</strong> Apple alone uses three — <code>Selected</code>, <code>Tinted</code>, <code>Preferred</code> — differently depending on the container. If names diverge within one system, implementations drift.</p>
+<p><strong>Focus ring</strong></p>
+<pre class="md-code"><code>2px, offset 0–2px</code></pre>
+<p>The sample majority is 2px. shadcn/ui's 3px is the only thick value in the sample, and it is not even consistent within its own system (only the Dialog close button gets 2px). <strong>Pick a thickness and offset once and use them across all components.</strong></p>
+<p>Expressing focus through border width (Atlassian) has the advantage of not shifting layout, but it cannot be used on borderless variants (<code>ghost</code>, <code>link</code>).</p>
+<p><strong>State transition durations</strong> — Atlassian is the only evidence.</p>
+<pre class="md-code"><code>button hover/pressed   150ms
+list item hover         50ms</code></pre>
+<p><strong>List items are 3x faster than buttons.</strong> Even within the same <code>listitem</code>, hover (50ms) differs from pressed/selected (100ms).</p>
+<p>The number of transitioned properties differs too — <code>listitem</code> has 4 (background, border, text color, underline color), <code>button</code> has 2 (background, border).</p>
+<p>The full cross-system motion comparison is in <code>motion.md</code>.</p>
+<h2 id="form">Form</h2>
+<p>Source: <a href="form.md">form.md</a></p>
+<p><strong>Input height — use the same scale as buttons.</strong></p>
+<pre class="md-code"><code>Desktop web    40  (most common across 78 systems — the same value as buttons. Corrected from 36px in the previous edition)
+Dense screens  32  (Codex · Pajamas · Semi · Vapor defaults · Ant · Radix size 2)
+Touch          48  or more (Braid uses its 48px touch-target token as the single source of control height)</code></pre>
+<p><strong>Giving buttons and inputs the same value is the majority convention</strong> — about 30 of the 78 systems share a height ladder (see the re-synthesis section of <code>form.md</code>).</p>
+<p><strong>A structure where Button, Input, and Section share the same height variable, as in Mantine, is recommended.</strong> Radix Themes has a 48px step only on Button, so things break at <code>size=&amp;quot;4&amp;quot;</code> — <strong>giving components different step counts causes accidents in composition.</strong></p>
+<p><strong>Decide early whether inputs get size variants.</strong> shadcn/ui keeps Input at a single 36px while Button has 4 steps. Sizes cannot be matched within the same form.</p>
+<p><strong>Padding</strong></p>
+<pre class="md-code"><code>horizontal 12  vertical 4–8   (at height 36)</code></pre>
+<p><strong>Decide whether border width is subtracted from padding.</strong> Radix Themes subtracts it (<code>calc(var(--space-2) - 1px)</code>). Visual spacing becomes uniform but the math multiplies. Keeping <code>box-sizing: border-box</code> with constant padding is simpler.</p>
+<p><strong>Decide whether vertical text alignment is done with <code>line-height</code> or <code>padding</code>.</strong> Mantine handles it with <code>line-height: calc(height - 2px)</code> — it follows automatically when the height changes.</p>
+<p><strong>Checkbox</strong></p>
+<pre class="md-code"><code>16px  (indicator 10–14px)</code></pre>
+<p><strong>Three systems meet at 16px.</strong> If you add size variants, the Radix Themes approach — multiplying <code>--space-4</code> by a factor (0.875 / 1 / 1.25) — stays aligned with the spacing scale.</p>
+<p><strong>Make the radius proportional to the size.</strong> An 8px radius on a 16px element approaches a semicircle. This is why shadcn/ui uses a literal <code>4px</code> in this one spot — <strong>with a proportional rule, no exception is needed</strong> (the Radix Themes way: <code>calc(var(--radius-1) * 0.875)</code>).</p>
+<p><strong>Error state — use <code>aria-invalid</code> as the hook</strong> (the shadcn/ui approach). The accessibility attribute and the visual state cannot drift apart.</p>
+<p><strong>But if you need a <code>success</code> state, define a separate token.</strong> Mantine is the only case with <code>--mantine-color-success</code>, and shadcn/ui has no token to express it.</p>
+<p><strong>Focus indication — draw a ring.</strong></p>
+<pre class="md-code"><code>2px ring + border color change</code></pre>
+<p><strong>Changing only the border color, as Mantine and Radix Themes do, is less visible against low-contrast backgrounds.</strong> shadcn/ui's 3px is the thickest in the sample; 2px is the majority.</p>
+<p><strong>Decide whether the focus color is decoupled from the accent color.</strong> Only Radix Themes keeps an independent <code>--focus-*</code> family — changing the brand color does not shake focus visibility along with it.</p>
+<p><strong>Cursor</strong></p>
+<pre class="md-code"><code>text input     text
+selectables    pointer  or  default
+disabled       not-allowed</code></pre>
+<p><strong>Whether checkboxes and switches get <code>pointer</code> is split.</strong> Radix Themes uses <code>default</code>, Mantine uses <code>pointer</code> on selectables. <strong>Decide once and apply it to every control.</strong></p>
+<p><strong>Select dropdown</strong></p>
+<pre class="md-code"><code>min width 128px
+item padding: left 8 / right 32 / vertical 6
+max height measured at runtime (relative to viewport)</code></pre>
+<p><strong>Do not make the max height a constant.</strong> It clips when the trigger sits near the bottom of the viewport. Using a runtime measurement, like Radix Primitives' <code>--radix-select-content-available-height</code>, is the only solution in the sample.</p>
+<p><strong>Reserve space for the check mark up front.</strong> That is the 32px right padding. If padding changes with selection state, items shift horizontally.</p>
+<h2 id="motion">Motion</h2>
+<p>Source: <a href="motion.md">motion.md</a></p>
+<p><strong>Durations — start with 5 steps.</strong></p>
+<pre class="md-code"><code>0     instant (accessibility mode)
+50    micro state transitions (list item hover)
+100   fast exit
+150   entrance (small elements) · default transition
+250   entrance (large regions · modals · panels)</code></pre>
+<p><strong>Three steps are also enough</strong> (corrected 2026-08-18). The previous edition recommended 5, but <strong>the mode across 83 systems is 3 steps</strong> (Orbit · Backpack · Nord · Pharos · Forma 36 · Strapi). Grow to 5 after your component count grows — even Atlassian (8 steps) and Clarity (9 steps) end up concentrating real usage in two or three values.</p>
+<p>The sample majority uses multiples of 50ms. <strong>But &quot;Cloudscape is the only exception&quot; is wrong</strong> (corrected 2026-08-18) — eBay (frame grid) · MUI 225/195 · Evergreen 80/240 · Braid 125/175 · Strapi 120/320 · Thumbprint 75 · Kaizen 201 all sit outside it too. <strong>If you break the multiple of 5, leave the reason in the value</strong> — eBay based its values on frame counts, and Kaizen embedded a browser-bug workaround rationale as a Jira number in a source comment.</p>
+<p><strong>Do not build 20 steps in a 50ms arithmetic series like Canvas.</strong> Unlike spacing, motion has few steps humans can distinguish — 150 vs 200ms is distinguishable, but there is rarely a reason to put a value between 150 and 200.</p>
+<p><strong>Define a <code>0ms</code> token.</strong> Accessibility mode needs something to reference. Six of the 83 systems have one — Atlassian · Cloudscape · Kaizen · Tegel · Clarity · Siemens iX. <strong>Putting <code>0ms</code> at step 1 of the scale (<code>short</code>) as Siemens iX does makes &quot;instant&quot; a design option</strong> — a different usage from keeping it purely as an accessibility value.</p>
+<p><strong>Make exits shorter than entrances.</strong></p>
+<pre class="md-code"><code>entrance 250 → exit 200
+entrance 150 → exit 100</code></pre>
+<p><strong>9 of Atlassian's 10 pairs differ by exactly 50ms.</strong> The single exception is <code>panel.content</code>, and even that has a clear intent — &quot;content disappears before its container.&quot;</p>
+<p><strong>But <code>-50ms</code> is Atlassian's internal rule, not the sample's</strong> (qualified 2026-08-18). Across 83 systems the asymmetry ratio spans 1.15x (MUI 225/195) to <strong>3.3x (Material Web 500/150)</strong>, and <strong>12 systems are symmetric</strong> (see the re-synthesis section of <code>modal.md</code>). <strong>Cap the ratio at 2:1</strong> — Park UI fossilised that value in its animation token names (<code>dialog-in</code> 400 / <code>dialog-out</code> 200).</p>
+<p><strong>Split entrance durations by element size.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Element</th><th style="text-align:center">Entrance</th></tr></thead><tbody><tr><td>Small and incidental (avatar · chip · popover)</td><td style="text-align:center"><strong>150ms</strong></td></tr><tr><td>Covers the screen or a large region (modal · panel · side nav · overlay)</td><td style="text-align:center"><strong>250ms</strong></td></tr></tbody></table></div>
+<p><strong>Easing — start with 4.</strong></p>
+<pre class="md-code"><code>entrance      ease-out family   cubic-bezier(0.4, 1, 0.6, 1)    enters decelerating
+exit          ease-in family    cubic-bezier(0.6, 0, 0.8, 0.6)  leaves accelerating
+large regions inout             cubic-bezier(0.4, 0, 0, 1)
+looping       linear</code></pre>
+<p><strong><code>out</code> for entrance, <code>in</code> for exit is the sample's baseline pattern.</strong> Atlassian holds this rule across 39 component tokens with only 2 exceptions (panels).</p>
+<p><strong>Pick one naming axis.</strong> The sample yielded six (expanded 2026-08-18).</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Axis</th><th>Example</th><th>Fits when</th></tr></thead><tbody><tr><td>Direction × intensity</td><td>Atlassian (<code>out.practical</code>)</td><td>Many components with clear entrance/exit</td></tr><tr><td>Purpose × character</td><td>Canvas (<code>quick.deceleration</code>)</td><td>You already use a primitive-semantic 2-layer setup</td></tr><tr><td>Expression</td><td>Cloudscape (<code>responsive</code> · <code>expressive</code>)</td><td>Designers pick tokens directly</td></tr><tr><td><strong>Actor</strong></td><td><strong>Codex (<code>system</code> · <code>user</code>)</strong></td><td><strong>When input responsiveness matters</strong></td></tr><tr><td><strong>Onomatopoeia</strong></td><td><strong>HSDS (<code>boop</code> · <code>bounce</code> · <code>elastic</code>)</strong></td><td>Consumer products where character matters more than the value</td></tr><tr><td><strong>Brand name</strong></td><td><strong>Tegel (<code>easing-scania</code>)</strong></td><td>When the signature curve is settled as a single one</td></tr></tbody></table></div>
+<p><strong>Codex's <code>system</code>/<code>user</code> split builds a practical axis with the fewest tokens</strong> — just 2.</p>
+<p><strong>Do not name a value as its opposite.</strong> In Porsche, <code>ease-in</code> is the <strong>decelerating</strong> curve and <code>ease-out</code> is the <strong>accelerating</strong> one — the result of naming them &quot;the curve used on entrance&quot; — and because that is the exact inverse of the CSS keywords, readers will get it wrong every time.</p>
+<p><strong>Do not ship 26 easings</strong> (added 2026-08-18). The bigger the catalogue, the lower the real usage rate — <strong>2 of Strapi's 26 are used</strong> (and a copy-paste error leaves all 7 <code>InOut</code> values identical to <code>Out</code> in the dist), <strong>3 of Stacks' 8</strong> (the <code>back</code> family is used 0 times). <strong>4–6 is the practical ceiling.</strong></p>
+<p><strong>Decide carefully whether to build <code>spring</code> out of <code>linear()</code>.</strong> Atlassian defines 65 stops and uses them in <strong>one place</strong> (<code>avatar.hovered</code>). Unless you have several call sites, the cost is high. <strong>If you render in JS, shipping the physics parameters directly is better</strong> — TDS (8 stiffness/damping presets) and Paste (<code>{ mass, tension, friction }</code>) do exactly that.</p>
+<p><strong>If you use overshoot, decide where it goes first.</strong> Across 83 systems, confirmed usage splits across five places — modal entrance (8 systems) · button press (Braid) · checkbox (Bolt) · toggle and tooltip (Helios) · avatar hover (Atlassian). <strong>Do not put it in the global easing set and use it anywhere</strong> — overshoot is a signal that says &quot;this matters,&quot; so it only works when the slots are few.</p>
+<p><strong>Declare transition properties explicitly.</strong></p>
+<pre class="md-code"><code>❌ transition: all 150ms
+✅ transition: background-color 150ms, border-color 150ms</code></pre>
+<p><code>all</code> animates layout properties too. <strong>Tokenize the property lists like Codex</strong>, or make them a field of a composite token like Atlassian, or at minimum spell them out in classes like shadcn/ui.</p>
+<p>Using only <code>transform</code> and <code>opacity</code> is the cheapest — no repaints.</p>
+<p><strong>Keyframe travel distances</strong></p>
+<pre class="md-code"><code>popover · tooltip   8px  + scale 0.95
+modal               scale 0.95 only (no travel)
+panel · side nav    100% (full width)
+flag (toast)        entrance 50% / exit 15%</code></pre>
+<p><strong>Consider different travel distances for entrance and exit.</strong> Atlassian uses entrance 50% / exit 15% — things come in from farther away. <strong>Priceline applies the same rule to modals</strong> — entrance <code>y 64→0</code>, exit <code>y 0→32</code>, so it drops away over half the distance it arrived from.</p>
+<p><strong>The 8px for popovers and tooltips holds</strong> (Atlassian · shadcn/ui; only Radix Themes uses 4px). <strong>Modals are an order of magnitude away</strong> (corrected 2026-08-18) — across 83 systems modal travel spans <code>-10px</code> (Nord) to <code>25vh</code> (Porsche), and <strong><code>-50px</code> (the Bootstrap lineage) and <code>64px</code> (Park UI · Priceline) are the common values.</strong> Apply 8px to a modal and the movement is invisible.</p>
+<p><strong>Accessibility — handle it at the token level.</strong></p>
+<p>The Cloudscape approach is the safest — <strong>keep a <code>disabled: 0ms</code> value alongside each duration token and switch by mode.</strong> You avoid repeating the media query in every component.</p>
+<pre class="md-code"><code class="language-json">&quot;duration-short&quot;: { &quot;default&quot;: &quot;150ms&quot;, &quot;disabled&quot;: &quot;0ms&quot; }</code></pre>
+<p><strong>Leave easings and keyframes untouched; only zero out the duration.</strong> Cloudscape does exactly that — at <code>0ms</code> every easing produces the same result, so there is no need to maintain two sets.</p>
+<p><strong>But loop animations cannot be zeroed</strong> (added 2026-08-18). Set a spinner to 0ms and it does not disappear — it jitters frames endlessly. <strong>Handle it in two tracks the way Clarity does</strong> — transitions (quickest–primary) go to 0, and loops (slow–slowest) are <strong>stretched to a uniform 2s.</strong> Clarity is the only one of the 83 systems that makes this distinction.</p>
+<p><strong>Decide which side the default sits on, too.</strong> The 83 systems contain both extremes — <strong>Strapi</strong> puts its entire transition declaration <strong>inside</strong> a <code>prefers-reduced-motion</code> guard, so its default is no motion, and <strong>Mantine</strong> requires a double opt-in (<code>data-respect-reduced-motion</code> + <code>data-reduce-motion</code>, off by default), so it <strong>ignores the OS setting in its default state</strong>. <strong>Do not follow Mantine here</strong> — it overrides a setting the user explicitly stated with a library default.</p>
+<p><strong>A single global kill switch is also valid</strong> — Porsche's two variables, <code>--p-transition-duration</code> and <code>--p-animation-duration</code>, turn off all motion. Canvas does the same job with a <code>.wd-no-animation</code> global class.</p>
+<p><strong>Decide whether to split by platform or viewport</strong> (expanded 2026-08-18). Two systems lengthen duration — Nord (mobile 0.4s = double desktop) and Braid (drawer mobile 300 / tablet 175ms) — and <strong>three change the presence or kind of motion instead</strong> — Orbit (entrance motion on mobile only) · Thumbprint (desktop <code>transition: none</code>) · HeroUI (mobile slide / desktop scale). <strong>What they share is moving more on mobile</strong> — desktop is scale or no motion, mobile is a full-height slide-up.</p>
+<p><strong>Keep looping animations in a separate family from transitions.</strong> Codex separates <code>transition-duration-*</code> (100 · 250ms) from <code>animation-duration-*</code> (1000–2000ms) — mixed into one scale, 8 steps become 20.</p>
+<p><strong>When multiple elements must run in sequence, as in a spinner, use negative <code>animation-delay</code></strong> (the Codex approach). Set them to integer fractions of the duration and the phases offset evenly.</p>
+<h2 id="modal">Modal</h2>
+<p>Source: <a href="modal.md">modal.md</a></p>
+<p><strong>Width — start with 3 steps.</strong></p>
+<pre class="md-code"><code>sm   400  (confirmation dialogs · short forms)
+md   512  (default. shadcn/ui's value)
+lg   640  (content · tables)</code></pre>
+<p><strong>512px is a safe default</strong> (reconfirmed 2026-08-18). Across 79 systems the <strong>modal band for default width is 450–520px (about 14 systems)</strong>, 512 sits in the middle of it, and four systems use exactly that value (shadcn/ui · Backpack · Chakra · Codex).</p>
+<p><strong>The 440s and the 500s are two convergence points.</strong> Confirmation dialogs land in the 440s (Canvas · Mantine · Charcoal 440 · Naive UI 446 · Astro · Semi · HeroUI 448) and form modals in the 500s. <strong>It is fine to leave the middle empty</strong> — that is why Mantine's increment jumps from +60 to +180 between <code>md</code> and <code>lg</code>.</p>
+<p><strong>Having no width steps at all is also a majority choice</strong> — across 79 systems, 22 have a single width and 12 have no steps. <strong>If you do add steps, 3–5 is the convention</strong>, and 10 steps (HeroUI) only appears when inherited from a utility scale.</p>
+<p><strong>Padding</strong></p>
+<pre class="md-code"><code>24px  (fixed, regardless of modal size)</code></pre>
+<p>shadcn/ui uses a fixed 24px, and Radix Themes size 3 is the same value.</p>
+<p><strong>If you tie it to size, reference the spacing tokens</strong> (the Radix Themes approach) — <code>--space-3</code>–<code>6</code> (12/16/24/32). Radius can be grouped two steps at a time.</p>
+<p><strong>Border radius — pick from among three clusters</strong> (corrected 2026-08-18).</p>
+<pre class="md-code"><code>0–4px     ~20  dense work · operations · government (Clarity · EUI · MUI · Siemens iX · Tegel · Vuetify · DSFR · Astro)
+5–8px     ~20  general-purpose default (Bootstrap · Helios · NYSDS · Paste · Ring UI · Stacks · Vapor · Cloudscape)
+10–14px   ~10  framework family (shadcn/ui 10 · Radix Themes 8·12 · Semi · KRDS · HeroUI)
+16–32px   ~19  consumer services · mobile grammar (Orbit · PIE · Pajamas · Braid · eBay · LeafyGreen · Canvas 32)</code></pre>
+<p><strong>The previous edition wrote &quot;web systems cluster at 8–12px,&quot; but that was an observation over 6 samples.</strong> Across 79 systems the <strong>8–12px band is in fact the thinnest cluster</strong>, with 0–4px and 16–32px each about twice its size. <strong>There is no &quot;industry-standard modal radius&quot;</strong> — choose by product character.</p>
+<p><strong>Apple's sheets (34/58px) are not an order of magnitude away from the web either</strong> (corrected 2026-08-18). <strong>Canvas's modal is 32px</strong>, 2px away from the top of an Apple sheet (34px). What <strong>remains Apple-only is differing top and bottom radii</strong>, so do not port asymmetric radii.</p>
+<p><strong>Decide first whether this differs from buttons and inputs.</strong> The sample splits between a camp that separates by role (NYSDS button 12 / modal 8 / input 4 · Semi controls 2 vs modal 12 · LeafyGreen controls 6 vs modal 24) and a camp that unifies everything (Pharos · Codex 2px).</p>
+<p><strong>If you have a fullscreen mode, force the radius to 0</strong> (Mantine uses <code>!important</code>). Rounded corners left at the screen edge look like clipping. Clarity, PIE and Bolt also return the radius to 0 on the fullscreen switch.</p>
+<p><strong>Screen margins — decide mobile first.</strong></p>
+<pre class="md-code"><code>horizontal  keep a 16px margin (max-width: calc(100% - 32px))
+vertical    5dvh  or 32px</code></pre>
+<p><strong>Use <code>dvh</code>, not <code>vh</code></strong> (the Mantine approach). When the mobile browser's address bar hides and reappears, <code>vh</code> does not update and the modal gets clipped.</p>
+<p><strong>Consider setting the bottom margin as <code>max(32px, 6vh)</code></strong> (the Radix Themes approach). On large screens the modal does not stick to the bottom.</p>
+<p><strong>Keep two scroll layers.</strong></p>
+<pre class="md-code"><code>outer (overlay area)   when the modal is taller than the screen
+inner (content)        when the content is taller than the modal</code></pre>
+<p>Radix Themes puts <code>overflow: auto</code> on both <code>BaseDialogScroll</code> and <code>BaseDialogContent</code>. With only one layer, long modals either scroll their header and footer along or get clipped outright.</p>
+<p><strong>Overlay</strong></p>
+<pre class="md-code"><code>black family at 50%   (the mode across 79 systems)</code></pre>
+<p><strong>The whole span from 0.2 to 0.9 is populated — there is no &quot;standard opacity.&quot;</strong> Start at 0.5, and lower it when the context behind the modal must stay legible (Kontur 0.24 · Origami · Strapi 0.2).</p>
+<p><strong>Using a brand ink instead of pure black is closer to the majority</strong> — eBay <code>rgb(17 24 32)</code> · Paste navy · Vibe navy · Yoga plum · EUI · Evergreen blue-gray. <strong>Tint it in the same family as the background and the scrim reads as &quot;a screen covered&quot; rather than &quot;a screen switched off.&quot;</strong></p>
+<p><strong>Decide whether opacity splits by color mode.</strong> Braid .4/.6 · Ring UI .4/.7 · PrimeVue .4/.6 all go <strong>heavier in dark</strong>. A black scrim on a dark background simply is not visible if left alone.</p>
+<p><strong>If you allow nested modals, lighten the inner scrim automatically</strong> (the Intergalactic approach). Two layers of the same opacity are effectively opaque.</p>
+<p><strong>Animation</strong></p>
+<pre class="md-code"><code>entrance   200ms   scale 0.8–0.95 → 1 + fade
+exit       100ms   scale 1 → 0.97 + fade
+overlay    entrance 200ms / exit 160ms</code></pre>
+<p><strong>Make the exit half the entrance</strong> (reconfirmed 2026-08-18). Across 79 systems, <strong>entrance &gt; exit is the majority at 18 systems</strong> — Radix Themes 200/100 · Chakra 200/100 · Seed 200/100 · Vibe 150/100. But <strong>12 systems are symmetric</strong>, so it is not a whole-sample rule. <strong>Keep the ratio to 2:1 at most</strong> — Material Web's 3.3x (500/150) is an order of magnitude away from the web sample.</p>
+<p><strong>Scale 0.8 is the mode across 79 systems</strong> (corrected 2026-08-18). The previous edition recorded 95% as &quot;the sample majority,&quot; but that was <strong>the value of the 5 systems using Material-family curves.</strong> Eight systems use 0.8 (Braid · Evergreen · Mistica · HSDS · Shoelace · Grommet · Strapi · Vibe). <strong>The smaller the confirmation dialog, the deeper it can scale from</strong> — Blueprint and Kaizen come in from 0.5.</p>
+<p><strong>Whether to add travel is a majority convention, not a matter of taste</strong> (corrected 2026-08-18). The previous edition's &quot;screen-centered modals do not travel&quot; was an observation over 2 samples (Atlassian · shadcn/ui); across 79 systems <strong>more of them do travel than not.</strong> The values split — −50px from above (the Bootstrap lineage) · +64px from below (Park UI · Priceline) · <code>25vh</code> (Porsche). <strong>If you add it, shrink the travel along with the scale</strong> (Priceline: entrance 64px / exit 32px — it drops away over half the distance it arrived from).</p>
+<p><strong>Putting no motion on the modal body at all is also a valid choice</strong> — 10 of the 79 systems do it. Gestalt, Pharos and Thumbprint arrived independently at <strong>&quot;fade the curtain (scrim) only, show the body instantly.&quot;</strong> It loads the entire perceptual cost onto the scrim.</p>
+<p><strong>Consider a dismissal-refused feedback.</strong> For a modal that does not close on backdrop click, Bootstrap and Shoelace arrived independently at the same value — <strong>a <code>scale(1.02)</code> pulse.</strong></p>
+<p><strong>Let the content disappear before the overlay</strong> (Radix Themes: 100ms vs 160ms). If the backdrop lifts first, there is a frame where the modal floats in mid-air.</p>
+<p><strong>To synchronize unmount timing, consider a <code>no-op</code> animation.</strong> Radix Themes puts an <code>opacity: 1 → 1</code> animation on the overlay, keeping it in the DOM until its children finish exiting.</p>
+<p><strong>Accessibility — wrap animations in <code>prefers-reduced-motion</code>.</strong></p>
+<pre class="md-code"><code class="language-css">@media (prefers-reduced-motion: no-preference) { /* keyframes and all usage */ }</code></pre>
+<p>This is the Radix Themes approach. Zeroing durations like Cloudscape also works, but <strong>if any code depends on animation-complete events, 0ms is safer</strong> — the events still fire.</p>
+<p><strong>Close button</strong></p>
+<pre class="md-code"><code>top-right 16 / 16
+icon 16px
+focus ring same as every other control</code></pre>
+<p><strong>shadcn/ui giving only the close button a different focus ring is a consistency problem</strong> (<code>ring-2 ring-offset-2</code> vs <code>ring-[3px]</code> everywhere else). Do not copy it.</p>
+<p><strong>A default opacity of 0.7 needs scrutiny.</strong> It lowers contrast, so it is safer to set the icon color to <code>muted-foreground</code> and keep opacity at 1.</p>
+<p><strong>Footer — decide the mobile arrangement explicitly.</strong></p>
+<pre class="md-code"><code>&lt; 640px   vertical, reversed (primary action on top)
+≥ 640px   horizontal, right-aligned (primary action on the right)</code></pre>
+<p>This is shadcn/ui's <code>flex-col-reverse</code> → <code>sm:flex-row</code>. <strong>Keep the DOM order <code>[secondary][primary]</code> and both arrangements fall out automatically</strong> — primary on the right on desktop, on top on mobile.</p>
+<p><strong>Decide the breakpoint where the modal becomes a bottom sheet</strong> (corrected 2026-08-18). The previous edition wrote &quot;nothing in the sample prescribes one,&quot; but <strong>at least 20 systems prescribe it as a value</strong> — though they scatter across 481 · 570 · 575.98 · 576 · 600 · 640 · 768px.</p>
+<p><strong>The cleanest solution is to set the switch point to the modal's default width</strong> — Backpack (width 32rem = fullscreen at 32rem) and Clarity (width 576 = fullscreen at 576px) do this. One number serves two roles, so they cannot drift, and &quot;the moment the modal grows wider than the screen&quot; becomes the switch point by definition.</p>
+<p><strong>The switch mechanism splits three ways.</strong></p>
+<pre class="md-code"><code>Shape change in CSS alone   Asphalt · Canvas · Orbit · Auro · DSFR · HeroUI
+Fullscreen switch           Backpack · Bolt · Clarity · EUI · Pharos · Thumbprint · PIE
+Component swap              Gestalt (SheetMobile) · Seed · shadcn/ui (dialog↔drawer/sheet)</code></pre>
+<p><strong>Having the same component change shape by viewport is the majority.</strong> Split the components (shadcn/ui) and the switch decision moves to the caller — and in practice shadcn/ui <strong>picks its primitive by whether touch gestures are needed</strong> (vaul vs Radix), so its criterion is input modality, not viewport width.</p>
+<p><strong>Decide whether to drop the overlay when going fullscreen.</strong> Only Bolt removes it explicitly — once the screen is fully covered the scrim is invisible, so only the paint cost remains.</p>
+<h2 id="table">Table</h2>
+<p>Source: <a href="table.md">table.md</a></p>
+<p><strong>Density — start with 2 steps.</strong></p>
+<pre class="md-code"><code>comfortable  vertical 12px  horizontal 12px
+compact      vertical  8px  horizontal 12px</code></pre>
+<p><strong>Reduce only the vertical; keep the horizontal.</strong> Cloudscape keeps 4 tokens — <code>space-field-horizontal</code>, <code>space-card-horizontal-default</code>, <code>space-container-horizontal</code>, <code>space-option-padding-horizontal</code> — independent of density. Shrinking the horizontal hurts readability, not density.</p>
+<p><strong>A runtime scale factor (<code>calc(var(--scale) * N)</code>) cannot do this</strong> — it cannot distinguish horizontal from vertical, and it cannot produce 0px. <strong>If you plan to support density modes, put the axis in the token values as Cloudscape does</strong> (see the &quot;runtime scale factor&quot; section of <code>tokens/scales.md</code>).</p>
+<p><strong>If you go to 3 steps, the Radix Themes values are the reference.</strong></p>
+<pre class="md-code"><code>size 1   padding  8      min height 36
+size 2   padding 12      min height 44
+size 3   padding 12/16   min height 48</code></pre>
+<p><strong>For touch environments, use a minimum row height of 44px or more</strong> — that is the Radix Themes size 2 value and equals Apple's touch target minimum.</p>
+<p><strong>Cell padding</strong></p>
+<pre class="md-code"><code>horizontal 8–16px  (default 12)
+vertical 8–12px</code></pre>
+<p><strong>8px is the framework-family floor — the value of shadcn/ui and Radix Themes size 1.</strong> The only tighter value is the 6px in Polaris's tokens, and that same system's distributed CSS is 8/12px. Unless data density is the goal, 12px is a safe choice.</p>
+<p><strong>Polaris's desktop distributed values (vertical 8 / horizontal 12) match the compact combination above</strong> — the point where &quot;reduce only the vertical,&quot; derived from Cloudscape, meets an independent system's shipped values.</p>
+<p><strong>Row height — set only a minimum, but it splits by platform</strong> (corrected 2026-08-18).</p>
+<pre class="md-code"><code>Touch             44 or more   (Radix Themes size 2 · Apple touch target)
+Desktop web       32–36        (Polaris 32 · Radix Themes size 1 36)
+Desktop native    20–28        (macOS row 20 · column header 28)</code></pre>
+<p><strong>The previous edition recommended 44px as the single default, but that is the touch value.</strong> It is excessive for a dense desktop table — the desktop values in the confirmed sample run 20–36px.</p>
+<p>The web samples do not use fixed heights. In table cells <code>height</code> behaves like <code>min-height</code>, so specifying it as <code>height</code> also works (the Radix Themes approach).</p>
+<p><strong>Virtual scrolling requires fixed heights, and the sample has no value to reference.</strong> You must decide it yourself.</p>
+<p><strong>Borders — use <code>box-shadow: inset</code>.</strong></p>
+<pre class="md-code"><code class="language-css">box-shadow: inset 0 -1px var(--gray-a5);</code></pre>
+<p><strong><code>border</code> disappears under <code>border-collapse: collapse</code> + <code>position: sticky</code>.</strong> That is why Mantine switches to <code>box-shadow</code> only for sticky headers, while Radix Themes uses <code>box-shadow</code> from the start — <strong>the latter is simpler.</strong></p>
+<p><strong>Use alpha tokens for the color</strong> (<code>--gray-a5</code>). Opaque grays clash against striped and hover backgrounds.</p>
+<p><strong>Do not multiply border widths by a runtime scale factor.</strong> Mantine sets <code>calc(0.0625rem * var(--mantine-scale))</code>, which becomes 1.1px at 110% — subpixel rendering blurs the line.</p>
+<p><strong>hover — branch on touch devices.</strong></p>
+<pre class="md-code"><code class="language-css">@media (hover: hover) { tr:hover  { … } }
+@media (hover: none)  { tr:active { … } }</code></pre>
+<p>This is the Mantine approach. <strong>On touch, <code>:hover</code> lingers after a tap</strong> — the wrong row stays visibly highlighted.</p>
+<p><strong>Keep stripes lighter than hover.</strong> Mantine uses <code>gray-0</code> (stripes) / <code>gray-1</code> (hover).</p>
+<p><strong>Use <code>font-variant-numeric: tabular-nums</code> on numeric columns.</strong></p>
+<p>Only Mantine exposes it as an option in the sample, but in data tables it is effectively mandatory — proportional digits misalign place values and make column comparison hard.</p>
+<p><strong>Put captions at the bottom.</strong> Both systems explicitly override the browser default (top).</p>
+<p><strong>Checkbox column</strong></p>
+<pre class="md-code"><code>right padding 0
+vertical alignment matched to the text</code></pre>
+<p>It can be automated with <code>:has([role=checkbox])</code> (the shadcn/ui approach). It cannot be expressed as tokens, so it goes in the component implementation.</p>
+<p><strong>Sticky header</strong></p>
+<pre class="md-code"><code>position: sticky
+top: var(--sticky-header-offset, 0)
+z-index: 3</code></pre>
+<p><strong>Make the offset a variable</strong> — if the page has a fixed top bar, the header must come down by that height. Hardcode 0 and the header hides behind the top bar.</p>
+<p><strong>Consider automatically compacting components inside tables.</strong> Cloudscape's <code>compact-table</code> context overrides 17 tokens to make buttons, fields, and cards inside a table compact. Compared to threading a prop through every component, <strong>absorbing it at the token layer leaves no omissions.</strong></p>
+<h2 id="navigation">Navigation</h2>
+<p>Source: <a href="navigation.md">navigation.md</a></p>
+<p><strong>Sidebar width</strong></p>
+<pre class="md-code"><code>expanded   256px  (16rem)
+collapsed   48px  (icons only) + 16px horizontal padding = 64px container
+mobile     288px  (opens as a sheet)</code></pre>
+<p><strong>Collapsed width is 48–52px.</strong> shadcn/ui 48, Cloudscape 52 — a 16–20px icon plus padding.</p>
+<p><strong>Make the mobile width wider than desktop.</strong> It becomes a sheet covering the screen, so there is no reason to keep it narrow.</p>
+<p><strong>Item height</strong></p>
+<pre class="md-code"><code>28–32px  (default 32)</code></pre>
+<p>The two systems meet at 28px. Dense screens can go down to 24px (Cloudscape compact).</p>
+<p><strong>Make items square in the collapsed state</strong> — equal width and height centers the icon.</p>
+<p><strong>Persist the state in a cookie.</strong> <code>localStorage</code> cannot be read during server rendering, so the first frame paints in the wrong state. shadcn/ui uses a cookie with a 7-day lifetime.</p>
+<p><strong>If you attach a keyboard shortcut, <code>Cmd/Ctrl+B</code> is the only precedent in the sample.</strong></p>
+<p><strong>Tabs</strong></p>
+<pre class="md-code"><code>list height    36px
+item padding   horizontal 8 / vertical 4
+text           14px / weight 500
+active marker  2px underline  or  pill background + shadow</code></pre>
+<p><strong>Pick one of the two active markers.</strong> shadcn/ui ships both <code>default</code> (pill) and <code>line</code> (underline) in one component — <strong>do not mix them.</strong></p>
+<p><strong>If the active tab gets bolder, consider tightening its letter spacing</strong> (Radix Themes -0.01em). The weight change alone alters the tab's width and pushes its neighbors.</p>
+<p><strong>The alternative is equal active/inactive weights</strong> — Cloudscape sets both <code>font-weight-tabs</code> and <code>font-weight-tabs-disabled</code> to 700.</p>
+<p><strong>If you support vertical tabs, the indicator's direction must change too</strong> — an underline (2px tall) horizontally, a right-side vertical line (2px wide) vertically.</p>
+<p><strong>Slide the indicator on segmented controls</strong> (100ms <code>transform</code>). Keep opacity shorter (80ms) and the movement reads more clearly.</p>
+<p><strong>Breadcrumbs</strong></p>
+<pre class="md-code"><code>item gap          6px → 10px (mobile → desktop)
+separator icon    14px
+ellipsis control  36×36 (touch target)
+wrapping          allowed (flex-wrap)</code></pre>
+<p><strong>Give the current location its own color</strong> (Cloudscape <code>color-text-breadcrumb-current</code>). If links and the current location share a color, clickability is indistinguishable.</p>
+<p><strong>Do not rely on truncation; allow wrapping</strong> — path lengths vary wildly across languages (<code>i18n/README.md</code>).</p>
+<p><strong>If the top nav is pinned to dark, handle it at the token layer.</strong> Cloudscape's <code>top-navigation</code> context overrides the <code>light</code> values of 182 tokens with their <code>dark</code> values — <strong>fewer omissions than building a dark variant per component.</strong></p>
+<p><strong>Make layout offsets variables</strong> (Mantine <code>--app-shell-*-offset</code>, all 4 directions). Zero them when the header, sidebar, or footer is absent and the content fills in automatically.</p>
+<p><strong>If you support automotive or mobile, check the count limits first.</strong> CarPlay caps tabs at 5 as an API constraint — it must be decided at the design stage.</p>
+<h2 id="feedback">Feedback</h2>
+<p>Source: <a href="feedback.md">feedback.md</a></p>
+<p><strong>Severity scheme — pick one axis.</strong></p>
+<pre class="md-code"><code>semantic axis   success · error · warning · info          (4. Enough for most cases)
+severity axis   critical · high · medium · low · neutral  (ops/monitoring screens)</code></pre>
+<p><strong>Only Cloudscape keeps both at once, and that is because its domain is an operations console.</strong> For a general product, start with the 4-value semantic axis.</p>
+<p><strong>Keeping only <code>destructive</code>, as shadcn/ui does, is also a real option</strong> — but adding more later requires a semantic layer (<code>color.md</code>).</p>
+<p><strong>Look at Atlassian's <code>discovery</code></strong> — slots like &quot;new feature announcements&quot; that fit none of success/error/warning/info do come up in practice.</p>
+<p><strong>Status presentation — choose between background color and text color.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Approach</th><th>Example</th><th>Fits when</th></tr></thead><tbody><tr><td><strong>Full background color</strong></td><td>Cloudscape flashbar</td><td>Top-of-screen notifications. Unmistakably visible</td></tr><tr><td><strong>Text color only</strong></td><td>shadcn/ui alert</td><td>Inline alerts. Does not disturb the page's tone</td></tr><tr><td>Light background + dark text</td><td>Mantine Alert (<code>-light</code> family)</td><td>In between</td></tr></tbody></table></div>
+<p><strong>If you use background colors, pair a text color with each background.</strong> Cloudscape uses black text only on the yellow background (<code>#ffe347</code>) — that is why <code>color-text-notification-yellow</code> is a separate token.</p>
+<p><strong>Do not distinguish status by color alone.</strong> shadcn/ui distinguishes by icon shape (circle / triangle / octagon). But <strong>if <code>success</code> and <code>info</code> are both circles, shape alone cannot separate them</strong> — use at least two of color, icon, and text.</p>
+<p><strong>Alert dimensions</strong></p>
+<pre class="md-code"><code>padding  16 / 12  (horizontal / vertical)
+radius   10–12px
+border   1–2px
+title    weight 500–700
+body     14px, secondary color</code></pre>
+<p><strong>Cloudscape is the strongest at radius 12px / border 2px / weight 700, and shadcn/ui the mildest at 10px / 1px / 500.</strong></p>
+<p><strong>Decide on per-side border-width tokens only when you need them.</strong> Cloudscape keeps 5 tokens — 4 sides plus overall — all valued at 2px. It is a slot for later variants like an accent left border (<code>border-left: 4px</code>).</p>
+<p><strong>Use logical property names</strong> (<code>inline-start</code> / <code>block-end</code>). They flip automatically in RTL (<code>i18n/README.md</code>).</p>
+<p><strong>Icon alignment — reference the line height.</strong></p>
+<pre class="md-code"><code>icon height = first line's line height (Radix Themes)</code></pre>
+<p>Fixing the size and correcting with <code>translate-y</code> (shadcn/ui, +2px) must be retuned whenever the font size changes.</p>
+<p><strong>Keep the icon column at 0px and switch it on with <code>:has()</code></strong> (the shadcn/ui approach). Title and body alignment holds even without an icon.</p>
+<p><strong>Clamp the title to 1 line and set a minimum height</strong> (<code>line-clamp-1</code> + <code>min-h-4</code>). The layout holds even in alerts without a title.</p>
+<p><strong>Toast motion</strong></p>
+<pre class="md-code"><code>entrance    250ms  slide from 50% offscreen + fade
+exit        200ms  travel only 15% + fade
+reposition  250ms  transform, inout easing</code></pre>
+<p><strong>Do not skip <code>reposition</code>.</strong> When toasts stack or one disappears, the rest teleporting is visually jarring. <strong>Atlassian is the only system in the sample with this axis, but its absence always shows.</strong></p>
+<p><strong>Use <code>inout</code> easing for reposition</strong> — unlike entrance/exit, decelerating on both ends makes it feel like &quot;settling into place&quot; rather than &quot;being shoved.&quot;</p>
+<p><strong>Badge</strong></p>
+<pre class="md-code"><code>radius   full pill  or  4px
+padding  horizontal 8 / vertical 2
+text     12px / weight 500
+numbers  tabular-nums</code></pre>
+<p><strong>Use <code>tabular-nums</code> on numeric badges.</strong> The width jitters when a count goes from 9 to 10. shadcn/ui's sidebar badge uses it together with <code>min-w-5</code> (20px).</p>
+<p><strong>Handle buttons on colored backgrounds via contexts.</strong></p>
+<p>Cloudscape's <code>flashbar</code>, <code>flashbar-warning</code>, and <code>alert</code> contexts override button background, hover alpha, and the primary button color. <strong>The component never needs to know &quot;what am I inside of.&quot;</strong></p>
+<pre class="md-code"><code>on dark backgrounds    hover black 15% · primary button white
+on light backgrounds   hover black  5% · primary button dark gray
+on tinted backgrounds  black 5% in light mode / white 10% in dark mode</code></pre>
+<p><strong>Cut the alpha to a third on light backgrounds.</strong> Black at 15% on a yellow background is far too heavy.</p>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

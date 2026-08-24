@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Semi Design — Self-Made DesignOps</title>
+<meta name="description" content="ByteDance's (Douyin's) system — the second Chinese-language sample after Ant. 70% of the tokens are colour (1,319/1,887), sizes and whitespace have no…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/semi.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Semi Design — Self-Made DesignOps">
+<meta property="og:description" content="ByteDance's (Douyin's) system — the second Chinese-language sample after Ant. 70% of the tokens are colour (1,319/1,887), sizes and whitespace have no…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/semi.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Semi Design — Self-Made DesignOps">
+<meta name="twitter:description" content="ByteDance's (Douyin's) system — the second Chinese-language sample after Ant. 70% of the tokens are colour (1,319/1,887), sizes and whitespace have no…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Semi Design",
+ "description": "ByteDance's (Douyin's) system — the second Chinese-language sample after Ant. 70% of the tokens are colour (1,319/1,887), sizes and whitespace have no…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/semi.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Semi Design",
+  "applicationCategory": "DesignApplication",
+  "url": "https://semi.design"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-1887-of-them-skewed-to-colour">Tokens — 1,887 of them, skewed to colour</a></li><li class="lvl3"><a href="#sizes-in-practice-14px-dominant">Sizes in practice — 14px dominant</a></li><li class="lvl3"><a href="#radius-including-3px-with-circle-and-full-both-present">Radius — including 3px, with circle and full both present</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-semi-button">Buttons (.semi-button)</a></li><li class="lvl3"><a href="#inputs-semi-input">Inputs (.semi-input)</a></li><li class="lvl3"><a href="#modals-semi-modal">Modals (.semi-modal)</a></li><li class="lvl3"><a href="#dark-mode-and-the-ramps-clearing-the-backlog">Dark mode and the ramps (clearing the backlog)</a></li><li class="lvl3"><a href="#tables-semi-table-three-densities-shrinking-only-vertically">Tables (.semi-table) — three densities, shrinking only vertically</a></li><li class="lvl3"><a href="#navigation-semi-navigation-semi-tabs-semi-breadcrumb">Navigation (.semi-navigation · .semi-tabs · .semi-breadcrumb)</a></li><li class="lvl3"><a href="#feedback-semi-toast-semi-banner-semi-badge">Feedback (.semi-toast · .semi-banner · .semi-badge)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>ByteDance (Douyin FE)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://semi.design" rel="noopener">Official site</a><br><a href="https://github.com/DouyinFE/semi-design" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/semi.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Semi Design</span></nav>
+    <h1>Semi Design</h1>
+    <p class="doc-lede">ByteDance (Douyin FE) · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>ByteDance's (Douyin's) system — <strong>the second Chinese-language sample</strong> after Ant. <strong>70% of the tokens are colour</strong> (1,319/1,887), sizes and whitespace have no tokens and are pinned into the components, and <strong>the dominant size in practice is 14px.</strong></p>
+<h2 id="tokens-1887-of-them-skewed-to-colour">Tokens — 1,887 of them, skewed to colour</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">count</th></tr></thead><tbody><tr><td><code>color</code></td><td style="text-align:center"><strong>1,319 (70%)</strong></td></tr><tr><td><code>border</code></td><td style="text-align:center">145</td></tr><tr><td>colour ramps (<code>grey</code> · <code>blue</code> · <code>green</code> · <code>red</code> · <code>orange</code> …)</td><td style="text-align:center">38–73 each</td></tr><tr><td>radius</td><td style="text-align:center">6</td></tr><tr><td>shadow</td><td style="text-align:center">1 (<code>elevated</code>)</td></tr><tr><td><strong>spacing · font size</strong></td><td style="text-align:center"><strong>0</strong></td></tr></tbody></table></div>
+<p><strong>There are no dimension tokens.</strong> Semi's theme system is for swapping colour; sizes and whitespace are literals in the component CSS — going further than Mantine's &quot;per-component variables&quot; approach in that <strong>the variables do not exist at all.</strong></p>
+<h3 id="sizes-in-practice-14px-dominant">Sizes in practice — 14px dominant</h3>
+<p>The frequency of <code>font-size</code> literals in the component CSS:</p>
+<pre class="md-code"><code>14px ×92 · 12px ×43 · 16px ×19 · 20px ×7 · 18px ×6 · 24px ×4</code></pre>
+<p><strong>14px appears five times as often as 16px.</strong> With Ant (a <code>fontSize: 14</code> seed), <strong>both Chinese-language samples have a 14px body</strong> — the 14px camp in <code>patterns/typography.md</code> is 2 of 2 in the Chinese-language region.</p>
+<h3 id="radius-including-3px-with-circle-and-full-both-present">Radius — including 3px, with circle and full both present</h3>
+<pre class="md-code"><code>small 2 · extra-small 3 · medium 6 · large 12 · circle 50% · full 9999px</code></pre>
+<ul class="md-list"><li><strong>There is no 4 or 8; it doubles 3→6→12</strong> — joining the odd-radius camp (Helios, Spectrum, SGDS)</li><li><strong>It keeps both <code>circle</code> (50%) and <code>full</code> (9999px)</strong> — the same duality as Thumbprint and Paste</li><li>The name ordering is peculiar — <code>extra-small</code> (3) is <strong>larger</strong> than <code>small</code> (2). The second name/value mismatch after SGDS's <code>lg</code> &lt; default inversion</li></ul>
+<h2 id="components">Components</h2>
+<p><code>@douyinfe/semi-ui@2.102.0</code> (React). The list is unverified. Themes ship as separate <code>@semi-bot/semi-theme-*</code> packages — <strong>a theme-marketplace structure</strong> (user-made themes distributed through npm).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>The theme package's <code>semi.css</code> holds not only variable declarations but <strong>20,602 lines of compiled CSS for every component</strong> (<code>@semi-bot/semi-theme-default@1.0.0</code> — the component implementations are in <code>@douyinfe/semi-ui@2.102.0</code>). What follows is measured from that CSS.</p>
+<h3 id="buttons-semi-button">Buttons (<code>.semi-button</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td><strong>height</strong></td><td style="text-align:center">24px</td><td style="text-align:center"><strong>32px</strong></td><td style="text-align:center">40px</td></tr><tr><td>block padding</td><td style="text-align:center">2px</td><td style="text-align:center">6px</td><td style="text-align:center">10px</td></tr><tr><td>inline padding</td><td style="text-align:center">12px</td><td style="text-align:center">12px</td><td style="text-align:center">16px</td></tr></tbody></table></div>
+<ul class="md-list"><li>Type is <strong>14px / 20px / 600</strong> at every size — a weight of 600 sitting between Backpack's (700) and the majority's (500).</li><li>The radius is <code>--semi-border-radius-small</code> = <strong>2px</strong>, shared by buttons and inputs. Modals use 12px — <strong>2px on controls against 12px on overlays</strong>, among the largest radius gaps within a single system in the sample.</li><li><strong>There are no transitions</strong> — <code>transition</code> appears just 30 times across all 20,602 lines, and zero times on buttons and inputs. Hover and active colours <strong>swap instantly.</strong> A &quot;state change without motion&quot;, in contrast to Backpack, which does not tokenise its easings yet still uses literals 42 times.</li><li>The variants are <strong>two orthogonal axes</strong>: five types (primary · secondary · tertiary · warning · danger) × three themes (solid · light · borderless), forming a 15-cell matrix through class combinations like <code>.semi-button-primary.semi-button-light</code>.</li></ul>
+<h3 id="inputs-semi-input">Inputs (<code>.semi-input</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>inner height</td><td style="text-align:center">22px</td><td style="text-align:center"><strong>30px</strong></td><td style="text-align:center">38px</td></tr><tr><td>including the wrapper's 1px border</td><td style="text-align:center">24px</td><td style="text-align:center">32px</td><td style="text-align:center">40px</td></tr><tr><td>type</td><td style="text-align:center">14px</td><td style="text-align:center">14px</td><td style="text-align:center">16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The same three steps as the button, 24/32/40</strong> — the input reaches them by adding the wrapper's 2px of border to its inner height. The same cross-component height alignment as Backpack (two shared steps, 36/48), here in three even 8px steps.</li><li><strong>It is a filled form</strong> — the wrapper takes a <code>fill-0</code> grey background with a <strong>transparent 1px border</strong>, and on focus only the border colours in; there is <strong>no ring and no shadow.</strong> Where it parts from Ant (an outline plus a ring).</li><li>Inline padding 12px, identical to the button's.</li></ul>
+<h3 id="modals-semi-modal">Modals (<code>.semi-modal</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>value</th></tr></thead><tbody><tr><td>width</td><td>small <strong>448</strong> · medium <strong>684</strong> · large <strong>920</strong> · full-width calc(100vw−64px)</td></tr><tr><td>radius</td><td>12px (radius-large)</td></tr><tr><td>padding</td><td>24px inline in the content · 24px margins on the header and footer</td></tr><tr><td>scrim</td><td>rgba(22,22,26,.6)</td></tr><tr><td>enter</td><td><strong>120ms <code>cubic-bezier(0, 0, 0.26, 1.38)</code></strong> scale 0.7→1</td></tr><tr><td>exit</td><td>90ms ease</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The entrance easing overshoots (1.38)</strong> — the modal springs slightly as it appears. The gap is characteristic: a system with no transitions using a bounce on the modal alone.</li><li>Enter 120 / exit 90ms, asymmetric — the same direction as MUI (225/195), at under half the length.</li><li>The header type is <strong>14px/600</strong> — even the modal title is at body size.</li><li>The default width of 448px lands in the &quot;modal defaults in the 440s&quot; convergence with MUI's dialog xs (444) and HeroUI's md (448). 684 and 920 are multiples of 4 but not of 8.</li></ul>
+<h3 id="dark-mode-and-the-ramps-clearing-the-backlog">Dark mode and the ramps (clearing the backlog)</h3>
+<ul class="md-list"><li>The colour ramps are <strong>ten steps (0–9) for every hue</strong> — <code>--semi-blue-0..9</code> and so on. brand is an alias ramp holding the same values as blue.</li><li>Dark is a <code>body[theme-mode=dark]</code> attribute selector, and <strong>the <code>.semi-always-light</code> / <code>.semi-always-dark</code> classes force the mode on a subtree</strong> — a rare sample designing local mode inversion into the selector layer.</li></ul>
+<h3 id="tables-semi-table-three-densities-shrinking-only-vertically">Tables (<code>.semi-table</code>) — three densities, shrinking only vertically</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>density</th><th style="text-align:center">cell block padding</th><th style="text-align:center">cell inline padding</th></tr></thead><tbody><tr><td>default</td><td style="text-align:center"><strong>16px</strong></td><td style="text-align:center">16px</td></tr><tr><td>middle</td><td style="text-align:center">12px</td><td style="text-align:center"><strong>16px (unchanged)</strong></td></tr><tr><td>small</td><td style="text-align:center">8px</td><td style="text-align:center"><strong>16px (unchanged)</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>Density changes only the block padding, leaving the inline 16px</strong> — the &quot;shrink the vertical, keep the horizontal&quot; pattern derived from Cloudscape, confirmed again in an independent system's shipped CSS.</li><li>Header cells are <strong>16 inline / 8 block · weight 600 · <code>border-bottom: 2px</code>.</strong> The body row rules are 1px — <strong>only under the header is it twice as thick.</strong></li><li><strong>Fixed headers and fixed columns use <code>z-index: 101</code></strong> — the highest in the collected sample (Vuetify 1–2 · Chakra 1 · Carbon 1 · Ant 2 · Mantine 3 · Cloudscape 798), and a literal unconnected to any other layer's values in the same system.</li><li><strong>The fixed column's edge is a 1px border plus <code>box-shadow: ±3px 0 0</code></strong> — producing the scroll shadow as a flat 3px band, with no blur.</li><li>Hover is a <code>--semi-color-fill-0</code> background, and <strong>only the fixed column's cells repaint the same colour through a <code>::before</code> pseudo-element</strong> (because fixed cells need an opaque background).</li><li>Sort icons are 16×16px with a 4px left margin, turning <code>--semi-color-primary</code> when active. <strong>The up and down arrows are two overlaid elements each with <code>height: 0</code>.</strong></li><li>Column resizing (<code>react-resizable</code>) is included by default, and while dragging the edge becomes <code>2px solid primary</code>.</li><li><strong>The striping rule could not be confirmed</strong> (no <code>striped</code>/<code>zebra</code> selector in the shipped CSS).</li></ul>
+<h3 id="navigation-semi-navigation-semi-tabs-semi-breadcrumb">Navigation (<code>.semi-navigation</code> · <code>.semi-tabs</code> · <code>.semi-breadcrumb</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>sidebar width</td><td><strong>240px</strong> (including 8px inline padding)</td></tr><tr><td>collapsed width</td><td><strong>60px</strong></td></tr><tr><td>collapse transition</td><td>width 200ms <code>cubic-bezier(0.62, 0.05, 0.36, 0.95)</code> · padding 100ms ease-out</td></tr><tr><td>item height</td><td><strong>36px</strong> · padding 8/12px · 8px between items</td></tr><tr><td>item radius</td><td><code>border-radius-small</code> = <strong>2px</strong> (as on buttons)</td></tr><tr><td>hierarchy indent</td><td>level 1 32px (<code>-item-indent</code>) · level 3 text 44px</td></tr><tr><td>tab (line) padding</td><td>large <strong>16/4/14px</strong> · medium 12/4/10 · small 8/4/6</td></tr><tr><td>tab gap</td><td><strong>24px</strong> · active indicator <strong>2px</strong> at the bottom</td></tr><tr><td>breadcrumb</td><td>4px between items · two type steps, loose 14px / compact <strong>12px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The tab's block padding is asymmetric</strong> (16 above, 14 below). The active underline takes the bottom 2px, so the optical centre is corrected — the only case in the collected sample to make this correction.</li><li><strong>Hover draws an underline too</strong> (<code>fill-0</code>, 2px) — the same thickness as active (primary) and pressed (fill-1), so state transitions do not shift the layout.</li><li>The sidebar takes its collapsed width of 60px (= 36 + 8 + 8 + margins) from <strong>a 36px square logo.</strong></li><li>The breadcrumb has <strong>two type steps, loose and compact (14/12px).</strong></li></ul>
+<h3 id="feedback-semi-toast-semi-banner-semi-badge">Feedback (<code>.semi-toast</code> · <code>.semi-banner</code> · <code>.semi-badge</code>)</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td><strong>Toast</strong> position</td><td><strong>fixed top centre</strong> (<code>top: 0</code>, <code>text-align: center</code>), z-index <strong>1010</strong></td></tr><tr><td>Toast padding / margin</td><td><strong>12px 8px</strong> · 12px margin · radius medium (6px)</td></tr><tr><td>Toast width</td><td><strong>none</strong> — <code>display: inline-flex</code>, sized to its content</td></tr><tr><td>Toast type</td><td>14px / <strong>weight 600</strong></td></tr><tr><td>Toast shadow</td><td>two layers, <code>0 0 1px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.1)</code></td></tr><tr><td><strong>Banner</strong> padding</td><td><strong>12px 12px</strong> · the container form takes radius small (2px)</td></tr><tr><td>Banner close</td><td>24×24px · 12px left margin</td></tr><tr><td><strong>Badge</strong> count</td><td>height <strong>18px</strong> / min-width 18px / radius <strong>9px</strong> (= half the height)</td></tr><tr><td>Badge padding / type</td><td>0 4px · 12px / 16px line height</td></tr><tr><td>Badge dot</td><td>8×8px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The toast has no width specification</strong> — the only case in the collected sample not to set one (Sonner 356 · PrimeVue 352 · Ant 384 · Naive 365 · Grommet 384 · Carbon 288/352). Its width varies with the content length.</li><li><strong>Only the <code>light</code> variant expresses state through the border</strong> — <code>semi-toast-light</code> takes a <code>-light-default</code> background with a 1px state-coloured border, while the default variant is a flat <code>bg-3</code> with <strong>only the icon</strong> carrying the state. A middle position between shadcn/ui's (sonner) &quot;icon shape only&quot; and Cloudscape's &quot;the whole background&quot;.</li><li>The badge's 9px radius is exactly half its height (18px) — a pill written as the literal half value rather than <code>9999px</code>.</li></ul>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs sharing heights of 24/32/40</strong> — three even 8px steps</li><li><strong>A 2px control radius against a 12px modal</strong> — among the largest radius gaps</li><li><strong>No transitions</strong> — state colours swap instantly, with only the modal overshooting (1.38)</li><li>A <strong>two-axis, 15-cell variant matrix</strong> of type × theme</li><li>A filled input with a coloured focus border (no ring)</li><li><code>.semi-always-*</code> forcing the mode on a subtree</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>70% of the tokens are colour</strong> — the theme system is effectively colour-only</li><li><strong>Zero dimension tokens</strong> — every size and space is a component literal</li><li><strong>14px dominant in practice</strong> — the Chinese-language 14px pattern at 2 of 2 (Ant, Semi)</li><li>Radius doubling 3→6→12, with <code>circle</code> and <code>full</code> both present</li><li><code>extra-small</code> (3) &gt; <code>small</code> (2) — a name/value inversion</li><li>Themes distributed as bot-generated packages (<code>@semi-bot/*</code>) — a theme-marketplace structure</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified.</p>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Theme: <code>npm pack @semi-bot/semi-theme-default@1.0.0</code> → <code>semi.css</code></li><li>Components: <code>@douyinfe/semi-ui@2.102.0</code> — the deep pass measures the compiled component CSS inside <code>semi.css</code> (2026-08-18)</li><li>Licence: the theme package's package.json states <strong>MIT</strong>, and the main repository's (DouyinFE/semi-design) <code>LICENSE</code> is <strong>MIT</strong> too — reflected in the frontmatter (2026-08-18)</li><li><strong>Open questions:</strong> <del>the number of ramp steps and how dark mode works</del> (resolved 2026-08-18 — the deep pass: ten-step ramps, <code>body[theme-mode=dark]</code>), the component list (around 80 class prefixes measured in the theme CSS — unverified against semi-ui's own list), and the structure of Semi DSM (the theme builder)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: github DouyinFE/semi-design → <code>LICENSE</code> (matching the npm metadata for <code>@douyinfe/semi-ui@2.102.0</code>)</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

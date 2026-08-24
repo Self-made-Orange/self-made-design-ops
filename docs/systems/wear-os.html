@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wear OS Design (M3 Expressive) — Self-Made DesignOps</title>
+<meta name="description" content="The corpus's first wearable sample. Because the screen is round it prescribes defining margins as percentages rather than px, forbids user scaling on text…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/wear-os.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Wear OS Design (M3 Expressive) — Self-Made DesignOps">
+<meta property="og:description" content="The corpus's first wearable sample. Because the screen is round it prescribes defining margins as percentages rather than px, forbids user scaling on text…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/wear-os.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wear OS Design (M3 Expressive) — Self-Made DesignOps">
+<meta name="twitter:description" content="The corpus's first wearable sample. Because the screen is round it prescribes defining margins as percentages rather than px, forbids user scaling on text…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Wear OS Design (M3 Expressive)",
+ "description": "The corpus's first wearable sample. Because the screen is round it prescribes defining margins as percentages rather than px, forbids user scaling on text…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/wear-os.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Wear OS Design (M3 Expressive)",
+  "applicationCategory": "DesignApplication",
+  "url": "https://developer.android.com/design/ui/wear"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-17",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#screen-192240dp-breakpoint-at-225dp">Screen — 192–240+dp, breakpoint at 225dp</a></li><li><a href="#margins-percentages-are-the-rule">Margins — percentages are the rule</a></li><li><a href="#typography-21-styles-arc-a-scaling-ceiling">Typography — 21 styles + Arc + a scaling ceiling</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Google</b><br>partial harvest · wearable<br>verified 2026-08-17<br><a href="https://developer.android.com/design/ui/wear" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/wear-os.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Wear OS Design (M3 Expressive)</span></nav>
+    <h1>Wear OS Design (M3 Expressive)</h1>
+    <p class="doc-lede">Google · os · wearable</p>
+<h2 id="in-one-line">In one line</h2>
+<p><strong>The corpus's first <code>wearable</code> sample.</strong> Because the screen is round it <strong>prescribes defining margins as percentages rather than px</strong>, <strong>forbids user scaling on text at 20sp and above</strong>, and has an <strong><code>Arc</code> typography category</strong> that flows along the curve.</p>
+<h2 id="screen-192240dp-breakpoint-at-225dp">Screen — 192–240+dp, breakpoint at 225dp</h2>
+<pre class="md-code"><code>Small: 192 – 224dp   |   Large: 225 – 240+dp   (round, measured by diameter)
+Dense layouts are verified at 192dp with the large-font setting</code></pre>
+<ul class="md-list"><li><strong>There is a single breakpoint (225dp)</strong> — unlike the web (five to eight steps) or mobile, there are only small and large. The fewest breakpoints in the sample</li><li>The screen value itself is a <strong>diameter</strong> — one dimension rather than width and height. The round premise</li></ul>
+<h2 id="margins-percentages-are-the-rule">Margins — percentages are the rule</h2>
+<blockquote><p>&quot;Define outer margins as percentages rather than absolute values, so that margins can scale proportionally on round screens and avoid clipping any UI elements.&quot;</p></blockquote>
+<p><strong>Defining outer margins as percentages rather than absolute values (px/dp) is the official rule</strong> — on a round screen, margins have to scale with the diameter to avoid clipping at the edges. It is <strong>the only case in the whole sample of percentages being prescribed as the margin unit</strong> (the fifth unit type, after px in most, rem, character count (SmartHR) and grid multiples (Braid)).</p>
+<h2 id="typography-21-styles-arc-a-scaling-ceiling">Typography — 21 styles + <code>Arc</code> + a scaling ceiling</h2>
+<ul class="md-list"><li><strong>21 M3 Expressive styles</strong>, with <strong>Roboto Flex</strong> (variable) as the default typeface</li><li><strong>The <code>Arc</code> category</strong> — text that flows along the curve at the edge of a round screen (clock displays, curved labels). It uses <strong>a dedicated font axis that compensates for letter spacing opening up along the curve at the top of the screen.</strong> The only typography category of its kind in the sample</li><li><strong>The user font-scaling rule splits by role:</strong></li></ul>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Category</th><th style="text-align:center">Scaling allowed</th></tr></thead><tbody><tr><td>Display · Numeral</td><td style="text-align:center"><strong>forbidden</strong></td></tr><tr><td>Title · Body</td><td style="text-align:center">allowed</td></tr><tr><td>Label</td><td style="text-align:center">Medium/Small allowed · <strong>Large forbidden</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>&quot;No scaling on text at 20sp and above&quot; holds across every category</strong> — the screen is too small to grow large text further. <strong>The exact opposite extreme from TDS</strong> (which remaps iOS Dynamic Type up to 310%), and it settles both ends of the accessibility-scaling axis: wearable imposes a ceiling, while mobile web follows all the way to 3×</li><li>Tabular/mono spacing is recommended for scrolling and changing numerals (pickers and the like)</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>The first <code>wearable</code> sample</strong> — closing the second-to-last platform gap</li><li><strong>Percentage margins as a rule</strong> — the only unit type of its kind in the sample (avoiding round-screen clipping)</li><li><strong>The <code>Arc</code> curved-typography category plus a dedicated font axis</strong> — unique in the sample</li><li><strong>No scaling at 20sp and above</strong> — the ceiling extreme of accessibility scaling (symmetric with TDS)</li><li>One breakpoint (225dp), with the screen dimension being a diameter</li><li>Scaling permission split by typographic role (Display forbidden / Body allowed)</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li>User font scaling supported differentially by role and size (detailed in the body)</li><li>Contrast and touch-target figures are unverified on these pages</li></ul>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li><strong>Basis for figma_kit (true):</strong> a Design kits page exists — not yet examined</li><li>Documentation: developer.android.com/design/ui/wear (confirmed to pass the proxy — measured from the HTML)</li><li>The previous-generation guide (<code>m2-5/</code>) still lives at its URL alongside this one — a case of migration being left visible (the documentation equivalent of the Vibes and HSDS family)</li><li><strong>Still to confirm:</strong> per-component figures (the m3 spec pages for buttons, cards and so on), the contents of the Figma design kits, real colour-token values, and the minimum touch target</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

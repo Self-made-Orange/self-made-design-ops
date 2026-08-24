@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Astro UXDS — Self-Made DesignOps</title>
+<meta name="description" content="A design system for mission control. It keeps security classification colours as tokens, takes dark as the default, and its tokens come in three layers.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/astro-uxds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Astro UXDS — Self-Made DesignOps">
+<meta property="og:description" content="A design system for mission control. It keeps security classification colours as tokens, takes dark as the default, and its tokens come in three layers.">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/astro-uxds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Astro UXDS — Self-Made DesignOps">
+<meta name="twitter:description" content="A design system for mission control. It keeps security classification colours as tokens, takes dark as the default, and its tokens come in three layers.">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Astro UXDS",
+ "description": "A design system for mission control. It keeps security classification colours as tokens, takes dark as the default, and its tokens come in three layers.",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/astro-uxds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Astro UXDS",
+  "applicationCategory": "DesignApplication",
+  "url": "https://astrouxds.com"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-three-layers">Tokens — three layers</a></li><li class="lvl3"><a href="#dark-is-the-default">Dark is the default</a></li><li><a href="#security-classification-colours-unique-in-the-sample">Security classification colours — unique in the sample</a></li><li><a href="#state-colours-six-steps-in-control-room-vocabulary">State colours — six steps, in control-room vocabulary</a></li><li><a href="#data-visualisation-colours-eight-all-in-the-cool-range">Data-visualisation colours — eight, all in the cool range</a></li><li><a href="#typography-144-composite-tokens">Typography — 144 composite tokens</a></li><li><a href="#elsewhere">Elsewhere</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-rux-button-the-height-derives-the-inline-padding-is-fixed">Buttons (rux-button) — the height derives, the inline padding is fixed</a></li><li class="lvl3"><a href="#inputs-rux-input-the-same-three-step-derivation-as-the-button">Inputs (rux-input) — the same three-step derivation as the button</a></li><li class="lvl3"><a href="#dialogs-rux-dialog-a-single-448px-radius-0">Dialogs (rux-dialog) — a single 448px, radius 0</a></li><li class="lvl3"><a href="#characteristic-decision-1-rux-classification-marking">Characteristic decision 1 — rux-classification-marking</a></li><li class="lvl3"><a href="#characteristic-decision-2-there-are-no-easing-tokens">Characteristic decision 2 — there are no easing tokens</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Rocket Communications</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://astrouxds.com" rel="noopener">Official site</a><br><a href="https://github.com/RocketCommunicationsInc/astro" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/astro-uxds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Astro UXDS</span></nav>
+    <h1>Astro UXDS</h1>
+    <p class="doc-lede">Rocket Communications · aerospace · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>A design system for <strong>mission control</strong>. It <strong>keeps security classification colours as tokens</strong>, takes dark as the default, and its tokens come in <strong>three layers</strong>.</p>
+<blockquote><p><strong><code>domain: aerospace</code> was added for this entry.</strong> The existing values (enterprise · consumer · commerce · os · public · health · data · framework) cannot hold it — most of this system's decisions come out of <strong>the context of satellite and launch-vehicle operations.</strong></p></blockquote>
+<h2 id="tokens-three-layers">Tokens — three layers</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>file</th><th style="text-align:center">tokens</th><th>layer</th></tr></thead><tbody><tr><td><code>base.reference.json</code></td><td style="text-align:center"><strong>306</strong></td><td>raw (palette · type combinations)</td></tr><tr><td><code>base.system.json</code></td><td style="text-align:center"><strong>50</strong></td><td>semantic (background · text · status · <strong>classification</strong>)</td></tr><tr><td><code>base.component.json</code></td><td style="text-align:center"><strong>280</strong></td><td>per component</td></tr><tr><td><code>theme.light.json</code></td><td style="text-align:center"><strong>67</strong></td><td>light-theme overrides</td></tr></tbody></table></div>
+<p>The order is <strong><code>reference</code> → <code>system</code> → <code>component</code></strong>. Astro UXDS is the only system in the sample to carry tokens down to a component layer (Cloudscape has context overrides, and Atlassian's per-component tokens are motion only).</p>
+<p>It has the same number of layers as Seed Design's <code>scale</code> / <code>static</code> / <code>semantic</code>, but <strong>the third layer is of a different character</strong> — Seed's is fixed values, Astro's is components.</p>
+<p>The distribution of the 280 <code>component</code> tokens:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>component</th><th style="text-align:center">tokens</th></tr></thead><tbody><tr><td><code>push-button</code></td><td style="text-align:center"><strong>30</strong></td></tr><tr><td><code>notification-banner</code></td><td style="text-align:center">25</td></tr><tr><td><strong><code>status-symbol</code></strong></td><td style="text-align:center"><strong>20</strong></td></tr><tr><td><code>button-color</code></td><td style="text-align:center">14</td></tr><tr><td><code>button-padding</code></td><td style="text-align:center">12</td></tr><tr><td><code>select-color</code> · <code>radio-control</code> · <code>button-icon</code></td><td style="text-align:center">8 · 7 · 7</td></tr></tbody></table></div>
+<p><strong><code>status-symbol</code> gets 20</strong> — dedicated to the status indicator icons of a control screen.</p>
+<h3 id="dark-is-the-default">Dark is the default</h3>
+<p><strong>There is only a <code>theme.light.json</code></strong> (67 tokens). There is no dark theme file — the values in <code>base.system.json</code> are already dark.</p>
+<pre class="md-code"><code>color-background-base-default    = #101923   ← nearly black
+color-background-surface-default = #1b2d3e
+color-background-base-header     = #172635</code></pre>
+<p>Two systems in the sample take dark as the default: <strong>visionOS</strong> and Astro UXDS (<code>patterns/color.md</code>). visionOS because it is a spatial UI, Astro because of <strong>the darkened control room</strong> — though the latter's rationale is not written in the token files.</p>
+<p><strong>The light theme is only 67 overrides.</strong> It covers the 50 semantic tokens and some of the component ones.</p>
+<h2 id="security-classification-colours-unique-in-the-sample">Security classification colours — unique in the sample</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th><th>colour</th></tr></thead><tbody><tr><td><code>color-classification-unclassified</code></td><td style="text-align:center"><code>#007a33</code></td><td>green</td></tr><tr><td><code>color-classification-cui</code></td><td style="text-align:center"><code>#502b85</code></td><td>purple</td></tr><tr><td><code>color-classification-confidential</code></td><td style="text-align:center"><code>#0033a0</code></td><td>blue</td></tr><tr><td><code>color-classification-secret</code></td><td style="text-align:center"><code>#c8102e</code></td><td>red</td></tr><tr><td><code>color-classification-topsecret</code></td><td style="text-align:center"><code>#ff8c00</code></td><td>orange</td></tr><tr><td><code>color-classification-topsecretsci</code></td><td style="text-align:center"><code>#fce83a</code></td><td>yellow</td></tr></tbody></table></div>
+<p><strong>The US government's document classification marking standard, moved into tokens.</strong> <code>CUI</code> is Controlled Unclassified Information and <code>SCI</code> is Sensitive Compartmented Information.</p>
+<p><strong>The colour order is not a severity ramp</strong> — green → purple → blue → red → orange → yellow. Regardless of Cloudscape's severity convention (red→orange→yellow) or the state-colour convention (success green / danger red), <strong>it uses the colours an external standard fixed.</strong></p>
+<p><strong>This is a case of a domain constraint deciding the tokens.</strong> The same kind of thing as the automotive platform's 24sp minimum type and 64dp touch target (<code>platforms.md</code>) — an <strong>external requirement</strong>, not a design judgement.</p>
+<h2 id="state-colours-six-steps-in-control-room-vocabulary">State colours — six steps, in control-room vocabulary</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>color-status-critical</code></td><td style="text-align:center"><code>#ff3838</code></td></tr><tr><td><code>color-status-serious</code></td><td style="text-align:center"><code>#ffb302</code></td></tr><tr><td><code>color-status-caution</code></td><td style="text-align:center"><code>#fce83a</code></td></tr><tr><td><code>color-status-normal</code></td><td style="text-align:center"><code>#56f000</code></td></tr><tr><td><strong><code>color-status-standby</code></strong></td><td style="text-align:center"><code>#2dccff</code></td></tr><tr><td><strong><code>color-status-off</code></strong></td><td style="text-align:center"><code>#a4abb6</code></td></tr></tbody></table></div>
+<p><strong><code>critical</code> → <code>serious</code> → <code>caution</code> → <code>normal</code> is the severity ramp</strong> (red→orange→ yellow→green). The same number of steps as Cloudscape's <code>critical/high/medium/low</code>, with <strong>names drawn from control-room vocabulary</strong>.</p>
+<p><strong>There are also <code>standby</code> and <code>off</code>.</strong> They express equipment state, and no other system in the sample has a state colour for &quot;on standby&quot; or &quot;powered off&quot;.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>system</th><th>state-colour axes</th></tr></thead><tbody><tr><td><strong>Astro UXDS</strong></td><td><strong>4 severity + 2 equipment state</strong> (<code>standby</code> · <code>off</code>)</td></tr><tr><td>Cloudscape</td><td>4 meaning + 5 severity</td></tr><tr><td>Atlassian</td><td>danger · warning · success · discovery · information</td></tr><tr><td>shadcn/ui</td><td>a single <code>destructive</code></td></tr></tbody></table></div>
+<p><strong><code>normal</code> is <code>#56f000</code>, a fluorescent green.</strong> A value premised on contrast against a dark background, far brighter than an ordinary web system's success colour (Cloudscape's <code>#00802f</code>).</p>
+<h2 id="data-visualisation-colours-eight-all-in-the-cool-range">Data-visualisation colours — eight, all in the cool range</h2>
+<pre class="md-code"><code>#00c7cb · #938bdb · #4dacff · #70dde0 · #c9c5ed · #92cbff · #a1e9eb · #b7dcff</code></pre>
+<p><strong>Only teals, pale blues and pale purples.</strong> Red, orange, yellow and green are <strong>deliberately absent</strong> — those colours are assigned to status and classification.</p>
+<p><strong>Astro UXDS is the only system in the sample whose chart palette divides the hue space with the state colours.</strong></p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>system</th><th>chart colour strategy</th></tr></thead><tbody><tr><td>Atlassian</td><td>hue separation (16 <code>categorical</code>)</td></tr><tr><td>Cloudscape</td><td>contrast-ratio steps (8 colours × 10)</td></tr><tr><td>shadcn/ui</td><td>a single-hue lightness ramp (5)</td></tr><tr><td><strong>Astro UXDS</strong></td><td><strong>8 cool colours — avoiding collision with the state colours</strong></td></tr></tbody></table></div>
+<p>On a control screen, chart colours overlapping alarm colours would produce misreadings, so they are separated — <strong>though that rationale is not in the token files.</strong></p>
+<h2 id="typography-144-composite-tokens">Typography — 144 composite tokens</h2>
+<p>The type tokens of the <code>reference</code> layer are composed by family.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>family</th><th style="text-align:center">tokens</th></tr></thead><tbody><tr><td><code>font-heading-*</code></td><td style="text-align:center"><strong>56</strong></td></tr><tr><td><code>font-body-*</code></td><td style="text-align:center"><strong>48</strong></td></tr><tr><td><code>font-display-*</code></td><td style="text-align:center">16</td></tr><tr><td><strong><code>font-control-*</code></strong></td><td style="text-align:center"><strong>16</strong></td></tr><tr><td><code>font-monospace-*</code></td><td style="text-align:center">8</td></tr></tbody></table></div>
+<p><strong>The <code>font-control-*</code> family stands apart</strong> — text dedicated to controls such as buttons and inputs. Astro UXDS is the only system in the sample to separate a type family for controls (the same idea as Helios separating <code>Code</code>, on a different target).</p>
+<p>A single style is split into <code>font-family</code> · <code>font-size</code> · <code>font-weight</code> · <code>line-height</code> · <code>letter-spacing</code>, so the token count is large — and <strong>the weight variants are separate tokens too</strong>, as in <code>font-body-1-font-family</code> and <code>font-body-1-bold-font-family</code>.</p>
+<p><strong>Every typeface is a Roboto fallback stack</strong> — five families, one typeface. The same typeface as Material 3.</p>
+<p>Ten size steps (<code>reference</code>):</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th><th style="text-align:center">px</th></tr></thead><tbody><tr><td><code>xs</code></td><td style="text-align:center">0.75rem</td><td style="text-align:center">12</td></tr><tr><td><code>sm</code></td><td style="text-align:center">0.875rem</td><td style="text-align:center">14</td></tr><tr><td><code>base</code></td><td style="text-align:center">1rem</td><td style="text-align:center">16</td></tr><tr><td><code>lg</code></td><td style="text-align:center">1.125rem</td><td style="text-align:center">18</td></tr><tr><td><code>xl</code></td><td style="text-align:center">1.25rem</td><td style="text-align:center">20</td></tr><tr><td><code>2xl</code></td><td style="text-align:center">1.5rem</td><td style="text-align:center">24</td></tr><tr><td><code>3xl</code></td><td style="text-align:center"><strong>1.75rem</strong></td><td style="text-align:center"><strong>28</strong></td></tr><tr><td><code>4xl</code></td><td style="text-align:center"><strong>2.125rem</strong></td><td style="text-align:center"><strong>34</strong></td></tr><tr><td><code>5xl</code></td><td style="text-align:center">3rem</td><td style="text-align:center">48</td></tr><tr><td><code>6xl</code></td><td style="text-align:center">3.75rem</td><td style="text-align:center">60</td></tr></tbody></table></div>
+<p><strong><code>4xl</code> is 2.125rem = 34px.</strong> Neither 32 nor 36 — in the sample, 34px is the same value as Apple's Large Title (34pt).</p>
+<p>Line height is <strong>a separate family of nine steps</strong> — <code>2xs</code> 0.875rem (14) · <code>xs</code> 1rem (16) · <code>sm</code> 1.25 (20) · <code>base</code> 1.5 (24) · <code>lg</code> 1.75 (28) · <code>xl</code> 2 (32) · <code>2xl</code> 2.5 (40) · <code>3xl</code> 3.5 (56) · <code>4xl</code> <strong>4.375rem (70)</strong>.</p>
+<p><strong>There are fewer line-height steps than size steps</strong> (9 against 10) — as in Evergreen, the size array and the line-height array are separate and the implementation decides the pairing (<code>patterns/typography.md</code>).</p>
+<h2 id="elsewhere">Elsewhere</h2>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>token</th><th style="text-align:center">value</th></tr></thead><tbody><tr><td><code>opacity-disabled</code></td><td style="text-align:center"><strong>40%</strong></td></tr><tr><td><code>border-width-focus-default</code></td><td style="text-align:center"><strong>1px</strong></td></tr><tr><td><code>spacing-focus-default</code></td><td style="text-align:center">0.125rem (2px)</td></tr><tr><td><code>color-border-focus-default</code></td><td style="text-align:center"><strong><code>#da9ce7</code></strong> (pale purple)</td></tr><tr><td><code>color-background-transparent</code></td><td style="text-align:center"><code>#00000000</code> (an eight-digit hex)</td></tr></tbody></table></div>
+<p><strong><code>opacity-disabled</code> is 40%, the same as Atlassian's 0.4</strong> (<code>systems/atlassian.md</code>).</p>
+<p><strong>The focus border is 1px</strong> — the thinnest in the sample (the majority use 2px, shadcn/ui 3px — <code>patterns/button.md</code>). In its place there is a 2px <code>spacing-focus-default</code> offset.</p>
+<p><strong>The focus colour is a pale purple (<code>#da9ce7</code>)</strong> — a colour chosen not to collide with the six classification colours or the six status colours. The same judgement as Radix Themes keeping <code>--focus-*</code> independent of the accent colour (<code>patterns/form.md</code>).</p>
+<p><strong>There is no spacing scale in the <code>system</code> layer.</strong> There is only <code>spacing-focus-default</code>; spacing lives per component in the <code>component</code> layer (the 12 <code>button-padding</code> tokens and so on).</p>
+<h2 id="components">Components</h2>
+<p>Distributed as <code>@astrouxds/astro-web-components@8.0.0</code> (Web Components). React, Angular and Vue wrappers ship separately.</p>
+<p>Confirmed from the <code>component</code> layer tokens: <code>push-button</code> · <code>notification-banner</code> · <code>status-symbol</code> · <code>select</code> · <code>radio-control</code> · <code>button-icon</code>. <del>The full list was not checked.</del> → <strong>all 45 confirmed</strong> (the deep pass below, 2026-08-18).</p>
+<h2 id="components-in-depth-2026-08-18">Components in depth — (2026-08-18)</h2>
+<p>Measured from <code>dist/collection/components/*/​*.css</code> in <code>@astrouxds/astro-web-components@8.0.0</code> (a Stencil build — the per-component CSS survives in plain text). Of the 45 directories, besides buttons, forms and dialogs, many are <strong>control-room-specific components</strong> such as <code>rux-clock</code> · <code>rux-log</code> · <code>rux-monitoring-icon</code> · <code>rux-timeline</code> · <code>rux-global-status-bar</code>.</p>
+<h3 id="buttons-rux-button-the-height-derives-the-inline-padding-is-fixed">Buttons (<code>rux-button</code>) — the height derives, the inline padding is fixed</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">default</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>block padding</td><td style="text-align:center">4px</td><td style="text-align:center">8px</td><td style="text-align:center">12px</td></tr><tr><td>inline padding</td><td style="text-align:center"><strong>16px</strong></td><td style="text-align:center"><strong>16px</strong></td><td style="text-align:center"><strong>16px</strong></td></tr><tr><td>type</td><td style="text-align:center">16px / 20px / <strong>400</strong></td><td style="text-align:center">the same</td><td style="text-align:center">the same</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>28px</strong></td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center"><strong>44px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li>No height is declared; it <strong>derives from the 20px line height plus the block padding</strong>. There is no min-width either.</li><li><strong>The size variants change only the vertical padding</strong> — 16px inline is shared by all three. A rare form of using the size axis in one direction only.</li><li><strong>The type stays at 16px and weight 400</strong> — no bold is laid on the control (it consumes <code>font-control-body-1</code>). The exact opposite judgement to Backpack's 16px at 700.</li><li>Radius <strong>3px</strong> (<code>--radius-base</code>) — the token file's value confirmed in real use by the component.</li><li>The secondary variant's border is not a <code>border</code> but <strong><code>box-shadow: … 0 0 0 1px inset</code></strong>.</li><li>Every value is a <code>var(--token, fallback)</code> pair — the three-layer tokens' <code>component</code> layer is actually distributed as this fallback chain.</li></ul>
+<h3 id="inputs-rux-input-the-same-three-step-derivation-as-the-button">Inputs (<code>rux-input</code>) — the same three-step derivation as the button</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th style="text-align:center">small</th><th style="text-align:center">medium</th><th style="text-align:center">large</th></tr></thead><tbody><tr><td>padding</td><td style="text-align:center">4px / 8px</td><td style="text-align:center">8px</td><td style="text-align:center">12px / 8px</td></tr><tr><td><strong>derived height</strong></td><td style="text-align:center"><strong>28px</strong></td><td style="text-align:center"><strong>36px</strong></td><td style="text-align:center"><strong>44px</strong></td></tr></tbody></table></div>
+<ul class="md-list"><li>The inner <code>&amp;lt;input&amp;gt;</code> is <strong>fixed at 20px high</strong> (<code>--line-height-sm</code>) and the wrapper's padding makes the size — exactly the same 28/36/44 system as the button.</li><li>The border is again an <strong>inset box-shadow of 1px</strong> (<code>#2b659b</code> muted), as on the secondary button — on hover only the colour changes, to <code>#92cbff</code>. The whole system draws its borders with shadows.</li><li>Focus is the token value as-is, <strong>a 1px outline with a 2px offset</strong> (<code>#da9ce7</code>) — the same as the button.</li><li>Radius 3px, and the background is the base colour (<code>#101923</code>) — sunk darker than the surface.</li></ul>
+<h3 id="dialogs-rux-dialog-a-single-448px-radius-0">Dialogs (<code>rux-dialog</code>) — a single 448px, radius 0</h3>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>item</th><th>value</th></tr></thead><tbody><tr><td>width</td><td><strong>a fixed 28rem (448px)</strong> — no size variants</td></tr><tr><td>radius</td><td><strong>none (0)</strong></td></tr><tr><td>scrim</td><td>rgba(0,0,0,.5)</td></tr><tr><td>entrance</td><td><strong>a 0.5s fadeIn</strong> (fade only)</td></tr><tr><td>header</td><td><code>font-heading-2</code> 24px, background <code>#172635</code> (separate from the body's <code>#1b2d3e</code>)</td></tr><tr><td>content padding</td><td>16px</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>One width step and square corners</strong> — the minimal composition, at the opposite pole from Backpack's two steps and MUI's five. The header is separated as <strong>a band</strong> of a different background colour from the body.</li><li>The 0.5s fade is among the slowest modals in the sample (Backpack 200ms · MUI 225ms).</li></ul>
+<h3 id="characteristic-decision-1-rux-classification-marking">Characteristic decision 1 — <code>rux-classification-marking</code></h3>
+<p>The six classification tokens have <strong>a dedicated component as their consumer</strong>.</p>
+<ul class="md-list"><li>The banner variant: <code>min-height: 24px</code>, <code>position: sticky</code>, <strong>forced uppercase</strong>, weight<ol class="md-list"><li>The classification band pinned to the top or bottom of the screen.</li><li>The tag variant: 14px/700, padding 4/12px, radius 3px — an inline classification mark.</li><li>On the <code>top-secret</code> (orange) and <code>top-secret-sci</code> (yellow) backgrounds <strong>the text inverts to black</strong> — contrast provision for the light classification colours, hardcoded into the component layer.</li></ol></li></ul>
+<h3 id="characteristic-decision-2-there-are-no-easing-tokens">Characteristic decision 2 — there are no easing tokens</h3>
+<p>The button CSS declares no <code>transition</code> (hover switches instantly) and the dialog uses a literal <code>fadeIn 0.5s</code>. That is consistent with there being zero motion tokens among the 636 across the three layers — a form that <strong>effectively places motion outside the system</strong> (readable as excluding decorative motion from a control UI, though no supporting document was confirmed).</p>
+<h3 id="characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</h3>
+<ul class="md-list"><li><strong>Buttons and inputs share derived heights of 28/36/44px</strong> — 20px of content plus 4/8/12 of padding</li><li><strong>The size variants change the vertical only</strong> — 16px inline padding shared by all three</li><li><strong>No bold on control type (400)</strong> — what <code>font-control-*</code> actually separates is line height, not weight</li><li><strong>Borders unified as inset box-shadows</strong> (inputs and secondary buttons)</li><li><strong>A single 448px dialog with radius 0 and a 0.5s fade</strong></li><li><strong>The classification marking as a dedicated component</strong> — with the black-text inversion on the light classification colours built in</li></ul>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>Six security classification colours kept as tokens</strong> (<code>unclassified</code> to <code>topsecretsci</code>). Unique in the sample, and a case of <strong>an external standard fixing the colours</strong></li><li><strong><code>domain: aerospace</code></strong> — added because the existing domain values cannot hold it</li><li><strong>Dark is the default.</strong> There is only a <code>theme.light.json</code> and no dark file. One of just two, with visionOS</li><li><strong>The tokens are three-layered and the third is a component layer</strong> (280 tokens). Different in character from Seed Design's three layers (<code>scale</code>/<code>static</code>/<code>semantic</code>)</li><li><strong>The chart colours are eight cool hues, dividing the hue space with the state colours.</strong> Red, orange, yellow and green are not used in charts</li><li><strong>The state colours include <code>standby</code> and <code>off</code></strong> — expressing equipment state. No other system in the sample has them</li><li><strong>A separate <code>font-control-*</code> family</strong> — typography dedicated to controls</li><li><strong>144 type tokens</strong> — the count is large because even the weight variants are separate tokens</li><li><strong>A 1px focus border, the thinnest in the sample</strong> (plus a 2px offset)</li><li><strong>A focus colour in pale purple, colliding with neither the classification nor the status colours</strong></li><li><strong>There is no spacing scale in the semantic layer</strong> — spacing lives in the component layer</li><li><strong>The <code>status-symbol</code> component uses 20 tokens</strong> — the core element of a control screen</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li><code>opacity-disabled: 40%</code></li><li>A 1px focus border + a 2px offset + a dedicated colour</li><li><strong>The classification and status colours are distinguished by colour alone</strong> — no rule requiring an accompanying icon or text could be confirmed at the token level. The <code>status-symbol</code> component may play that role, but the tokens alone cannot settle it</li><li>No explicit WCAG target was confirmed from the package</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Documentation: https://astrouxds.com</li><li>Repository: https://github.com/RocketCommunicationsInc/astro</li><li>Tokens: <code>npm pack @astrouxds/tokens@1.14.0</code> → <code>package/dist/json/*.json</code></li><li>Components in depth: <code>npm pack @astrouxds/astro-web-components@8.0.0</code> → <code>dist/collection/components/*/​*.css</code> (2026-08-18)</li><li><strong>There is a separate <code>@astrouxds/design-tokens@2.0.0-beta.18</code></strong> — it looks like the next version and was not checked</li><li>Licence: <code>package.json</code> says <strong>MIT</strong> while the bundled <code>LICENSE</code> is Rocket Communications' own notice (stating development under a US government contract) — the two disagree. <strong>The frontmatter follows the LICENSE text (2026-08-18)</strong></li><li><strong>Open questions:</strong> <del>the licence</del> <del>the component list</del> (resolved 2026-08-18 — the deep pass), the spacing system (the component layer in full), the scope of the 67 <code>theme.light.json</code> overrides, and the means of distinguishing classification other than colour (the banner component is confirmed to carry accompanying text)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>public domain (commissioned by the US government) + an unlimited royalty-free licence</code> — source: github RocketCommunicationsInc/astro → <code>LICENSE</code> — a work commissioned by the US government, therefore public domain within the United States, plus a royalty-free worldwide licence conditioned on retaining the copyright notice</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

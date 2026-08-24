@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NASA Web Design System — Self-Made DesignOps</title>
+<meta name="description" content="The second aerospace sample — but unlike Astro UXDS this is not a mission-control scheme of its own, it is a configuration overlay on USWDS 3.x. Even…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/nasa-wds.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="NASA Web Design System — Self-Made DesignOps">
+<meta property="og:description" content="The second aerospace sample — but unlike Astro UXDS this is not a mission-control scheme of its own, it is a configuration overlay on USWDS 3.x. Even…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/nasa-wds.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NASA Web Design System — Self-Made DesignOps">
+<meta name="twitter:description" content="The second aerospace sample — but unlike Astro UXDS this is not a mission-control scheme of its own, it is a configuration overlay on USWDS 3.x. Even…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "NASA Web Design System",
+ "description": "The second aerospace sample — but unlike Astro UXDS this is not a mission-control scheme of its own, it is a configuration overlay on USWDS 3.x. Even…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/nasa-wds.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "NASA Web Design System",
+  "applicationCategory": "DesignApplication",
+  "url": "https://nasa.github.io/nasawds-site"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-08-18",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#structure-overwriting-uswds-settings">Structure — overwriting USWDS settings</a></li><li><a href="#an-answer-to-the-aerospace-domain-question">An answer to the aerospace domain question</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#the-full-set-of-overrides-zero-at-the-component-layer">The full set of overrides — zero at the component layer</a></li><li class="lvl3"><a href="#compiled-measurements-uswds-3130s-defaults-come-through-unchanged">Compiled measurements — USWDS 3.13.0's defaults come through unchanged</a></li><li class="lvl3"><a href="#typeface-the-actual-scope-of-the-helvetica-replacement">Typeface — the actual scope of the &quot;Helvetica replacement&quot;</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+  </div>
+  <div class="railfoot"><b>NASA</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://nasa.github.io/nasawds-site" rel="noopener">Official site</a><br><a href="https://github.com/nasa/nasawds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nasa-wds.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>NASA Web Design System</span></nav>
+    <h1>NASA Web Design System</h1>
+    <p class="doc-lede">NASA · aerospace · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p><strong>The second <code>aerospace</code> sample</strong> — but unlike Astro UXDS this is not a mission-control scheme of its own, it is <strong>a configuration overlay on USWDS 3.x</strong>. Even within one domain, &quot;a space agency's website&quot; and &quot;a spacecraft control UI&quot; produce entirely different systems.</p>
+<h2 id="structure-overwriting-uswds-settings">Structure — overwriting USWDS settings</h2>
+<pre class="md-code"><code class="language-scss">$theme-color-primary:  'blue-warm-60v',   // NASA blue
+$theme-color-secondary: 'red-50v',        // NASA red
+$theme-font-type-lang:  'helvetica',
+$theme-h3-font-size: 10, $theme-h4-font-size: 8,  // USWDS size indices</code></pre>
+<ul class="md-list"><li><strong>There are no tokens of its own</strong> — it takes <code>@uswds/uswds</code> as a dependency and changes only the <code>$theme-*</code> variables. The <strong>USWDS edition</strong> of the same position as SGDS (a Bootstrap fork), differing in that this is <strong>a single settings file</strong> rather than a fork</li><li>Colours are specified with USWDS colour names (<code>blue-warm-60v</code>) — it speaks in the inherited system's vocabulary</li><li><del>It replaces the typeface from the USWDS default (Public Sans) with Helvetica</del> (corrected 2026-08-18 — <strong>headings only are Helvetica</strong>; body keeps Source Sans Pro. See the deep-dive below)</li></ul>
+<h2 id="an-answer-to-the-aerospace-domain-question">An answer to the <code>aerospace</code> domain question</h2>
+<p>This was to be the second sample settling whether Astro UXDS (mission control, status colour vocabulary) reflects a domain tendency or stands alone — and <strong>the answer is &quot;not comparable&quot;.</strong> NASA WDS is a USWDS overlay for a website, so it meets Astro's severity colours and control-room vocabulary nowhere. This sample's conclusion is that the <code>aerospace</code> domain contains <strong>two layers, control UI (Astro) and agency web (NASA WDS)</strong>.</p>
+<h2 id="component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</h2>
+<p>The full set of overrides was checked in the same <code>nasawds@4.0.70</code>, and the resolved button, input and modal values were measured from the bundled compiled output <code>src/css/styles.css</code> (<strong>built with USWDS 3.13.0</strong> — the version is stated in a comment).</p>
+<h3 id="the-full-set-of-overrides-zero-at-the-component-layer">The full set of overrides — zero at the component layer</h3>
+<p>The whole theme is <strong>17 settings plus 194 lines of custom SCSS</strong>:</p>
+<ul class="md-list"><li><code>_uswds-theme.scss</code> (22 lines): 10 colours (<code>$theme-color-primary: 'blue-warm-60v'</code> and so on) plus 7 typography settings (<code>$theme-font-type-lang: 'helvetica'</code> · <code>$theme-h3-font-size: 10</code> · <code>$theme-h4-font-size: 8</code>)</li><li><code>_uswds-theme-custom-styles.scss</code> (194 lines): mostly a dark header variant (<code>usa-header--dark</code>), plus <code>letter-spacing(-2)</code> on h1 and h2 and <code>ink</code> backgrounds on hero and section</li><li><strong>Zero instances of the <code>$theme-button-*</code>, <code>$theme-input-*</code> or <code>$theme-modal-*</code> families</strong> — nothing touches button, input or modal dimensions, radii or motion. <strong>Confirmed: no component distribution and no component-setting overrides.</strong></li></ul>
+<h3 id="compiled-measurements-uswds-3130s-defaults-come-through-unchanged">Compiled measurements — USWDS 3.13.0's defaults come through unchanged</h3>
+<p>Values cross-checking the source reading in the uswds.md deep-dive (the same 3.13.0) <strong>against the build output</strong>:</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th></th><th>Measured (styles.css)</th></tr></thead><tbody><tr><td>Button</td><td>padding <strong>12/20px</strong> · radius <strong>4px</strong> · <strong>700</strong> · 17px (1.06rem) · line height 0.9 · <code>#0050d8</code></td></tr><tr><td>Input</td><td><strong>height 40px</strong> · border <strong>1px</strong> <code>#565c65</code> · radius 0 · max-width 30rem</td></tr><tr><td>Modal</td><td>max-width <strong>480px</strong> / lg <strong>880px</strong> · radius <strong>8px</strong> · padding 32px</td></tr><tr><td>Modal entry</td><td><strong>opacity fade only, .15s ease-in-out</strong> (no transform)</td></tr></tbody></table></div>
+<ul class="md-list"><li>The button colour <code>#0050d8</code> is <strong>the only component-level difference NASA chose</strong> — the resolved result of the USWDS colour name <code>blue-warm-60v</code>.</li><li>The text input border compiles to <strong>1px</strong> — the build output reveals that <code>$theme-input-select-border-width: 2px</code>, recorded in uswds.md, is despite its name a variable applying to the checkbox and radio family (a candidate footnote for uswds.md).</li><li>The modal entry being a fade only puts it alongside GOV.UK's and NHS's &quot;no modal&quot; to form a spectrum of government-family modal conservatism: none (GDS, NHS) → fade only (USWDS).</li></ul>
+<h3 id="typeface-the-actual-scope-of-the-helvetica-replacement">Typeface — the actual scope of the &quot;Helvetica replacement&quot;</h3>
+<p><del>It replaces the typeface from the USWDS default with Helvetica</del> (correcting the description in the section above) — <strong>Helvetica is for headings only.</strong> <code>$theme-font-type-lang: 'helvetica'</code> defines the <code>lang</code> font type and <code>$theme-font-role-heading: 'lang'</code> assigns it <strong>to the heading role only</strong>. In the compiled output, body, buttons and inputs keep <code>Source Sans Pro Web</code>, and only headings such as <code>usa-modal__heading</code> get <code>Helvetica Neue, Helvetica, …</code>. A structure where the brand intervenes only at the display layer.</p>
+<h3 id="notable-decisions-deep-dive">Notable decisions (deep-dive)</h3>
+<ul class="md-list"><li><strong>Zero component overrides</strong> — the far end of the derivation spectrum: NHS (a fork replacing values) &gt; SGDS (editing variables) &gt; <strong>NASA WDS (colour and headings only)</strong></li><li><strong>Helvetica for headings only</strong> — body keeps the USWDS default</li><li>The compiled output bundled — <strong>a distribution form verifiable from the build result</strong> rather than the source</li></ul>
+<h2 id="notable-decisions">Notable decisions</h2>
+<ul class="md-list"><li><strong>A dependency plus one settings file</strong> — the thinnest form of inheritance (lighter than a fork)</li><li>Purpose (control room vs web) divides the scheme even within one domain — a demonstration of the <code>domain</code> axis's limits</li><li>Brand colours specified in USWDS vocabulary</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<p>Unverified — whether it uses USWDS's accessibility structure was not verified.</p>
+<h2 id="notes">Notes</h2>
+<ul class="md-list"><li>Tokens: <code>npm pack nasawds@4.0.70</code> → <code>src/theme/</code></li><li>Component deep-dive: the same package's <code>src/theme/_uswds-theme*.scss</code> plus <code>src/css/styles.css</code> (the USWDS 3.13.0 compiled output, 2026-08-18)</li><li><strong>Still to confirm:</strong> the nasawds-site documentation (blocked by the proxy), <del>the licence</del> (resolved 2026-08-18 — package.json states <strong>CC0-1.0</strong>; the frontmatter's &quot;not stated&quot; was an error, corrected 2026-08-18), <del>the full set of overrides</del> (resolved 2026-08-18 — 17 settings plus 194 custom lines, see the deep-dive)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>CC0-1.0</code> — source: npm <code>nasawds@4.0.70</code> → <code>package.json</code>. The repository (nasa/nasawds, redirecting to bruffridge/nasawds) has no LICENSE file</li></ul>
+  </div>
+</main>
+</div>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
