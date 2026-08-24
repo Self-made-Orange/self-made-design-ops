@@ -122,7 +122,15 @@ try {
   <div class="claim">
     <p><strong>The split is lopsided, on purpose.</strong> <span id="c-split">—</span></p>
     <p>Web is where design systems publish tokens; the thin axes are thin because the samples
-       genuinely are. <a href="./catalog.html">Open the catalog →</a></p>
+       genuinely are.</p>
+  </div>
+
+  <div class="rowgrp" id="c-preview">
+    <h3>Opened to <code>full</code> depth · first <span id="c-preview-n">10</span></h3>
+  </div>
+
+  <div class="cta">
+    <a class="btn btn-o" href="./catalog.html">Browse all <span id="c-all">—</span> systems →</a>
   </div>
 </div></section>
 
@@ -281,6 +289,19 @@ try {
     $('#c-split').textContent = Object.entries(d.by_platform)
       .sort((a, b) => b[1] - a[1])
       .map(([k, n]) => `${k} ${n}`).join(' · ') + '.';
+
+    // A sample of the catalog, ordered by the corpus's own depth measure rather than by
+    // anything editorial. The heading states the ordering so the ten are not read as a top ten.
+    const PREVIEW = 10;
+    const deep = d.systems.filter((s) => s.coverage === 'full').slice(0, PREVIEW);
+    set('#c-preview-n', deep.length);
+    set('#c-all', d.count);
+    $('#c-preview').append(...deep.map((s) =>
+      el('a', { className: 'kititem', href: BLOB + 'design-systems/systems/' + s.file }, [
+        el('code', { textContent: s.name }),
+        el('span', { textContent: `${s.org} · ${s.domain}` }),
+        el('em', { textContent: s.platform.join(' · ') }),
+      ])));
     set('#r-kit', kitCount);
     set('#r-axes', d.axes.length);
     set('#e-systems', d.count);
