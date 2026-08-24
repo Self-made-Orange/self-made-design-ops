@@ -27,15 +27,15 @@
    "id": "G004",
    "title": "wire",
    "objective": "카탈로그 링크 내부 전환 · sitemap 확장 · 내비게이션",
-   "status": "in_progress",
-   "evidence": null
+   "status": "complete",
+   "evidence": "카탈로그 116행·랜딩 프리뷰·축 카드가 전부 사이트 내부 페이지로 링크(프리렌더·런타임 JS 양쪽). sitemap 2→129 URL. 문서 페이지용 CSS(.doc/.md-table/.md-code/.md-list/.crumb 등) 추가. 헤더 마크업을 사이트 실제 구조(.top + .spacer)에 맞춤"
   },
   {
    "id": "G005",
    "title": "verify",
    "objective": "렌더 검증 + 링크 무결성 + 배포 + 라이브 확인",
-   "status": "pending",
-   "evidence": null
+   "status": "complete",
+   "evidence": "배포 성공 6a0eabeb, 라이브 확인 완료"
   }
  ]
 }

@@ -88,6 +88,97 @@
   /* ── Copyright year. A hard-coded year on a static page goes stale silently. */
   for (const y of document.querySelectorAll('[data-year]')) y.textContent = new Date().getFullYear();
 
+  /* ── The three commands, typed out.
+   *
+   * Constraints this has to satisfy, in order:
+   *
+   *  1. **The text stays in the DOM.** The snippet is static markup and is meant to be
+   *     indexable and copyable; it is revealed, never injected. Without JavaScript the
+   *     block is simply already finished.
+   *  2. **The highlighting survives.** Only the text nodes are truncated, so the
+   *     `.k` / `.cm` spans around them are untouched.
+   *  3. **Copy always gets the whole thing.** `data-full` is set before the first
+   *     character is hidden, and the copy handler already prefers it over textContent.
+   *  4. **No layout shift.** The height is pinned from the finished block before any text
+   *     is hidden, so nothing below it moves while it types.
+   *  5. **prefers-reduced-motion means no motion.** Not a faster type — none. This corpus
+   *     documents nine layers of reduced-motion handling across 17 systems; typing through
+   *     the setting would be a poor advertisement for reading it.
+   */
+  const snip = document.getElementById('snip');
+  if (snip && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const nodes = [];
+    const walk = document.createTreeWalker(snip, NodeFilter.SHOW_TEXT);
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) nodes.push({ node: n, text: n.nodeValue });
+    const total = nodes.reduce((sum, n) => sum + n.text.length, 0);
+
+    if (total) {
+      snip.dataset.full = snip.textContent;
+      snip.style.minHeight = snip.getBoundingClientRect().height + 'px';
+
+      const finish = () => {
+        for (const n of nodes) n.node.nodeValue = n.text;
+        snip.classList.remove('typing');
+      };
+      const show = (count) => {
+        let left = count;
+        for (const n of nodes) {
+          const take = Math.max(0, Math.min(n.text.length, left));
+          n.node.nodeValue = n.text.slice(0, take);
+          left -= take;
+        }
+      };
+
+      let started = false;
+      const start = () => {
+        if (started) return;
+        started = true;
+        snip.classList.add('typing');
+        show(0);                       // blank it only now — see the note below
+        /* Time-based rather than one timer per character, so the pace holds however often the
+         * callback actually runs, and a line ending gets a beat so the block reads as three
+         * commands rather than one stream.
+         *
+         * A timer rather than requestAnimationFrame: rAF stops entirely when the page is not
+         * being painted — a background tab, an occluded window — and the snippet would freeze
+         * half-typed and stay that way. Timers are throttled there instead of stopped, so it
+         * finishes either way. */
+        const PER_CHAR = 9;      // ms
+        const PER_BREAK = 90;    // extra ms after a character that ended a line
+        const TICK = 16;         // ms between repaints, about a frame
+        const full = snip.dataset.full;
+        let shown = 0;
+        let due = performance.now();
+        const step = () => {
+          const now = performance.now();
+          while (shown < total && now >= due) {
+            shown++;
+            due += full[shown - 1] === '\n' ? PER_CHAR + PER_BREAK : PER_CHAR;
+          }
+          show(shown);
+          if (shown < total) setTimeout(step, TICK);
+          else finish();
+        };
+        step();
+      };
+
+      /* The block is blanked inside start(), not here. If the observer never fires — the tab
+       * is hidden, the page is occluded, IntersectionObserver is missing — the snippet is
+       * simply already typed, which is the right thing to fail to. Blanking first and waiting
+       * would leave an empty box on screen. */
+      if (typeof IntersectionObserver === 'function') {
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) if (e.isIntersecting) { io.disconnect(); start(); }
+        }, { threshold: 0.25 });
+        io.observe(snip);
+      }
+      // Anyone reaching for Copy wants the snippet, not the performance.
+      for (const b of document.querySelectorAll('.copy[data-target="snip"]')) {
+        b.addEventListener('click', finish, { once: true });
+      }
+    }
+  }
+
   /* ── Copy buttons. `data-target` names the <pre> to copy. */
   for (const btn of document.querySelectorAll('.copy')) {
     const label = btn.textContent;
