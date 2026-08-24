@@ -24,11 +24,17 @@ const M = messages({
     noHeading: (file) => `no re-synthesis heading found (checked EN and KO): patterns/${file}`,
     written: (systems, axes, samples) =>
       `docs/data/corpus.json — ${systems} systems · ${axes} axes (samples ${samples})`,
+    crawlable: (n, d) =>
+      `sitemap.xml · robots.txt · JSON-LD · ${n} catalogue rows prerendered (lastmod ${d})`,
+    noRegion: (name, file) => `no <!--${name}:start--> … <!--${name}:end--> region in docs/${file}`,
   },
   ko: {
     noHeading: (file) => `재종합 절 제목을 찾지 못했습니다 (KO/EN 모두 확인): patterns/${file}`,
     written: (systems, axes, samples) =>
       `docs/data/corpus.json — 시스템 ${systems} · 축 ${axes} (표본 ${samples})`,
+    crawlable: (n, d) =>
+      `sitemap.xml · robots.txt · JSON-LD · 카탈로그 ${n}행 프리렌더 (lastmod ${d})`,
+    noRegion: (name, file) => `docs/${file} 에 <!--${name}:start--> … <!--${name}:end--> 구간이 없습니다`,
   },
 });
 
@@ -238,3 +244,126 @@ const out = {
 mkdirSync(OUT_DIR, { recursive: true });
 writeFileSync(join(OUT_DIR, 'corpus.json'), JSON.stringify(out, null, 1) + '\n');
 console.log(M.written(systems.length, out.axes.length, out.axes.map((a) => a.samples).join('/')));
+
+/* ── What the crawlers get ─────────────────────────────────────────────────
+ *
+ * Three things are written from here rather than kept by hand: the sitemap, the
+ * structured data, and a prerendered copy of the catalogue rows.
+ *
+ * The last one is the one that matters. `catalog.html` builds its list from
+ * corpus.json at runtime, so before this the 116 system names — the terms anyone
+ * would actually search for — existed nowhere in the served HTML. The rows are now
+ * emitted statically and the script replaces them on load with the same rows plus
+ * avatars and filtering.
+ *
+ * **Every date here is derived from the corpus, never from the clock.** `site.yml`
+ * regenerates on each PR and fails if the result differs from what is committed, so
+ * a `new Date()` in this file would break the build the day after any commit.
+ */
+
+const DOCS = join(ROOT, 'docs');
+const BASE = 'https://keepyaoung.github.io/self-made-design-ops/';
+
+/** The newest verification date in the corpus — deterministic, and the honest "last modified". */
+const lastmod = systems.map((s) => s.verified).filter(Boolean).sort().at(-1);
+
+const PAGES = [
+  { loc: BASE, priority: '1.0' },
+  { loc: `${BASE}catalog.html`, priority: '0.8' },
+];
+
+writeFileSync(join(DOCS, 'sitemap.xml'),
+  '<?xml version="1.0" encoding="UTF-8"?>\n' +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  PAGES.map((p) =>
+    `  <url>\n    <loc>${p.loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n` +
+    `    <changefreq>weekly</changefreq>\n    <priority>${p.priority}</priority>\n  </url>`
+  ).join('\n') + '\n</urlset>\n');
+
+writeFileSync(join(DOCS, 'robots.txt'),
+  '# Everything here is meant to be read.\n' +
+  'User-agent: *\n' +
+  'Allow: /\n\n' +
+  `Sitemap: ${BASE}sitemap.xml\n`);
+
+/* ── Structured data ─────────────────────────────────────────────────────── */
+
+const esc = (t) => String(t)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;');
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Self-Made DesignOps — design system corpus',
+  description:
+    `Measured token values from ${systems.length} public design systems, each claim pinned to a ` +
+    'source and a version, cross-compared on nine component axes. Values that could not be ' +
+    'confirmed are marked unverified rather than filled in.',
+  url: BASE,
+  sameAs: out.repo,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  isAccessibleForFree: true,
+  creator: { '@type': 'Person', name: 'keepYaoung' },
+  dateModified: lastmod,
+  keywords: ['design systems', 'design tokens', 'UI patterns', 'design system corpus'],
+  variableMeasured: out.axes.map((a) => ({
+    '@type': 'PropertyValue', name: a.title, description: a.headline,
+  })),
+  distribution: [{
+    '@type': 'DataDownload',
+    encodingFormat: 'application/json',
+    contentUrl: `${BASE}data/corpus.json`,
+  }],
+};
+
+/** Replace the body between `<!--name:start-->` and `<!--name:end-->`, markers kept. */
+function fillRegion(file, name, body) {
+  const path = join(DOCS, file);
+  const html = readFileSync(path, 'utf8');
+  const re = new RegExp(`(<!--${name}:start-->)[\\s\\S]*?(<!--${name}:end-->)`);
+  if (!re.test(html)) throw new Error(M.noRegion(name, file));
+  writeFileSync(path, html.replace(re, `$1${body}$2`));
+}
+
+fillRegion('index.html', 'jsonld',
+  `\n<script type="application/ld+json">\n${JSON.stringify(jsonld, null, 1)}\n</script>\n`);
+
+/* ── The catalogue, prerendered ──────────────────────────────────────────── */
+
+const hue = (t) => { let h = 0; for (const c of t) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+const initials = (name) => name.replace(/\(.*?\)/g, ' ').split(/[\s/·-]+/).filter(Boolean)
+  .slice(0, 2).map((w) => w[0]).join('').slice(0, 2);
+const isUnverified = (v) => typeof v === 'string' &&
+  (v.startsWith('미확인') || v.toLowerCase().startsWith('unverified'));
+
+// Same six cells, same classes, as the row() in catalog.html — minus the org avatar,
+// which is a runtime probe against github.com and has no business in committed HTML.
+const rows = systems.map((s) => {
+  const slug = s.file.replace(/\.md$/, '');
+  const open = [s.figma, s.a11y].filter(isUnverified).length;
+  const marks =
+    (s.figma === true ? '<span class="mk">Figma</span>' : '') +
+    (open ? `<span class="mk warn">${open} open</span>` : '');
+  const links = [
+    s.url && `<a href="${esc(s.url)}" rel="noopener">site</a>`,
+    s.repo && `<a href="${esc(s.repo)}" rel="noopener">src</a>`,
+  ].filter(Boolean).join('');
+  const platform = s.platform.length > 1
+    ? `${s.platform[0]} +${s.platform.length - 1}` : s.platform[0];
+
+  return `<div class="row">` +
+    `<span class="mark" style="--h:${hue(slug)}"><span class="ini">${esc(initials(s.name))}</span></span>` +
+    `<span class="cell-nm">` +
+      `<a class="nm" href="${out.repo}/blob/main/design-systems/systems/${s.file}">${esc(s.name)}</a>` +
+      marks +
+    `</span>` +
+    `<span class="ds">${esc(s.org)} · ${esc(s.domain)}</span>` +
+    `<span class="cell-cov"><span class="cov" data-c="${esc(s.coverage)}">${esc(s.coverage)}</span></span>` +
+    `<span class="rt" title="${esc(s.platform.join(' · '))}">${esc(platform)}</span>` +
+    `<span class="rt">${links ? `<span class="out">${links}</span>` : ''}</span>` +
+  `</div>`;
+});
+
+fillRegion('catalog.html', 'prerender', '\n' + rows.join('\n') + '\n    ');
+console.log(M.crawlable(systems.length, lastmod));

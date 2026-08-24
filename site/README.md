@@ -455,7 +455,7 @@ referenced) were real and are fixed: the palette is now wired to components thro
 `backgroundColor` / `textColor`, and `link` and `notice` were added as components, since the
 page genuinely has both.
 
-Wired so it cannot rot: `site/design-spec.mjs` joins the kit inventory (**22 items, 4,893
+Wired so it cannot rot: `site/design-spec.mjs` joins the kit inventory (**22 items, 5,022
 lines**, both counted from disk), and `.github/workflows/site.yml` regenerates both language
 versions on every PR touching `site/`, `docs/` or `profiles/interpreted/` and fails if the
 committed files differ.

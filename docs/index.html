@@ -6,10 +6,105 @@
 <meta name="description" content="Conventions, linters and agent procedures for the work that repeats between design and development. Every default is measured across 116 design systems, not remembered.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://keepyaoung.github.io/self-made-design-ops/">
+<!-- Sharing. og:image is the self-hosted Unsplash photo already in the repository
+     (photo-1541701494587-cb58502866ab, Unsplash License — free use, no attribution
+     required); site/README.md records where it came from. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Self-Made DesignOps — a DesignOps starter kit, measured">
+<meta property="og:description" content="Conventions, linters and agent procedures for the work that repeats between design and development. Every default is measured across 116 design systems, not remembered.">
+<meta property="og:url" content="https://keepyaoung.github.io/self-made-design-ops/">
+<meta property="og:image" content="https://keepyaoung.github.io/self-made-design-ops/assets/hero-bg.jpg">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1333">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Self-Made DesignOps — a DesignOps starter kit, measured">
+<meta name="twitter:description" content="Conventions, linters and agent procedures for the work that repeats between design and development. Every default is measured across 116 design systems, not remembered.">
+<meta name="twitter:image" content="https://keepyaoung.github.io/self-made-design-ops/assets/hero-bg.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <link rel="stylesheet" href="./assets/site.css">
+<!--jsonld:start-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Dataset",
+ "name": "Self-Made DesignOps — design system corpus",
+ "description": "Measured token values from 116 public design systems, each claim pinned to a source and a version, cross-compared on nine component axes. Values that could not be confirmed are marked unverified rather than filled in.",
+ "url": "https://keepyaoung.github.io/self-made-design-ops/",
+ "sameAs": "https://github.com/keepYaoung/self-made-design-ops",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isAccessibleForFree": true,
+ "creator": {
+  "@type": "Person",
+  "name": "keepYaoung"
+ },
+ "dateModified": "2026-08-23",
+ "keywords": [
+  "design systems",
+  "design tokens",
+  "UI patterns",
+  "design system corpus"
+ ],
+ "variableMeasured": [
+  {
+   "@type": "PropertyValue",
+   "name": "Buttons",
+   "description": "Default heights spread across 28–56px, and even the mode (40px) covers only ~23%. There is no standard height."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Typography",
+   "description": "Base body size splits into six camps (13·14·16·17·18·24). The 14px camp is the largest, at 17 samples."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Color & contrast",
+   "description": "How palettes are organised. Contrast is computed with the WCAG formula — never eyeballed."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Forms & inputs",
+   "description": "About 30 systems match input height to button height. Checkboxes converge on 16px; GOV.UK breaks it at 40px."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Modals",
+   "description": "The modal-width mode sits in the 450–520px band, with 512px right in the middle of it."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Motion",
+   "description": "prefers-reduced-motion handling splits into nine layers across 17 systems. scroll-behavior counts as motion too."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Tables",
+   "description": "Cell padding, row height, density, borders, sticky headers. A thin-sample axis."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Navigation",
+   "description": "Sidebar, tab and breadcrumb dimensions and structure. A thin-sample axis."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "Feedback",
+   "description": "Severity systems for alerts, toasts and badges. \"Banners never auto-dismiss\" is unanimous at 8/8."
+  }
+ ],
+ "distribution": [
+  {
+   "@type": "DataDownload",
+   "encodingFormat": "application/json",
+   "contentUrl": "https://keepyaoung.github.io/self-made-design-ops/data/corpus.json"
+  }
+ ]
+}
+</script>
+<!--jsonld:end-->
 <script>
 /* Applied before the first paint, so arriving on the dark theme never flashes the
    light one. No stored choice means follow the OS; assets/site.js takes it from here. */
@@ -64,7 +159,7 @@ try {
   <h1>Clone it once.<br>Make your DesignOps.</h1>
   <p class="lede">
     Conventions, linters and agent procedures for the work that repeats between design and
-    development — <strong id="k-lines">4,893</strong> lines of it, no dependencies, nothing to
+    development — <strong id="k-lines">5,022</strong> lines of it, no dependencies, nothing to
     install. Every default in it is <strong>measured across <span id="k-count">116</span> design
     systems</strong>, not remembered.
   </p>
