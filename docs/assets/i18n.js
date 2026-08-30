@@ -165,9 +165,6 @@ if (ogLocale) ogLocale.content = locale.replace('-', '_');
 
 const header = document.querySelector('header.top');
 if (header) {
-  const navSelect = selectLanguage('site-language', locale);
-  navSelect.addEventListener('change', () => choose(navSelect.value));
-  header.insertBefore(navSelect, header.querySelector('[data-theme-toggle]'));
   // Header wrapping on narrow screens must also move the sticky rail and anchor offset.
   const resize = () => document.documentElement.style.setProperty('--head-h', `${header.getBoundingClientRect().height}px`);
   new ResizeObserver(resize).observe(header);
@@ -186,6 +183,9 @@ if (header) {
       ? 'Your device language is not supported yet. Choose one of the available languages.'
       : 'This site is available in your preferred language.', {}, bannerLocale);
     const select = selectLanguage('suggested-language', state.preferred, bannerLocale);
+    const picker = document.createElement('span');
+    picker.className = 'language-picker';
+    picker.append(select);
     const apply = document.createElement('button');
     apply.className = 'ctrl pad language-apply';
     apply.type = 'button';
@@ -205,9 +205,9 @@ if (header) {
     close.addEventListener('click', () => {
       write('sessionStorage', dismissal, '1');
       banner.remove();
-      navSelect.focus({ preventScroll: true });
+      header.querySelector('a[href], button')?.focus({ preventScroll: true });
     });
-    banner.append(text, select, apply, close);
+    banner.append(text, picker, apply, close);
     header.before(banner);
   }
 }

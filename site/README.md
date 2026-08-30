@@ -27,7 +27,7 @@ Simplified Chinese, Indonesian and Spanish. The default is English. A banner abo
 navigation suggests the device's preferred supported language; an unsupported device language
 gets the language selector instead. There is no automatic redirect. A URL `?lang=` takes
 precedence over a saved choice, and an explicit choice suppresses further suggestions.
-The header menu and footer links change the current page's language, preserving its path,
+The suggestion banner and footer links change the current page's language, preserving its path,
 query parameters and anchor. Catalog search and filters are stored in the URL and restored
 after language changes or reloads. Malformed corpus links are skipped during localization
 so they cannot interrupt page initialization. Choices persist in local storage; closing a suggestion lasts
