@@ -35,6 +35,8 @@ for the current tab session. If storage is unavailable, language links still wor
 
 `site/locales/messages.json` is the translation source; `site/i18n-core.mjs` negotiates locales,
 `site/i18n-runtime.js` handles the UI, and `site/build.mjs` generates `docs/assets/i18n.js`.
+Message keys stay aligned with the source documents. Optional `en` values polish the
+visible English copy without changing those keys; they receive the same placeholder checks.
 Messages use numbered child-element slots (`{0}`, `{1}`) to preserve links and live counts
 while allowing different word order. The build verifies every locale and placeholder, and
 `node --test site/i18n.test.mjs` checks regional tags, preference order and corpus labels.

@@ -63,6 +63,8 @@
 html{scroll-padding-top:calc(var(--head-h) + 16px)}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);
   letter-spacing:-.005em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+/* Japanese and Chinese wrap between characters, without requiring spaces. */
+body:lang(ja),body:lang(zh){word-break:normal}
 a{color:var(--link);text-underline-offset:3px}
 h1,h2,h3{letter-spacing:-.028em}
 :focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}

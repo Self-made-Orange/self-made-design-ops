@@ -97,10 +97,10 @@ test('reset removes search and filters without removing the chosen language or o
   assert.equal(reset.hash, '#main');
 });
 
-test('every message has all five translations with unchanged placeholders', () => {
+test('every message has five translations and valid optional English copy with unchanged placeholders', () => {
   const slots = (s) => (s.match(/\{\w+\}/g) || []).sort();
   for (const [source, values] of Object.entries(messages)) {
-    assert.deepEqual(Object.keys(values), LOCALES.slice(1).map((l) => l.code));
+    assert.deepEqual(Object.keys(values).filter((code) => code !== 'en'), LOCALES.slice(1).map((l) => l.code));
     for (const [lang, text] of Object.entries(values)) {
       assert.ok(text.trim(), `${lang}: ${source}`);
       assert.deepEqual(slots(text), slots(source), `${lang}: ${source}`);

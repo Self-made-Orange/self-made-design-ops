@@ -14,7 +14,13 @@ export function buildI18n() {
   for (const [source, translations] of Object.entries(messages)) {
     for (const { code } of LOCALES.slice(1)) {
       if (!translations[code]?.trim()) throw new Error(`Missing ${code}: ${source}`);
-      if (placeholders(source) !== placeholders(translations[code])) {
+    }
+    // English copy overrides keep source keys stable for generated content.
+    for (const [code, value] of Object.entries(translations)) {
+      if (!LOCALES.some((locale) => locale.code === code) || !value?.trim()) {
+        throw new Error(`Invalid translation in ${code}: ${source}`);
+      }
+      if (placeholders(source) !== placeholders(value)) {
         throw new Error(`Changed placeholders in ${code}: ${source}`);
       }
     }

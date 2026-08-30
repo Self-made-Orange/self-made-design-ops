@@ -40,6 +40,8 @@
 
 번역 원본은 `site/locales/messages.json`, 언어 판별은 `site/i18n-core.mjs`, 화면 동작은
 `site/i18n-runtime.js`에 있습니다. `node site/build.mjs`가 `docs/assets/i18n.js`를 생성합니다.
+메시지 키는 원문과 일치하도록 유지합니다. 영어 화면 문구는 선택 항목인 `en` 값으로
+다듬을 수 있으며, 다른 언어와 똑같이 자리표시자가 유지되는지 검사합니다.
 `node site/build-pages.mjs`로 상세 문서도 재생성하고, `node --test site/i18n.test.mjs`로 검증합니다.
 문장 안의 `{0}`, `{1}`은 원래 자식 요소를 유지하는 슬롯이며, 번역에 HTML을 삽입하지 않습니다.
 
