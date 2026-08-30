@@ -52,6 +52,8 @@ jobs:
           node design-systems/i18n.mjs --check
           node design-systems/build-data.mjs
           node site/build.mjs
+          node site/build-pages.mjs
+          node --test site/i18n.test.mjs
 
       - id: configure
         uses: actions/configure-pages@v5

@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-unnamed-arrays-the-styled-system-convention">Tokens — unnamed arrays (the styled-system convention)</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-small-buttons-are-pills-large-ones-are-12px">Buttons — small buttons are pills, large ones are 12px</a></li><li class="lvl3"><a href="#inputs-the-vertical-padding-is-asymmetric-by-1px">Inputs — the vertical padding is asymmetric by 1px</a></li><li class="lvl3"><a href="#dialogs-radix-motion-widths-reuse-the-breakpoint-family">Dialogs (Radix + motion) — widths reuse the breakpoint family</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-unnamed-arrays-the-styled-system-convention">Tokens — unnamed arrays (the styled-system convention)</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-small-buttons-are-pills-large-ones-are-12px">Buttons — small buttons are pills, large ones are 12px</a></li><li class="lvl3"><a href="#inputs-the-vertical-padding-is-asymmetric-by-1px">Inputs — the vertical padding is asymmetric by 1px</a></li><li class="lvl3"><a href="#dialogs-radix-motion-widths-reuse-the-breakpoint-family">Dialogs (Radix + motion) — widths reuse the breakpoint family</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Priceline</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://priceline.github.io/design-system" rel="noopener">Official site</a><br><a href="https://github.com/priceline/design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/priceline.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Priceline Design System</span></nav>
-    <h1>Priceline Design System</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/priceline.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Priceline Design System</h1>
     <p class="doc-lede">Priceline · commerce · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Priceline's system — spacing is <strong>seven steps of pure doubling</strong> (0·4·8·16·32·64·128), there are only <strong>three radii (0·2·6)</strong>, and the <strong>breakpoints are in <code>em</code></strong>.</p>
@@ -111,10 +112,11 @@ breakpoints = [32, 40, 48, 64, 80].map(n =&gt; n + 'em')</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack pcln-design-system@6.29.0</code> → <code>dist/esm/theme/theme.js</code></li><li>Component deep-dive: the same package's <code>lib/{Button,Input,Dialog}/*.js</code> (2026-08-18). Of the 84 directories under <code>lib/</code>, excluding utilities (theme, utils, stories and so on), <strong>about 79 components</strong> were confirmed (Accordion through Tooltip, including the Chat* family)</li><li><strong>Still to confirm:</strong> the colour palette, dark mode, and the reasoning behind choosing <code>em</code> breakpoints. <del>The component list</del> → resolved by enumerating the directories (above)</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack pcln-design-system@6.29.0</code> → <code>dist/esm/theme/theme.js</code></li><li>Component deep-dive: the same package's <code>lib/{Button,Input,Dialog}/*.js</code> (2026-08-18). Of the 84 directories under <code>lib/</code>, excluding utilities (theme, utils, stories and so on), <strong>about 79 components</strong> were confirmed (Accordion through Tooltip, including the Chat* family)</li><li><strong>Still to confirm:</strong> the colour palette, dark mode, and the reasoning behind choosing <code>em</code> breakpoints. <del>The component list</del> → resolved by enumerating the directories (above)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

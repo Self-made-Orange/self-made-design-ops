@@ -19,7 +19,7 @@
  * Nothing here is authored. Every page is its `.md` file rendered by `site/markdown.mjs`; if
  * a page looks wrong the document is where to fix it.
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { messages } from '../tools/cli-i18n.mjs';
@@ -47,7 +47,7 @@ const corpus = JSON.parse(readFileSync(join(DOCS, 'data', 'corpus.json'), 'utf8'
 const byFile = new Map(corpus.systems.map((s) => [s.file, s]));
 
 /** The chrome every page shares. `depth` is how far below the site root the page sits. */
-function page({ title, description, canonical, breadcrumb, jsonld, body, toc, meta }) {
+function page({ title, description, canonical, breadcrumb, jsonld, body, toc, meta, original }) {
   const up = '../';
   return `<!doctype html>
 <html lang="en" data-theme="light">
@@ -96,7 +96,7 @@ ${JSON.stringify(jsonld, null, 1)}
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub">${toc}</ul>
+    <ul class="sub" data-source-document lang="en">${toc}</ul>
   </div>
   <div class="railfoot">${meta}</div>
 </aside>
@@ -104,10 +104,12 @@ ${JSON.stringify(jsonld, null, 1)}
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb">${breadcrumb}</nav>
-${body}
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span>${original ? ` <a href="${original}">Read the Korean original</a>` : ''}</p>
+<article data-source-document lang="en">${body}</article>
   </div>
 </main>
 </div>
+<script src="${up}assets/i18n.js" defer></script>
 <script src="${up}assets/site.js" defer></script>
 </body>
 </html>
@@ -158,6 +160,7 @@ for (const s of corpus.systems) {
   ].filter(Boolean).join('<br>');
 
   writeFileSync(join(DOCS, 'systems', `${slug}.html`), page({
+    original: `${REPO_URL}/blob/main/design-systems/systems/${s.file.replace(/\.md$/, '.ko.md')}`,
     title: `${s.name} — Self-Made DesignOps`,
     description,
     canonical,
@@ -211,6 +214,8 @@ for (const file of patternFiles) {
   ].filter(Boolean).join('<br>');
 
   writeFileSync(join(DOCS, 'patterns', `${slug}.html`), page({
+    original: existsSync(join(ROOT, 'design-systems', 'patterns', file.replace(/\.md$/, '.ko.md')))
+      ? `${REPO_URL}/blob/main/design-systems/patterns/${file.replace(/\.md$/, '.ko.md')}` : null,
     title: `${name} — Self-Made DesignOps`,
     description,
     canonical,

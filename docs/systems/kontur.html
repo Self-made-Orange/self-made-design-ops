@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-a-chain-of-versioned-theme-classes">Tokens — a chain of versioned theme classes</a></li><li><a href="#values">Values</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-the-size-changes-the-type-too">Buttons — the size changes the type too</a></li><li class="lvl3"><a href="#inputs-the-same-heights-as-buttons-a-different-radius">Inputs — the same heights as buttons, a different radius</a></li><li class="lvl3"><a href="#modals-the-lightest-scrim-in-the-sample">Modals — the lightest scrim in the sample</a></li><li class="lvl3"><a href="#theme-version-diff-backlog-cleared">Theme version diff (backlog cleared)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-a-chain-of-versioned-theme-classes">Tokens — a chain of versioned theme classes</a></li><li><a href="#values">Values</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-the-size-changes-the-type-too">Buttons — the size changes the type too</a></li><li class="lvl3"><a href="#inputs-the-same-heights-as-buttons-a-different-radius">Inputs — the same heights as buttons, a different radius</a></li><li class="lvl3"><a href="#modals-the-lightest-scrim-in-the-sample">Modals — the lightest scrim in the sample</a></li><li class="lvl3"><a href="#theme-version-diff-backlog-cleared">Theme version diff (backlog cleared)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
   </div>
   <div class="railfoot"><b>SKB Kontur</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://ui.kontur.ru" rel="noopener">Official site</a><br><a href="https://github.com/skbkontur/retail-ui" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/kontur.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Kontur UI (react-ui)</span></nav>
-    <h1>Kontur UI (react-ui)</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/kontur.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Kontur UI (react-ui)</h1>
     <p class="doc-lede">SKB Kontur · enterprise · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>The system of SKB Kontur (Russian enterprise SaaS) — <strong>themes carry semantic versions and every past version stays</strong> (<code>LIGHT_THEME_6_0</code> through <code>6_3</code> ship together). A theme is <strong>a class inheritance chain</strong>, and even the utility that parses the version string is public API.</p>
@@ -117,10 +118,11 @@ export var LIGHT_THEME = LIGHT_THEME_6_3;   // the newest as the default</code><
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="references">References</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @skbkontur/react-ui@6.3.0</code> → <code>lib/theming/</code>, <code>internal/themes/</code></li><li>The repository is named <code>retail-ui</code> while the package is <code>@skbkontur/react-ui</code></li><li>Components in depth: <code>internal/themes/BasicTheme.js</code> evaluated in node (plus <code>@skbkontur/colors@2.1.9</code>) and <code>components/Modal/*</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>the actual <code>BasicTheme</code> values</del> <del>the differences between 6_0 and 6_3</del> (resolved 2026-08-18 — the deep pass), the component list (around 60 directories confirmed — Autocomplete · CurrencyInput · FileUploader · Kebab · Paging · SidePage and others, not fully enumerated). The absence of global spacing and type scales is <strong>structural</strong> (all 1,462 keys are component keys)</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @skbkontur/react-ui@6.3.0</code> → <code>lib/theming/</code>, <code>internal/themes/</code></li><li>The repository is named <code>retail-ui</code> while the package is <code>@skbkontur/react-ui</code></li><li>Components in depth: <code>internal/themes/BasicTheme.js</code> evaluated in node (plus <code>@skbkontur/colors@2.1.9</code>) and <code>components/Modal/*</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>the actual <code>BasicTheme</code> values</del> <del>the differences between 6_0 and 6_3</del> (resolved 2026-08-18 — the deep pass), the component list (around 60 directories confirmed — Autocomplete · CurrencyInput · FileUploader · Kebab · Paging · SidePage and others, not fully enumerated). The absence of global spacing and type scales is <strong>structural</strong> (all 1,462 keys are component keys)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

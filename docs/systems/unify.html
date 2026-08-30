@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-a-dual-js-android-xml-format">Tokens — a dual JS + Android XML format</a></li><li class="lvl3"><a href="#typography-five-platform-typefaces-plus-value-names">Typography — five platform typefaces plus value-names</a></li><li class="lvl3"><a href="#colour-n0n700-plus-one-letter-ramp-prefixes">Colour — N0–N700 plus one-letter ramp prefixes</a></li><li class="lvl3"><a href="#grid-breakpoints-paired-with-gutters">Grid — breakpoints paired with gutters</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-four-heights-a-single-weight-of-800">Buttons — four heights, a single weight of 800</a></li><li class="lvl3"><a href="#inputs-textfieldv2-a-floating-label">Inputs (TextFieldV2) — a floating label</a></li><li class="lvl3"><a href="#modals-no-width-presets">Modals — no width presets</a></li><li class="lvl3"><a href="#focus-dotted-purple">Focus — dotted purple</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-a-dual-js-android-xml-format">Tokens — a dual JS + Android XML format</a></li><li class="lvl3"><a href="#typography-five-platform-typefaces-plus-value-names">Typography — five platform typefaces plus value-names</a></li><li class="lvl3"><a href="#colour-n0n700-plus-one-letter-ramp-prefixes">Colour — N0–N700 plus one-letter ramp prefixes</a></li><li class="lvl3"><a href="#grid-breakpoints-paired-with-gutters">Grid — breakpoints paired with gutters</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-four-heights-a-single-weight-of-800">Buttons — four heights, a single weight of 800</a></li><li class="lvl3"><a href="#inputs-textfieldv2-a-floating-label">Inputs (TextFieldV2) — a floating label</a></li><li class="lvl3"><a href="#modals-no-width-presets">Modals — no width presets</a></li><li class="lvl3"><a href="#focus-dotted-purple">Focus — dotted purple</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Tokopedia (GoTo)</b><br>partial harvest · web · mobile<br>verified 2026-08-18<br><a href="https://unify.tokopedia.com" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/unify.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Unify</span></nav>
-    <h1>Unify</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/unify.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Unify</h1>
     <p class="doc-lede">Tokopedia (GoTo) · commerce · web · mobile</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Tokopedia's system — the <strong>second Southeast Asian sample</strong>. It ships the same tokens <strong>in two formats at once, JS and Android XML</strong> (including the px ↔ dp conversion), specifies typefaces <strong>per platform across five slots</strong> (iOS SF Pro / Android Roboto), and separates spacing from layout with <code>sp</code> and <code>ly</code> prefixes.</p>
@@ -125,10 +126,11 @@ gutter.mobile 8dp · tablet 12dp · desktop 16dp</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p><del>Unverified.</del> → The token layer carries <strong>palette CSS for three kinds of colour blindness</strong> (two red-green plus blue-yellow) (<code>unify-token@3.0.0</code> — see the deep-dive above). Beyond that, no target is confirmed.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack unify-tokens</code> (0.0.4) → <code>build/</code> — but <strong>the tokens actually in use are <code>unify-token@3.0.0</code></strong> (see the deep-dive above, 2026-08-18)</li><li>Components: <code>unify-react-desktop@0.24.2</code> · <code>unify-react-mobile@3.40.13</code> · <code>unify-icons</code> (distributed separately) — <del>component list</del> → measured (see the deep-dive above)</li><li><strong>Still to confirm:</strong> the full colour ramps, <del>why the version is 0.0.4</del> → confirmed that <code>unify-tokens</code> is a secondary distribution, since the components consume <code>unify-token</code> (singular, v3). Radius and shadow tokens are absent from <code>unify-token@3.0.0</code>'s <code>build/v2/</code> as well (there are only colors, grids, motions, spacings and typographies) — the 8px radius is hard-coded in the components</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack unify-tokens</code> (0.0.4) → <code>build/</code> — but <strong>the tokens actually in use are <code>unify-token@3.0.0</code></strong> (see the deep-dive above, 2026-08-18)</li><li>Components: <code>unify-react-desktop@0.24.2</code> · <code>unify-react-mobile@3.40.13</code> · <code>unify-icons</code> (distributed separately) — <del>component list</del> → measured (see the deep-dive above)</li><li><strong>Still to confirm:</strong> the full colour ramps, <del>why the version is 0.0.4</del> → confirmed that <code>unify-tokens</code> is a secondary distribution, since the components consume <code>unify-token</code> (singular, v3). Radius and shadow tokens are absent from <code>unify-token@3.0.0</code>'s <code>build/v2/</code> as well (there are only colors, grids, motions, spacings and typographies) — the 8px radius is hard-coded in the components</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

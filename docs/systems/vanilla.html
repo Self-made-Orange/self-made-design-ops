@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-scss-variables-plus-a-map-per-style">Tokens — SCSS variables plus a map per style</a></li><li class="lvl3"><a href="#type-the-baseline-grid-and-nudge">Type — the baseline grid and nudge</a></li><li class="lvl3"><a href="#spacing-verticalhorizontal-split-plus-a-strip-family">Spacing — vertical/horizontal split plus a strip family</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-p-button-the-height-is-written-nowhere">Buttons (.p-button) — the height is written nowhere</a></li><li class="lvl3"><a href="#inputs-the-border-is-only-an-underline">Inputs — the border is only an underline</a></li><li class="lvl3"><a href="#modals-p-modal-no-width-steps-and-no-animation">Modals (.p-modal) — no width steps and no animation</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li><li><a href="#drift-record-4570-4580-2026-08-23">Drift record — 4.57.0 → 4.58.0 (2026-08-23)</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-scss-variables-plus-a-map-per-style">Tokens — SCSS variables plus a map per style</a></li><li class="lvl3"><a href="#type-the-baseline-grid-and-nudge">Type — the baseline grid and nudge</a></li><li class="lvl3"><a href="#spacing-verticalhorizontal-split-plus-a-strip-family">Spacing — vertical/horizontal split plus a strip family</a></li><li><a href="#components">Components</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-p-button-the-height-is-written-nowhere">Buttons (.p-button) — the height is written nowhere</a></li><li class="lvl3"><a href="#inputs-the-border-is-only-an-underline">Inputs — the border is only an underline</a></li><li class="lvl3"><a href="#modals-p-modal-no-width-steps-and-no-animation">Modals (.p-modal) — no width steps and no animation</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li><li><a href="#drift-record-4570-4580-2026-08-23">Drift record — 4.57.0 → 4.58.0 (2026-08-23)</a></li></ul>
   </div>
   <div class="railfoot"><b>Canonical (Ubuntu)</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://vanillaframework.io" rel="noopener">Official site</a><br><a href="https://github.com/canonical/vanilla-framework" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/vanilla.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Vanilla Framework</span></nav>
-    <h1>Vanilla Framework</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/vanilla.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Vanilla Framework</h1>
     <p class="doc-lede">Canonical (Ubuntu) · enterprise · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Canonical's (Ubuntu's) system — every text style carries a <strong>baseline correction (<code>nudge</code>) as a token</strong>, line heights are defined <strong>only as whole multiples of an 8px grid</strong>, and spacing is <strong>split vertical/horizontal</strong> the way Lightning's is.</p>
@@ -122,10 +123,11 @@ $spv--strip-shallow/regular/deep: 24 / 64 / 128px</code></pre>
 <h2 id="references">References</h2>
 <ul class="md-list"><li>Tokens: <code>npm pack vanilla-framework@4.57.0</code> → <code>scss/_settings_*.scss</code></li><li>Components in depth: <code>_base_button.scss</code> · <code>_base_forms.scss</code> · <code>_patterns_modal.scss</code> from the same package, plus a full dart-sass compile check (2026-08-18)</li><li><strong>Open questions:</strong> the colour and theme structure (<code>_settings_themes.scss</code> not surveyed), <del>the component list</del> (resolved 2026-08-18 — 66 patterns), dark mode, the accessibility target</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>vanillaframework.io</code> → <code>figma.com/community/file/1435297834108003391/vanilla-core-component-library</code></li></ul>
 <h2 id="drift-record-4570-4580-2026-08-23">Drift record — 4.57.0 → 4.58.0 (2026-08-23)</h2>
-<p>Both recorded files, <code>scss/_settings_spacing.scss</code> and <code>scss/_settings_font.scss</code>, are <strong>byte-identical</strong>. No recorded value changed.</p>
+<p>Both recorded files, <code>scss/_settings_spacing.scss</code> and <code>scss/_settings_font.scss</code>, are <strong>byte-identical</strong>. No recorded value changed.</p></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

@@ -22,11 +22,29 @@ A single-page static site that makes the corpus **browsable**. It carries no new
 it is entirely an index into the repository's documents, and the evidence for any value is
 in the document it links to.
 
-**The site copy is in English, and so are the documents it links to** — each has its Korean
-original beside it at `<slug>.ko.md`. Korean values that survive in the data (a
-`tokens_format` written as `문서`, say) are shipped with an English label only when the
-`TOKEN_LABEL_EN` table in `build.mjs` has one, and **the original is kept as a tooltip**.
-Values not in that table pass through verbatim rather than being translated on a guess.
+**The website UI supports the six root README languages:** English, Korean, Japanese,
+Simplified Chinese, Indonesian and Spanish. The default is English. A banner above the
+navigation suggests the device's preferred supported language; an unsupported device language
+gets the language selector instead. There is no automatic redirect. A URL `?lang=` takes
+precedence over a saved choice, and an explicit choice suppresses further suggestions.
+The header menu and footer links change the current page's language, preserving its path,
+query parameters and anchor. Catalog search and filters are stored in the URL and restored
+after language changes or reloads. Malformed corpus links are skipped during localization
+so they cannot interrupt page initialization. Choices persist in local storage; closing a suggestion lasts
+for the current tab session. If storage is unavailable, language links still work via the URL.
+
+`site/locales/messages.json` is the translation source; `site/i18n-core.mjs` negotiates locales,
+`site/i18n-runtime.js` handles the UI, and `site/build.mjs` generates `docs/assets/i18n.js`.
+Messages use numbered child-element slots (`{0}`, `{1}`) to preserve links and live counts
+while allowing different word order. The build verifies every locale and placeholder, and
+`node --test site/i18n.test.mjs` checks regional tags, preference order and corpus labels.
+No translation service, dependency, or device-language request is used.
+
+**The corpus source documents, product names, paths, and executable examples remain in their
+original language.** Article pages mark English source content with `lang="en"` and link to
+the Korean original where it exists. Their navigation and language notice are translated.
+JavaScript is required for translated UI; without it, the prerendered English content remains
+readable. Canonical URLs continue to point to the English source pages.
 
 ## Structure
 
@@ -80,7 +98,9 @@ After editing the corpus, regenerate and commit together:
 
 ```bash
 node design-systems/build-data.mjs   # systems/*.md frontmatter → data/systems.json
-node site/build.mjs                  # → docs/data/corpus.json
+node site/build.mjs                  # → corpus data + validated UI translation bundle
+node site/build-pages.mjs            # → source document pages and shared language controls
+node --test site/i18n.test.mjs        # locale negotiation, placeholders, corpus coverage
 node site/check-headlines.mjs        # do the axis conclusions still hold?
 ```
 
@@ -467,7 +487,7 @@ referenced) were real and are fixed: the palette is now wired to components thro
 `backgroundColor` / `textColor`, and `link` and `notice` were added as components, since the
 page genuinely has both.
 
-Wired so it cannot rot: `site/design-spec.mjs` joins the kit inventory (**24 items, 5,630
+Wired so it cannot rot: `site/design-spec.mjs` joins the kit inventory (**24 items, 5,640
 lines**, both counted from disk), and `.github/workflows/site.yml` regenerates both language
 versions on every PR touching `site/`, `docs/` or `profiles/interpreted/` and fails if the
 committed files differ.

@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-eight-steps-doubling-above-32">Spacing — eight steps, doubling above 32</a></li><li class="lvl3"><a href="#radii-round-shapes-take-two-tokens">Radii — round shapes take two tokens</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-buttoncss">Buttons (button.css)</a></li><li class="lvl3"><a href="#inputs-inputcss-react-textinput">Inputs (input.css · React TextInput)</a></li><li class="lvl3"><a href="#modals-react-modalindexmodulescss">Modals (React Modal/index.module.scss)</a></li><li class="lvl3"><a href="#motion-tokens-thumbprint-tokens1301">Motion tokens (thumbprint-tokens@13.0.1)</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-eight-steps-doubling-above-32">Spacing — eight steps, doubling above 32</a></li><li class="lvl3"><a href="#radii-round-shapes-take-two-tokens">Radii — round shapes take two tokens</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-buttoncss">Buttons (button.css)</a></li><li class="lvl3"><a href="#inputs-inputcss-react-textinput">Inputs (input.css · React TextInput)</a></li><li class="lvl3"><a href="#modals-react-modalindexmodulescss">Modals (React Modal/index.module.scss)</a></li><li class="lvl3"><a href="#motion-tokens-thumbprint-tokens1301">Motion tokens (thumbprint-tokens@13.0.1)</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Thumbtack</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://thumbprint.design" rel="noopener">Official site</a><br><a href="https://github.com/thumbtack/thumbprint" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/thumbprint.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Thumbprint</span></nav>
-    <h1>Thumbprint</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/thumbprint.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Thumbprint</h1>
     <p class="doc-lede">Thumbtack · consumer · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Thumbtack's (home-services marketplace) system. The top of the spacing scale is <strong>pure doubling above 32</strong> (64 → 128 → <strong>256</strong>), and round shapes are split across <strong>two tokens, <code>full</code> (50%) and <code>sides</code> (9999px)</strong>.</p>
@@ -117,10 +118,11 @@ $tp-space__5: 32   __6: 64   __7: 128   __8: 256</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Documentation: https://thumbprint.design (blocked by the proxy)</li><li>Tokens: <code>npm pack @thumbtack/thumbprint-tokens@13.0.1</code> → <code>dist/scss/_index.scss</code></li><li>Component deep-dive: <code>@thumbtack/thumbprint-scss@4.0.3</code> (button/input/label.css) · <code>@thumbtack/thumbprint-react@14.18.2</code> (<code>dist/es/components/{Modal,TextInput}/index.module.scss</code>) (2026-08-18)</li><li>Licence: both component packages state <strong>Apache-2.0</strong> in package.json — reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> the full type scale · the colour palette (only some real button colours confirmed), <del>the component list</del> (35 React components confirmed — 2026-08-18), <del>the licence</del> (Apache-2.0 — 2026-08-18)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github thumbtack/thumbprint → <code>LICENSE</code> (matching the npm <code>@thumbtack/thumbprint-tokens@13.0.1</code> metadata)</li></ul>
+<ul class="md-list"><li>Documentation: https://thumbprint.design (blocked by the proxy)</li><li>Tokens: <code>npm pack @thumbtack/thumbprint-tokens@13.0.1</code> → <code>dist/scss/_index.scss</code></li><li>Component deep-dive: <code>@thumbtack/thumbprint-scss@4.0.3</code> (button/input/label.css) · <code>@thumbtack/thumbprint-react@14.18.2</code> (<code>dist/es/components/{Modal,TextInput}/index.module.scss</code>) (2026-08-18)</li><li>Licence: both component packages state <strong>Apache-2.0</strong> in package.json — reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> the full type scale · the colour palette (only some real button colours confirmed), <del>the component list</del> (35 React components confirmed — 2026-08-18), <del>the licence</del> (Apache-2.0 — 2026-08-18)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github thumbtack/thumbprint → <code>LICENSE</code> (matching the npm <code>@thumbtack/thumbprint-tokens@13.0.1</code> metadata)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

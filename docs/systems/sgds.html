@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#ancestry-the-bootstrap-fingerprints-are-intact">Ancestry — the Bootstrap fingerprints are intact</a></li><li class="lvl3"><a href="#spacers-what-the-fork-fixed">Spacers — what the fork fixed</a></li><li class="lvl3"><a href="#radii-the-default-is-5px">Radii — the default is 5px</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-and-inputs-a-20-line-height-straightens-the-height-ladder">Buttons and inputs — a 2.0 line height straightens the height ladder</a></li><li class="lvl3"><a href="#modals-original-widths-only-padding-and-radius-changed">Modals — original widths, only padding and radius changed</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#ancestry-the-bootstrap-fingerprints-are-intact">Ancestry — the Bootstrap fingerprints are intact</a></li><li class="lvl3"><a href="#spacers-what-the-fork-fixed">Spacers — what the fork fixed</a></li><li class="lvl3"><a href="#radii-the-default-is-5px">Radii — the default is 5px</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li><a href="#components">Components</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-and-inputs-a-20-line-height-straightens-the-height-ladder">Buttons and inputs — a 2.0 line height straightens the height ladder</a></li><li class="lvl3"><a href="#modals-original-widths-only-padding-and-radius-changed">Modals — original widths, only padding and radius changed</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Singapore Government (GovTech)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.designsystem.tech.gov.sg" rel="noopener">Official site</a><br><a href="https://github.com/govtechsg/sgds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/sgds.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>SGDS (Singapore Government Design System)</span></nav>
-    <h1>SGDS (Singapore Government Design System)</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/sgds.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>SGDS (Singapore Government Design System)</h1>
     <p class="doc-lede">Singapore Government (GovTech) · public · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Singapore's government system. The first sample <strong>whose Bootstrap ancestry is confirmable from the tokens</strong>, and in forking it <strong>restored the 32px that Bootstrap lacked</strong> to its spacers.</p>
@@ -126,10 +127,11 @@ $border-radius-2xl: 2rem;       // 32</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @govtechsg/sgds@2.3.6</code> → <code>sass/_variables.scss</code></li><li>Component deep-dive: the same package's <code>sass/_{buttons,forms,modal}.scss</code> plus <code>_variables.scss</code> (depending on bootstrap ~5.2.0, 2026-08-18)</li><li><del>Licence</del> a LICENSE is bundled in the package — <strong>MIT</strong> (with an appended clause excluding the Singapore state crest and public-agency insignia, confirmed 2026-08-18) · reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> colour · the component list (the Web Components edition <code>@govtechsg/sgds-web-component@3.26.0</code> is not harvested) · the full set of changes against Bootstrap</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: npm <code>@govtechsg/sgds@2.3.6</code> → <code>package.json</code>. The repository root (GovTechSG/sgds) has no LICENSE file</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @govtechsg/sgds@2.3.6</code> → <code>sass/_variables.scss</code></li><li>Component deep-dive: the same package's <code>sass/_{buttons,forms,modal}.scss</code> plus <code>_variables.scss</code> (depending on bootstrap ~5.2.0, 2026-08-18)</li><li><del>Licence</del> a LICENSE is bundled in the package — <strong>MIT</strong> (with an appended clause excluding the Singapore state crest and public-agency insignia, confirmed 2026-08-18) · reflected in the frontmatter (2026-08-18)</li><li><strong>Still to confirm:</strong> colour · the component list (the Web Components edition <code>@govtechsg/sgds-web-component@3.26.0</code> is not harvested) · the full set of changes against Bootstrap</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: npm <code>@govtechsg/sgds@2.3.6</code> → <code>package.json</code>. The repository root (GovTechSG/sgds) has no LICENSE file</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

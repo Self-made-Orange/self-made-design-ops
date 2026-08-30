@@ -15,6 +15,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { messages } from '../tools/cli-i18n.mjs';
+import { buildI18n } from './build-i18n.mjs';
 
 /** Console output. English by default, `--lang=ko` for Korean (`tools/cli-i18n.mjs`).
  *  Strings that go *inside* corpus.json stay English regardless — that file is a
@@ -465,22 +466,26 @@ writeFileSync(join(DOCS, '404.html'), `<!doctype html>
 <title>Not found — Self-Made DesignOps</title>
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="./assets/site.css">
+<link rel="stylesheet" href="${BASE}assets/site.css">
 </head>
 <body>
+<header class="top"><a class="brand" href="${BASE}">🍊 Self-Made DesignOps</a><span class="spacer"></span><a class="ctrl pad" href="${BASE}catalog.html">Catalog</a></header>
 <main class="page"><div class="hero"><div class="wrap">
   <span class="kicker">404</span>
   <h1>That page is not here.</h1>
-  <p class="lede">The corpus has ${systems.length} entries and two pages. Whatever you were
-     after is on one of them.</p>
+  <p class="lede">Find the kit or browse the design system catalog.</p>
   <div class="cta">
-    <a class="btn btn-p" href="./">The kit</a>
-    <a class="btn btn-g" href="./catalog.html">The catalog</a>
+    <a class="btn btn-p" href="${BASE}">The kit</a>
+    <a class="btn btn-g" href="${BASE}catalog.html">The catalog</a>
     <a class="btn btn-o" href="${out.repo}">The repository</a>
   </div>
 </div></div></main>
+<script src="${BASE}assets/i18n.js"></script>
 </body>
 </html>
 `);
 
 console.log(M.crawlable(systems.length, lastmod));
+
+// Bundle validated website translations with every normal build.
+buildI18n();

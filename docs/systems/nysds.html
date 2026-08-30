@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#spacing-percentage-naming-with-8px-100">Spacing — percentage naming with 8px = 100</a></li><li><a href="#radii-1776px">Radii — 1776px</a></li><li><a href="#other">Other</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#variable-architecture-private-and-public-hooks-at-once">Variable architecture — private and public hooks at once</a></li><li class="lvl3"><a href="#buttons-nys-button-fixed-heights-of-404856">Buttons (nys-button) — fixed heights of 40/48/56</a></li><li class="lvl3"><a href="#inputs-nys-textinput-the-size-axis-is-width-not-height">Inputs (nys-textinput) — the size axis is width, not height</a></li><li class="lvl3"><a href="#modals-nys-modal-439px">Modals (nys-modal) — 439px</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#spacing-percentage-naming-with-8px-100">Spacing — percentage naming with 8px = 100</a></li><li><a href="#radii-1776px">Radii — 1776px</a></li><li><a href="#other">Other</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#variable-architecture-private-and-public-hooks-at-once">Variable architecture — private and public hooks at once</a></li><li class="lvl3"><a href="#buttons-nys-button-fixed-heights-of-404856">Buttons (nys-button) — fixed heights of 40/48/56</a></li><li class="lvl3"><a href="#inputs-nys-textinput-the-size-axis-is-width-not-height">Inputs (nys-textinput) — the size axis is width, not height</a></li><li class="lvl3"><a href="#modals-nys-modal-439px">Modals (nys-modal) — 439px</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>New York State Government (ITS-HCD)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://designsystem.ny.gov" rel="noopener">Official site</a><br><a href="https://github.com/ITS-HCD/nysds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nysds.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>New York State Design System (NYSDS)</span></nav>
-    <h1>New York State Design System (NYSDS)</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nysds.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>New York State Design System (NYSDS)</h1>
     <p class="doc-lede">New York State Government (ITS-HCD) · government · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>New York State government — the <strong>tenth government sample</strong> (a state layer distinct from the US federal USWDS). Its spacing step names are <strong>percentages with 8px as 100</strong>, and its <code>round</code> radius value is <strong><code>1776px</code></strong> (&quot;Ever upward!&quot; — the year of the Declaration of Independence), planting the state's identity in the slot for an infinite radius.</p>
@@ -115,10 +116,11 @@
 <h2 id="accessibility">Accessibility</h2>
 <p><del>Unverified.</del> → <strong>WCAG 2.2 AA (resolved 2026-08-18).</strong> Source: <code>designsystem.ny.gov/foundations/accessibility/</code> — &quot;Our standard is WCAG 2.2 AA&quot;. <strong>A rare case of statutory deadlines being written in alongside</strong> — it states that New York State technology law (STL §103-d) requires WCAG 2.2 AA from 2027-01, and a US Department of Justice rule requires WCAG 2.1 AA from 2027-04-26.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Component deep-dive: <code>npm pack @nysds/components@1.20.0</code> → <code>dist/nysds.es.js</code> plus <code>custom-elements.json</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> colour palette detail, <del>the component list</del> (resolved 2026-08-18 — all 48 tags, see the deep-dive), the relationship to USWDS (an independent implementation or a derivative), the MCP server's contents, and the origin of the modal's 439px</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>designsystem.ny.gov</code> → <code>figma.com/community/file/1574803287825265318/new-york-state-design-system</code> (the team file is <code>figma.com/design/U2QpuSUXRTxbgG64Fzi9bu</code>)</li></ul>
+<ul class="md-list"><li>Component deep-dive: <code>npm pack @nysds/components@1.20.0</code> → <code>dist/nysds.es.js</code> plus <code>custom-elements.json</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> colour palette detail, <del>the component list</del> (resolved 2026-08-18 — all 48 tags, see the deep-dive), the relationship to USWDS (an independent implementation or a derivative), the MCP server's contents, and the origin of the modal's 439px</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>designsystem.ny.gov</code> → <code>figma.com/community/file/1574803287825265318/new-york-state-design-system</code> (the team file is <code>figma.com/design/U2QpuSUXRTxbgG64Fzi9bu</code>)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

@@ -179,7 +179,7 @@
     {
      "path": "site/build.mjs",
      "what": "The corpus into the data this page reads",
-     "lines": 487
+     "lines": 492
     },
     {
      "path": "site/design-spec.mjs",
@@ -199,7 +199,7 @@
     {
      "path": "site/build-pages.mjs",
      "what": "A page on this site for every document in the corpus",
-     "lines": 251
+     "lines": 256
     }
    ]
   },
@@ -284,7 +284,7 @@
    ]
   }
  ],
- "kit_lines": 5630,
+ "kit_lines": 5640,
  "systems": [
   {
    "name": "Android for Cars / Automotive OS",

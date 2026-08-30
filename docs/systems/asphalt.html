@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-dtcg-format-value-type">Tokens — the DTCG format ({value, type})</a></li><li class="lvl3"><a href="#spacing-12-gap-steps-plus-a-spacelayout-reference-tier">Spacing — 12 gap steps plus a space.layout reference tier</a></li><li class="lvl3"><a href="#shadow-emboss-deboss">Shadow — emboss / deboss</a></li><li class="lvl3"><a href="#type-a-different-typeface-per-role">Type — a different typeface per role</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-padding-instead-of-height-with-the-border-offset-twice-over">Buttons — padding instead of height, with the border offset twice over</a></li><li class="lvl3"><a href="#inputs-textfield-the-same-four-step-ladder-as-the-button-and-an-input-with-hover">Inputs (textfield) — the same four-step ladder as the button, and an input with hover</a></li><li class="lvl3"><a href="#modals-a-native-dialog-with-no-width-scale">Modals — a native &lt;dialog&gt; with no width scale</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-dtcg-format-value-type">Tokens — the DTCG format ({value, type})</a></li><li class="lvl3"><a href="#spacing-12-gap-steps-plus-a-spacelayout-reference-tier">Spacing — 12 gap steps plus a space.layout reference tier</a></li><li class="lvl3"><a href="#shadow-emboss-deboss">Shadow — emboss / deboss</a></li><li class="lvl3"><a href="#type-a-different-typeface-per-role">Type — a different typeface per role</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-padding-instead-of-height-with-the-border-offset-twice-over">Buttons — padding instead of height, with the border offset twice over</a></li><li class="lvl3"><a href="#inputs-textfield-the-same-four-step-ladder-as-the-button-and-an-input-with-hover">Inputs (textfield) — the same four-step ladder as the button, and an input with hover</a></li><li class="lvl3"><a href="#modals-a-native-dialog-with-no-width-scale">Modals — a native &lt;dialog&gt; with no width scale</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
   </div>
   <div class="railfoot"><b>Gojek (GoTo)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://asphalt.gojek.com" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/asphalt.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Asphalt</span></nav>
-    <h1>Asphalt</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/asphalt.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Asphalt</h1>
     <p class="doc-lede">Gojek (GoTo) · consumer · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Gojek's system — <strong>the corpus's first Southeast Asian sample</strong>. It keeps <strong><code>emboss</code>/<code>deboss</code> (raised/sunken) shadow families</strong>, and in typography <strong><code>display</code> and <code>heading</code> use different typefaces</strong> (Maison Neue Extended vs Maison Neue). Spacing is a <strong>12-step t-shirt scale from <code>3XS</code> to <code>6XL</code></strong>.</p>
@@ -120,10 +121,11 @@ deboss.low.top:    innerShadow  #1e2c6a0a  y2 blur4   // a pressed-in inner shad
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="references">References</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @gojek/asphalt-web-tokens@1.14.0</code></li><li>Components: <code>@asphalt-react/*</code> (split individually) — the <code>dist/index.css</code> of <code>button@2.16.0</code> · <code>textfield@2.17.0</code> · <code>modal@2.16.0</code> (used in the 2026-08-18 deep pass)</li><li>Brand themes: <code>@gojek/theme-asphalt-web-carina</code> · <code>-lynx</code> (not surveyed)</li><li><strong>Open questions:</strong> the colour palette, a full component list (a scope search confirms button, textfield, modal, popover, tab, tag, checkbox, selection, loader and others, but the enumeration is incomplete), how the carina and lynx themes differ, and the licence terms (what the UNLICENSED marking means)</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @gojek/asphalt-web-tokens@1.14.0</code></li><li>Components: <code>@asphalt-react/*</code> (split individually) — the <code>dist/index.css</code> of <code>button@2.16.0</code> · <code>textfield@2.17.0</code> · <code>modal@2.16.0</code> (used in the 2026-08-18 deep pass)</li><li>Brand themes: <code>@gojek/theme-asphalt-web-carina</code> · <code>-lynx</code> (not surveyed)</li><li><strong>Open questions:</strong> the colour palette, a full component list (a scope search confirms button, textfield, modal, popover, tab, tag, checkbox, selection, loader and others, but the enumeration is incomplete), how the carina and lynx themes differ, and the licence terms (what the UNLICENSED marking means)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

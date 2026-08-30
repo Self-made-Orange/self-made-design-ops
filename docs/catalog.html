@@ -292,20 +292,22 @@ try {
   </div>
 </footer>
 
+<script src="./assets/i18n.js"></script>
 <script src="./assets/site.js"></script>
 <script>
 (() => {
   'use strict';
   const { $, el, BLOB, corpus, mark } = window.SMO;
-
-
-
-
+  const { t, translate, readCatalogState, catalogStateURL, updateLanguageLinks } = window.SMO_I18N;
   let data = null;
-  const state = { q: '', platform: new Set(), coverage: new Set(), domain: new Set() };
+  const state = readCatalogState(location.href);
+  $('#q').value = state.q;
 
   corpus.then((d) => {
     data = d;
+    for (const key of ['platform', 'coverage', 'domain']) {
+      state[key] = new Set([...state[key]].filter((value) => Object.hasOwn(d['by_' + key], value)));
+    }
     // Deepest coverage first, then by name within a level. Explicit order —
     // alphabetical would put 'full' after 'partial'.
     const order = { full: 0, partial: 1, minimal: 2 };
@@ -322,9 +324,9 @@ try {
     facets('#f-domain', 'domain', d.by_domain, 3);   // domains under 3 are folded away
     render();
   }).catch(() => {
-    $('#count').textContent = 'Data unavailable';
+    $('#count').textContent = t('Data unavailable');
     $('#list').append(el('p', { className: 'noscript',
-      textContent: 'Could not load the data. Read design-systems/index.md in the repository instead.' }));
+      textContent: t('Could not load the data. Read design-systems/index.md in the repository instead.') }));
   });
 
   function facets(sel, key, counts, min = 0) {
@@ -332,8 +334,8 @@ try {
     for (const [value, n] of Object.entries(counts).sort((a, b) => b[1] - a[1])) {
       if (n < min) continue;
       const chip = el('button', { className: 'chip', type: 'button' },
-        [value, el('span', { className: 'c', textContent: n })]);
-      chip.setAttribute('aria-pressed', 'false');
+        [t(value), el('span', { className: 'c', textContent: n })]);
+      chip.setAttribute('aria-pressed', String(state[key].has(value)));
       chip.addEventListener('click', () => {
         const on = chip.getAttribute('aria-pressed') === 'true';
         chip.setAttribute('aria-pressed', String(!on));
@@ -344,7 +346,7 @@ try {
     }
   }
 
-  $('#q').addEventListener('input', (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
+  $('#q').addEventListener('input', (e) => { state.q = e.target.value; render(); });
   $('#reset').addEventListener('click', () => {
     state.q = ''; $('#q').value = '';
     for (const k of ['platform', 'coverage', 'domain']) state[k].clear();
@@ -357,13 +359,19 @@ try {
     (!state.domain.size || state.domain.has(s.domain)) &&
     (!state.platform.size || s.platform.some((p) => state.platform.has(p))) &&
     (!state.q || [s.name, s.org, s.domain, s.file, ...s.platform, ...s.tech,
-                  ...s.tokens.map((t) => t.en)].join(' ').toLowerCase().includes(state.q));
+                  t(s.domain), ...s.platform.map((p) => t(p)), t(s.coverage),
+                  ...s.tokens.map((token) => token.en)].join(' ').toLowerCase().includes(state.q.trim().toLowerCase()));
 
   function render() {
+    // Updating the URL also keeps header, banner and footer language changes shareable.
+    history.replaceState(null, '', catalogStateURL(location.href, state));
+    updateLanguageLinks();
+    if (!data) return;
     const hits = data.systems.filter(matches);
-    $('#count').textContent = `${hits.length} of ${data.count}`;
+    $('#count').textContent = t('{shown} of {total}', { shown: hits.length, total: data.count });
     $('#empty').hidden = hits.length > 0;
     $('#list').replaceChildren(...hits.map(row));
+    translate($('#list'));
   }
 
   const isUnverified = (v) => typeof v === 'string' &&
@@ -373,25 +381,25 @@ try {
     const open = [s.figma, s.a11y].filter(isUnverified).length;
     const name = el('a', { className: 'nm', href: './systems/' + s.file.replace(/\.md$/, '') + '.html', textContent: s.name });
     const tokens = s.tokens.map((t) => t.en).filter(Boolean).join(' · ');
-    name.title = [`verified ${s.verified}`, tokens && `tokens: ${tokens}`].filter(Boolean).join(' — ');
+    name.title = [t('verified {date}', { date: s.verified }), tokens && t('tokens: {tokens}', { tokens })].filter(Boolean).join(' — ');
 
     const first = el('span', { className: 'cell-nm' }, [name]);
     if (s.figma === true) first.append(el('span', { className: 'mk', textContent: 'Figma' }));
-    if (open) first.append(el('span', { className: 'mk warn', textContent: `${open} open` }));
+    if (open) first.append(el('span', { className: 'mk warn', textContent: t('{count} open', { count: open }) }));
 
-    const cov = el('span', { className: 'cov', textContent: s.coverage });
+    const cov = el('span', { className: 'cov', textContent: t(s.coverage) });
     cov.dataset.c = s.coverage;
 
     const out = [];
-    if (s.url) out.push(el('a', { href: s.url, rel: 'noopener', textContent: 'site' }));
-    if (s.repo) out.push(el('a', { href: s.repo, rel: 'noopener', textContent: 'src' }));
+    if (s.url) out.push(el('a', { href: s.url, rel: 'noopener', textContent: t('site') }));
+    if (s.repo) out.push(el('a', { href: s.repo, rel: 'noopener', textContent: t('src') }));
 
     return el('div', { className: 'row' }, [
       mark(s), first,
-      el('span', { className: 'ds', textContent: `${s.org} · ${s.domain}` }),
+      el('span', { className: 'ds', textContent: `${s.org} · ${t(s.domain)}` }),
       el('span', { className: 'cell-cov' }, [cov]),
       el('span', { className: 'rt', textContent: s.platform.length > 1
-        ? `${s.platform[0]} +${s.platform.length - 1}` : s.platform[0], title: s.platform.join(' · ') }),
+        ? `${t(s.platform[0])} +${s.platform.length - 1}` : t(s.platform[0]), title: s.platform.map((p) => t(p)).join(' · ') }),
       el('span', { className: 'rt' }, out.length ? [el('span', { className: 'out' }, out)] : []),
     ]);
   }

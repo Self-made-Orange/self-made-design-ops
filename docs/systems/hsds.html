@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-component-is-the-top-level-unit">Tokens — the component is the top-level unit</a></li><li class="lvl3"><a href="#the-rebrand-coexists-as-a-directory">The rebrand coexists as a directory</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-seven-sizes-no-transition">Buttons — seven sizes, no transition</a></li><li class="lvl3"><a href="#inputs-a-separate-backdrop-layer-draws-the-border">Inputs — a separate &quot;Backdrop&quot; layer draws the border</a></li><li class="lvl3"><a href="#modals-a-vocabulary-of-named-easings-entering-on-boop">Modals — a vocabulary of named easings, entering on 'boop'</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-component-is-the-top-level-unit">Tokens — the component is the top-level unit</a></li><li class="lvl3"><a href="#the-rebrand-coexists-as-a-directory">The rebrand coexists as a directory</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-seven-sizes-no-transition">Buttons — seven sizes, no transition</a></li><li class="lvl3"><a href="#inputs-a-separate-backdrop-layer-draws-the-border">Inputs — a separate &quot;Backdrop&quot; layer draws the border</a></li><li class="lvl3"><a href="#modals-a-vocabulary-of-named-easings-entering-on-boop">Modals — a vocabulary of named easings, entering on 'boop'</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
   </div>
   <div class="railfoot"><b>Help Scout</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://hsds.helpscout.design" rel="noopener">Official site</a><br><a href="https://github.com/helpscout/hsds-react" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/hsds.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>HSDS (Help Scout Design System)</span></nav>
-    <h1>HSDS (Help Scout Design System)</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/hsds.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>HSDS (Help Scout Design System)</h1>
     <p class="doc-lede">Help Scout · enterprise · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Help Scout's system — the tokens are split into <strong>52 JSON files, one per component</strong>, and <strong>the same 52-file structure ships twice, once for the <code>default</code> theme and once for <code>newBrand</code></strong>. The primary unit of a token is not a global scale but <strong>a component</strong>.</p>
@@ -117,10 +118,11 @@ src/json/newBrand/   the same 52 files (the rebrand edition)</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="references">References</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @hsds/tokens@2.8.0</code> → <code>src/json/</code></li><li>Components: <del><code>@helpscout/hsds-react@3.58.0</code></del> → the current form is the <strong>split <code>@hsds/*</code> v9 distribution</strong> — <code>@hsds/button@9.4.2</code> · <code>@hsds/input@9.3.2</code> · <code>@hsds/modal@9.2.3</code> · <code>@hsds/animate@9.0.2</code> · <code>@hsds/utils-animation@9.0.2</code> · <code>@hsds/utils-mixins@9.3.0</code> (used in the 2026-08-18 deep pass); colour utilities live in <code>@helpscout/colorway</code></li><li><strong>Open questions:</strong> the global values in <code>color.json</code> and <code>cssVarsTokens.json</code>, a full diff of default vs newBrand, the licence</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: github helpscout/hsds-react → <code>LICENSE</code>. The package.json of npm <code>@hsds/tokens@2.8.0</code> has no <code>license</code> field</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @hsds/tokens@2.8.0</code> → <code>src/json/</code></li><li>Components: <del><code>@helpscout/hsds-react@3.58.0</code></del> → the current form is the <strong>split <code>@hsds/*</code> v9 distribution</strong> — <code>@hsds/button@9.4.2</code> · <code>@hsds/input@9.3.2</code> · <code>@hsds/modal@9.2.3</code> · <code>@hsds/animate@9.0.2</code> · <code>@hsds/utils-animation@9.0.2</code> · <code>@hsds/utils-mixins@9.3.0</code> (used in the 2026-08-18 deep pass); colour utilities live in <code>@helpscout/colorway</code></li><li><strong>Open questions:</strong> the global values in <code>color.json</code> and <code>cssVarsTokens.json</code>, a full diff of default vs newBrand, the licence</li><li><strong>Licence resolved (2026-08-18):</strong> <code>MIT</code> — source: github helpscout/hsds-react → <code>LICENSE</code>. The package.json of npm <code>@hsds/tokens@2.8.0</code> has no <code>license</code> field</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

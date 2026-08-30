@@ -60,6 +60,7 @@
   --panel:#161616;--panel-line:#2a2a2a;
 }
 *,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(var(--head-h) + 16px)}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);
   letter-spacing:-.005em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
 a{color:var(--link);text-underline-offset:3px}
@@ -70,7 +71,7 @@ h1,h2,h3{letter-spacing:-.028em}
   padding:var(--sp-2) var(--sp-3);border:1px solid var(--border-strong)}
 
 /* ── Header */
-.top{position:sticky;top:0;z-index:40;height:var(--head-h);background:var(--surface);
+.top{position:sticky;top:0;z-index:40;min-height:58px;flex-wrap:wrap;background:var(--surface);
   border-bottom:1px solid var(--border);display:flex;align-items:center;gap:var(--sp-4);
   padding:0 var(--sp-5)}
 .brand{font-weight:660;font-size:15px;color:var(--text);text-decoration:none;white-space:nowrap;
@@ -85,6 +86,30 @@ h1,h2,h3{letter-spacing:-.028em}
 .ctrl.pad{padding:0 var(--sp-3);gap:6px}
 .ctrl .n{font-family:var(--mono);font-size:10.5px;color:var(--text-dim)}
 .ctrl.icon{width:32px}
+.language-select{max-width:160px;padding:0 24px 0 8px;flex-shrink:0}
+.language-banner{display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:12px 24px;background:var(--bg-sunken);border-bottom:1px solid var(--border-strong);
+  color:var(--text);font-size:14px;line-height:1.5}
+.language-banner p{margin:0;max-width:640px}
+.language-banner .ctrl{height:auto;min-height:36px}
+.language-apply{background:var(--text);color:var(--bg);font-weight:600;flex-shrink:0}
+.language-apply:hover{background:var(--text-mut);color:var(--bg)}
+.language-close{flex-shrink:0;font-size:20px}
+.source-language-note{padding:12px 16px;background:var(--bg-sunken);
+  border:1px solid var(--border);font-size:14px;color:var(--text-mut)}
+.source-language-note a{display:inline-block;margin-inline-start:8px}
+nav[aria-labelledby="fc-lang"] a[aria-current]{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:620px){
+  .top{gap:8px;padding-block:10px}
+  .top .brand{flex:1 1 150px}
+  .top .spacer{display:none}
+  .language-select{max-width:145px}
+  .language-banner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding:12px 16px}
+  .language-banner p{grid-column:1;grid-row:1}
+  .language-banner .language-close{grid-column:2;grid-row:1;align-self:start}
+  .language-banner .language-select{grid-column:1;grid-row:2;max-width:100%;width:100%}
+  .language-banner .language-apply{grid-column:1 / -1;grid-row:3;white-space:normal}
+}
 .i-sun{display:none}
 [data-theme="dark"] .i-sun{display:block}
 [data-theme="dark"] .i-moon{display:none}
@@ -334,7 +359,7 @@ footer.site .wrap{max-width:1080px;margin:0 auto;padding:0 var(--sp-5)}
    goes: the rail and the footer both carry it, the theme toggle is carried nowhere
    else. */
 @media(max-width:620px){
-  .top{gap:var(--sp-3);padding:0 var(--sp-4)}
+  .top{gap:var(--sp-3);padding:10px var(--sp-4)}
   .top .gh{display:none}
 }
 

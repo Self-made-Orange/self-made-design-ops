@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#source-status-a-system-that-exists-only-on-npm-measured-2026-08-18">Source status — a system that exists only on npm (measured 2026-08-18)</a></li><li><a href="#typography-16-styles-with-lang-line-height-branching">Typography — 16 styles, with :lang() line-height branching</a></li><li><a href="#buttons-three-blue-steps-a-25rem-pill">Buttons — three blue steps, a 2.5rem pill</a></li><li><a href="#grid-12-columns-24px-gutter-six-breakpoints">Grid — 12 columns, 24px gutter, six breakpoints</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#source-status-a-system-that-exists-only-on-npm-measured-2026-08-18">Source status — a system that exists only on npm (measured 2026-08-18)</a></li><li><a href="#typography-16-styles-with-lang-line-height-branching">Typography — 16 styles, with :lang() line-height branching</a></li><li><a href="#buttons-three-blue-steps-a-25rem-pill">Buttons — three blue steps, a 2.5rem pill</a></li><li><a href="#grid-12-columns-24px-gutter-six-breakpoints">Grid — 12 columns, 24px gutter, six breakpoints</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Rakuten (Japan)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://rex.rakuten.design (403 — taken internal)" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/rakuten-rex.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Rakuten ReX</span></nav>
-    <h1>Rakuten ReX</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/rakuten-rex.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Rakuten ReX</h1>
     <p class="doc-lede">Rakuten (Japan) · commerce · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Rakuten's (Japanese commerce) React component system — a sample <strong>published to npm between 2019 and 2021 and then discontinued, whose documentation and repositories have all disappeared, leaving the npm tarballs as the only surviving source</strong>. Its typography has <strong><code>:lang(en)</code> / <code>:lang(ja)</code> line-height branching</strong> baked into the CSS (crossing LINE's language axis), and the shipped CSS carries <strong>a build bug that left <code>undefined</code> literals in place</strong>.</p>
@@ -111,10 +112,11 @@ Gutter           24px (row -12 / col +12)</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified (<code>:focus</code> identical to hover plus <code>outline: none</code> — AA is doubtful without an explicit provision).</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>npm: https://www.npmjs.com/org/rakuten-rex (36 packages, 2019-07 to 2021-02)</li><li>Verification commands: <code>registry.npmjs.org/-/v1/search?text=%40rakuten-rex</code> plus individual probes (confirming <code>@rakuten-rex/&amp;lt;name&amp;gt;</code> 404s)</li><li><strong>Still to confirm:</strong> the full colour palette (there is no token package — sweeping the static.css of the remaining 30-odd packages such as text-field and checkbox would recover the list of colours in use), the contents of <code>icons@1.3.0</code> (the last release), what became of Rakuten's internal system after ReX, and the Figma kit</li></ul>
+<ul class="md-list"><li>npm: https://www.npmjs.com/org/rakuten-rex (36 packages, 2019-07 to 2021-02)</li><li>Verification commands: <code>registry.npmjs.org/-/v1/search?text=%40rakuten-rex</code> plus individual probes (confirming <code>@rakuten-rex/&amp;lt;name&amp;gt;</code> 404s)</li><li><strong>Still to confirm:</strong> the full colour palette (there is no token package — sweeping the static.css of the remaining 30-odd packages such as text-field and checkbox would recover the list of colours in use), the contents of <code>icons@1.3.0</code> (the last release), what became of Rakuten's internal system after ReX, and the Figma kit</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

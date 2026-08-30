@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#colour-is-three-dimensional">Colour is three-dimensional</a></li><li class="lvl3"><a href="#spacing-the-number-is-px-25">Spacing — the number is px × 25</a></li><li class="lvl3"><a href="#breakpoints">Breakpoints</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-leafygreen-uibutton2521">Buttons (@leafygreen-ui/button@25.2.1)</a></li><li class="lvl3"><a href="#inputs-text-input1623-form-field409">Inputs (text-input@16.2.3 → form-field@4.0.9)</a></li><li class="lvl3"><a href="#modals-leafygreen-uimodal2201-a-native-dialog-plus-starting-style">Modals (@leafygreen-ui/modal@22.0.1) — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#colour-is-three-dimensional">Colour is three-dimensional</a></li><li class="lvl3"><a href="#spacing-the-number-is-px-25">Spacing — the number is px × 25</a></li><li class="lvl3"><a href="#breakpoints">Breakpoints</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-leafygreen-uibutton2521">Buttons (@leafygreen-ui/button@25.2.1)</a></li><li class="lvl3"><a href="#inputs-text-input1623-form-field409">Inputs (text-input@16.2.3 → form-field@4.0.9)</a></li><li class="lvl3"><a href="#modals-leafygreen-uimodal2201-a-native-dialog-plus-starting-style">Modals (@leafygreen-ui/modal@22.0.1) — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>MongoDB</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.mongodb.design" rel="noopener">Official site</a><br><a href="https://github.com/mongodb/design" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/leafygreen.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>LeafyGreen</span></nav>
-    <h1>LeafyGreen</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/leafygreen.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>LeafyGreen</h1>
     <p class="doc-lede">MongoDB · enterprise · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>MongoDB's system — the colour tokens are a <strong>three-dimensional property × role × state structure</strong> (<code>background.primary.hover</code>), and the spacing numbers are <strong>px × 25</strong> (<code>spacing[100]</code> = 4px).</p>
@@ -120,10 +121,11 @@ InteractionState: Default · Hover · Focus
 <h2 id="accessibility">Accessibility</h2>
 <p><del>Unverified.</del> → <strong>WCAG 2.1 + Section 508 (resolved 2026-08-18 — no level is stated).</strong> Source: <code>mongodb.design/foundations/accessibility</code> — &quot;accessibility requirements outlined in Section 508 of the WCAG 2.1&quot;. <strong>The original wording conflates the two standards</strong> (Section 508 is not a sub-clause of WCAG) — it is transcribed as written.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @leafygreen-ui/tokens@4.2.2</code> → <code>dist/esm/index.js</code></li><li>The palette is a separate package, <code>@leafygreen-ui/palette@5.0.2</code></li><li>Component deep-dive: <code>@leafygreen-ui/button@25.2.1</code> · <code>text-input@16.2.3</code> · <code>form-field@4.0.9</code> · <code>modal@22.0.1</code> (parsed from the dist/esm emotion styles, 2026-08-18)</li><li><strong>Still to confirm:</strong> real palette values, the full type scale (only body1 13/20 and body2 16/28 confirmed), and the component list (split across many packages — no exhaustive listing yet)</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>mongodb.design</code> → <code>figma.com/design/4h2VwjCuJUbeZ7hzD2J1rq/LeafyGreen-Design-System</code></li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @leafygreen-ui/tokens@4.2.2</code> → <code>dist/esm/index.js</code></li><li>The palette is a separate package, <code>@leafygreen-ui/palette@5.0.2</code></li><li>Component deep-dive: <code>@leafygreen-ui/button@25.2.1</code> · <code>text-input@16.2.3</code> · <code>form-field@4.0.9</code> · <code>modal@22.0.1</code> (parsed from the dist/esm emotion styles, 2026-08-18)</li><li><strong>Still to confirm:</strong> real palette values, the full type scale (only body1 13/20 and body2 16/28 confirmed), and the component list (split across many packages — no exhaustive listing yet)</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>mongodb.design</code> → <code>figma.com/design/4h2VwjCuJUbeZ7hzD2J1rq/LeafyGreen-Design-System</code></li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

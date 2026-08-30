@@ -10,6 +10,7 @@
 (() => {
   'use strict';
 
+  const { t, root: siteRoot } = window.SMO_I18N;
   const $ = (s, r = document) => r.querySelector(s);
   const el = (tag, props = {}, kids = []) => {
     const n = Object.assign(document.createElement(tag), props);
@@ -67,7 +68,7 @@
     document.documentElement.dataset.theme = next;
     try { localStorage.setItem(THEME_KEY, next); } catch { /* private mode — the session still works */ }
     for (const b of document.querySelectorAll('[data-theme-toggle]')) {
-      b.setAttribute('aria-label', next === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      b.setAttribute('aria-label', t(next === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'));
       b.setAttribute('aria-pressed', String(next === 'dark'));
     }
   }
@@ -187,8 +188,8 @@
       if (!src) return;
       try {
         await navigator.clipboard.writeText(src.dataset.full || src.textContent);
-        btn.textContent = 'Copied';
-      } catch { btn.textContent = 'Copy failed'; }
+        btn.textContent = t('Copied');
+      } catch { btn.textContent = t('Copy failed'); }
       setTimeout(() => { btn.textContent = label; }, 1500);
     });
   }
@@ -226,10 +227,10 @@
   }
 
   /* ── The one loader. Both pages read the same generated file. */
-  const corpus = fetch('./data/corpus.json').then((r) => {
+  const corpus = document.querySelector('#kit-list, #list') ? fetch(new URL('data/corpus.json', siteRoot)).then((r) => {
     if (!r.ok) throw new Error('corpus.json ' + r.status);
     return r.json();
-  });
+  }) : Promise.resolve(null);
 
   window.SMO = { $, el, REPO, BLOB, corpus, mark, hue, initials, orgOf,
     spy: () => dispatchEvent(new Event('resize')) };

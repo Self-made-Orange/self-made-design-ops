@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-seven-multipliers-on-a-base-of-4-with-no-4-or-6">Spacing — seven multipliers on a base of 4, with no ×4 or ×6</a></li><li class="lvl3"><a href="#derived-scales-all-multiples-of-base">Derived scales — all multiples of BASE</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#opacity-twelve-even-steps">Opacity — twelve even steps</a></li><li class="lvl3"><a href="#borders-shadows">Borders · shadows</a></li><li><a href="#components">Components</a></li><li class="lvl3"><a href="#button-deep-dive-2026-08-17-zendeskgardencss-buttons901-the-classic-css-line">Button deep-dive (2026-08-17, @zendeskgarden/css-buttons@9.0.1 — the classic CSS line)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#spacing-seven-multipliers-on-a-base-of-4-with-no-4-or-6">Spacing — seven multipliers on a base of 4, with no ×4 or ×6</a></li><li class="lvl3"><a href="#derived-scales-all-multiples-of-base">Derived scales — all multiples of BASE</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#opacity-twelve-even-steps">Opacity — twelve even steps</a></li><li class="lvl3"><a href="#borders-shadows">Borders · shadows</a></li><li><a href="#components">Components</a></li><li class="lvl3"><a href="#button-deep-dive-2026-08-17-zendeskgardencss-buttons901-the-classic-css-line">Button deep-dive (2026-08-17, @zendeskgarden/css-buttons@9.0.1 — the classic CSS line)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Zendesk</b><br>full harvest · web<br>verified 2026-08-17<br><a href="https://garden.zendesk.com" rel="noopener">Official site</a><br><a href="https://github.com/zendeskgarden/react-components" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/garden.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Garden</span></nav>
-    <h1>Garden</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/garden.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Garden</h1>
     <p class="doc-lede">Zendesk · enterprise · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>Zendesk's design system. <strong>Its spacing has neither 16px nor 24px</strong> — the multipliers run <code>1·2·3·5·8·10·12</code>, making it <strong>the system that broke the corpus's last unbroken value (16px)</strong>.</p>
@@ -127,10 +128,11 @@ space = {
 <h2 id="accessibility">Accessibility</h2>
 <p>No stated target confirmed. The opacity and shadow structure (the <code>0 0 0 Npx</code> used for focus rings) reads as being used for focus expression, but no specification figures are in the source.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Documentation: https://garden.zendesk.com (blocked by the proxy)</li><li>Tokens: <code>npm pack @zendeskgarden/react-theming@9.15.7</code> → <code>dist/index.cjs.js</code></li><li>Legacy CSS variables: <code>@zendeskgarden/css-variables@7.0.0</code> (dormant since 2024)</li><li><strong>Still to confirm:</strong> the colour palette (the <code>palette</code> / <code>colors</code> structure), the component list, the licence, and whether the current package has monospace sizes</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github zendeskgarden/react-components → <code>LICENSE.md</code> (matching the npm <code>@zendeskgarden/react-theming@9.15.7</code> metadata)</li></ul>
+<ul class="md-list"><li>Documentation: https://garden.zendesk.com (blocked by the proxy)</li><li>Tokens: <code>npm pack @zendeskgarden/react-theming@9.15.7</code> → <code>dist/index.cjs.js</code></li><li>Legacy CSS variables: <code>@zendeskgarden/css-variables@7.0.0</code> (dormant since 2024)</li><li><strong>Still to confirm:</strong> the colour palette (the <code>palette</code> / <code>colors</code> structure), the component list, the licence, and whether the current package has monospace sizes</li><li><strong>Licence resolved (2026-08-18):</strong> <code>Apache-2.0</code> — source: github zendeskgarden/react-components → <code>LICENSE.md</code> (matching the npm <code>@zendeskgarden/react-theming@9.15.7</code> metadata)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

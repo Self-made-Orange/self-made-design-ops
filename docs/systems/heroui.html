@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-three-layouts-defaultlightdark">Tokens — three layouts (default/light/dark)</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons">Buttons</a></li><li class="lvl3"><a href="#inputs">Inputs</a></li><li class="lvl3"><a href="#modals">Modals</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-three-layouts-defaultlightdark">Tokens — three layouts (default/light/dark)</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons">Buttons</a></li><li class="lvl3"><a href="#inputs">Inputs</a></li><li class="lvl3"><a href="#modals">Modals</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>HeroUI</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.heroui.com" rel="noopener">Official site</a><br><a href="https://github.com/heroui-inc/heroui" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/heroui.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>HeroUI (formerly NextUI)</span></nav>
-    <h1>HeroUI (formerly NextUI)</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/heroui.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>HeroUI (formerly NextUI)</h1>
     <p class="doc-lede">HeroUI · framework · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>A Tailwind plugin-style framework — it <strong>adds an <code>inset</code> white edge to shadows in dark mode</strong>, and sets <strong>hover opacity differently per mode, .8 in light and .9 in dark</strong>. Its radii are <strong>8, 12 and 14px</strong>, an odd-numbered top that does not sit on a 4px grid.</p>
@@ -116,10 +117,11 @@ darkLayout  = { hoverOpacity: '.9', boxShadow: { … with an inset white edge ad
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @heroui/theme@2.4.26</code> → <code>dist/default-layout.js</code></li><li>Component deep-dive: the same package's <code>dist/components/{button,input,modal}.js</code> plus <code>dist/plugin.js</code> (focus and overlay colours) (2026-08-18)</li><li><strong>Still to confirm:</strong> the colour palette (partly confirmed — focus = blue-500, overlay = #000; the full ramps are unexamined), spacing (presumed inherited from Tailwind — unverified), <del>the component list</del> (resolved 2026-08-18 — <strong>46</strong> tv modules measured in <code>dist/components</code>), and when the rename from NextUI happened</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>heroui.com</code> → <code>figma.com/community/file/1546526812159103429</code></li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @heroui/theme@2.4.26</code> → <code>dist/default-layout.js</code></li><li>Component deep-dive: the same package's <code>dist/components/{button,input,modal}.js</code> plus <code>dist/plugin.js</code> (focus and overlay colours) (2026-08-18)</li><li><strong>Still to confirm:</strong> the colour palette (partly confirmed — focus = blue-500, overlay = #000; the full ramps are unexamined), spacing (presumed inherited from Tailwind — unverified), <del>the component list</del> (resolved 2026-08-18 — <strong>46</strong> tv modules measured in <code>dist/components</code>), and when the rename from NextUI happened</li><li><strong>Figma kit confirmed (2026-08-18):</strong> <code>figma_kit: true</code> — <code>heroui.com</code> → <code>figma.com/community/file/1546526812159103429</code></li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

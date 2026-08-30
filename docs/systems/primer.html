@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#size-spacing">Size / spacing</a></li><li class="lvl3"><a href="#the-negative-scale">The negative scale</a></li><li class="lvl3"><a href="#border-widths">Border widths</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#colour">Colour</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#the-component-token-tier-srctokenscomponent-confirmed-2026-08-18">The component token tier — src/tokens/component/ (confirmed 2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#size-spacing">Size / spacing</a></li><li class="lvl3"><a href="#the-negative-scale">The negative scale</a></li><li class="lvl3"><a href="#border-widths">Border widths</a></li><li class="lvl3"><a href="#typography">Typography</a></li><li class="lvl3"><a href="#colour">Colour</a></li><li class="lvl3"><a href="#radius">Radius</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#the-component-token-tier-srctokenscomponent-confirmed-2026-08-18">The component token tier — src/tokens/component/ (confirmed 2026-08-18)</a></li><li><a href="#references">References</a></li></ul>
   </div>
   <div class="railfoot"><b>GitHub</b><br>full harvest · web<br>verified 2026-08-18<br><a href="https://primer.style" rel="noopener">Official site</a><br><a href="https://github.com/primer/primitives" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/primer.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Primer</span></nav>
-    <h1>Primer</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/primer.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Primer</h1>
     <p class="doc-lede">GitHub · enterprise · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>The design system behind GitHub's products, built around screens peculiar to developer tooling — code views, diagrams and the like.</p>
@@ -160,10 +161,11 @@ menu · overlay · page · progressBar · reactionButton · selectMenu · sideNa
 skeletonLoader · timelineBadge · tooltip · topicTag · treeView · underlineNav</code></pre>
 <ul class="md-list"><li><strong>The dark overrides are inlined inside the tokens</strong> — the dark value sits alongside in <code>$extensions</code>' <code>org.primer.overrides.dark</code> (76 of them in the button file alone). A way of <strong>writing both modes at the point of the token's definition</strong>, unlike the separate-theme-file majority.</li><li><strong>Figma Variables synchronisation metadata is embedded in the tokens</strong> — <code>org.primer.figma</code> (collection · group · scopes) is attached to every token, so the token files describe their own code→Figma variable publishing. The only sample in the corpus to put Figma synchronisation information into the token schema.</li><li><code>focus</code> is a <code>$type: border</code> <strong>composite type</strong> (colour + style + width in one value) — a real use of a DTCG composite type. A 2px outline.</li><li>Every reference goes to the functional tier (<code>{control.*}</code> and so on) — the three-tier discipline of never touching base directly is upheld in the component tier too.</li><li><strong>A typo in a file name, <code>headerSerach.json5</code>, survives in the distribution</strong> — the only typo embalmed in a namespace in the sample (a demonstration of the irreversibility of token names: fixing the name would break consumers).</li></ul>
 <h2 id="references">References</h2>
-<ul class="md-list"><li>Repository: https://github.com/primer/primitives</li><li>Token package: <code>@primer/primitives</code></li><li>Build: Style Dictionary generating CSS variables from JSON</li></ul>
+<ul class="md-list"><li>Repository: https://github.com/primer/primitives</li><li>Token package: <code>@primer/primitives</code></li><li>Build: Style Dictionary generating CSS variables from JSON</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-24-themes-structural-values-included">Tokens — 24 themes, structural values included</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-btn-every-dimension-derived-from-one-variable">Buttons (btn) — every dimension derived from one variable</a></li><li class="lvl3"><a href="#inputs-input">Inputs (input)</a></li><li class="lvl3"><a href="#dialogs-dialog-a-native-dialog-plus-starting-style">Dialogs (dialog) — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-24-themes-structural-values-included">Tokens — 24 themes, structural values included</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-btn-every-dimension-derived-from-one-variable">Buttons (btn) — every dimension derived from one variable</a></li><li class="lvl3"><a href="#inputs-input">Inputs (input)</a></li><li class="lvl3"><a href="#dialogs-dialog-a-native-dialog-plus-starting-style">Dialogs (dialog) — a native &lt;dialog&gt; plus @starting-style</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Skeleton Labs</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://www.skeleton.dev" rel="noopener">Official site</a><br><a href="https://github.com/skeletonlabs/skeleton" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/skeleton.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Skeleton</span></nav>
-    <h1>Skeleton</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/skeleton.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Skeleton</h1>
     <p class="doc-lede">Skeleton Labs · framework · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p><strong>The corpus's first sample from the Svelte ecosystem.</strong> Its 24 themes each carry different <strong>structural values — type scaling and radii — not just colour</strong>, and <strong>community colour schemes like Dracula and Catppuccin ship as official themes</strong>.</p>
@@ -110,10 +111,11 @@ padding-inline: calc((var(--btn-size) - 2px) / 2 + 4px);</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @skeletonlabs/skeleton@5.0.0</code> → <code>src/themes/</code></li><li>Component deep-dive: the same package's <code>src/utilities/{buttons,form-inputs,form-core,dialogs,presets}.css</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>components (the Svelte-side package)</del> <del>the dark-mode approach</del> (resolved 2026-08-18 — the visual layer is entirely this package's CSS utilities with the Svelte and React packages handling only behaviour, and dark is the light-dark pair tokens plus <code>@variant dark</code>), and an exhaustive listing of values per theme</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @skeletonlabs/skeleton@5.0.0</code> → <code>src/themes/</code></li><li>Component deep-dive: the same package's <code>src/utilities/{buttons,form-inputs,form-core,dialogs,presets}.css</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>components (the Svelte-side package)</del> <del>the dark-mode approach</del> (resolved 2026-08-18 — the visual layer is entirely this package's CSS utilities with the Svelte and React packages handling only behaviour, and dark is the light-dark pair tokens plus <code>@variant dark</code>), and an exhaustive listing of values per theme</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

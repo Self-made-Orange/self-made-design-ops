@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-values-are-grid-units">Tokens — the values are grid units</a></li><li class="lvl3"><a href="#linegap-leading-defined-as-a-gap">lineGap — leading defined as a gap</a></li><li class="lvl3"><a href="#themes-only-brand-colours-are-injected">Themes — only brand colours are injected</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#additional-base-values-nvl">Additional base values (nvl)</a></li><li class="lvl3"><a href="#buttons-buttoncssmjs-buttonmjs">Buttons (Button.css.mjs + Button.mjs)</a></li><li class="lvl3"><a href="#inputs-privatefield">Inputs (private/Field)</a></li><li class="lvl3"><a href="#modals-and-dialogs-privatemodal-dialog">Modals and dialogs (private/Modal + Dialog)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-the-values-are-grid-units">Tokens — the values are grid units</a></li><li class="lvl3"><a href="#linegap-leading-defined-as-a-gap">lineGap — leading defined as a gap</a></li><li class="lvl3"><a href="#themes-only-brand-colours-are-injected">Themes — only brand colours are injected</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#additional-base-values-nvl">Additional base values (nvl)</a></li><li class="lvl3"><a href="#buttons-buttoncssmjs-buttonmjs">Buttons (Button.css.mjs + Button.mjs)</a></li><li class="lvl3"><a href="#inputs-privatefield">Inputs (private/Field)</a></li><li class="lvl3"><a href="#modals-and-dialogs-privatemodal-dialog">Modals and dialogs (private/Modal + Dialog)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
   </div>
   <div class="railfoot"><b>SEEK</b><br>partial harvest · web<br>verified 2026-08-23<br><a href="https://seek-oss.github.io/braid-design-system" rel="noopener">Official site</a><br><a href="https://github.com/seek-oss/braid-design-system" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/braid.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Braid</span></nav>
-    <h1>Braid</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/braid.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Braid</h1>
     <p class="doc-lede">SEEK · consumer · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>SEEK's system (a jobs platform) — <strong>token values are grid multiples rather than px</strong> (<code>grid: 4</code>, <code>space.medium: 6</code> → 24px), and line spacing is defined not as a height but as <strong><code>lineGap</code>, the gap between lines</strong>. Both are unique in the sample.</p>
@@ -120,10 +121,11 @@ text.standard: { mobile: { fontSize: 16, lineGap: 12 } }</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified (a touch-target token exists).</p>
 <h2 id="references">References</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack braid-design-system@34.6.2</code> → <code>dist/lib/themes/baseTokens/</code></li><li>Components in depth: <code>dist/lib/components/**/*.css.mjs</code> (the vanilla-extract build output) from the same package plus <code>dist/lib/components/{Button/Button,private/Field/Field,private/Modal/*,Dialog/Dialog}.mjs</code> (2026-08-18)</li><li><strong>Open questions:</strong> the full colour palette, <del>radius</del> · <del>the component list</del> (resolved 2026-08-18 — the deep pass: four radius steps, 71 public components), a full survey of the responsive (mobile/tablet) pairs</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack braid-design-system@34.6.2</code> → <code>dist/lib/themes/baseTokens/</code></li><li>Components in depth: <code>dist/lib/components/**/*.css.mjs</code> (the vanilla-extract build output) from the same package plus <code>dist/lib/components/{Button/Button,private/Field/Field,private/Modal/*,Dialog/Dialog}.mjs</code> (2026-08-18)</li><li><strong>Open questions:</strong> the full colour palette, <del>radius</del> · <del>the component list</del> (resolved 2026-08-18 — the deep pass: four radius steps, 71 public components), a full survey of the responsive (mobile/tablet) pairs</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

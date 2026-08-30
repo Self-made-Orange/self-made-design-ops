@@ -35,6 +35,8 @@ jobs:
           node design-systems/i18n.mjs --check
           node design-systems/build-data.mjs
           node site/build.mjs
+          node site/build-pages.mjs
+          node --test site/i18n.test.mjs
           node site/design-spec.mjs
           node site/design-spec.mjs --lang=ko
 
@@ -46,11 +48,11 @@ jobs:
 
       - name: 생성물이 커밋본과 같은지 확인
         run: |
-          if ! git diff --quiet -- design-systems/data docs/data profiles/interpreted; then
+          if ! git diff --quiet -- design-systems/data docs profiles/interpreted; then
             echo '::error::생성물이 원본과 어긋납니다. 아래를 실행하고 결과를 커밋하세요.'
             echo '  node design-systems/build-data.mjs && node site/build.mjs'
             echo '  node site/design-spec.mjs && node site/design-spec.mjs --lang=ko'
-            git --no-pager diff --stat -- design-systems/data docs/data profiles/interpreted
+            git --no-pager diff --stat -- design-systems/data docs profiles/interpreted
             exit 1
           fi
           echo '생성물 최신 — design-systems/data · docs/data · profiles/interpreted'

@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#structure-overwriting-uswds-settings">Structure — overwriting USWDS settings</a></li><li><a href="#an-answer-to-the-aerospace-domain-question">An answer to the aerospace domain question</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#the-full-set-of-overrides-zero-at-the-component-layer">The full set of overrides — zero at the component layer</a></li><li class="lvl3"><a href="#compiled-measurements-uswds-3130s-defaults-come-through-unchanged">Compiled measurements — USWDS 3.13.0's defaults come through unchanged</a></li><li class="lvl3"><a href="#typeface-the-actual-scope-of-the-helvetica-replacement">Typeface — the actual scope of the &quot;Helvetica replacement&quot;</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#structure-overwriting-uswds-settings">Structure — overwriting USWDS settings</a></li><li><a href="#an-answer-to-the-aerospace-domain-question">An answer to the aerospace domain question</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#the-full-set-of-overrides-zero-at-the-component-layer">The full set of overrides — zero at the component layer</a></li><li class="lvl3"><a href="#compiled-measurements-uswds-3130s-defaults-come-through-unchanged">Compiled measurements — USWDS 3.13.0's defaults come through unchanged</a></li><li class="lvl3"><a href="#typeface-the-actual-scope-of-the-helvetica-replacement">Typeface — the actual scope of the &quot;Helvetica replacement&quot;</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>NASA</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://nasa.github.io/nasawds-site" rel="noopener">Official site</a><br><a href="https://github.com/nasa/nasawds" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nasa-wds.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>NASA Web Design System</span></nav>
-    <h1>NASA Web Design System</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/nasa-wds.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>NASA Web Design System</h1>
     <p class="doc-lede">NASA · aerospace · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p><strong>The second <code>aerospace</code> sample</strong> — but unlike Astro UXDS this is not a mission-control scheme of its own, it is <strong>a configuration overlay on USWDS 3.x</strong>. Even within one domain, &quot;a space agency's website&quot; and &quot;a spacecraft control UI&quot; produce entirely different systems.</p>
@@ -112,10 +113,11 @@ $theme-h3-font-size: 10, $theme-h4-font-size: 8,  // USWDS size indices</code></
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified — whether it uses USWDS's accessibility structure was not verified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack nasawds@4.0.70</code> → <code>src/theme/</code></li><li>Component deep-dive: the same package's <code>src/theme/_uswds-theme*.scss</code> plus <code>src/css/styles.css</code> (the USWDS 3.13.0 compiled output, 2026-08-18)</li><li><strong>Still to confirm:</strong> the nasawds-site documentation (blocked by the proxy), <del>the licence</del> (resolved 2026-08-18 — package.json states <strong>CC0-1.0</strong>; the frontmatter's &quot;not stated&quot; was an error, corrected 2026-08-18), <del>the full set of overrides</del> (resolved 2026-08-18 — 17 settings plus 194 custom lines, see the deep-dive)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>CC0-1.0</code> — source: npm <code>nasawds@4.0.70</code> → <code>package.json</code>. The repository (nasa/nasawds, redirecting to bruffridge/nasawds) has no LICENSE file</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack nasawds@4.0.70</code> → <code>src/theme/</code></li><li>Component deep-dive: the same package's <code>src/theme/_uswds-theme*.scss</code> plus <code>src/css/styles.css</code> (the USWDS 3.13.0 compiled output, 2026-08-18)</li><li><strong>Still to confirm:</strong> the nasawds-site documentation (blocked by the proxy), <del>the licence</del> (resolved 2026-08-18 — package.json states <strong>CC0-1.0</strong>; the frontmatter's &quot;not stated&quot; was an error, corrected 2026-08-18), <del>the full set of overrides</del> (resolved 2026-08-18 — 17 settings plus 194 custom lines, see the deep-dive)</li><li><strong>Licence resolved (2026-08-18):</strong> <code>CC0-1.0</code> — source: npm <code>nasawds@4.0.70</code> → <code>package.json</code>. The repository (nasa/nasawds, redirecting to bruffridge/nasawds) has no LICENSE file</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

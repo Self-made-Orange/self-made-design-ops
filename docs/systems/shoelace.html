@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-sl-button-they-use-the-input-height-tokens-directly">Buttons (&lt;sl-button&gt;) — they use the input height tokens directly</a></li><li class="lvl3"><a href="#inputs-sl-input">Inputs (&lt;sl-input&gt;)</a></li><li class="lvl3"><a href="#dialogs-and-drawers-animation-lives-in-a-js-registry-not-css">Dialogs and drawers — animation lives in a JS registry, not CSS</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-sl-button-they-use-the-input-height-tokens-directly">Buttons (&lt;sl-button&gt;) — they use the input height tokens directly</a></li><li class="lvl3"><a href="#inputs-sl-input">Inputs (&lt;sl-input&gt;)</a></li><li class="lvl3"><a href="#dialogs-and-drawers-animation-lives-in-a-js-registry-not-css">Dialogs and drawers — animation lives in a JS registry, not CSS</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Font Awesome (Cory LaViska)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://shoelace.style" rel="noopener">Official site</a><br><a href="https://github.com/shoelace-style/shoelace" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/shoelace.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Shoelace (→ Web Awesome)</span></nav>
-    <h1>Shoelace (→ Web Awesome)</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/shoelace.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Shoelace (→ Web Awesome)</h1>
     <p class="doc-lede">Font Awesome (Cory LaViska) · framework · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>A Web Components framework — its spacing has <strong>neither 24 nor 32</strong> (jumping 20 → 28 → 36), its radii start at 3px with <code>circle</code> and <code>pill</code> split apart, and its input heights are <strong>30/40/50px</strong>.</p>
@@ -110,10 +111,11 @@ input-height: small 30 · medium 40 · large 50px</code></pre>
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @shoelace-style/shoelace@2.20.1</code> → <code>dist/themes/light.css</code></li><li>Component deep-dive: the button, input, dialog and drawer style chunks in the same package's <code>dist/chunks/</code>, plus the <code>setDefaultAnimation</code> registrations (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>the component list</del> (resolved 2026-08-18 — 58 directories), how the tokens change after Web Awesome, and the accessibility target</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @shoelace-style/shoelace@2.20.1</code> → <code>dist/themes/light.css</code></li><li>Component deep-dive: the button, input, dialog and drawer style chunks in the same package's <code>dist/chunks/</code>, plus the <code>setDefaultAnimation</code> registrations (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>the component list</del> (resolved 2026-08-18 — 58 directories), how the tokens change after Web Awesome, and the accessibility target</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

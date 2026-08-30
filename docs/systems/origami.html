@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-size-and-line-height-pairs">Tokens — size and line-height pairs</a></li><li class="lvl3"><a href="#the-scale-differs-per-brand">The scale differs per brand</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-o-buttons-the-padding-formula-is-in-a-source-comment">Buttons (o-buttons) — the padding formula is in a source comment</a></li><li class="lvl3"><a href="#inputs-o-forms-v10-the-o3-token-layer">Inputs (o-forms v10 — the o3 token layer)</a></li><li class="lvl3"><a href="#modals-o-overlay-javascript-measures-the-width">Modals (o-overlay) — JavaScript measures the width</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-size-and-line-height-pairs">Tokens — size and line-height pairs</a></li><li class="lvl3"><a href="#the-scale-differs-per-brand">The scale differs per brand</a></li><li><a href="#component-deep-dive-2026-08-18">Component deep-dive — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-o-buttons-the-padding-formula-is-in-a-source-comment">Buttons (o-buttons) — the padding formula is in a source comment</a></li><li class="lvl3"><a href="#inputs-o-forms-v10-the-o3-token-layer">Inputs (o-forms v10 — the o3 token layer)</a></li><li class="lvl3"><a href="#modals-o-overlay-javascript-measures-the-width">Modals (o-overlay) — JavaScript measures the width</a></li><li class="lvl3"><a href="#notable-decisions-deep-dive">Notable decisions (deep-dive)</a></li><li><a href="#notable-decisions">Notable decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#notes">Notes</a></li></ul>
   </div>
   <div class="railfoot"><b>Financial Times</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://origami.ft.com" rel="noopener">Official site</a><br><a href="https://github.com/Financial-Times/origami" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/origami.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Origami</span></nav>
-    <h1>Origami</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/origami.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Origami</h1>
     <p class="doc-lede">Financial Times · consumer · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p>The Financial Times' system — its type scale is named by <strong>integer indices including negatives</strong> (<code>-2</code> to <code>10</code>), <strong>size and line height are defined as a pair (a tuple)</strong>, and <strong>the scale differs per brand</strong> (the base brand uses fixed line heights, others use ×1.2).</p>
@@ -115,10 +116,11 @@ $_o-typography-font-scale: ( -2: (12, 12*1.2), -1: (14, 14*1.2), … )</code></p
 <h2 id="accessibility">Accessibility</h2>
 <p>Unverified.</p>
 <h2 id="notes">Notes</h2>
-<ul class="md-list"><li>Tokens: <code>npm pack @financial-times/o-typography@7.7.2</code> → <code>src/scss/_brand.scss</code></li><li>Related packages: <code>o-grid</code> · <code>o-brand</code> · <code>o-editorial-typography</code></li><li>Component deep-dive: <code>o-buttons@7.11.1</code> · <code>o-forms@10.0.4</code> · <code>o-overlay@5.0.3</code> · <code>o-private-foundation@1.10.0</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>the brand list</del> (partly resolved 2026-08-18 — the o3 tokens branch into four brands, core, professional, internal and whitelabel; each brand's full type scale is unexamined), <del>spacing</del> (resolved 2026-08-18 — o3: a 4px increment function plus the s1–l24 named scale. The older o-grid remains unexamined), the colour palette, and a complete component list (enumerating the o-* packages is unfinished)</li></ul>
+<ul class="md-list"><li>Tokens: <code>npm pack @financial-times/o-typography@7.7.2</code> → <code>src/scss/_brand.scss</code></li><li>Related packages: <code>o-grid</code> · <code>o-brand</code> · <code>o-editorial-typography</code></li><li>Component deep-dive: <code>o-buttons@7.11.1</code> · <code>o-forms@10.0.4</code> · <code>o-overlay@5.0.3</code> · <code>o-private-foundation@1.10.0</code> (2026-08-18)</li><li><strong>Still to confirm:</strong> <del>the brand list</del> (partly resolved 2026-08-18 — the o3 tokens branch into four brands, core, professional, internal and whitelabel; each brand's full type scale is unexamined), <del>spacing</del> (resolved 2026-08-18 — o3: a 4px increment function plus the s1–l24 named scale. The older o-grid remains unexamined), the colour palette, and a complete component list (enumerating the o-* packages is unfinished)</li></ul></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>

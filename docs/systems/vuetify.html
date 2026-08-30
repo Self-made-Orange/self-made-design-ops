@@ -74,7 +74,7 @@
 <aside class="rail">
   <div>
     <h2>On this page</h2>
-    <ul class="sub"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-scss-variables">Tokens — SCSS variables</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-vbtn-the-geometry-is-a-ratio-formula">Buttons (VBtn) — the geometry is a ratio formula</a></li><li class="lvl3"><a href="#inputs-vfield-no-size-axis-only-density">Inputs (VField) — no size axis, only density</a></li><li class="lvl3"><a href="#dialogs-vdialog-no-width-scale">Dialogs (VDialog) — no width scale</a></li><li class="lvl3"><a href="#tables-vtable-vdatatable-density-compressed-into-two-css-variables">Tables (VTable · VDataTable) — density compressed into two CSS variables</a></li><li class="lvl3"><a href="#navigation-vnavigationdrawer-vtabs-vlist-vbreadcrumbs">Navigation (VNavigationDrawer · VTabs · VList · VBreadcrumbs)</a></li><li class="lvl3"><a href="#feedback-valert-vsnackbar-vbadge">Feedback (VAlert · VSnackbar · VBadge)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens-scss-variables">Tokens — SCSS variables</a></li><li><a href="#components-in-depth-2026-08-18">Components in depth — (2026-08-18)</a></li><li class="lvl3"><a href="#buttons-vbtn-the-geometry-is-a-ratio-formula">Buttons (VBtn) — the geometry is a ratio formula</a></li><li class="lvl3"><a href="#inputs-vfield-no-size-axis-only-density">Inputs (VField) — no size axis, only density</a></li><li class="lvl3"><a href="#dialogs-vdialog-no-width-scale">Dialogs (VDialog) — no width scale</a></li><li class="lvl3"><a href="#tables-vtable-vdatatable-density-compressed-into-two-css-variables">Tables (VTable · VDataTable) — density compressed into two CSS variables</a></li><li class="lvl3"><a href="#navigation-vnavigationdrawer-vtabs-vlist-vbreadcrumbs">Navigation (VNavigationDrawer · VTabs · VList · VBreadcrumbs)</a></li><li class="lvl3"><a href="#feedback-valert-vsnackbar-vbadge">Feedback (VAlert · VSnackbar · VBadge)</a></li><li class="lvl3"><a href="#characteristic-decisions-from-the-deep-pass">Characteristic decisions (from the deep pass)</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
   </div>
   <div class="railfoot"><b>Open source (Vuetify)</b><br>partial harvest · web<br>verified 2026-08-18<br><a href="https://vuetifyjs.com" rel="noopener">Official site</a><br><a href="https://github.com/vuetifyjs/vuetify" rel="noopener">Source</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/vuetify.md">This document on GitHub</a></div>
 </aside>
@@ -82,7 +82,8 @@
 <main class="page" id="main">
   <div class="wrap doc">
     <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Vuetify</span></nav>
-    <h1>Vuetify</h1>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/vuetify.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Vuetify</h1>
     <p class="doc-lede">Open source (Vuetify) · framework · web</p>
 <h2 id="in-one-line">In one line</h2>
 <p><strong>The corpus's first Vue sample</strong> — the recorded bias of &quot;zero systems in the Vue and Svelte families&quot; is broken here. A framework of the Material lineage that builds its spacing from a <code>$spacer: 4px</code> seed multiplied 0 through 16.</p>
@@ -125,10 +126,11 @@ $grid-columns: 12 !default;</code></pre>
 <p>Source: https://vuetifyjs.com/en/features/accessibility/ (render confirmed, 2026-08-18)</p>
 <h2 id="references">References</h2>
 <ul class="md-list"><li>Tokens: <code>npm pack vuetify@4.1.9</code> → <code>lib/styles/settings/</code></li><li>Components in depth: <code>vuetify@4.1.10</code> → <code>lib/components/{VBtn,VField,VInput,VDialog, VOverlay}/</code> plus <code>lib/components/transitions/dialog-transition.js</code> (2026-08-18)</li><li><strong>Open questions:</strong> <del>the component list</del> (102), <del>the theme structure</del> (<code>--v-theme-*</code> rgb triplets plus state opacities such as <code>--v-hover-opacity</code> and the <code>--v-theme-overlay-multiplier</code> factor — the deep pass), whether it targets Material 3 (M3 grammar is confirmed — typographic role names like <code>label-large</code>, two-layer shadows — but no official M3 conformance declaration was found), <del>figma_kit and a11y_target</del> (resolved / confirmed absent 2026-08-18)</li><li><strong>Figma kit (resolved 2026-08-18 — <code>figma_kit: true</code>)</strong>: <strong>it is free.</strong> There is a dedicated documentation page, <code>/en/resources/ui-kits/</code>, with three distribution routes — ① <strong>a Figma plugin</strong> (recommended), ② <strong>a Figma Community file</strong> (https://www.figma.com/community/file/1266515419060480209), and ③ <strong>a direct download from the Vuetify Store</strong> (https://store.vuetifyjs.com/products/vuetify-ui-kit-figma → importing <code>vuetify3-ui-light-kit.fig</code> from inside <code>vuetify-figma-ui-kit.zip</code>). As the <code>-light-</code> in the filename suggests, <strong>only a light theme ships.</strong> Source: https://vuetifyjs.com/en/resources/ui-kits/ (render confirmed, 2026-08-18)</li></ul>
-<p>4.1.10 re-verified — no token values changed (2026-08-18)</p>
+<p>4.1.10 re-verified — no token values changed (2026-08-18)</p></article>
   </div>
 </main>
 </div>
+<script src="../assets/i18n.js" defer></script>
 <script src="../assets/site.js" defer></script>
 </body>
 </html>
