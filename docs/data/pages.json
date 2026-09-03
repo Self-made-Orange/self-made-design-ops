@@ -224,6 +224,12 @@
    "verified": "2026-08-17"
   },
   {
+   "slug": "geist",
+   "name": "Geist",
+   "file": "geist.md",
+   "verified": "2026-09-03"
+  },
+  {
    "slug": "gestalt",
    "name": "Gestalt",
    "file": "gestalt.md",

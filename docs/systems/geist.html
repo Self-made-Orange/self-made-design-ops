@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geist — Self-Made DesignOps</title>
+<meta name="description" content="Vercel's system — the body scale is split in two by line count (Label for single lines, Copy for multiple), every colour scale assigns a fixed role to…">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/geist.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Self-Made DesignOps">
+<meta property="og:title" content="Geist — Self-Made DesignOps">
+<meta property="og:description" content="Vercel's system — the body scale is split in two by line count (Label for single lines, Copy for multiple), every colour scale assigns a fixed role to…">
+<meta property="og:url" content="https://self-made-orange.github.io/self-made-design-ops/systems/geist.html">
+<meta property="og:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Geist — Self-Made DesignOps">
+<meta name="twitter:description" content="Vercel's system — the body scale is split in two by line count (Label for single lines, Copy for multiple), every colour scale assigns a fixed role to…">
+<meta name="twitter:image" content="https://self-made-orange.github.io/self-made-design-ops/assets/og-catalog.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8A%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Geist",
+ "description": "Vercel's system — the body scale is split in two by line count (Label for single lines, Copy for multiple), every colour scale assigns a fixed role to…",
+ "url": "https://self-made-orange.github.io/self-made-design-ops/systems/geist.html",
+ "about": {
+  "@type": "SoftwareApplication",
+  "name": "Geist",
+  "applicationCategory": "DesignApplication",
+  "url": "https://vercel.com/geist/introduction"
+ },
+ "author": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Self-made-Orange",
+  "url": "https://github.com/Self-made-Orange"
+ },
+ "dateModified": "2026-09-03",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "isPartOf": {
+  "@type": "Dataset",
+  "name": "Self-Made DesignOps — design system corpus",
+  "url": "https://self-made-orange.github.io/self-made-design-ops/"
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="../">🍊 Self-Made DesignOps<span class="dot">.</span></a>
+  <span class="spacer"></span>
+  <a class="ctrl pad" href="../catalog.html">Catalog</a>
+  <a class="ctrl pad gh" href="https://github.com/Self-made-Orange/self-made-design-ops">GitHub</a>
+  <button class="ctrl icon" type="button" data-theme-toggle aria-label="Switch theme">
+    <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<div class="shell">
+<aside class="rail">
+  <div>
+    <h2>On this page</h2>
+    <ul class="sub" data-source-document lang="en"><li><a href="#in-one-line">In one line</a></li><li><a href="#tokens">Tokens</a></li><li class="lvl3"><a href="#typography-three-roles-named-by-pixel-size">Typography — three roles, named by pixel size</a></li><li class="lvl3"><a href="#colour-ten-scales-and-a-role-fixed-per-step">Colour — ten scales, and a role fixed per step</a></li><li class="lvl3"><a href="#the-brand-report-token-set-vercel-brandcss">The brand-report token set (vercel-brand.css)</a></li><li><a href="#components">Components</a></li><li><a href="#characteristic-decisions">Characteristic decisions</a></li><li><a href="#accessibility">Accessibility</a></li><li><a href="#references">References</a></li></ul>
+  </div>
+  <div class="railfoot"><b>Vercel</b><br>partial harvest · web<br>verified 2026-09-03<br><a href="https://vercel.com/geist/introduction" rel="noopener">Official site</a><br><a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/geist.md">This document on GitHub</a></div>
+</aside>
+
+<main class="page" id="main">
+  <div class="wrap doc">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">/</span><a href="../catalog.html">Catalog</a><span class="sep">/</span><span>Geist</span></nav>
+<p class="source-language-note"><span>This source document is in English. Website navigation follows your selected language.</span> <a href="https://github.com/Self-made-Orange/self-made-design-ops/blob/main/design-systems/systems/geist.ko.md">Read the Korean original</a></p>
+<article data-source-document lang="en">    <h1>Geist</h1>
+    <p class="doc-lede">Vercel · enterprise · web</p>
+<h2 id="in-one-line">In one line</h2>
+<p>Vercel's system — the body scale is <strong>split in two by line count</strong> (<code>Label</code> for single lines, <code>Copy</code> for multiple), every colour scale assigns <strong>a fixed role to each of its ten steps</strong>, and the brand layer is published as <strong>a Markdown file for agents plus a separate stylesheet</strong>, so the values never enter the model's context.</p>
+<h2 id="tokens">Tokens</h2>
+<blockquote><p><strong>Two sources, two scopes.</strong> The type and colour scales below are the documented Geist foundations. The numeric token table further down comes from <code>vercel-brand.css</code>, which is scoped to <strong>brand report pages</strong>, not the whole product surface. They are not the same layer and are recorded separately.</p></blockquote>
+<h3 id="typography-three-roles-named-by-pixel-size">Typography — three roles, named by pixel size</h3>
+<pre class="md-code"><code>Heading   72 · 64 · 56 · 48 · 40 · 32 · 24 · 20 · 16 · 14
+Copy      24 · 20 · 18 · 16 · 14 · 13        (+ mono at 13)
+Label     20 · 18 · 16 · 14 · 13 · 12        (+ mono at 14 · 13 · 12)
+Button    16 · 14 · 12</code></pre>
+<ul class="md-list"><li><strong><code>Label</code> and <code>Copy</code> split the body scale by line count.</strong> The source describes Label as designed for single lines with ample line-height for pairing with icons, and Copy as designed for multiple lines with a higher line height. The two overlap across 13–20px — <strong>the same size exists twice, under two names.</strong></li><li><strong>Consumed as Tailwind classes</strong> (<code>text-copy-16</code>, <code>text-label-14-mono</code>). Each class presets <code>font-size</code>, <code>line-height</code>, <code>letter-spacing</code> and <code>font-weight</code> together; the source states they are based on the &quot;Geist Core Figma system&quot;.</li><li><strong><code>&amp;lt;strong&amp;gt;</code> nested inside a typography class is the Strong modifier</strong> — the weight variant is expressed through HTML nesting, not a separate class.</li><li>Tabular numerals are called out on <code>text-label-13</code>; mono variants exist only at 14 and below.</li></ul>
+<h3 id="colour-ten-scales-and-a-role-fixed-per-step">Colour — ten scales, and a role fixed per step</h3>
+<p>Scales: <code>Backgrounds</code> · <code>Gray</code> · <code>Gray alpha</code> · <code>Blue</code> · <code>Red</code> · <code>Amber</code> · <code>Green</code> · <code>Teal</code> · <code>Purple</code> · <code>Pink</code>. P3 is used on supporting browsers and displays.</p>
+<div class="md-tablewrap"><table class="md-table"><thead><tr><th>Steps</th><th>Stated role</th></tr></thead><tbody><tr><td>1–3</td><td>component backgrounds — default / hover / active</td></tr><tr><td>4–6</td><td>borders — default / hover / active</td></tr><tr><td>7–8</td><td>high-contrast backgrounds — base / hover</td></tr><tr><td>9–10</td><td>text and icons — secondary / primary</td></tr></tbody></table></div>
+<ul class="md-list"><li><strong>The step number carries the role across every scale.</strong> Step 4 is a default border whether the scale is Gray or Blue.</li><li>Page backgrounds are a separate two-value set: Background 1 (default) and Background 2, which the source says to use sparingly for subtle differentiation.</li><li>The source states steps 9–10 are designed for accessible text and icons.</li></ul>
+<h3 id="the-brand-report-token-set-vercel-brandcss">The brand-report token set (<code>vercel-brand.css</code>)</h3>
+<p>120 custom-property declarations, all prefixed <code>--vbg-</code>, colours written in <strong><code>oklch()</code> wrapped in <code>light-dark()</code></strong> so both themes sit in one declaration.</p>
+<pre class="md-code"><code>space   1..16 → 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 px   (base 4)
+type    metadata/label .8125 · compact .875 · body 1 · lede 1.125 · subsection 1.25 ·
+        section 1.5 · title 2 · page-title 2.5 · display 3 rem
+leading caption 18 · compact 20 · body 24 · subsection 26 · lede 28 · section 32 ·
+        title 40 · page-title 48 · display 56 px   (fixed px)
+weight  regular 400 · heading 450 · medium 500 · semibold 600
+radius  8px · small 6px</code></pre>
+<ul class="md-list"><li><strong><code>weight-heading: 450</code></strong> — a non-standard variable-font weight sitting between regular and medium. It is the only heading weight in the set.</li><li><strong>Measure and width are tokens, not layout code</strong>: <code>reading-width 68ch</code> · <code>title-measure 24ch</code> · <code>compact-title-measure 30ch</code> · <code>display-measure 20ch</code> · <code>content-width 1200px</code> · <code>chart-min-width 640px</code>.</li><li><strong>Two control heights</strong>: <code>control-height 36px</code> and <code>control-height-touch 44px</code>.</li><li><strong>Spacing is re-exported under semantic flow names</strong> — <code>flow-tight</code> → space-2, <code>flow-copy</code> → space-4, <code>flow-group</code> → space-8, <code>flow-section</code> → space-16. The raw step and the rhythmic role are both addressable.</li><li>Chart series colours (<code>chart-1</code>..<code>chart-6</code>) resolve to <strong>grays only</strong> (<code>gray-1000/900/800</code>, repeated). No hue is assigned to a data series by default.</li></ul>
+<h2 id="components">Components</h2>
+<p><strong>72 documented</strong> on the Geist site:</p>
+<p>Avatar · Badge · Banner · Book · Breadcrumbs · Browser · Button · Calendar · Checkbox · Choicebox · Clearable Input · Code · Code Block · Collapse · Combobox · Command Menu · Context Card · Context Menu · Copy Button · Description · Destructive Action Modal · Dots Menu · Drawer · Empty State · Entity · Error · Error Card · Feedback · Fieldset · File Tree · Gauge · Grid · Input · JSON View · Keyboard Input · Label · Load More Button · Loading Dots · Menu · MiddleTruncate · Modal · Multi Select · Note · Pagination · Phone · Pill · Progress · Project Banner · Radio · Relative Time Card · Scroller · Search Input · Select · Separator · Sheet · Show more · Skeleton · Slider · Snippet · Spinner · Split Button · Status Dot · Switch · Table · Tabs · Text With Copy Button · Textarea · Theme Switcher · Toast · Toggle · Tooltip · Video</p>
+<p><strong>The components are documented but not distributed.</strong> <code>@vercel/geist</code> returns 404 on the npm registry (checked 2026-09-03); the published <code>geist</code> package is <strong>the typeface only</strong>.</p>
+<blockquote><p><strong>Not to be confused with <code>@geist-ui/core</code></strong> — a separate community React library at <code>github.com/geist-org/geist-ui</code>, unrelated to Vercel's Geist.</p></blockquote>
+<h2 id="characteristic-decisions">Characteristic decisions</h2>
+<ul class="md-list"><li><strong>The body scale is split by line count rather than by size.</strong> Label (single-line) and Copy (multi-line) both cover 13–20px, so choosing a text style means first answering how many lines it runs to. In the rest of the sample a body scale is a single ladder of sizes.</li><li><strong>Role is attached to the step index, not to a token name.</strong> Steps 1–3 are component backgrounds and 4–6 borders in every one of the ten scales, so a semantic layer is reached by changing the hue and holding the index.</li><li><strong>The agent-facing brand layer is split into prose and stylesheet.</strong> <code>vercel.com/design.md</code> carries judgement and contains almost no numbers; the values live in <code>vercel.com/geist/vercel-brand.css</code>, which the browser loads at render time. See <code>../INTEROP.md</code> §6 — <strong>it is a different contract from the Google Labs <code>DESIGN.md</code> despite the shared filename.</strong></li><li><strong>The brand layer names the anti-patterns it rejects.</strong> <code>design.md</code> lists roughly eighteen recognisable generated-design defaults to avoid — among them decorative gradients and glows, centred hero copy above a card grid, cards nested inside cards, badges used for ordinary metadata, charts wrapped in dark rounded rectangles, and legends that replace direct labels. It then states that avoiding them must not turn into a sterile anti-design template.</li><li><strong>Chart colour is withheld by default.</strong> The six chart series slots all resolve to grays. <code>design.md</code>'s accessibility section states that colour is never to be relied on alone.</li><li><strong>The CSS API forbids synonyms.</strong> <code>design.md</code> instructs agents to use the exact published child class names and gives <code>vbg-stat-note</code> for <code>vbg-stat-detail</code> as an example of an invented name not to use. 133 <code>.vbg-</code> classes are published across shell/layout, type and evidence, and calculator groups.</li></ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul class="md-list"><li><strong>Stated target: WCAG AA, with no version given</strong> — <code>design.md</code>'s accessibility section states the page must meet WCAG AA and never rely on colour alone. No 2.1 or 2.2 appears in the file.</li><li>The colours page describes the system as high contrast and accessible, and designates steps 9–10 of each scale as the accessible text and icon steps.</li><li><code>design.md</code> further requires landmarks, a single descriptive <code>h1</code>, ordered headings, a skip link, native controls, semantic tables, visible focus and text alternatives, and states that source order is to be treated as reading order.</li><li>Responsive rules stated: give grid and flex children <code>min-width: 0</code>, reflow before shrinking, and keep the page usable in light and dark without a visible theme switcher. <code>.vbg-skip-link</code> and <code>.vbg-visually-hidden</code> are published classes.</li></ul>
+<h2 id="references">References</h2>
+<ul class="md-list"><li>Geist introduction — https://vercel.com/geist/introduction</li><li>Colours — https://vercel.com/geist/colors</li><li>Typography — https://vercel.com/geist/typography</li><li>Grid — https://vercel.com/geist/grid</li><li>Agent-facing brand file — https://vercel.com/design.md</li><li>Brand stylesheet (token source) — https://vercel.com/geist/vercel-brand.css</li><li>Typeface — <code>npm geist@1.7.2</code> (SIL OFL-1.1) · https://github.com/vercel/geist-font</li><li>Announcement — https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md</li></ul></article>
+  </div>
+</main>
+</div>
+<script src="../assets/i18n.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 {
   "$schema": "see ./systems.schema.md",
   "generated_from": "systems/*.md frontmatter",
-  "count": 116,
+  "count": 117,
   "by_platform_primary": {
     "automotive": 2,
     "tv": 2,
-    "web": 106,
+    "web": 107,
     "mobile": 2,
     "desktop": 1,
     "wearable": 2,
@@ -854,6 +854,28 @@
       "verified": "2026-08-17",
       "source": "npm @zendeskgarden/react-theming@9.15.7 → dist/index.cjs.js (DEFAULT_THEME). Secondary: @zendeskgarden/css-variables@7.0.0",
       "_file": "garden.md"
+    },
+    {
+      "name": "Geist",
+      "org": "Vercel",
+      "coverage": "partial",
+      "url": "https://vercel.com/geist/introduction",
+      "repo": null,
+      "license": "unverified (neither vercel.com/design.md nor vercel.com/geist/vercel-brand.css carries a licence statement; the font is a separate package — npm geist@1.7.2, SIL OFL-1.1, github.com/vercel/geist-font)",
+      "tech": [
+        "React"
+      ],
+      "figma_kit": "unverified (the typography page states the classes are based on the Geist Core Figma system; whether that file is published was not confirmed)",
+      "tokens_format": [
+        "CSS",
+        "Tailwind"
+      ],
+      "a11y_target": "WCAG AA (no version stated — confirmed 2026-09-03)",
+      "platform": "web",
+      "domain": "enterprise",
+      "verified": "2026-09-03",
+      "source": "vercel.com/geist/{introduction,colors,typography,grid} + vercel.com/geist/vercel-brand.css (108KB) + vercel.com/design.md (369 lines), fetched 2026-09-03",
+      "_file": "geist.md"
     },
     {
       "name": "Gestalt",
