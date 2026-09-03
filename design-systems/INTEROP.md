@@ -129,6 +129,61 @@ Other axes with no slot in the specification: density · platform branching · t
 z-index · breakpoints. A product that needs those axes is not covered by DESIGN.md alone, so
 **the corpus documents have to be used alongside it.**
 
+## 6. A second `design.md` — Vercel (surveyed 2026-09-03)
+
+**The same filename carries a different contract.** Vercel publishes `vercel.com/design.md`
+so that agents working outside its codebase can produce on-brand pages. It shares the name
+with the Google Labs specification in §1 and **conforms to none of it**.
+
+| | Google Labs `DESIGN.md` (§1) | **Vercel `design.md`** |
+|---|---|---|
+| Frontmatter | the token schema — `colors` · `typography` · `spacing` · `components` | **`name` + `description` only** — the frontmatter of an agent skill file |
+| Where the values live | in the frontmatter, normative | **in a separate stylesheet**, `vercel.com/geist/vercel-brand.css` |
+| What the body carries | the rationale behind the tokens | **judgement** — page composition, copywriting, anti-patterns |
+| Numbers in the file | the point of the file | **almost none** — 369 lines, two percentages |
+| Validation | `npx @google/design.md lint` | none published |
+| Scope | one product's visual identity | **report websites only**, per its own `description` |
+
+**The split is deliberate and the reason is stated.** The announcement says the stylesheet
+loads in the browser at render time, which keeps its code out of the model's context
+window. So the division is not prose-versus-tokens as a matter of taste — **it is a context
+budget.** The prose an agent must reason about is fetched; the 108KB of values it only has
+to name are not.
+
+### What is in it
+
+- **Four passes** — frame the reader's job → choose the composition → apply the visual
+  system → inspect and revise privately.
+- **A named list of anti-patterns.** Roughly eighteen recognisable generated-design
+  defaults are called out to be rejected — decorative gradients and glows, centred hero copy
+  above a card grid, cards nested inside cards, badges for ordinary metadata, dark rounded
+  rectangles around charts, legends that replace direct labels, authoring-process
+  narration. It then warns against over-correcting into a sterile anti-design template.
+- **A published CSS API** — 133 `.vbg-` classes in three groups (shell and layout, type and
+  evidence, calculators). Agents are instructed to use the exact child names and not to
+  invent synonyms; the file gives `vbg-stat-note` for `vbg-stat-detail` as the example.
+- **Accessibility stated as a target**: WCAG AA with no version, colour never load-bearing
+  alone, source order as reading order.
+
+### What it means for this corpus
+
+- **`DESIGN.md` is not yet one format.** Two of the largest publishers of agent-facing
+  design instructions chose the same filename for different jobs — one a linted token
+  schema, one an agent skill. A consuming project cannot assume which it has been handed;
+  **read the frontmatter before running any linter.** `npx @google/design.md lint` against
+  Vercel's file would be checking a schema the file never claimed.
+- **It is evidence for a gap already recorded in §5.** The Google Labs schema has no slot
+  for composition, evidence layout, measure, or anti-patterns. Vercel needed all four and
+  had to write prose outside the schema to get them. Our `to-design-md.mjs` appending a
+  `## Motion` section is the same manoeuvre from a different direction.
+- **The context-budget argument applies to our exports too.** `to-design-md.mjs` emits
+  values inline. For a corpus of this size that is the right default, but Vercel's split is
+  a working demonstration that **an agent-facing file and a value file need not be the same
+  file.**
+- The system itself is recorded at `systems/geist.md` (harvested 2026-09-03). The token
+  values quoted above come from `vercel-brand.css`, which is scoped to brand report pages
+  and **is not** Geist's full product token set.
+
 ## References
 
 - `npm pack @google/design.md@0.4.0` — `dist/spec-config.yaml` · `dist/linter/linter/rules/`
@@ -136,3 +191,5 @@ z-index · breakpoints. A product that needs those axes is not covered by DESIGN
 - `npm pack getdesign@0.6.24` — README · `templates/` (76) · `releases/0.6.24.json`
 - The three sites are blocked by the proxy (`EGRESS_BLOCKED`) — recheckable from a local
   session
+- `vercel.com/design.md` · `vercel.com/geist/vercel-brand.css` · `vercel.com/geist/{introduction,colors,typography,grid}` — fetched 2026-09-03 from a local session
+- https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md
