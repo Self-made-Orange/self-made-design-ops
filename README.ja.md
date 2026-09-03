@@ -1,6 +1,6 @@
 # Self-Made DesignOps
 
-![Design systems](https://img.shields.io/badge/design_systems-116-blue)
+![Design systems](https://img.shields.io/badge/design_systems-117-blue)
 ![Pattern axes](https://img.shields.io/badge/pattern_axes-9-8A2BE2)
 ![Platforms](https://img.shields.io/badge/platform_axes-7-teal)
 ![Machine readable](https://img.shields.io/badge/data-JSON-orange)
@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · **日本語** · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[Web でコーパスを見る](https://self-made-orange.github.io/self-made-design-ops/)** — 116 システムをプラットフォーム・ティア・ドメインで絞り込めます。
+📖 **[Web でコーパスを見る](https://self-made-orange.github.io/self-made-design-ops/)** — 117 システムをプラットフォーム・ティア・ドメインで絞り込めます。
 
 デザインと開発の間で繰り返される作業を**共有資産にしておくリポジトリ**です。複数のプロダクトで再利用される規約・リファレンス・ツールを収めます。**特定プロダクトの実データは置きません** — それは各プロダクトのリポジトリに属します。
 
@@ -54,7 +54,7 @@
 
 | | awesome-design-systems | **Self-Made DesignOps** |
 |---|---|---|
-| 正体 | キュレーションされた**リンク集**（約160件） | **検証値コーパス**（116件） |
+| 正体 | キュレーションされた**リンク集**（約160件） | **検証値コーパス**（117件） |
 | コンテンツの単位 | 名前 + URL | 実測トークン値 — 記述ごとに出典・バージョンを固定 |
 | 答える問い | *「どんなデザインシステムがあるか？」* | *「実際にどの値を使い、どこで収斂・分岐するか？」* |
 | 深さ | 各システムのドキュメントへリンク | システム別エントリ + 横断パターン9軸、末尾は**実装時のデフォルト** |
@@ -69,7 +69,7 @@
 
 | ディレクトリ | 内容 | 状態 |
 |--------------|------|------|
-| [`design-systems/`](design-systems/) | 公開デザインシステムのリファレンスコーパス — トークン実値で検証 | **116システム** |
+| [`design-systems/`](design-systems/) | 公開デザインシステムのリファレンスコーパス — トークン実値で検証 | **117システム** |
 | [`agents/`](agents/) | LLMエージェント向け作業手順 — デザインレビュー・イベントシート・ローカライゼーション | ガイド4種 + ナビゲーション |
 | [`profiles/`](profiles/) | **制作指示書** — コーパスから導出した `DESIGN.md` プロファイル。全ての値に根拠グレードを付与 | measured 4種 + interpreted 層 |
 | [`event-taxonomy/`](event-taxonomy/) | 分析イベントシート作成規約 + 変換・リントスクリプト | 規約 · 変換器 |
@@ -82,7 +82,7 @@
 
 「モーダルの幅を何段階にするか」「スペーシングスケールをどこで切るか」といった判断の前に、**メジャーなシステムが実際にどうしたか**を根拠付きで確認するための資料です。すべての記述に出典とバージョンが固定され、確認できなかった値は「未確認」と明記します。
 
-- **`systems/`** — 1システム1ファイル（116件）、YAML frontmatter（組織・ティア・プラットフォーム・検証日・出典）
+- **`systems/`** — 1システム1ファイル（117件）、YAML frontmatter（組織・ティア・プラットフォーム・検証日・出典）
 - **`patterns/`** — **9つのコンポーネント軸**の横断比較: typography · color · button · form · motion · modal · table · navigation · feedback。各文書末尾の**「実装時のデフォルト」**節がこのコーパスの目的です
 - **`tokens/scales.md`** — スペーシング・角丸・ボーダーの横断比較。結論: **普遍的なスペーシング値は存在しません** — 残るのは採用率ランキング（4/8/16 が最強、次いで 32、24）
 - **`platforms.md`** — プラットフォーム7軸すべてに標本あり: web · mobile · desktop · spatial · automotive · wearable · tv。**プラットフォームが違えばトークン構造自体が違います**
@@ -141,7 +141,7 @@
 ## 既知の制約
 
 - **デザインシステムのドキュメントサイトがエグレスプロキシで遮断されます**（carbondesignsystem.com、m3.material.io、primer.style など）。GitHub・npm は開いているためトークン収集は可能ですが、コンポーネント使用ガイダンスはほぼ取得できません。ソース公開システム（shadcn/ui）とコンポーネントCSS配布システム（Mantine・Radix Themes)が空白をかなり埋め、Apple（HIG DocC JSON）・Google（developer.android.com、androidx）の迂回チャネルを2つ発見しました — `design-systems/HARVESTING.md`。
-- **コントラスト比をトークンに数値で明記するのは Cloudscape だけです**（チャート色の段階番号 = コントラスト比）。116システム中、他のどのパッケージもコントラスト数値や WCAG 目標を含みません。
+- **コントラスト比をトークンに数値で明記するのは Cloudscape だけです**（チャート色の段階番号 = コントラスト比）。117システム中、他のどのパッケージもコントラスト数値や WCAG 目標を含みません。
 - **鮮度を自動監視します** — `check-sources.mjs` は初回実行で Base Web の major 2つ分の陳腐化を、Mística 17 で実際のトークン変更（ハイコントラスト原始値のアップストリーム削除）を検出しました。
 
 ## 事前準備

@@ -11,7 +11,7 @@ D npm recheck have been handled.
 
 | Axis | State |
 |------|-------|
-| Corpus | **116** (113 public + 2 documentation-layer + a new code-layer entry — the make-up is at the top of `design-systems/index.md`) plus 1 internal sample |
+| Corpus | **117** (113 public + 2 documentation-layer + a new code-layer entry + Geist, added 2026-09-03 — the make-up is at the top of `design-systems/index.md`) plus 1 internal sample |
 | `full` harvest depth | 20/20 · **79 `partial` deepenings (the entire target set)** complete |
 | patterns backlog | judgement guidance on all 9 axes + every source dig resolved · **re-synthesis complete on 9/9 axes** (16–83 samples) — the three weak axes (table 16 · navigation 16 · feedback 18) reinforced (2026-08-18) |
 | unverified | **428 → 212** open marks · **109** frontmatter fields (a11y_target 57 · figma_kit 48 · license 4 · repo 0). **Recounted 2026-08-23** — the previous 308 came from a recount command that double-counted the `.ko.md` twins and missed capitalised `Unverified`; both are fixed in `design-systems/UNVERIFIED.md` |

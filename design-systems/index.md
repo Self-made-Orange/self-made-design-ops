@@ -25,16 +25,20 @@
 **Progress: 100 / 100 done** 🎉 (+ 5 platform extras + 5 added on 2026-08-17
 (Audi · Persona · Italia · NYSDS · WMN) + 3 framework extras (Headless UI · Panda ·
 vanilla-extract) + **2 documentation-layer samples (LINE · Aurora)** +
-**2 added on 2026-08-18 (Rakuten ReX · Fleet)** = **116 in total**)
+**2 added on 2026-08-18 (Rakuten ReX · Fleet)** +
+**1 added on 2026-09-03 (Geist)** = **117 in total**)
 
-> **The breakdown above does not sum, noted 2026-08-23.** 100 + 5 + 5 + 3 + 2 + 2 = **117**,
-> against a total of **116**. The total is the trustworthy half: `data/systems.json` is
-> generated from the entry files and reports `count: 116`, and there are 117 non-`.ko` files
-> in `systems/` because one of them is `frr-dashboard.md`, `coverage: internal`, excluded from
-> the public data. Which line item is off by one is **not recorded anywhere and is not guessed
-> here**. Two readings fit: the base is 99 rather than 100, or Fleet is already inside the
+> **The breakdown above does not sum, noted 2026-08-23 · recounted 2026-09-03.**
+> 100 + 5 + 5 + 3 + 2 + 2 + 1 = **118**, against a total of **117**. The total is the
+> trustworthy half: `data/systems.json` is generated from the entry files and reports
+> `count: 117`, and there are 118 non-`.ko` files in `systems/` because one of them is
+> `frr-dashboard.md`, `coverage: internal`, excluded from the public data.
+> **Adding Geist moved both numbers by one and left the gap exactly where it was** — the
+> off-by-one predates it and is untouched by it. Which line item is off by one is **not
+> recorded anywhere and is not guessed here**. Two readings fit: the base is 99 rather
+> than 100, or Fleet is already inside the
 > 113 public (100 + 5 + 5 + 3) that `TODO.md` counts and is listed twice. Settle it against
-> the entry files before quoting the breakdown; quote **116** in the meantime.
+> the entry files before quoting the breakdown; quote **117** in the meantime.
 
 ## Platform coverage
 

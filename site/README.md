@@ -55,7 +55,7 @@ readable. Canonical URLs continue to point to the English source pages.
 | `site/build.mjs` | the generator. No dependencies |
 | `site/check-headlines.mjs` | checks the axis conclusions against the documents they summarise |
 | `docs/index.html` | `/` — the kit: take it, what's inside, why the defaults hold |
-| `docs/catalog.html` | `/catalog.html` — the evidence: all 116 systems, filterable |
+| `docs/catalog.html` | `/catalog.html` — the evidence: all 117 systems, filterable |
 | `docs/assets/site.css` | the shared chrome — tokens, both themes, header, rail, row rhythm |
 | `docs/assets/site.js` | the shared behaviour — theme toggle, scrollspy, copy, the one loader |
 | `docs/data/corpus.json` | **generated** — do not edit it directly |

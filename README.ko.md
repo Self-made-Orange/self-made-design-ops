@@ -1,6 +1,6 @@
 # Self-Made DesignOps
 
-![Design systems](https://img.shields.io/badge/design_systems-116-blue)
+![Design systems](https://img.shields.io/badge/design_systems-117-blue)
 ![Pattern axes](https://img.shields.io/badge/pattern_axes-9-8A2BE2)
 ![Platforms](https://img.shields.io/badge/platform_axes-7-teal)
 ![Machine readable](https://img.shields.io/badge/data-JSON-orange)
@@ -9,7 +9,7 @@
 
 [English](README.md) · **한국어** · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[웹에서 코퍼스 둘러보기](https://self-made-orange.github.io/self-made-design-ops/)** — 116개 시스템 전부를 플랫폼·수집 깊이·도메인으로 걸러 찾아볼 수 있습니다.
+📖 **[웹에서 코퍼스 둘러보기](https://self-made-orange.github.io/self-made-design-ops/)** — 117개 시스템 전부를 플랫폼·수집 깊이·도메인으로 걸러 찾아볼 수 있습니다.
 
 디자인과 개발 사이에서 반복되는 작업을 **공용 자산으로 만들어 두는 저장소**입니다 — 여러 제품에 재사용되는 규약·레퍼런스·도구를 담습니다. **특정 제품의 실 데이터는 두지 않습니다** — 그건 해당 제품 저장소에 속합니다.
 
@@ -55,7 +55,7 @@
 
 | | awesome-design-systems | **Self-Made DesignOps** |
 |---|---|---|
-| 정체 | 큐레이션된 **링크 목록** (~160개) | **검증값 코퍼스** (116개) |
+| 정체 | 큐레이션된 **링크 목록** (~160개) | **검증값 코퍼스** (117개) |
 | 콘텐츠 단위 | 이름 + URL | 실측 토큰 값 — 주장마다 출처·버전 고정 |
 | 답하는 질문 | *"어떤 디자인시스템이 있는가?"* | *"실제로 어떤 값을 쓰고, 어디서 수렴·분기하는가?"* |
 | 깊이 | 각 시스템 문서로 링크 | 시스템별 항목 + 교차 패턴 9축, 끝은 **구현 시 기본값** |
@@ -70,7 +70,7 @@
 
 | 디렉터리 | 내용 | 상태 |
 |----------|------|------|
-| [`design-systems/`](design-systems/) | 공개 디자인시스템 레퍼런스 코퍼스 — 토큰 실값 기준 검증 | **116개** |
+| [`design-systems/`](design-systems/) | 공개 디자인시스템 레퍼런스 코퍼스 — 토큰 실값 기준 검증 | **117개** |
 | [`agents/`](agents/) | LLM 에이전트 작업 지침 — 디자인 검수·이벤트 시트·로컬라이제이션 | 지침 4종 + 내비게이션 |
 | [`profiles/`](profiles/) | **제작 지시서** — 코퍼스에서 파생한 `DESIGN.md` 프로필, 모든 값에 근거 등급 표기 | measured 4종 + interpreted 계층 |
 | [`event-taxonomy/`](event-taxonomy/) | 분석 이벤트 시트 작성 규약 + 변환기/린터 | 규약 · 변환기 |
@@ -83,7 +83,7 @@
 
 "모달 너비를 몇 단계로 둘까", "스페이싱 스케일을 어디서 끊을까" 같은 결정 앞에서 **메이저 시스템들이 실제로 어떻게 했는지** 근거를 확인하기 위한 자료입니다. 모든 주장에 출처와 버전이 박혀 있고, 확인 못 한 값은 `미확인`으로 남깁니다.
 
-- **`systems/`** — 시스템당 1파일(116개), YAML frontmatter(조직·수집 깊이·플랫폼·검증일·출처)
+- **`systems/`** — 시스템당 1파일(117개), YAML frontmatter(조직·수집 깊이·플랫폼·검증일·출처)
 - **`patterns/`** — **9개 컴포넌트 축** 교차 비교: typography · color · button · form · motion · modal · table · navigation · feedback. 각 문서 끝의 **"구현 시 기본값"** 절이 이 코퍼스의 목적입니다
 - **`tokens/scales.md`** — 스페이싱·라운드·보더 교차 비교. 핵심 결론: **보편 스페이싱 값은 없습니다** — 남는 것은 채택률 순위(4/8/16 최강, 그다음 32, 24)
 - **`platforms.md`** — 플랫폼 7축 전부 표본 확보: web · mobile · desktop · spatial · automotive · wearable · tv. **플랫폼이 다르면 토큰 구조 자체가 다릅니다**
@@ -142,7 +142,7 @@
 ## 알려진 제약
 
 - **디자인시스템 문서 사이트가 이그레스 프록시에서 차단됩니다** (carbondesignsystem.com, m3.material.io, primer.style 등). GitHub·npm은 열려 있어 토큰 수집은 가능하지만 컴포넌트 사용 지침은 대부분 못 긁습니다. 소스 공개 시스템(shadcn/ui)과 컴포넌트 CSS 배포 시스템(Mantine·Radix Themes)이 공백을 상당히 메우고, Apple(HIG DocC JSON)·Google(developer.android.com, androidx) 우회 채널 2개를 찾았습니다 — `design-systems/HARVESTING.md`.
-- **대비 비율을 토큰에 수치로 명시하는 곳은 Cloudscape 하나입니다** (차트색 단계 번호 = 대비 비율). 116개 중 다른 어떤 패키지도 대비 수치나 WCAG 목표를 담지 않습니다.
+- **대비 비율을 토큰에 수치로 명시하는 곳은 Cloudscape 하나입니다** (차트색 단계 번호 = 대비 비율). 117개 중 다른 어떤 패키지도 대비 수치나 WCAG 목표를 담지 않습니다.
 - **신선도를 자동 감시합니다** — `check-sources.mjs`가 첫 실행에서 Base Web major 2개 낡음을, Mística 17에서 실제 토큰 변경(고대비 원시값 업스트림 제거)을 잡았습니다.
 
 ## 언어
@@ -190,7 +190,7 @@ MCP 서버 설정은 `.claude/settings.local.json`에 둡니다 (토큰 포함 �
 킷은 클론해서 쓰라고 만든 것이니 도구는 MIT입니다. 실측값은 인용하라고 만든 것이니
 CC BY 4.0입니다 — 출처만 밝히면 상업적 이용을 포함해 어디든 쓸 수 있습니다.
 
-두 라이선스 모두 업스트림을 재라이선스하지 않습니다. 이 저장소는 남의 것인 시스템 116개를
+두 라이선스 모두 업스트림을 재라이선스하지 않습니다. 이 저장소는 남의 것인 시스템 117개를
 기술합니다. 여기서 라이선스되는 건 **이 저장소 자신의 작업**(실측·분석·서술·도구)뿐입니다.
 토큰 값은 사실이라 저작권 대상이 아니고, 업스트림 산문은 복제하지 않으며, 3자 에셋은
 저장하지 않습니다. 경계는 `LICENSE`에 전부 적어 뒀습니다.

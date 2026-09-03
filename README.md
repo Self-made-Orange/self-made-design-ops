@@ -1,6 +1,6 @@
 # Self-Made DesignOps
 
-![Design systems](https://img.shields.io/badge/design_systems-116-blue)
+![Design systems](https://img.shields.io/badge/design_systems-117-blue)
 ![Pattern axes](https://img.shields.io/badge/pattern_axes-9-8A2BE2)
 ![Platforms](https://img.shields.io/badge/platform_axes-7-teal)
 ![Machine readable](https://img.shields.io/badge/data-JSON-orange)
@@ -9,7 +9,7 @@
 
 **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[Browse the corpus on the web](https://self-made-orange.github.io/self-made-design-ops/)** — searchable index of all 116 systems, filterable by platform / tier / domain.
+📖 **[Browse the corpus on the web](https://self-made-orange.github.io/self-made-design-ops/)** — searchable index of all 117 systems, filterable by platform / tier / domain.
 
 A repository that turns the work repeated between design and development into **shared assets**: conventions, references, and tools reused across products. **No product-specific data lives here** — that belongs in each product's own repository.
 
@@ -57,7 +57,7 @@ Hand this corpus to an agent when you ask it to review a design, draft an event 
 
 | | awesome-design-systems | **Self-Made DesignOps** |
 |---|---|---|
-| What it is | Curated **link list** (~160 systems) | **Verified-values corpus** (116 systems) |
+| What it is | Curated **link list** (~160 systems) | **Verified-values corpus** (117 systems) |
 | Unit of content | Name + URL | Measured token values, source + version pinned per claim |
 | Question it answers | *"What design systems exist?"* | *"What values do they actually use, and where do they converge or diverge?"* |
 | Depth | Links out to each system's docs | Per-system entries + 9 cross-system pattern axes ending in **implementation defaults** |
@@ -72,7 +72,7 @@ Use the awesome list to discover systems; use this corpus to decide your button 
 
 | Directory | What it is | Status |
 |-----------|------------|--------|
-| [`design-systems/`](design-systems/) | Reference corpus of public design systems, verified against real token values | **116 systems** |
+| [`design-systems/`](design-systems/) | Reference corpus of public design systems, verified against real token values | **117 systems** |
 | [`agents/`](agents/) | Working procedures for LLM agents — design review, event sheets, localization | 4 guides + navigation |
 | [`profiles/`](profiles/) | **Production instructions** — ready-to-use `DESIGN.md` profiles derived from the corpus, with an evidence grade on every value | 4 measured + interpreted layer |
 | [`event-taxonomy/`](event-taxonomy/) | Conventions for analytics event sheets + converter/linter | conventions · converter |
@@ -85,7 +85,7 @@ Use the awesome list to discover systems; use this corpus to decide your button 
 
 When you face decisions like "how many width steps should a modal have" or "where do I cut the spacing scale", this corpus lets you check **what major systems actually did** — with sources and versions pinned on every claim, and `미확인` (unverified) marked where a value could not be confirmed.
 
-- **`systems/`** — one file per system (116 entries), with YAML frontmatter (org, tier, platform, verified date, source)
+- **`systems/`** — one file per system (117 entries), with YAML frontmatter (org, tier, platform, verified date, source)
 - **`patterns/`** — cross-system comparison on **9 component axes**: typography · color · button · form · motion · modal · table · navigation · feedback. Each ends with an **"implementation defaults"** section — that section is the point of the corpus
 - **`tokens/scales.md`** — spacing/radius/border cross-comparison. Headline: **no spacing value is universal**; adoption ranking is what remains (4/8/16 strongest, then 32, 24)
 - **`platforms.md`** — 7 platform axes all sampled: web · mobile · desktop · spatial · automotive · wearable · tv. Different platform, different token structure
@@ -145,7 +145,7 @@ Records **where device mockups are and what they cover** — sources and invento
 ## Known constraints
 
 - **Design-system documentation sites are blocked** by the egress proxy (carbondesignsystem.com, m3.material.io, primer.style, …). GitHub and npm are open, so token collection works; component usage guidance mostly doesn't. Systems that ship source (shadcn/ui) or component CSS (Mantine, Radix Themes) fill much of that gap, and two bypass channels were found for Apple (HIG DocC JSON) and Google (developer.android.com, androidx) — see `design-systems/HARVESTING.md`.
-- **Only Cloudscape states contrast ratios numerically** in its tokens (chart step number = contrast ratio). Across 116 systems, no other token package embeds contrast numbers or a WCAG target.
+- **Only Cloudscape states contrast ratios numerically** in its tokens (chart step number = contrast ratio). Across 117 systems, no other token package embeds contrast numbers or a WCAG target.
 - **Freshness is watched automatically** — `check-sources.mjs` caught Base Web two majors stale on its first run, and a real token change in Mística 17 (high-contrast primitives removed upstream).
 
 ## Language
@@ -186,7 +186,7 @@ The kit is meant to be cloned, so the tooling is MIT. The measurements are meant
 so they are CC BY 4.0: use them anywhere, including commercially, as long as the source is
 credited.
 
-Neither licence relicenses anything upstream. This repository describes 116 systems that
+Neither licence relicenses anything upstream. This repository describes 117 systems that
 belong to other people; what is licensed here is **this repository's own work** — the
 measurements, the analysis, the wording, the tooling. Token values are facts and carry no
 copyright, no upstream prose is reproduced, and no third-party asset is stored. `LICENSE`

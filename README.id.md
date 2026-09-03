@@ -1,6 +1,6 @@
 # Self-Made DesignOps
 
-![Design systems](https://img.shields.io/badge/design_systems-116-blue)
+![Design systems](https://img.shields.io/badge/design_systems-117-blue)
 ![Pattern axes](https://img.shields.io/badge/pattern_axes-9-8A2BE2)
 ![Platforms](https://img.shields.io/badge/platform_axes-7-teal)
 ![Machine readable](https://img.shields.io/badge/data-JSON-orange)
@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · **Bahasa Indonesia** · [Español](README.es.md)
 
-📖 **[Jelajahi korpus di web](https://self-made-orange.github.io/self-made-design-ops/)** — indeks 116 sistem yang bisa dicari dan disaring per platform / tier / domain.
+📖 **[Jelajahi korpus di web](https://self-made-orange.github.io/self-made-design-ops/)** — indeks 117 sistem yang bisa dicari dan disaring per platform / tier / domain.
 
 Repositori yang mengubah pekerjaan berulang antara desain dan pengembangan menjadi **aset bersama**: konvensi, referensi, dan alat yang dipakai ulang lintas produk. **Data spesifik produk tidak disimpan di sini** — itu milik repositori produk masing-masing.
 
@@ -54,7 +54,7 @@ Serahkan korpus ini ketika Anda meminta agen mereview desain, menyusun sheet eve
 
 | | awesome-design-systems | **Self-Made DesignOps** |
 |---|---|---|
-| Hakikat | **Daftar tautan** terkurasi (~160 sistem) | **Korpus nilai terverifikasi** (116 sistem) |
+| Hakikat | **Daftar tautan** terkurasi (~160 sistem) | **Korpus nilai terverifikasi** (117 sistem) |
 | Satuan konten | Nama + URL | Nilai token terukur — sumber & versi terkunci per klaim |
 | Pertanyaan yang dijawab | *"Design system apa saja yang ada?"* | *"Nilai apa yang benar-benar dipakai, di mana konvergen/divergen?"* |
 | Kedalaman | Tautan ke dokumentasi tiap sistem | Entri per sistem + 9 sumbu pola lintas sistem, diakhiri **default implementasi** |
@@ -69,7 +69,7 @@ Pakai daftar awesome untuk menemukan sistem; pakai korpus ini untuk menentukan t
 
 | Direktori | Isi | Status |
 |-----------|-----|--------|
-| [`design-systems/`](design-systems/) | Korpus referensi design system publik — diverifikasi dengan nilai token nyata | **116 sistem** |
+| [`design-systems/`](design-systems/) | Korpus referensi design system publik — diverifikasi dengan nilai token nyata | **117 sistem** |
 | [`agents/`](agents/) | Prosedur kerja untuk agen LLM — review desain, lembar event, lokalisasi | 4 panduan + navigasi |
 | [`profiles/`](profiles/) | **Instruksi produksi** — profil `DESIGN.md` turunan korpus, setiap nilai diberi tingkat bukti | 4 measured + lapisan interpreted |
 | [`event-taxonomy/`](event-taxonomy/) | Konvensi lembar event analitik + konverter/linter | konvensi · konverter |
@@ -82,7 +82,7 @@ Pakai daftar awesome untuk menemukan sistem; pakai korpus ini untuk menentukan t
 
 Saat menghadapi keputusan seperti "berapa tingkat lebar modal" atau "di mana skala spacing dipotong", korpus ini memungkinkan Anda memeriksa **apa yang benar-benar dilakukan sistem-sistem besar** — dengan sumber dan versi terkunci pada setiap klaim, dan nilai yang tak terverifikasi ditandai "belum terverifikasi".
 
-- **`systems/`** — satu berkas per sistem (116 entri), dengan frontmatter YAML (organisasi, tier, platform, tanggal verifikasi, sumber)
+- **`systems/`** — satu berkas per sistem (117 entri), dengan frontmatter YAML (organisasi, tier, platform, tanggal verifikasi, sumber)
 - **`patterns/`** — perbandingan lintas sistem pada **9 sumbu komponen**: typography · color · button · form · motion · modal · table · navigation · feedback. Tiap dokumen diakhiri bagian **"default implementasi"** — bagian itulah tujuan korpus ini
 - **`tokens/scales.md`** — perbandingan spacing/radius/border. Kesimpulan utama: **tidak ada nilai spacing yang universal**; yang tersisa adalah peringkat adopsi (4/8/16 terkuat, lalu 32, 24)
 - **`platforms.md`** — 7 sumbu platform semuanya bersampel: web · mobile · desktop · spatial · automotive · wearable · tv. **Platform berbeda, struktur token berbeda**
@@ -141,7 +141,7 @@ Mencatat **di mana mockup perangkat berada dan apa isinya** — hanya sumber dan
 ## Batasan yang diketahui
 
 - **Situs dokumentasi design system diblokir** oleh proxy egress (carbondesignsystem.com, m3.material.io, primer.style, …). GitHub dan npm terbuka sehingga pengumpulan token berjalan; panduan pemakaian komponen umumnya tidak. Sistem yang membuka sumbernya (shadcn/ui) atau menerbitkan CSS komponen (Mantine, Radix Themes) mengisi sebagian besar celah, dan dua kanal lolos ditemukan untuk Apple (HIG DocC JSON) dan Google (developer.android.com, androidx) — lihat `design-systems/HARVESTING.md`.
-- **Hanya Cloudscape yang menyatakan rasio kontras secara numerik** dalam token-nya (nomor tingkat warna chart = rasio kontras). Dari 116 sistem, tidak ada paket lain yang menanamkan angka kontras atau target WCAG.
+- **Hanya Cloudscape yang menyatakan rasio kontras secara numerik** dalam token-nya (nomor tingkat warna chart = rasio kontras). Dari 117 sistem, tidak ada paket lain yang menanamkan angka kontras atau target WCAG.
 - **Kesegaran dipantau otomatis** — `check-sources.mjs` menangkap Base Web tertinggal dua versi mayor pada eksekusi pertamanya, dan perubahan token nyata di Mística 17 (primitif kontras tinggi dihapus di hulu).
 
 ## Prasyarat

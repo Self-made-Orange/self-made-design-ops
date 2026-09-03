@@ -1704,13 +1704,13 @@
     "es": "Compara sistemas de diseño en un solo lugar: alcance de la revisión, plataformas, formato de variables de diseño y documentos de referencia.",
     "en": "Compare design systems in one place, with research coverage, platforms, design variable formats, and source documents."
   },
-  "Conventions, linters and agent procedures for the work that repeats between design and development — every default measured across 116 design systems.": {
-    "ko": "디자인과 개발에서 반복되는 일을 줄여주는 규칙, 자동 점검 도구, AI 작업 가이드. 기본값은 디자인 시스템 116개에서 직접 확인했어요.",
-    "ja": "デザインと開発の繰り返し作業に使えるルール、自動チェックツール、AI向けガイド。初期値は116のデザインシステムで実際に確認しています。",
-    "zh-Hans": "设计与开发中常用的规范、自动检查工具和 AI 工作指南。默认值来自对 116 个设计系统的实际测量。",
-    "id": "Aturan desain, alat pemeriksaan otomatis, dan panduan AI untuk mengurangi pekerjaan berulang. Nilai awalnya berasal dari pengukuran 116 sistem desain.",
-    "es": "Reglas de diseño, comprobaciones automáticas y guías para IA para reducir tareas repetitivas. Los valores iniciales se basan en mediciones de 116 sistemas de diseño.",
-    "en": "Design rules, automated checks, and AI guides for repetitive tasks. Starting values are based on measurements across 116 design systems."
+  "Conventions, linters and agent procedures for the work that repeats between design and development — every default measured across 117 design systems.": {
+    "ko": "디자인과 개발에서 반복되는 일을 줄여주는 규칙, 자동 점검 도구, AI 작업 가이드. 기본값은 디자인 시스템 117개에서 직접 확인했어요.",
+    "ja": "デザインと開発の繰り返し作業に使えるルール、自動チェックツール、AI向けガイド。初期値は117のデザインシステムで実際に確認しています。",
+    "zh-Hans": "设计与开发中常用的规范、自动检查工具和 AI 工作指南。默认值来自对 117 个设计系统的实际测量。",
+    "id": "Aturan desain, alat pemeriksaan otomatis, dan panduan AI untuk mengurangi pekerjaan berulang. Nilai awalnya berasal dari pengukuran 117 sistem desain.",
+    "es": "Reglas de diseño, comprobaciones automáticas y guías para IA para reducir tareas repetitivas. Los valores iniciales se basan en mediciones de 117 sistemas de diseño.",
+    "en": "Design rules, automated checks, and AI guides for repetitive tasks. Starting values are based on measurements across 117 design systems."
   },
   "The landing hero: 'Clone it once. Make your DesignOps.', with the summary line and the three actions — start in three commands, get DESIGN.md, see what's inside.": {
     "ko": "홈 화면: ‘디자인 기준, 처음부터 만들지 마세요.’ 소개와 명령어 3개로 시작하기, DESIGN.md 받기, 어떤 게 있는지 보기 버튼.",

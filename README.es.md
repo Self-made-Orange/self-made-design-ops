@@ -1,6 +1,6 @@
 # Self-Made DesignOps
 
-![Design systems](https://img.shields.io/badge/design_systems-116-blue)
+![Design systems](https://img.shields.io/badge/design_systems-117-blue)
 ![Pattern axes](https://img.shields.io/badge/pattern_axes-9-8A2BE2)
 ![Platforms](https://img.shields.io/badge/platform_axes-7-teal)
 ![Machine readable](https://img.shields.io/badge/data-JSON-orange)
@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [简体中文](README.zh-Hans.md) · [Bahasa Indonesia](README.id.md) · **Español**
 
-📖 **[Explora el corpus en la web](https://self-made-orange.github.io/self-made-design-ops/)** — índice buscable de los 116 sistemas, filtrable por plataforma / nivel / dominio.
+📖 **[Explora el corpus en la web](https://self-made-orange.github.io/self-made-design-ops/)** — índice buscable de los 117 sistemas, filtrable por plataforma / nivel / dominio.
 
 Un repositorio que convierte el trabajo repetido entre diseño y desarrollo en **activos compartidos**: convenciones, referencias y herramientas reutilizadas entre productos. **Aquí no vive ningún dato específico de producto** — eso pertenece al repositorio de cada producto.
 
@@ -54,7 +54,7 @@ Entrega este corpus cuando pidas a un agente que revise un diseño, redacte una 
 
 | | awesome-design-systems | **Self-Made DesignOps** |
 |---|---|---|
-| Qué es | **Lista de enlaces** curada (~160 sistemas) | **Corpus de valores verificados** (116 sistemas) |
+| Qué es | **Lista de enlaces** curada (~160 sistemas) | **Corpus de valores verificados** (117 sistemas) |
 | Unidad de contenido | Nombre + URL | Valores de tokens medidos — fuente y versión fijadas por afirmación |
 | Pregunta que responde | *«¿Qué design systems existen?»* | *«¿Qué valores usan realmente y dónde convergen o divergen?»* |
 | Profundidad | Enlaza a la documentación de cada sistema | Entradas por sistema + 9 ejes de patrones transversales que terminan en **valores por defecto de implementación** |
@@ -69,7 +69,7 @@ Usa la lista awesome para descubrir sistemas; usa este corpus para decidir la al
 
 | Directorio | Qué es | Estado |
 |------------|--------|--------|
-| [`design-systems/`](design-systems/) | Corpus de referencia de design systems públicos — verificado con valores reales de tokens | **116 sistemas** |
+| [`design-systems/`](design-systems/) | Corpus de referencia de design systems públicos — verificado con valores reales de tokens | **117 sistemas** |
 | [`agents/`](agents/) | Procedimientos de trabajo para agentes LLM — revisión de diseño, hojas de eventos, localización | 4 guías + navegación |
 | [`profiles/`](profiles/) | **Instrucciones de producción** — perfiles `DESIGN.md` derivados del corpus, con grado de evidencia en cada valor | 4 measured + capa interpreted |
 | [`event-taxonomy/`](event-taxonomy/) | Convenciones para hojas de eventos de analítica + conversor/linter | convenciones · conversor |
@@ -82,7 +82,7 @@ Usa la lista awesome para descubrir sistemas; usa este corpus para decidir la al
 
 Ante decisiones como «cuántos anchos debe tener un modal» o «dónde cortar la escala de espaciado», este corpus permite comprobar **qué hicieron realmente los sistemas de referencia** — con fuente y versión fijadas en cada afirmación, y los valores no confirmados marcados como «sin verificar».
 
-- **`systems/`** — un archivo por sistema (116 entradas), con frontmatter YAML (organización, nivel, plataforma, fecha de verificación, fuente)
+- **`systems/`** — un archivo por sistema (117 entradas), con frontmatter YAML (organización, nivel, plataforma, fecha de verificación, fuente)
 - **`patterns/`** — comparación transversal en **9 ejes de componentes**: typography · color · button · form · motion · modal · table · navigation · feedback. Cada documento termina con una sección de **«valores por defecto de implementación»** — esa sección es el propósito del corpus
 - **`tokens/scales.md`** — comparación de espaciado/radios/bordes. Conclusión principal: **ningún valor de espaciado es universal**; lo que queda es el ranking de adopción (4/8/16 los más fuertes, luego 32, 24)
 - **`platforms.md`** — los 7 ejes de plataforma con muestras: web · mobile · desktop · spatial · automotive · wearable · tv. **Plataforma distinta, estructura de tokens distinta**
@@ -141,7 +141,7 @@ Registra **dónde están los mockups de dispositivos y qué cubren** — solo fu
 ## Limitaciones conocidas
 
 - **Los sitios de documentación de design systems están bloqueados** por el proxy de salida (carbondesignsystem.com, m3.material.io, primer.style, …). GitHub y npm están abiertos, así que la recolección de tokens funciona; las guías de uso de componentes en general no. Los sistemas con código abierto (shadcn/ui) o que publican CSS de componentes (Mantine, Radix Themes) llenan gran parte del hueco, y se hallaron dos canales alternativos para Apple (HIG DocC JSON) y Google (developer.android.com, androidx) — ver `design-systems/HARVESTING.md`.
-- **Solo Cloudscape declara ratios de contraste numéricamente** en sus tokens (número de paso del color de gráfica = ratio de contraste). Entre 116 sistemas, ningún otro paquete incluye cifras de contraste ni un objetivo WCAG.
+- **Solo Cloudscape declara ratios de contraste numéricamente** en sus tokens (número de paso del color de gráfica = ratio de contraste). Entre 117 sistemas, ningún otro paquete incluye cifras de contraste ni un objetivo WCAG.
 - **La frescura se vigila automáticamente** — `check-sources.mjs` detectó en su primera ejecución que Base Web llevaba dos versiones mayores de retraso, y un cambio real de tokens en Mística 17 (primitivas de alto contraste eliminadas aguas arriba).
 
 ## Requisitos previos

@@ -1,6 +1,6 @@
 # Self-Made DesignOps
 
-![Design systems](https://img.shields.io/badge/design_systems-116-blue)
+![Design systems](https://img.shields.io/badge/design_systems-117-blue)
 ![Pattern axes](https://img.shields.io/badge/pattern_axes-9-8A2BE2)
 ![Platforms](https://img.shields.io/badge/platform_axes-7-teal)
 ![Machine readable](https://img.shields.io/badge/data-JSON-orange)
@@ -9,7 +9,7 @@
 
 [English](README.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · **简体中文** · [Bahasa Indonesia](README.id.md) · [Español](README.es.md)
 
-📖 **[在网页上浏览语料库](https://self-made-orange.github.io/self-made-design-ops/)** — 可按平台 / 层级 / 领域筛选全部 116 个系统。
+📖 **[在网页上浏览语料库](https://self-made-orange.github.io/self-made-design-ops/)** — 可按平台 / 层级 / 领域筛选全部 117 个系统。
 
 一个把设计与开发之间反复出现的工作沉淀为**共享资产**的仓库：跨产品复用的规范、参考资料与工具。**不存放任何特定产品的实际数据** — 那些属于各产品自己的仓库。
 
@@ -53,7 +53,7 @@
 
 | | awesome-design-systems | **Self-Made DesignOps** |
 |---|---|---|
-| 本质 | 精选**链接清单**（约 160 个） | **核验值语料库**（116 个） |
+| 本质 | 精选**链接清单**（约 160 个） | **核验值语料库**（117 个） |
 | 内容单位 | 名称 + URL | 实测 token 值 — 每条结论固定来源与版本 |
 | 回答的问题 | *"有哪些设计系统？"* | *"它们实际用什么值，在哪里趋同、在哪里分歧？"* |
 | 深度 | 链接到各系统文档 | 逐系统条目 + 9 条横向模式轴，以**实现默认值**收尾 |
@@ -68,7 +68,7 @@
 
 | 目录 | 内容 | 状态 |
 |------|------|------|
-| [`design-systems/`](design-systems/) | 公开设计系统参考语料库 — 以真实 token 值核验 | **116 个系统** |
+| [`design-systems/`](design-systems/) | 公开设计系统参考语料库 — 以真实 token 值核验 | **117 个系统** |
 | [`agents/`](agents/) | LLM 智能体工作指南 — 设计评审、事件表、本地化 | 4 份指南 + 导航 |
 | [`profiles/`](profiles/) | **制作指令书** — 从语料库派生的 `DESIGN.md` 配置，每个值都标注依据等级 | measured 4 种 + interpreted 层 |
 | [`event-taxonomy/`](event-taxonomy/) | 分析事件表编写规范 + 转换/检查脚本 | 规范 · 转换器 |
@@ -81,7 +81,7 @@
 
 面对"模态框宽度分几档"、"间距刻度在哪里断开"这类决策时，用它来核对**主流系统实际怎么做** — 每条结论都固定了来源与版本，无法核实的值标注为"未确认"。
 
-- **`systems/`** — 每个系统一个文件（116 个），带 YAML frontmatter（组织、层级、平台、核验日期、来源）
+- **`systems/`** — 每个系统一个文件（117 个），带 YAML frontmatter（组织、层级、平台、核验日期、来源）
 - **`patterns/`** — **9 条组件轴**的横向对比：typography · color · button · form · motion · modal · table · navigation · feedback。每篇文末的**"实现默认值"**一节就是这个语料库的目的
 - **`tokens/scales.md`** — 间距/圆角/描边横向对比。核心结论：**不存在普适的间距值** — 剩下的只有采用率排名（4/8/16 最强，其次 32、24）
 - **`platforms.md`** — 平台 7 轴全部有样本：web · mobile · desktop · spatial · automotive · wearable · tv。**平台不同，token 结构本身就不同**
@@ -140,7 +140,7 @@
 ## 已知限制
 
 - **设计系统文档站被出口代理拦截**（carbondesignsystem.com、m3.material.io、primer.style 等）。GitHub 与 npm 可用，token 采集不受影响，但组件使用指南大多无法抓取。开放源码的系统（shadcn/ui）与发布组件 CSS 的系统（Mantine、Radix Themes）填补了大部分空白，另发现 Apple（HIG DocC JSON）与 Google（developer.android.com、androidx）两条绕行通道 — 见 `design-systems/HARVESTING.md`。
-- **只有 Cloudscape 在 token 中以数值标明对比度**（图表色的级数 = 对比度）。116 个系统中，没有其他任何包内嵌对比度数值或 WCAG 目标。
+- **只有 Cloudscape 在 token 中以数值标明对比度**（图表色的级数 = 对比度）。117 个系统中，没有其他任何包内嵌对比度数值或 WCAG 目标。
 - **新鲜度自动监控** — `check-sources.mjs` 首次运行就发现 Base Web 落后两个大版本，并在 Mística 17 捕获真实 token 变更（高对比度原始值已在上游移除）。
 
 ## 前置准备

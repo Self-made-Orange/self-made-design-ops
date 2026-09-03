@@ -56,7 +56,7 @@
 | `site/build.mjs` | 생성기. 의존성 없음 |
 | `site/check-headlines.mjs` | 축의 한 줄 결론이 원본 문서와 맞는지 검사 |
 | `docs/index.html` | `/` — 킷: 가져가는 법·안에 든 것·기본값을 믿어도 되는 이유 |
-| `docs/catalog.html` | `/catalog.html` — 근거: 116개 시스템 전부, 필터 가능 |
+| `docs/catalog.html` | `/catalog.html` — 근거: 117개 시스템 전부, 필터 가능 |
 | `docs/assets/site.css` | 공유 크롬 — 토큰·양쪽 테마·헤더·레일·행 리듬 |
 | `docs/assets/site.js` | 공유 동작 — 테마 토글·스크롤스파이·복사·단일 로더 |
 | `docs/data/corpus.json` | **생성물** — 직접 고치지 마세요 |
