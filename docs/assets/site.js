@@ -61,8 +61,7 @@
    * stops following it from then on — matching how the OS switch is normally
    * expected to lose to an in-page choice. */
   const THEME_KEY = 'smo-theme';
-  const systemDark = () => matchMedia('(prefers-color-scheme: dark)').matches;
-  const current = () => document.documentElement.dataset.theme || (systemDark() ? 'dark' : 'light');
+  const current = () => document.documentElement.dataset.theme || 'dark';
 
   function setTheme(next) {
     document.documentElement.dataset.theme = next;
@@ -77,14 +76,9 @@
   }
   setTheme(current());   // normalises the attribute and labels the button on first paint
 
-  // Until someone picks, the OS keeps deciding — including when it changes mid-visit.
-  let stored = null;
-  try { stored = localStorage.getItem(THEME_KEY); } catch { /* ignore */ }
-  if (!stored) {
-    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      document.documentElement.dataset.theme = e.matches ? 'dark' : 'light';
-    });
-  }
+  // The OS is deliberately not followed. Dark is this site's default and the toggle is how
+  // a reader leaves it; letting a mid-visit OS change flip the page out from under that
+  // choice was the old behaviour and is not what a fixed default means.
 
   /* ── Copyright year. A hard-coded year on a static page goes stale silently. */
   for (const y of document.querySelectorAll('[data-year]')) y.textContent = new Date().getFullYear();

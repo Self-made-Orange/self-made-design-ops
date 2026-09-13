@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Human Interface Guidelines (iOS 26 / iPadOS 26) — Self-Made DesignOps</title>
 <meta name="description" content="Apple's design guidance for iOS and iPadOS. Because no tokens are published to npm or GitHub, a variable export of the official Figma kit is the only…">
 <meta name="color-scheme" content="light dark">
+<script>
+/* Pre-paint theme read, same as the index. Dark is the default and lives in the
+   attribute; this only runs for a reader who has chosen light. Without it these pages
+   flashed the wrong theme until site.js loaded. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  if (t) document.documentElement.dataset.theme = t;
+} catch (e) { /* storage blocked — the dark default in the attribute stands */ }
+</script>
 <link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/apple-hig.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Self-Made DesignOps">

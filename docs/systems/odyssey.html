@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Odyssey — Self-Made DesignOps</title>
 <meta name="description" content="Okta's system — spacing runs in sevenths, like 0.28571429rem. It presupposes a 14px root (×14 = 4 · 8 · 12 · 16 · 24 · 32 · 40 · 48 · 56px); read at 16px…">
 <meta name="color-scheme" content="light dark">
+<script>
+/* Pre-paint theme read, same as the index. Dark is the default and lives in the
+   attribute; this only runs for a reader who has chosen light. Without it these pages
+   flashed the wrong theme until site.js loaded. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  if (t) document.documentElement.dataset.theme = t;
+} catch (e) { /* storage blocked — the dark default in the attribute stands */ }
+</script>
 <link rel="canonical" href="https://self-made-orange.github.io/self-made-design-ops/systems/odyssey.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Self-Made DesignOps">

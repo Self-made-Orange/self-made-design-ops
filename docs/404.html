@@ -1,10 +1,17 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Not found — Self-Made DesignOps</title>
 <meta name="robots" content="noindex">
+<script>
+/* This page does not load site.js, so the stored choice is read here or nowhere. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  if (t) document.documentElement.dataset.theme = t;
+} catch (e) { /* storage blocked — the dark default in the attribute stands */ }
+</script>
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="https://self-made-orange.github.io/self-made-design-ops/assets/site.css">
 </head>

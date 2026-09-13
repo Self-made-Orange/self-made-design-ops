@@ -463,7 +463,7 @@ CTA입니다. 의도된 예외 하나이고, 스펙에 이미 A 행으로 대가
 추가했습니다.
 
 썩지 않게 묶어 뒀습니다 — `site/design-spec.mjs`가 킷 인벤토리에 들어가고(**24항목,
-5,640줄**, 둘 다 디스크에서 셈), `.github/workflows/site.yml`이 `site/`·`docs/`·
+5,656줄**, 둘 다 디스크에서 셈), `.github/workflows/site.yml`이 `site/`·`docs/`·
 `profiles/interpreted/`를 건드리는 모든 PR에서 양쪽 언어판을 재생성해 커밋본과 다르면
 실패시킵니다.
 

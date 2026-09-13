@@ -50,13 +50,22 @@ const byFile = new Map(corpus.systems.map((s) => [s.file, s]));
 function page({ title, description, canonical, breadcrumb, jsonld, body, toc, meta, original }) {
   const up = '../';
   return `<!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="color-scheme" content="light dark">
+<script>
+/* Pre-paint theme read, same as the index. Dark is the default and lives in the
+   attribute; this only runs for a reader who has chosen light. Without it these pages
+   flashed the wrong theme until site.js loaded. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  if (t) document.documentElement.dataset.theme = t;
+} catch (e) { /* storage blocked — the dark default in the attribute stands */ }
+</script>
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Self-Made DesignOps">

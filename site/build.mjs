@@ -459,12 +459,19 @@ fillRegion('index.html', 'pr-preview', '\n' + systems.filter((s) => s.coverage =
  * GitHub Pages serves docs/404.html for any unknown path under the site. noindex, because a
  * 404 that gets indexed is worse than no 404 page at all. */
 writeFileSync(join(DOCS, '404.html'), `<!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Not found — Self-Made DesignOps</title>
 <meta name="robots" content="noindex">
+<script>
+/* This page does not load site.js, so the stored choice is read here or nowhere. */
+try {
+  var t = localStorage.getItem('smo-theme');
+  if (t) document.documentElement.dataset.theme = t;
+} catch (e) { /* storage blocked — the dark default in the attribute stands */ }
+</script>
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="${BASE}assets/site.css">
 </head>

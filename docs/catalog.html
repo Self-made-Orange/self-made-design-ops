@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Catalog — Self-Made DesignOps</title>
@@ -59,9 +59,8 @@
 /* Same pre-paint theme read as the index — see the comment there. */
 try {
   var t = localStorage.getItem('smo-theme');
-  document.documentElement.dataset.theme =
-    t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-} catch (e) { /* storage blocked — the light default in the attribute stands */ }
+  if (t) document.documentElement.dataset.theme = t;
+} catch (e) { /* storage blocked — the dark default in the attribute stands */ }
 </script>
 
 <a class="skip" href="#main">Skip to the list</a>
