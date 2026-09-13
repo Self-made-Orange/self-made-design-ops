@@ -88,7 +88,7 @@ git submodule add https://github.com/Self-made-Orange/self-made-design-ops.git s
 
 ### 3. 컨텍스트 절약 — 전체를 읽지 않습니다
 
-코퍼스는 116개 항목이라 통째로 읽으면 컨텍스트가 낭비됩니다. 진입 순서:
+코퍼스는 117개 항목이라 통째로 읽으면 컨텍스트가 낭비됩니다. 진입 순서:
 
 1. 이 파일(`agents/README.md`)의 내비게이션 맵
 2. 해당 작업 지침 1개 (`design-review.md` 등)
@@ -132,7 +132,7 @@ git submodule add https://github.com/Self-made-Orange/self-made-design-ops.git s
 
 > **(2026-08-18 자체 검증 반영)** 이전 판은 "104개 시스템 표본"이라고 숫자를
 > 박아 뒀는데 코퍼스가 자라 이미 낡았습니다 (`design-systems/data/systems.json`의
-> `systems` 배열은 116개). **전체 규모는 `design-systems/index.md`에서,
+> `systems` 배열은 117개). **전체 규모는 `design-systems/index.md`에서,
 > 축별 표본 수는 각 `patterns/*.md` 상단에서 읽으세요** —
 > `design-review.md`가 같은 이유로 먼저 개정된 항목입니다.
 

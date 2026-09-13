@@ -9,7 +9,7 @@ itself in a public issue.
 
 ## What this repository holds
 
-Measurements of 116 public design systems, the tooling that took them, and one
+Measurements of 117 public design systems, the tooling that took them, and one
 internal sample kept for comparison. No credentials, no product data, no personal
 data. `.env`, `.env.*` and `.claude/settings.local.json` are gitignored because MCP
 configuration can carry tokens; nothing of that shape has ever been committed.

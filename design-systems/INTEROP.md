@@ -88,7 +88,7 @@ place.
 
 | | The DESIGN.md ecosystem | **This repository** |
 |---|---|---|
-| Unit | one file, **one product's visual identity** | **observed samples of 116 systems** |
+| Unit | one file, **one product's visual identity** | **observed samples of 117 systems** |
 | Character of the values | normative (build it this way) | descriptive (this is what they all did) plus the sample count |
 | Provenance | authored, or an interpretation of a brand | **source and version pinned**; unverified stays unverified |
 | Colour | hands you a settled palette | **no recommended palette** — the position being that colour is a brand decision |

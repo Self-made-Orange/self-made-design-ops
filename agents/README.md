@@ -97,7 +97,7 @@ procedure there. (With a submodule: `./self-made-design-ops/agents/README.md`)
 
 ### 3. Saving context — do not read the whole thing
 
-The corpus has 116 entries; reading it whole wastes context. Enter in this order:
+The corpus has 117 entries; reading it whole wastes context. Enter in this order:
 
 1. The navigation map in this file (`agents/README.md`)
 2. The one relevant instruction (`design-review.md`, etc.)
@@ -145,7 +145,7 @@ enter by question type.
 
 > **(2026-08-18 from the self-check)** An earlier version hard-coded "104 system samples",
 > which the growing corpus had already made stale (the `systems` array in
-> `design-systems/data/systems.json` holds 116). **Read the overall size from
+> `design-systems/data/systems.json` holds 117). **Read the overall size from
 > `design-systems/index.md`, and per-axis sample counts from the top of each
 > `patterns/*.md`** — `design-review.md` was revised first for the same reason.
 
