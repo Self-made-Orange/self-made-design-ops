@@ -161,10 +161,10 @@
   "Three commands": {
     "ko": "명령어 3개면 시작할 수 있어요",
     "ja": "3つのコマンドで始められます",
-    "zh-Hans": "三条命令，就能开始",
-    "id": "Cukup tiga perintah",
-    "es": "Tres comandos y listo",
-    "en": "Three commands and you're ready"
+    "zh-Hans": "3 条命令，就能开始",
+    "id": "Cukup 3 perintah",
+    "es": "3 comandos y listo",
+    "en": "3 commands and you're ready"
   },
   "No package, no build step, no runtime. It is a directory you clone next to your project and point your agent at.": {
     "ko": "프로젝트 옆에 폴더를 내려받고, AI가 참고할 수 있게 연결해 주세요. 별도 패키지를 설치하거나 빌드할 필요는 없어요.",
